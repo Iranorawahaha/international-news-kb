@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国际新闻知识库</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部状态栏 -->
+        <header class="status-bar">
+            <div class="status-left">
+                <h1>🌍 国际新闻知识库</h1>
+                <span class="subtitle">国际环境洞察 · 每日跟踪</span>
+            </div>
+            <div class="status-right">
+                <div class="status-item">
+                    <label>上次刷新：</label>
+                    <span id="lastRefreshTime">--</span>
+                </div>
+                <div class="status-item">
+                    <label>总条数：</label>
+                    <span id="totalCount" class="badge">0</span>
+                </div>
+                <div class="status-item">
+                    <label>本次新增：</label>
+                    <span id="newCount" class="badge badge-success">0</span>
+                </div>
+                <div class="progress-container" id="progressContainer" style="display: none;">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <span class="progress-text" id="progressText">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 信源管理区 -->
+        <section class="sources-section">
+            <div class="section-header">
+                <h2>📚 信源管理</h2>
+                <button class="btn btn-primary btn-sm" onclick="showAddSourceModal()">+ 新增信源</button>
+            </div>
+            <div class="sources-grid" id="sourcesGrid">
+                <!-- 动态加载信源列表 -->
+            </div>
+        </section>
+
+        <!-- 功能按钮区 -->
+        <section class="actions-section">
+            <button class="btn btn-primary btn-lg" onclick="refreshData()">
+                🔄 刷新数据
+            </button>
+            <button class="btn btn-secondary btn-lg" onclick="showQuickEntryModal()">
+                🔗 快速录入
+            </button>
+            <button class="btn btn-secondary btn-lg" onclick="showBatchImportModal()">
+                📥 批量导入
+            </button>
+            <button class="btn btn-secondary btn-lg" onclick="showExportModal()">
+                📤 批量导出
+            </button>
+            <button class="btn btn-secondary btn-lg" onclick="downloadDataBackup()">
+                💾 备份数据
+            </button>
+        </section>
+
+        <!-- 筛选工具栏 -->
+        <section class="filter-section">
+            <div class="filter-group">
+                <input type="date" id="filterDate" class="filter-input" onchange="applyFilters()">
+                <select id="filterCategory" class="filter-select" onchange="applyFilters()">
+                    <option value="">全部分类</option>
+                </select>
+                <select id="filterSource" class="filter-select" onchange="applyFilters()">
+                    <option value="">全部信源</option>
+                </select>
+                <select id="filterImportance" class="filter-select" onchange="applyFilters()">
+                    <option value="">全部重要程度</option>
+                    <option value="高">高</option>
+                    <option value="中">中</option>
+                    <option value="低">低</option>
+                </select>
+                <input type="text" id="filterKeyword" class="filter-input" placeholder="搜索关键词..." oninput="applyFilters()">
+            </div>
+        </section>
+
+        <!-- 新闻数据表格 -->
+        <section class="table-section">
+            <table class="news-table" id="newsTable">
+                <thead>
+                    <tr>
+                        <th class="col-sort">⇅</th>
+                        <th>日期</th>
+                        <th>标题</th>
+                        <th>媒体来源</th>
+                        <th>摘要</th>
+                        <th>涉及国家/地区</th>
+                        <th>主题分类</th>
+                        <th>关键词</th>
+                        <th>出处链接</th>
+                        <th>重要程度</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="newsTableBody">
+                    <!-- 动态加载数据 -->
+                </tbody>
+            </table>
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <p>暂无数据，请点击"刷新数据"开始采集</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 快速录入模态框 -->
+    <div class="modal" id="quickEntryModal">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h3>🔗 快速录入讯息</h3>
+                <button class="modal-close" onclick="closeModal('quickEntryModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="hint">粘贴新闻链接，系统将自动解析并录入知识库</p>
+                <input type="url" id="quickEntryUrl" class="form-input" placeholder="请输入新闻链接...">
+                <div class="parse-result" id="parseResult" style="display: none;">
+                    <h4>解析结果预览</h4>
+                    <div id="parsedContent"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('quickEntryModal')">取消</button>
+                <button class="btn btn-primary" onclick="parseAndAddNews()">解析并添加</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 批量导入模态框 -->
+    <div class="modal" id="batchImportModal">
+        <div class="modal-content modal-xl">
+            <div class="modal-header">
+                <h3>📥 批量导入</h3>
+                <button class="modal-close" onclick="closeModal('batchImportModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="hint">支持从Excel/CSV复制表格数据直接粘贴，或按格式手动输入</p>
+                <textarea id="batchImportData" class="form-textarea" placeholder="请粘贴表格数据，格式：日期 | 标题 | 媒体来源 | 摘要 | 涉及国家 | 主题分类 | 关键词 | 出处链接 | 重要程度&#10;每行一条记录，字段间用制表符或 | 分隔"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('batchImportModal')">取消</button>
+                <button class="btn btn-primary" onclick="batchImport()">确认导入</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 批量导出模态框 -->
+    <div class="modal" id="exportModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📤 批量导出</h3>
+                <button class="modal-close" onclick="closeModal('exportModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>选择日期范围：</label>
+                    <input type="date" id="exportDateFrom" class="form-input">
+                    <span>至</span>
+                    <input type="date" id="exportDateTo" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>选择话题分类：</label>
+                    <select id="exportCategory" class="form-select" multiple>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>导出格式：</label>
+                    <select id="exportFormat" class="form-select">
+                        <option value="json">JSON格式</option>
+                        <option value="csv">CSV格式</option>
+                        <option value="excel">Excel格式</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('exportModal')">取消</button>
+                <button class="btn btn-primary" onclick="exportData()">确认导出</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增信源模态框 -->
+    <div class="modal" id="addSourceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>➕ 新增信源</h3>
+                <button class="modal-close" onclick="closeModal('addSourceModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>信源名称：</label>
+                    <input type="text" id="sourceName" class="form-input" placeholder="例如：新华社">
+                </div>
+                <div class="form-group">
+                    <label>信源链接：</label>
+                    <input type="url" id="sourceUrl" class="form-input" placeholder="https://example.com">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('addSourceModal')">取消</button>
+                <button class="btn btn-primary" onclick="addNewSource()">确认添加</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/embedded-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
