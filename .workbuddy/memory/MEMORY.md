@@ -1,28 +1,41 @@
-# 国际新闻看板 - 项目记忆 (V1.0 正式版)
+# 国际新闻看板 - 项目记忆 (V1.2 正式版)
 
 ## 项目信息
-- **项目名称**: 国际新闻看板 (International News Dashboard) ⭐V1.0
+- **项目名称**: 国际新闻看板 (International News Dashboard) ⭐V1.2
 - **创建日期**: 2026-07-29
-- **正式发布**: 2026-07-31
+- **V1.0发布**: 2026-07-31
+- **V1.1发布**: 2026-07-31 (同日迭代优化)
+- **V1.2发布**: 2026-07-31 (数据存档复用升级)
 - **所属部门**: 华为公共及政府事务部
 - **用途**: 高质量国际新闻自动采集、筛选、呈现和分享平台
 - **访问地址**: https://iranorawahaha.github.io/international-news-kb/
+- **飞书存档**: https://my.feishu.cn/base/A2fdb93HLamcKgslr2rcopjRnfd
 - **定位**: 个人使用 + 向同事分享
 
-## V1.0 核心功能
-1. **双层采集引擎** - 基础中文信源(requests) + 英文权威信源(WebFetch API)
-2. **URL完整性保障机制** ⭐ - 4道防线确保100%链接可点击跳转
-3. **单文件自包含HTML** - CSS+JS+数据全部内嵌，无外部依赖（解决404问题）
-4. **一键更新脚本** - `./update-news.sh` 自动化5步流程（3-5分钟）
-5. **智能质量控制** - 自动去重、7大分类、重要性评分(高/中/低)、URL覆盖率检查
-6. **GitHub Pages部署** - 全球CDN加速、HTTPS加密、免费托管、一键分享
+## V1.2 核心功能（当前版本）
+1. **7天数据保留** ⭐V1.2 - 看板内显示近7天新闻，日期Tab栏切换，自动清理超期数据
+2. **飞书Base永久存档** ⭐V1.2 - 所有新闻同步到飞书多维表格，支持搜索/筛选/分享，增量追加不清空
+3. **双层采集引擎** - 基础中文信源(requests) + 英文权威信源(WebFetch API)
+4. **10大英文信源覆盖** - 路透社/BBC/CNN/NYT/SCMP/卫报/半岛电视台/WaPo/AP/Politico
+5. **双语标题显示** - 英文原标题(深蓝斜体) + 中文翻译(黑色常规)双行呈现
+6. **元首级新闻智能识别** - 中美元首/高层会晤自动标记(is_summit_level)并置顶
+7. **重要性5级分类体系** - ⭐元首级(95-100)/🔴极高(90-94)/🟠高(85-89)/🟡中(75-84)/🟢低(<75)
+8. **URL完整性保障机制** - 4道防线确保100%链接可点击跳转
+9. **单文件自包含HTML** - CSS+JS+数据全部内嵌，无外部依赖（解决404问题）
+10. **一键更新脚本** - `./update-news.sh` V1.2 自动化6步流程（含飞书同步，3-5分钟）
+11. **智能质量控制** - 自动去重、6大分类、priority_score数值化评分、URL覆盖率检查
+12. **完美UI排版** - 所有列强制单行不换行、链接按钮防换行、紧凑布局 + 日期Tab栏
+13. **GitHub Pages部署** - 全球CDN加速、HTTPS加密、免费托管、一键分享
+14. **双目录同步** - 根目录index.html + gh-pages/index.html同时更新
 
-## 技术架构 (V1.0优化后)
-- **前端展示**: 单文件HTML (~32KB, 完全自包含)
+## 技术架构 (V1.2升级后)
+- **前端展示**: 单文件HTML (~55KB, 完全自包含，V1.2增强日期Tab栏)
 - **后端采集**: Python 3.x + requests库 + WebFetch API
-- **数据格式**: JSON (news-data.json)
-- **版本控制**: Git + GitHub Pages
-- **采集架构**: 双层（基础requests + WebFetch补充）
+- **数据格式**: JSON V1.2 (news-data.json, 按日期分组 {archive: {date: [...]}})
+- **数据存档**: 飞书多维表格 Base (永久保存，增量追加，支持搜索筛选)
+- **版本控制**: Git + GitHub Pages (根目录部署)
+- **采集架构**: 双层（基础requests + WebFetch补充10信源）
+- **数据保留**: 本地7天滚动窗口 + 飞书永久存档（双轨制）
 
 ## 关键设计决策
 1. **为什么选择单文件HTML?**
@@ -40,39 +53,46 @@
    - WebFetch API返回摘要而非结构化数据，容易遗漏URL字段
    - 4道防线从源头预防到最终质量把关全覆盖
 
-## 文件结构 (V1.0清理后 - 仅14个核心文件)
+## 文件结构 (V1.2 - 核心文件)
 ```
 project-root/
+├── index.html                      # ⭐ V1.2: 根目录单文件网页（GitHub Pages主入口，含日期Tab栏）
 ├── README.md                      # 项目说明
-├── update-news.sh                 # ⭐ 一键更新脚本 V1.0
+├── update-news.sh                 # ⭐ 一键更新脚本 V1.2（含飞书同步步骤）
 ├── start-server.sh / stop-server.sh
 │
 ├── scripts/
-│   ├── fetch_news_v3.py           # ⭐ 采集引擎 V1.0 (含URL验证)
+│   ├── fetch_news_v3.py           # ⭐ 采集引擎 V1.1（10信源配置+双语支持）
+│   ├── data_converter_v12.py      # ⭐ V1.2: 数据格式转换器（V1.1↔V1.2互转）
+│   ├── sync_to_feishu.py          # ⭐ V1.2: 飞书Base同步脚本（增量追加）
 │   └── server.py                  # 本地开发服务器
 │
 ├── data/
 │   ├── config.json                # 信源配置（30个）
-│   └── news-data.json             # ⭐ 主数据文件
+│   ├── news-data.json             # ⭐ 主数据文件（V1.2按日期分组格式）
+│   └── .feishu_config             # ⭐ V1.2: 飞书连接配置
 │
 ├── gh-pages/
-│   ├── index.html                 # ⭐ 单文件网页 V1.0 (9列布局)
+│   ├── index.html                 # ⭐ 单文件网页 V1.2（与根目录同步，含日期Tab栏）
 │   └── news-data.json             # 数据副本
 │
 └── docs/
-    ├── V1.0-RELEASE-NOTES.md      # ⭐ V1.0发布说明（完整文档）
+    ├── V1.0-RELEASE-NOTES.md      # V1.0发布说明
+    ├── V1.1-UPDATE-NOTES.md       # V1.1优化说明
     ├── DAILY-UPDATE-MANUAL.md     # 每日操作手册
-    ├── GITHUB-PAGES-DEPLOY-GUIDE.md
-    └── GITHUB-PAGES-CHEATSHEET.md
+    ├── GITHUB-PAGES-DEPLOY-GUIDE.md  # 部署指南
+    └── GITHUB-PAGES-CHEATSHEET.md    # 快速参考卡
 ```
 
-**空间占用**: 736K (从1.6MB优化，减少54%)
-**文件数量**: 14个核心文件 (从58个清理，减少76%)
+**空间占用**: 780K (从V1.1的736K增加，含新增脚本)
+**文件数量**: 16个核心文件 (从V1.1的14个增加)
 
 ## 重要配置
 - 信源配置: data/config.json (30个信源，17个可用)
-- 主数据文件: data/news-data.json
-- 一键脚本: update-news.sh (V1.0正式版)
+- 主数据文件: data/news-data.json (V1.2按日期分组格式)
+- 一键脚本: update-news.sh (V1.2正式版)
+- 飞书存档表: https://my.feishu.cn/base/A2fdb93HLamcKgslr2rcopjRnfd
+- 飞书同步脚本: scripts/sync_to_feishu.py
 - GitHub仓库: https://github.com/Iranorawahaha/international-news-kb
 - 用户名: Iranorawahaha
 - 认证方式: Personal Access Token (repo权限)
@@ -102,11 +122,12 @@ project-root/
 ```
 1. 基础采集 (终端): ./update-news.sh → Step 1 (30-60秒)
 2. WebFetch补充 (WorkBuddy对话): 获取路透社/BBC/SCMP/卫报 (2-3分钟)
-3. 数据整合 (自动): 去重+分类+验证+URL检查 (<1秒)
-4. 网页生成 (自动): 单文件HTML含9列布局 (<1秒)
-5. 推送部署 (Git): git push origin main (1-2分钟)
+3. 数据整合 (自动): 去重+分类+验证+URL检查 + 追加到7天存档 (<1秒)
+4. 网页生成 (自动): 单文件HTML含日期Tab栏 + 9列布局 (<1秒)
+5. 飞书同步 (自动): 增量追加到Base存档表 (<10秒)
+6. 推送部署 (Git): git push origin main (1-2分钟)
 
-总耗时: 3-5分钟 | 产出: 可公开访问的URL
+总耗时: 3-5分钟 | 产出: 可公开访问的URL + 飞书永久存档
 ```
 
 **推荐时间**:
@@ -120,7 +141,8 @@ project-root/
 - 使用场景: 个人使用 + 分享给同事
 - 更新频率: 每日2次（手动控制时机）
 
-## 已解决的问题 (V1.0)
+## 已解决的问题 (V1.0-V1.2)
+### V1.0
 - [x] ~~GitHub Pages页面CSS/JS 404~~ → 单文件自包含HTML架构
 - [x] ~~Git推送代理端口失败~~ → 自动检测$https_proxy环境变量
 - [x] ~~11条新闻缺少URL(42%缺失率)~~ → URL完整性保障机制(100%覆盖率)
@@ -128,14 +150,21 @@ project-root/
 - [x] ~~系统名称不明确~~ → 定为"国际新闻看板"
 - [x] ~~版本号混乱(v1.0-v3.2)~~ → 统一为V1.0正式版
 
+### V1.2
+- [x] ~~每次刷新清空历史数据~~ → 7天滚动窗口 + 飞书永久存档（双轨制）
+- [x] ~~无历史记录查询能力~~ → 飞书Base多维表格支持搜索/筛选/分享
+- [x] ~~lark-cli --json参数格式问题~~ → 使用@前缀+相对路径
+- [x] ~~飞书select字段值不匹配~~ → 添加字段值映射逻辑
+
 ## 待优化项 (非阻塞，未来可能改进)
+- [ ] **需求3**: 每日17:00自动邮件日报（用户选择延后配置）
 - [ ] 设置macOS LaunchAgent定时提醒执行更新
 - [ ] 开发WorkBuddy Automation实现半自动更新
-- [ ] 历史数据归档功能（按日期保存，非覆盖）
 - [ ] 修复9个不可用信源（4个URL失效+2个SSL问题+3个反爬虫）
 - [ ] 移动端体验优化（PWA支持）
 - [ ] RSS订阅输出
 - [ ] 多语言界面切换
+- [ ] 飞书Base数据去重优化（基于title+date唯一性检查）
 
 ## 信源连通性状态 (2026-07-30测试)
 - **总信源数**: 30个

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>国际新闻看板 V1.1 - 用户使用说明</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ===== 打印优化：强制渲染所有背景色和渐变 ===== */
+        *, *::before, *::after {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+
+        body {
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6; color: #333; background: #fff;
+            padding: 20px; font-size: 13px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+
+        /* 封面 - 紧凑 */
+        .cover {
+            background: linear-gradient(135deg, #1a365d, #3182ce);
+            color: white; text-align: center; padding: 30px 20px; border-radius: 8px;
+        }
+        .cover h1 { font-size: 28px; margin-bottom: 4px; }
+        .cover .sub { font-size: 15px; opacity: 0.85; }
+        .cover .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 16px; border-radius: 12px; font-size: 12px; margin-top: 8px; }
+
+        /* 章节 */
+        .section { margin-top: 18px; }
+        .section-title {
+            font-size: 16px; color: #1a365d; font-weight: 700;
+            padding-bottom: 6px; border-bottom: 2px solid #3182ce; margin-bottom: 10px;
+        }
+        .subsection { font-size: 13.5px; color: #2d5a87; font-weight: 600; margin: 12px 0 6px; }
+
+        p { color: #4a5568; margin-bottom: 6px; font-size: 13px; }
+
+        /* URL卡片 */
+        .url-box {
+            background: #ebf4ff; border: 1.5px dashed #3182ce; border-radius: 6px;
+            padding: 10px; text-align: center; margin: 8px 0;
+        }
+        .url-box a { font-family: monospace; font-size: 14px; color: #1a365d; font-weight: 700; word-break: break-all; }
+
+        /* 网格 - 紧凑2列 */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0; }
+        .grid-item { background: #f8fafc; border-left: 3px solid #3182ce; padding: 8px 10px; border-radius: 0 4px 4px 0; }
+        .grid-item .label { font-weight: 600; color: #1a365d; font-size: 12px; }
+        .grid-item .desc { font-size: 11.5px; color: #64748b; margin-top: 2px; }
+
+        /* 表格 */
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 12px; }
+        th { background: #1a365d; color: white; padding: 7px 10px; text-align: left; }
+        td { padding: 6px 10px; border-bottom: 1px solid #e2e8f0; vertical-align: middle; }
+        tr:hover { background: #f8fafc; }
+
+        .badge {
+            display: inline-block; padding: 2px 10px; border-radius: 12px;
+            font-weight: 600; font-size: 11px; white-space: nowrap;
+        }
+        .badge-summit { background: linear-gradient(135deg,#ffd700,#ffed4e); color: #744210; }
+        .badge-extreme { background: linear-gradient(135deg,#dc2626,#ef4444); color: white; }
+        .badge-high { background: linear-gradient(135deg,#f97316,#fb923c); color: white; }
+        .badge-medium { background: linear-gradient(135deg,#eab308,#facc15); color: #713f12; }
+        .badge-low { background: linear-gradient(135deg,#22c55e,#4ade80); color: white; }
+
+        /* 信源列表 */
+        .src-list { list-style: none; }
+        .src-list li { padding: 6px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: baseline; gap: 8px; font-size: 12px; }
+        .src-name { font-weight: 600; color: #1a365d; min-width: 150px; }
+        .src-lang { font-size: 10px; color: #94a3b8; background: #f1f5f9; padding: 1px 6px; border-radius: 8px; }
+        .src-desc { color: #64748b; flex: 1; }
+
+        /* 编号列表 */
+        .num-list { list-style: none; counter-reset: n; padding-left: 0; }
+        .num-list li { counter-increment: n; padding: 5px 0 5px 32px; position: relative; font-size: 12px; color: #4a5568; }
+        .num-list li::before {
+            content: counter(n); position: absolute; left: 0; top: 3px;
+            width: 22px; height: 22px; background: #3182ce; color: white;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-weight: 700; font-size: 11px;
+        }
+
+        /* 提示框 */
+        .tip { background: #fef3c7; border-left: 3px solid #f59e0b; padding: 8px 12px; border-radius: 0 4px 4px 0; margin: 8px 0; font-size: 12px; color: #92400e; }
+        .info { background: #dbeafe; border-left: 3px solid #3b82f6; padding: 8px 12px; border-radius: 0 4px 4px 0; margin: 8px 0; font-size: 12px; color: #1e40af; }
+
+        /* 页脚 */
+        .footer { margin-top: 20px; padding-top: 12px; border-top: 1px solid #e2e8f0; text-align: center; color: #94a3b8; font-size: 11px; }
+
+        /* ===== 打印样式（关键！解决"丑PDF"问题） ===== */
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm 10mm;   /* 紧凑边距 */
+            }
+
+            html, body {
+                width: 210mm;         /* A4宽度固定 */
+                padding: 0 !important;
+                margin: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 5mm !important;
+            }
+
+            /* 封面：强制渐变背景 + 不换页 */
+            .cover {
+                background: linear-gradient(135deg, #1a365d 0%, #2d5a87 50%, #3182ce 100%) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                page-break-after: always;    /* 封面后强制分页 */
+                padding: 25mm 15mm !important;
+            }
+
+            /* 章节不分页截断 */
+            .section {
+                page-break-inside: avoid;
+                margin-top: 14px !important;
+            }
+
+            /* 表格不分行截断 */
+            tr { page-break-inside: avoid; }
+            table { page-break-inside: auto; }
+
+            /* 网格卡片不分页 */
+            .grid-item { page-break-inside: avoid; }
+
+            /* 徽章：强制渐变背景 */
+            .badge, .badge-summit, .badge-extreme, .badge-high,
+            .badge-medium, .badge-low {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .badge-summit { background: #ffd700 !important; color: #744210 !important; }
+            .badge-extreme { background: #dc2626 !important; color: white !important; }
+            .badge-high { background: #f97316 !important; color: white !important; }
+            .badge-medium { background: #eab308 !important; color: #713f12 !important; }
+            .badge-low { background: #22c55e !important; color: white !important; }
+
+            /* 表头：强制深蓝背景 */
+            th {
+                background: #1a365d !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            /* 提示框：强制彩色背景 */
+            .tip {
+                background: #fef3c7 !important;
+                border-left: 3pt solid #f59e0b !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+            .info {
+                background: #dbeafe !important;
+                border-left: 3pt solid #3b82f6 !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+
+            /* URL框：强制浅蓝背景 */
+            .url-box {
+                background: #ebf4ff !important;
+                border: 1.5pt dashed #3182ce !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+
+            /* 网格项：强制浅灰背景 */
+            .grid-item {
+                background: #f8fafc !important;
+                border-left: 3pt solid #3182ce !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+
+            /* 编号圆圈：强制蓝色 */
+            .num-list li::before {
+                background: #3182ce !important;
+                -webkit-print-color-adjust: exact !important;
+            }
+
+            /* 页脚 */
+            .footer {
+                margin-top: 15px !important;
+                border-top: 1pt solid #e2e8f0 !important;
+            }
+
+            /* 隐藏链接下划线（打印时不需要） */
+            a { text-decoration: none !important; color: inherit !important; }
+
+            /* 确保字体清晰 */
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<!-- 封面 -->
+<div class="cover">
+    <h1>🌍 国际新闻看板</h1>
+    <div class="sub">International News Dashboard · V1.1 User Guide</div>
+    <div class="badge">2026-07-31</div>
+</div>
+
+<!-- 一、访问地址 -->
+<div class="section">
+    <div class="section-title">一、访问地址</div>
+    <p>部署于 GitHub Pages，全球 CDN 加速，HTTPS 加密，单文件自包含 HTML（无外部依赖）。</p>
+    <div class="url-box">
+        <a href="https://iranorawahaha.github.io/international-news-kb/">https://iranorawahaha.github.io/international-news-kb/</a>
+    </div>
+</div>
+
+<!-- 二、页面功能 -->
+<div class="section">
+    <div class="section-title">二、页面功能介绍</div>
+
+    <div class="subsection">📈 顶部统计卡（4项指标）</div>
+    <div class="grid">
+        <div class="grid-item"><div class="label">总新闻数</div><div class="desc">当次更新条目数（通常 30-60 条）</div></div>
+        <div class="grid-item"><div class="label">信源数量</div><div class="desc">覆盖媒体机构数（9+ 权威信源）</div></div>
+        <div class="grid-item"><div class="label">分类数量</div><div class="desc">话题分类数（6 大类）</div></div>
+        <div class="grid-item"><div class="label">⭐ 元首级</div><div class="desc">最高优先级新闻（中美元首/高层动态）</div></div>
+    </div>
+
+    <div class="subsection">🌐 双语标题显示</div>
+    <p>英文信源新闻以双语呈现，方便对照阅读和英文检索：</p>
+    <div style="background:#f8fafc;padding:10px;border-radius:4px;margin:6px 0;font-size:12px;">
+        <div style="color:#1a365d;font-style:italic;font-weight:600;">"China voices 'serious concern' over new US curbs in senior trade talks"</div>
+        <div style="color:#333;margin-top:3px;">中国在高级别贸易会谈中对美方新限制表达'严重关切'</div>
+    </div>
+
+    <div class="subsection">⭐ 五级重要性分类</div>
+    <table>
+        <tr><th style="width:100px;">等级</th><th style="width:70px;">分数</th><th>说明</th></tr>
+        <tr><td><span class="badge badge-summit">⭐ 元首级</span></td><td>≥95</td><td>中美元首/高层级别，自动置顶，金色徽章</td></tr>
+        <tr><td><span class="badge badge-extreme">🔴 极高</span></td><td>90-94</td><td>重大突发事件、地缘政治重大进展</td></tr>
+        <tr><td><span class="badge badge-high">🟠 高</span></td><td>85-89</td><td>重要政策动向、经贸发展、科技竞争</td></tr>
+        <tr><td><span class="badge badge-medium">🟡 中</span></td><td>75-84</td><td>值得关注的地区动态</td></tr>
+        <tr><td><span class="badge badge-low">🟢 低</span></td><td>&lt;75</td><td>背景资料、参考信息</td></tr>
+    </table>
+
+    <div class="subsection">📋 表格列（共9列）</div>
+    <div class="grid">
+        <div class="grid-item"><div class="label">序号 / 日期</div><div class="desc">编号 + 发布日期</div></div>
+        <div class="grid-item"><div class="label">标题</div><div class="desc">双语显示（英文+中文）</div></div>
+        <div class="grid-item"><div class="label">摘要</div><div class="desc">核心要点（前120字）</div></div>
+        <div class="grid-item"><div class="label">来源 / 分类</div><div class="desc">媒体机构 + 话题标签</div></div>
+        <div class="grid-item"><div class="label">重要性</div><div class="desc">五级彩色徽章</div></div>
+        <div class="grid-item"><div class="label">关键词 / 链接</div><div class="desc">标签化关键词 + 原文跳转按钮</div></div>
+    </div>
+</div>
+
+<!-- 三、采集机制 -->
+<div class="section">
+    <div class="section-title">三、采集与更新机制</div>
+
+    <div class="subsection">🏗️ 双层采集架构</div>
+    <div class="grid">
+        <div class="grid-item">
+            <div class="label">第1层 基础采集 (requests)</div>
+            <div class="desc">中文信源：人民网、外交部、环球网等17个<br>✅ 速度快、稳定性高</div>
+        </div>
+        <div class="grid-item">
+            <div class="label">第2层 WebFetch API 补充</div>
+            <div class="desc">英文权威信源：路透社/BBC/SCMP/CNN/NYT等8-10个<br>✅ 绕过反爬虫、高质量、实时性好</div>
+        </div>
+    </div>
+
+    <div class="subsection">🛡️ 质量控制体系</div>
+    <ul class="num-list">
+        <li><strong>自动去重：</strong>标题相似度算法移除重复文章</li>
+        <li><strong>URL验证：</strong>强制覆盖率 ≥ 95%（实际已达100%）</li>
+        <li><strong>智能评分：</strong>基于内容分析自动计算 priority_score</li>
+        <li><strong>分类标注：</strong>自动归入 6+ 个话题类别</li>
+        <li><strong>元首级识别：</strong>自动检测中美元首/高层新闻并标记金色徽章</li>
+    </ul>
+
+    <div class="info">
+        <strong>🕐 更新频率：</strong>每日手动更新 2 次 — 🌅 早间 09:30（隔夜欧美要闻） / 🌇 下午 17:00（当日亚洲动态），每次约 3-5 分钟，产出 30-60 条精选新闻
+    </div>
+</div>
+
+<!-- 四、信源清单 -->
+<div class="section">
+    <div class="section-title">四、信源清单</div>
+
+    <div class="subsection">🌍 英文权威信源（主要，9个）</div>
+    <ul class="src-list">
+        <li><span class="src-name">Reuters 路透社</span><span class="src-lang">EN</span><span class="src-desc">全球最大通讯社，财经/政治报道权威</span></li>
+        <li><span class="src-name">BBC News</span><span class="src-lang">EN</span><span class="src-desc">英国公共广播公司，国际报道平衡客观</span></li>
+        <li><span class="src-name">SCMP 南华早报</span><span class="src-lang">EN</span><span class="src-desc">香港主流英文报，中国/亚洲事务深度报道</span></li>
+        <li><span class="src-name">The Guardian 卫报</span><span class="src-lang">EN</span><span class="src-desc">英国优质报刊，调查分析和评论见长</span></li>
+        <li><span class="src-name">CNN</span><span class="src-lang">EN</span><span class="src-desc">美国24小时新闻网络，突发新闻领先</span></li>
+        <li><span class="src-name">NYT 纽约时报</span><span class="src-lang">EN</span><span class="src-desc">美国权威大报，影响力广泛的评论分析</span></li>
+        <li><span class="src-name">Al Jazeera 半岛电视台</span><span class="src-lang">EN</span><span class="src-desc">卡塔尔媒体，中东/南半球独特视角</span></li>
+        <li><span class="src-name">Washington Post 华盛顿邮报</span><span class="src-lang">EN</span><span class="src-desc">美国顶尖报纸，政治报道实力雄厚</span></li>
+        <li><span class="src-name">AP 美联社</span><span class="src-lang">EN</span><span class="src-desc">美国通讯社联盟，事实性报道标杆</span></li>
+    </ul>
+
+    <div class="subsection">🇨🇳 中文信源（补充，4个）</div>
+    <ul class="src-list">
+        <li><span class="src-name">人民网</span><span class="src-lang">中文</span><span class="src-desc">中共中央机关报，权威政策发布平台</span></li>
+        <li><span class="src-name">中国外交部</span><span class="src-lang">中文</span><span class="src-desc">官方外交声明、发言人例行记者会</span></li>
+        <li><span class="src-name">环球网</span><span class="src-lang">中文</span><span class="src-desc">《环球时报》旗下，国际新闻+评论</span></li>
+        <li><span class="src-name">国际在线</span><span class="src-lang">中文</span><span class="src-desc">中央广播电视总台对外传播平台</span></li>
+    </ul>
+</div>
+
+<!-- 五、筛选标准 -->
+<div class="section">
+    <div class="section-title">五、新闻筛选标准</div>
+
+    <div class="subsection">✅ 内容质量标准</div>
+    <ul class="num-list">
+        <li><strong>仅权威信源：</strong>严禁自媒体/营销号/社交平台内容</li>
+        <li><strong>优先原创报道：</strong>转载/聚合类内容降权处理</li>
+        <li><strong>事实准确性：</strong>追求客观事实，避免煽动性标题党</li>
+        <li><strong>实质内容门槛：</strong>摘要不少于150字，确保信息量</li>
+        <li><strong>元数据完整：</strong>标题、日期、来源、URL为必填字段</li>
+    </ul>
+
+    <div class="subsection">📊 话题优先级 & 分类覆盖</div>
+    <div class="grid">
+        <div class="grid-item"><div class="label">最高优先</div><div class="desc">中美关系、贸易谈判、元首外交</div></div>
+        <div class="grid-item"><div class="label">高优先</div><div class="desc">经济制裁、AI/科技竞争、地缘政治</div></div>
+        <div class="grid-item"><div class="label">中等优先</div><div class="desc">地区安全、多边组织、能源问题</div></div>
+        <div class="grid-item"><div class="label">背景参考</div><div class="desc">文化、教育、环境、发展议题</div></div>
+        <div class="grid-item"><div class="label">中美关系</div><div class="desc">双边高层互动、经贸磋商</div></div>
+        <div class="grid-item"><div class="label">地缘政治</div><div class="desc">大国博弈、多边外交</div></div>
+        <div class="grid-item"><div class="label">全球经济</div><div class="desc">贸易政策、金融市场</div></div>
+        <div class="grid-item"><div class="label">科技竞争</div><div class="desc">AI、芯片、数字治理</div></div>
+        <div class="grid-item"><div class="label">安全冲突</div><div class="desc">军事动态、地区热点</div></div>
+        <div class="grid-item"><div class="label">地区动态</div><div class="desc">欧洲/中东/亚太局势</div></div>
+    </div>
+
+    <div class="subsection">⭐ 元首级识别标准（满足任一即标记）</div>
+    <ul class="num-list">
+        <li>涉及中国国家主席习近平或美国总统的直接活动/表态</li>
+        <li>内阁级及以上高层外交会晤（国务卿、财长访华等）</li>
+        <li>为习近平-特朗普峰会做准备或后续跟进的活动</li>
+        <li>影响中美关系走向的重大政策决定</li>
+        <li>在中美关系史上具有标志性意义的事件</li>
+    </ul>
+</div>
+
+<!-- 六、使用技巧 -->
+<div class="section">
+    <div class="section-title">六、使用技巧</div>
+    <div class="grid">
+        <div class="grid-item"><div class="label">👆 从上往下看</div><div class="desc">元首级（金色徽章）排在最前面，必读</div></div>
+        <div class="grid-item"><div class="label">🔍 双语检索</div><div class="desc">用英文关键词搜索原始报道</div></div>
+        <div class="grid-item"><div class="label">🌐 信源多样</div><div class="desc">西方+亚洲视角结合，全面认知</div></div>
+        <div class="grid-item"><div class="label">📅 注意时间</div><div class="desc">每日09:30/17:00更新两次</div></div>
+        <div class="grid-item"><div class="label">🔎 页内搜索</div><div class="desc">Cmd+F(Mac) / Ctrl+F(Win)</div></div>
+        <div class="grid-item"><div class="label">🔗 原文链接</div><div class="desc">右侧"原文"按钮跳转原始文章</div></div>
+    </div>
+    <div class="tip"><strong>💡 强制刷新：</strong>如非最新版本，按 <strong>Cmd+Shift+R</strong>(Mac) 或 <strong>Ctrl+Shift+R</strong>(Win) 清除缓存。</div>
+</div>
+
+<div class="footer">
+    国际新闻看板 V1.1 · International News Dashboard · Generated 2026-07-31 · URL覆盖率保障机制已启用 ✅
+</div>
+
+</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-07-31 17:40",
+  "lastUpdated": "2026-07-31 21:33",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -11,8 +11,8 @@
         "url": "",
         "language": "zh",
         "raw_content": "人民网海外分公司专栏",
-        "id": "basic_0_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_0_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -22,8 +22,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bed8ca310986e2b4683cd.html",
         "language": "zh",
         "raw_content": "Born by river and sea",
-        "id": "basic_1_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_1_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -33,8 +33,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bfa9da310986e2b468497.html",
         "language": "zh",
         "raw_content": "A 'sun' that heals",
-        "id": "basic_2_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_2_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -44,8 +44,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bdb2ca310986e2b46838f.html",
         "language": "zh",
         "raw_content": "Time for a cool change",
-        "id": "basic_3_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_3_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -55,8 +55,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6be406a310986e2b4683aa.html",
         "language": "zh",
         "raw_content": "Chinese beauty brands enjoy a surge in popularity",
-        "id": "basic_4_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_4_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -66,8 +66,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/29/WS6a69a74da310986e2b467f22.html",
         "language": "zh",
         "raw_content": "Yiwu: From small town to 'world's supermarket'",
-        "id": "basic_5_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_5_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -77,8 +77,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/30/WS6a6b6ab2a310986e2b468357.html",
         "language": "zh",
         "raw_content": "CPC to hold key meeting in October",
-        "id": "basic_6_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_6_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -88,8 +88,19 @@
         "url": "https://www.chinadaily.com.cn/business",
         "language": "zh",
         "raw_content": "Business+",
-        "id": "basic_7_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_7_4421",
+        "collectedAt": "2026-07-31 21:27:01",
+        "collection_method": "basic"
+      },
+      {
+        "title": "外交部发言人办公室系列账号",
+        "summary": "外交部发言人办公室系列账号",
+        "source": "中国外交部",
+        "url": "",
+        "language": "zh",
+        "raw_content": "外交部发言人办公室系列账号",
+        "id": "basic_8_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -99,8 +110,8 @@
         "url": "https://www.news.cn/world/20260727/cb5ae5d3129e479b9d9b793b5d508486/c.html",
         "language": "zh",
         "raw_content": "全球连线丨不亦“乐”乎：中德学生歌声回荡彩云之南",
-        "id": "basic_8_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_9_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -110,8 +121,8 @@
         "url": "https://www.news.cn/world/20260730/ad8ce1b79f7b48c398bdf2eb20038d89/c.html",
         "language": "zh",
         "raw_content": "记者手记丨从“金环”城市看中俄地方合作图景",
-        "id": "basic_9_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_10_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -121,8 +132,8 @@
         "url": "https://www.news.cn/world/20260730/477aa4fa269d4204b5f41d35e80a58c8/c.html",
         "language": "zh",
         "raw_content": "美伊冲突外溢 中东硝烟四起",
-        "id": "basic_10_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_11_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -132,8 +143,8 @@
         "url": "https://www.news.cn/silkroad/20260730/64176ac623ba4ba1bc7a132af90400ba/c.html",
         "language": "zh",
         "raw_content": "枢纽通、货值升 中欧班列激活陕西外贸动能",
-        "id": "basic_11_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_12_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -143,8 +154,8 @@
         "url": "http://www.xinhuanet.com/worldpro/gjxw/index.html",
         "language": "zh",
         "raw_content": "国际要闻TOP NEWS",
-        "id": "basic_12_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_13_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -154,8 +165,8 @@
         "url": "https://www.news.cn/world/20260710/8c3d9472ffa1415bb67c8bb404d62011/c.html",
         "language": "zh",
         "raw_content": "从北约峰会看美欧关系走向",
-        "id": "basic_13_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_14_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -165,8 +176,8 @@
         "url": "https://www.news.cn/world/20260702/97be20afa67c4af18da9ef249bf82f39/c.html",
         "language": "zh",
         "raw_content": "40℃高温炙烤下，中国“降温神器”缓解欧洲酷暑焦虑",
-        "id": "basic_14_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_15_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -176,8 +187,8 @@
         "url": "http://www.xinhuanet.com/worldpro/xjpdwj/index.html",
         "language": "zh",
         "raw_content": "出访专题XI'S VISITS",
-        "id": "basic_15_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_16_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -187,8 +198,8 @@
         "url": "http://www.xinhuanet.com/worldpro/rdzt/index.html",
         "language": "zh",
         "raw_content": "热点专题SPECIAL REPORTS",
-        "id": "basic_16_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_17_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -198,8 +209,8 @@
         "url": "https://www.news.cn/world/cnleaders/xijinping/2026fwcx/index.html",
         "language": "zh",
         "raw_content": "习近平对朝鲜进行国事访问",
-        "id": "basic_17_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_18_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
       },
       {
@@ -209,9 +220,351 @@
         "url": "https://www.news.cn/world/cnleaders/xijinping/xjpcx2025apecldrfzshy/index.html",
         "language": "zh",
         "raw_content": "习近平出席APEC领导人非正式会议并对韩国进行国事访问",
-        "id": "basic_18_670",
-        "collectedAt": "2026-07-31 17:37:50",
+        "id": "basic_19_4421",
+        "collectedAt": "2026-07-31 21:27:01",
         "collection_method": "basic"
+      },
+      {
+        "title_en": "Moroccan forces beat back crowds with batons and tear gas",
+        "title": "摩洛哥军警用警棍和催泪瓦斯驱散人群",
+        "summary": "摩洛哥安全部队在西班牙飞地休达边境使用武力驱散试图越境的大规模人群。此次边境危机已造成至少41人死亡，引发欧盟内部对移民政策的激烈争论。",
+        "source": "路透社",
+        "category": "地缘政治",
+        "keywords": [
+          "摩洛哥",
+          "西班牙",
+          "移民危机",
+          "休达",
+          "欧盟边境"
+        ],
+        "url": "https://www.reuters.com/world/africa/spain-morocco-halt-deadly-rush-spanish-enclave-after-49000-cross-day-2026-07-31/",
+        "priority_score": 93,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "reuters_1_1785504803"
+      },
+      {
+        "title_en": "Wildfires ease near Bordeaux and Madrid, bringing respite",
+        "title": "波尔多和马德里附近野火减弱，局势稍有缓解",
+        "summary": "法国波尔多和西班牙马德里周边地区的野火在持续燃烧多日后终于出现减弱迹象，消防员抓住机会加强防线。此次欧洲野火季被科学家称为'气候危机超级充电'的结果。",
+        "source": "路透社",
+        "category": "气候变化",
+        "keywords": [
+          "欧洲野火",
+          "波尔多",
+          "马德里",
+          "气候危机",
+          "消防"
+        ],
+        "url": "https://www.reuters.com/business/environment/wildfires-ease-near-bordeaux-madrid-bringing-respite-2026-07-31/",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "reuters_2_1785504803"
+      },
+      {
+        "title_en": "Tariff provisions could doom long-awaited Russia sanctions bill",
+        "title": "关税条款可能扼杀期待已久的俄罗斯制裁法案",
+        "summary": "美国国会两党长期推动的强化俄罗斯制裁法案因关税条款争议陷入僵局。若无法达成妥协，这项被期待已久的立法努力可能付诸东流，影响美欧对俄统一战线。",
+        "source": "路透社",
+        "category": "地缘政治",
+        "keywords": [
+          "俄罗斯制裁",
+          "美国国会",
+          "关税",
+          "两党分歧",
+          "乌克兰战争"
+        ],
+        "url": "https://www.reuters.com/world/tariff-provisions-could-doom-long-awaited-russia-sanctions-bill-2026-07-31/",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "reuters_3_1785504803"
+      },
+      {
+        "title_en": "UK approval for China's mega embassy in London was lawful, court rules",
+        "title": "英国法院裁定：批准中国驻伦敦巨型大使馆合法",
+        "summary": "英国高等法院裁决政府批准中国建造驻伦敦巨型大使馆的决定合法。这一备受争议的项目曾引发安全和规划方面的广泛担忧，但法院认为程序合规。",
+        "source": "路透社",
+        "category": "中美关系",
+        "keywords": [
+          "中国大使馆",
+          "英国",
+          "法院裁决",
+          "外交设施",
+          "中英关系"
+        ],
+        "url": "https://www.reuters.com/world/uk/uk-approval-chinas-mega-embassy-london-was-lawful-court-rules-2026-07-31/",
+        "priority_score": 86,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "reuters_4_1785504803"
+      },
+      {
+        "title_en": "Japan quake halts auto and chip plants, testing supply chain resilience",
+        "title": "日本地震导致汽车和芯片工厂停产，考验供应链韧性",
+        "summary": "日本南部7.1级地震造成至少34人死亡，多家汽车制造商和半导体工厂被迫停产。全球供应链再次面临自然灾害冲击的严峻考验。",
+        "source": "路透社",
+        "category": "亚太动态",
+        "keywords": [
+          "日本地震",
+          "供应链",
+          "汽车制造",
+          "半导体",
+          "自然灾害"
+        ],
+        "url": "https://www.reuters.com/world/asia-pacific/death-toll-japan-earthquake-rises-34-2026-07-31/",
+        "priority_score": 89,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "reuters_5_1785504803"
+      },
+      {
+        "title_en": "About 60,000 migrants arrive in Ceuta in 24 hours, Spanish territory's leader says",
+        "title": "西班牙飞地领导人称约6万移民24小时内抵达休达",
+        "summary": "史无前例的大规模移民潮冲击西班牙北非飞地休达，24小时内约6万人涌入，超过该城市总人口的70%。至少41人在越境过程中死亡，欧盟面临严重的人道主义和边境管理危机。",
+        "source": "BBC News",
+        "category": "欧洲事务",
+        "keywords": [
+          "移民危机",
+          "休达",
+          "摩洛哥",
+          "西班牙",
+          "欧盟边境"
+        ],
+        "url": "https://www.bbc.com/news/articles/cx2kp639yx4o",
+        "priority_score": 94,
+        "is_summit_level": true,
+        "date": "2026-07-31",
+        "id": "bbc_1_1785504803"
+      },
+      {
+        "title_en": "Hamas says it has agreed to disarm after Trump announces Board of Peace plan",
+        "title": "哈马斯称在特朗普宣布和平委员会计划后同意解除武装",
+        "summary": "哈马斯高级官员向BBC证实同意特朗普提出的和平委员会计划，包括解除武装。若成功实施，这将是推进加沙和平进程的重要一步。",
+        "source": "BBC News",
+        "category": "中东局势",
+        "keywords": [
+          "哈马斯",
+          "加沙停火",
+          "特朗普",
+          "和平委员会",
+          "中东外交"
+        ],
+        "url": "https://www.bbc.com/news/articles/cj03m512r4go",
+        "priority_score": 91,
+        "is_summit_level": true,
+        "date": "2026-07-31",
+        "id": "bbc_2_1785504803"
+      },
+      {
+        "title_en": "At least five members of same family killed in Russian missile attack, Zelensky says",
+        "title": "泽连斯基称俄导弹袭击致同一家庭5名成员遇难",
+        "summary": "乌克兰总统泽连斯基表示俄导弹袭击中部城市克里沃罗格附近村庄，造成包括一名6岁女孩在内的6人死亡。俄乌冲突持续升级。",
+        "source": "BBC News",
+        "category": "欧洲事务",
+        "keywords": [
+          "俄乌战争",
+          "泽连斯基",
+          "导弹袭击",
+          "平民伤亡",
+          "欧洲安全"
+        ],
+        "url": "https://www.bbc.com/news/articles/cy8mk59l5jzo",
+        "priority_score": 89,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "bbc_3_1785504803"
+      },
+      {
+        "title_en": "Why limited war with the US may suit Iran better than peace",
+        "title": "为何有限战争可能比和平更符合伊朗利益",
+        "summary": "分析认为伊朗可能认为能够控制冲突规模以向美国施压同时避免全面战争。这种策略让伊朗在与美国博弈中保持主动权。",
+        "source": "BBC News",
+        "category": "地缘政治",
+        "keywords": [
+          "美伊冲突",
+          "有限战争",
+          "伊朗战略",
+          "中东局势",
+          "美国"
+        ],
+        "url": "https://www.bbc.com/news/articles/c78gnyq3wvdo",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "bbc_4_1785504803"
+      },
+      {
+        "title_en": "Beijing to impose exit bans for export control, tech transfer breaches",
+        "title": "北京将对出口管制和技术转让违规者实施出境禁令",
+        "summary": "中国出台新规对违反出口管制和关键技术转让的人员实施出境禁令，旨在打击关键矿产走私及战略技术泄露行为。",
+        "source": "南华早报",
+        "category": "科技竞争",
+        "keywords": [
+          "出境禁令",
+          "出口管制",
+          "技术转移",
+          "关键矿产",
+          "科技安全"
+        ],
+        "url": "https://www.scmp.com/news/china/diplomacy/article/3362590/beijing-impose-exit-bans-export-control-tech-transfer-breaches",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "scmp_1_1785504803"
+      },
+      {
+        "title_en": "Xi urges Chinese armed forces to 'strengthen military application' of AI",
+        "title": "习近平敦促中国军队'加强人工智能的军事应用'",
+        "summary": "在解放军99周年纪念日前夕，习近平发表讲话强调要加强AI在军事领域的应用，罕见揭示解放军现代化最新方向。",
+        "source": "南华早报",
+        "category": "中美关系",
+        "keywords": [
+          "习近平",
+          "解放军",
+          "AI军事应用",
+          "军队现代化",
+          "99周年"
+        ],
+        "url": "https://www.scmp.com/news/china/military/article/3362496/xi-jinping-urges-chinese-armed-forces-strengthen-military-application-ai",
+        "priority_score": 95,
+        "is_summit_level": true,
+        "date": "2026-07-31",
+        "id": "scmp_2_1785504803"
+      },
+      {
+        "title_en": "EU-China trade: Beijing turns the screws as Brussels tests limits of restraint",
+        "title": "欧中贸易：北京加码施压，布鲁塞尔试探克制底线",
+        "summary": "最新制裁措施显示中国正加大对欧洲施压力度，试图在10月关键节点前向各成员国施压。中欧贸易紧张局势持续升级。",
+        "source": "南华早报",
+        "category": "全球经济",
+        "keywords": [
+          "欧中贸易",
+          "制裁",
+          "欧盟",
+          "贸易战",
+          "十月关键期"
+        ],
+        "url": "https://www.scmp.com/news/china/diplomacy/article/3362502/eu-china-trade-war-beijing-turns-screws-brussels-tests-limits-restraint",
+        "priority_score": 86,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "scmp_3_1785504803"
+      },
+      {
+        "title_en": "Why Japanese stealth fighters over Australia signal defence pivot against China",
+        "title": "日本隐形战机现身澳大利亚，释放对华防务转向信号",
+        "summary": "连续军事演习和新后勤安排表明美国及其盟友空中力量正发生战略转变，澳大利亚北部成为关键枢纽。日本F-35战机部署澳洲被视为针对中国的重要军事动向。",
+        "source": "南华早报",
+        "category": "亚太动态",
+        "keywords": [
+          "日本",
+          "澳大利亚",
+          "隐形战机",
+          "军事演习",
+          "亚太安全"
+        ],
+        "url": "https://www.scmp.com/news/china/military/article/3362533/why-japanese-stealth-fighters-over-australia-signal-strategic-pivot-against-china",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "scmp_4_1785504803"
+      },
+      {
+        "title_en": "Will US red tape give China the lead in AI race?",
+        "title": "美国官僚主义是否会将AI竞赛领先权拱手让给中国？",
+        "summary": "美国参议员被告知需加速数据中心和光纤网络扩张，华盛顿担忧因基础设施审批延误而在AI领域落后于北京。",
+        "source": "南华早报",
+        "category": "科技竞争",
+        "keywords": [
+          "AI竞赛",
+          "数据中心",
+          "基础设施",
+          "中美科技竞争",
+          "光纤网络"
+        ],
+        "url": "https://www.scmp.com/news/china/diplomacy/article/3362471/will-us-red-tape-and-other-infrastructure-delays-give-china-lead-ai-race",
+        "priority_score": 90,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "scmp_5_1785504803"
+      },
+      {
+        "title_en": "'Extremely scary findings' show climate crisis is supercharging Europe's wildfire weather",
+        "title": "'极其可怕的发现'显示气候危机正在加剧欧洲野火天气",
+        "summary": "最新研究揭示气候变化正以前所未有的方式加剧欧洲野火强度和频率，西班牙、法国等地野火难以扑灭，未来情况将更加严峻。",
+        "source": "卫报",
+        "category": "气候变化",
+        "keywords": [
+          "气候变化",
+          "欧洲野火",
+          "极端天气",
+          "环境危机",
+          "科学发现"
+        ],
+        "url": "https://www.theguardian.com/world/2026/jul/31/wildfires-extreme-weather-europe-spain-france-climate-crisis-analysis",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "guardian_1_1785504803"
+      },
+      {
+        "title_en": "At least 41 people die as thousands cross to Spanish enclave of Ceuta from Morocco",
+        "title": "数千人从摩洛哥越境进入西班牙飞地休达，至少41人死亡",
+        "summary": "大规模移民潮冲击欧盟边境造成严重人员伤亡。西班牙首相谴责'领土完整遭侵犯'，暴露欧洲移民政策深层矛盾。",
+        "source": "卫报",
+        "category": "地缘政治",
+        "keywords": [
+          "移民危机",
+          "欧盟边境",
+          "摩洛哥",
+          "休达",
+          "人道主义"
+        ],
+        "url": "https://www.theguardian.com/world/2026/jul/31/ceuta-spain-morocco-border-deaths",
+        "priority_score": 96,
+        "is_summit_level": true,
+        "date": "2026-07-31",
+        "id": "guardian_2_1785504803"
+      },
+      {
+        "title_en": "AI labels to be compulsory on authentic-looking content under EU rules",
+        "title": "根据欧盟新规，逼真AI内容将强制添加标签标识",
+        "summary": "欧盟出台里程碑式AI监管法规，要求所有看似真实但由AI生成的内容必须明确标注，这是全球科技伦理治理的重要一步。",
+        "source": "卫报",
+        "category": "科技竞争",
+        "keywords": [
+          "人工智能",
+          "欧盟法规",
+          "内容标注",
+          "深度伪造",
+          "数字治理"
+        ],
+        "url": "https://www.theguardian.com/technology/2026/jul/31/ai-labels-to-be-compulsory-on-authentic-looking-content-under-eu-rules",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "guardian_3_1785504803"
+      },
+      {
+        "title_en": "Ebola outbreak in DRC the fastest growing in the history of the virus",
+        "title": "刚果（金）埃博拉疫情成为病毒历史上增长最快的爆发",
+        "summary": "刚果民主共和国暴发埃博拉疫情，传播速度打破历史纪录，引发全球卫生安全担忧，反映全球健康不平等和非洲公共卫生系统脆弱性。",
+        "source": "卫报",
+        "category": "安全冲突",
+        "keywords": [
+          "埃博拉",
+          "刚果金",
+          "全球卫生",
+          "传染病",
+          "健康不平等"
+        ],
+        "url": "https://www.theguardian.com/global-development/2026/jul/31/ebola-outbreak-in-drc-the-fastest-growing-in-the-history-of-the-virus",
+        "priority_score": 91,
+        "is_summit_level": false,
+        "date": "2026-07-31",
+        "id": "guardian_4_1785504803"
       }
     ]
   },
@@ -219,7 +572,7 @@
     "2026-07-31"
   ],
   "stats": {
-    "totalArticles": 19,
+    "totalArticles": 38,
     "dateCount": 1,
     "latestDate": "2026-07-31",
     "oldestDate": "2026-07-31"
