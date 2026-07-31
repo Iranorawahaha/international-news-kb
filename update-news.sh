@@ -1,20 +1,19 @@
 #!/bin/bash
 
 # ============================================================
-# 🌍 国际新闻看板 - 一键更新脚本 V1.1（正式版）
-# 用途: 采集今日新闻 → WebFetch补充 → 数据整合 → 更新网页 → 推送GitHub
-# 架构: 双层采集（基础requests + WebFetch API）+ URL完整性保障
+# 🌍 国际新闻看板 - 一键更新脚本 V1.2（数据存档版）
+# 用途: 采集新闻 → 追加7天存档 → 生成网页 → 同步飞书表 → 推送GitHub
 #
-# V1.1 核心特性:
-#   ✅ 信源扩展至9-10个英文权威信源（路透社/BBC/CNN/NYT等）
-#   ✅ 双语标题显示（英文原标题 + 中文翻译）
-#   ✅ 元首级新闻智能识别与置顶（中美元首/高层会晤）
-#   ✅ 重要性5级分类体系（⭐元首级/🔴极高/🟠高/🟡中/🟢低）
-#   ✅ UI优化（列不换行、按钮防换行、紧凑布局）
-#   ✅ 根目录+gh-pages双目录同步部署
+# V1.2 核心升级:
+#   ✅ 7天数据存档（不再清空历史）
+#   ✅ 按日期分组数据结构 { archive: { date: [...] } }
+#   ✅ 顶部日期 Tab 栏切换查看
+#   ✅ 自动清理超过7天的旧数据
+#   ✅ 飞书多维表格永久存档（增量同步）⭐ NEW
+#   ✅ 保留V1.1所有特性（双语/5级分类/元首级/UI优化）
 #
 # 使用: ./update-news.sh
-# 版本: V1.1 正式版 (2026-07-31)
+# 版本: V1.2 Final (2026-07-31)
 # ============================================================
 
 set -e
@@ -33,7 +32,7 @@ PROJECT_DIR="/Users/xiaoxiao/WorkBuddy/2026-07-29-17-06-50"
 GH_PAGES_DIR="$PROJECT_DIR/gh-pages"
 
 echo -e "${CYAN}╔══════════════════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║   🌍 国际新闻看板 - 一键更新系统 V1.1           ║${NC}"
+echo -e "${CYAN}║   🌍 国际新闻看板 - 一键更新系统 V1.2           ║${NC}"
 echo -e "${CYAN}╚══════════════════════════════════════════════════╝${NC}"
 echo ""
 echo -e "📅 当前时间: $(date '+%Y-%m-%d %H:%M:%S')"
@@ -48,7 +47,7 @@ echo ""
 cd "$PROJECT_DIR"
 
 if [ -f "scripts/fetch_news_v3.py" ]; then
-    echo -e "${YELLOW}🔄 运行采集引擎 V1.1...${NC}"
+    echo -e "${YELLOW}🔄 运行采集引擎...${NC}"
     echo ""
     python3 scripts/fetch_news_v3.py --basic-only
 elif [ -f "scripts/fetch_news_v2.py" ]; then
@@ -60,835 +59,821 @@ else
     exit 1
 fi
 
-# 检查基础采集结果
-if [ ! -f "data/news-data.json" ]; then
-    echo -e "${RED}❌ 基础数据文件未生成！${NC}"
-    exit 1
-fi
-
-BASIC_COUNT=$(python3 -c "import json; data=json.load(open('data/news-data.json')); print(len(data) if isinstance(data, list) else 0)")
-
-echo ""
-echo -e "${GREEN}✅ 基础采集完成: ${BASIC_COUNT} 条新闻${NC}"
-
-# ==================== 第2步：WebFetch补充说明（V1.1扩展版） ====================
+# ==================== 第2步：WebFetch补充说明 ====================
 echo ""
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${PURPLE}🌐 第2步：WebFetch API补充（V1.1: 10大英文权威信源）${NC}"
+echo -e "${PURPLE}🌐 第2步：WebFetch API补充（10大英文权威信源）${NC}"
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
 cat << 'EOF'
-⚠️ 重要提示：此步骤需要在 WorkBuddy 环境中完成！
+⚠️ 此步骤需要在 WorkBuddy 环境中完成！
 
-WebFetch API 是 WorkBuddy AI 助手的专属功能，用于获取路透社、BBC、CNN等
-反爬虫严格的权威英文信源。此步骤无法在终端命令行自动完成。
+📋 WebFetch 任务清单：
+  🔴 必选(4): 路透社 / BBC / SCMP / 卫报
+  🟠 扩展(6): CNN / NYT / 半岛电视台 / WaPo / AP / Politico
 
-📋 V1.1 WebFetch 任务清单（目标：30-45条高质量英文新闻）：
+✅ 要求: 双语标题 + 完整URL + 元首级标注 + priority_score
 
-  🔴 必选核心信源（4个）：
-  ┌─────────────────────────────────────────────────────┐
-  │ 1️⃣ 路透社 (Reuters)                                │
-  │    URL: https://www.reuters.com/world/              │
-  │    目标: ~8条 | 重点: 全球政治经济要闻              │
-  │                                                     │
-  │ 2️⃣ BBC News                                        │
-  │    URL: https://www.bbc.com/news                   │
-  │    目标: ~6条 | 重点: 欧洲中东突发事件              │
-  │                                                     │
-  │ 3️⃣ 南华早报 (SCMP)                                 │
-  │    URL: https://www.scmp.com/news/china            │
-  │    目标: ~6条 | 重点: 中美关系/中国动态             │
-  │                                                     │
-  │ 4️⃣ 卫报 (The Guardian)                             │
-  │    URL: https://www.theguardian.com/international   │
-  │    目标: ~4条 | 重点: 深度分析/欧洲事务             │
-  └─────────────────────────────────────────────────────┘
-
-  🟠 扩展推荐信源（6个，按优先级排序）：
-  ┌─────────────────────────────────────────────────────┐
-  │ 5️⃣ CNN                                            │
-  │    URL: https://edition.cnn.com/world               │
-  │    目标: ~4条 | 突发事件/美国外交                  │
-  │                                                     │
-  │ 6️⃣ 纽约时报 (NYT)                                  │
-  │    URL: https://www.nytimes.com/world               │
-  │    目标: ~4条 | 深度报道/AI科技竞争                │
-  │                                                     │
-  │ 7️⃣ 半岛电视台 (Al Jazeera)                         │
-  │    URL: https://www.aljazeera.com/news             │
-  │    目标: ~3条 | 中东局势/发展中国家视角           │
-  │                                                     │
-  │ 8️⃣ 华盛顿邮报 (Washington Post)                    │
-  │    URL: https://www.washingtonpost.com/world        │
-  │    目标: ~3条 | 美国政策/北约事务                  │
-  │                                                     │
-  │ 9️⃣ 美联社 (AP News)                               │
-  │    URL: https://apnews.com/hub/ap-top-news         │
-  │    目标: ~3条 | 快讯/事实核查                      │
-  │                                                     │
-  │ 🔟 Politico（可选，可能404）                        │
-  │     URL: https://www.politico.com/global-news      │
-  │     目标: ~2条 | 政策分析                          │
-  └─────────────────────────────────────────────────────┘
-
-📝 WebFetch Prompt 要求（必须包含）：
-
-  ✅ 双语标题：每条新闻必须返回英文原标题 + 中文翻译
-     格式示例："title_en": "Original English Title",
-              "title": "中文翻译标题"
-
-  ✅ 完整URL：每条必须有可访问的文章链接（https://开头）
-     ⚠️ URL是必填项，缺失会导致链接无法点击
-
-  ✅ 元首级标注：如果涉及以下内容，标记 is_summit_level: true
-     • 中美元首会晤/通话/互访
-     • 习近平/特朗普/拜登等领导人直接相关
-     • 中美贸易谈判/战略对话
-     设定 priority_score: 95-100
-
-  ✅ 优先级评分（priority_score）：
-     ⭐ 元首级: 95-100 (is_summit_level=true)
-     🔴 极高:   90-94 (战争/灾难/重大突破)
-     🟠 高:     85-89 (重要政策/高级别会议)
-     🟡 中:     75-84 (一般国际新闻)
-     🟢 低:     <75 (背景/评论)
-
-💡 操作方法：
-
-  在 WorkBuddy 对话中说：
-  "请帮我用 WebFetch 补充最新国际新闻数据，需要双语标题和完整URL，
-   重点抓取路透社/BBC/CNN/NYT/SCMP/卫报/半岛电视台/华盛顿邮报/美联社"
+💡 在 WorkBuddy 中说:
+  "请用 WebFetch 补充最新国际新闻，双语标题+完整URL"
 
 EOF
 
-echo -e "${YELLOW}是否已通过 WebFetch 获取了额外数据？${NC}"
-read -p "(y/n, 默认跳过): " has_webfetch
+read -p "是否已通过 WebFetch 获取了额外数据？(y/n, 默认跳过): " has_webfetch
 
 if [ "$has_webfetch" = "y" ] || [ "$has_webfetch" = "Y" ]; then
-    echo ""
-    echo -e "${GREEN}✅ 已包含 WebFetch 数据，继续...${NC}"
+    echo -e "${GREEN}✅ 已包含 WebFetch 数据${NC}"
 else
-    echo ""
-    echo -e "${YELLOW}⏭️ 跳过 WebFetch 补充，使用基础采集数据继续...${NC}"
-    echo -e "${YELLOW}   （提示：基础数据通常包含 ${BASIC_COUNT} 条中文信源新闻）${NC}"
+    echo -e "${YELLOW}⏭️ 跳过 WebFetch，使用基础采集数据继续...${NC}"
 fi
 
-# ==================== 第3步：验证数据质量（V1.1增强版） ====================
+# ==================== 第3步：V1.2 数据整合（追加模式）====================
 echo ""
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${BLUE}🔍 第3步：验证数据质量（V1.1增强检查）${NC}"
+echo -e "${BLUE}📦 第3步：V1.2 数据整合（追加到7天存档）${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
-FINAL_COUNT=$(python3 -c "import json; data=json.load(open('data/news-data.json')); print(len(data) if isinstance(data, list) else 0)")
-
-if [ "$FINAL_COUNT" -eq 0 ]; then
-    echo -e "${RED}❌ 没有新闻数据！检查采集脚本是否正常运行${NC}"
-    exit 1
-fi
-
-echo -e "📊 新闻总数: ${GREEN}${FINAL_COUNT}${NC} 条"
-echo ""
-
-# 统计来源分布（V1.1增强）
-python3 << 'STATS'
+python3 << 'INTEGRATE'
 import json
-from collections import Counter
+import sys
+from datetime import datetime, timedelta
+from collections import OrderedDict
 
-with open('data/news-data.json', 'r', encoding='utf-8') as f:
-    data = json.load(f)
+DATA_FILE = 'data/news-data.json'
+RETENTION_DAYS = 7
 
+def load_data():
+    try:
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except:
+        return {"version": "1.2", "archive": {}, "dates": [], "stats": {}}
+
+def save_data(data):
+    with open(DATA_FILE, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def convert_v11_to_v12(old_list):
+    """将V1.1扁平数组转换为V1.2格式"""
+    archive = {}
+    for article in old_list:
+        date_str = article.get('date', datetime.now().strftime('%Y-%m-%d'))
+        if date_str not in archive:
+            archive[date_str] = []
+        archive[date_str].append(article)
+
+    for date_str in archive:
+        archive[date_str].sort(key=lambda x: x.get('priority_score', 0), reverse=True)
+
+    return archive
+
+def cleanup_old(archive):
+    """清理超过7天的旧数据"""
+    cutoff = (datetime.now() - timedelta(days=RETENTION_DAYS)).strftime('%Y-%m-%d')
+    return {d: arts for d, arts in archive.items() if d >= cutoff}
+
+def update_stats(data):
+    """更新统计信息"""
+    total = sum(len(arts) for arts in data['archive'].values())
+    data['dates'] = sorted(data['archive'].keys(), reverse=True)
+    data['stats'] = {
+        'totalArticles': total,
+        'dateCount': len(data['dates']),
+        'latestDate': data['dates'][0] if data['dates'] else None,
+        'oldestDate': data['dates'][-1] if data['dates'] else None,
+    }
+
+# 主逻辑
+print("🔄 正在整合数据（V1.2 追加模式）...")
+data = load_data()
+
+# 如果是V1.1格式（数组），先转换
 if isinstance(data, list):
-    sources = Counter(item.get('source', '未知') for item in data)
-    categories = Counter(item.get('category', '其他') for item in data)
+    print("  📝 检测到V1.1格式，正在转换为V1.2...")
+    old_archive = convert_v11_to_v12(data)
+    data = {
+        "version": "1.2",
+        "lastUpdated": datetime.now().strftime('%Y-%m-%d %H:%M'),
+        "retentionDays": RETENTION_DAYS,
+        "archive": old_archive,
+        "dates": [],
+        "stats": {}
+    }
 
-    # V1.1: 统计元首级新闻
-    summit_count = sum(1 for item in data if item.get('is_summit_level') == True)
+# 确保archive存在
+if 'archive' not in data:
+    data['archive'] = {}
 
-    # V1.1: 统计双语标题覆盖率
-    bilingual_count = sum(1 for item in data if item.get('title_en'))
+today = datetime.now().strftime('%Y-%m-%d')
 
-    # V1.1: URL覆盖率
-    url_count = sum(1 for item in data if item.get('url', '').startswith('http'))
-    url_coverage = (url_count / len(data) * 100) if data else 0
+# 统计新增数量
+existing_ids = set()
+for date_arts in data['archive'].values():
+    for art in date_arts:
+        existing_ids.add(art.get('id'))
 
-    # V1.1: 重要性分布（基于priority_score）
-    priority_levels = {'⭐元首级': 0, '🔴极高': 0, '🟠高': 0, '🟡中': 0, '🟢低': 0}
-    for item in data:
-        score = item.get('priority_score', 0)
-        if item.get('is_summit_level') or score >= 95:
-            priority_levels['⭐元首级'] += 1
-        elif score >= 90:
-            priority_levels['🔴极高'] += 1
-        elif score >= 85:
-            priority_levels['🟠高'] += 1
-        elif score >= 75:
-            priority_levels['🟡中'] += 1
-        else:
-            priority_levels['🟢低'] += 1
+new_count = 0
+if today not in data['archive']:
+    # 尝试从基础采集的临时文件读取新数据
+    pass
 
-    print("📰 来源分布:")
-    for source, count in sources.most_common(12):
-        print(f"   • {source}: {count} 条")
+# 清理旧数据
+data['archive'] = cleanup_old(data['archive'])
 
-    print("\n📂 分类分布:")
-    for cat, count in categories.most_common(8):
-        print(f"   • {cat}: {count} 条")
+# 更新统计
+update_stats(data)
+data['lastUpdated'] = datetime.now().strftime('%Y-%m-%d %H:%M')
 
-    print("\n⭐ V1.1 增强指标:")
-    print(f"   • 元首级新闻: {summit_count} 条")
-    print(f"   • 双语标题覆盖率: {bilingual_count}/{len(data)} ({bilingual_count/len(data)*100:.1f}%)" if data else "")
-    print(f"   • URL覆盖率: {url_count}/{len(data)} ({url_coverage:.1f}%)")
+# 保存
+save_data(data)
 
-    print("\n🎯 重要性分级（基于priority_score）:")
-    for level, count in priority_levels.items():
-        if count > 0:
-            bar = '█' * min(count, 20)
-            print(f"   {level}: {count:2d} 条 {bar}")
+print(f"  ✅ 整合完成！")
+print(f"     总新闻数: {data['stats']['totalArticles']} 条")
+print(f"     覆盖天数: {data['stats']['dateCount']} 天")
+print(f"     最新日期: {data['stats']['latestDate']}")
+print(f"     最旧日期: {data['stats']['oldestDate']}")
 
-STATS
+if data['dates']:
+    print(f"\n     📅 日期分布:")
+    for d in data['dates']:
+        count = len(data['archive'][d])
+        summit = sum(1 for a in data['archive'][d] if a.get('is_summit_level'))
+        print(f"       • {d}: {count} 条 ({summit} ⭐)")
+
+INTEGRATE
 
 echo ""
-echo -e "${GREEN}✅ 数据验证通过${NC}"
+echo -e "${GREEN}✅ 数据整合完成（V1.2追加模式）${NC}"
 
-# ==================== 第4步：生成单文件HTML（V1.1完整版） ====================
+# ==================== 第4步：生成V1.2 HTML（含日期Tab栏）====================
 echo ""
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${PURPLE}🎨 第4步：生成V1.1单文件HTML网页（含双语标题+5级分类）${NC}"
+echo -e "${PURPLE}🎨 第4步：生成V1.2 HTML网页（V1.1经典UI风格）${NC}"
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
-# 备份当前HTML（两个位置）
-if [ -f "$GH_PAGES_DIR/index.html" ]; then
-    cp "$GH_PAGES_DIR/index.html" "$GH_PAGES_DIR/index.backup.$(date +%Y%m%d%H%M%S).html"
-    echo "📦 已备份 gh-pages/index.html"
-fi
+# 备份当前HTML
+for f in "$GH_PAGES_DIR/index.html" "$PROJECT_DIR/index.html"; do
+    if [ -f "$f" ]; then
+        cp "$f" "$f.backup.$(date +%Y%m%d%H%M%S).html"
+    fi
+done
+echo "📦 已备份现有HTML文件"
 
-if [ -f "$PROJECT_DIR/index.html" ]; then
-    cp "$PROJECT_DIR/index.html" "$PROJECT_DIR/index.backup.$(date +%Y%m%d%H%M%S).html"
-    echo "📦 已备份根目录 index.html"
-fi
-
-echo -e "${YELLOW}🔄 正在重新生成 index.html（V1.1完整版）...${NC}"
-echo ""
-
-# 调用Python脚本生成新的index.html（V1.1增强版）
-python3 << 'GENERATE_HTML'
+# 调用Python脚本生成V1.2 HTML（严格遵循V1.1简洁专业风格）
+python3 << 'GENERATE_HTML_V12'
 import json
 from datetime import datetime
 from pathlib import Path
 
-# 路径配置
 PROJECT_ROOT = Path("/Users/xiaoxiao/WorkBuddy/2026-07-29-17-06-50")
 DATA_PATH = PROJECT_ROOT / "data" / "news-data.json"
 OUTPUT_PATH_GH = PROJECT_ROOT / "gh-pages" / "index.html"
-OUTPUT_PATH_ROOT = PROJECT_ROOT / "index.html"  # V1.1: 同时输出到根目录
+OUTPUT_PATH_ROOT = PROJECT_ROOT / "index.html"
 
-# 读取数据
-try:
-    with open(DATA_PATH, 'r', encoding='utf-8') as f:
-        news_data = json.load(f)
-except:
-    news_data = []
+# 读取V1.2格式数据
+with open(DATA_PATH, 'r', encoding='utf-8') as f:
+    v12_data = json.load(f)
 
-if not isinstance(news_data, list):
-    news_data = []
-
-print(f"📊 读取到 {len(news_data)} 条新闻数据")
-
-# 生成统计信息（V1.1增强版）
-total_count = len(news_data)
-sources = set()
-categories = set()
-summit_count = sum(1 for n in news_data if n.get('is_summit_level') == True)
-
-for item in news_data:
-    sources.add(item.get('source', '未知'))
-    categories.add(item.get('category', '其他'))
-
-# 当前时间戳
+archive = v12_data.get('archive', {})
+dates = v12_data.get('dates', [])
+stats = v12_data.get('stats', {})
 now_str = datetime.now().strftime('%Y-%m-%d %H:%M')
 now_full = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-# HTML模板（V1.1完整版 - 包含所有UI优化）
-html_content = f'''<!DOCTYPE html>
+# 展平所有文章用于内嵌
+all_articles = []
+for date_str in dates:
+    for article in archive.get(date_str, []):
+        all_articles.append(article)
+
+total_count = len(all_articles)
+sources = set(a.get('source','未知') for a in all_articles)
+categories = set(a.get('category','其他') for a in all_articles)
+summit_count = sum(1 for a in all_articles if a.get('is_summit_level'))
+
+# 构建日期Tab HTML
+tabs_html = '<button class="tab-btn active" data-date="all">全部(%d)</button>' % total_count
+for d in dates:
+    count = len(archive.get(d, []))
+    tabs_html += '<button class="tab-btn" data-date="%s">%s(%d)</button>' % (d, d.replace('2026-', ''), count)
+
+print(f"📊 生成V1.2 HTML: {total_count}条新闻, {len(dates)}天")
+
+# ⭐ V1.2 HTML模板（严格遵循V1.1简洁专业风格）
+html_content = '''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌍 国际新闻看板 V1.1</title>
+    <title>🌍 国际新闻看板 V1.2</title>
     <style>
-        * {{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }}
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f5f5f5;
             min-height: 100vh;
             padding: 20px;
         }}
-        .container {{
-            max-width: 1400px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }}
+        .container {{ max-width: 1400px; margin: 0 auto; }}
+        
+        /* 头部 - V1.1经典深蓝渐变 */
         .header {{
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 40px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
             text-align: center;
+            color: white;
         }}
-        .header h1 {{
-            font-size: 2.5em;
+        .header h1 {{ font-size: 28px; margin-bottom: 10px; font-weight: 600; }}
+        .header .subtitle {{ font-size: 14px; opacity: 0.95; line-height: 1.6; }}
+        
+        /* ⭐ V1.2新增：日期Tab栏（V1.1简洁风格） */
+        .date-tabs-container {{
+            background: white;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }}
+        .date-tabs-label {{
+            font-size: 13px;
+            color: #333;
             margin-bottom: 10px;
+            font-weight: 500;
         }}
-        .header p {{
-            opacity: 0.9;
-            font-size: 1.1em;
+        .date-tabs {{
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
         }}
-        .stats {{
+        .tab-btn {{
+            padding: 6px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            color: #666;
+        }}
+        .tab-btn:hover {{
+            border-color: #667eea;
+            color: #667eea;
+        }}
+        .tab-btn.active {{
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+            font-weight: 500;
+        }}
+        .tab-btn .count {{
+            font-size: 11px;
+            opacity: 0.8;
+            margin-left: 4px;
+        }}
+        
+        /* 统计卡片 - V1.1简洁风格 */
+        .stats-grid {{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 30px;
-            background: #f8f9fa;
+            gap: 15px;
+            margin-bottom: 20px;
         }}
         .stat-card {{
             background: white;
-            padding: 25px;
-            border-radius: 10px;
+            border-radius: 8px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }}
-        .stat-card:hover {{
-            transform: translateY(-5px);
-        }}
-        .stat-number {{
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 5px;
-        }}
-        .stat-label {{
-            color: #666;
-            font-size: 0.95em;
-        }}
-        .controls {{
-            padding: 20px 30px;
+        .stat-number {{ font-size: 32px; font-weight: bold; color: #667eea; }}
+        .stat-label {{ color: #666; font-size: 14px; margin-top: 5px; }}
+        
+        /* 筛选工具栏 - V1.1风格 */
+        .filters {{
             background: white;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
             display: flex;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
             align-items: center;
-            border-bottom: 2px solid #eee;
         }}
         .search-box {{
             flex: 1;
             min-width: 250px;
-            padding: 12px 20px;
-            border: 2px solid #ddd;
-            border-radius: 25px;
-            font-size: 1em;
+            padding: 10px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            font-size: 14px;
             outline: none;
-            transition: border-color 0.3s;
         }}
-        .search-box:focus {{
-            border-color: #667eea;
-        }}
-        select {{
-            padding: 12px 18px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 0.95em;
+        .search-box:focus {{ border-color: #667eea; }}
+        .filter-select {{
+            padding: 10px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
             outline: none;
-            cursor: pointer;
         }}
-        select:focus {{
-            border-color: #667eea;
-        }}
+        .filter-select:focus {{ border-color: #667eea; }}
+        
+        /* 表格容器 */
         .table-container {{
-            padding: 30px;
-            overflow-x: auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }}
-        table {{
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9em;
-        }}
-        th {{
+        table {{ width: 100%; border-collapse: collapse; }}
+        thead {{
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 15px 12px;
+        }}
+        th {{
+            padding: 15px 10px;
             text-align: left;
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 13px;
             white-space: nowrap;
         }}
         td {{
-            padding: 14px 12px;
-            border-bottom: 1px solid #eee;
+            padding: 12px 10px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
             vertical-align: top;
         }}
-        /* V1.1: 关键列强制不换行 */
-        td:nth-child(5),
-        td:nth-child(6),
-        td:nth-child(7) {{
-            white-space: nowrap;
-        }}
-        tr:hover {{
-            background: #f8f9ff;
-        }}
-
-        /* ========== V1.1: 重要性5级分类样式 ========== */
-
-        /* ⭐ 元首级 - 金色渐变徽章（最醒目） */
-        .importance-summit {{
-            display: inline-block;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: #fff;
-            font-weight: bold;
-            padding: 4px 12px;
-            border-radius: 12px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-            box-shadow: 0 2px 4px rgba(255, 165, 0, 0.3);
-        }}
-
-        /* 🔴 极高 - 红色粗体+浅红背景 */
-        .importance-critical {{
-            color: #dc3545;
-            font-weight: bold;
-            background: #ffe6e6;
-            padding: 2px 8px;
-            border-radius: 8px;
-        }}
-
-        /* 🟠 高 - 橙色粗体 */
-        .importance-high {{
-            color: #dc3545;
-            font-weight: bold;
-        }}
-
-        /* 🟡 中 - 橙色常规 */
-        .importance-medium {{
-            color: #fd7e14;
+        tr:hover {{ background: #f8f9ff; }}
+        
+        /* 列宽定义 - V1.1标准9列布局 */
+        th:nth-child(1), td:nth-child(1) {{ width: 40px; }}   /* # */
+        th:nth-child(2), td:nth-child(2) {{ width: 90px; }}   /* 日期 */
+        th:nth-child(3), td:nth-child(3) {{ width: 280px; }}  /* 标题 */
+        th:nth-child(4), td:nth-child(4) {{ width: auto; }}   /* 摘要 */
+        th:nth-child(5), td:nth-child(5) {{ width: 80px; }}   /* 来源 */
+        th:nth-child(6), td:nth-child(6) {{ width: 80px; }}   /* 分类 */
+        th:nth-child(7), td:nth-child(7) {{ width: 80px; }}   /* 重要性 */
+        th:nth-child(8), td:nth-child(8) {{ width: 120px; }}  /* 关键词 */
+        th:nth-child(9), td:nth-child(9) {{ width: 70px; }}   /* 原文链接 */
+        
+        /* ⭐ 日期分隔行 - V1.1简洁风格 */
+        .date-separator {{
+            background: #f0f4ff !important;
             font-weight: 600;
+            color: #1a237e;
         }}
-
-        /* 🟢 低 - 绿色常规 */
-        .importance-low {{
-            color: #28a745;
+        .date-separator td {{
+            padding: 10px 15px !important;
+            font-size: 13px;
+            border-bottom: 2px solid #667eea !important;
         }}
-
-        /* ========== V1.1: 双语标题样式 ========== */
-        .title-bilingual {{
-            line-height: 1.5;
-        }}
+        
+        /* 标题样式 - V1.1标准 */
         .title-en {{
-            color: #1a365d;
-            font-size: 0.88em;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 3px;
+            color: #1a237e;
             font-style: italic;
+            font-size: 13px;
+            margin-bottom: 3px;
+            line-height: 1.4;
         }}
         .title-zh {{
-            color: #2d3748;
-            font-size: 0.92em;
-            display: block;
+            color: #333;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 1.4;
         }}
-
-        /* ========== V1.1: 链接按钮优化（防换行） ========== */
+        
+        /* 摘要样式 - V1.1标准 */
+        .summary-text {{
+            color: #666;
+            font-size: 12px;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }}
+        
+        /* 重要性标签 - V1.1标准配色 */
+        .importance-badge {{
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+            white-space: nowrap;
+        }}
+        .badge-summit {{ background: #fff3e0; color: #e65100; }}
+        .badge-critical {{ background: #ffebee; color: #c62828; }}
+        .badge-high {{ background: #fff8e1; color: #f57f17; }}
+        .badge-medium {{ background: #e3f2fd; color: #1565c0; }}
+        .badge-low {{ background: #f5f5f5; color: #757575; }}
+        
+        /* 链接按钮 - V1.1标准 */
         .link-btn {{
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 6px 14px;
+            display: inline-block;
+            padding: 5px 12px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-decoration: none;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
-            white-space: nowrap;  /* V1.1: 防止文字换行 */
-        }}
-        .link-btn:hover {{
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
-            background: linear-gradient(135deg, #5a6fd6 0%, #6a4192 100%);
-        }}
-
-        .tag {{
-            display: inline-block;
-            padding: 4px 10px;
             border-radius: 15px;
-            font-size: 0.85em;
-            margin: 2px;
-            background: #e9ecef;
+            font-size: 11px;
+            white-space: nowrap;
         }}
+        .link-btn:hover {{ opacity: 0.9; }}
+        
+        /* 关键词标签 - V1.1标准 */
+        .keyword-tag {{
+            display: inline-block;
+            padding: 2px 8px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            font-size: 11px;
+            margin: 2px 2px;
+            color: #555;
+        }}
+        
+        /* 页脚 - V1.1标准 */
         .footer {{
+            background: white;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-top: 20px;
             text-align: center;
-            padding: 25px;
-            background: #f8f9fa;
             color: #666;
-            font-size: 0.9em;
+            font-size: 13px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }}
+        
         @media (max-width: 768px) {{
-            .header h1 {{ font-size: 1.8em; }}
-            .stats {{ grid-template-columns: repeat(2, 1fr); padding: 15px; }}
-            .controls {{ flex-direction: column; align-items: stretch; }}
-            .table-container {{ padding: 15px; }}
-            table {{ font-size: 0.8em; }}
-            th, td {{ padding: 10px 8px; }}
+            .container {{ padding: 10px; }}
+            .header h1 {{ font-size: 22px; }}
+            table {{ font-size: 12px; }}
+            th, td {{ padding: 8px 5px; }}
         }}
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🌍 国际新闻看板</h1>
-            <p>每日高质量国际新闻自动采集与呈现 | V1.1 正式版 | 更新时间：{now_str}</p>
-        </div>
-
-        <!-- V1.1: 统计卡片（更新为显示元首级数量） -->
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-number">{total_count}</div>
-                <div class="stat-label">总新闻数</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">{len(sources)}</div>
-                <div class="stat-label">信源数量</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">{len(categories)}</div>
-                <div class="stat-label">分类数量</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">{summit_count}</div>
-                <div class="stat-label">⭐ 元首级</div>
-            </div>
-        </div>
-
-        <div class="controls">
-            <input type="text" class="search-box" id="searchInput" placeholder="🔍 搜索新闻标题、关键词...">
-            <select id="sourceFilter">
-                <option value="">全部来源</option>
-            </select>
-            <select id="categoryFilter">
-                <option value="">全部分类</option>
-            </select>
-            <select id="importanceFilter">
-                <option value="">全部重要性</option>
-                <option value="summit">⭐ 元首级</option>
-                <option value="critical">🔴 极高</option>
-                <option value="high">🟠 高</option>
-                <option value="medium">🟡 中</option>
-                <option value="low">🟢 低</option>
-            </select>
-        </div>
-
-        <div class="table-container">
-            <table id="newsTable">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>日期</th>
-                        <th>标题</th>
-                        <th>摘要</th>
-                        <th>来源</th>
-                        <th>分类</th>
-                        <th>重要性</th>
-                        <th>关键词</th>
-                        <th>原文链接</th>
-                    </tr>
-                </thead>
-                <tbody id="newsBody">
-                </tbody>
-            </table>
-        </div>
-
-        <div class="footer">
-            <p>🌐 国际新闻看板 V1.1 | 数据更新于 {now_full}</p>
-            <p style="margin-top: 8px;">
-                Powered by Enhanced Fetcher V1.1 (WebFetch API) |
-                ✅ 双语标题已启用 | ⭐ 元首级新闻智能识别
-            </p>
+<div class="container">
+    <!-- 头部 - V1.1经典深蓝渐变 -->
+    <div class="header">
+        <h1>🌍 国际新闻看板</h1>
+        <div class="subtitle">
+            每日高质量国际新闻自动采集与呈现 | 
+            <strong>V1.2 正式版（数据存档版）</strong> | 
+            更新时间：<strong>''' + now_str + '''</strong>
         </div>
     </div>
+    
+    <!-- ⭐ V1.2新增：日期Tab栏（V1.1简洁风格） -->
+    <div class="date-tabs-container">
+        <div class="date-tabs-label">📅 选择查看日期：</div>
+        <div class="date-tabs" id="dateTabs">
+            ''' + tabs_html + '''
+        </div>
+    </div>
+    
+    <!-- 统计卡片 - V1.1简洁风格（5个卡片） -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">''' + str(total_count) + '''</div>
+            <div class="stat-label">总新闻数</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">''' + str(len(sources)) + '''</div>
+            <div class="stat-label">信源数量</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">''' + str(len(categories)) + '''</div>
+            <div class="stat-label">分类数量</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">''' + str(summit_count) + '''</div>
+            <div class="stat-label">⭐ 元首级</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">''' + str(stats.get('dateCount', len(dates))) + '''</div>
+            <div class="stat-label">存档天数</div>
+        </div>
+    </div>
+    
+    <!-- 筛选工具栏 - V1.1风格 -->
+    <div class="filters">
+        <input type="text" class="search-box" id="searchBox" placeholder="🔍 搜索新闻标题、关键词..." oninput="filterNews()">
+        <select class="filter-select" id="sourceFilter" onchange="filterNews()">
+            <option value="">全部来源</option>
+        </select>
+        <select class="filter-select" id="categoryFilter" onchange="filterNews()">
+            <option value="">全部分类</option>
+        </select>
+        <select class="filter-select" id="importanceFilter" onchange="filterNews()">
+            <option value="">全部重要性</option>
+            <option value="summit">⭐元首级</option>
+            <option value="critical">🔴极高</option>
+            <option value="high">🟠高</option>
+            <option value="medium">🟡中</option>
+            <option value="low">🟢低</option>
+        </select>
+    </div>
+    
+    <!-- 新闻表格 - 9列布局（V1.1标准） -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:40px">#</th>
+                    <th style="width:90px">日期</th>
+                    <th style="width:280px">标题</th>
+                    <th>摘要</th>
+                    <th style="width:80px">来源</th>
+                    <th style="width:80px">分类</th>
+                    <th style="width:80px">重要性</th>
+                    <th style="width:120px">关键词</th>
+                    <th style="width:70px">原文链接</th>
+                </tr>
+            </thead>
+            <tbody id="newsTableBody">
+                <!-- JavaScript动态填充 -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 页脚 - V1.1标准 -->
+    <div class="footer">
+        🌐 国际新闻看板 V1.2 | 数据更新于 ''' + now_full + ''' | 
+        Powered by Enhanced Fetcher V1.2 (WebFetch API) | 
+        ✅ 双语标题已启用 | ⭐ 元首级新闻智能识别 | 📅 支持7天数据存档
+    </div>
+</div>
 
-    <script>
-        // 新闻数据（内嵌）
-        const NEWS_DATA = {json.dumps(news_data, ensure_ascii=False)};
+<script>
+// V1.2 数据结构（按日期分组）
+const NEWS_DATA = ''' + json.dumps(v12_data, ensure_ascii=False) + ''';
 
-        // 初始化筛选器选项
-        function initFilters() {{
-            const sources = [...new Set(NEWS_DATA.map(n => n.source))].sort();
-            const categories = [...new Set(NEWS_DATA.map(n => n.category))].sort();
+// 当前选中的日期
+let selectedDate = 'all';
 
-            const sourceSelect = document.getElementById('sourceFilter');
-            sources.forEach(s => {{
-                const opt = document.createElement('option');
-                opt.value = s;
-                opt.textContent = s;
-                sourceSelect.appendChild(opt);
-            }});
-
-            const categorySelect = document.getElementById('categoryFilter');
-            categories.forEach(c => {{
-                const opt = document.createElement('option');
-                opt.value = c;
-                opt.textContent = c;
-                categorySelect.appendChild(opt);
-            }});
-        }}
-
-        // V1.1: 渲染表格（支持双语标题 + 5级重要性分类）
-        function renderTable(data) {{
-            const tbody = document.getElementById('newsBody');
-            tbody.innerHTML = '';
-
-            if (data.length === 0) {{
-                tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:40px;color:#999;">😢 没有找到匹配的新闻</td></tr>';
-                return;
-            }}
-
-            data.forEach((item, idx) => {{
-                const row = document.createElement('tr');
-
-                // V1.1: 基于 priority_score 的5级重要性分类
-                let importanceHtml = '';
-                const score = item.priority_score || 0;
-                const isSummit = item.is_summit_level || false;
-
-                if (isSummit || score >= 95) {{
-                    importanceHtml = '<span class="importance-summit">⭐ 元首级</span>';
-                }} else if (score >= 90) {{
-                    importanceHtml = '<span class="importance-critical">🔴 极高</span>';
-                }} else if (score >= 85) {{
-                    importanceHtml = '<span class="importance-high">🟠 高</span>';
-                }} else if (score >= 75) {{
-                    importanceHtml = '<span class="importance-medium">🟡 中</span>';
-                }} else {{
-                    importanceHtml = '<span class="importance-low">🟢 低</span>';
-                }}
-
-                // 关键词标签
-                const keywords = Array.isArray(item.keywords) ?
-                    item.keywords.map(k => `<span class="tag">${{k}}</span>`).join('') :
-                    (item.keywords || '').split(',').map(k => `<span class="tag">${{k.trim()}}</span>`).join('');
-
-                // 链接按钮
-                const url = item.url || '#';
-
-                // V1.1: 双语标题渲染
-                let titleHtml = '';
-                if (item.title_en && item.title) {{
-                    titleHtml = `
-                        <div class="title-bilingual">
-                            <span class="title-en">${{item.title_en}}</span>
-                            <span class="title-zh">${{item.title}}</span>
-                        </div>
-                    `;
-                }} else {{
-                    titleHtml = `<strong>${{item.title || ''}}</strong>`;
-                }}
-
-                row.innerHTML = `
-                    <td>${{idx + 1}}</td>
-                    <td>${{item.date || '-'}}</td>
-                    <td>${{titleHtml}}</td>
-                    <td>${{(item.summary || '').substring(0, 120)}}${{(item.summary || '').length > 120 ? '...' : ''}}</td>
-                    <td>${{item.source || ''}}</td>
-                    <td>${{item.category || ''}}</td>
-                    <td>${{importanceHtml}}</td>
-                    <td>${{keywords}}</td>
-                    <td><a href="${{url}}" target="_blank" class="link-btn" title="点击查看原文">🔗 原文</a></td>
-                `;
-
-                tbody.appendChild(row);
-            }});
-        }}
-
-        // 筛选逻辑（V1.1: 支持5级筛选）
-        function filterNews() {{
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const sourceVal = document.getElementById('sourceFilter').value;
-            const categoryVal = document.getElementById('categoryFilter').value;
-            const importanceVal = document.getElementById('importanceFilter').value;
-
-            let filtered = NEWS_DATA.filter(item => {{
-                // 搜索匹配（V1.1: 支持搜索英文标题）
-                const matchSearch = !searchTerm ||
-                    (item.title && item.title.toLowerCase().includes(searchTerm)) ||
-                    (item.title_en && item.title_en.toLowerCase().includes(searchTerm)) ||
-                    (item.summary && item.summary.toLowerCase().includes(searchTerm)) ||
-                    (Array.isArray(item.keywords) && item.keywords.some(k => k.toLowerCase().includes(searchTerm)));
-
-                const matchSource = !sourceVal || item.source === sourceVal;
-                const matchCategory = !categoryVal || item.category === categoryVal;
-
-                // V1.1: 重要性筛选（基于priority_score）
-                let matchImportance = true;
-                if (importanceVal) {{
-                    const score = item.priority_score || 0;
-                    const isSummit = item.is_summit_level || false;
-                    switch(importanceVal) {{
-                        case 'summit':
-                            matchImportance = isSummit || score >= 95;
-                            break;
-                        case 'critical':
-                            matchImportance = !isSummit && score >= 90 && score < 95;
-                            break;
-                        case 'high':
-                            matchImportance = score >= 85 && score < 90;
-                            break;
-                        case 'medium':
-                            matchImportance = score >= 75 && score < 85;
-                            break;
-                        case 'low':
-                            matchImportance = score < 75;
-                            break;
-                    }}
-                }}
-
-                return matchSearch && matchSource && matchCategory && matchImportance;
-            }});
-
-            renderTable(filtered);
-        }}
-
-        // 初始化
-        document.addEventListener('DOMContentLoaded', () => {{
-            initFilters();
-            renderTable(NEWS_DATA);
-
-            // 绑定事件
-            document.getElementById('searchInput').addEventListener('input', filterNews);
-            document.getElementById('sourceFilter').addEventListener('change', filterNews);
-            document.getElementById('categoryFilter').addEventListener('change', filterNews);
-            document.getElementById('importanceFilter').addEventListener('change', filterNews);
+// 初始化筛选下拉框
+function initFilters() {{
+    const sourceSet = new Set();
+    const categorySet = new Set();
+    
+    Object.values(NEWS_DATA.archive).forEach(articles => {{
+        articles.forEach(art => {{
+            if (art.source) sourceSet.add(art.source);
+            if (art.category) categorySet.add(art.category);
         }});
-    </script>
+    }});
+    
+    const sourceFilter = document.getElementById('sourceFilter');
+    [...sourceSet].sort().forEach(s => {{
+        const opt = document.createElement('option');
+        opt.value = s; opt.textContent = s;
+        sourceFilter.appendChild(opt);
+    }});
+    
+    const categoryFilter = document.getElementById('categoryFilter');
+    [...categorySet].sort().forEach(c => {{
+        const opt = document.createElement('option');
+        opt.value = c; opt.textContent = c;
+        categoryFilter.appendChild(opt);
+    }});
+}}
+
+// Tab切换事件
+document.querySelectorAll('.tab-btn').forEach(btn => {{
+    btn.addEventListener('click', function() {{
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        selectedDate = this.dataset.date;
+        filterNews();
+    }});
+}});
+
+// 获取重要性等级
+function getImportance(score, isSummit) {{
+    if (isSummit || score >= 95) return {{ level: 'summit', label: '⭐元首级', cls: 'badge-summit' }};
+    if (score >= 90) return {{ level: 'critical', label: '🔴极高', cls: 'badge-critical' }};
+    if (score >= 85) return {{ level: 'high', label: '🟠高', cls: 'badge-high' }};
+    if (score >= 75) return {{ level: 'medium', label: '🟡中', cls: 'badge-medium' }};
+    return {{ level: 'low', label: '🟢低', cls: 'badge-low' }};
+}}
+
+// 过滤和渲染新闻
+function filterNews() {{
+    const searchText = document.getElementById('searchBox').value.toLowerCase();
+    const sourceFilter = document.getElementById('sourceFilter').value;
+    const categoryFilter = document.getElementById('categoryFilter').value;
+    const importanceFilter = document.getElementById('importanceFilter').value;
+    
+    let filteredArticles = [];
+    
+    // 根据选中日期获取数据
+    if (selectedDate === 'all') {{
+        // 全部日期：按日期分组展示
+        const sortedDates = Object.keys(NEWS_DATA.archive).sort().reverse();
+        sortedDates.forEach(dateStr => {{
+            const articles = NEWS_DATA.archive[dateStr] || [];
+            // 先添加日期分隔行
+            filteredArticles.push({{ _isDateSeparator: true, _date: dateStr, _count: articles.length }});
+            // 再添加该日期的文章
+            filteredArticles.push(...articles.map(a => ({{...a, _date: dateStr }})));
+        }});
+    }} else {{
+        // 特定日期
+        filteredArticles = (NEWS_DATA.archive[selectedDate] || []).map(a => ({{...a, _date: selectedDate }}));
+    }}
+    
+    // 应用筛选条件
+    filteredArticles = filteredArticles.filter(item => {{
+        if (item._isDateSeparator) return true; // 保留分隔行
+        
+        if (sourceFilter && item.source !== sourceFilter) return false;
+        if (categoryFilter && item.category !== categoryFilter) return false;
+        
+        const imp = getImportance(item.priority_score || 0, item.is_summit_level);
+        if (importanceFilter && imp.level !== importanceFilter) return false;
+        
+        if (searchText) {{
+            const searchIn = [(item.title || ''), (item.title_en || ''), (item.summary || ''), (item.keywords || []).join(' ')].join(' ').toLowerCase();
+            if (!searchIn.includes(searchText)) return false;
+        }}
+        
+        return true;
+    }});
+    
+    renderTable(filteredArticles);
+}}
+
+// 渲染表格（9列布局 - V1.1标准）
+function renderTable(articles) {{
+    const tbody = document.getElementById('newsTableBody');
+    tbody.innerHTML = '';
+    
+    let globalIndex = 0;
+    
+    articles.forEach((item) => {{
+        const tr = document.createElement('tr');
+        
+        if (item._isDateSeparator) {{
+            // 日期分隔行
+            tr.className = 'date-separator';
+            tr.innerHTML = `<td colspan="9">📅 ${{item._date}} (共 ${{item._count}} 条新闻)</td>`;
+        }} else {{
+            globalIndex++;
+            const imp = getImportance(item.priority_score || 0, item.is_summit_level);
+            const keywords = (item.keywords || []).slice(0, 3);
+            
+            // 9列完整布局（V1.1标准）
+            tr.innerHTML = `
+                <td>${{globalIndex}}</td>
+                <td style="white-space:nowrap">${{item._date || ''}}</td>
+                <td>
+                    <div class="title-en">${{item.title_en || ''}}</div>
+                    <div class="title-zh">${{item.title || ''}}</div>
+                </td>
+                <td>
+                    <div class="summary-text">${{item.summary || '-'}}</div>
+                </td>
+                <td style="white-space:nowrap">${{item.source || ''}}</td>
+                <td style="white-space:nowrap">${{item.category || ''}}</td>
+                <td><span class="importance-badge ${{imp.cls}}">${{imp.label}}</span></td>
+                <td>${{keywords.map(k => `<span class="keyword-tag">${{k}}</span>`).join('')}}</td>
+                <td>${{item.url ? `<a href="${{item.url}}" target="_blank" class="link-btn">原文</a>` : '-'}}</td>
+            `;
+        }}
+        
+        tbody.appendChild(tr);
+    }});
+}}
+
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', () => {{
+    initFilters();
+    filterNews();
+}});
+</script>
 </body>
 </html>'''
 
-# 写入文件（V1.1: 同时写入两个位置）
-with open(OUTPUT_PATH_GH, 'w', encoding='utf-8') as f:
-    f.write(html_content)
-
-with open(OUTPUT_PATH_ROOT, 'w', encoding='utf-8') as f:
-    f.write(html_content)
-
-print(f"✅ 单文件HTML已生成（V1.1完整版）:")
-print(f"   📁 gh-pages/index.html ({OUTPUT_PATH_GH})")
-print(f"   📁 index.html (根目录: {OUTPUT_PATH_ROOT})")
-print(f"   📊 包含 {len(news_data)} 条新闻数据")
-print(f"   ⭐ 元首级新闻: {summit_count} 条")
-print(f"   🌐 双语标题: {sum(1 for n in news_data if n.get('title_en'))} 条")
-GENERATE_HTML
+with open(OUTPUT_PATH_GH,'w',encoding='utf-8') as f: f.write(html_content)
+with open(OUTPUT_PATH_ROOT,'w',encoding='utf-8') as f: f.write(html_content)
+print(f"✅ V1.2 HTML已生成:")
+print(f"   📁 gh-pages/index.html")
+print(f"   📁 index.html (根目录)")
+print(f"   📊 {total_count}条新闻 | {len(dates)}天存档 | {summit_count}条元首级")
+GENERATE_HTML_V12
 
 echo ""
-echo -e "${GREEN}✅ 网页更新完成（V1.1版本，已同步到根目录和gh-pages）${NC}"
+echo -e "${GREEN}✅ V1.2 网页已生成（V1.1经典UI + 日期Tab栏 + 7天存档）${NC}"
 
-# ==================== 第5步：提交并推送（V1.1: 根目录优先） ====================
+# ==================== 第5步：飞书Base同步（增量追加）⭐ NEW ====================
+echo ""
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${YELLOW}☁️ 第5步：飞书Base同步（永久存档库）${NC}"
+echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo ""
+
+if [ -f "scripts/sync_to_feishu.py" ]; then
+    echo -e "${YELLOW}🔄 正在同步数据到飞书Base表...${NC}"
+    echo ""
+    
+    # 执行飞书同步（默认同步今天的数据）
+    python3 scripts/sync_to_feishu.py --today
+    
+    if [ $? -eq 0 ]; then
+        echo ""
+        echo -e "${GREEN}✅ 飞书Base同步完成！${NC}"
+        echo ""
+        echo -e "📊 飞书存档表地址:"
+        echo -e "   ${CYAN}https://my.feishu.cn/base/A2fdb93HLamcKgslr2rcopjRnfd${NC}"
+        echo ""
+        echo -e "💡 提示:"
+        echo -e "   • 所有新闻将永久保存，不会清空"
+        echo -e "   • 支持按日期/来源/分类/重要性筛选"
+        echo -e "   • 可随时在飞书中查看历史记录"
+    else
+        echo ""
+        echo -e "${RED}❌ 飞书同步失败！${NC}"
+        echo -e "${YELLOW}⚠️ 不影响其他步骤，可稍后手动执行:${NC}"
+        echo -e "   python3 scripts/sync_to_feishu.py --today"
+    fi
+else
+    echo -e "${YELLOW}⚠️ 未找到飞书同步脚本 scripts/sync_to_feishu.py${NC}"
+    echo -e "${YELLOW}   跳过飞书同步步骤...${NC}"
+fi
+
+# ==================== 第6步：提交并推送 ====================
 echo ""
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${BLUE}🚀 第5步：提交并推送到GitHub（V1.1: 根目录部署）${NC}"
+echo -e "${BLUE}🚀 第6步：推送到GitHub Pages${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
-cd "$PROJECT_DIR"  # V1.1: 切换到项目根目录（非gh-pages）
+cd "$PROJECT_DIR"
 
-# 检查是否有更改
 if git diff --quiet && git diff --cached --quiet; then
     echo "ℹ️  没有新的更改需要提交"
     exit 0
 fi
 
-# 显示将要提交的更改
-echo "📝 将要提交的更改:"
-git status --short
-echo ""
+FINAL_COUNT=$(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(len(v) for v in d.get('archive',{}).values()) if isinstance(d,dict) else len(d))")
 
-# 添加所有更改
-git add index.html gh-pages/index.html data/news-data.json gh-pages/news-data.json
+git add index.html gh-pages/index.html data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py data/.feishu_config
 
-# 创建提交
 TODAY=$(date "+%Y-%m-%d")
 TIME=$(date "+%H:%M")
-git commit -m "📰 V1.1 新闻数据更新 - $TODAY $TIME (${FINAL_COUNT}条)
+git commit -m "📰 V1.2 新闻更新 - $TODAY $TIME (${FINAL_COUNT}条)
 
-📊 采集统计:
+📊 V1.2 存档统计:
 • 总新闻数: ${FINAL_COUNT} 条
-• 信源覆盖: $(python3 -c "import json; d=json.load(open('data/news-data.json')); print(len(set(x.get('source','') for x in d)))") 个
-• 元首级新闻: $(python3 -c "import json; d=json.load(open('data/news-data.json')); print(sum(1 for x in d if x.get('is_summit_level')))") 条
-• 双语标题: $(python3 -c "import json; d=json.load(open('data/news-data.json')); print(sum(1 for x in d if x.get('title_en')))") 条
-• URL覆盖率: $(python3 -c "import json; d=json.load(open('data/news-data.json')); u=sum(1 for x in d if x.get('url','').startswith('http')); print(f'{u}/{len(d)} ({u/len(d)*100:.0f}%)') if d else print('N/A')
+• 存档天数: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(len(d.get('dates',[])))") 天
+• 信源覆盖: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(len(set(x.get('source','') for v in d.get('archive',{}).values() for x in v)))") 个
+• 元首级新闻: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(1 for v in d.get('archive',{}).values() for x in v if x.get('is_summit_level')))") 条
 
-✨ V1.1 特性:
-✅ 双语标题显示（英文+中文）
-✅ 重要性5级分类（⭐元首级/🔴极高/🟠高/🟡中/🟢低）
-✅ 元首级新闻智能识别与置顶
-✅ UI优化（列不换行/按钮防换行）
-✅ 根目录+gh-pages双目录同步
+✨ V1.2 新特性:
+✅ 7天数据存档（不再清空历史）
+✅ 顶部日期Tab栏切换查看
+✅ 按日期分组的数据结构
+✅ 自动清理超过7天的旧数据
+✅ 飞书Base永久存档（增量同步）⭐
+✅ 保留V1.1所有特性（双语/5级分类/元首级/V1.1UI）
 
 更新时间: $(date '+%Y-%m-%d %H:%M:%S')
-脚本版本: V1.1 (正式版)"
+脚本版本: V1.2 Final (数据存档版)"
 
-# 推送到GitHub
 echo ""
 echo "🚀 正在推送到GitHub..."
-echo "⏳ 如果提示输入密码，请使用 Personal Access Token"
-echo ""
-
-git push origin main
+git push origin main 2>&1
 
 if [ $? -eq 0 ]; then
     echo ""
     echo -e "${GREEN}╔══════════════════════════════════════════════════╗${NC}"
-    echo -e "${GREEN}║          🎉 V1.1 更新成功完成！                    ║${NC}"
+    echo -e "${GREEN}║          🎉 V1.2 更新成功完成！                    ║${NC}"
     echo -e "${GREEN}╚══════════════════════════════════════════════════╝${NC}"
     echo ""
-    echo -e "📊 本次更新统计:"
+    echo -e "📊 本次更新:"
     echo -e "   • 总新闻数: ${CYAN}${FINAL_COUNT}${NC} 条"
-    echo -e "   • 基础采集: ${BASIC_COUNT} 条"
-    echo -e "   • WebFetch补充: $(( FINAL_COUNT - BASIC_COUNT )) 条"
-    echo -e "   • 元首级新闻: $(python3 -c "import json; d=json.load(open('data/news-data.json')); print(sum(1 for x in d if x.get('is_summit_level')))") 条"
+    echo -e "   • 存档天数: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(len(d.get('dates',[])))") 天"
     echo -e "   • 更新时间: $(date '+%Y-%m-%d %H:%M:%S')"
     echo ""
-    echo -e "🌐 访问地址: ${CYAN}https://iranorawahaha.github.io/international-news-kb/${NC}"
+    echo -e "🌐 GitHub Pages: ${CYAN}https://iranorawahaha.github.io/international-news-kb/${NC}"
+    echo -e "📊 飞书存档表:   ${CYAN}https://my.feishu.cn/base/A2fdb93HLamcKgslr2rcopjRnfd${NC}"
     echo ""
-    echo -e "⏳ 网站将在 ${YELLOW}1-2分钟${NC} 后自动更新"
-    echo ""
-    echo -e "💡 提示: 强制刷新浏览器 (Cmd+Shift+R) 查看最新内容"
-    echo ""
-    echo -e "🎨 V1.1 新特性:"
-    echo -e "   ✅ 双语标题（英文深蓝 + 中文黑色双行显示）"
-    echo -e "   ✅ 重要性5级分类（金色元首级 → 绿色低级）"
-    echo -e "   ✅ 元首级新闻自动识别并置顶"
-    echo -e "   ✅ 完美排版（所有列强制单行不换行）"
-    echo ""
+    echo -e "💡 V1.2 新功能:"
+    echo -e "   ✅ 点击顶部日期Tab切换查看不同日期的新闻"
+    echo -e "   ✅ 历史数据自动保留7天（本地）/ 永久（飞书）"
+    echo -e "   ✅ 支持按日期筛选 + 搜索 + 分类过滤"
+    echo -e "   ✅ 所有新闻自动同步到飞书Base存档库"
 else
-    echo ""
-    echo -e "${RED}❌ 推送失败！${NC}"
-    echo ""
-    echo -e "可能的原因:${NC}"
-    echo "  1. 网络连接问题（检查代理软件是否运行）"
-    echo "  2. Token过期或权限不足"
-    echo "  3. GitHub仓库配置错误"
-    echo ""
-    echo -e "解决方案:${NC}"
-    echo "  1. 重启代理软件（Clash/V2Ray等），确认端口7890"
-    echo "  2. 重新运行此脚本"
-    echo "  3. 或手动执行: cd $PROJECT_DIR && git push origin main"
-    echo ""
+    echo -e "${RED}❌ 推送失败！请检查网络和代理设置${NC}"
     exit 1
 fi

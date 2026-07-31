@@ -180,7 +180,7 @@ WEBFETCH_SOURCES = [
         'language': 'en',
     },
     {
-        name': 'Politico',
+        'name': 'Politico',
         'url': 'https://www.politico.com/world',
         'prompt': '提取今天关于全球政治、外交政策、贸易谈判的重要新闻，重点关注：1.欧美关系 2.全球贸易政策 3.国际外交动态。列出3-4条新闻，每条包含：\n1) **英文原标题**（Politico原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.politico.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
         'priority': 8,
