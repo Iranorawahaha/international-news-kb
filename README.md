@@ -1,250 +1,241 @@
-# 国际新闻知识库 - 使用说明
+# 🌍 国际新闻知识库 - GitHub Pages 部署指南
 
-## 🌍 系统概述
+## ✨ 在线预览地址
 
-这是一个服务于国际环境洞察的每日新闻跟踪系统，专注于：
-- **中美关系**动态
-- **经贸制裁**与贸易政策
-- **人工智能/芯片**产业竞争
-- **外交资讯**与国际政治
-
-## 📂 项目结构
-
+**部署后您的网站将可以通过以下地址访问：**
 ```
-international-news-knowledge-base/
-├── index.html              # 主页面（前端界面）
-├── css/
-│   └── style.css           # 样式文件
-├── js/
-│   └── app.js              # 前端交互逻辑
-├── data/
-│   ├── config.json         # 信源配置（30个权威信源）
-│   └── news-data.json      # 新闻数据存储
-├── scripts/
-│   ├── scraper.py          # 新闻抓取引擎（browser-use）
-│   ├── server.py           # 后端API服务器
-│   └── toolkit.py          # 辅助工具（导入导出、URL解析）
-└── README.md               # 本说明文件
+https://[您的用户名].github.io/[仓库名]/
 ```
 
-## 🚀 快速启动
+## 📦 快速部署步骤（3分钟）
 
-### 方法1：直接打开HTML文件
-双击 `index.html` 文件，即可在浏览器中使用（部分功能受限）
-
-### 方法2：使用本地服务器（推荐）
+### 方式A：使用GitHub CLI（推荐）
 
 ```bash
-# 进入项目目录
-cd international-news-knowledge-base
+# 1. 初始化Git仓库
+cd gh-pages
+git init
 
-# 启动HTTP服务器
-python3 -m http.server 8080
+# 2. 添加所有文件
+git add .
+git commit -m "🎉 初始部署：国际新闻知识库 v1.0 (24条新闻)"
 
-# 浏览器访问
-http://localhost:8080/index.html
+# 3. 创建GitHub仓库并推送
+gh repo create international-news-library --public --source=. --push
+# 或者使用私有仓库：
+# gh repo create international-news-library --private --source=. --push
 ```
 
-### 方法3：使用完整后端服务器
+### 方式B：手动部署（无CLI）
 
 ```bash
-# 安装依赖（如需要）
-pip install flask requests beautifulsoup4
+# 1. 初始化仓库
+cd gh-pages
+git init
+git add .
+git commit -m "初始部署"
 
-# 启动后端服务器
-python3 scripts/server.py --host localhost --port 8080
+# 2. 在GitHub上创建新仓库（空仓库）
+# 仓库名: international-news-library
 
-# 访问地址
-http://localhost:8080
+# 3. 添加远程仓库并推送
+git remote add origin https://github.com/[您的用户名]/international-news-library.git
+git branch -M main
+git push -u origin main
 ```
 
-## ✨ 功能特性
+### 4. 启用GitHub Pages
 
-### 1. 📊 新闻数据表格
-- 完整展示新闻信息：日期、标题、媒体来源、摘要、涉及国家/地区、主题分类、关键词、出处链接、重要程度
-- 支持**单条删除**
-- 支持**拖动排序**
+1. 打开仓库页面：`https://github.com/[您的用户名]/international-news-library`
+2. 点击 **Settings** (设置)
+3. 左侧菜单选择 **Pages**
+4. **Source** 选择：Deploy from a branch
+5. **Branch** 选择：main / (root)
+6. 点击 **Save**
 
-### 2. 📚 信源管理
-- 展示30个权威信源列表
-- 显示当日各信源采集数量
-- 支持通过输入链接**新增自定义信源**
+### 5. 等待部署完成（1-2分钟）
 
-### 3. 🔄 数据刷新
-- 点击【刷新数据】按钮启动自动采集
-- 顶部状态栏实时显示：
-  - 上次刷新时间
-  - 总条数
-  - 本次新增条数
-  - 刷新进度条
-
-### 4. 🔗 快速录入
-- 粘贴新闻链接即可自动解析
-- 自动提取：标题、来源、摘要、日期等
-- 一键添加到知识库
-
-### 5. 📥 批量导入
-- 支持从Excel/CSV复制粘贴数据
-- 支持制表符或 | 分隔格式
-- 批量录入多条新闻
-
-### 6. 📤 批量导出
-- 按日期范围筛选
-- 按话题分类筛选
-- 支持导出格式：
-  - JSON（完整结构化数据）
-  - CSV（可用Excel打开）
-  - Excel格式（CSV兼容）
-
-### 7. 🔍 高级筛选
-- 按日期筛选
-- 按主题分类筛选
-- 按信源筛选
-- 按重要程度筛选
-- 关键词全文搜索
-
-## 📰 权威信源清单（30个）
-
-### 中国官方媒体（9个）
-1. 新华网
-2. 人民网
-3. 央视网
-4. 中国日报网
-5. 环球网
-6. 国际在线
-7. 中国网
-8. 中国外交部
-9. 中国常驻联合国代表团
-
-### 国际主流媒体（14个）
-10. 路透社 (Reuters)
-11. 美联社 (AP)
-12. 法新社 (AFP)
-13. 塔斯社 (TASS)
-14. BBC News
-15. 德国之声 (DW)
-16. 卫报 (The Guardian)
-17. 彭博社 (Bloomberg)
-18. 华尔街日报 (WSJ)
-19. 半岛电视台 (Al Jazeera)
-20. RT (今日俄罗斯)
-21. 联合国新闻
-22. EURACTIV（欧洲媒体）
-23. 南华早报 (SCMP)
-24. 联合早报 (Zaobao)
-
-### 美国政府机构（7个）
-25. 白宫
-26. 美国国务院
-27. 美国贸易代表办公室 (USTR)
-28. 美国商务部
-29. 美国国防部
-30. 美国财政部
-
-## 🔐 已配置订阅账号
-
-以下媒体需要订阅，已配置登录凭据：
-
-| 媒体 | 用户名 | 密码 |
-|------|--------|------|
-| 纽约时报 (NYT) | BJsection4@163.com | Beiban4bu |
-| 华尔街日报 (WSJ) | BJsection4@163.com | Beiban4bu |
-| 彭博社 (Bloomberg) | BJsection4@163.com | Beiban4buu |
-| 路透社 (Reuters) | BJsection4@163.com | BEIBANsibu!1 |
-| 南华早报 (SCMP) | w53418791@gmail.com | BEIBAN4bu |
-
-> ⚠️ **安全提示**：账号密码已加密存储在配置文件中，请勿将config.json分享给他人。
-
-## 🎯 新闻分类体系
-
-系统自动将新闻分为以下8大类：
-
-1. **中美关系** - 中美双边关系、高层互动、战略竞争
-2. **经贸制裁** - 关税措施、出口管制、制裁名单、贸易战
-3. **人工智能竞争** - AI技术、芯片半导体、科技竞争、算力
-4. **外交资讯** - 外交活动、国际会议、多边机制
-5. **国际政治** - 地缘政治、选举、政府政策、安全议题
-6. **芯片产业政策** - 半导体产业链、光刻技术、晶圆制造
-7. **地区热点** - 冲突战争、危机事件、抗议动荡
-8. **多边机制** - 联合国、G20、G7、北约、WTO等
-
-## ⭐ 重要程度评估标准
-
-- **高**：涉及首脑会晤、重大政策发布、军事冲突、制裁决定
-- **中**：重要官员表态、政策动向、经济数据、外交活动
-- **低**：一般性报道、背景分析、文化社会类新闻
-
-## 💡 使用建议
-
-### 日常使用流程
-1. 每日上班后点击【刷新数据】更新新闻
-2. 使用筛选功能快速定位关注话题
-3. 对重要新闻进行拖拽排序，置顶关键信息
-4. 定期使用批量导出功能备份或分享数据
-
-### 快速录入场景
-- 在其他网站看到重要新闻 → 复制链接 → 粘贴到快速录入框 → 自动解析添加
-- 收到同事转发的新闻链接 → 直接粘贴入库
-
-### 团队协作
-- 导出JSON/CSV格式分享给同事
-- 同事可通过批量导入功能合并数据
-- 建议定期统一数据版本
-
-## 🔧 技术架构
-
-- **前端**：原生 HTML/CSS/JavaScript（无需框架依赖）
-- **后端**：Python Flask / HTTP Server
-- **抓取引擎**：browser-use（浏览器自动化）+ WebFetch API
-- **数据存储**：JSON 文件（轻量级，易于迁移和备份）
-- **响应式设计**：支持桌面端和移动端
-
-## 📈 今日采集成果（2026-07-29）
-
-本次成功从以下信源采集新闻：
-
-✅ **成功采集**（主要信源）：
-- 路透社 (Reuters) - 8条
-- BBC News - 5条
-- 人民网 - 10条
-- 白宫官网 - 3条
-- USTR - 3条
-- 南华早报 - 4条
-- 中国日报网 - 8条
-- 其他补充 - 4条
-
-📊 **总计**：45条高质量国际新闻
-
-🎯 **重点内容覆盖**：
-- ✅ 中美AI/机器人禁令（高重要性）
-- ✅ 伊朗导弹危机升级（高重要性）
-- ✅ 美国301调查扩大至60国（高重要性）
-- ✅ 特朗普白宫会晤泽连斯基和内塔尼亚胡（高重要性）
-- ✅ USTR对华贸易机制征询（高重要性）
-- ✅ 日本地震灾害（中等重要性）
-- ✅ 法国野火危机（中等重要性）
-- ✅ 韩国股市熔断（中等重要性）
-
-## ❓ 常见问题
-
-### Q: 为什么有些信源无法访问？
-A: 部分媒体可能存在地域限制或反爬虫机制。系统会自动跳过无法访问的信源并记录错误日志。
-
-### Q: 如何修改信源列表？
-A: 编辑 `data/config.json` 文件中的 `sources` 数组，或在界面中点击"新增信源"按钮。
-
-### Q: 数据保存在哪里？
-A: 所有数据存储在 `data/news-data.json` 文件中。建议定期备份此文件。
-
-### Q: 如何设置定时自动刷新？
-A: 可使用操作系统的定时任务（cron/Task Scheduler）定期运行 `scripts/scraper.py` 脚本。
-
-## 📞 技术支持
-
-如有问题或建议，请联系系统管理员。
+访问：`https://[您的用户名].github.io/international-news-library/`
 
 ---
 
-**最后更新**: 2026年7月29日
-**版本**: v1.0.0
-**维护单位**: 华为公共及政府事务部
+## 🔧 自定义域名（可选）
+
+如果您有自己的域名，可以绑定到GitHub Pages：
+
+```bash
+# 在gh-pages目录创建CNAME文件
+echo "news.yourdomain.com" > CNAME
+git add CNAME
+git commit -m "添加自定义域名"
+git push
+```
+
+然后在域名DNS管理中添加CNAME记录指向：
+```
+[您的用户名].github.io
+```
+
+---
+
+## 📊 网站特性
+
+✅ **完全免费** - GitHub Pages提供无限流量  
+✅ **全球CDN加速** - 访问速度快  
+✅ **HTTPS加密** - 自动配置SSL证书  
+✅ **自动备份** - Git版本控制  
+✅ **无需服务器** - 不需要自己的电脑运行  
+
+### 功能支持：
+
+- ✅ 响应式设计（手机/平板/电脑）
+- ✅ 实时搜索和筛选
+- ✅ 按分类/来源/重要性过滤
+- ✅ 导出为JSON/CSV/Excel
+- ✅ 24条高质量国际新闻
+- ✅ 4大顶级信源覆盖
+
+---
+
+## 🔄 更新数据流程
+
+当您采集了新的新闻后，更新网站的步骤：
+
+```bash
+cd /Users/xiaoxiao/WorkBuddy/2026-07-29-17-06-50/gh-pages
+
+# 1. 复制最新数据
+cp ../js/embedded-data.js .
+cp ../data/news-data.json .
+
+# 2. 提交更改
+git add .
+git commit -m "📰 更新新闻数据 (日期: $(date +%Y-%m-%d))"
+git push
+
+# 3. 自动部署（1-2分钟后生效）
+```
+
+或者使用一键脚本（需要先创建）：
+
+```bash
+./update-website.sh  # 自动复制+提交+推送
+```
+
+---
+
+## ⚠️ 注意事项
+
+### 公开 vs 私有仓库
+
+| 类型 | 访问权限 | 适用场景 |
+|------|---------|---------|
+| **公开仓库** | 所有人可访问 | 公开分享、团队展示 |
+| **私有仓库** | 仅您和协作者 | 内部使用、敏感信息 |
+
+**建议**: 
+- 如果只是给同事看 → 使用**私有仓库** + 分享链接
+- 如果希望公开 → 使用**公开仓库**
+
+### 数据安全
+
+- ✅ config.json中的账号密码**未包含**在部署包中
+- ✅ 仅包含前端静态文件和数据
+- ⚠️ news-data.json中的新闻内容会公开可见（如使用公开仓库）
+
+---
+
+## 💡 高级功能（可选）
+
+### 1. 添加访问统计
+
+使用Google Analytics或百度统计：
+
+```html
+<!-- 在index.html的<head>中添加 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+```
+
+### 2. 添加自定义域名
+
+参考上方"自定义域名"章节
+
+### 3. 设置自动部署（GitHub Actions）
+
+创建 `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/deploy-pages@v4
+```
+
+这样每次push都会自动更新网站！
+
+---
+
+## 🆘 故障排查
+
+### 问题1：页面显示404
+
+**解决方案**:
+- 检查Settings → Pages是否启用
+- 确认Branch设置为main/(root)
+- 等待2-3分钟让部署完成
+
+### 问题2：样式丢失
+
+**解决方案**:
+- 确认css/style.css已上传
+- 检查浏览器控制台是否有404错误
+- 清除浏览器缓存后刷新
+
+### 问题3：数据未更新
+
+**解决方案**:
+- 确认已执行 `git push`
+- 查看Actions标签页确认部署状态
+- 强制刷新浏览器 (Cmd+Shift+R)
+
+---
+
+## 📞 技术支持
+
+如有问题，请查看：
+- GitHub Pages官方文档：https://docs.github.com/pages
+- 本项目完整说明书：`docs/SYSTEM-MANUAL-v3.1.md`
+- 访问指南：`docs/ACCESS-GUIDE.md`
+
+---
+
+## 🎉 部署成功！
+
+恭喜！您的国际新闻知识库现在拥有了一个**永久免费的在线网址**！
+
+**分享给同事**：
+```
+📰 国际新闻知识库 v1.0
+
+🌐 在线地址：https://[您的用户名].github.io/international-news-library/
+
+📊 数据：24条最新国际新闻
+📰 信源：路透社 / BBC / 南华早报 / 卫报
+⏰ 更新：2026-07-30
+
+💡 无需登录，直接打开即可查看！
+```
+
+祝使用愉快！🚀
