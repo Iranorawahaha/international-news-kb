@@ -109,7 +109,7 @@ def load_data():
         with open(DATA_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
     except:
-        return {"version": "1.2", "archive": {}, "dates": [], "stats": {}}
+        return {"version": "1.2", "archive": {}, "dates": [], "stats": {}
 
 def save_data(data):
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
@@ -270,48 +270,48 @@ html_content = '''<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌍 国际新闻看板 V1.2</title>
     <style>
-        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-        body {{
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: #f5f5f5;
             min-height: 100vh;
             padding: 20px;
-        }}
-        .container {{ max-width: 1400px; margin: 0 auto; }}
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
         
         /* 头部 - V1.1经典深蓝渐变 */
-        .header {{
+        .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 20px;
             text-align: center;
             color: white;
-        }}
-        .header h1 {{ font-size: 28px; margin-bottom: 10px; font-weight: 600; }}
-        .header .subtitle {{ font-size: 14px; opacity: 0.95; line-height: 1.6; }}
+        }
+        .header h1 { font-size: 28px; margin-bottom: 10px; font-weight: 600; }
+        .header .subtitle { font-size: 14px; opacity: 0.95; line-height: 1.6; }
         
         /* ⭐ V1.2新增：日期Tab栏（V1.1简洁风格） */
-        .date-tabs-container {{
+        .date-tabs-container {
             background: white;
             border-radius: 8px;
             padding: 15px 20px;
             margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-        }}
-        .date-tabs-label {{
+        }
+        .date-tabs-label {
             font-size: 13px;
             color: #333;
             margin-bottom: 10px;
             font-weight: 500;
-        }}
-        .date-tabs {{
+        }
+        .date-tabs {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
             align-items: center;
-        }}
-        .tab-btn {{
+        }
+        .tab-btn {
             padding: 6px 16px;
             border: 1px solid #e0e0e0;
             border-radius: 4px;
@@ -320,42 +320,42 @@ html_content = '''<!DOCTYPE html>
             font-size: 13px;
             transition: all 0.2s;
             color: #666;
-        }}
-        .tab-btn:hover {{
+        }
+        .tab-btn:hover {
             border-color: #667eea;
             color: #667eea;
-        }}
-        .tab-btn.active {{
+        }
+        .tab-btn.active {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-color: transparent;
             font-weight: 500;
-        }}
-        .tab-btn .count {{
+        }
+        .tab-btn .count {
             font-size: 11px;
             opacity: 0.8;
             margin-left: 4px;
-        }}
+        }
         
         /* 统计卡片 - V1.1简洁风格 */
-        .stats-grid {{
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 20px;
-        }}
-        .stat-card {{
+        }
+        .stat-card {
             background: white;
             border-radius: 8px;
             padding: 20px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-        }}
-        .stat-number {{ font-size: 32px; font-weight: bold; color: #667eea; }}
-        .stat-label {{ color: #666; font-size: 14px; margin-top: 5px; }}
+        }
+        .stat-number { font-size: 32px; font-weight: bold; color: #667eea; }
+        .stat-label { color: #666; font-size: 14px; margin-top: 5px; }
         
         /* 筛选工具栏 - V1.1风格 */
-        .filters {{
+        .filters {
             background: white;
             border-radius: 8px;
             padding: 15px 20px;
@@ -365,8 +365,8 @@ html_content = '''<!DOCTYPE html>
             gap: 10px;
             flex-wrap: wrap;
             align-items: center;
-        }}
-        .search-box {{
+        }
+        .search-box {
             flex: 1;
             min-width: 250px;
             padding: 10px 15px;
@@ -374,85 +374,85 @@ html_content = '''<!DOCTYPE html>
             border-radius: 20px;
             font-size: 14px;
             outline: none;
-        }}
-        .search-box:focus {{ border-color: #667eea; }}
-        .filter-select {{
+        }
+        .search-box:focus { border-color: #667eea; }
+        .filter-select {
             padding: 10px 15px;
             border: 1px solid #e0e0e0;
             border-radius: 4px;
             font-size: 14px;
             background: white;
             outline: none;
-        }}
-        .filter-select:focus {{ border-color: #667eea; }}
+        }
+        .filter-select:focus { border-color: #667eea; }
         
         /* 表格容器 */
-        .table-container {{
+        .table-container {
             background: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-        }}
-        table {{ width: 100%; border-collapse: collapse; }}
-        thead {{
+        }
+        table { width: 100%; border-collapse: collapse; }
+        thead {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-        }}
-        th {{
+        }
+        th {
             padding: 15px 10px;
             text-align: left;
             font-weight: 500;
             font-size: 13px;
             white-space: nowrap;
-        }}
-        td {{
+        }
+        td {
             padding: 12px 10px;
             border-bottom: 1px solid #f0f0f0;
             font-size: 13px;
             vertical-align: top;
-        }}
-        tr:hover {{ background: #f8f9ff; }}
+        }
+        tr:hover { background: #f8f9ff; }
         
         /* 列宽定义 - V1.1标准9列布局 */
-        th:nth-child(1), td:nth-child(1) {{ width: 40px; }}   /* # */
-        th:nth-child(2), td:nth-child(2) {{ width: 90px; }}   /* 日期 */
-        th:nth-child(3), td:nth-child(3) {{ width: 280px; }}  /* 标题 */
-        th:nth-child(4), td:nth-child(4) {{ width: auto; }}   /* 摘要 */
-        th:nth-child(5), td:nth-child(5) {{ width: 80px; }}   /* 来源 */
-        th:nth-child(6), td:nth-child(6) {{ width: 80px; }}   /* 分类 */
-        th:nth-child(7), td:nth-child(7) {{ width: 80px; }}   /* 重要性 */
-        th:nth-child(8), td:nth-child(8) {{ width: 120px; }}  /* 关键词 */
-        th:nth-child(9), td:nth-child(9) {{ width: 70px; }}   /* 原文链接 */
+        th:nth-child(1), td:nth-child(1) { width: 40px; }   /* # */
+        th:nth-child(2), td:nth-child(2) { width: 90px; }   /* 日期 */
+        th:nth-child(3), td:nth-child(3) { width: 280px; }  /* 标题 */
+        th:nth-child(4), td:nth-child(4) { width: auto; }   /* 摘要 */
+        th:nth-child(5), td:nth-child(5) { width: 80px; }   /* 来源 */
+        th:nth-child(6), td:nth-child(6) { width: 80px; }   /* 分类 */
+        th:nth-child(7), td:nth-child(7) { width: 80px; }   /* 重要性 */
+        th:nth-child(8), td:nth-child(8) { width: 120px; }  /* 关键词 */
+        th:nth-child(9), td:nth-child(9) { width: 70px; }   /* 原文链接 */
         
         /* ⭐ 日期分隔行 - V1.1简洁风格 */
-        .date-separator {{
+        .date-separator {
             background: #f0f4ff !important;
             font-weight: 600;
             color: #1a237e;
-        }}
-        .date-separator td {{
+        }
+        .date-separator td {
             padding: 10px 15px !important;
             font-size: 13px;
             border-bottom: 2px solid #667eea !important;
-        }}
+        }
         
         /* 标题样式 - V1.1标准 */
-        .title-en {{
+        .title-en {
             color: #1a237e;
             font-style: italic;
             font-size: 13px;
             margin-bottom: 3px;
             line-height: 1.4;
-        }}
-        .title-zh {{
+        }
+        .title-zh {
             color: #333;
             font-weight: 500;
             font-size: 13px;
             line-height: 1.4;
-        }}
+        }
         
         /* 摘要样式 - V1.1标准 */
-        .summary-text {{
+        .summary-text {
             color: #666;
             font-size: 12px;
             line-height: 1.5;
@@ -460,25 +460,25 @@ html_content = '''<!DOCTYPE html>
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
-        }}
+        }
         
         /* 重要性标签 - V1.1标准配色 */
-        .importance-badge {{
+        .importance-badge {
             display: inline-block;
             padding: 4px 10px;
             border-radius: 12px;
             font-size: 11px;
             font-weight: 500;
             white-space: nowrap;
-        }}
-        .badge-summit {{ background: #fff3e0; color: #e65100; }}
-        .badge-critical {{ background: #ffebee; color: #c62828; }}
-        .badge-high {{ background: #fff8e1; color: #f57f17; }}
-        .badge-medium {{ background: #e3f2fd; color: #1565c0; }}
-        .badge-low {{ background: #f5f5f5; color: #757575; }}
+        }
+        .badge-summit { background: #fff3e0; color: #e65100; }
+        .badge-critical { background: #ffebee; color: #c62828; }
+        .badge-high { background: #fff8e1; color: #f57f17; }
+        .badge-medium { background: #e3f2fd; color: #1565c0; }
+        .badge-low { background: #f5f5f5; color: #757575; }
         
         /* 链接按钮 - V1.1标准 */
-        .link-btn {{
+        .link-btn {
             display: inline-block;
             padding: 5px 12px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -487,11 +487,11 @@ html_content = '''<!DOCTYPE html>
             border-radius: 15px;
             font-size: 11px;
             white-space: nowrap;
-        }}
-        .link-btn:hover {{ opacity: 0.9; }}
+        }
+        .link-btn:hover { opacity: 0.9; }
         
         /* 关键词标签 - V1.1标准 */
-        .keyword-tag {{
+        .keyword-tag {
             display: inline-block;
             padding: 2px 8px;
             background: #f0f0f0;
@@ -499,10 +499,10 @@ html_content = '''<!DOCTYPE html>
             font-size: 11px;
             margin: 2px 2px;
             color: #555;
-        }}
+        }
         
         /* 页脚 - V1.1标准 */
-        .footer {{
+        .footer {
             background: white;
             border-radius: 8px;
             padding: 15px 20px;
@@ -511,14 +511,14 @@ html_content = '''<!DOCTYPE html>
             color: #666;
             font-size: 13px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-        }}
+        }
         
-        @media (max-width: 768px) {{
-            .container {{ padding: 10px; }}
-            .header h1 {{ font-size: 22px; }}
-            table {{ font-size: 12px; }}
-            th, td {{ padding: 8px 5px; }}
-        }}
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header h1 { font-size: 22px; }
+            table { font-size: 12px; }
+            th, td { padding: 8px 5px; }
+        }
     </style>
 </head>
 <body>
@@ -622,53 +622,53 @@ const NEWS_DATA = ''' + json.dumps(v12_data, ensure_ascii=False) + ''';
 let selectedDate = 'all';
 
 // 初始化筛选下拉框
-function initFilters() {{
+function initFilters() {
     const sourceSet = new Set();
     const categorySet = new Set();
     
-    Object.values(NEWS_DATA.archive).forEach(articles => {{
-        articles.forEach(art => {{
+    Object.values(NEWS_DATA.archive).forEach(articles => {
+        articles.forEach(art => {
             if (art.source) sourceSet.add(art.source);
             if (art.category) categorySet.add(art.category);
-        }});
-    }});
+        });
+    });
     
     const sourceFilter = document.getElementById('sourceFilter');
-    [...sourceSet].sort().forEach(s => {{
+    [...sourceSet].sort().forEach(s => {
         const opt = document.createElement('option');
         opt.value = s; opt.textContent = s;
         sourceFilter.appendChild(opt);
-    }});
+    });
     
     const categoryFilter = document.getElementById('categoryFilter');
-    [...categorySet].sort().forEach(c => {{
+    [...categorySet].sort().forEach(c => {
         const opt = document.createElement('option');
         opt.value = c; opt.textContent = c;
         categoryFilter.appendChild(opt);
-    }});
-}}
+    });
+}
 
 // Tab切换事件
-document.querySelectorAll('.tab-btn').forEach(btn => {{
-    btn.addEventListener('click', function() {{
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         selectedDate = this.dataset.date;
         filterNews();
-    }});
-}});
+    });
+});
 
 // 获取重要性等级
-function getImportance(score, isSummit) {{
-    if (isSummit || score >= 95) return {{ level: 'summit', label: '⭐元首级', cls: 'badge-summit' }};
-    if (score >= 90) return {{ level: 'critical', label: '🔴极高', cls: 'badge-critical' }};
-    if (score >= 85) return {{ level: 'high', label: '🟠高', cls: 'badge-high' }};
-    if (score >= 75) return {{ level: 'medium', label: '🟡中', cls: 'badge-medium' }};
-    return {{ level: 'low', label: '🟢低', cls: 'badge-low' }};
-}}
+function getImportance(score, isSummit) {
+    if (isSummit || score >= 95) return { level: 'summit', label: '⭐元首级', cls: 'badge-summit' };
+    if (score >= 90) return { level: 'critical', label: '🔴极高', cls: 'badge-critical' };
+    if (score >= 85) return { level: 'high', label: '🟠高', cls: 'badge-high' };
+    if (score >= 75) return { level: 'medium', label: '🟡中', cls: 'badge-medium' };
+    return { level: 'low', label: '🟢低', cls: 'badge-low' };
+}
 
 // 过滤和渲染新闻
-function filterNews() {{
+function filterNews() {
     const searchText = document.getElementById('searchBox').value.toLowerCase();
     const sourceFilter = document.getElementById('sourceFilter').value;
     const categoryFilter = document.getElementById('categoryFilter').value;
@@ -677,23 +677,23 @@ function filterNews() {{
     let filteredArticles = [];
     
     // 根据选中日期获取数据
-    if (selectedDate === 'all') {{
+    if (selectedDate === 'all') {
         // 全部日期：按日期分组展示
         const sortedDates = Object.keys(NEWS_DATA.archive).sort().reverse();
-        sortedDates.forEach(dateStr => {{
+        sortedDates.forEach(dateStr => {
             const articles = NEWS_DATA.archive[dateStr] || [];
             // 先添加日期分隔行
-            filteredArticles.push({{ _isDateSeparator: true, _date: dateStr, _count: articles.length }});
+            filteredArticles.push({ _isDateSeparator: true, _date: dateStr, _count: articles.length });
             // 再添加该日期的文章
-            filteredArticles.push(...articles.map(a => ({{...a, _date: dateStr }})));
-        }});
-    }} else {{
+            filteredArticles.push(...articles.map(a => ({...a, _date: dateStr })));
+        });
+    } else {
         // 特定日期
-        filteredArticles = (NEWS_DATA.archive[selectedDate] || []).map(a => ({{...a, _date: selectedDate }}));
-    }}
+        filteredArticles = (NEWS_DATA.archive[selectedDate] || []).map(a => ({...a, _date: selectedDate }));
+    }
     
     // 应用筛选条件
-    filteredArticles = filteredArticles.filter(item => {{
+    filteredArticles = filteredArticles.filter(item => {
         if (item._isDateSeparator) return true; // 保留分隔行
         
         if (sourceFilter && item.source !== sourceFilter) return false;
@@ -702,64 +702,64 @@ function filterNews() {{
         const imp = getImportance(item.priority_score || 0, item.is_summit_level);
         if (importanceFilter && imp.level !== importanceFilter) return false;
         
-        if (searchText) {{
+        if (searchText) {
             const searchIn = [(item.title || ''), (item.title_en || ''), (item.summary || ''), (item.keywords || []).join(' ')].join(' ').toLowerCase();
             if (!searchIn.includes(searchText)) return false;
-        }}
+        }
         
         return true;
-    }});
+    });
     
     renderTable(filteredArticles);
-}}
+}
 
 // 渲染表格（9列布局 - V1.1标准）
-function renderTable(articles) {{
+function renderTable(articles) {
     const tbody = document.getElementById('newsTableBody');
     tbody.innerHTML = '';
     
     let globalIndex = 0;
     
-    articles.forEach((item) => {{
+    articles.forEach((item) => {
         const tr = document.createElement('tr');
         
-        if (item._isDateSeparator) {{
+        if (item._isDateSeparator) {
             // 日期分隔行
             tr.className = 'date-separator';
-            tr.innerHTML = `<td colspan="9">📅 ${{item._date}} (共 ${{item._count}} 条新闻)</td>`;
-        }} else {{
+            tr.innerHTML = `<td colspan="9">📅 ${item._date} (共 ${item._count} 条新闻)</td>`;
+        } else {
             globalIndex++;
             const imp = getImportance(item.priority_score || 0, item.is_summit_level);
             const keywords = (item.keywords || []).slice(0, 3);
             
             // 9列完整布局（V1.1标准）
             tr.innerHTML = `
-                <td>${{globalIndex}}</td>
-                <td style="white-space:nowrap">${{item._date || ''}}</td>
+                <td>${globalIndex}</td>
+                <td style="white-space:nowrap">${item._date || ''}</td>
                 <td>
-                    <div class="title-en">${{item.title_en || ''}}</div>
-                    <div class="title-zh">${{item.title || ''}}</div>
+                    <div class="title-en">${item.title_en || ''}</div>
+                    <div class="title-zh">${item.title || ''}</div>
                 </td>
                 <td>
-                    <div class="summary-text">${{item.summary || '-'}}</div>
+                    <div class="summary-text">${item.summary || '-'}</div>
                 </td>
-                <td style="white-space:nowrap">${{item.source || ''}}</td>
-                <td style="white-space:nowrap">${{item.category || ''}}</td>
-                <td><span class="importance-badge ${{imp.cls}}">${{imp.label}}</span></td>
-                <td>${{keywords.map(k => `<span class="keyword-tag">${{k}}</span>`).join('')}}</td>
-                <td>${{item.url ? `<a href="${{item.url}}" target="_blank" class="link-btn">原文</a>` : '-'}}</td>
+                <td style="white-space:nowrap">${item.source || ''}</td>
+                <td style="white-space:nowrap">${item.category || ''}</td>
+                <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
+                <td>${keywords.map(k => `<span class="keyword-tag">${k}</span>`).join('')}</td>
+                <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文</a>` : '-'}</td>
             `;
-        }}
+        }
         
         tbody.appendChild(tr);
-    }});
-}}
+    });
+}
 
 // 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', () => {{
+document.addEventListener('DOMContentLoaded', () => {
     initFilters();
     filterNews();
-}});
+});
 </script>
 </body>
 </html>'''

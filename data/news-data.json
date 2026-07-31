@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-07-31 17:07",
+  "lastUpdated": "2026-07-31 17:40",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -11,8 +11,8 @@
         "url": "",
         "language": "zh",
         "raw_content": "人民网海外分公司专栏",
-        "id": "basic_0_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_0_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -22,8 +22,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bed8ca310986e2b4683cd.html",
         "language": "zh",
         "raw_content": "Born by river and sea",
-        "id": "basic_1_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_1_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -33,8 +33,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bfa9da310986e2b468497.html",
         "language": "zh",
         "raw_content": "A 'sun' that heals",
-        "id": "basic_2_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_2_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -44,8 +44,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bdb2ca310986e2b46838f.html",
         "language": "zh",
         "raw_content": "Time for a cool change",
-        "id": "basic_3_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_3_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -55,8 +55,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6be406a310986e2b4683aa.html",
         "language": "zh",
         "raw_content": "Chinese beauty brands enjoy a surge in popularity",
-        "id": "basic_4_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_4_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -66,8 +66,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/29/WS6a69a74da310986e2b467f22.html",
         "language": "zh",
         "raw_content": "Yiwu: From small town to 'world's supermarket'",
-        "id": "basic_5_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_5_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -77,8 +77,8 @@
         "url": "https://www.chinadaily.com.cn/a/202607/30/WS6a6b6ab2a310986e2b468357.html",
         "language": "zh",
         "raw_content": "CPC to hold key meeting in October",
-        "id": "basic_6_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_6_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -88,19 +88,8 @@
         "url": "https://www.chinadaily.com.cn/business",
         "language": "zh",
         "raw_content": "Business+",
-        "id": "basic_7_8532",
-        "collectedAt": "2026-07-31 17:02:12",
-        "collection_method": "basic"
-      },
-      {
-        "title": "外交部发言人办公室系列账号",
-        "summary": "外交部发言人办公室系列账号",
-        "source": "中国外交部",
-        "url": "",
-        "language": "zh",
-        "raw_content": "外交部发言人办公室系列账号",
-        "id": "basic_8_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_7_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -110,8 +99,8 @@
         "url": "https://www.news.cn/world/20260727/cb5ae5d3129e479b9d9b793b5d508486/c.html",
         "language": "zh",
         "raw_content": "全球连线丨不亦“乐”乎：中德学生歌声回荡彩云之南",
-        "id": "basic_9_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_8_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -121,8 +110,8 @@
         "url": "https://www.news.cn/world/20260730/ad8ce1b79f7b48c398bdf2eb20038d89/c.html",
         "language": "zh",
         "raw_content": "记者手记丨从“金环”城市看中俄地方合作图景",
-        "id": "basic_10_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_9_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -132,8 +121,8 @@
         "url": "https://www.news.cn/world/20260730/477aa4fa269d4204b5f41d35e80a58c8/c.html",
         "language": "zh",
         "raw_content": "美伊冲突外溢 中东硝烟四起",
-        "id": "basic_11_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_10_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -143,8 +132,8 @@
         "url": "https://www.news.cn/silkroad/20260730/64176ac623ba4ba1bc7a132af90400ba/c.html",
         "language": "zh",
         "raw_content": "枢纽通、货值升 中欧班列激活陕西外贸动能",
-        "id": "basic_12_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_11_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -154,8 +143,8 @@
         "url": "http://www.xinhuanet.com/worldpro/gjxw/index.html",
         "language": "zh",
         "raw_content": "国际要闻TOP NEWS",
-        "id": "basic_13_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_12_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -165,8 +154,8 @@
         "url": "https://www.news.cn/world/20260710/8c3d9472ffa1415bb67c8bb404d62011/c.html",
         "language": "zh",
         "raw_content": "从北约峰会看美欧关系走向",
-        "id": "basic_14_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_13_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -176,8 +165,8 @@
         "url": "https://www.news.cn/world/20260702/97be20afa67c4af18da9ef249bf82f39/c.html",
         "language": "zh",
         "raw_content": "40℃高温炙烤下，中国“降温神器”缓解欧洲酷暑焦虑",
-        "id": "basic_15_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_14_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -187,8 +176,8 @@
         "url": "http://www.xinhuanet.com/worldpro/xjpdwj/index.html",
         "language": "zh",
         "raw_content": "出访专题XI'S VISITS",
-        "id": "basic_16_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_15_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -198,8 +187,8 @@
         "url": "http://www.xinhuanet.com/worldpro/rdzt/index.html",
         "language": "zh",
         "raw_content": "热点专题SPECIAL REPORTS",
-        "id": "basic_17_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_16_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -209,8 +198,8 @@
         "url": "https://www.news.cn/world/cnleaders/xijinping/2026fwcx/index.html",
         "language": "zh",
         "raw_content": "习近平对朝鲜进行国事访问",
-        "id": "basic_18_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_17_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
       },
       {
@@ -220,351 +209,9 @@
         "url": "https://www.news.cn/world/cnleaders/xijinping/xjpcx2025apecldrfzshy/index.html",
         "language": "zh",
         "raw_content": "习近平出席APEC领导人非正式会议并对韩国进行国事访问",
-        "id": "basic_19_8532",
-        "collectedAt": "2026-07-31 17:02:12",
+        "id": "basic_18_670",
+        "collectedAt": "2026-07-31 17:37:50",
         "collection_method": "basic"
-      },
-      {
-        "title_en": "Drone strike at Egypt port near Suez Canal ignites new shipping risks",
-        "title": "无人机袭击埃及苏伊士运河附近港口引发新航运风险",
-        "summary": "两艘天然气运输船在埃及地中海港口达米埃塔遭遇无人机袭击并引发火灾，对苏伊士运河这一沙特石油最后主要出口航线之一构成新威胁。在美国-伊朗战争扩大的背景下，此次事件加剧了全球航运安全担忧。",
-        "source": "路透社",
-        "category": "地缘政治",
-        "keywords": [
-          "苏伊士运河",
-          "无人机袭击",
-          "航运安全",
-          "美伊冲突",
-          "埃及"
-        ],
-        "url": "https://www.reuters.com/world/middle-east/us-military-says-it-hit-dozens-irans-irgc-targets-2026-07-30/",
-        "priority_score": 92,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "-7873342008653657061"
-      },
-      {
-        "title_en": "Trump says deal reached to disarm Hamas",
-        "title": "特朗普称达成哈马斯解除武装协议",
-        "summary": "特朗普宣布与哈马斯达成加沙地带'完全解除武装'的协议框架，哈马斯高级官员向BBC证实同意该计划。如果成功实施，这将是推进特朗普支持的加沙和平倡议的最重要一步。",
-        "source": "路透社",
-        "category": "中东局势",
-        "keywords": [
-          "哈马斯",
-          "加沙停火",
-          "特朗普",
-          "中东和平",
-          "解除武装"
-        ],
-        "url": "https://www.reuters.com/world/middle-east/israeli-strikes-kill-three-gaza-including-two-children-amid-new-ceasefire-push-2026-07-30/",
-        "priority_score": 91,
-        "is_summit_level": true,
-        "date": "2026-07-31",
-        "id": "1592876297140767848"
-      },
-      {
-        "title_en": "Japan quake halts auto and chip plants, testing supply chain resilience",
-        "title": "日本地震导致汽车和芯片工厂停产，考验供应链韧性",
-        "summary": "日本发生强烈地震，造成至少34人死亡，多家汽车制造商和半导体工厂被迫停产。此次灾害再次暴露全球供应链在自然灾害面前的脆弱性，可能影响全球汽车和电子产品的供应。",
-        "source": "路透社",
-        "category": "亚太动态",
-        "keywords": [
-          "日本地震",
-          "供应链",
-          "汽车制造",
-          "半导体",
-          "自然灾害"
-        ],
-        "url": "https://www.reuters.com/world/asia-pacific/death-toll-japan-earthquake-rises-34-2026-07-31/",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "1413166631792728397"
-      },
-      {
-        "title_en": "Chinese military researchers tap US AI models to train defence systems",
-        "title": "中国军事研究人员利用美国AI模型训练国防系统（独家报道）",
-        "summary": "路透社独家报道称，中国军事研究人员正在使用美国开发的AI大型语言模型来辅助国防系统研发。这一发现凸显了中美在AI技术领域的激烈竞争，以及AI技术军民两用的敏感性。",
-        "source": "路透社",
-        "category": "科技竞争",
-        "keywords": [
-          "中美AI竞争",
-          "军事技术",
-          "AI模型",
-          "国防系统",
-          "科技安全"
-        ],
-        "url": "https://www.reuters.com/world/asia-pacific/chinese-military-researchers-tap-us-ai-models-train-defence-systems-2026-07-31/",
-        "priority_score": 94,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "2201557098232414278"
-      },
-      {
-        "title_en": "China coast guard patrols waters east of Taiwan, angering Taipei",
-        "title": "中国海警在台湾以东海域巡逻，激怒台北方面",
-        "summary": "中国海警周五在台湾以东海域进行其描述为'例行执法'的巡逻活动，台北方面谴责此举是北京旨在扩大控制权的政治操作。此举加剧了台海紧张局势。",
-        "source": "路透社",
-        "category": "中美关系",
-        "keywords": [
-          "台海局势",
-          "中国海警",
-          "台湾",
-          "中美关系",
-          "海上执法"
-        ],
-        "url": "https://www.reuters.com/world/china/china-coast-guard-patrols-east-taiwan-angering-taipei-2026-07-31/",
-        "priority_score": 93,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "5314790214597158926"
-      },
-      {
-        "title_en": "Hamas says it has agreed to disarm after Trump announces Board of Peace plan",
-        "title": "哈马斯称在特朗普宣布和平委员会计划后同意解除武装",
-        "summary": "哈马斯高级官员告诉BBC，他们已同意和平委员会的计划。以色列尚未对此发表评论。该计划若成功实施，可能消除推进特朗普支持加沙和平倡议的最大障碍。",
-        "source": "BBC News",
-        "category": "中东局势",
-        "keywords": [
-          "哈马斯",
-          "加沙停火",
-          "特朗普",
-          "和平委员会",
-          "中东外交"
-        ],
-        "url": "https://www.bbc.com/news/articles/cj03m512r4go",
-        "priority_score": 91,
-        "is_summit_level": true,
-        "date": "2026-07-31",
-        "id": "665304191866641769"
-      },
-      {
-        "title_en": "At least five members of same family killed in Russian missile attack, Zelensky says",
-        "title": "泽连斯基称俄导弹袭击致同一家庭5名成员遇难",
-        "summary": "乌克兰总统泽连斯基表示，俄罗斯导弹袭击了中部城市克里沃罗格附近的一个村庄，造成包括一名6岁女孩和两名分别为11岁和17岁的男孩在内的6人死亡。俄乌冲突持续升级。",
-        "source": "BBC News",
-        "category": "欧洲事务",
-        "keywords": [
-          "俄乌战争",
-          "泽连斯基",
-          "导弹袭击",
-          "平民伤亡",
-          "欧洲安全"
-        ],
-        "url": "https://www.bbc.com/news/articles/cy8mk59l5jzo",
-        "priority_score": 89,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "2317681286450285105"
-      },
-      {
-        "title_en": "Missile that left crater deep inside Poland was probably Russian - Polish PM",
-        "title": "波兰总理称在波兰境内留下深坑的导弹很可能来自俄罗斯",
-        "summary": "一枚导弹在距离乌克兰边境约100公里的塔尔纳瓦·科洛尼亚村附近留下了一个10米宽的深坑。波兰总理表示该导弹很可能来自俄罗斯，此事引发北约成员国对安全的严重关切。",
-        "source": "BBC News",
-        "category": "欧洲事务",
-        "keywords": [
-          "波兰",
-          "俄罗斯导弹",
-          "北约安全",
-          "乌克兰边境",
-          "地缘政治"
-        ],
-        "url": "https://www.bbc.com/news/articles/cwymkgenv2ro",
-        "priority_score": 90,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "5181229382293699110"
-      },
-      {
-        "title_en": "Danube's record low levels force shutdown of Hungary's only nuclear plant",
-        "title": "多瑙河水位创历史新低迫使匈牙利唯一核电站关闭",
-        "summary": "受持续热浪和降雨不足影响，多瑙河水位降至历史最低点，匈牙利唯一的核电站被迫关闭。罗马尼亚、保加利亚和塞尔维亚也在应对类似问题，凸显气候变化对能源基础设施的影响。",
-        "source": "BBC News",
-        "category": "气候变化",
-        "keywords": [
-          "多瑙河",
-          "核电站",
-          "气候变化",
-          "热浪",
-          "欧洲能源"
-        ],
-        "url": "https://www.bbc.com/news/articles/cn0nqv05g0do",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "-7188764172116305030"
-      },
-      {
-        "title_en": "Xi Jinping meets foreign leaders: tracker, July 2026",
-        "title": "习近平会见外国领导人追踪器：2026年7月",
-        "summary": "SCMP专门设立的习近平外交活动追踪页面，记录2026年7月期间中国国家主席习近平与外国领导人的所有会晤活动。结合其他信息显示，特朗普曾于2026年5月13-15日访问北京进行国事访问，中美高层互动持续活跃。",
-        "source": "南华早报",
-        "category": "中美关系",
-        "keywords": [
-          "习近平",
-          "外交会晤",
-          "元首外交",
-          "中美关系",
-          "中国领导"
-        ],
-        "url": "https://www.scmp.com/plus/news/china/article/3362479/xi-jinping-meets-foreign-leaders-tracker-july-2026",
-        "priority_score": 98,
-        "is_summit_level": true,
-        "date": "2026-07-31",
-        "id": "3631936322084167913"
-      },
-      {
-        "title_en": "Trump weighs US$100,000 fee for foreign students to work after graduation",
-        "title": "特朗普考虑对外国留学生毕业后工作收取10万美元费用",
-        "summary": "美国政府正考虑对留学生毕业后工作签证（OPT）征收高达10万美元费用，这将直接影响大量中国留学生群体。此举被视为美国收紧移民政策、限制外国人才留美的重要信号。",
-        "source": "南华早报",
-        "category": "中美关系",
-        "keywords": [
-          "特朗普",
-          "留学生政策",
-          "OPT签证",
-          "移民改革",
-          "中美教育交流"
-        ],
-        "url": "https://www.scmp.com/news/world/united-states-canada/article/3362447/trump-weighs-us100000-fee-foreign-students-work-us-after-graduation",
-        "priority_score": 93,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "-1551440569309134985"
-      },
-      {
-        "title_en": "Zelensky says Russia fired North Korean ballistic missile in latest attack",
-        "title": "泽连斯基称俄罗斯在最新袭击中发射了朝鲜弹道导弹",
-        "summary": "乌克兰总统泽连斯基证实，俄罗斯在针对乌克兰的最新攻击中使用了朝鲜制造的弹道导弹。这是近一年来首次发现此类武器被使用，表明莫斯科已获得更多朝鲜武器库存，影响亚太地区安全格局。",
-        "source": "南华早报",
-        "category": "地缘政治",
-        "keywords": [
-          "俄乌战争",
-          "朝鲜导弹",
-          "泽连斯基",
-          "亚太安全",
-          "军事合作"
-        ],
-        "url": "https://www.scmp.com/news/world/russia-central-asia/article/3362450/russia-used-north-korean-missile-deadly-strike-ukraine-village-zelensky-says",
-        "priority_score": 91,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "6164411531818944898"
-      },
-      {
-        "title_en": "Brazil is now the world's biggest buyer of Chinese cars: China customs",
-        "title": "中国海关数据显示：巴西已成为全球最大中国汽车买家",
-        "summary": "根据中国海关数据，巴西已跃升为全球最大的中国汽车进口国，进口量激增147%。这一数据反映了中国制造业在拉美市场的强劲扩张势头，也是'全球南方'国家与中国经贸关系深化的典型案例。",
-        "source": "南华早报",
-        "category": "全球经济",
-        "关键词": [
-          "中国出口",
-          "巴西",
-          "汽车贸易",
-          "全球南方",
-          "贸易多元化"
-        ],
-        "url": "https://www.scmp.com/news/china/article/3362315/brazil-becomes-worlds-top-buyer-chinese-cars-imports-jump-147",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "6474409251253600852"
-      },
-      {
-        "title_en": "Japan finds rare earths in deep-sea mud off remote island",
-        "title": "日本在偏远岛屿深海泥中发现稀土矿藏",
-        "summary": "日本宣布在其太平洋偏远岛屿南鸟岛附近海域的深海泥中发现稀土矿物，并计划进行全面采矿试验。这一发现具有重大战略意义——日本和美国等西方国家正试图减少对中国稀土资源的依赖。",
-        "source": "南华早报",
-        "category": "科技竞争",
-        "keywords": [
-          "稀土资源",
-          "日本",
-          "深海采矿",
-          "供应链安全",
-          "科技竞争"
-        ],
-        "url": "https://www.scmp.com/video/asia/3362433/japan-finds-rare-earths-deep-sea-mud-remote-island",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "-9013679479234736565"
-      },
-      {
-        "title_en": "US hits dozens of targets in Iran overnight as peace efforts under threat",
-        "title": "美国连夜打击伊朗数十个目标，和平努力面临威胁",
-        "summary": "美国在夜间对伊朗境内数十个目标发动大规模军事打击，使中东和平进程面临严重威胁。参议院以49-50票否决了阻止特朗普对伊敌对行动的尝试。英国汽油价格预计因此飙升至今年最高点。",
-        "source": "卫报",
-        "category": "地缘政治",
-        "keywords": [
-          "美伊冲突",
-          "中东危机",
-          "军事打击",
-          "石油价格",
-          "地缘震荡"
-        ],
-        "url": "https://www.theguardian.com/world/2026/jul/30/us-strikes-iran-war-widening-iraq",
-        "priority_score": 93,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "-5811463709082917094"
-      },
-      {
-        "title_en": "At least 18 die as 49,000 cross to Spanish enclave of Ceuta from Morocco",
-        "title": "至少18人死亡，4.9万人从摩洛哥跨境进入西班牙飞地休达",
-        "summary": "一场史无前例的大规模移民潮冲击欧洲边境——约49,000人在短时间内从摩洛哥跨境进入西班牙北非飞地休达，造成至少18人死亡。西班牙紧急增派军队和警察前往应对，成为欧洲移民政策面临的最新严峻考验。",
-        "source": "卫报",
-        "category": "欧洲事务",
-        "keywords": [
-          "移民危机",
-          "申根区",
-          "西班牙",
-          "摩洛哥",
-          "欧盟边境"
-        ],
-        "url": "https://www.theguardian.com/world/2026/jul/31/ceuta-spain-morocco-border-deaths",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "134111945438116746"
-      },
-      {
-        "title_en": "'Extremely scary findings' show climate crisis is supercharging Europe's wildfire weather",
-        "title": "'极其可怕的发现'显示气候危机正在加剧欧洲野火天气",
-        "summary": "最新科学研究揭示气候变化正在显著增强欧洲野火的发生频率和强度。法国和西班牙正经历难以控制的猛烈野火，迫使当地领导人重新审视气候政策的紧迫性。过去欧洲和北美野火的影响可能会持续数年之久。",
-        "source": "卫报",
-        "category": "气候变化",
-        "keywords": [
-          "气候变化",
-          "欧洲野火",
-          "极端天气",
-          "环境危机",
-          "法国西班牙"
-        ],
-        "url": "https://www.theguardian.com/world/2026/jul/31/wildfires-extreme-weather-europe-spain-france-climate-crisis-analysis",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "-1462104255522395066"
-      },
-      {
-        "title_en": "Could AI take your job? Some workers in China already know the answer",
-        "title": "AI会取代你的工作吗？中国一些工人已经知道答案",
-        "summary": "人工智能对全球劳动力市场的影响已成为现实议题，中国工人的经验提供了重要参考案例。文章深入探讨了AI技术在各行业的应用现状及其对就业结构的重塑作用，勾勒出人工智能发展的机遇与风险图景。",
-        "source": "卫报",
-        "category": "科技竞争",
-        "keywords": [
-          "人工智能",
-          "就业市场",
-          "中国",
-          "AI安全",
-          "劳动力转型"
-        ],
-        "url": "https://www.theguardian.com/world/2026/jul/31/china-ai-jobs-workers-labour-market-technology",
-        "priority_score": 86,
-        "is_summit_level": false,
-        "date": "2026-07-31",
-        "id": "-5787861682470559334"
       }
     ]
   },
@@ -572,7 +219,7 @@
     "2026-07-31"
   ],
   "stats": {
-    "totalArticles": 38,
+    "totalArticles": 19,
     "dateCount": 1,
     "latestDate": "2026-07-31",
     "oldestDate": "2026-07-31"
