@@ -10,14 +10,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -26,723 +24,287 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
-
-        /* 顶部状态栏 */
-        .status-bar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 20px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 40px 30px;
+            text-align: center;
         }
-
-        .status-left h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
-
-        .status-left .subtitle {
-            font-size: 14px;
+        .header p {
             opacity: 0.9;
+            font-size: 1.1em;
         }
-
-        .status-right {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .status-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-        }
-
-        .badge {
-            background: rgba(255,255,255,0.2);
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-weight: bold;
-        }
-
-        .badge-success {
-            background: #10b981;
-        }
-
-        /* 统计卡片 */
-        .stats-grid {
+        .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             padding: 30px;
-            background: #f8fafc;
+            background: #f8f9fa;
         }
-
         .stat-card {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            border-radius: 10px;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
-
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
         .stat-number {
-            font-size: 36px;
+            font-size: 2.5em;
             font-weight: bold;
             color: #667eea;
             margin-bottom: 5px;
         }
-
         .stat-label {
-            color: #64748b;
-            font-size: 14px;
+            color: #666;
+            font-size: 0.95em;
         }
-
-        /* 搜索和筛选 */
-        .filter-section {
+        .controls {
             padding: 20px 30px;
             background: white;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .filter-group {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
             align-items: center;
+            border-bottom: 2px solid #eee;
         }
-
-        .filter-input,
-        .filter-select {
-            padding: 10px 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 6px;
-            font-size: 14px;
-            outline: none;
-            transition: all 0.3s;
-        }
-
-        .filter-input:focus,
-        .filter-select:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
-        }
-
-        .filter-input {
+        .search-box {
+            flex: 1;
             min-width: 250px;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s;
         }
-
-        .filter-select {
-            min-width: 150px;
+        .search-box:focus {
+            border-color: #667eea;
+        }
+        select {
+            padding: 12px 18px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.95em;
+            outline: none;
             cursor: pointer;
         }
-
-        /* 表格 */
-        .table-section {
+        select:focus {
+            border-color: #667eea;
+        }
+        .table-container {
             padding: 30px;
             overflow-x: auto;
         }
-
-        .news-table {
+        table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px;
+            font-size: 0.9em;
         }
-
-        .news-table thead {
+        th {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-        }
-
-        .news-table th {
             padding: 15px 12px;
             text-align: left;
             font-weight: 600;
             white-space: nowrap;
         }
-
-        .news-table td {
-            padding: 15px 12px;
-            border-bottom: 1px solid #e2e8f0;
+        td {
+            padding: 14px 12px;
+            border-bottom: 1px solid #eee;
             vertical-align: top;
         }
-
-        .news-table tbody tr:hover {
-            background: #f8fafc;
-            transition: background 0.2s;
+        tr:hover {
+            background: #f8f9ff;
         }
-
-        .news-table tbody tr:nth-child(even) {
-            background: #fafafa;
-        }
-
-        /* 重要性标签 */
         .importance-high {
-            background: #fef2f2;
-            color: #dc2626;
-            padding: 4px 10px;
-            border-radius: 4px;
+            color: #dc3545;
             font-weight: bold;
-            font-size: 12px;
         }
-
         .importance-medium {
-            background: #fffbeb;
-            color: #d97706;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 12px;
-        }
-
-        .importance-low {
-            background: #f0fdf4;
-            color: #16a34a;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 12px;
-        }
-
-        /* 链接样式 */
-        .source-link {
-            color: #667eea;
-            text-decoration: none;
-            font-size: 13px;
-            word-break: break-all;
-        }
-
-        .source-link:hover {
-            text-decoration: underline;
-        }
-
-        /* 标题样式 */
-        .news-title {
+            color: #fd7e14;
             font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 8px;
-            line-height: 1.4;
         }
-
-        .news-summary {
-            color: #64748b;
-            line-height: 1.6;
-            font-size: 13px;
+        .importance-low {
+            color: #28a745;
         }
-
-        /* 关键词标签 */
-        .keyword-tag {
+        .tag {
             display: inline-block;
-            background: #e0e7ff;
-            color: #4338ca;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
             margin: 2px;
+            background: #e9ecef;
         }
-
-        /* 空状态 */
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: #94a3b8;
-        }
-
-        .empty-state p {
-            font-size: 18px;
-        }
-
-        /* 页脚 */
         .footer {
-            background: #f8fafc;
-            padding: 20px 30px;
             text-align: center;
-            color: #64748b;
-            font-size: 13px;
-            border-top: 1px solid #e2e8f0;
+            padding: 25px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9em;
         }
-
-        /* 响应式 */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            .status-bar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 20px;
-            }
-
-            .filter-group {
-                flex-direction: column;
-            }
-
-            .filter-input,
-            .filter-select {
-                width: 100%;
-            }
-
-            .table-section {
-                padding: 15px;
-            }
-
-            .news-table {
-                font-size: 12px;
-            }
-
-            .news-table th,
-            .news-table td {
-                padding: 10px 8px;
-            }
-        }
-
-        /* 打印样式 */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .container {
-                box-shadow: none;
-            }
-
-            .filter-section {
-                display: none;
-            }
+            .header h1 { font-size: 1.8em; }
+            .stats { grid-template-columns: repeat(2, 1fr); padding: 15px; }
+            .controls { flex-direction: column; align-items: stretch; }
+            .table-container { padding: 15px; }
+            table { font-size: 0.8em; }
+            th, td { padding: 10px 8px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 顶部状态栏 -->
-        <header class="status-bar">
-            <div class="status-left">
-                <h1>🌍 国际新闻知识库</h1>
-                <span class="subtitle">国际环境洞察 · 每日跟踪 · 高质量讯息</span>
-            </div>
-            <div class="status-right">
-                <div class="status-item">
-                    <label>更新时间：</label>
-                    <span id="lastUpdated">2026-07-30</span>
-                </div>
-                <div class="status-item">
-                    <label>总条数：</label>
-                    <span id="totalCount" class="badge">24</span>
-                </div>
-                <div class="status-item">
-                    <label>信源数：</label>
-                    <span id="sourceCount" class="badge badge-success">4</span>
-                </div>
-            </div>
-        </header>
+        <div class="header">
+            <h1>🌍 国际新闻知识库</h1>
+            <p>每日高质量国际新闻自动采集与呈现 | 更新时间：2026-07-31 10:16</p>
+        </div>
 
-        <!-- 统计卡片 -->
-        <div class="stats-grid">
+        <div class="stats">
             <div class="stat-card">
-                <div class="stat-number" id="highCount">9</div>
-                <div class="stat-label">⭐ 高重要性</div>
+                <div class="stat-number">26</div>
+                <div class="stat-label">总新闻数</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="mediumCount">10</div>
-                <div class="stat-label">📌 中重要性</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label">信源数量</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="lowCount">5</div>
-                <div class="stat-label">📄 低重要性</div>
+                <div class="stat-number">7</div>
+                <div class="stat-label">分类数量</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="categoryCount">9</div>
-                <div class="stat-label">📂 覆盖分类</div>
+                <div class="stat-number">16</div>
+                <div class="stat-label">高重要性</div>
             </div>
         </div>
 
-        <!-- 筛选工具栏 -->
-        <section class="filter-section">
-            <div class="filter-group">
-                <input type="text" id="searchInput" class="filter-input" placeholder="🔍 搜索标题、摘要、关键词..." oninput="applyFilters()">
-                <select id="filterSource" class="filter-select" onchange="applyFilters()">
-                    <option value="">全部信源</option>
-                </select>
-                <select id="filterCategory" class="filter-select" onchange="applyFilters()">
-                    <option value="">全部分类</option>
-                </select>
-                <select id="filterImportance" class="filter-select" onchange="applyFilters()">
-                    <option value="">全部重要程度</option>
-                    <option value="高">⭐ 高重要性</option>
-                    <option value="中">📌 中重要性</option>
-                    <option value="低">📄 低重要性</option>
-                </select>
-            </div>
-        </section>
+        <div class="controls">
+            <input type="text" class="search-box" id="searchInput" placeholder="🔍 搜索新闻标题、关键词...">
+            <select id="sourceFilter">
+                <option value="">全部来源</option>
+            </select>
+            <select id="categoryFilter">
+                <option value="">全部分类</option>
+            </select>
+            <select id="importanceFilter">
+                <option value="">全部重要性</option>
+                <option value="高">⭐ 高</option>
+                <option value="中">🔶 中</option>
+                <option value="低">🔹 低</option>
+            </select>
+        </div>
 
-        <!-- 新闻数据表格 -->
-        <section class="table-section">
-            <table class="news-table" id="newsTable">
+        <div class="table-container">
+            <table id="newsTable">
                 <thead>
                     <tr>
-                        <th style="width:5%">#</th>
-                        <th style="width:25%">标题</th>
-                        <th style="width:30%">摘要</th>
-                        <th style="width:10%">来源</th>
-                        <th style="width:10%">分类</th>
-                        <th style="width:8%">重要度</th>
-                        <th style="width:12%">链接</th>
+                        <th>#</th>
+                        <th>日期</th>
+                        <th>标题</th>
+                        <th>摘要</th>
+                        <th>来源</th>
+                        <th>分类</th>
+                        <th>重要性</th>
+                        <th>关键词</th>
                     </tr>
                 </thead>
-                <tbody id="newsTableBody">
-                    <!-- 动态加载 -->
+                <tbody id="newsBody">
+                    <!-- 数据将通过JS动态加载 -->
                 </tbody>
             </table>
-            <div class="empty-state" id="emptyState" style="display:none;">
-                <p>没有找到匹配的新闻</p>
-            </div>
-        </section>
+        </div>
 
-        <!-- 页脚 -->
-        <footer class="footer">
-            <p>📰 国际新闻知识库 v2.0 | 数据更新于 2026-07-30 | 信源：路透社 / BBC News / 南华早报 / 卫报</p>
-            <p style="margin-top:5px;opacity:0.7;">Powered by WebFetch AI + 高质量采集引擎 | 仅供学习研究使用</p>
-        </footer>
+        <div class="footer">
+            <p>🌐 国际新闻知识库 v3.0 | 数据更新于 2026-07-31 10:16:28</p>
+            <p style="margin-top: 8px;">Powered by Enhanced Fetcher v3.0 (WebFetch API)</p>
+        </div>
     </div>
 
     <script>
-        // 新闻数据（内嵌）
-        const NEWS_DATA = [
-            {
-                "id": "e7e63349-49e3-48a9-92c0-bdbaa3d2fde8",
-                "date": "2026-07-30",
-                "title": "【路透社】中国警告若美国坚持机器人禁令将采取报复措施",
-                "summary": "中国外交部周四警告称，如果美国政府坚持实施针对中国人形机器人的进口禁令，中方将不得不采取对等报复措施。此举可能进一步加剧中美在高科技领域的紧张关系。",
-                "source": "路透社",
-                "category": "us-china",
-                "keywords": ["中美关系", "机器人禁令", "报复措施", "高科技竞争"],
-                "url": "https://www.reuters.com/world/asia-pacific/china-warns-retaliation-if-us-sticks-with-robot-ban-2026-07-30/",
-                "importance": "高"
-            },
-            {
-                "id": "1ce08cad-d739-4115-95d9-5e70441ea91a",
-                "date": "2026-07-30",
-                "title": "【路透社】美军对伊朗革命卫队数十个目标发动大规模打击",
-                "summary": "美国中央司令部表示，美军发动了持续两小时的密集打击浪潮，targeting伊朗伊斯兰革命卫队的数十个目标。这是自上周短暂停火以来最大规模的军事行动。",
-                "source": "路透社",
-                "category": "geopolitics",
-                "keywords": ["美军", "伊朗", "革命卫队", "军事打击", "中东危机"],
-                "url": "https://www.reuters.com/world/middle-east/us-military-says-it-hit-dozens-irans-irgc-targets-2026-07-30/",
-                "importance": "高"
-            },
-            {
-                "id": "2442ef0b-358b-43b9-b8ec-b2076dd53061",
-                "date": "2026-07-30",
-                "title": "【路透社】俄罗斯导弹袭击乌克兰致13人死亡，波兰紧急升空战机",
-                "summary": "俄罗斯对乌克兰发动大规模导弹袭击，造成至少13人死亡。波兰空军紧急出动战斗机应对潜在威胁。泽连斯基此前已警告俄方正准备\"大规模\"进攻。",
-                "source": "路透社",
-                "category": "geopolitics",
-                "keywords": ["俄罗斯", "乌克兰", "导弹袭击", "战争升级", "波兰"],
-                "url": "https://www.reuters.com/world/europe/russia-striking-kyiv-with-ballistic-missiles-mayor-says-2026-07-29/",
-                "importance": "高"
-            },
-            {
-                "id": "72770e1a-ea8d-48f7-ae68-ad34a3ac5f37",
-                "date": "2026-07-30",
-                "title": "【路透社】特朗普与内塔尼亚胡探讨所有伊朗选项包括军事攻击",
-                "summary": "以色列高级官员透露，美国总统特朗普与总理内塔尼亚胡在会晤中探讨了遏制伊朗核计划的所有可能路径，包括外交、经济施压和军事打击选项。",
-                "source": "路透社",
-                "category": "geopolitics",
-                "keywords": ["特朗普", "内塔尼亚胡", "伊朗核问题", "以色列", "军事选项"],
-                "url": "https://www.reuters.com/world/middle-east/trump-netanyahu-explored-all-iran-options-including-attack-israeli-official-says-2026-07-29/",
-                "importance": "高"
-            },
-            {
-                "id": "97cc016d-f3fd-4192-9c55-9994e2bddbb1",
-                "date": "2026-07-30",
-                "title": "【路透社】日本地震伤亡上升至17人，灾民面临缺水高温困境",
-                "summary": "日本强震死亡人数已升至17人，数千名灾民在避难所中挣扎于酷热和缺水之中。救援人员仍在倒塌的Aeon购物中心搜寻幸存者。",
-                "source": "路透社",
-                "category": "regional-asia",
-                "keywords": ["日本", "地震", "灾害救援", "高温", "避难所"],
-                "url": "https://www.reuters.com/business/environment/japans-earthquake-leaves-communities-thirsting-water-relief-heat-2026-07-30/",
-                "importance": "中"
-            },
-            {
-                "id": "363aa56f-3215-4366-8ba0-c6a43f822bb0",
-                "date": "2026-07-30",
-                "title": "【路透社】希腊消防员连续第二日抗击致命野火，3人殉职",
-                "summary": "在克里特岛和希腊大陆，强风助长火焰导致多个村庄被迫疏散。三名希腊消防员在与野火搏斗时不幸殉职，欧洲多国正面临极端天气引发的火灾危机。",
-                "source": "路透社",
-                "category": "regional-europe",
-                "keywords": ["希腊", "野火", "消防员殉职", "极端天气", "欧洲"],
-                "url": "https://www.reuters.com/business/environment/greek-firefighters-battle-deadly-wildfires-crete-second-day-2026-07-30/",
-                "importance": "中"
-            },
-            {
-                "id": "351726d3-c16a-42c6-a0ed-73eaed4c0fb3",
-                "date": "2026-07-30",
-                "title": "【路透社】美国签署586亿美元爱国者导弹合同应对库存紧缺",
-                "summary": "美国陆军授予洛克希德·马丁公司价值高达586亿美元的合同，生产爱国者拦截导弹。五角大楼表示，伊朗和乌克兰的冲突正在严重消耗美国武器库存。",
-                "source": "路透社",
-                "category": "defense-security",
-                "keywords": ["美国", "爱国者导弹", "洛克希德·马丁", "军火合同", "库存紧缺"],
-                "url": "https://www.reuters.com/business/aerospace-defense/army-awards-lockheed-martin-586-billion-largest-ever-pac-3-patriot-missile-deal-2026-07-29/",
-                "importance": "中"
-            },
-            {
-                "id": "54d3ba38-fdfb-489a-9da4-ec18323e2988",
-                "date": "2026-07-30",
-                "title": "【路透社】澳大利亚对Telegram提起法律诉讼指控传播恐怖主义内容",
-                "summary": "澳大利亚政府正式对加密通讯应用Telegram提起法律诉讼，指控其未能及时删除平台上的恐怖主义宣传材料。此举引发关于科技平台内容监管的全球讨论。",
-                "source": "路透社",
-                "category": "global-governance",
-                "keywords": ["澳大利亚", "Telegram", "恐怖主义", "内容监管", "科技治理"],
-                "url": "https://www.reuters.com/world/asia-pacific/australia-begins-legal-action-against-telegram-over-alleged-pro-terror-material-2026-07-30/",
-                "importance": "中"
-            },
-            {
-                "id": "03b691a1-1f41-46b7-b2b5-54dc3fb50f62",
-                "date": "2026-07-30",
-                "title": "【BBC】特朗普考虑加强AI管控，OpenAI安全事件引发政策转向",
-                "summary": "在发生一系列OpenAI安全事件后，特朗普政府正考虑加强对人工智能行业的管控，标志着其政府监管态度的重大转变。此前特朗普一直采取相对放任的科技政策立场。",
-                "source": "BBC News",
-                "category": "ai-tech",
-                "keywords": ["特朗普", "AI管控", "OpenAI", "人工智能安全", "政策转向"],
-                "url": "https://www.bbc.com/news/articles/c20dppq3y90o",
-                "importance": "高"
-            },
-            {
-                "id": "506e4e47-c14c-4ded-8654-f4e1ec8c7138",
-                "date": "2026-07-30",
-                "title": "【BBC】美国对伊朗发动\"猛烈\"打击，中东局势急剧升级",
-                "summary": "经过短暂停火后，美方重新启动导弹攻击行动。约旦宣布拦截了5枚针对该国的伊朗导弹。中东局势再度紧张，国际社会担忧冲突范围进一步扩大。",
-                "source": "BBC News",
-                "category": "geopolitics",
-                "keywords": ["美国", "伊朗", "军事打击", "中东局势", "约旦"],
-                "url": "https://www.bbc.com/news/articles/c74gwdzywmeo",
-                "importance": "高"
-            },
-            {
-                "id": "85100bcc-adf4-4835-8d28-55531124346b",
-                "date": "2026-07-30",
-                "title": "【BBC】日本强震后余震超100次，死亡人数升至30人",
-                "summary": "6.8级强震后，日本官方警告余震可能达到7级 magnitude。数千人在避难所中艰难应对酷热，救援队在倒塌的Aeon购物中心持续搜寻幸存者。",
-                "source": "BBC News",
-                "category": "regional-asia",
-                "keywords": ["日本", "地震", "余震", "灾害救援", "避难所"],
-                "url": "https://www.bbc.com/news/articles/cdrv36kv7pzo",
-                "importance": "中"
-            },
-            {
-                "id": "72277c42-4f04-400f-8998-65657e554942",
-                "date": "2026-07-30",
-                "title": "【BBC】中国机器人产业正在改变英国零售业格局",
-                "summary": "英国生产力增长疲软和劳动力短缺为中国机器人公司创造了机会，越来越多中国自动化解决方案进入英国零售业，改变传统商业模式。",
-                "source": "BBC News",
-                "category": "ai-tech",
-                "keywords": ["中国", "机器人", "英国", "零售业", "AI应用"],
-                "url": "https://www.bbc.com/news/articles/c0jl8v23qwgo",
-                "importance": "中"
-            },
-            {
-                "id": "091e2637-620a-4317-950e-984d688f42a0",
-                "date": "2026-07-30",
-                "title": "【BBC】沙特阿拉伯面临是否卷入美伊战争的艰难抉择",
-                "summary": "沙特王国正面临战略抉择：是继续作为威慑进行反击，还是尝试缓和局势。其决策将深刻影响中东地区力量平衡和全球能源市场稳定。",
-                "source": "BBC News",
-                "category": "regional-middle-east",
-                "keywords": ["沙特", "美伊战争", "战略抉择", "中东局势", "能源市场"],
-                "url": "https://www.bbc.com/news/articles/clyx83l8jv8o",
-                "importance": "高"
-            },
-            {
-                "id": "454a0ee1-7003-486c-ae76-2248c75e456d",
-                "date": "2026-07-30",
-                "title": "【BBC】俄乌战争升级：F-16战机坠毁，波兰调查领空侵犯事件",
-                "summary": "俄罗斯对乌克兰发动致命导弹袭击后，一架F-16战机在追逐俄空中目标时坠毁。波兰警方发现陨石坑和不明飞行物残骸，正在调查领空是否被侵犯。",
-                "source": "BBC News",
-                "category": "geopolitics",
-                "keywords": ["俄乌战争", "F-16", "波兰", "领空侵犯", "北约"],
-                "url": "https://www.bbc.com/news/articles/cy8mk59l5jzo",
-                "importance": "高"
-            },
-            {
-                "id": "3b8159f0-7b36-40bb-948a-941343a2bc71",
-                "date": "2026-07-30",
-                "title": "【南华早报】特朗普对习近平9月访美释放\"失望\"信号",
-                "summary": "在习近平计划9月访美之际，特朗普发出混合信号，表达\"相当失望\"的态度。这一表态引发外界对中美高层互动前景的关注，可能影响两国在贸易、科技等领域的谈判进程。",
-                "source": "南华早报(SCMP)",
-                "category": "us-china",
-                "keywords": ["中美关系", "特朗普", "习近平", "访美", "外交信号"],
-                "url": "https://www.scmp.com/news/china/diplomacy/article/3362329/surprising-disappointed-trump-has-warning-xi-ahead-september-trip",
-                "importance": "高"
-            },
-            {
-                "id": "4a278ec3-adfd-4afa-9315-3d86a87ae486",
-                "date": "2026-07-30",
-                "title": "【南华早报】美制裁中国大陆及香港企业涉伊朗石油运输",
-                "summary": "美国宣布制裁6家中国大陆及香港航运公司，指控其旗下油轮向中国运输伊朗原油。华盛顿将此经济施压行动与美国海军执法行动挂钩，中美在能源领域的博弈进一步加剧。",
-                "source": "南华早报(SCMP)",
-                "category": "trade-sanctions",
-                "keywords": ["美国制裁", "伊朗石油", "香港企业", "中美博弈", "能源运输"],
-                "url": "https://www.scmp.com/news/us/article/3362307/us-sanctions-chinese-hong-kong-shipping-firms-over-iranian-oil-deliveries",
-                "importance": "高"
-            },
-            {
-                "id": "adda19fa-ae90-47d5-98ee-5fb0c38106e8",
-                "date": "2026-07-30",
-                "title": "【南华早报】中国076型两栖攻击舰\"四川舰\"进入最后测试阶段",
-                "summary": "据央视报道，中国首艘076型两栖攻击舰\"四川舰\"正进入服役前的最后测试阶段。这艘4万吨级战舰配备电磁弹射器，可发射GJ-21隐身无人机，标志着中国海军两栖作战能力迈上新台阶。",
-                "source": "南华早报(SCMP)",
-                "category": "defense-security",
-                "keywords": ["中国海军", "076型", "四川舰", "电磁弹射器", "无人机"],
-                "url": "https://www.scmp.com/news/china/military/article/3362271/chinas-type-076-amphibious-assault-ship-sichuan-final-tests-drone-catapult",
-                "importance": "高"
-            },
-            {
-                "id": "90f402ac-74df-40e8-9be6-1ce1f3115d79",
-                "date": "2026-07-30",
-                "title": "【南华早报】巴西成为中国汽车全球最大买家，5个月进口52亿美元",
-                "summary": "据中国海关数据，巴西已跃升为全球最大中国汽车进口国，5个月内进口额达52亿美元。这一数据推动该领域贸易差额创下1997年有记录以来最宽水平，反映中国汽车产业出海势头强劲。",
-                "source": "南华早报(SCMP)",
-                "category": "trade-sanctions",
-                "keywords": ["中国汽车", "巴西", "出口贸易", "新能源汽车", "出海"],
-                "url": "https://www.scmp.com/news/china/article/3362315/brazil-becomes-worlds-top-buyer-chinese-cars-imports-jump-147",
-                "importance": "中"
-            },
-            {
-                "id": "135a917c-ca8b-4773-b69a-0767a6da1e34",
-                "date": "2026-07-30",
-                "title": "【南华早报】中国电动汽车热潮能否在地缘科技战中提供决定性优势？",
-                "summary": "分析人士指出，中国在电动汽车产业的全球主导地位可能为其提供针对依赖其技术和供应链国家的地缘政治杠杆。随着EV成为科技竞争的新战场，这一优势或将在中美博弈中发挥关键作用。",
-                "source": "南华早报(SCMP)",
-                "category": "ai-tech",
-                "keywords": ["电动汽车", "科技战", "供应链", "地缘政治", "中国优势"],
-                "url": "https://www.scmp.com/news/china/diplomacy/article/3362313/can-chinas-ev-boom-give-it-decisive-edge-geopolitical-tech-war",
-                "importance": "高"
-            },
-            {
-                "id": "d952906d-91bc-4afc-820d-856c49582fbb",
-                "date": "2026-07-30",
-                "title": "【南华早报】菲律宾防长警告中文教学交流构成\"灰色地带威胁\"",
-                "summary": "菲律宾国防部长发出警告，称中国的语言教学交流活动构成\"灰色地带威胁\"。南海局势持续升温，安全议题成为地区焦点。",
-                "source": "南华早报(SCMP)",
-                "category": "regional-asia",
-                "keywords": ["菲律宾", "南海", "灰色地带", "中文教学", "安全威胁"],
-                "url": "https://www.scmp.com/news/china/diplomacy/article/3362291/philippine-defence-chief-warns-chinese-teaching-exchanges-pose-grey-zone-threat",
-                "importance": "中"
-            },
-            {
-                "id": "c555a5a6-03b6-48ab-a68c-5c6d9d3ecad1",
-                "date": "2026-07-30",
-                "title": "【卫报】中东危机直播：约旦挫败伊朗导弹袭击，美国发动猛烈打击",
-                "summary": "今日最重大国际新闻——约旦军方宣布拦截了5枚针对该国的伊朗导弹；与此同时，美军在数日停顿后对伊朗革命卫队数十个目标发动新一轮\"猛烈\"打击。局势急剧升级。",
-                "source": "卫报(The Guardian)",
-                "category": "geopolitics",
-                "keywords": ["中东危机", "伊朗", "约旦", "美国军事打击", "局势升级"],
-                "url": "https://www.theguardian.com/world/live/2026/jul/30/us-iran-war-live-updates-missile-strikes-attacks-iraq-egypt-middle-east-crisis-latest-news",
-                "importance": "高"
-            },
-            {
-                "id": "630f197b-9950-4f72-a596-9da45c6a6804",
-                "date": "2026-07-30",
-                "title": "【卫报】Fauci援引第五修正案拒绝在新冠听证会上作证",
-                "summary": "前美国首席传染病专家福奇在参议院关于新冠疫情的听证会上援引宪法第五修正案拒绝作证。这是共和党主导的对疫情应对调查的一部分。",
-                "source": "卫报(The Guardian)",
-                "category": "global-governance",
-                "keywords": ["Fauci", "新冠疫情", "听证会", "第五修正案", "政治极化"],
-                "url": "https://www.theguardian.com/us-news/2026/jul/29/anthony-fauci-senate-hearing-covid",
-                "importance": "中"
-            },
-            {
-                "id": "101b6a14-102d-4b47-9ecc-cbd366344fb5",
-                "date": "2026-07-30",
-                "title": "【卫报】什么应该取代美国主导的世界秩序？",
-                "summary": "学者Asli Bâli和Samuel Moyn联合撰文，直面\"美国霸权衰落\"这一时代命题。文章探讨在后美国时代，国际社会应构建何种替代性全球治理框架。",
-                "source": "卫报(The Guardian)",
-                "category": "global-governance",
-                "keywords": ["世界秩序", "美国霸权", "全球治理", "多边主义", "全球南方"],
-                "url": "https://www.theguardian.com/commentisfree/2026/jul/29/us-decline-world-order-replacement",
-                "importance": "高"
-            },
-            {
-                "id": "a69b4e44-c30f-4009-b81c-b67ddb7ea67d",
-                "date": "2026-07-30",
-                "title": "【卫报】人体猎手：尼日利亚青年被骗至伦敦卷入器官贩卖阴谋",
-                "summary": "《卫报》最受读者关注的深度调查报道。揭露从西非延伸至伦敦的跨国器官贩卖链条，涉及人口走私、医疗伦理和国际执法合作等深层问题。",
-                "source": "卫报(The Guardian)",
-                "category": "global-governance",
-                "keywords": ["器官贩卖", "尼日利亚", "伦敦", "人口走私", "调查报道"],
-                "url": "https://www.theguardian.com/news/ng-interactive/2026/jul/30/body-snatchers-young-nigerian-lured-london-organ-trafficking-plot",
-                "importance": "中"
-            }
-        ];
+        // 新闻数据（内嵌）- 来自路透社/BBC/南华早报/卫报
+        const NEWS_DATA = [{"id": "wf_reuters_1", "date": "2026-07-31", "title": "苏伊士运河附近无人机袭击引发新安全威胁，美伊战争扩大化", "summary": "埃及地中海港口达米埃塔的天然气船只遭无人机袭击，标志着美伊战争可能出现新战线，对沙特石油最后出口路线之一苏伊士运河构成潜在威胁。地区安全局势进一步恶化。", "source": "路透社", "category": "国际政治", "keywords": ["苏伊士运河", "无人机袭击", "美伊战争", "埃及", "能源安全"], "url": "https://www.reuters.com/world/middle-east/us-military-says-it-hit-dozens-irans-irgc-targets-2026-07-30/", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_reuters_2", "date": "2026-07-31", "title": "特朗普称达成加沙解除武装协议，哈马斯据报确认但以色列态度不明", "summary": "美国总统特朗普宣布其'和平委员会'已达成协议，实现巴勒斯坦哈马斯及其他武装组织的完全解除武装。哈马斯高级官员向BBC确认同意该计划，但以色列方面尚未表态，和平进程仍存不确定性。", "source": "路透社", "category": "国际政治", "keywords": ["加沙", "哈马斯", "特朗普", "解除武装", "中东和平"], "url": "https://www.reuters.com/world/middle-east/trump-says-board-of-peace-reaches-gaza-disarmament-deal-2026-07-30/", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_reuters_3", "date": "2026-07-31", "title": "日本地震死亡人数上升至34人，救援行动与高温酷暑赛跑", "summary": "日本九州岛7月28日发生的强震死亡人数已攀升至34人，救援人员在废墟中与时间赛跑寻找幸存者。数万居民在酷热中撤离，缺水缺电问题严峻，政府面临重大救灾考验。", "source": "路透社", "category": "亚太动态", "keywords": ["日本地震", "九州岛", "死亡人数", "救援", "自然灾害"], "url": "https://www.reuters.com/world/asia-pacific/death-toll-japan-earthquake-rises-34-2026-07-31/", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_reuters_4", "date": "2026-07-31", "title": "俄罗斯大规模导弹袭击乌克兰致9人死亡，泽连斯基批评盟友导弹供应延迟", "summary": "俄罗斯连夜向乌克兰发射数十枚导弹和数百架无人机，造成至少9人死亡，其中包括儿童。乌克兰总统泽连斯基强烈批评盟友延迟供应防空导弹，称延误正在付出生命代价。", "source": "路透社", "category": "国际政治", "keywords": ["俄乌战争", "导弹袭击", "泽连斯基", "防空导弹", "战争升级"], "url": "https://www.reuters.com/world/europe/russia-striking-kyiv-with-ballistic-missiles-mayor-says-2026-07-29/", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_reuters_5", "date": "2026-07-31", "title": "巴基斯坦煤矿爆炸致至少18名矿工死亡，数十人失踪", "summary": "巴基斯坦俾路支省一煤矿 complex 发生爆炸，造成部分矿区被埋，至少18名矿工遇难。当局正在组织紧急救援，但恶劣条件和瓦斯浓度过高严重阻碍搜救工作。", "source": "路透社", "category": "亚太动态", "keywords": ["巴基斯坦", "煤矿爆炸", "矿难", "俾路支省", "工业安全"], "url": "https://www.reuters.com/world/asia-pacific/blast-pakistan-coal-mine-complex-kills-eight-dozens-missing-official-says-2026-07-30/", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_reuters_6", "date": "2026-07-31", "title": "朝鲜媒体警告：美军在日本的扩张举动加剧半岛冲突风险", "summary": "朝鲜官方媒体发表评论文章，警告美国军方在日本领土的扩张部署显著增加了朝鲜半岛发生军事冲突的风险。此举被视为对美日近期加强军事合作的强硬回应。", "source": "路透社", "category": "亚太动态", "keywords": ["朝鲜", "美军部署", "日本", "半岛局势", "军事冲突风险"], "url": "https://www.reuters.com/world/china/north-korea-state-media-says-us-forces-japan-expansion-raises-risk-korean-2026-07-31/", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_reuters_7", "date": "2026-07-31", "title": "也门胡塞武装从伊拉克境内袭击沙特阿拉伯，伊朗系民兵协调升级", "summary": "沙特及地区伙伴评估确认，也门胡塞武装本周从伊拉克领土对沙特发动袭击，并与伊拉克武装组织协同行动。这反映了伊朗系民兵之间日益增强的协调能力，中东代理人战争风险上升。", "source": "路透社", "category": "国际政治", "keywords": ["胡塞武装", "沙特阿拉伯", "伊拉克", "伊朗代理人", "中东局势"], "url": "https://www.reuters.com/world/middle-east/yemens-houthis-are-attacking-saudi-arabia-iraq-sources-say-2026-07-30/", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_reuters_8", "date": "2026-07-31", "title": "欧洲野火肆虐：法国西班牙希腊面临创纪录火灾天气，气候危机加剧", "summary": "欧洲多国正与创纪录的野火搏斗，科学家指出气候变化使法国和西班牙的极端火灾天气条件概率大幅增加（分别提高2倍和20倍）。乔治·克鲁尼夫妇被迫从法国住宅撤离，欧洲主要河流水位降至历史低位。", "source": "路透社", "category": "其他地区", "keywords": ["野火", "欧洲", "气候变化", "法国", "西班牙", "极端天气"], "url": "https://www.reuters.com/business/environment/france-spain-greece-battle-wildfires-europe-swelters-2026-07-30/", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_bbc_1", "date": "2026-07-31", "title": "哈马斯确认同意解除武装，特朗普'和平委员会'计划获突破性进展", "summary": "哈马斯高级官员向BBC证实，他们已同意特朗普'和平委员会'提出的加沙完全解除武装计划。这是中东危机的重大潜在转折点，但以色列尚未对此作出官方回应，最终执行仍存变数。", "source": "BBC News", "category": "国际政治", "keywords": ["哈马斯", "加沙", "特朗普", "和平计划", "中东突破"], "url": "https://www.bbc.com/news/live/clyp18kwdnwt", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_bbc_2", "date": "2026-07-31", "title": "数百移民从摩洛哥游泳进入西班牙飞地休达，军事力量介入", "summary": "数千名移民从摩洛哥游过边界进入西班牙北非飞地休达，当地领导人称涌入人数已 overwhelm 资源，敦促西班牙中央政府紧急干预。军方已被召集协助控制局势，欧洲移民危机再度升温。", "source": "BBC News", "category": "欧洲事务", "keywords": ["移民危机", "摩洛哥", "西班牙", "休达", "欧洲边境"], "url": "https://www.bbc.com/news/articles/cg4drwzkrkxo", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_bbc_3", "date": "2026-07-31", "title": "分析：伊朗可能认为与美国进行有限战争比和平更符合其利益", "summary": "深度分析指出，伊朗可能相信能够足够精确地控制冲突规模，在持续向美国施压的同时避免全面战争爆发。这种'有限战争'策略反映了德黑兰对美国国内政治分歧和中东局势复杂性的精明算计。", "source": "BBC News", "category": "国际政治", "keywords": ["伊朗", "美国", "有限战争", "地缘政治", "战略博弈"], "url": "https://www.bbc.com/news/articles/c78gnyq3wvdo", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_bbc_4", "date": "2026-07-31", "title": "Anthropic公司AI模型在网络安全测试中成功入侵三家企业系统", "summary": "AI安全公司Anthropic披露，其AI模型在授权的网络安全测试中成功入侵了三家公司的计算机系统。这一发现再次引发关于AI双刃剑效应的激烈争论：强大的AI既可用于防御，也可能被用于网络攻击。", "source": "BBC News", "category": "AI与科技竞争", "keywords": ["Anthropic", "AI安全", "网络攻击", "人工智能", "网络安全"], "url": "https://www.bbc.com/news/articles/cz7dl7w8y7po", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_bbc_5", "date": "2026-07-31", "title": "波兰总理确认：落入波兰境内的导弹'极有可能来自俄罗斯'", "summary": "波兰总理正式确认，此前在波兰境内发现的一枚造成巨大弹坑的导弹'极有可能'源自俄罗斯。这一事件加剧了北约东翼的紧张局势，引发关于意外升级风险的担忧。", "source": "BBC News", "category": "欧洲事务", "keywords": ["波兰", "俄罗斯", "导弹", "北约", "紧张局势"], "url": "https://www.bbc.com/news/articles/cwymkgenv2ro", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_bbc_6", "date": "2026-07-31", "title": "中国机器人军团正在改变英国零售业格局", "summary": "深度报道揭示，英国生产力增长疲软和劳动力短缺为中国机器人企业创造了巨大机遇。从仓储物流到客户服务，中国制造的自动化设备正快速渗透英国零售行业，改变着传统商业模式。", "source": "BBC News", "category": "AI与科技竞争", "keywords": ["中国机器人", "英国零售业", "自动化", "劳动力短缺", "中英科技"], "url": "https://www.bbc.com/news/articles/c0jl8v23qwgo", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_bbc_7", "date": "2026-07-31", "title": "澳大利亚将Telegram告上法庭，指控其未能删除'支持恐怖主义'内容", "summary": "澳大利亚政府对即时通讯应用Telegram提起法律诉讼，指控该平台未能及时删除被认定为'支持恐怖主义'的内容。此案可能成为全球科技监管的重要先例，引发关于言论自由与平台责任的辩论。", "source": "BBC News", "category": "亚太动态", "keywords": ["澳大利亚", "Telegram", "恐怖主义内容", "平台监管", "科技法律"], "url": "https://www.bbc.com/news/articles/crmrv4pnexmo", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_scmp_1", "date": "2026-07-31", "title": "中美高层贸易通话：中方对新限制措施表达'严重关切'", "summary": "在北京与华盛顿的高层贸易对话中，中方对美国新出台的限制措施提出强烈反对。双方正为预计举行的习特会晤前的经济成果进行磋商，但在关键问题上分歧依然明显。", "source": "南华早报", "category": "中美关系", "keywords": ["中美关系", "贸易谈判", "限制措施", "习特会", "高层对话"], "url": "", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_scmp_2", "date": "2026-07-31", "title": "特朗普提名人对华媒体挑战誓言升级，信息空间对抗或加剧", "summary": "特朗普提名的官员承诺将加强对中国的媒体挑战力度，标志着美国在对华舆论和传播领域的施压可能进一步升级。此举可能加剧中美在信息空间的对抗，影响全球舆论格局。", "source": "南华早报", "category": "中美关系", "keywords": ["特朗普", "媒体挑战", "对华政策", "信息战", "舆论对抗"], "url": "", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_scmp_3", "date": "2026-07-31", "title": "北京指责马尼拉'公然侵犯'南海主权，中菲大陆架争端升温", "summary": "中国强烈反对菲律宾向联合国大陆架界限委员会提交的南海外大陆架延伸申请，称其严重侵犯中国在南海的主权和海洋权益。这是中菲南海争端持续升温的最新表现，地区紧张局势引人关注。", "source": "南华早报", "category": "中美关系", "keywords": ["南海争端", "菲律宾", "大陆架延伸", "主权", "联合国"], "url": "", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_scmp_4", "date": "2026-07-31", "title": "黄岩岛海域发生第二日海上冲突，中国海警使用水炮驱离菲方船只", "summary": "中国海警在黄岩岛海域使用水炮驱离菲律宾船只，这是自周一以来中菲在南海发生的第三次海上对峙。双方互相指责对方挑衅，地区紧张局势持续升级，引发国际社会关注。", "source": "南华早报", "category": "中美关系", "keywords": ["黄岩岛", "海警冲突", "水炮", "南海局势", "中菲对峙"], "url": "", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_scmp_5", "date": "2026-07-31", "title": "美国制裁马汉航空在华网络及伊朗石油运输中国企业，53条评论显示高度关注", "summary": "美国扩大对伊压力行动，制裁了两家上海公司及一名中国高管，指控其支持伊朗革命卫队。同时制裁涉及伊朗石油运输的中国内地及香港航运企业。此事在中国社交媒体引发广泛讨论和高度关注。", "source": "南华早报", "category": "经贸制裁", "keywords": ["美国制裁", "伊朗", "马汉航空", "石油运输", "中国企业"], "url": "", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_scmp_6", "date": "2026-07-31", "title": "宇树科技下周IPO，中国智能吸尘器巨头遭美国机器人禁令打击；BYD宣布8月推出人形机器人", "summary": "在中美机器人竞争加剧背景下，宇树科技计划下周上市。与此同时，美国最新禁令波及中国智能吸尘器龙头企业。比亚迪（BYD）宣布将于8月推出首款人形机器人，与特斯拉展开正面竞争。", "source": "南华早报", "category": "AI与科技竞争", "keywords": ["宇树科技", "IPO", "机器人禁令", "BYD人形机器人", "中美科技竞争"], "url": "", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_guardian_1", "date": "2026-07-31", "title": "俄罗斯导弹摧毁美国公司在基辅的无人机工厂，俄乌战争显著升级", "summary": "俄罗斯导弹摧毁了美国公司Terminal Autonomy位于基辅的无人机工厂，这被认为是俄乌战争以来莫斯科首次直接针对美国企业发动袭击。事件标志着乌克兰冲突的显著升级，可能引发美俄之间更直接的对抗。", "source": "卫报", "category": "国际政治", "keywords": ["乌克兰", "俄罗斯", "美国公司", "无人机工厂", "导弹袭击", "战争升级"], "url": "", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_guardian_2", "date": "2026-07-31", "title": "欧洲燃烧：多国野火创纪录，灭火行动与极端高温赛跑", "summary": "欧洲多国（包括法国、西班牙、希腊）正面临创纪录的野火危机，火灾天气条件比过去20年平均水平严重43%。乔治·克鲁尼夫妇被迫从法国住宅撤离。极端干旱还导致欧洲主要河流水位降至历史低位，露出猛犸象骨架等历史遗迹。", "source": "卫报", "category": "其他地区", "keywords": ["野火", "欧洲", "气候变化", "干旱", "创纪录高温", "环境危机"], "url": "", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_guardian_3", "date": "2026-07-31", "title": "FIFA世界杯商业化方案曝光：更多赛事更高债务，却只字不提女子足球", "summary": "国际足联（FIFA）计划出售世界杯商业权利给私人投资者的方案曝光，其推销材料包含更多赛事、更高票价和债务融资，但完全未提及女子足球发展。欧足联（UEFA）已宣布若该出售计划推进将抵制FIFA赛事。", "source": "卫报", "category": "其他地区", "keywords": ["FIFA", "世界杯", "商业化", "欧足联抵制", "女子足球", "体育经济"], "url": "", "importance": "低", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_guardian_4", "date": "2026-07-31", "title": "沙特准备对胡塞武装发动海陆联合进攻，伊朗内外危机交织", "summary": "沙特阿拉伯正在准备对也门胡塞武装发动海陆联合进攻，中东局势持续紧张。同时分析指出伊朗与美国的战争并非其唯一困境，其国内经济危机和异见情绪也在加剧，内部多重危机交织令德黑兰分身乏术。", "source": "卫报", "category": "国际政治", "keywords": ["沙特阿拉伯", "胡塞武装", "伊朗", "中东局势", "内部危机", "军事行动"], "url": "", "importance": "高", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}, {"id": "wf_guardian_5", "date": "2026-07-31", "title": "气候科学家确认：人为气候变化使欧洲野火天气概率激增", "summary": "气候科学家研究确认，人类活动导致的气候变化使法国西南部极端野火天气条件的可能性翻倍，使西班牙中部同类条件的可能性增加20倍。这一发现为气候变化与极端天气事件的关联提供了新的科学证据。", "source": "卫报", "category": "其他地区", "keywords": ["气候变化", "科学研究", "欧洲野火", "极端天气", "气候科学"], "url": "", "importance": "中", "language": "zh", "collectedAt": "2026-07-31 10:12:00", "collection_method": "webfetch"}];
 
-        // 分类映射
-        const CATEGORY_MAP = {
-            'us-china': '中美关系',
-            'trade-sanctions': '经贸制裁',
-            'ai-tech': 'AI/科技',
-            'geopolitics': '地缘政治',
-            'defense-security': '国防安全',
-            'global-governance': '全球治理',
-            'regional-asia': '亚太地区',
-            'regional-europe': '欧洲',
-            'regional-middle-east': '中东'
-        };
+        // 初始化筛选器选项
+        function initFilters() {
+            const sources = [...new Set(NEWS_DATA.map(n => n.source))].sort();
+            const categories = [...new Set(NEWS_DATA.map(n => n.category))].sort();
 
-        // 初始化
-        document.addEventListener('DOMContentLoaded', function() {
-            populateFilters();
-            renderTable(NEWS_DATA);
-            updateStats();
-        });
-
-        // 填充筛选器
-        function populateFilters() {
-            const sources = [...new Set(NEWS_DATA.map(item => item.source))];
-            const categories = [...new Set(NEWS_DATA.map(item => item.category))];
-
-            const sourceSelect = document.getElementById('filterSource');
-            sources.forEach(source => {
-                const option = document.createElement('option');
-                option.value = source;
-                option.textContent = source;
-                sourceSelect.appendChild(option);
+            const sourceSelect = document.getElementById('sourceFilter');
+            sources.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s;
+                opt.textContent = s;
+                sourceSelect.appendChild(opt);
             });
 
-            const categorySelect = document.getElementById('filterCategory');
-            categories.forEach(cat => {
-                const option = document.createElement('option');
-                option.value = cat;
-                option.textContent = CATEGORY_MAP[cat] || cat;
-                categorySelect.appendChild(option);
+            const categorySelect = document.getElementById('categoryFilter');
+            categories.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = c;
+                categorySelect.appendChild(opt);
             });
         }
 
-        // 应用筛选
-        function applyFilters() {
+        // 渲染表格
+        function renderTable(data) {
+            const tbody = document.getElementById('newsBody');
+            tbody.innerHTML = '';
+
+            if (data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:40px;color:#999;">😢 没有找到匹配的新闻</td></tr>';
+                return;
+            }
+
+            data.forEach((item, idx) => {
+                const row = document.createElement('tr');
+
+                const importanceClass = item.importance === '高' ? 'importance-high' :
+                                       item.importance === '中' ? 'importance-medium' : 'importance-low';
+
+                const keywords = Array.isArray(item.keywords) ?
+                    item.keywords.map(k => `<span class="tag">${k}</span>`).join('') :
+                    (item.keywords || '').split(',').map(k => `<span class="tag">${k.trim()}</span>`).join('');
+
+                row.innerHTML = `
+                    <td>${idx + 1}</td>
+                    <td>${item.date || '-'}</td>
+                    <td><strong>${item.title || ''}</strong></td>
+                    <td>${(item.summary || '').substring(0, 120)}${(item.summary || '').length > 120 ? '...' : ''}</td>
+                    <td>${item.source || ''}</td>
+                    <td>${item.category || ''}</td>
+                    <td class="${importanceClass}">${item.importance || ''}</td>
+                    <td>${keywords}</td>
+                `;
+
+                tbody.appendChild(row);
+            });
+        }
+
+        // 筛选逻辑
+        function filterNews() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const sourceFilter = document.getElementById('filterSource').value;
-            const categoryFilter = document.getElementById('filterCategory').value;
-            const importanceFilter = document.getElementById('filterImportance').value;
+            const sourceVal = document.getElementById('sourceFilter').value;
+            const categoryVal = document.getElementById('categoryFilter').value;
+            const importanceVal = document.getElementById('importanceFilter').value;
 
             let filtered = NEWS_DATA.filter(item => {
                 const matchSearch = !searchTerm ||
-                    item.title.toLowerCase().includes(searchTerm) ||
-                    item.summary.toLowerCase().includes(searchTerm) ||
-                    item.keywords.some(k => k.toLowerCase().includes(searchTerm));
+                    (item.title && item.title.toLowerCase().includes(searchTerm)) ||
+                    (item.summary && item.summary.toLowerCase().includes(searchTerm)) ||
+                    (Array.isArray(item.keywords) && item.keywords.some(k => k.toLowerCase().includes(searchTerm)));
 
-                const matchSource = !sourceFilter || item.source === sourceFilter;
-                const matchCategory = !categoryFilter || item.category === categoryFilter;
-                const matchImportance = !importanceFilter || item.importance === importanceFilter;
+                const matchSource = !sourceVal || item.source === sourceVal;
+                const matchCategory = !categoryVal || item.category === categoryVal;
+                const matchImportance = !importanceVal || item.importance === importanceVal;
 
                 return matchSearch && matchSource && matchCategory && matchImportance;
             });
@@ -750,51 +312,17 @@
             renderTable(filtered);
         }
 
-        // 渲染表格
-        function renderTable(data) {
-            const tbody = document.getElementById('newsTableBody');
-            const emptyState = document.getElementById('emptyState');
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            initFilters();
+            renderTable(NEWS_DATA);
 
-            if (data.length === 0) {
-                tbody.innerHTML = '';
-                emptyState.style.display = 'block';
-                return;
-            }
-
-            emptyState.style.display = 'none';
-            tbody.innerHTML = data.map((item, index) => `
-                <tr>
-                    <td>${index + 1}</td>
-                    <td>
-                        <div class="news-title">${item.title}</div>
-                    </td>
-                    <td>
-                        <div class="news-summary">${item.summary}</div>
-                        <div style="margin-top:8px;">
-                            ${item.keywords.map(k => `<span class="keyword-tag">${k}</span>`).join('')}
-                        </div>
-                    </td>
-                    <td><strong>${item.source}</strong></td>
-                    <td>${CATEGORY_MAP[item.category] || item.category}</td>
-                    <td><span class="importance-${item.importance === '高' ? 'high' : item.importance === '中' ? 'medium' : 'low'}">${item.importance}</span></td>
-                    <td><a href="${item.url}" target="_blank" class="source-link">查看原文 →</a></td>
-                </tr>
-            `).join('');
-        }
-
-        // 更新统计
-        function updateStats() {
-            const high = NEWS_DATA.filter(item => item.importance === '高').length;
-            const medium = NEWS_DATA.filter(item => item.importance === '中').length;
-            const low = NEWS_DATA.filter(item => item.importance === '低').length;
-            const categories = [...new Set(NEWS_DATA.map(item => item.category))].length;
-
-            document.getElementById('totalCount').textContent = NEWS_DATA.length;
-            document.getElementById('highCount').textContent = high;
-            document.getElementById('mediumCount').textContent = medium;
-            document.getElementById('lowCount').textContent = low;
-            document.getElementById('categoryCount').textContent = categories;
-        }
+            // 绑定事件
+            document.getElementById('searchInput').addEventListener('input', filterNews);
+            document.getElementById('sourceFilter').addEventListener('change', filterNews);
+            document.getElementById('categoryFilter').addEventListener('change', filterNews);
+            document.getElementById('importanceFilter').addEventListener('change', filterNews);
+        });
     </script>
 </body>
 </html>
