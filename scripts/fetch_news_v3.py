@@ -1,23 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-国际新闻看板 - 新闻采集引擎 V1.0（正式版）
+国际新闻看板 - 新闻采集引擎 V1.1（正式版）
 ==========================================
 
 核心功能：
   ✅ 双层采集架构（基础抓取 + WebFetch API补充）
-  ✅ 高价值英文信源覆盖（路透社/BBC/卫报/南华早报）
+  ✅ 高价值英文信源覆盖（10大权威信源：路透社/BBC/CNN/NYT等）
+  ✅ 双语标题支持（英文原标题 + 中文翻译）
+  ✅ 元首级新闻智能识别与标注（中美元首/高层会晤）
+  ✅ 重要性5级分类体系（⭐元首级95-100 / 🔴极高90-94 / 🟠高85-89 / 🟡中75-84 / 🟢低<75）
   ✅ URL完整性保障机制（Prompt强化 + 自动验证 + 质量门槛）
   ✅ 智能质量控制和去重
-  ✅ 单文件HTML自动生成
+  ✅ 单文件HTML自动生成（V1.1完整版UI）
   ✅ 完整的数据统计报告
 
-V1.0 正式版特性：
-  - WebFetch Prompt强制要求返回完整URL（从源头预防缺失）
-  - 新增validate_urls()自动验证URL覆盖率
-  - 分级警告系统：<80%红色 / <95%黄色 / ≥95%绿色
-  - HTML生成器支持9列布局（含"原文链接"列）
-  - 质量标准要求URL覆盖率≥95%
+V1.1 正式版特性：
+  - 信源扩展至10个英文权威信源（从4个扩展，覆盖全球多视角）
+  - WebFetch Prompt强制要求返回双语标题（title_en + title）
+  - 新增元首级新闻自动识别（is_summit_level + priority_score≥95）
+  - 基于priority_score的5级重要性分类系统
+  - HTML生成器支持V1.1完整UI（双语渲染 + 金色元首级徽章 + 列不换行）
+  - 根目录+gh-pages双目录同步部署
 
 架构说明：
   第1层：基础采集（requests库）
@@ -25,13 +29,35 @@ V1.0 正式版特性：
     - 优势：速度快、稳定性高、无需API
 
   第2层：WebFetch API补充（需在WorkBuddy环境中运行）
-    - 英文权威信源：路透社、BBC、卫报、南华早报
+    - 英文权威信源（10个）：
+      🔴 必选核心（4）：路透社、BBC News、南华早报(SCMP)、卫报(The Guardian)
+      🟠 扩展推荐（6）：CNN、纽约时报(NYT)、半岛电视台(Al Jazeera)、
+                       华盛顿邮报(WaPo)、美联社(AP)、Politico(可选)
     - 优势：绕过反爬虫、内容质量高、实时性好
     - 注意：此层需要WorkBuddy环境支持
 
+数据结构（V1.1增强）：
+  {
+    "id": "source_1",
+    "date": "2026-07-31",
+    "title_en": "Original English Title",        # V1.1: 英文原标题
+    "title": "中文翻译标题",
+    "summary": "2-3句话摘要",
+    "source": "路透社",
+    "category": "中美关系",
+    "keywords": ["关键词1", "关键词2"],
+    "url": "https://www.reuters.com/...",
+    "importance": "高",
+    "priority_score": 96,                        # V1.1: 数值化优先级
+    "is_summit_level": false,                    # V1.1: 元首级标记
+    "language": "en",
+    "collectedAt": "2026-07-31 12:00:00"
+  }
+
 输出：
   - data/news-data.json (主数据文件)
-  - gh-pages/index.html (单文件自包含网页)
+  - index.html (根目录单文件自包含网页)          # V1.1: 新增根目录输出
+  - gh-pages/index.html (gh-pages单文件网页)
   - data/collection-report.md (采集报告)
 
 使用方法：
@@ -47,9 +73,10 @@ V1.0 正式版特性：
 版本历史：
   v3.1 (2026-07-31) - 添加URL完整性保障机制
   V1.0 (2026-07-31) - 正式发布版本，所有功能稳定验证通过
+  V1.1 (2026-07-31) - 信源扩展+双语标题+元首级识别+5级分类+UI优化
 
 作者: WorkBuddy AI Assistant
-版本: V1.0 (正式版)
+版本: V1.1 (正式版)
 发布日期: 2026-07-31
 """
 
