@@ -143,6 +143,23 @@
             margin: 2px;
             background: #e9ecef;
         }
+        .link-btn {
+            display: inline-block;
+            padding: 6px 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+        }
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+            background: linear-gradient(135deg, #5a6fd6 0%, #6a4192 100%);
+        }
         .footer {
             text-align: center;
             padding: 25px;
@@ -214,6 +231,7 @@
                         <th>分类</th>
                         <th>重要性</th>
                         <th>关键词</th>
+                        <th>原文链接</th>
                     </tr>
                 </thead>
                 <tbody id="newsBody">
@@ -260,7 +278,7 @@
             tbody.innerHTML = '';
 
             if (data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:40px;color:#999;">😢 没有找到匹配的新闻</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:40px;color:#999;">😢 没有找到匹配的新闻</td></tr>';
                 return;
             }
 
@@ -283,6 +301,7 @@
                     <td>${item.category || ''}</td>
                     <td class="${importanceClass}">${item.importance || ''}</td>
                     <td>${keywords}</td>
+                    <td><a href="${item.url || '#'}" target="_blank" class="link-btn" title="点击查看原文">🔗 链接</a></td>
                 `;
 
                 tbody.appendChild(row);
