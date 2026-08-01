@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-01 14:26",
+  "lastUpdated": "2026-08-01 15:04",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -1331,28 +1331,6 @@
         "priority_score": 70,
         "is_summit_level": false,
         "date": "2026-08-01"
-      },
-      {
-        "title": "美伊冲突外溢 中东硝烟四起",
-        "summary": "美伊冲突外溢 中东硝烟四起",
-        "source": "新华网",
-        "url": "https://www.news.cn/world/20260730/477aa4fa269d4204b5f41d35e80a58c8/c.html",
-        "language": "zh",
-        "raw_content": "美伊冲突外溢 中东硝烟四起",
-        "id": "basic_11_3848",
-        "collectedAt": "2026-08-01 13:57:28",
-        "collection_method": "basic"
-      },
-      {
-        "title": "从北约峰会看美欧关系走向",
-        "summary": "从北约峰会看美欧关系走向",
-        "source": "新华网",
-        "url": "https://www.news.cn/world/20260710/8c3d9472ffa1415bb67c8bb404d62011/c.html",
-        "language": "zh",
-        "raw_content": "从北约峰会看美欧关系走向",
-        "id": "basic_14_3848",
-        "collectedAt": "2026-08-01 13:57:28",
-        "collection_method": "basic"
       }
     ]
   },
@@ -1361,7 +1339,7 @@
     "2026-07-31"
   ],
   "stats": {
-    "totalArticles": 86,
+    "totalArticles": 84,
     "dateCount": 2,
     "latestDate": "2026-08-01",
     "oldestDate": "2026-07-31"

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-国际新闻看板 - 新闻采集引擎 V1.1（正式版）
+国际新闻看板 - 新闻采集引擎 V1.2.3（全英文必选版）
 ==========================================
 
 核心功能：
@@ -121,8 +121,8 @@ HEADERS = {
 }
 
 # 高价值英文信源（用于WebFetch补充）- V1.2.2扩展版
-# 🔴 必选信源(7个)：路透社/BBC/南华早报/卫报/CNN/纽约时报/华尔街日报
-# 🟠 扩展信源(3个)：半岛电视台/Politico/华盛顿邮报/美联社
+# 🔴 全部11个英文信源均为必选 (V1.2.3)
+# 路透社/BBC/南华早报/卫报/CNN/纽约时报/华尔街日报/半岛电视台/Politico/华盛顿邮报/美联社
 WEBFETCH_SOURCES = [
     {
         'name': '路透社',
@@ -194,7 +194,7 @@ WEBFETCH_SOURCES = [
         'url': 'https://www.aljazeera.com/news',
         'prompt': '提取今天关于中东、亚洲、非洲和发展中国家的重要新闻，重点关注：1.巴以冲突 2.能源政治 3.全球南方视角。列出4-5条新闻，每条包含：\n1) **英文原标题**（Al Jazeera原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.aljazeera.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
         'priority': 8,
-        'required': False,
+        'required': True,
         'expected_count': 4,
         'language': 'en',
     },
@@ -203,7 +203,7 @@ WEBFETCH_SOURCES = [
         'url': 'https://www.politico.com/world',
         'prompt': '提取今天关于全球政治、外交政策、贸易谈判的重要新闻，重点关注：1.欧美关系 2.全球贸易政策 3.国际外交动态。列出3-4条新闻，每条包含：\n1) **英文原标题**（Politico原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.politico.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
         'priority': 9,
-        'required': False,
+        'required': True,
         'expected_count': 3,
         'language': 'en',
     },
@@ -212,7 +212,7 @@ WEBFETCH_SOURCES = [
         'url': 'https://www.washingtonpost.com/world',
         'prompt': '提取今天最重要的国际新闻，重点关注：1.美国外交政策 2.民主与治理 3.全球危机。列出3-4条新闻，每条包含：\n1) **英文原标题**（Washington Post原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.washingtonpost.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
         'priority': 10,
-        'required': False,
+        'required': True,
         'expected_count': 3,
         'language': 'en',
     },
@@ -221,21 +221,14 @@ WEBFETCH_SOURCES = [
         'url': 'https://apnews.com/world-news',
         'prompt': '提取今天全球重大突发新闻和重要事件，重点关注：1. Breaking news 2. 重大冲突 3. 自然灾害。列出4-5条快讯式新闻，每条包含：\n1) **英文原标题**（AP News原始标题）\n2) **中文翻译标题**\n3) 简要摘要\n4) 关键词\n5) **完整URL**（https://apnews.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
         'priority': 11,
-        'required': False,
+        'required': True,
         'expected_count': 4,
         'language': 'en',
     },
 ]
 
 # 基础中文信源（requests可直接访问）
-BASIC_SOURCES = [
-    {'name': '人民网-国际', 'url': 'http://world.people.com.cn/', 'language': 'zh'},
-    {'name': '中国日报网', 'url': 'https://www.chinadaily.com.cn/', 'language': 'zh'},
-    {'name': '环球网', 'url': 'https://world.huanqiu.com/', 'language': 'zh'},
-    {'name': '国际在线', 'url': 'http://www.cri.cn/', 'language': 'zh'},
-    {'name': '中国外交部', 'url': 'https://www.mfa.gov.cn/web/wjbxw_673067/', 'language': 'zh'},
-    {'name': '新华网', 'url': 'http://www.xinhuanet.com/world/', 'language': 'zh'},
-]
+BASIC_SOURCES = []  # V1.2.3: 中文信源已弃用，全部改为WebFetch方式获取
 
 # 分类映射
 CATEGORY_MAP = {
