@@ -123,14 +123,16 @@ def update_portal(news_html=None, news_count=None, ai_html=None, ai_count=None, 
         with open(path, encoding="utf-8") as f:
             content = f.read()
         changed = False
+        # 标记法替换：精确替换 <!--DAILY_*_START--> 与 <!--DAILY_*_END--> 之间的内容
         if news_html is not None:
-            # 替换 #daily-news-list 内容
             content, n = re.subn(
-                r'(<div class="daily-list" id="daily-news-list">)(.*?)(</div>)',
+                r"(<!--DAILY_NEWS_START-->)(.*?)(<!--DAILY_NEWS_END-->)",
                 lambda m: m.group(1) + news_html + m.group(3),
                 content, count=1, flags=re.S)
-            if n: changed = True
-            # 更新计数
+            if n:
+                changed = True
+            else:
+                print("  ⚠️  未找到 DAILY_NEWS_START 标记，跳过新闻日报")
             content, n2 = re.subn(
                 r'(<span class="daily-count" id="daily-news-count">)[^<]*(</span>)',
                 lambda m: m.group(1) + str(news_count) + " 条" + m.group(2),
@@ -138,10 +140,13 @@ def update_portal(news_html=None, news_count=None, ai_html=None, ai_count=None, 
             if n2: changed = True
         if ai_html is not None:
             content, n = re.subn(
-                r'(<div class="daily-list" id="daily-ai-list">)(.*?)(</div>)',
+                r"(<!--DAILY_AI_START-->)(.*?)(<!--DAILY_AI_END-->)",
                 lambda m: m.group(1) + ai_html + m.group(3),
                 content, count=1, flags=re.S)
-            if n: changed = True
+            if n:
+                changed = True
+            else:
+                print("  ⚠️  未找到 DAILY_AI_START 标记，跳过 AI 日报")
             content, n2 = re.subn(
                 r'(<span class="daily-count" id="daily-ai-count">)[^<]*(</span>)',
                 lambda m: m.group(1) + str(ai_count) + " 条" + m.group(2),
