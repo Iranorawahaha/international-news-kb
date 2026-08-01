@@ -379,6 +379,18 @@ else
     echo -e "${YELLOW}⚠️ 未找到 normalize_schema.py，跳过 schema 规范化${NC}"
 fi
 
+# V1.3.1: 更新 Ira 门户统计（国际新闻字段，AI 字段由 refresh_board.sh 更新，互不覆盖）
+echo ""
+echo -e "${YELLOW}🏠 更新 Ira 门户统计（国际新闻字段）${NC}"
+if [ -f "$PROJECT_DIR/scripts/update_portal_stats.py" ]; then
+    _news_total=$(python3 -c "import json;d=json.load(open('$PROJECT_DIR/data/news-data.json'));print(d.get('stats',{}).get('totalArticles','--'))" 2>/dev/null || echo "--")
+    _news_last=$(python3 -c "import json;d=json.load(open('$PROJECT_DIR/data/news-data.json'));print(d.get('lastUpdated','--'))" 2>/dev/null || echo "--")
+    python3 "$PROJECT_DIR/scripts/update_portal_stats.py" \
+        --news-count "$_news_total" --news-date "$_news_last" --latest "$(date '+%Y-%m-%d %H:%M')"
+else
+    echo -e "${YELLOW}⚠️ 未找到 update_portal_stats.py，跳过门户统计更新${NC}"
+fi
+
 echo ""
 echo -e "${GREEN}✅ 数据整合完成（V1.2追加模式）${NC}"
 
@@ -931,7 +943,6 @@ function sortArticlesByImportance(articles) {
 
     return result;
 }
-}
 
 // 渲染表格（9列布局 - V1.1标准）
 function renderTable(articles) {
@@ -1057,7 +1068,7 @@ fi
 
 FINAL_COUNT=$(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(len(v) for v in d.get('archive',{}).values()) if isinstance(d,dict) else len(d))")
 
-git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-company-intel.html gh-pages/ai-company-intel.html scripts/inject_nav.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py
+git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-company-intel.html gh-pages/ai-company-intel.html scripts/inject_nav.py scripts/update_portal_stats.py scripts/normalize_schema.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py
 
 TODAY=$(date "+%Y-%m-%d")
 TIME=$(date "+%H:%M")
