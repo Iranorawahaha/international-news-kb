@@ -385,8 +385,18 @@ echo -e "${YELLOW}🏠 更新 Ira 门户统计（国际新闻字段）${NC}"
 if [ -f "$PROJECT_DIR/scripts/update_portal_stats.py" ]; then
     _news_total=$(python3 -c "import json;d=json.load(open('$PROJECT_DIR/data/news-data.json'));print(d.get('stats',{}).get('totalArticles','--'))" 2>/dev/null || echo "--")
     _news_last=$(python3 -c "import json;d=json.load(open('$PROJECT_DIR/data/news-data.json'));print(d.get('lastUpdated','--'))" 2>/dev/null || echo "--")
+    # 今日新增：当天的新闻条数
+    _today=$(date '+%Y-%m-%d')
+    _news_today=$(python3 -c "
+import json
+d = json.load(open('$PROJECT_DIR/data/news-data.json'))
+arc = d.get('archive', {})
+print(len(arc.get('$_today', [])))
+" 2>/dev/null || echo "--")
     python3 "$PROJECT_DIR/scripts/update_portal_stats.py" \
-        --news-count "$_news_total" --news-date "$_news_last" --latest "$(date '+%Y-%m-%d %H:%M')"
+        --news-count "$_news_total" --news-date "$_news_last" \
+        --news-today "$_news_today" \
+        --latest "$(date '+%Y-%m-%d %H:%M')"
 else
     echo -e "${YELLOW}⚠️ 未找到 update_portal_stats.py，跳过门户统计更新${NC}"
 fi
