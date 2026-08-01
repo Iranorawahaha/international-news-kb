@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ira 信息看板 · 华为公共及政府事务部情报聚合平台</title>
+<title>Ira 知识库 · 仅供参考交流</title>
 <style>
   /* ============ 设计 Token（与两个子看板共享） ============ */
   :root {
@@ -125,24 +125,24 @@
     <div class="brand">
       <div class="brand-logo">Ira</div>
       <div>
-        <div class="brand-name">Ira 信息看板</div>
-        <div class="brand-sub">华为公共及政府事务部 · 情报聚合平台</div>
+        <div class="brand-name">Ira 知识库</div>
+        <div class="brand-sub">仅供参考交流</div>
       </div>
     </div>
     <div class="topbar-meta">
-      <span class="pill"><span class="dot"></span>每日 09:40 自动刷新</span>
+      <span class="pill"><span class="dot"></span>每日 09:30 自动刷新</span>
       <span class="pill">📅 数据快照 · 滚动 7 天</span>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-kicker">Intel Hub · 情报聚合</div>
-    <h1>欢迎来到 <span class="grad">Ira 信息看板</span></h1>
-    <p class="lead">一站式聚合国际政经动态与全球 AI 产业动向。面向公共及政府事务研究，聚焦监管政策、科技博弈、重大模型与产品发布——两条信息流，一个入口。</p>
+    <div class="hero-kicker">Ira · 知识库</div>
+    <h1>欢迎来到 <span class="grad">Ira 知识库</span></h1>
+    <p class="lead">一站式聚合国际政经动态与全球 AI 产业动向。聚焦监管政策、科技博弈、重大模型与产品发布——两条信息流，一个入口。仅供参考交流。</p>
     <div class="hero-stats">
-      <div class="hstat news"><b id="stat-news-count">86</b><span>国际新闻 · 近7日条数</span></div>
-      <div class="hstat ai"><b id="stat-ai-count">72</b><span>AI 动态 · 近7日条数</span></div>
-      <div class="hstat"><b id="stat-latest">2026-08-01 16:41</b><span>最近数据刷新</span></div>
+      <div class="hstat news"><b id="stat-news-today">--</b><span>国际新闻 · 今日新增</span></div>
+      <div class="hstat ai"><b id="stat-ai-today">4</b><span>AI 动态 · 今日新增</span></div>
+      <div class="hstat"><b id="stat-latest">2026-08-01 16:49</b><span>最近数据刷新</span></div>
     </div>
   </section>
 
@@ -174,7 +174,7 @@
         <span class="tag">产品更新</span>
       </div>
       <div class="meta-row">
-        <div class="meta"><span>最近更新</span><b id="meta-ai-date">08-01 16:41</b></div>
+        <div class="meta"><span>最近更新</span><b id="meta-ai-date">08-01 16:49</b></div>
         <span class="go">进入看板 <span class="arrow">→</span></span>
       </div>
     </a>
@@ -196,7 +196,7 @@
   </section>
 
   <footer>
-    数据来自各权威信源与 AI HOT · 仅供内部研究参考 · 版权归原作者所有<br>
+    数据来自各权威信源与 AI HOT · 仅供个人参考交流 · 版权归原作者所有<br>
     由 WorkBuddy 自动构建 · <a href="https://github.com/Iranorawahaha/international-news-kb" target="_blank" rel="noopener noreferrer">项目仓库</a>
   </footer>
 
@@ -204,11 +204,11 @@
 <script>
   // 门户统计占位符（由 refresh 脚本注入实际数据）
   var PLACEHOLDERS = {
-    newsCount: "86",
-    aiCount: "72",
-    latest: "2026-08-01 16:41",
-    newsDate: "2026-08-01 16:41",
-    aiDate: "08-01 16:41"
+    newsToday: "0",
+    aiToday: "4",
+    latest: "2026-08-01 16:49",
+    newsDate: "",
+    aiDate: "08-01 16:49"
   };
   function fill(id, key) {
     var el = document.getElementById(id);
@@ -216,8 +216,8 @@
       el.textContent = PLACEHOLDERS[key];
     }
   }
-  fill("stat-news-count", "newsCount");
-  fill("stat-ai-count", "aiCount");
+  fill("stat-news-today", "newsToday");
+  fill("stat-ai-today", "aiToday");
   fill("stat-latest", "latest");
   fill("meta-news-date", "newsDate");
   fill("meta-ai-date", "aiDate");

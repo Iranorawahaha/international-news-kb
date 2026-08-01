@@ -33,6 +33,8 @@ FIELD_SPECS = {
     "latest": ("latest", "stat-latest"),
     "news_date": ("newsDate", "meta-news-date"),
     "ai_date": ("aiDate", "meta-ai-date"),
+    "news_today": ("newsToday", "stat-news-today"),
+    "ai_today": ("aiToday", "stat-ai-today"),
 }
 
 
@@ -59,11 +61,13 @@ def update_file(path, updates):
 
 def main():
     parser = argparse.ArgumentParser(description="Ira 门户统计更新器")
-    parser.add_argument("--news-count", help="国际新闻近7日条数")
+    parser.add_argument("--news-count", help="国际新闻近7日条数（兼容旧字段）")
     parser.add_argument("--news-date", help="国际新闻最近更新 (YYYY-MM-DD HH:MM)")
-    parser.add_argument("--ai-count", help="AI 动态近7日条数")
+    parser.add_argument("--ai-count", help="AI 动态近7日条数（兼容旧字段）")
     parser.add_argument("--ai-date", help="AI 动向最近更新 (MM-DD HH:MM)")
     parser.add_argument("--latest", help="最近数据刷新 (YYYY-MM-DD HH:MM)")
+    parser.add_argument("--news-today", help="国际新闻今日新增条数")
+    parser.add_argument("--ai-today", help="AI 动态今日新增条数")
     args = parser.parse_args()
 
     updates = {k: v for k, v in vars(args).items() if v is not None and k in FIELD_SPECS}
