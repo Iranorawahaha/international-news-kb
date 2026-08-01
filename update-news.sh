@@ -1,22 +1,32 @@
 #!/bin/bash
 
 # ============================================================
-# 🌍 国际新闻看板 - 一键更新脚本 V1.2.3（全英文必选版）
+# 🌍 国际新闻看板 - 一键更新脚本 V1.3（Ira 信息看板版）
 # 用途: 11个必选英文信源采集 → 清洗去重 → 排序 → 7天存档 → 生成网页 → 飞书同步 → GitHub推送
+#
+# V1.3 (2026-08-01):
+#   ✅ 支持 --auto 无人值守模式（配合每日 9:30 自动刷新任务）
+#   ✅ 数据整合 Python 语法修复（data['archive'] 缺括号）
+#   ✅ 输出到 international-news.html（门户 index.html 不被覆盖）
 #
 # V1.2.3 (2026-08-01):
 #   ✅ 彻底移除中文信源（BASIC_SOURCES 清空）
 #   ✅ 全部11个英文信源改为必选（required: True）
-#   ✅ 仅依赖 WebFetch API 获取高质量双语新闻
 #
-# V1.2.2 智能过滤版:
-#   ✅ 智能打分 + 智能分类 + 黑名单扩展
-#
-# 使用: ./update-news.sh
-# 版本: V1.2.3 Final (2026-08-01 15:00)
+# 使用: ./update-news.sh            # 交互模式（默认）
+#       ./update-news.sh --auto    # 无人值守（跳过 read 提示）
+# 版本: V1.3 (2026-08-01)
 # ============================================================
 
 set -e
+
+# 参数解析: --auto 无人值守模式
+AUTO_MODE=0
+for _arg in "$@"; do
+    case "$_arg" in
+        --auto) AUTO_MODE=1 ;;
+    esac
+done
 
 # 颜色定义
 RED='\033[0;31m'
@@ -32,7 +42,10 @@ PROJECT_DIR="/Users/xiaoxiao/WorkBuddy/2026-07-29-17-06-50"
 GH_PAGES_DIR="$PROJECT_DIR/gh-pages"
 
 echo -e "${CYAN}╔══════════════════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║   🌍 国际新闻看板 - 一键更新系统 V1.2.3         ║${NC}"
+echo -e "${CYAN}║   🌍 国际新闻看板 - 一键更新系统 V1.3           ${NC}"
+if [ "$AUTO_MODE" = "1" ]; then
+    echo -e "${CYAN}║   🤖 无人值守模式 (--auto)                       ${NC}"
+fi
 echo -e "${CYAN}╚══════════════════════════════════════════════════╝${NC}"
 echo ""
 echo -e "📅 当前时间: $(date '+%Y-%m-%d %H:%M:%S')"
@@ -69,12 +82,20 @@ cat << 'EOF'
 
 EOF
 
-read -p "是否已通过 WebFetch 获取了额外数据？(y/n, 默认跳过): " has_webfetch
-
-if [ "$has_webfetch" = "y" ] || [ "$has_webfetch" = "Y" ]; then
-    echo -e "${GREEN}✅ 已包含 WebFetch 数据${NC}"
+# V1.3: --auto 无人值守模式直接跳过交互提示，使用已有 webfetch 数据
+if [ "$AUTO_MODE" = "1" ]; then
+    if [ -f "$PROJECT_DIR/data/news-webfetch.json" ]; then
+        echo -e "${GREEN}✅ [--auto] 使用已有 WebFetch 数据: data/news-webfetch.json${NC}"
+    else
+        echo -e "${YELLOW}⚠️ [--auto] 未找到 webfetch 数据，使用现有存档继续${NC}"
+    fi
 else
-    echo -e "${YELLOW}⏭️ 跳过 WebFetch，使用基础采集数据继续...${NC}"
+    read -p "是否已通过 WebFetch 获取了额外数据？(y/n, 默认跳过): " has_webfetch
+    if [ "$has_webfetch" = "y" ] || [ "$has_webfetch" = "Y" ]; then
+        echo -e "${GREEN}✅ 已包含 WebFetch 数据${NC}"
+    else
+        echo -e "${YELLOW}⏭️ 跳过 WebFetch，使用基础采集数据继续...${NC}"
+    fi
 fi
 
 # ==================== 第3步：V1.2.1 数据整合（质量控制版）====================
@@ -1027,7 +1048,7 @@ fi
 
 FINAL_COUNT=$(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(len(v) for v in d.get('archive',{}).values()) if isinstance(d,dict) else len(d))")
 
-git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-company-intel.html gh-pages/ai-company-intel.html scripts/inject_nav.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py data/.feishu_config
+git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-company-intel.html gh-pages/ai-company-intel.html scripts/inject_nav.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py
 
 TODAY=$(date "+%Y-%m-%d")
 TIME=$(date "+%H:%M")

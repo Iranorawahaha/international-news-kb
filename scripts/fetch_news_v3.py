@@ -492,13 +492,20 @@ class EnhancedNewsFetcher:
         print("="*60)
         print("\n📋 已准备以下WebFetch任务：\n")
 
+        # V1.3: 动态生成当天日期，替换 prompt 中的 {date_cn} 占位符
+        now = datetime.now()
+        date_cn = now.strftime("%Y年%m月%d日")
+        tasks = []
         for i, source in enumerate(WEBFETCH_SOURCES, 1):
+            task = dict(source)
+            task['prompt'] = source['prompt'].format(date_cn=date_cn)
+            tasks.append(task)
             print(f"  {i}. {source['name']}")
             print(f"     URL: {source['url']}")
             print(f"     预期获取: ~{source['expected_count']} 条")
             print()
 
-        return WEBFETCH_SOURCES
+        return tasks
 
     def add_webfetch_results(self, source_name, articles_data):
         """
