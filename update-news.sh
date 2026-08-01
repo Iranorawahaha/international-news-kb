@@ -984,6 +984,16 @@ GENERATE_HTML_V12
 echo ""
 echo -e "${GREEN}✅ V1.2 网页已生成（V1.1经典UI + 日期Tab栏 + 7天存档）${NC}"
 
+# ==================== 第4.5步：注入看板双向导航（幂等）⭐ ====================
+echo ""
+echo -e "${YELLOW}🔗 注入看板导航（国际新闻看板 ↔ AI 公司情报看板）${NC}"
+if [ -f "$PROJECT_DIR/scripts/inject_nav.py" ]; then
+    python3 "$PROJECT_DIR/scripts/inject_nav.py"
+    echo -e "${GREEN}✅ 看板导航已就绪${NC}"
+else
+    echo -e "${YELLOW}⚠️ 未找到 scripts/inject_nav.py，跳过导航注入${NC}"
+fi
+
 # ==================== 第5步：飞书Base同步（增量追加）⭐ NEW ====================
 echo ""
 echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
@@ -1036,7 +1046,7 @@ fi
 
 FINAL_COUNT=$(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(len(v) for v in d.get('archive',{}).values()) if isinstance(d,dict) else len(d))")
 
-git add index.html gh-pages/index.html data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py data/.feishu_config
+git add index.html gh-pages/index.html ai-company-intel.html scripts/inject_nav.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py data/.feishu_config
 
 TODAY=$(date "+%Y-%m-%d")
 TIME=$(date "+%H:%M")
