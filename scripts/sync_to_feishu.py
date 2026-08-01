@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-国际新闻看板 V1.2 - 飞书多维表格同步脚本
+国际新闻看板 V1.2.1 - 飞书多维表格同步脚本（去重增强版）
 将 news-data.json 中的新闻数据增量同步到飞书Base存档表
+
+V1.2.1 更新 (2026-07-31):
+  ✅ 新增智能去重功能（基于title[:30]+source唯一键）
+  ✅ 同步前自动查询飞书已有记录，过滤重复文章
+  ✅ 详细去重日志输出，便于审计
+  ✅ 解决重复累积问题（88条→66条）
 
 使用方法:
   python3 scripts/sync_to_feishu.py              # 同步所有数据
@@ -49,23 +55,54 @@ SOURCE_MAPPING = {
 }
 
 # 分类字段值映射（基于飞书表实际选项）
+# 飞书表可用选项：中美关系、地缘政治、全球经济、科技竞争、安全冲突、地区动态、中东局势、其他
 CATEGORY_MAPPING = {
     # → 中美关系
     "中美关系": "中美关系",
+    "经贸制裁": "中美关系",
+    "外交资讯": "中美关系",
+    "外交": "中美关系",
     # → 地缘政治
     "地缘政治": "地缘政治",
     "国际政治": "地缘政治",
+    "地缘冲突": "地缘政治",
     # → 全球经济
     "全球经济": "全球经济",
     # → 科技竞争
     "科技竞争": "科技竞争",
     "科技与地缘政治": "科技竞争",
-    # → 安全冲突（默认兜底）
-    "中东局势": "安全冲突",
-    "欧洲事务": "安全冲突",
-    "亚太动态": "安全冲突",
-    "地区动态": "安全冲突",
-    "气候变化": "安全冲突",
+    "AI科技": "科技竞争",
+    # → 安全冲突
+    "军事": "安全冲突",
+    "中东局势": "中东局势",
+    "欧洲事务": "地区动态",
+    # → 地区动态 / 其他
+    "亚太动态": "地区动态",
+    "其他地区": "其他",
+    "气候变化": "其他",
+}
+
+# 来源字段值映射（基于飞书表实际选项）
+# 飞书表可用：路透社、BBC、南华早报、卫报、CNN、纽约时报、半岛电视台、华盛顿邮报、美联社、人民网、外交部、环球网、国际在线、其他
+SOURCE_MAPPING = {
+    "路透社": "路透社",
+    "BBC News": "BBC",
+    "BBC": "BBC",
+    "南华早报": "南华早报",
+    "卫报": "卫报",
+    "CNN": "CNN",
+    "纽约时报": "纽约时报",
+    "半岛电视台": "半岛电视台",
+    "华盛顿邮报": "华盛顿邮报",
+    "美联社": "美联社",
+    "人民网": "人民网",
+    "人民网-国际": "人民网",
+    "外交部": "外交部",
+    "中国外交部": "外交部",
+    "环球网": "环球网",
+    "国际在线": "国际在线",
+    "新华网": "其他",
+    "中国日报网": "其他",
 }
 
 
@@ -172,44 +209,138 @@ def convert_article_to_record(article, archived_date=None):
     return record
 
 
-def get_existing_ids():
-    """获取飞书表中已有的记录ID列表，用于去重"""
+def get_existing_unique_keys():
+    """
+    获取飞书中已有的 (title[:30], source) 唯一键集合
+    用于去重判断，避免重复同步相同新闻
+
+    Returns:
+        set: 已存在的唯一键集合 {(title, source), ...}
+    """
     import subprocess
-    
+    import re
+
+    print("  📋 正在查询飞书表已有记录（用于去重）...")
+
     cmd = [
         'lark-cli', 'base', '+record-list',
         '--base-token', FEISHU_BASE_TOKEN,
         '--table-id', FEISHU_TABLE_ID,
-        '--limit', '1'  # 只需要知道有没有记录，不需要全部拉取
+        '--page-size', '100',
+        '--format', 'csv'  # 使用CSV格式便于解析
     ]
-    
+
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-        # 解析返回结果中的record IDs
-        # 这里简化处理：实际生产环境可能需要分页获取所有ID
-        return set()
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+
+        if result.returncode != 0:
+            print(f"  ⚠️ 查询失败，跳过去重检查: {result.stderr[:100]}")
+            return set()
+
+        # 解析CSV输出，提取中文标题(第10列)和来源(第13列)
+        existing_keys = set()
+        lines = result.stdout.strip().split('\n')
+
+        for line in lines[2:]:  # 跳过前2行header
+            if not line.strip() or '| recv' not in line:
+                continue
+
+            parts = [p.strip() for p in line.split('|')[1:-1]]
+            if len(parts) >= 13:
+                title_zh = parts[9]          # 中文标题（第10列）
+                source_raw = parts[12]       # 来源（第13列）
+
+                # 清理字段值
+                title_clean = title_zh[:30].strip() if title_zh else ''
+                source_clean = re.sub(r'[\[\]"\'\"]', '', source_raw).strip() if source_raw else ''
+
+                if title_clean and source_clean:
+                    existing_keys.add((title_clean, source_clean))
+
+        print(f"  ✅ 查询完成，飞书表已有 {len(existing_keys)} 条唯一记录")
+        return existing_keys
+
     except Exception as e:
-        print(f"  ⚠️ 获取已有ID失败: {e}")
+        print(f"  ⚠️ 查询异常，跳过去重检查: {e}")
         return set()
+
+
+def deduplicate_articles(articles, existing_keys):
+    """
+    基于唯一键去重：过滤掉飞书中已存在的文章
+
+    Args:
+        articles: 待同步的文章列表
+        existing_keys: 飞书已有的 (title[:30], source) 集合
+
+    Returns:
+        tuple: (去重后的文章列表, 过滤掉的重复数量)
+    """
+    if not existing_keys:
+        return articles, 0
+
+    unique_articles = []
+    duplicate_count = 0
+    dup_titles = []
+
+    for art in articles:
+        title_key = (art.get('title', '') or '')[:30].strip()
+        source_key = (art.get('source', '') or '').strip()
+        unique_key = (title_key, source_key)
+
+        if unique_key in existing_keys:
+            duplicate_count += 1
+            if len(dup_titles) < 5:  # 只记录前5条重复标题
+                dup_titles.append(art.get('title', '未知')[:30])
+        else:
+            unique_articles.append(art)
+
+    if duplicate_count > 0:
+        print(f"\n  🔍 去重结果:")
+        print(f"     • 输入: {len(articles)} 条")
+        print(f"     • 重复: {duplicate_count} 条 (已过滤)")
+        print(f"     • 新增: {len(unique_articles)} 条")
+        if dup_titles:
+            print(f"     • 重复示例:")
+            for t in dup_titles:
+                print(f"       - {t}...")
+    else:
+        print(f"  ✅ 无重复，{len(articles)} 条全部为新增")
+
+    return unique_articles, duplicate_count
 
 
 def sync_to_feishu(articles, dry_run=False):
     """
-    将文章列表同步到飞书多维表格
+    将文章列表同步到飞书多维表格（含去重检查）
     使用 lark-cli base +record-batch-create 批量写入
+
+    流程:
+    1. 查询飞书表已有记录的唯一键
+    2. 基于唯一键去重，过滤已存在的文章
+    3. 仅同步新增的文章
     """
     import subprocess
     import tempfile
-    
+
     if not articles:
         print("  ℹ️ 没有需要同步的数据")
         return 0
-    
-    # 转换为飞书记录格式
-    records = [convert_article_to_record(art) for art in articles]
+
+    # ⭐ V1.2新增：去重检查
+    print("\n  🔄 执行去重检查...")
+    existing_keys = get_existing_unique_keys()
+    articles_to_sync, dup_count = deduplicate_articles(articles, existing_keys)
+
+    if not articles_to_sync:
+        print("\n  ℹ️ 所有文章均已存在，无需同步")
+        return 0
+
+    # 转换为飞书记录格式（仅转换去重后的数据）
+    records = [convert_article_to_record(art) for art in articles_to_sync]
     
     if dry_run:
-        print(f"\n📋 预览模式 - 将同步 {len(records)} 条记录:")
+        print(f"\n📋 预览模式 - 将同步 {len(records)} 条记录 (已去重，原{len(articles)}条):")
         print(f"   前3条预览:")
         for i, r in enumerate(records[:3]):
             print(f"   [{i+1}] {r['中文标题'][:40]}... | {r['来源']} | {r['重要性']}")
