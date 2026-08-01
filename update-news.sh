@@ -401,6 +401,14 @@ else
     echo -e "${YELLOW}⚠️ 未找到 update_portal_stats.py，跳过门户统计更新${NC}"
 fi
 
+# V1.4: 更新门户「今日日报」国际新闻要点（AI 要点由 refresh_board.sh 更新，互不覆盖）
+if [ -f "$PROJECT_DIR/scripts/daily_brief.py" ]; then
+    echo -e "${YELLOW}📰 更新门户今日日报（国际新闻要点）${NC}"
+    python3 "$PROJECT_DIR/scripts/daily_brief.py" --news
+else
+    echo -e "${YELLOW}⚠️ 未找到 daily_brief.py，跳过日报更新${NC}"
+fi
+
 echo ""
 echo -e "${GREEN}✅ 数据整合完成（V1.2追加模式）${NC}"
 
@@ -1088,7 +1096,7 @@ fi
 
 FINAL_COUNT=$(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(len(v) for v in d.get('archive',{}).values()) if isinstance(d,dict) else len(d))")
 
-git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-company-intel.html gh-pages/ai-company-intel.html scripts/inject_nav.py scripts/update_portal_stats.py scripts/normalize_schema.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py
+git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-company-intel.html gh-pages/ai-company-intel.html scripts/inject_nav.py scripts/update_portal_stats.py scripts/normalize_schema.py scripts/daily_brief.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py
 
 TODAY=$(date "+%Y-%m-%d")
 TIME=$(date "+%H:%M")
