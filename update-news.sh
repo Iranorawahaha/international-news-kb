@@ -370,6 +370,15 @@ INTEGRATE_V121
 echo ""
 echo -e "${GREEN}✅ 数据整合完成（V1.2.1 - 含去重/清洗/排序）${NC}"
 
+# V1.3: schema 统一（历史旧字段映射到标准字段）
+echo ""
+echo -e "${YELLOW}🧹 数据 schema 统一（record_id/archive_date → id/date）${NC}"
+if [ -f "$PROJECT_DIR/scripts/normalize_schema.py" ]; then
+    python3 "$PROJECT_DIR/scripts/normalize_schema.py"
+else
+    echo -e "${YELLOW}⚠️ 未找到 normalize_schema.py，跳过 schema 规范化${NC}"
+fi
+
 echo ""
 echo -e "${GREEN}✅ 数据整合完成（V1.2追加模式）${NC}"
 
@@ -1088,6 +1097,31 @@ if [ $? -eq 0 ]; then
     echo ""
     echo -e "🌐 GitHub Pages: ${CYAN}https://iranorawahaha.github.io/international-news-kb/${NC}"
     echo -e "📊 飞书存档表:   ${CYAN}https://my.feishu.cn/base/A2fdb93HLamcKgslr2rcopjRnfd${NC}"
+
+    # V1.3: 构建健康检查（等待 CDN 构建完成后校验状态）
+    echo ""
+    echo -e "${YELLOW}🏗️ 执行 GitHub Pages 构建健康检查...${NC}"
+    echo -e "   ⏳ 等待构建启动（约 45 秒）..."
+    sleep 45
+    _gh_token=$(echo "protocol=https
+host=github.com
+" | git credential fill 2>/dev/null | sed -n 's/^password=//p')
+    if [ -n "$_gh_token" ]; then
+        _build_status=$(curl -s -H "Authorization: token $_gh_token" \
+            "https://api.github.com/repos/Iranorawahaha/international-news-kb/pages/builds" 2>/dev/null \
+            | python3 -c "import json,sys;d=json.load(sys.stdin);print(d[0].get('status','unknown') if d else 'no-build')" 2>/dev/null || echo "unknown")
+        if [ "$_build_status" = "built" ]; then
+            echo -e "   ${GREEN}✅ 构建成功 (built) — 线上页面已更新${NC}"
+        elif [ "$_build_status" = "building" ]; then
+            echo -e "   ${YELLOW}⏳ 构建进行中 (building) — 稍后刷新页面即可${NC}"
+        elif [ "$_build_status" = "errored" ]; then
+            echo -e "   ${RED}❌ 构建失败 (errored)！请检查仓库文件${NC}"
+        else
+            echo -e "   ${YELLOW}⚠️ 无法获取构建状态 ($_build_status)${NC}"
+        fi
+    else
+        echo -e "   ${YELLOW}⚠️ 未获取到 GitHub 凭证，跳过构建检查${NC}"
+    fi
     echo ""
     echo -e "💡 V1.2 新功能:"
     echo -e "   ✅ 点击顶部日期Tab切换查看不同日期的新闻"
