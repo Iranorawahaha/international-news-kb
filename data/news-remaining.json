@@ -1,0 +1,80 @@
+[
+  {
+    "title_en": "What is Iran's Pickaxe Mountain and why does Trump say he wants to bomb it?",
+    "title": "伊朗'镐头山'疑为核设施所在地，特朗普称欲轰炸该目标",
+    "summary": "BBC调查报道揭示了伊朗'镐头山'军事设施的秘密。特朗普近期暗示可能对该目标发动军事打击，专家分析认为该地点可能是伊朗未申报的核设施所在地，引发国际社会高度关注。",
+    "source": "BBC News",
+    "category": "地缘冲突",
+    "keywords": [
+      "伊朗",
+      "核设施",
+      "特朗普",
+      "军事打击",
+      "BBC调查",
+      "中东"
+    ],
+    "url": "https://www.bbc.com/news/articles/c9w0ygrwrn5o",
+    "priority_score": 90,
+    "is_summit_level": true,
+    "date": "2026-08-01"
+  },
+  {
+    "title_en": "Google withdraws new Earth AI tool after warnings over misinformation risks",
+    "title": "谷歌撤回新地球AI工具，专家警告存在虚假信息风险",
+    "summary": "谷歌在收到BBC Verify的警告后，撤回了其新推出的AI地球图像生成工具。专家指出该功能可能被滥用于制造虚假卫星图像，引发对AI生成内容真实性和监管的讨论。",
+    "source": "BBC News",
+    "category": "AI科技",
+    "keywords": [
+      "谷歌",
+      "AI工具",
+      "虚假信息",
+      "卫星图像",
+      "AI监管"
+    ],
+    "url": "https://www.bbc.com/news/articles/c9349yx2ydvo",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "date": "2026-08-01"
+  },
+  {
+    "title_en": "Spain's PM blames traffickers after 60,000 migrants reach Ceuta from Morocco",
+    "title": "西班牙首相谴责人贩子，6万移民从摩洛哥涌入休达",
+    "summary": "西班牙飞地休达遭遇大规模移民潮，约6万人从摩洛哥涌入。西班牙首相桑切斯指责人贩子组织策划了这一事件，意大利随后中止与西班牙的申根自由流动协议。",
+    "source": "BBC News",
+    "category": "其他地区",
+    "keywords": [
+      "西班牙",
+      "摩洛哥",
+      "休达",
+      "移民危机",
+      "欧盟",
+      "申根"
+    ],
+    "url": "https://www.bbc.com/news/articles/cx2kp639yx4o",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "date": "2026-08-01"
+  },
+  {
+    "title": "美伊冲突外溢 中东硝烟四起",
+    "summary": "美伊冲突外溢 中东硝烟四起",
+    "source": "新华网",
+    "url": "https://www.news.cn/world/20260730/477aa4fa269d4204b5f41d35e80a58c8/c.html",
+    "language": "zh",
+    "raw_content": "美伊冲突外溢 中东硝烟四起",
+    "id": "basic_11_3848",
+    "collectedAt": "2026-08-01 13:57:28",
+    "collection_method": "basic"
+  },
+  {
+    "title": "从北约峰会看美欧关系走向",
+    "summary": "从北约峰会看美欧关系走向",
+    "source": "新华网",
+    "url": "https://www.news.cn/world/20260710/8c3d9472ffa1415bb67c8bb404d62011/c.html",
+    "language": "zh",
+    "raw_content": "从北约峰会看美欧关系走向",
+    "id": "basic_14_3848",
+    "collectedAt": "2026-08-01 13:57:28",
+    "collection_method": "basic"
+  }
+]

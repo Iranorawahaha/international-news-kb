@@ -1,156 +1,15 @@
 [
   {
-    "title": "人民网海外分公司专栏",
-    "summary": "人民网海外分公司专栏",
-    "source": "人民网-国际",
-    "url": "",
-    "language": "zh",
-    "raw_content": "人民网海外分公司专栏",
-    "id": "basic_0_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "Xi on building a strong military",
-    "summary": "Xi on building a strong military",
-    "source": "中国日报网",
-    "url": "https://www.chinadaily.com.cn/a/202608/01/WS6a6d45fda310986e2b468792.html",
-    "language": "zh",
-    "raw_content": "Xi on building a strong military",
-    "id": "basic_1_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "Born by river and sea",
-    "summary": "Born by river and sea",
-    "source": "中国日报网",
-    "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bed8ca310986e2b4683cd.html",
-    "language": "zh",
-    "raw_content": "Born by river and sea",
-    "id": "basic_2_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "A 'sun' that heals",
-    "summary": "A 'sun' that heals",
-    "source": "中国日报网",
-    "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bfa9da310986e2b468497.html",
-    "language": "zh",
-    "raw_content": "A 'sun' that heals",
-    "id": "basic_3_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "Time for a cool change",
-    "summary": "Time for a cool change",
-    "source": "中国日报网",
-    "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6bdb2ca310986e2b46838f.html",
-    "language": "zh",
-    "raw_content": "Time for a cool change",
-    "id": "basic_4_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "Chinese beauty brands enjoy a surge in popularity",
-    "summary": "Chinese beauty brands enjoy a surge in popularity",
-    "source": "中国日报网",
-    "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6be406a310986e2b4683aa.html",
-    "language": "zh",
-    "raw_content": "Chinese beauty brands enjoy a surge in popularity",
-    "id": "basic_5_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "Xi: Advance modernization of military",
-    "summary": "Xi: Advance modernization of military",
-    "source": "中国日报网",
-    "url": "https://www.chinadaily.com.cn/a/202607/31/WS6a6cc278a310986e2b46870b.html",
-    "language": "zh",
-    "raw_content": "Xi: Advance modernization of military",
-    "id": "basic_6_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "Business+",
-    "summary": "Business+",
-    "source": "中国日报网",
-    "url": "https://www.chinadaily.com.cn/business",
-    "language": "zh",
-    "raw_content": "Business+",
-    "id": "basic_7_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "外交部发言人办公室系列账号",
-    "summary": "外交部发言人办公室系列账号",
-    "source": "中国外交部",
-    "url": "",
-    "language": "zh",
-    "raw_content": "外交部发言人办公室系列账号",
-    "id": "basic_8_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "全球连线丨不亦“乐”乎：中德学生歌声回荡彩云之南",
-    "summary": "全球连线丨不亦“乐”乎：中德学生歌声回荡彩云之南",
-    "source": "新华网",
-    "url": "https://www.news.cn/world/20260727/cb5ae5d3129e479b9d9b793b5d508486/c.html",
-    "language": "zh",
-    "raw_content": "全球连线丨不亦“乐”乎：中德学生歌声回荡彩云之南",
-    "id": "basic_9_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "记者手记丨从“金环”城市看中俄地方合作图景",
-    "summary": "记者手记丨从“金环”城市看中俄地方合作图景",
-    "source": "新华网",
-    "url": "https://www.news.cn/world/20260730/ad8ce1b79f7b48c398bdf2eb20038d89/c.html",
-    "language": "zh",
-    "raw_content": "记者手记丨从“金环”城市看中俄地方合作图景",
-    "id": "basic_10_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
     "title": "美伊冲突外溢 中东硝烟四起",
     "summary": "美伊冲突外溢 中东硝烟四起",
     "source": "新华网",
     "url": "https://www.news.cn/world/20260730/477aa4fa269d4204b5f41d35e80a58c8/c.html",
     "language": "zh",
     "raw_content": "美伊冲突外溢 中东硝烟四起",
-    "id": "basic_11_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "枢纽通、货值升 中欧班列激活陕西外贸动能",
-    "summary": "枢纽通、货值升 中欧班列激活陕西外贸动能",
-    "source": "新华网",
-    "url": "https://www.news.cn/silkroad/20260730/64176ac623ba4ba1bc7a132af90400ba/c.html",
-    "language": "zh",
-    "raw_content": "枢纽通、货值升 中欧班列激活陕西外贸动能",
-    "id": "basic_12_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "国际要闻TOP NEWS",
-    "summary": "国际要闻TOP NEWS",
-    "source": "新华网",
-    "url": "http://www.xinhuanet.com/worldpro/gjxw/index.html",
-    "language": "zh",
-    "raw_content": "国际要闻TOP NEWS",
-    "id": "basic_13_3848",
-    "collectedAt": "2026-08-01 13:57:28",
+    "priority_score": 70,
+    "category": "地缘政治",
+    "id": "basic_11_5553",
+    "collectedAt": "2026-08-01 14:25:53",
     "collection_method": "basic"
   },
   {
@@ -160,63 +19,10 @@
     "url": "https://www.news.cn/world/20260710/8c3d9472ffa1415bb67c8bb404d62011/c.html",
     "language": "zh",
     "raw_content": "从北约峰会看美欧关系走向",
-    "id": "basic_14_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "40℃高温炙烤下，中国“降温神器”缓解欧洲酷暑焦虑",
-    "summary": "40℃高温炙烤下，中国“降温神器”缓解欧洲酷暑焦虑",
-    "source": "新华网",
-    "url": "https://www.news.cn/world/20260702/97be20afa67c4af18da9ef249bf82f39/c.html",
-    "language": "zh",
-    "raw_content": "40℃高温炙烤下，中国“降温神器”缓解欧洲酷暑焦虑",
-    "id": "basic_15_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "出访专题XI'S VISITS",
-    "summary": "出访专题XI'S VISITS",
-    "source": "新华网",
-    "url": "http://www.xinhuanet.com/worldpro/xjpdwj/index.html",
-    "language": "zh",
-    "raw_content": "出访专题XI'S VISITS",
-    "id": "basic_16_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "热点专题SPECIAL REPORTS",
-    "summary": "热点专题SPECIAL REPORTS",
-    "source": "新华网",
-    "url": "http://www.xinhuanet.com/worldpro/rdzt/index.html",
-    "language": "zh",
-    "raw_content": "热点专题SPECIAL REPORTS",
-    "id": "basic_17_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "习近平对朝鲜进行国事访问",
-    "summary": "习近平对朝鲜进行国事访问",
-    "source": "新华网",
-    "url": "https://www.news.cn/world/cnleaders/xijinping/2026fwcx/index.html",
-    "language": "zh",
-    "raw_content": "习近平对朝鲜进行国事访问",
-    "id": "basic_18_3848",
-    "collectedAt": "2026-08-01 13:57:28",
-    "collection_method": "basic"
-  },
-  {
-    "title": "习近平出席APEC领导人非正式会议并对韩国进行国事访问",
-    "summary": "习近平出席APEC领导人非正式会议并对韩国进行国事访问",
-    "source": "新华网",
-    "url": "https://www.news.cn/world/cnleaders/xijinping/xjpcx2025apecldrfzshy/index.html",
-    "language": "zh",
-    "raw_content": "习近平出席APEC领导人非正式会议并对韩国进行国事访问",
-    "id": "basic_19_3848",
-    "collectedAt": "2026-08-01 13:57:28",
+    "priority_score": 95,
+    "category": "国际政治",
+    "id": "basic_14_5553",
+    "collectedAt": "2026-08-01 14:25:53",
     "collection_method": "basic"
   }
 ]

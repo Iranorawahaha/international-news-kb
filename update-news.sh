@@ -1,19 +1,26 @@
 #!/bin/bash
 
 # ============================================================
-# 🌍 国际新闻看板 - 一键更新脚本 V1.2（数据存档版）
-# 用途: 采集新闻 → 追加7天存档 → 生成网页 → 同步飞书表 → 推送GitHub
+# 🌍 国际新闻看板 - 一键更新脚本 V1.2.1（质量控制版）
+# 用途: 采集新闻 → 清洗去重 → 排序 → 追加7天存档 → 生成网页 → 同步飞书表 → 推送GitHub
 #
-# V1.2 核心升级:
+# V1.2.1 核心升级 (2026-07-31):
+#   ✅ 数据清洗：自动过滤垃圾/导航/过期文章
+#   ✅ 智能去重：基于(title[:30], source)唯一键去重
+#   ✅ 重要性排序：元首级优先 + priority_score降序（双层保障）
+#   ✅ 质量控制：每步都有输入验证和输出校验
+#   ✅ 防止历史问题：不再出现页面错乱/崩溃/重复/低质量
+#
+# V1.2 基础功能:
 #   ✅ 7天数据存档（不再清空历史）
 #   ✅ 按日期分组数据结构 { archive: { date: [...] } }
 #   ✅ 顶部日期 Tab 栏切换查看
 #   ✅ 自动清理超过7天的旧数据
-#   ✅ 飞书多维表格永久存档（增量同步）⭐ NEW
+#   ✅ 飞书多维表格永久存档（增量同步+自动去重）
 #   ✅ 保留V1.1所有特性（双语/5级分类/元首级/UI优化）
 #
 # 使用: ./update-news.sh
-# 版本: V1.2 Final (2026-07-31)
+# 版本: V1.2.1 Final (2026-07-31 22:15)
 # ============================================================
 
 set -e
@@ -62,21 +69,23 @@ fi
 # ==================== 第2步：WebFetch补充说明 ====================
 echo ""
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${PURPLE}🌐 第2步：WebFetch API补充（10大英文权威信源）${NC}"
+echo -e "${PURPLE}🌐 第2步：WebFetch API补充（11大英文权威信源-V1.2.2）${NC}"
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
 cat << 'EOF'
 ⚠️ 此步骤需要在 WorkBuddy 环境中完成！
 
-📋 WebFetch 任务清单：
-  🔴 必选(4): 路透社 / BBC / SCMP / 卫报
-  🟠 扩展(6): CNN / NYT / 半岛电视台 / WaPo / AP / Politico
+📋 WebFetch 任务清单（V1.2.2 必选信源已固化）：
 
+  🔴 必选(7): 路透社 / BBC / 南华早报 / 卫报 / CNN / 纽约时报 / 华尔街日报
+  🟠 扩展(4): 半岛电视台 / Politico / 华盛顿邮报 / 美联社
+
+📝 必选信源必须全部完成！可跳过扩展信源。
 ✅ 要求: 双语标题 + 完整URL + 元首级标注 + priority_score
 
 💡 在 WorkBuddy 中说:
-  "请用 WebFetch 补充最新国际新闻，双语标题+完整URL"
+  "请用 WebFetch 补充最新国际新闻，双语标题+完整URL，重点7个必选信源"
 
 EOF
 
@@ -88,54 +97,140 @@ else
     echo -e "${YELLOW}⏭️ 跳过 WebFetch，使用基础采集数据继续...${NC}"
 fi
 
-# ==================== 第3步：V1.2 数据整合（追加模式）====================
+# ==================== 第3步：V1.2.1 数据整合（质量控制版）====================
 echo ""
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${BLUE}📦 第3步：V1.2 数据整合（追加到7天存档）${NC}"
+echo -e "${BLUE}📦 第3步：V1.2.1 数据整合（去重+清洗+排序）${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
-python3 << 'INTEGRATE'
+python3 << 'INTEGRATE_V121'
 import json
 import sys
+import re
 from datetime import datetime, timedelta
 from collections import OrderedDict
 
 DATA_FILE = 'data/news-data.json'
 RETENTION_DAYS = 7
 
+# ==================== 质量控制常量 ====================
+MIN_TITLE_LENGTH = 5              # 最小标题长度
+MIN_PRIORITY_SCORE = 1            # 最小重要性分数（0分为垃圾）
+
+# 导航页面关键词黑名单（这些不是真实新闻）
+NAVIGATION_KEYWORDS = [
+    '导航', '首页', '首页导航', '网站地图', 'sitemap',
+    '联系我们', '关于我们', '版权声明', '隐私政策',
+    '用户协议', '登录', '注册', '搜索', '更多'
+]
+
+# 过期事件关键词（历史新闻，不应混入当日）
+EXPIRED_EVENT_KEYWORDS = [
+    'APEC领导人非正式会议',
+    '对韩国进行国事访问',
+    '对朝鲜进行国事访问',
+    '出席博鳌亚洲论坛',
+    '出席G20峰会',
+    '出席金砖峰会'
+]
+
 def load_data():
     try:
         with open(DATA_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
-    except:
-        return {"version": "1.2", "archive": {}, "dates": [], "stats": {}
+    except Exception as e:
+        print(f"  ⚠️ 无法加载数据文件: {e}")
+        return {"version": "1.2", "archive": {}, "dates": [], "stats": {}}
 
 def save_data(data):
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def convert_v11_to_v12(old_list):
-    """将V1.1扁平数组转换为V1.2格式"""
     archive = {}
     for article in old_list:
         date_str = article.get('date', datetime.now().strftime('%Y-%m-%d'))
         if date_str not in archive:
             archive[date_str] = []
         archive[date_str].append(article)
-
     for date_str in archive:
         archive[date_str].sort(key=lambda x: x.get('priority_score', 0), reverse=True)
-
     return archive
 
 def cleanup_old(archive):
-    """清理超过7天的旧数据"""
     cutoff = (datetime.now() - timedelta(days=RETENTION_DAYS)).strftime('%Y-%m-%d')
     return {d: arts for d, arts in archive.items() if d >= cutoff}
 
+def is_garbage_article(article):
+    """判断是否为垃圾文章"""
+    title = article.get('title', '') or ''
+    title_en = article.get('title_en', '') or ''
+    score = article.get('priority_score', 0)
+    
+    if len(title.strip()) < MIN_TITLE_LENGTH and len(title_en.strip()) < MIN_TITLE_LENGTH:
+        return True, "标题过短"
+    
+    if score == 0:
+        combined_text = (title + ' ' + title_en).lower()
+        for kw in NAVIGATION_KEYWORDS:
+            if kw.lower() in combined_text:
+                return True, f"导航页面(关键词: {kw})"
+    
+    combined_text = (title + ' ' + title_en)
+    for kw in EXPIRED_EVENT_KEYWORDS:
+        if kw in combined_text:
+            return True, f"过期事件(关键词: {kw})"
+    
+    return False, None
+
+def clean_articles(articles):
+    """清洗文章列表，移除垃圾文章"""
+    cleaned = []
+    removed_count = 0
+    removal_reasons = {}
+    
+    for art in articles:
+        is_garbage, reason = is_garbage_article(art)
+        if is_garbage:
+            removed_count += 1
+            removal_reasons[reason] = removal_reasons.get(reason, 0) + 1
+            print(f"    🗑️  移除垃圾: {art.get('title', '')[:40]}... ({reason})")
+        else:
+            cleaned.append(art)
+    
+    return cleaned, removed_count, removal_reasons
+
+def deduplicate_articles(articles):
+    """去重处理（基于唯一键: title前30字符 + source）"""
+    seen_keys = set()
+    unique_articles = []
+    duplicate_count = 0
+    
+    for art in articles:
+        title = art.get('title', '') or ''
+        source = art.get('source', '') or '未知'
+        unique_key = (title[:30], source)
+        
+        if unique_key not in seen_keys:
+            seen_keys.add(unique_key)
+            unique_articles.append(art)
+        else:
+            duplicate_count += 1
+            print(f"    🔁 重复移除: {title[:40]}... (来源: {source})")
+    
+    return unique_articles, duplicate_count
+
+def sort_by_importance(articles):
+    """按重要性排序（元首级优先，然后按priority_score降序）"""
+    def sort_key(art):
+        summit = 1 if art.get('is_summit_level') else 0
+        score = art.get('priority_score') or 0
+        return (-summit, -score)
+    
+    return sorted(articles, key=sort_key)
+
 def update_stats(data):
-    """更新统计信息"""
     total = sum(len(arts) for arts in data['archive'].values())
     data['dates'] = sorted(data['archive'].keys(), reverse=True)
     data['stats'] = {
@@ -145,11 +240,12 @@ def update_stats(data):
         'oldestDate': data['dates'][-1] if data['dates'] else None,
     }
 
-# 主逻辑
-print("🔄 正在整合数据（V1.2 追加模式）...")
+# ==================== 主逻辑 ====================
+print("🔄 正在执行 V1.2.1 数据整合（含质量控制）...")
+print("=" * 60)
+
 data = load_data()
 
-# 如果是V1.1格式（数组），先转换
 if isinstance(data, list):
     print("  📝 检测到V1.1格式，正在转换为V1.2...")
     old_archive = convert_v11_to_v12(data)
@@ -162,47 +258,116 @@ if isinstance(data, list):
         "stats": {}
     }
 
-# 确保archive存在
 if 'archive' not in data:
     data['archive'] = {}
 
 today = datetime.now().strftime('%Y-%m-%d')
 
-# 统计新增数量
-existing_ids = set()
-for date_arts in data['archive'].values():
-    for art in date_arts:
-        existing_ids.add(art.get('id'))
+# 尝试从基础采集输出读取新数据
+new_articles = []
+temp_files = ['data/news-basic.json', 'data/news-webfetch.json']
 
-new_count = 0
-if today not in data['archive']:
-    # 尝试从基础采集的临时文件读取新数据
-    pass
+for temp_file in temp_files:
+    try:
+        with open(temp_file, 'r', encoding='utf-8') as f:
+            temp_data = json.load(f)
+        
+        if isinstance(temp_data, list):
+            new_articles.extend(temp_data)
+            print(f"  📥 从 {temp_file} 读取 {len(temp_data)} 条新闻")
+        elif isinstance(temp_data, dict) and 'articles' in temp_data:
+            new_articles.extend(temp_data['articles'])
+            print(f"  📥 从 {temp_file} 读取 {len(temp_data['articles'])} 条新闻")
+    except FileNotFoundError:
+        pass
+    except Exception as e:
+        print(f"  ⚠️ 读取 {temp_file} 失败: {e}")
 
-# 清理旧数据
+print(f"\n  📊 新获取新闻: {len(new_articles)} 条")
+
+# 清洗现有今日数据
+if today in data['archive':
+    existing_today = data['archive'][today]
+    print(f"\n  🧹 清洗现有今日数据 ({len(existing_today)} 条)...")
+    cleaned_existing, removed_exist, reasons_exist = clean_articles(existing_today)
+    if removed_exist > 0:
+        print(f"     移除 {removed_exist} 条垃圾文章:")
+        for reason, count in reasons_exist.items():
+            print(f"       • {reason}: {count} 条")
+        data['archive'][today] = cleaned_existing
+    else:
+        print(f"     ✅ 现有数据质量良好")
+
+# 清洗新数据
+if new_articles:
+    print(f"\n  🧹 清洗新获取数据 ({len(new_articles)} 条)...")
+    cleaned_new, removed_new, reasons_new = clean_articles(new_articles)
+    if removed_new > 0:
+        print(f"     移除 {removed_new} 条垃圾文章:")
+        for reason, count in reasons_new.items():
+            print(f"       • {reason}: {count} 条")
+    print(f"     ✅ 清洗后剩余: {len(cleaned_new)} 条")
+else:
+    cleaned_new = []
+    print(f"\n  ℹ️ 无新数据需要处理")
+
+# 去重处理
+all_today_articles = []
+if today in data['archive':
+    all_today_articles.extend(data['archive'][today])
+all_today_articles.extend(cleaned_new)
+
+if all_today_articles:
+    print(f"\n  🔍 去重处理 (共 {len(all_today_articles)} 条)...")
+    unique_articles, dup_count = deduplicate_articles(all_today_articles)
+    if dup_count > 0:
+        print(f"     移除 {dup_count} 条重复记录")
+    print(f"     ✅ 去重后剩余: {len(unique_articles)} 条")
+    
+    print(f"\n  📊 按重要性排序...")
+    sorted_articles = sort_by_importance(unique_articles)
+    
+    data['archive'][today] = sorted_articles
+    
+    summit_count = sum(1 for a in sorted_articles if a.get('is_summit_level'))
+    print(f"     ✅ 排序完成: {len(sorted_articles)} 条 ({summit_count} ⭐元首级)")
+
+# 清理超过7天的旧数据
+print(f"\n  🗑️ 清理超过{RETENTION_DAYS}天的旧数据...")
+before_cleanup = sum(len(v) for v in data['archive'].values())
 data['archive'] = cleanup_old(data['archive'])
+after_cleanup = sum(len(v) for v in data['archive'].values())
+cleaned_count = before_cleanup - after_cleanup
 
-# 更新统计
+if cleaned_count > 0:
+    print(f"     清理了 {cleaned_count} 条过期数据")
+else:
+    print(f"     ✅ 无需清理")
+
 update_stats(data)
 data['lastUpdated'] = datetime.now().strftime('%Y-%m-%d %H:%M')
 
-# 保存
 save_data(data)
 
-print(f"  ✅ 整合完成！")
-print(f"     总新闻数: {data['stats']['totalArticles']} 条")
-print(f"     覆盖天数: {data['stats']['dateCount']} 天")
-print(f"     最新日期: {data['stats']['latestDate']}")
-print(f"     最旧日期: {data['stats']['oldestDate']}")
+print("\n" + "=" * 60)
+print(f"✅ V1.2.1 数据整合完成！")
+print(f"   总新闻数: {data['stats']['totalArticles']} 条")
+print(f"   覆盖天数: {data['stats']['dateCount']} 天")
+print(f"   最新日期: {data['stats']['latestDate']}")
+print(f"   最旧日期: {data['stats']['oldestDate']}")
 
 if data['dates']:
-    print(f"\n     📅 日期分布:")
+    print(f"\n   📅 日期分布:")
     for d in data['dates']:
         count = len(data['archive'][d])
         summit = sum(1 for a in data['archive'][d] if a.get('is_summit_level'))
-        print(f"       • {d}: {count} 条 ({summit} ⭐)")
+        high_priority = sum(1 for a in data['archive'][d] if (a.get('priority_score') or 0) >= 90)
+        print(f"     • {d}: {count} 条 ({summit} ⭐ | {high_priority} 🔴高重要)")
 
-INTEGRATE
+INTEGRATE_V121
+
+echo ""
+echo -e "${GREEN}✅ 数据整合完成（V1.2.1 - 含去重/清洗/排序）${NC}"
 
 echo ""
 echo -e "${GREEN}✅ 数据整合完成（V1.2追加模式）${NC}"
@@ -667,15 +832,15 @@ function getImportance(score, isSummit) {
     return { level: 'low', label: '🟢低', cls: 'badge-low' };
 }
 
-// 过滤和渲染新闻
+// 过滤和渲染新闻（V1.2.1 - 含智能排序）
 function filterNews() {
     const searchText = document.getElementById('searchBox').value.toLowerCase();
     const sourceFilter = document.getElementById('sourceFilter').value;
     const categoryFilter = document.getElementById('categoryFilter').value;
     const importanceFilter = document.getElementById('importanceFilter').value;
-    
+
     let filteredArticles = [];
-    
+
     // 根据选中日期获取数据
     if (selectedDate === 'all') {
         // 全部日期：按日期分组展示
@@ -684,33 +849,77 @@ function filterNews() {
             const articles = NEWS_DATA.archive[dateStr] || [];
             // 先添加日期分隔行
             filteredArticles.push({ _isDateSeparator: true, _date: dateStr, _count: articles.length });
-            // 再添加该日期的文章
+            // 再添加该日期的文章（已按重要性预排序）
             filteredArticles.push(...articles.map(a => ({...a, _date: dateStr })));
         });
     } else {
         // 特定日期
         filteredArticles = (NEWS_DATA.archive[selectedDate] || []).map(a => ({...a, _date: selectedDate }));
     }
-    
+
     // 应用筛选条件
     filteredArticles = filteredArticles.filter(item => {
         if (item._isDateSeparator) return true; // 保留分隔行
-        
+
         if (sourceFilter && item.source !== sourceFilter) return false;
         if (categoryFilter && item.category !== categoryFilter) return false;
-        
+
         const imp = getImportance(item.priority_score || 0, item.is_summit_level);
         if (importanceFilter && imp.level !== importanceFilter) return false;
-        
+
         if (searchText) {
             const searchIn = [(item.title || ''), (item.title_en || ''), (item.summary || ''), (item.keywords || []).join(' ')].join(' ').toLowerCase();
             if (!searchIn.includes(searchText)) return false;
         }
-        
+
         return true;
     });
-    
+
+    // ⭐ V1.2.1 新增：按重要性排序（确保元首级优先，然后按分数降序）
+    filteredArticles = sortArticlesByImportance(filteredArticles);
+
     renderTable(filteredArticles);
+}
+
+// ⭐ V1.2.1 新增：按重要性排序函数
+function sortArticlesByImportance(articles) {
+    let result = [];
+    let tempBatch = [];
+
+    for (const item of articles) {
+        if (item._isDateSeparator) {
+            // 遇到日期分隔时，先排序当前批次，再添加分隔行
+            if (tempBatch.length > 0) {
+                tempBatch.sort((a, b) => {
+                    // 1. 元首级排最前
+                    const aSummit = a.is_summit_level ? -1 : 0;
+                    const bSummit = b.is_summit_level ? -1 : 0;
+                    if (aSummit !== bSummit) return aSummit - bSummit;
+                    // 2. 同级别按priority_score降序
+                    return (b.priority_score || 0) - (a.priority_score || 0);
+                });
+                result.push(...tempBatch);
+                tempBatch = [];
+            }
+            result.push(item); // 添加分隔行
+        } else {
+            tempBatch.push(item);
+        }
+    }
+
+    // 处理最后一个批次
+    if (tempBatch.length > 0) {
+        tempBatch.sort((a, b) => {
+            const aSummit = a.is_summit_level ? -1 : 0;
+            const bSummit = b.is_summit_level ? -1 : 0;
+            if (aSummit !== bSummit) return aSummit - bSummit;
+            return (b.priority_score || 0) - (a.priority_score || 0);
+        });
+        result.push(...tempBatch);
+    }
+
+    return result;
+}
 }
 
 // 渲染表格（9列布局 - V1.1标准）

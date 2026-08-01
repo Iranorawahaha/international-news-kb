@@ -120,21 +120,25 @@ HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
 }
 
-# 高价值英文信源（用于WebFetch补充）- V1.1扩展版
+# 高价值英文信源（用于WebFetch补充）- V1.2.2扩展版
+# 🔴 必选信源(7个)：路透社/BBC/南华早报/卫报/CNN/纽约时报/华尔街日报
+# 🟠 扩展信源(3个)：半岛电视台/Politico/华盛顿邮报/美联社
 WEBFETCH_SOURCES = [
     {
         'name': '路透社',
         'url': 'https://www.reuters.com/world/',
         'prompt': '提取今天（2026年7月31日）的国际新闻，重点关注：1.中美关系 2.地缘政治 3.AI科技 4.经贸制裁。列出最重要的8-10条新闻，每条必须包含：\n1) **英文原标题**（English title，必须是文章的原始英文标题）\n2) **中文翻译标题**（简短翻译）\n3) 2-3句话摘要\n4) 关键词（用逗号分隔）\n5) **完整的原文链接URL**（https://开头的完整文章地址）\n⚠️ 格式要求：输出时每条新闻的标题格式为"English Title 中文翻译"，例如："Ukraine\'s envoy to US: We need missiles 乌克兰驻美大使紧急呼吁：我们需要导弹"\n⚠️ URL是必填项，不能省略。用中文输出。',
         'priority': 1,  # 最高优先级
+        'required': True,  # 🔴 必选
         'expected_count': 8,
-        'language': 'en',  # 英文信源标记
+        'language': 'en',
     },
     {
         'name': 'BBC News',
         'url': 'https://www.bbc.com/news',
         'prompt': '提取今天最重要的国际新闻，重点关注：1.AI和科技 2.中美关系 3.全球政治。列出6-8条最重要新闻，每条必须包含：\n1) **英文原标题**（文章原始英文标题）\n2) **中文翻译标题**\n3) 摘要（2-3句话）\n4) 关键词（逗号分隔）\n5) **完整的原文链接URL**（https://www.bbc.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL是必填项。用中文输出。',
         'priority': 2,
+        'required': True,  # 🔴 必选
         'expected_count': 6,
         'language': 'en',
     },
@@ -143,6 +147,7 @@ WEBFETCH_SOURCES = [
         'url': 'https://www.scmp.com/news/china',
         'prompt': '提取今天关于中国和国际的重要新闻，重点关注：1.中美关系 2.中国外交 3.亚太局势。列出6条新闻，每条包含：\n1) **英文原标题**（SCMP文章原始英文标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.scmp.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL是强制要求。用中文输出。',
         'priority': 3,
+        'required': True,  # 🔴 必选
         'expected_count': 6,
         'language': 'en',
     },
@@ -151,15 +156,17 @@ WEBFETCH_SOURCES = [
         'url': 'https://www.theguardian.com/international',
         'prompt': '提取今天最重要的国际新闻，重点关注：1.全球政治 2.气候变化 3.经济危机。列出4-5条新闻，每条包含：\n1) **英文原标题**（The Guardian原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.theguardian.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
         'priority': 4,
+        'required': True,  # 🔴 必选
         'expected_count': 5,
         'language': 'en',
     },
-    # ===== V1.1新增信源 =====
+    # ===== 🔴 必选信源 V1.2.2 =====
     {
         'name': 'CNN',
         'url': 'https://www.cnn.com/world',
         'prompt': '提取今天最重要的国际新闻，重点关注：1.美国政治 2.全球冲突 3.经济动态。列出5-6条新闻，每条必须包含：\n1) **英文原标题**（CNN原始标题）\n2) **中文翻译标题**\n3) 简要摘要\n4) 关键词\n5) **完整URL**（https://www.cnn.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
         'priority': 5,
+        'required': True,  # 🔴 必选
         'expected_count': 5,
         'language': 'en',
     },
@@ -168,14 +175,26 @@ WEBFETCH_SOURCES = [
         'url': 'https://www.nytimes.com/world',
         'prompt': '提取今天最重要的国际新闻和分析报道，重点关注：1.中美关系深度分析 2.地缘政治 3.全球经济。列出4-5条高质量新闻，每条包含：\n1) **英文原标题**（NYT原始标题）\n2) **中文翻译标题**\n3) 详细摘要\n4) 关键词\n5) **完整URL**（https://www.nytimes.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
         'priority': 6,
+        'required': True,  # 🔴 必选
         'expected_count': 4,
         'language': 'en',
     },
     {
+        'name': '华尔街日报',
+        'url': 'https://www.wsj.com/world',
+        'prompt': '提取今天最重要的全球商业、政治和经济新闻，重点关注：1.中美贸易 2.全球经济 3.资本市场。列出4-5条高质量新闻，每条包含：\n1) **英文原标题**（WSJ原始标题）\n2) **中文翻译标题**\n3) 详细摘要\n4) 关键词\n5) **完整URL**（https://www.wsj.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'priority': 7,
+        'required': True,  # 🔴 必选 (V1.2.2新增)
+        'expected_count': 4,
+        'language': 'en',
+    },
+    # ===== 🟠 扩展信源 =====
+    {
         'name': '半岛电视台',
         'url': 'https://www.aljazeera.com/news',
         'prompt': '提取今天关于中东、亚洲、非洲和发展中国家的重要新闻，重点关注：1.巴以冲突 2.能源政治 3.全球南方视角。列出4-5条新闻，每条包含：\n1) **英文原标题**（Al Jazeera原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.aljazeera.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
-        'priority': 7,
+        'priority': 8,
+        'required': False,
         'expected_count': 4,
         'language': 'en',
     },
@@ -183,7 +202,8 @@ WEBFETCH_SOURCES = [
         'name': 'Politico',
         'url': 'https://www.politico.com/world',
         'prompt': '提取今天关于全球政治、外交政策、贸易谈判的重要新闻，重点关注：1.欧美关系 2.全球贸易政策 3.国际外交动态。列出3-4条新闻，每条包含：\n1) **英文原标题**（Politico原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.politico.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
-        'priority': 8,
+        'priority': 9,
+        'required': False,
         'expected_count': 3,
         'language': 'en',
     },
@@ -191,7 +211,8 @@ WEBFETCH_SOURCES = [
         'name': '华盛顿邮报',
         'url': 'https://www.washingtonpost.com/world',
         'prompt': '提取今天最重要的国际新闻，重点关注：1.美国外交政策 2.民主与治理 3.全球危机。列出3-4条新闻，每条包含：\n1) **英文原标题**（Washington Post原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.washingtonpost.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
-        'priority': 9,
+        'priority': 10,
+        'required': False,
         'expected_count': 3,
         'language': 'en',
     },
@@ -199,7 +220,8 @@ WEBFETCH_SOURCES = [
         'name': '美联社',
         'url': 'https://apnews.com/world-news',
         'prompt': '提取今天全球重大突发新闻和重要事件，重点关注：1. Breaking news 2. 重大冲突 3. 自然灾害。列出4-5条快讯式新闻，每条包含：\n1) **英文原标题**（AP News原始标题）\n2) **中文翻译标题**\n3) 简要摘要\n4) 关键词\n5) **完整URL**（https://apnews.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
-        'priority': 10,
+        'priority': 11,
+        'required': False,
         'expected_count': 4,
         'language': 'en',
     },
@@ -342,6 +364,22 @@ class EnhancedNewsFetcher:
                             from urllib.parse import urljoin
                             url = urljoin(base_url, url)
 
+                    # 智能打分 - 基于关键词判断新闻重要性
+                    score = self._calculate_priority_score(item['title'], source['name'])
+                    category = self._detect_category(item['title'])
+
+                    # 🆕 V1.2.2: 过期事件检测（在打分之前判定）
+                    EXPIRED_PATTERNS = [
+                        'APEC领导人非正式会议', '对韩国进行国事访问',
+                        '对朝鲜进行国事访问', '出席博鳌亚洲论坛',
+                        '出席G20峰会', '出席金砖峰会',
+                        'XI\'S VISITS', '出访专题', 'SPECIAL REPORTS',
+                        '热点专题'
+                    ]
+                    is_expired = any(p in item['title'] for p in EXPIRED_PATTERNS)
+                    if is_expired:
+                        score = 0  # 强制为0分
+
                     articles.append({
                         'title': item['title'],
                         'summary': item['title'],  # 基础采集可能没有详细摘要
@@ -349,12 +387,16 @@ class EnhancedNewsFetcher:
                         'url': url,
                         'language': source.get('language', 'zh'),
                         'raw_content': item['title'],
+                        'priority_score': score,
+                        'category': category,
                     })
         else:
             # 无BeautifulSoup时的简单正则提取
             titles = re.findall(r'<h[23][^>]*>([^<]+)</h[23]>', html)[:15]
             for title in titles:
                 if len(title) > 10:
+                    score = self._calculate_priority_score(title, source['name'])
+                    category = self._detect_category(title)
                     articles.append({
                         'title': title.strip(),
                         'summary': title.strip(),
@@ -362,9 +404,83 @@ class EnhancedNewsFetcher:
                         'url': '',
                         'language': source.get('language', 'zh'),
                         'raw_content': title.strip(),
+                        'priority_score': score,
+                        'category': category,
                     })
 
         return articles
+
+    def _calculate_priority_score(self, title, source_name):
+        """基于关键词计算新闻重要性分数（中文新闻）"""
+        score = 55  # 中文新闻默认分数（之前是0，导致全部排在最后）
+        title_lower = title.lower()
+
+        # 🔴 极高优先级 (90-94)
+        high_priority_keywords = [
+            '峰会', '元首', '总统', '习近平', '特朗普', '拜登', '普京',
+            '中美', '中俄', '中美关系', '中美贸易', '中美冲突',
+            '制裁', '反制', '关税', '谈判', '会晤',
+            '战争', '军事冲突', '导弹', '袭击', '入侵',
+            '联合国', '安理会', 'G20', 'G7', 'APEC'
+        ]
+
+        # 🟠 高优先级 (75-89)
+        medium_high_keywords = [
+            '外交部', '王毅', '布林肯', '大使', '国际',
+            '条约', '协议', '合作', '访问', '会见',
+            '台湾', '南海', '东海', '台海',
+            '一带一路', '芯片', '半导体', '新能源'
+        ]
+
+        # 🟡 中等优先级 (60-74) - 默认
+        # 一般性国际新闻已通过默认分数55覆盖
+
+        # 检测极高优先级关键词
+        for kw in high_priority_keywords:
+            if kw in title:
+                score = max(score, 92)
+                break
+
+        # 检测高优先级关键词（避免覆盖极高）
+        if score < 92:
+            for kw in medium_high_keywords:
+                if kw in title:
+                    score = max(score, 78)
+                    break
+
+        # 权威信源加分
+        authoritative_sources = ['人民网-国际', '中国外交部', '新华网']
+        if source_name in authoritative_sources and score < 75:
+            score = max(score, 70)
+
+        # 标记元首级
+        if any(kw in title for kw in ['元首会晤', '国事访问', '峰会', '视频通话']):
+            score = max(score, 95)
+
+        return score
+
+    def _detect_category(self, title):
+        """基于标题智能检测分类"""
+        # 中美关系
+        if any(kw in title for kw in ['中美', '中美关系', '中美贸易', '中美冲突', '美国对华', '对美', '特朗普', '拜登']):
+            return '中美关系'
+        # 外交资讯
+        if any(kw in title for kw in ['外交部', '王毅', '大使', '会见', '会谈', '访问', '联合国']):
+            return '外交资讯'
+        # 经贸制裁
+        if any(kw in title for kw in ['制裁', '反制', '关税', '经贸', '贸易', '芯片']):
+            return '经贸制裁'
+        # AI科技
+        if any(kw in title for kw in ['AI', '人工智能', '芯片', '半导体', '新能源', '5G']):
+            return 'AI科技'
+        # 地缘冲突
+        if any(kw in title for kw in ['战争', '冲突', '导弹', '袭击', '入侵']):
+            return '地缘政治'
+        # 地区动态
+        if any(kw in title for kw in ['台湾', '南海', '东海', '一带一路']):
+            return '地区动态'
+        # 默认
+        return '国际政治'
 
     def prepare_webfetch_tasks(self):
         """
@@ -677,10 +793,136 @@ class EnhancedNewsFetcher:
         }
 
     def save_data(self):
-        """保存数据到JSON文件"""
+        """保存数据到JSON文件（V1.2.1 - 含质量控制）"""
         if not self.results:
             print("⚠️ 没有数据可保存")
             return False
+
+        # ⭐ V1.2.2 增强：采集阶段的数据质量控制和清洗
+        print(f"\n🧹 V1.2.2 数据质量检查...")
+        original_count = len(self.results)
+
+        # 定义垃圾文章识别规则（V1.2.2 扩展黑名单）
+        NAVIGATION_KEYWORDS = [
+            # 通用导航
+            '导航', '首页', '首页导航', '网站地图', 'sitemap',
+            '联系我们', '关于我们', '版权声明', '隐私政策',
+            '用户协议', '登录', '注册', '搜索', '更多',
+            # 🆕 V1.2.2: 中文信源专用黑名单
+            '专栏', '系列账号', '记者手记', '全球连线', 'TOP NEWS',
+            '要闻回顾', '一周回顾', '今日关注',
+            # 🆕 V1.2.2: 索引页/专题页
+            '海外分公司', '海外分站', '分社专栏',
+            '热点专题', '出访专题', 'XI\'S VISITS', 'SPECIAL REPORTS',
+            '国际要闻', '要闻TOP', '要闻TOP NEWS',
+            # 🆕 营销/软文
+            'Business+', '商业+', '美容', '美妆', '降温神器',
+            'Young minds', 'ancient wisdom',
+        ]
+
+        # 营销/软文关键词（中英文）
+        SOFT_CONTENT_KEYWORDS = [
+            'Business+', 'A sun', 'sun that heals', 'Born by river',
+            'Time for a cool', 'cool change', 'beauty brands',
+            'surge in popularity', '手记', '不亦', '乐乎',
+            '金环', '城市看', '中俄地方', '枢纽通',
+            '货值升', '激活', '外贸动能', '乐在'
+        ]
+
+        # 软文阈值：包含任何一个就过滤
+        SOFT_CONTENT_THRESHOLD = 1
+
+        cleaned_results = []
+        removed_count = 0
+        removal_reasons = {}
+
+        for article in self.results:
+            title = article.get('title', '') or ''
+            title_en = article.get('title_en', '') or ''
+            source = article.get('source', '') or ''
+            score = article.get('priority_score', 0)
+            url = article.get('url', '') or ''
+
+            # 规则1: 标题过短
+            if len(title.strip()) < 5 and len(title_en.strip()) < 5:
+                removed_count += 1
+                removal_reasons['标题过短'] = removal_reasons.get('标题过短', 0) + 1
+                continue
+
+            # 规则2: 0分内容（兜底过滤）
+            if score == 0:
+                removed_count += 1
+                removal_reasons['零分内容'] = removal_reasons.get('零分内容', 0) + 1
+                continue
+
+            # 🆕 V1.2.2: 导航/栏目关键词检测（适用于任何分数）
+            nav_detected = False
+            nav_keyword = ''
+            for kw in NAVIGATION_KEYWORDS:
+                if kw.lower() in (title + ' ' + title_en).lower():
+                    nav_detected = True
+                    nav_keyword = kw
+                    break
+
+            if nav_detected:
+                removed_count += 1
+                removal_reasons[f'导航/栏目({nav_keyword})'] = removal_reasons.get(f'导航/栏目({nav_keyword})', 0) + 1
+                continue
+
+            # 🆕 V1.2.2: 中文信源无URL检查（导航页通常没有URL）
+            if source in ['人民网-国际', '中国外交部', '新华网', '中国日报网', '环球网'] and not url:
+                removed_count += 1
+                removal_reasons['无URL(导航页)'] = removal_reasons.get('无URL(导航页)', 0) + 1
+                continue
+
+            # 🆕 V1.2.2: 软文/营销内容检测
+            soft_count = 0
+            combined = title + ' ' + title_en
+            for kw in SOFT_CONTENT_KEYWORDS:
+                if kw.lower() in combined.lower():
+                    soft_count += 1
+
+            # 🆕 V1.2.2: 中国日报网特殊过滤（英文标题为主+内容质量差）
+            if source == '中国日报网':
+                # 中国日报网的内容普遍存在翻译质量不高/标题英文等问题
+                # 仅保留包含中文标题且分数≥70的新闻
+                if score < 70 or not title.strip():
+                    removed_count += 1
+                    removal_reasons['中国日报网质量不足'] = removal_reasons.get('中国日报网质量不足', 0) + 1
+                    continue
+
+            # 🆕 V1.2.2: 中文信源分数阈值检查
+            if source in ['中国日报网', '新华网'] and score < 50:
+                removed_count += 1
+                removal_reasons['低质量中文(<50分)'] = removal_reasons.get('低质量中文(<50分)', 0) + 1
+                continue
+
+            # 🆕 V1.2.2: 纯英文标题检查（中文信源不应有英文标题）
+            if source in ['人民网-国际', '中国外交部', '新华网', '中国日报网'] and not title.strip() and title_en.strip():
+                removed_count += 1
+                removal_reasons['纯英文标题'] = removal_reasons.get('纯英文标题', 0) + 1
+                continue
+
+            # 🆕 V1.2.2: 营销/软文判定
+            if soft_count >= SOFT_CONTENT_THRESHOLD:
+                removed_count += 1
+                removal_reasons['软文/营销'] = removal_reasons.get('软文/营销', 0) + 1
+                continue
+
+            # 通过所有检查，保留
+            cleaned_results.append(article)
+
+        # 输出质量报告
+        if removed_count > 0:
+            print(f"   🗑️  已移除 {removed_count} 条低质量文章:")
+            for reason, count in removal_reasons.items():
+                print(f"      • {reason}: {count} 条")
+            print(f"   ✅ 保留: {len(cleaned_results)} 条 (从{original_count}条)")
+        else:
+            print(f"   ✅ 所有 {original_count} 条文章质量合格")
+
+        # 更新results为清洗后的数据
+        self.results = cleaned_results
 
         # 确保目录存在
         DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
