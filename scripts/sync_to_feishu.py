@@ -29,9 +29,9 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(PROJECT_DIR, 'data', 'news-data.json')
 CONFIG_FILE = os.path.join(PROJECT_DIR, 'data', '.feishu_config')
 
-# 飞书配置（从配置文件读取）
-FEISHU_BASE_TOKEN = "A2fdb93HLamcKgslr2rcopjRnfd"
-FEISHU_TABLE_ID = "tblCocvO66XoPsm1"
+# 飞书配置（从本地配置文件 data/.feishu_config 读取，不硬编码）
+FEISHU_BASE_TOKEN = os.environ.get("FEISHU_BASE_TOKEN", "")
+FEISHU_TABLE_ID = os.environ.get("FEISHU_TABLE_ID", "")
 
 # 字段映射：JSON key → 飞书字段名
 FIELD_MAP = {

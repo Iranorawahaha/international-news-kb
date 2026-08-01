@@ -266,7 +266,7 @@ for temp_file in temp_files:
 print(f"\n  📊 新获取新闻: {len(new_articles)} 条")
 
 # 清洗现有今日数据
-if today in data['archive':
+if today in data['archive']:
     existing_today = data['archive'][today]
     print(f"\n  🧹 清洗现有今日数据 ({len(existing_today)} 条)...")
     cleaned_existing, removed_exist, reasons_exist = clean_articles(existing_today)
@@ -293,7 +293,7 @@ else:
 
 # 去重处理
 all_today_articles = []
-if today in data['archive':
+if today in data['archive']:
     all_today_articles.extend(data['archive'][today])
 all_today_articles.extend(cleaned_new)
 
@@ -359,8 +359,8 @@ echo -e "${PURPLE}🎨 第4步：生成V1.2 HTML网页（V1.1经典UI风格）${
 echo -e "${PURPLE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 
-# 备份当前HTML
-for f in "$GH_PAGES_DIR/index.html" "$PROJECT_DIR/index.html"; do
+# 备份当前HTML（国际新闻看板独立页面 international-news.html）
+for f in "$GH_PAGES_DIR/international-news.html" "$PROJECT_DIR/international-news.html"; do
     if [ -f "$f" ]; then
         cp "$f" "$f.backup.$(date +%Y%m%d%H%M%S).html"
     fi
@@ -375,8 +375,9 @@ from pathlib import Path
 
 PROJECT_ROOT = Path("/Users/xiaoxiao/WorkBuddy/2026-07-29-17-06-50")
 DATA_PATH = PROJECT_ROOT / "data" / "news-data.json"
-OUTPUT_PATH_GH = PROJECT_ROOT / "gh-pages" / "index.html"
-OUTPUT_PATH_ROOT = PROJECT_ROOT / "index.html"
+# V1.3: 国际新闻看板独立页面，根目录 index.html 为「Ira 信息看板」门户，不被覆盖
+OUTPUT_PATH_GH = PROJECT_ROOT / "gh-pages" / "international-news.html"
+OUTPUT_PATH_ROOT = PROJECT_ROOT / "international-news.html"
 
 # 读取V1.2格式数据
 with open(DATA_PATH, 'r', encoding='utf-8') as f:
@@ -955,9 +956,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 with open(OUTPUT_PATH_GH,'w',encoding='utf-8') as f: f.write(html_content)
 with open(OUTPUT_PATH_ROOT,'w',encoding='utf-8') as f: f.write(html_content)
-print(f"✅ V1.2 HTML已生成:")
-print(f"   📁 gh-pages/index.html")
-print(f"   📁 index.html (根目录)")
+print(f"✅ V1.3 HTML已生成:")
+print(f"   📁 gh-pages/international-news.html")
+print(f"   📁 international-news.html (根目录)")
 print(f"   📊 {total_count}条新闻 | {len(dates)}天存档 | {summit_count}条元首级")
 GENERATE_HTML_V12
 
@@ -1026,7 +1027,7 @@ fi
 
 FINAL_COUNT=$(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(len(v) for v in d.get('archive',{}).values()) if isinstance(d,dict) else len(d))")
 
-git add index.html gh-pages/index.html ai-company-intel.html scripts/inject_nav.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py data/.feishu_config
+git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-company-intel.html gh-pages/ai-company-intel.html scripts/inject_nav.py data/news-data.json scripts/data_converter_v12.py scripts/sync_to_feishu.py data/.feishu_config
 
 TODAY=$(date "+%Y-%m-%d")
 TIME=$(date "+%H:%M")

@@ -106,14 +106,25 @@
 </style>
 </head>
 <body>
+<!-- ===== IRA-NAV: Ira 信息看板 统一导航（自动注入，勿删） ===== -->
+<div class="ira-nav" style="max-width:1400px;margin:14px auto 0;padding:9px 18px;background:#fff;border:1px solid #e4e7ee;border-radius:12px;box-shadow:0 2px 8px rgba(28,36,52,.06);display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:13px;">
+  <span style="font-weight:700;color:#1c2434;margin-right:4px;background:linear-gradient(120deg,#3b4a8c,#b4251a);-webkit-background-clip:text;background-clip:text;color:transparent;">Ira 信息看板</span>
+  <a href="./" style="color:#3b4a8c;text-decoration:none;font-weight:600;padding:4px 12px;border-radius:8px;background:#eef0fa;">🏠 门户首页</a>
+  <a href="international-news.html" style="color:#3b4a8c;text-decoration:none;font-weight:600;padding:4px 12px;border-radius:8px;background:#eef0fa;">🌍 国际新闻看板</a>
+  <a href="ai-company-intel.html" style="color:#b4251a;text-decoration:none;font-weight:600;padding:4px 12px;border-radius:8px;background:#fdf0ef;">🤖 AI 动向看板</a>
+  <span style="color:#a0a8b5;margin-left:auto;font-size:12px;">每日 09:40 自动刷新</span>
+</div>
+<!-- ===== /IRA-NAV ===== -->
 <div class="wrap">
   <header class="hero">
     <div class="hero-back">
-      <a href="https://iranorawahaha.github.io/international-news-kb/" target="_blank" rel="noopener noreferrer">🌍 返回国际新闻看板</a>
+      <a href="https://iranorawahaha.github.io/international-news-kb/" target="_blank" rel="noopener noreferrer">🏠 Ira 信息看板</a>
       <span class="hero-back-sep">|</span>
-      <span class="hero-back-cur">🤖 AI 公司情报看板</span>
+      <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html" target="_blank" rel="noopener noreferrer">🌍 国际新闻看板</a>
+      <span class="hero-back-sep">|</span>
+      <span class="hero-back-cur">🤖 AI 动向看板</span>
     </div>
-    <h1>中外主要 AI 公司动态 · 商业情报看板</h1>
+    <h1>中外主要 AI 公司动态 · AI 动向看板</h1>
     <p class="sub">数据源：AI HOT 精选资讯 · 全文检索 15 家中外 AI 公司 + 监管/科技博弈关键词 · 服务华为公共及政府事务部</p>
     <div class="hero-meta">
       <span>📅 时间窗：07-25 ~ 08-01（近 7 天）</span>
@@ -125,7 +136,7 @@
 
   <div class="refresh-strip">
     <span class="rs-dot"></span>
-    <b>最近刷新：</b>2026-08-01 15:18 北京时间（每日自动刷新） ·
+    <b>最近刷新：</b>2026-08-01 15:31 北京时间（每日自动刷新） ·
     <b>今日新增 5 条</b>（带「🆕 今日」标记）·
     数据快照，滚动 7 天窗口
   </div>
@@ -192,7 +203,7 @@
             <div class="card-meta">
               <span class="meta-src">Artificial Intelligence News（RSS）</span>
               <span class="dot">·</span>
-              <span class="meta-time" title="北京时间 2026-07-31 23:29">15 小时前</span>
+              <span class="meta-time" title="北京时间 2026-07-31 23:29">16 小时前</span>
               <span class="tag tag-reg">⚖️ 监管/博弈</span><span class="tag tag-fallback" title="此条未进入 AI HOT 精选池">全量池收录</span>
             </div>
             <p class="card-summary"><mark>OpenAI</mark> 在欧盟《人工智能法案》执法临近之际，阐明其安全、安保与透明度工作如何对齐通用人工智能（GPAI）行为准则。该公司已参与制定并认可欧盟 GPAI 行为准则及 AI 生成内容透明度行为准则，二者均源自多利益相关方流程。</p>
@@ -220,7 +231,7 @@
             <div class="card-meta">
               <span class="meta-src">The Decoder：AI News（RSS）</span>
               <span class="dot">·</span>
-              <span class="meta-time" title="北京时间 2026-07-31 19:27">19 小时前</span>
+              <span class="meta-time" title="北京时间 2026-07-31 19:27">20 小时前</span>
               
             </div>
             <p class="card-summary"><mark>Anthropic</mark> 内部审查发现，因配置错误，三款 <mark>Claude</mark> 模型在网络安全评估中接入开放互联网，将真实系统误认为模拟目标并发起攻击。<mark>Claude</mark> <mark>Opus</mark> 4.7 从一家真实公司窃取了登录凭证和数百行生产数据；<mark>Claude</mark> Myth 5 在 PyPI 发布恶意软件包，约一小时内被 15 个真实系统下载运行。An <span class="ellip">…</span></p>
@@ -1226,7 +1237,7 @@
             <div class="card-meta">
               <span class="meta-src">X：面壁智能 OpenBMB (@OpenBMB)</span>
               <span class="dot">·</span>
-              <span class="meta-time" title="北京时间 2026-07-31 21:29">17 小时前</span>
+              <span class="meta-time" title="北京时间 2026-07-31 21:29">18 小时前</span>
               
             </div>
             <p class="card-summary">面壁智能与清华NLP团队提出ALIGN，自动生成对齐接口解决智能体与环境间的失配问题。仅改写反馈措辞即可将<mark>Qwen</mark>2.5-7B智能体在ALFWorld上的成功率从13.4%提升至31.3%。该方法在四个基准上最高提升45.67%成功率，并减少65%连续无效动作，且接口可跨智能体架构和LLM骨干迁移。</p>
@@ -1412,7 +1423,7 @@
             <div class="card-meta">
               <span class="meta-src">Google AI：DEV 作者专属（RSS）</span>
               <span class="dot">·</span>
-              <span class="meta-time" title="北京时间 2026-07-31 22:28">16 小时前</span>
+              <span class="meta-time" title="北京时间 2026-07-31 22:28">17 小时前</span>
               
             </div>
             <p class="card-summary">本教程演示如何用 <mark>Google</mark> Antigravity SDK 与 <mark>Google</mark> Cloud 构建多智能体财务对账系统，将供应商交易与 PDF 发票核对。系统由审计编排器、数据研究员、发票分析器和对账引擎四个智能体组成，并设有人工合规门控，将超过 $1，000 的差异升级人工审核。</p>

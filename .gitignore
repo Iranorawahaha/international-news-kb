@@ -1,2 +1,5 @@
 node_modules/
 .DS_Store
+*.bak-*
+data/.feishu_config
+data/config.json
