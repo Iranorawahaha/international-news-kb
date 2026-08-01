@@ -997,11 +997,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 with open(OUTPUT_PATH_GH,'w',encoding='utf-8') as f: f.write(html_content)
 with open(OUTPUT_PATH_ROOT,'w',encoding='utf-8') as f: f.write(html_content)
+
 print(f"✅ V1.3 HTML已生成:")
 print(f"   📁 gh-pages/international-news.html")
 print(f"   📁 international-news.html (根目录)")
 print(f"   📊 {total_count}条新闻 | {len(dates)}天存档 | {summit_count}条元首级")
 GENERATE_HTML_V12
+
+# V1.3.2: 生成后立即 JS 语法预检（独立脚本，防 <script> 语法错误导致页面空白）
+_HTML_OUTPUT="$PROJECT_DIR/international-news.html"
+if [ -f "$PROJECT_DIR/scripts/check_js_syntax.py" ]; then
+    if ! python3 "$PROJECT_DIR/scripts/check_js_syntax.py" "$_HTML_OUTPUT"; then
+        echo -e "${RED}❌ JS 语法预检失败！中止部署，请检查第 4 步模板${NC}"
+        exit 1
+    fi
+fi
 
 echo ""
 echo -e "${GREEN}✅ V1.2 网页已生成（V1.1经典UI + 日期Tab栏 + 7天存档）${NC}"
