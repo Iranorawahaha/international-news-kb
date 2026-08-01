@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-fetch_china.py — 国内新闻看板 · 权威信源抓取器 v2（Ira 信息看板体系）
+fetch_china.py — 国内新闻看板 · 权威信源抓取器 v3（Ira 信息看板体系）
 
 数据源（国家级权威 + 严格过滤）：
   1. 中国政府网·要闻      https://www.gov.cn/yaowen/liebiao/YAOWENLIEBIAO.json
   2. 中国政府网·最新政策  https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json
   3. 央视新闻             https://news.cctv.com/2019/07/gaiban/cmsdatainterface/page/china_1.jsonp
-  4. 人民日报             http://paper.people.com.cn/rmrb/pc/layout/{YYYYMM}/dd 头版+要闻版（HTML 解析）
-  5. 凤凰新闻             https://news.ifeng.com/（HTML 解析，严格过滤标题党/猎奇）
+  4. 人民日报             http://paper.people.com.cn/rmrb/pc/layout/{YYYYMM}/dd 头版+要闻版
+  5. 凤凰新闻             https://news.ifeng.com/（严格过滤）
 
-过滤标准（严格，用户红线）：
-  - 标题黑名单: 营销/文娱/小道/八卦/震惊/猎奇等词剔除
-  - 重要度分级: 元首级(习近平/国家主席/中央军委) > 常委级(李强/赵乐际等) >
-               部委级(国务院常务会议) > 重要会议 > 人事任免 > 经贸政策 > 一般
-  - 分类: 元首动态 / 常委动态 / 重要会议 / 人事任免 / 政策发布 / 经贸动向 / 其他
-
-输出: data/china-news.json (archive 按日期分组, 7 天滚动)
+v3 改进（2026-08-01 用户反馈）：
+  - 摘要: 每条记录抓取正文首段作精简摘要（央视用 brief 字段）
+  - 权威去重: 跨信源同题去重，保留权威优先（政府网 > 央视 > 人民日报 > 凤凰）
+  - 分类重构:
+    · 元首动态: 仅限习近平总书记相关
+    · 高层动态: 政治局常委 + 政治局委员/副国级（何立峰/王毅等）
+    · 部委动态: 工信部/网信办/发改委/国办/中办/商务部/外交部等
+    · 人事任免: 中央到地方高层（含陈新武任重庆市代市长等）
+    · 政策发布 / 经贸动向 / 重要会议 / 其他
+  - 强化过滤: 天气/文旅/非遗/民俗/猎奇等杂项剔除
 """
 import json
 import os
@@ -31,18 +34,37 @@ NOW = datetime.now(TZ)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(BASE_DIR, "data", "china-news.json")
 
-# ============ 信源配置 ============
 GOV_YAOWEN = "https://www.gov.cn/yaowen/liebiao/YAOWENLIEBIAO.json"
 GOV_ZHENGCE = "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json"
 CCTV_CHINA = "https://news.cctv.com/2019/07/gaiban/cmsdatainterface/page/china_1.jsonp"
 RMRB_LAYOUT = "http://paper.people.com.cn/rmrb/pc/layout/{date_path}/node_{node:02d}.html"
 IFENG_HOME = "https://news.ifeng.com/"
 
-# ============ 领导人名单 ============
-SUMMIT_LEADERS = ["习近平", "国家主席", "中央军委", "总书记"]
-PSC_LEADERS = ["李强", "赵乐际", "王沪宁", "蔡奇", "丁薛祥", "李希"]
+# 信源权威优先级（去重时保留优先级高的）
+SOURCE_PRIORITY = {"中国政府网·要闻": 1, "中国政府网·最新政策": 1, "央视新闻": 2, "人民日报": 3, "凤凰新闻": 4}
 
-# 经贸动向关键词
+# ============ 领导人名单 ============
+# 元首动态：仅习近平总书记相关
+XI_KEYWORDS = ["习近平", "国家主席", "中央军委主席", "总书记"]
+# 高层动态：政治局常委 + 政治局委员/副国级
+PSC_KEYWORDS = ["李强", "赵乐际", "王沪宁", "蔡奇", "丁薛祥", "李希",
+                "何立峰", "王毅", "李干杰", "张国清", "陈文清", "刘国中", "石泰峰",
+                "黄坤明", "陈吉宁", "袁家军", "尹力", "马兴瑞", "信长星", "梁言顺", "王君正",
+                "李书磊", "穆虹", "秦刚", "刘建超", "李尚福", "王小洪", "张又侠", "何卫东",
+                "张春贤", "王东明", "彭清华", "郑建邦", "郝明金", "蔡达峰", "何维", "武维华",
+                "铁凝", "雪克来提", "洛桑江村", "国务院副总理", "国务院国务委员", "政治局委员"]
+# 部委关键词
+BUWEI_KEYWORDS = ["工信部", "工业和信息化部", "网信办", "国家网信办", "中央网信办", "发改委",
+                  "国家发展改革委", "发展改革委", "国办", "国务院办公厅", "中办", "中共中央办公厅",
+                  "商务部", "外交部", "外交部发言人", "国防部", "教育部", "科技部", "公安部",
+                  "国家安全部", "民政部", "司法部", "财政部", "人力资源社会保障部", "人社部",
+                  "自然资源部", "生态环境部", "住建部", "交通运输部", "水利部", "农业农村部",
+                  "文旅部", "文化和旅游部", "卫健委", "卫生健康委", "退役军人事务部", "应急管理部",
+                  "人民银行", "央行", "审计署", "国务院国资委", "国资委", "海关总署", "税务总局",
+                  "市场监管总局", "金融监管总局", "国家数据局", "国家能源局", "国家统计局", "知识产权局",
+                  "国家烟草局", "广电总局", "体育总局", "国家药监局", "国家林草局", "国家铁路局",
+                  "民航局", "国家文物局", "国家外汇局", "国务院新闻办", "国新办"]
+# 经贸关键词
 ECONOMY_KEYWORDS = [
     "经济", "贸易", "关税", "进出口", "外贸", "外资", "央行", "财政", "金融",
     "货币", "产业", "投资", "人民币", "汇率", "GDP", "发改委", "商务部",
@@ -50,45 +72,68 @@ ECONOMY_KEYWORDS = [
     "自贸区", "RCEP", "WTO", "中美经贸", "营商环境",
     "宏观政策", "政策发力", "扩内需", "促消费", "稳增长", "保供稳价",
     "经济增长", "经济工作", "经济形势", "新质生产力", "高质量发展",
-    "电力市场", "能源市场", "粮食安全", "春耕", "秋收", "进出口贸易",
+    "电力市场", "能源市场", "粮食安全", "进出口贸易", "关税壁垒", "经济制裁",
+    "对华关税", "贸易战", "实体清单", "出口管制", "反倾销", "贸易顺差",
 ]
 
-# 营销号/文娱/小道消息/猎奇黑名单（标题含则剔除）
+# ============ 垃圾/杂项黑名单（v3 强化） ============
 JUNK_KEYWORDS = [
     # 营销/带货
     "带货", "促销", "打折", "秒杀", "福利", "抽奖", "优惠券", "直播间", "网红店",
     # 娱乐/明星/八卦
     "娱乐圈", "明星", "八卦", "绯闻", "吃瓜", "剧透", "演唱会", "票房", "综艺",
-    "粉丝", "应援", "爱豆", "男团", "女团", "热搜爆", "恋情",
+    "粉丝", "应援", "爱豆", "男团", "女团", "恋情", "追星",
     # 猎奇/标题党/负面猎奇
     "震惊", "太可怕", "万万没想到", "看完沉默了", "重磅内幕", "独家爆料", "小道消息",
     "爆仓", "暴跌", "崩盘", "炼金", "秘术", "判刑", "被捕", "诈骗", "盗墓",
-    "报警", "警察上门", "命案", "跳楼", "轻生", "悲剧", "惨案", "尸体",
+    "报警", "警察上门", "命案", "跳楼", "轻生", "悲剧", "惨案", "尸体", "出轨",
+    # 天气/自然灾害日常预报（非重大灾害）
+    "台风", "暴雨预警", "黄色预警", "蓝色预警", "高温天气", "降温", "降雨", "降雨量",
+    "桑拿天", "闷热", "冰雹", "预警升级", "火云", "天气", "气象台", "气温", "酷暑", "寒潮",
+    # 文旅/非遗/民俗/民生杂项
+    "漂流", "夜漂", "非遗", "守艺人", "文旅", "打卡", "旅游", "景区", "美食", "小吃",
+    "民俗", "庙会", "灯会", "烟花", "节庆", "乡村游", "研学", "文创", "国潮",
     # 养生/伪科学
     "养生", "偏方", "神医", "风水", "星座", "生肖运势", "减肥", "美白", "祛痘",
     "长寿秘诀", "排毒", "抗癌秘方",
     # 软文/广告
     "限时", "独家优惠", "免费领取", "点击领取",
+    # 页面噪音
     "投资者关系", "京ICP", "ICP证", "版权所有", "联系我们", "关于我们", "隐私政策", "网站地图",
+    # 民生琐事/社会花边/文旅剩余
+    "大爷", "大妈", "女子", "男子", "司机", "快递小哥", "外卖", "宠物", "猫咪", "狗狗",
+    "圈粉", "市井风情", "烟火气", "出圈", "走红", "网红", "打卡地", "风景线",
+    "夏日", "清凉", "避暑", "采摘", "丰收节", "乡村", "田园", "古镇", "老街",
+    # 天气继续加强
+    "红色山洪", "山洪", "洪水", "内涝", "应急响应", "防汛", "汛情", "灾情", "天气预警",
 ]
 
-# 分类规则（按优先级顺序）
+# 分类规则（按优先级顺序，v3 重构）
 CATEGORY_RULES = [
-    ("元首动态", ["习近平", "国家主席", "中央军委", "总书记", "出席", "考察", "会见", "通令"]),
-    ("常委动态", ["李强", "赵乐际", "王沪宁", "蔡奇", "丁薛祥", "李希"]),
-    ("重要会议", ["会议", "全会", "座谈会", "研讨会", "论坛", "学习贯彻", "集体学习"]),
-    ("人事任免", ["任免", "任命", "免去", "担任", "任命决定", "提请任命"]),
-    ("政策发布", ["印发", "通知", "规划", "意见", "方案", "条例", "规定", "办法", "决定", "批复"]),
+    # 1. 元首动态：仅习近平相关
+    ("元首动态", XI_KEYWORDS),
+    # 2. 高层动态：政治局常委 + 政治局委员
+    ("高层动态", PSC_KEYWORDS),
+    # 3. 重要会议
+    ("重要会议", ["会议", "全会", "座谈会", "研讨会", "论坛", "学习贯彻", "集体学习", "中央经济工作会议", "全国两会", "人代会", "政协会"]),
+    # 4. 人事任免（中央到地方高层）
+    ("人事任免", ["任免", "任命", "免去", "担任", "任命决定", "提请任命", "代市长", "代省长", "代县长",
+                   "履新", "出任", "接任", "当选", "辞去", "代理"]),
+    # 5. 部委动态（工信/网信/发改/国办/中办/商务/外交等）
+    ("部委动态", BUWEI_KEYWORDS),
+    # 6. 政策发布
+    ("政策发布", ["印发", "通知", "规划", "意见", "方案", "条例", "规定", "办法", "决定", "批复", "白皮书"]),
+    # 7. 经贸动向
     ("经贸动向", ECONOMY_KEYWORDS),
 ]
 
 CATEGORY_ICONS = {
-    "元首动态": "👑", "常委动态": "🧭", "重要会议": "🏛", "人事任免": "📋",
-    "政策发布": "📜", "经贸动向": "💹", "其他": "📌",
+    "元首动态": "👑", "高层动态": "🧭", "重要会议": "🏛", "人事任免": "📋",
+    "部委动态": "🏢", "政策发布": "📜", "经贸动向": "💹", "其他": "📌",
 }
 
 
-def fetch(url, headers=None):
+def fetch(url, headers=None, timeout=12):
     req = urllib.request.Request(url, headers={
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
         "Referer": "https://www.gov.cn/",
@@ -97,7 +142,7 @@ def fetch(url, headers=None):
     if headers:
         for k, v in headers.items():
             req.add_header(k, v)
-    with urllib.request.urlopen(req, timeout=15) as resp:
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read().decode("utf-8", errors="ignore")
 
 
@@ -112,12 +157,12 @@ def classify(title):
 def assess_importance(title, cat):
     """重要度 0-100"""
     score = 50
-    for kw in SUMMIT_LEADERS:
+    for kw in XI_KEYWORDS:
         if kw in title:
             score = 100
             break
     else:
-        for kw in PSC_LEADERS:
+        for kw in PSC_KEYWORDS:
             if kw in title:
                 score = 95
                 break
@@ -125,11 +170,12 @@ def assess_importance(title, cat):
             if cat == "重要会议":
                 score = 88
             elif cat == "人事任免":
-                score = 82
+                score = 85
+            elif cat == "部委动态":
+                score = 78
             elif cat == "政策发布":
                 score = 80
             elif cat == "经贸动向":
-                # 经贸：涉中央/国务院层面加高
                 if any(k in title for k in ["国务院", "中央", "习近平", "李强", "政治局"]):
                     score = 85
                 else:
@@ -138,18 +184,44 @@ def assess_importance(title, cat):
 
 
 def is_summit(title):
-    return any(kw in title for kw in SUMMIT_LEADERS)
+    return any(kw in title for kw in XI_KEYWORDS)
 
 
 def is_junk(title):
     return any(kw in title for kw in JUNK_KEYWORDS)
 
 
-def make_item(title, url, date, source):
+def extract_summary_from_url(url, max_len=100):
+    """抓取文章页正文首段作精简摘要"""
+    try:
+        h = fetch(url, timeout=8)
+        h = re.sub(r"<script.*?</script>", "", h, flags=re.S)
+        h = re.sub(r"<style.*?</style>", "", h, flags=re.S)
+        # 人民日报: enpcontent 标记
+        m = re.search(r"enpcontent(.*?)enpcontent", h, re.S)
+        if m:
+            paras = re.findall(r"<p[^>]*>([^<]{15,300})</p>", m.group(1))
+        else:
+            paras = re.findall(r"<p[^>]*>([^<]{15,300})</p>", h)
+        for p in paras:
+            p = re.sub(r"<[^>]+>", "", p).strip()
+            p = p.replace("　", " ").replace("\n", " ").strip()
+            # 跳过导航/占位
+            if not p or "版" in p[:12] or p.startswith("■"):
+                continue
+            if len(p) >= 15:
+                return p[:max_len] + ("…" if len(p) > max_len else "")
+        return ""
+    except Exception:
+        return ""
+
+
+def make_item(title, url, date, source, summary=None):
     if not title or not url or is_junk(title):
         return None
-    title = re.sub(r"^【[^】]*】\s*", "", title).strip()  # 去【视频】等前缀
-    if len(title) < 8:  # 太短忽略
+    title = re.sub(r"^【[^】]*】\s*", "", title).strip()
+    title = re.sub(r"^\[[^\]]*\]\s*", "", title).strip()
+    if len(title) < 8:
         return None
     cat = classify(title)
     return {
@@ -160,31 +232,40 @@ def make_item(title, url, date, source):
         "category": cat,
         "priority_score": assess_importance(title, cat),
         "is_summit_level": is_summit(title),
+        "summary": (summary or "").strip(),
         "collectedAt": NOW.strftime("%Y-%m-%d %H:%M:%S"),
     }
 
 
 def fetch_gov(url, source_name):
-    """中国政府网 JSON 接口"""
+    """中国政府网 JSON 接口 + 抓正文摘要"""
     items = []
     try:
         data = json.loads(fetch(url))
         lst = data if isinstance(data, list) else data.get("listArrP") or data.get("data") or []
+        # 政府网只保留近 7 天
+        cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
         for it in lst:
             t = (it.get("TITLE") or "").strip()
             u = (it.get("URL") or "").strip()
             d = (it.get("DOCRELPUBTIME") or "").strip()[:10]
+            if d < cutoff:
+                continue
             item = make_item(t, u, d, source_name)
             if item:
                 items.append(item)
-        print(f"  ✅ {source_name}: {len(lst)} 条 → 采纳 {len(items)} 条")
+        # 抓摘要（限量，避免请求过多）
+        print(f"  ✅ {source_name}: {len(lst)} 条(近7天 {len(items)} 条) → 抓取摘要...")
+        for it in items[:40]:
+            if not it.get("summary"):
+                it["summary"] = extract_summary_from_url(it["url"])
     except Exception as e:
         print(f"  ❌ {source_name}: {e}")
     return items
 
 
 def fetch_cctv():
-    """央视新闻 JSONP 接口"""
+    """央视新闻 JSONP 接口（brief 即摘要）"""
     items = []
     try:
         raw = fetch(CCTV_CHINA)
@@ -194,60 +275,66 @@ def fetch_cctv():
             return items
         d = json.loads(m.group(1))
         lst = d.get("data", {}).get("list", [])
+        cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
         for it in lst:
             t = (it.get("title") or "").strip()
             u = (it.get("url") or "").strip()
             d = (it.get("focus_date") or "")[:10]
-            item = make_item(t, u, d, "央视新闻")
+            if d < cutoff:
+                continue
+            brief = (it.get("brief") or "").strip()
+            item = make_item(t, u, d, "央视新闻", summary=brief[:100] + ("…" if len(brief) > 100 else ""))
             if item:
                 items.append(item)
-        print(f"  ✅ 央视新闻: {len(lst)} 条 → 采纳 {len(items)} 条")
+        print(f"  ✅ 央视新闻: {len(lst)} 条 → 采纳 {len(items)} 条（含 brief 摘要）")
     except Exception as e:
         print(f"  ❌ 央视新闻: {e}")
     return items
 
 
 def fetch_rmrb():
-    """人民日报 头版+要闻版（node_01~04）"""
+    """人民日报 头版+要闻版（node_01~04）+ 正文摘要"""
     items = []
     d = NOW.strftime("%Y%m%d")
     date_path = NOW.strftime("%Y%m") + "/" + NOW.strftime("%d")
-    for node in (1, 2, 3, 4):  # 头版 + 3 个要闻版
+    for node in (1, 2, 3, 4):
         url = RMRB_LAYOUT.format(date_path=date_path, node=node)
         try:
-            h = fetch(url)
-            # 提取文章链接（content_*.html）
+            h = fetch(url, timeout=8)
             for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>([^<]{8,80})</a>', h):
                 u, t = m.group(1), m.group(2).strip()
                 if "content_" in u and "版" not in t:
                     full_u = u if u.startswith("http") else (
-                        f"http://paper.people.com.cn/rmrb/pc/{u.lstrip('./')}" if u.startswith(".") else f"http://paper.people.com.cn/rmrb/pc/layout/{date_path}/{u}"
+                        f"http://paper.people.com.cn/rmrb/pc/{u.lstrip('./')}" if u.startswith(".") else
+                        f"http://paper.people.com.cn/rmrb/pc/layout/{date_path}/{u}"
                     )
                     item = make_item(t, full_u, NOW.strftime("%Y-%m-%d"), "人民日报")
                     if item:
                         items.append(item)
         except Exception as e:
             print(f"  ⚠️  人民日报 node_{node}: {e}")
-    print(f"  ✅ 人民日报(头版+要闻): 采纳 {len(items)} 条")
+    # 抓摘要
+    print(f"  ✅ 人民日报(头版+要闻): 采纳 {len(items)} 条 → 抓取摘要...")
+    for it in items[:20]:
+        if not it.get("summary"):
+            it["summary"] = extract_summary_from_url(it["url"])
     return items
 
 
 def fetch_ifeng():
-    """凤凰新闻（严格过滤，仅采纳时政/经贸类）"""
+    """凤凰新闻（严格过滤，仅采纳时政/高层/部委/经贸/会议/人事）"""
     items = []
     try:
-        h = fetch(IFENG_HOME)
+        h = fetch(IFENG_HOME, timeout=10)
         titles = re.findall(r'"title":"([^"]{8,80})"', h)
         urls = re.findall(r'"url":"(https?://[^"]{15,120})"', h)
-        # 尽量配对 title 与 url（同序）
+        keep_cats = ("元首动态", "高层动态", "重要会议", "人事任免", "部委动态", "政策发布", "经贸动向")
         for i, t in enumerate(titles):
             if len(urls) > i:
                 item = make_item(t, urls[i], NOW.strftime("%Y-%m-%d"), "凤凰新闻")
-                if item and item["category"] in ("时政", "元首动态", "常委动态", "重要会议", "经贸动向", "政策发布"):
+                if item and item["category"] in keep_cats:
                     items.append(item)
-        # 去重
-        seen = set()
-        uniq = []
+        seen, uniq = set(), []
         for it in items:
             if it["title"] not in seen:
                 seen.add(it["title"])
@@ -260,7 +347,7 @@ def fetch_ifeng():
 
 
 def main():
-    print(f"🕗 {NOW.strftime('%Y-%m-%d %H:%M')} 北京时间 · 国内新闻抓取开始\n")
+    print(f"🕗 {NOW.strftime('%Y-%m-%d %H:%M')} 北京时间 · 国内新闻抓取开始（v3）\n")
 
     all_items = []
     all_items += fetch_gov(GOV_YAOWEN, "中国政府网·要闻")
@@ -269,13 +356,23 @@ def main():
     all_items += fetch_rmrb()
     all_items += fetch_ifeng()
 
-    # 去重（标题相似去重）
-    seen, unique = set(), []
+    # 跨信源去重：标题相似时保留权威优先级高的（政府网 > 央视 > 人民日报 > 凤凰）
+    seen, unique = {}, []
     for it in all_items:
-        norm = re.sub(r"[^\u4e00-\u9fffA-Za-z0-9]", "", it["title"])[:40]
-        if norm in seen:
+        norm = re.sub(r"[^\u4e00-\u9fffA-Za-z0-9]", "", it["title"])[:36]
+        if not norm:
             continue
-        seen.add(norm)
+        if norm in seen:
+            old = seen[norm]
+            old_pri = SOURCE_PRIORITY.get(old["source"], 99)
+            new_pri = SOURCE_PRIORITY.get(it["source"], 99)
+            if new_pri < old_pri:
+                # 新的更权威，替换
+                idx = unique.index(old)
+                unique[idx] = it
+                seen[norm] = it
+            continue
+        seen[norm] = it
         unique.append(it)
 
     # 按日期归档
@@ -300,7 +397,7 @@ def main():
             per_cat[it["category"]] = per_cat.get(it["category"], 0) + 1
 
     data = {
-        "version": "2.0",
+        "version": "3.0",
         "lastUpdated": NOW.strftime("%Y-%m-%d %H:%M"),
         "retentionDays": 7,
         "archive": archive,
@@ -319,7 +416,7 @@ def main():
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"\n📊 国内新闻抓取完成:")
+    print(f"\n📊 国内新闻抓取完成（v3）:")
     print(f"  总计: {total} 条 | 覆盖 {len(dates)} 天 | 今日 {data['todayCount']} 条 | ⭐元首级 {data['stats']['summitCount']} 条")
     print(f"  分类分布: {per_cat}")
     print(f"  信源分布:")
@@ -329,6 +426,8 @@ def main():
             src_cnt[x["source"]] = src_cnt.get(x["source"], 0) + 1
     for s, c in sorted(src_cnt.items(), key=lambda kv: -kv[1]):
         print(f"    • {s}: {c} 条")
+    with_sum = sum(1 for v in archive.values() for x in v if x.get("summary"))
+    print(f"  有摘要: {with_sum}/{total} 条")
     print(f"  💾 已保存: {DATA_FILE}")
     return 0
 

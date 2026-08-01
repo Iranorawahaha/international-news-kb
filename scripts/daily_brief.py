@@ -28,6 +28,7 @@ PORTAL_FILES = [
 ]
 NEWS_FILE = os.path.join(REPO_DIR, "data", "news-data.json")
 AI_FILE = "/tmp/aihot_scan/merged.json"
+CN_FILE = os.path.join(REPO_DIR, "data", "china-news.json")
 
 TZ = timezone(timedelta(hours=8))
 MAX_ITEMS = 12  # 每个板块最多展示条数
@@ -115,7 +116,39 @@ def build_ai_brief():
     return "".join(lis), len(today_items), today_start.strftime("%Y-%m-%d")
 
 
-def update_portal(news_html=None, news_count=None, ai_html=None, ai_count=None, daily_date=None):
+def build_china_brief():
+    """国内新闻当天要点简报"""
+    today = datetime.now(TZ).strftime("%Y-%m-%d")
+    try:
+        with open(CN_FILE, encoding="utf-8") as f:
+            data = json.load(f)
+        items = data.get("archive", {}).get(today, [])
+        last_updated = data.get("lastUpdated", "")
+    except Exception:
+        items = []
+    if not items:
+        return '<div class="daily-empty">今日暂无新增国内新闻</div>', 0, today
+    items = sorted(items, key=lambda a: (-(1 if a.get("is_summit_level") else 0), -(a.get("priority_score") or 0)))[:MAX_ITEMS]
+    lis = []
+    for it in items:
+        title = it.get("title") or ""
+        src = it.get("source") or ""
+        url = it.get("url") or "#"
+        cat = it.get("category") or ""
+        summit = "⭐" if it.get("is_summit_level") else ""
+        summary = (it.get("summary") or "").strip()
+        # 简报中显示摘要头 50 字
+        summ_html = f'<div class="d-summ">{esc(summary[:55] + ("…" if len(summary) > 55 else ""))}</div>' if summary else ""
+        lis.append(
+            f'<div class="daily-item"><span class="d-dot"></span>'
+            f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(summit)}{esc(title)}</a>'
+            f'<span class="d-src">{esc(cat)} · {esc(src)}</span>{summ_html}</div>'
+        )
+    return "".join(lis), len(items), today, last_updated
+
+
+def update_portal(news_html=None, news_count=None, ai_html=None, ai_count=None,
+                  cn_html=None, cn_count=None, cn_date=None, daily_date=None):
     for path in PORTAL_FILES:
         if not os.path.exists(path):
             print(f"  ⏭️  跳过（不存在）: {path}")
@@ -152,12 +185,32 @@ def update_portal(news_html=None, news_count=None, ai_html=None, ai_count=None, 
                 lambda m: m.group(1) + str(ai_count) + " 条" + m.group(2),
                 content, count=1)
             if n2: changed = True
+        if cn_html is not None:
+            content, n = re.subn(
+                r"(<!--DAILY_CN_START-->)(.*?)(<!--DAILY_CN_END-->)",
+                lambda m: m.group(1) + cn_html + m.group(3),
+                content, count=1, flags=re.S)
+            if n:
+                changed = True
+            else:
+                print("  ⚠️  未找到 DAILY_CN_START 标记，跳过国内日报")
+            content, n2 = re.subn(
+                r'(<span class="daily-count" id="daily-cn-count">)[^<]*(</span>)',
+                lambda m: m.group(1) + str(cn_count) + " 条" + m.group(2),
+                content, count=1)
+            if n2: changed = True
         if daily_date:
             content, n3 = re.subn(
                 r'(<span class="daily-date" id="daily-date">)[^<]*(</span>)',
                 lambda m: m.group(1) + daily_date + m.group(2),
                 content, count=1)
             if n3: changed = True
+        if cn_date:
+            content, n4 = re.subn(
+                r'(<b id="meta-cn-date">)[^<]*(</b>)',
+                lambda m: m.group(1) + cn_date + m.group(2),
+                content, count=1)
+            if n4: changed = True
         if changed:
             with open(path, "w", encoding="utf-8") as f:
                 f.write(content)
@@ -170,13 +223,16 @@ def main():
     parser = argparse.ArgumentParser(description="Ira 门户今日日报生成器")
     parser.add_argument("--news", action="store_true", help="只更新国际新闻日报")
     parser.add_argument("--ai", action="store_true", help="只更新 AI 动向日报")
+    parser.add_argument("--cn", action="store_true", help="只更新国内新闻日报")
     args = parser.parse_args()
 
-    do_news = args.news or not args.ai
-    do_ai = args.ai or not args.news
+    do_news = args.news or (not args.ai and not args.cn)
+    do_ai = args.ai or (not args.news and not args.cn)
+    do_cn = args.cn or (not args.news and not args.ai)
 
     news_html = news_count = None
     ai_html = ai_count = None
+    cn_html = cn_count = cn_date = None
     daily_date = None
 
     if do_news:
@@ -187,9 +243,15 @@ def main():
         ai_html, ai_count, d = build_ai_brief()
         daily_date = daily_date or d
         print(f"  🤖 AI 动向今日要点: {ai_count} 条")
+    if do_cn:
+        cn_html, cn_count, d, cn_date = build_china_brief()
+        daily_date = daily_date or d
+        print(f"  🇨🇳 国内新闻今日要点: {cn_count} 条")
 
     update_portal(news_html=news_html, news_count=news_count,
-                  ai_html=ai_html, ai_count=ai_count, daily_date=daily_date)
+                  ai_html=ai_html, ai_count=ai_count,
+                  cn_html=cn_html, cn_count=cn_count, cn_date=cn_date,
+                  daily_date=daily_date)
     return 0
 
 

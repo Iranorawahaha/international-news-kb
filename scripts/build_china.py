@@ -43,13 +43,14 @@ def build():
         for it in archive.get(d, []):
             per_cat[it.get("category", "其他")] = per_cat.get(it.get("category", "其他"), 0) + 1
 
-    cat_order = ["元首动态", "常委动态", "重要会议", "人事任免", "政策发布", "经贸动向", "其他"]
-    cat_map_zh = {"元首动态": "元首动态", "常委动态": "常委动态", "重要会议": "重要会议",
-                  "人事任免": "人事任免", "政策发布": "政策发布", "经贸动向": "经贸动向", "其他": "其他"}
+    cat_order = ["元首动态", "高层动态", "重要会议", "人事任免", "部委动态", "政策发布", "经贸动向", "其他"]
+    cat_map_zh = {"元首动态": "元首动态", "高层动态": "高层动态", "重要会议": "重要会议",
+                  "人事任免": "人事任免", "部委动态": "部委动态", "政策发布": "政策发布",
+                  "经贸动向": "经贸动向", "其他": "其他"}
 
     def cat_icon(c):
-        return {"元首动态": "👑", "常委动态": "🧭", "重要会议": "🏛", "人事任免": "📋",
-                "政策发布": "📜", "经贸动向": "💹", "其他": "📌"}.get(c, "📌")
+        return {"元首动态": "👑", "高层动态": "🧭", "重要会议": "🏛", "人事任免": "📋",
+                "部委动态": "🏢", "政策发布": "📜", "经贸动向": "💹", "其他": "📌"}.get(c, "📌")
 
     # 生成卡片 HTML
     def article_card(it, idx):
@@ -60,6 +61,8 @@ def build():
         score = it.get("priority_score", 0)
         summit = "⭐" if it.get("is_summit_level") else ""
         today_mark = '<span class="tag-today">🆕 今日</span>' if it.get("date") == today else ""
+        date_str = esc(it.get("date", ""))
+        summary = esc(it.get("summary", "") or "")
         # 高分色
         if score >= 95:
             cls = "imp-summit"
@@ -67,13 +70,16 @@ def build():
             cls = "imp-high"
         else:
             cls = ""
+        summary_html = f'<p class="card-summary">{summary}</p>' if summary else ""
         return f'''<div class="card {cls}">
           <div class="card-idx">{idx}</div>
           <div class="card-body">
             <h3 class="card-title">{summit}{title}{today_mark}</h3>
+            {summary_html}
             <div class="card-meta">
               <span class="meta-cat">{cat_icon(cat)} {cat}</span>
-              <span class="meta-src">来源：{src}</span>
+              <span class="meta-date">📅 {date_str}</span>
+              <span class="meta-src">📰 {src}</span>
             </div>
           </div>
           <a class="card-link" href="{url}" target="_blank" rel="noopener noreferrer">原文 ↗</a>
@@ -164,9 +170,11 @@ def build():
   .card-idx {{ flex: 0 0 26px; height: 26px; border-radius: 8px; background: #f1f3f8; color: var(--muted); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }}
   .card-body {{ flex: 1; min-width: 0; }}
   .card-title {{ font-size: 14.5px; font-weight: 650; line-height: 1.5; }}
+  .card-summary {{ font-size: 12.5px; color: #4a5568; line-height: 1.65; margin-top: 5px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
   .card-meta {{ display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; }}
   .meta-cat {{ font-size: 11.5px; color: var(--main); background: var(--main-soft); padding: 2px 9px; border-radius: 999px; font-weight: 600; }}
   .meta-src {{ font-size: 11.5px; color: var(--muted); }}
+  .meta-date {{ font-size: 11.5px; color: var(--muted); }}
   .card-link {{ flex: 0 0 auto; font-size: 12px; color: var(--main); text-decoration: none; font-weight: 600; padding: 5px 12px; border: 1px solid var(--main); border-radius: 8px; transition: all .15s; }}
   .card-link:hover {{ background: var(--main); color: #fff; }}
   .tag-today {{ background: #22a35e; color: #fff; font-size: 10.5px; padding: 1px 7px; border-radius: 999px; margin-left: 6px; vertical-align: 1px; }}
@@ -189,7 +197,7 @@ def build():
       <span class="hero-back-cur">🇨🇳 国内新闻看板</span>
     </div>
     <h1>国内新闻看板 · 中国国内重要政治动向</h1>
-    <p class="sub">信源：中国政府网要闻 + 最新政策（国家级权威信源）· 聚焦元首及政治局常委动态、重要会议、人事任免、政策发布 · Ira 信息看板 · 仅供参考交流</p>
+    <p class="sub">信源：中国政府网要闻 + 最新政策 + 央视新闻 + 人民日报（国家级权威信源）· 聚焦元首动态、高层动态、重要会议、人事任免、部委动态、政策发布、经贸动向 · Ira 信息看板 · 仅供参考交流</p>
     <div class="hero-meta">
       <span>📅 时间窗：{esc(window_start)} ~ {esc(window_end)}（近 7 天）</span>
       <span>🎯 要闻总数：{total} 条（去重）</span>
@@ -205,7 +213,7 @@ def build():
     数据快照，滚动 7 天窗口
   </div>
 
-  <div class="tip-strip">💡 <b>数据源说明：</b>全部来自中国政府网（gov.cn）官方要闻与最新政策频道，已过滤营销号/文娱/小道消息等非权威内容。⭐ 为元首级（习近平/国家主席/中央军委相关），高亮卡片为高分要闻。</div>
+  <div class="tip-strip">💡 <b>数据源说明：</b>中国政府网要闻 + 最新政策（gov.cn，国家级权威信源）+ 央视新闻（500 条实时）+ 人民日报头版要闻 + 凤凰新闻（严格过滤）。已过滤营销号/文娱/猎奇/天气/文旅/非遗等非权威内容。⭐ 为元首级（习近平总书记相关），🧭 为高层动态（政治局常委/委员），🏢 为部委动态（工信/网信/发改/国办/中办/商务/外交部等）。</div>
 
   <div class="kpi-grid">
     <div class="kpi-card kpi-main"><div class="kpi-num">{total}</div><div class="kpi-label">要闻总数（去重后）</div></div>
