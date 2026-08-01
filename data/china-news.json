@@ -1,0 +1,821 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-08-01 17:36",
+  "retentionDays": 7,
+  "archive": {
+    "2026-08-01": [
+      {
+        "title": "谋发展——深刻认识“最本质的特征”和“最大优势”",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077269.htm",
+        "date": "2026-08-01",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      }
+    ],
+    "2026-07-31": [
+      {
+        "title": "《求是》杂志发表习近平总书记重要文章《加快建设健康中国》",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077148.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】中央军委主席习近平签署通令 给1名个人记功",
+        "url": "https://tv.cctv.com/2026/07/31/VIDEHIOaW1OMOgdWvsnyGKqj260731.shtml",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】习近平在中共中央政治局第二十七次集体学习时强调 强化政治引领 深化创新发展 高质量推进国防和军队现代化",
+        "url": "https://tv.cctv.com/2026/07/31/VIDEcBQMuI6rtfcFFsaehf69260731.shtml",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "习近平：加快建设健康中国",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077151.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "李强主持召开国务院常务会议 学习贯彻习近平总书记关于上半年经济形势和做好下半年经济工作的重要讲话精神",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077210.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】李强主持召开国务院常务会议",
+        "url": "https://tv.cctv.com/2026/07/31/VIDEJ3pzFxXd8LwTosYLJ1JV260731.shtml",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "常委动态",
+        "priority_score": 97,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "李强签署国务院令 公布《国务院关于出境入境管理的规定》",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077180.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "常委动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "推动经济持续向新向优向好发展——从中央政治局会议看下半年经济工作着力点",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077122.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "重要会议",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "陈文清在全国扫黑除恶专项斗争视频会议上强调 扎实开展深化扫黑除恶专项斗争 努力建设更高水平的平安中国",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077169.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "重要会议",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "国务院任免国家工作人员（2026年7月31日）",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077171.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "人事任免",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "《工业绿色低碳发展“十五五”规划》发布",
+        "url": "https://www.gov.cn/lianbo/202607/content_7077143.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "国务院关于出境入境管理的规定",
+        "url": "https://www.gov.cn/zhengce/content/202607/content_7077172.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "国务院关于印发《知识产权保护和运用“十五五”规划》的通知",
+        "url": "https://www.gov.cn/zhengce/content/202607/content_7077199.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "国务院印发《知识产权保护和运用“十五五”规划》",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077206.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "今年7550亿元中央预算内投资基本下达完毕",
+        "url": "https://www.gov.cn/lianbo/202607/content_7077138.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      }
+    ],
+    "2026-07-30": [
+      {
+        "title": "【视频】中共中央政治局召开会议 决定召开二十届五中全会 分析研究当前经济形势和经济工作 中共中央总书记习近平主持会议",
+        "url": "https://tv.cctv.com/2026/07/30/VIDE5qpJTTeXfKV3vVP5uvV8260730.shtml",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】就当前经济形势和下半年经济工作 中共中央召开党外人士座谈会 习近平主持并发表重要讲话",
+        "url": "https://tv.cctv.com/2026/07/30/VIDEfw9aPrBbq2cc8VbFPRdr260730.shtml",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "向着建军一百年奋斗目标阔步前行——以习近平同志为核心的党中央引领人民军队书写强军兴军新篇章",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077085.htm",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "总书记的人民情怀 | “始终同人民同呼吸、共命运、心连心”",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077020.htm",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "中国智造加速出海 人工智能产品远销全球",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077105.htm",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "何立峰与美国财政部长贝森特、贸易代表格里尔举行视频通话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077110.htm",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "图表：2025年我国“三新”经济增加值占GDP比重达18.39%",
+        "url": "https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7077092.htm",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "我国物流总量稳步扩大 需求结构不断优化",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077104.htm",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      }
+    ],
+    "2026-07-29": [
+      {
+        "title": "【视频】习近平致电祝贺诺瓦当选连任圣多美和普林西比总统",
+        "url": "https://tv.cctv.com/2026/07/29/VIDErK42PN9WCKKIsoO7FRkp260729.shtml",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "习近平主席特使、科技部部长阴和俊出席秘鲁总统权力交接仪式",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076937.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "厚植家国情怀 携手筑梦前行——习近平总书记对侨务工作重要指示激励海内外中华儿女为强国建设、民族复兴伟业团结奋斗",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076886.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】李强会见斯洛伐克总统",
+        "url": "https://tv.cctv.com/2026/07/29/VIDE5FJcfhYSmWrDrdhnoDqj260729.shtml",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 97,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "李强会见斯洛伐克总统佩列格里尼",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076976.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【“十五五”开好局起好步】2030年我国知识产权综合实力进一步增强",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076999.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "上半年全国社会物流总额为181.1万亿元",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076933.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "上半年支持科技创新和制造业发展减税降费退税1.91万亿元——税收大数据勾勒经济向好图景",
+        "url": "https://www.gov.cn/lianbo/202607/content_7076887.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "人民日报评论员：促进团结奋斗 汇聚磅礴力量",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076918.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "图表：2026年上半年全国社会物流总额为181.1万亿元",
+        "url": "https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7076970.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      }
+    ],
+    "2026-07-28": [
+      {
+        "title": "【视频】习近平举行仪式欢迎斯洛伐克总统访华",
+        "url": "https://tv.cctv.com/2026/07/28/VIDE3g0p2r5a0fi8QtMkI5W6260728.shtml",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】习近平同斯洛伐克总统会谈",
+        "url": "https://tv.cctv.com/2026/07/28/VIDEGyTkTxv2pvmezlr3240F260728.shtml",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】习近平对侨务工作作出重要指示强调 更好凝聚侨心侨力 促进海内外中华儿女团结奋斗 王沪宁出席全国侨务工作会议并讲话",
+        "url": "https://tv.cctv.com/2026/07/28/VIDEGRqwk36Af3WfvAae2B4q260728.shtml",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "习近平同斯洛伐克总统佩列格里尼会谈",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076795.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "习近平对侨务工作作出重要指示",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076776.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】李强在河北唐山调研慰问",
+        "url": "https://tv.cctv.com/2026/07/28/VIDERl3T8opGiOouHAPLb7m5260728.shtml",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "常委动态",
+        "priority_score": 97,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "全国政协召开“加快农业农村现代化”专题协商会 王沪宁出席并讲话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076849.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "李强在河北唐山调研慰问时强调 持续提升防灾减灾救灾能力 切实保障人民群众生命财产安全",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076821.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "常委动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "APEC林业部长级会议通过联合声明",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076848.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "重要会议",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "《疾病预防控制“十五五”规划》发布",
+        "url": "https://www.gov.cn/lianbo/202607/content_7076751.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【视频】何立峰出席2026年亚太经合组织林业部长级会议开幕式并致辞",
+        "url": "https://tv.cctv.com/2026/07/28/VIDES5jlPFBwWvHPSct7meEo260728.shtml",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 52,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【“十五五”开好局起好步】上半年税收收入稳步增长 新质生产力发展成效明显",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076880.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "各地区各部门全力应对台风“红霞”",
+        "url": "https://www.gov.cn/lianbo/202607/content_7076750.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "图表：2025年全国学生资助资金投入超过3900亿元",
+        "url": "https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7076836.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "强化汛期保障，多地多部门多措并举确保民众平安出行",
+        "url": "https://www.gov.cn/lianbo/202607/content_7076826.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "王毅出席全球发展倡议5周年高级别会议",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076871.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "王毅将出席全球发展倡议5周年高级别会议",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076747.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "紧急预拨1.8亿元 支持广东、辽宁等6省做好防汛防台风应急抢险救灾工作",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076866.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      }
+    ],
+    "2026-07-27": [
+      {
+        "title": "【视频】习近平同巴西总统通电话",
+        "url": "https://tv.cctv.com/2026/07/27/VIDEeBqNJydkEKNaPT3gjJXJ260727.shtml",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "习近平同巴西总统卢拉通电话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076658.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "总书记以“三个有利于”指引世界遗产申报保护",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076649.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "谌贻琴在全国妇联常委（扩大）会议上强调 进一步加强妇女儿童合法权益保障",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076701.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "重要会议",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "中共中央 国务院转发《中央宣传部、司法部关于开展法治宣传教育的第九个五年规划（2026－2030年）》",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076692.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "国办印发《关于国务院行政复议案件处理程序的若干规定》的通知",
+        "url": "https://www.gov.cn/zhengce/content/202607/content_7076684.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·最新政策",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "国务院办公厅印发《关于国务院行政复议案件处理程序的若干规定》",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076689.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "国务院办公厅印发《关于国务院行政复议案件处理程序的若干规定》的通知",
+        "url": "https://www.gov.cn/zhengce/content/202607/content_7076684.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "“红霞”影响持续 各地各部门采取措施积极应对",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076726.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "【“十五五”开好局起好步】推动残疾人事业全面发展高质量发展",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076724.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "凝聚侨心侨力 共襄复兴伟业——新时代侨务工作综述",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076650.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "图表：2026年上半年全国规模以上工业企业利润增长18.7%",
+        "url": "https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7076699.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "多部门联合研判“红霞”发展趋势，部署重点工作 做好灾害救助，尽快恢复生产生活秩序",
+        "url": "https://www.gov.cn/lianbo/202607/content_7076647.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "第十二批中央单位援疆干部人才赴疆工作",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076710.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      }
+    ],
+    "2026-07-26": [
+      {
+        "title": "“中国梦是国家梦、民族梦，也是每个中华儿女的梦”——习近平总书记关于侨务工作的重要论述凝聚共同致力民族复兴的强大力量",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076640.htm",
+        "date": "2026-07-26",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "台风“红霞”登陆 各地各部门全力应对",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076641.htm",
+        "date": "2026-07-26",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "各地区各部门全力应对台风“红霞”和强降雨天气",
+        "url": "https://www.gov.cn/lianbo/202607/content_7076628.htm",
+        "date": "2026-07-26",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "我国成为世界上少数红树林面积持续增加的国家之一",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076642.htm",
+        "date": "2026-07-26",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "截至6月底我国智能算力规模同比增长177%",
+        "url": "https://www.gov.cn/lianbo/202607/content_7076626.htm",
+        "date": "2026-07-26",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      }
+    ],
+    "2026-07-25": [
+      {
+        "title": "擦亮中华文明重要名片——习近平文化思想引领中国世界遗产申报保护工作壮阔实践",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076607.htm",
+        "date": "2026-07-25",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "今年以来消费品以旧换新销售额超万亿元",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076611.htm",
+        "date": "2026-07-25",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "全国秋粮田管有序推进",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076612.htm",
+        "date": "2026-07-25",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "各地各部门积极部署应对台风“红霞”",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076613.htm",
+        "date": "2026-07-25",
+        "source": "中国政府网·要闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "吉尔吉斯斯坦总统扎帕罗夫会见王毅",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076625.htm",
+        "date": "2026-07-25",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "王毅会见俄罗斯外长拉夫罗夫",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076594.htm",
+        "date": "2026-07-25",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      },
+      {
+        "title": "王毅出席上海合作组织外长会",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076592.htm",
+        "date": "2026-07-25",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 17:36:06"
+      }
+    ]
+  },
+  "dates": [
+    "2026-08-01",
+    "2026-07-31",
+    "2026-07-30",
+    "2026-07-29",
+    "2026-07-28",
+    "2026-07-27",
+    "2026-07-26",
+    "2026-07-25"
+  ],
+  "today": "2026-08-01",
+  "todayCount": 1,
+  "stats": {
+    "totalArticles": 78,
+    "dateCount": 8,
+    "latestDate": "2026-08-01",
+    "summitCount": 22
+  }
+}

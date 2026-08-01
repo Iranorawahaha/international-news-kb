@@ -69,6 +69,7 @@
   .hstat span { font-size: 11.5px; color: var(--muted); }
   .hstat.news b { color: var(--news-main); }
   .hstat.ai b { color: var(--ai-main); }
+  .hstat.cn b { color: #8a1f1f; }
 
   /* ============ 看板入口卡片 ============ */
   .boards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 30px; }
@@ -106,10 +107,11 @@
   .daily-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
   .daily-head h2 { font-size: 17px; font-weight: 750; }
   .daily-date { font-size: 12.5px; color: var(--muted); }
-  .daily-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .daily-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
   .daily-col { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
   .daily-col.news { background: #fafbff; }
   .daily-col.ai { background: #fffafa; }
+  .daily-col.cn { background: #fff7f5; }
   .daily-col-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
   .daily-icon { font-size: 16px; }
   .daily-col-head h3 { font-size: 13.5px; font-weight: 700; flex: 1; }
@@ -119,6 +121,7 @@
   .daily-item .d-dot { flex: 0 0 5px; width: 5px; height: 5px; border-radius: 50%; margin-top: 7px; }
   .daily-col.news .daily-item .d-dot { background: var(--news-main); }
   .daily-col.ai .daily-item .d-dot { background: var(--ai-main); }
+  .daily-col.cn .daily-item .d-dot { background: #8a1f1f; }
   .daily-item a { color: var(--ink); text-decoration: none; }
   .daily-item a:hover { color: var(--news-main); }
   .daily-item .d-src { color: var(--muted); font-size: 11.5px; white-space: nowrap; margin-left: auto; }
@@ -166,7 +169,8 @@
     <div class="hero-stats">
       <div class="hstat news"><b id="stat-news-today">20</b><span>国际新闻 · 今日新增</span></div>
       <div class="hstat ai"><b id="stat-ai-today">4</b><span>AI 动态 · 今日新增</span></div>
-      <div class="hstat"><b id="stat-latest">2026-08-01 17:05</b><span>最近数据刷新</span></div>
+      <div class="hstat cn"><b id="stat-cn-today">1</b><span>国内新闻 · 今日新增</span></div>
+      <div class="hstat"><b id="stat-latest">2026-08-01 17:36</b><span>最近数据刷新</span></div>
     </div>
   </section>
 
@@ -192,6 +196,14 @@
           <span class="daily-count" id="daily-ai-count">4 条</span>
         </div>
         <div class="daily-list" id="daily-ai-list"><!--DAILY_AI_START--><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/AYi_AInotes/status/2083401614623133921" target="_blank" rel="noopener noreferrer">GLM 5.2 助 Hugging Face 抵御秘密模型攻击</a><span class="d-src">行业 · X：阿易 AI Notes (@AYi_AInotes)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/ArtificialAnlys/status/2083306229074739285" target="_blank" rel="noopener noreferrer">DeepSeek V4 Flash 0731 开源，登顶开源模型前三</a><span class="d-src">模型 · X：Artificial Analysis (@ArtificialAnlys)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://tailscale.com/blog/hugging-face-intrusion" target="_blank" rel="noopener noreferrer">Tailscale 未能阻止 Hugging Face 入侵事件复盘</a><span class="d-src">观点 · Hacker News 热门（buzzing.cc 中文翻译）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/AYi_AInotes/status/2083221612778668388" target="_blank" rel="noopener noreferrer">animated-voiceover 开源：一人干翻动画工作室</a><span class="d-src">观点 · X：阿易 AI Notes (@AYi_AInotes)</span></div><!--DAILY_AI_END--></div>
+      </div>
+      <div class="daily-col cn">
+        <div class="daily-col-head">
+          <span class="daily-icon">🇨🇳</span>
+          <h3>国内新闻 · 今日要点</h3>
+          <span class="daily-count" id="daily-cn-count">1 条</span>
+        </div>
+        <div class="daily-list" id="daily-cn-list"><!--DAILY_CN_START--><div class="daily-item"><span class="d-dot"></span><a href="https://www.gov.cn/yaowen/liebiao/202608/content_7077269.htm" target="_blank" rel="noopener noreferrer">谋发展——深刻认识“最本质的特征”和“最大优势”</a><span class="d-src">其他 · 中国政府网·要闻</span></div><!--DAILY_CN_END--></div>
       </div>
     </div>
   </section>
@@ -229,6 +241,22 @@
         <span class="go">进入看板 <span class="arrow">→</span></span>
       </div>
     </a>
+
+    <a class="board cn" href="china-news.html">
+      <div class="board-icon">🇨🇳</div>
+      <h2>国内新闻看板</h2>
+      <p class="desc">中国国内重要政治动向：元首及政治局常委动态、重大会议、人事任免、政策发布。数据源：<b>中国政府网</b>（gov.cn）官方要闻 + 最新政策频道，国家级权威信源。⭐ 元首级标注 · 6 大分类 tab · 7 天滚动。</p>
+      <div class="tag-row">
+        <span class="tag hot">⭐ 元首动态</span>
+        <span class="tag">重要会议</span>
+        <span class="tag">政策发布</span>
+        <span class="tag">人事任免</span>
+      </div>
+      <div class="meta-row">
+        <div class="meta"><span>最近更新</span><b id="meta-cn-date">2026-08-01 17:36</b></div>
+        <span class="go">进入看板 <span class="arrow">→</span></span>
+      </div>
+    </a>
   </section>
 
   <section class="info-grid">
@@ -257,7 +285,7 @@
   var PLACEHOLDERS = {
     newsToday: "20",
     aiToday: "4",
-    latest: "2026-08-01 17:05",
+    latest: "2026-08-01 17:36",
     newsDate: "2026-08-01 17:04",
     aiDate: "08-01 17:05"
   };
@@ -269,9 +297,11 @@
   }
   fill("stat-news-today", "newsToday");
   fill("stat-ai-today", "aiToday");
+  fill("stat-cn-today", "cnToday");
   fill("stat-latest", "latest");
   fill("meta-news-date", "newsDate");
   fill("meta-ai-date", "aiDate");
+  fill("meta-cn-date", "cnDate");
 </script>
 </body>
 </html>

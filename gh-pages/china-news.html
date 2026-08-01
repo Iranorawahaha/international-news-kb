@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国内新闻看板 · 中国国内重要政治动向（近 7 天）</title>
+<style>
+  :root {
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    --bg: #f4f5f7; --panel: #fff; --line: #e4e7ee; --ink: #1c2434; --muted: #64707f;
+    --main: #8a1f1f; --main-dark: #6e1414; --main-soft: #fdf0ef;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.65; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* 顶栏 */
+  header.hero { background: linear-gradient(135deg, #6e1414 0%, #8a1f1f 55%, #b04a42 100%); color: #fff; border-radius: 14px; padding: 24px 26px 20px; box-shadow: 0 8px 22px rgba(110,20,20,.18); position: relative; overflow: hidden; }
+  header.hero::after { content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,.06); }
+  .hero-back { display: flex; align-items: center; gap: 8px; font-size: 12.5px; margin-bottom: 12px; position: relative; z-index: 1; flex-wrap: wrap; }
+  .hero-back a { color: #fff; text-decoration: none; background: rgba(255,255,255,.16); padding: 4px 12px; border-radius: 999px; font-weight: 600; transition: background .15s; }
+  .hero-back a:hover { background: rgba(255,255,255,.3); }
+  .hero-back-sep { opacity: .6; }
+  .hero-back-cur { background: rgba(255,255,255,.1); padding: 4px 12px; border-radius: 999px; }
+  .hero h1 { font-size: 21px; font-weight: 700; letter-spacing: .5px; }
+  .hero .sub { font-size: 12.5px; opacity: .88; margin-top: 5px; }
+  .hero .hero-meta { display: flex; gap: 10px; margin-top: 13px; flex-wrap: wrap; font-size: 12px; position: relative; z-index: 1; }
+  .hero .hero-meta span { background: rgba(255,255,255,.15); padding: 3px 11px; border-radius: 999px; }
+
+  /* 刷新条 */
+  .refresh-strip { background: #e8f7ee; border: 1px solid #bfe6cd; color: #1d7a46; border-radius: 10px; padding: 9px 16px; font-size: 12.5px; margin: 14px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .rs-dot { width: 8px; height: 8px; border-radius: 50%; background: #22a35e; box-shadow: 0 0 0 3px rgba(34,163,94,.18); }
+
+  /* 说明条 */
+  .tip-strip { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--main); border-radius: 10px; padding: 10px 16px; font-size: 12.5px; color: var(--muted); margin-bottom: 16px; }
+
+  /* KPI */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
+  .kpi-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .kpi-num { font-size: 24px; font-weight: 800; }
+  .kpi-main .kpi-num { color: var(--main); }
+  .kpi-label { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+
+  /* 分类 tab */
+  .tabbar { position: sticky; top: 0; z-index: 50; background: rgba(244,245,247,.92); backdrop-filter: blur(8px); padding: 10px 0 8px; margin-bottom: 14px; }
+  .tabbar-inner { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+  .tabbar-inner::-webkit-scrollbar { display: none; }
+  .tab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font-size: 13px; font-weight: 600; padding: 9px 14px; border-radius: 999px; cursor: pointer; transition: all .15s; font-family: inherit; }
+  .tab.active { background: var(--main); border-color: var(--main); color: #fff; }
+  .tab:hover { border-color: var(--main); }
+
+  /* 面板 */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .empty-panel { text-align: center; color: var(--muted); padding: 40px 0; font-size: 13px; }
+
+  /* 卡片 */
+  .card { display: flex; gap: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; transition: transform .15s, box-shadow .15s; align-items: center; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(28,36,52,.08); }
+  .card.imp-summit { border-left: 4px solid #c9a227; background: linear-gradient(90deg, #fdfaf0, var(--panel)); }
+  .card.imp-high { border-left: 4px solid var(--main); }
+  .card-idx { flex: 0 0 26px; height: 26px; border-radius: 8px; background: #f1f3f8; color: var(--muted); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .card-body { flex: 1; min-width: 0; }
+  .card-title { font-size: 14.5px; font-weight: 650; line-height: 1.5; }
+  .card-meta { display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
+  .meta-cat { font-size: 11.5px; color: var(--main); background: var(--main-soft); padding: 2px 9px; border-radius: 999px; font-weight: 600; }
+  .meta-src { font-size: 11.5px; color: var(--muted); }
+  .card-link { flex: 0 0 auto; font-size: 12px; color: var(--main); text-decoration: none; font-weight: 600; padding: 5px 12px; border: 1px solid var(--main); border-radius: 8px; transition: all .15s; }
+  .card-link:hover { background: var(--main); color: #fff; }
+  .tag-today { background: #22a35e; color: #fff; font-size: 10.5px; padding: 1px 7px; border-radius: 999px; margin-left: 6px; vertical-align: 1px; }
+
+  @media (max-width: 720px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<!-- ===== IRA-NAV: Ira 信息看板 统一导航（自动注入，勿删） ===== -->
+<div class="ira-nav" style="max-width:1400px;margin:14px auto 0;padding:9px 18px;background:#fff;border:1px solid #e4e7ee;border-radius:12px;box-shadow:0 2px 8px rgba(28,36,52,.06);display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:13px;">
+  <span style="font-weight:700;color:#1c2434;margin-right:4px;background:linear-gradient(120deg,#3b4a8c,#8a1f1f,#b4251a);-webkit-background-clip:text;background-clip:text;color:transparent;">Ira 信息看板</span>
+  <a href="./" style="color:#3b4a8c;text-decoration:none;font-weight:600;padding:4px 12px;border-radius:8px;background:#eef0fa;">🏠 门户首页</a>
+  <a href="international-news.html" style="color:#3b4a8c;text-decoration:none;font-weight:600;padding:4px 12px;border-radius:8px;background:#eef0fa;">🌍 国际新闻看板</a>
+  <a href="ai-company-intel.html" style="color:#b4251a;text-decoration:none;font-weight:600;padding:4px 12px;border-radius:8px;background:#fdf0ef;">🤖 AI 动向看板</a>
+  <a href="china-news.html" style="color:#8a1f1f;text-decoration:none;font-weight:600;padding:4px 12px;border-radius:8px;background:#fdf0ef;">🇨🇳 国内新闻看板</a>
+  <span style="color:#a0a8b5;margin-left:auto;font-size:12px;">每日 09:30 自动刷新</span>
+</div>
+<!-- ===== /IRA-NAV ===== -->
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-back">
+      <a href="https://iranorawahaha.github.io/international-news-kb/" target="_blank" rel="noopener noreferrer">🏠 Ira 信息看板</a>
+      <span class="hero-back-sep">|</span>
+      <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html" target="_blank" rel="noopener noreferrer">🌍 国际新闻看板</a>
+      <span class="hero-back-sep">|</span>
+      <a href="https://iranorawahaha.github.io/international-news-kb/ai-company-intel.html" target="_blank" rel="noopener noreferrer">🤖 AI 动向看板</a>
+      <span class="hero-back-sep">|</span>
+      <span class="hero-back-cur">🇨🇳 国内新闻看板</span>
+    </div>
+    <h1>国内新闻看板 · 中国国内重要政治动向</h1>
+    <p class="sub">信源：中国政府网要闻 + 最新政策（国家级权威信源）· 聚焦元首及政治局常委动态、重要会议、人事任免、政策发布 · Ira 信息看板 · 仅供参考交流</p>
+    <div class="hero-meta">
+      <span>📅 时间窗：2026-07-25 ~ 2026-08-01（近 7 天）</span>
+      <span>🎯 要闻总数：78 条（去重）</span>
+      <span>🆕 今日新增：1 条</span>
+      <span>⭐ 元首级：22 条</span>
+    </div>
+  </header>
+
+  <div class="refresh-strip">
+    <span class="rs-dot"></span>
+    <b>最近刷新：</b>2026-08-01 17:36 北京时间（每日自动刷新） ·
+    <b>今日新增 1 条</b> ·
+    数据快照，滚动 7 天窗口
+  </div>
+
+  <div class="tip-strip">💡 <b>数据源说明：</b>全部来自中国政府网（gov.cn）官方要闻与最新政策频道，已过滤营销号/文娱/小道消息等非权威内容。⭐ 为元首级（习近平/国家主席/中央军委相关），高亮卡片为高分要闻。</div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card kpi-main"><div class="kpi-num">78</div><div class="kpi-label">要闻总数（去重后）</div></div>
+    <div class="kpi-card"><div class="kpi-num">22</div><div class="kpi-label">⭐ 元首级要闻</div></div>
+    <div class="kpi-card"><div class="kpi-num">1</div><div class="kpi-label">今日新增</div></div>
+    <div class="kpi-card"><div class="kpi-num">8</div><div class="kpi-label">覆盖天数</div></div>
+  </div>
+
+  <div class="tabbar"><div class="tabbar-inner"><button class="tab" data-cat="元首动态">👑 元首动态（31）</button><button class="tab" data-cat="常委动态">🧭 常委动态（4）</button><button class="tab" data-cat="重要会议">🏛 重要会议（4）</button><button class="tab" data-cat="人事任免">📋 人事任免（1）</button><button class="tab" data-cat="政策发布">📜 政策发布（9）</button><button class="tab active" data-cat="其他">📌 其他（29）</button></div></div>
+
+  <div class="tab-panel " id="panel-元首动态"><div class="card imp-summit">
+          <div class="card-idx">1</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐《求是》杂志发表习近平总书记重要文章《加快建设健康中国》</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077148.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">2</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】中央军委主席习近平签署通令 给1名个人记功</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/31/VIDEHIOaW1OMOgdWvsnyGKqj260731.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">3</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】习近平在中共中央政治局第二十七次集体学习时强调 强化政治引领 深化创新发展 高质量推进国防和军队现代化</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/31/VIDEcBQMuI6rtfcFFsaehf69260731.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">4</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐习近平：加快建设健康中国</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077151.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">5</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐李强主持召开国务院常务会议 学习贯彻习近平总书记关于上半年经济形势和做好下半年经济工作的重要讲话精神</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077210.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">6</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】中共中央政治局召开会议 决定召开二十届五中全会 分析研究当前经济形势和经济工作 中共中央总书记习近平主持会议</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/30/VIDE5qpJTTeXfKV3vVP5uvV8260730.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">7</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】就当前经济形势和下半年经济工作 中共中央召开党外人士座谈会 习近平主持并发表重要讲话</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/30/VIDEfw9aPrBbq2cc8VbFPRdr260730.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">8</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐向着建军一百年奋斗目标阔步前行——以习近平同志为核心的党中央引领人民军队书写强军兴军新篇章</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077085.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">9</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐总书记的人民情怀 | “始终同人民同呼吸、共命运、心连心”</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077020.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">10</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】习近平致电祝贺诺瓦当选连任圣多美和普林西比总统</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/29/VIDErK42PN9WCKKIsoO7FRkp260729.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">11</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐习近平主席特使、科技部部长阴和俊出席秘鲁总统权力交接仪式</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076937.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">12</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐厚植家国情怀 携手筑梦前行——习近平总书记对侨务工作重要指示激励海内外中华儿女为强国建设、民族复兴伟业团结奋斗</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076886.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">13</div>
+          <div class="card-body">
+            <h3 class="card-title">【视频】李强会见斯洛伐克总统</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/29/VIDE5FJcfhYSmWrDrdhnoDqj260729.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">14</div>
+          <div class="card-body">
+            <h3 class="card-title">李强会见斯洛伐克总统佩列格里尼</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076976.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">15</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】习近平举行仪式欢迎斯洛伐克总统访华</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/28/VIDE3g0p2r5a0fi8QtMkI5W6260728.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">16</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】习近平同斯洛伐克总统会谈</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/28/VIDEGyTkTxv2pvmezlr3240F260728.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">17</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】习近平对侨务工作作出重要指示强调 更好凝聚侨心侨力 促进海内外中华儿女团结奋斗 王沪宁出席全国侨务工作会议并讲话</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/28/VIDEGRqwk36Af3WfvAae2B4q260728.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">18</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐习近平同斯洛伐克总统佩列格里尼会谈</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076795.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">19</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐习近平对侨务工作作出重要指示</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076776.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">20</div>
+          <div class="card-body">
+            <h3 class="card-title">全国政协召开“加快农业农村现代化”专题协商会 王沪宁出席并讲话</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076849.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">21</div>
+          <div class="card-body">
+            <h3 class="card-title">【视频】何立峰出席2026年亚太经合组织林业部长级会议开幕式并致辞</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/28/VIDES5jlPFBwWvHPSct7meEo260728.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">22</div>
+          <div class="card-body">
+            <h3 class="card-title">王毅出席全球发展倡议5周年高级别会议</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076871.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">23</div>
+          <div class="card-body">
+            <h3 class="card-title">王毅将出席全球发展倡议5周年高级别会议</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076747.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">24</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐【视频】习近平同巴西总统通电话</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/27/VIDEeBqNJydkEKNaPT3gjJXJ260727.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">25</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐习近平同巴西总统卢拉通电话</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076658.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">26</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐总书记以“三个有利于”指引世界遗产申报保护</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076649.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">27</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐“中国梦是国家梦、民族梦，也是每个中华儿女的梦”——习近平总书记关于侨务工作的重要论述凝聚共同致力民族复兴的强大力量</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076640.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">28</div>
+          <div class="card-body">
+            <h3 class="card-title">⭐擦亮中华文明重要名片——习近平文化思想引领中国世界遗产申报保护工作壮阔实践</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076607.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">29</div>
+          <div class="card-body">
+            <h3 class="card-title">吉尔吉斯斯坦总统扎帕罗夫会见王毅</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076625.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">30</div>
+          <div class="card-body">
+            <h3 class="card-title">王毅会见俄罗斯外长拉夫罗夫</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076594.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">31</div>
+          <div class="card-body">
+            <h3 class="card-title">王毅出席上海合作组织外长会</h3>
+            <div class="card-meta">
+              <span class="meta-cat">👑 元首动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076592.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div></div><div class="tab-panel " id="panel-常委动态"><div class="card imp-summit">
+          <div class="card-idx">1</div>
+          <div class="card-body">
+            <h3 class="card-title">【视频】李强主持召开国务院常务会议</h3>
+            <div class="card-meta">
+              <span class="meta-cat">🧭 常委动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/31/VIDEJ3pzFxXd8LwTosYLJ1JV260731.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">2</div>
+          <div class="card-body">
+            <h3 class="card-title">李强签署国务院令 公布《国务院关于出境入境管理的规定》</h3>
+            <div class="card-meta">
+              <span class="meta-cat">🧭 常委动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077180.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">3</div>
+          <div class="card-body">
+            <h3 class="card-title">【视频】李强在河北唐山调研慰问</h3>
+            <div class="card-meta">
+              <span class="meta-cat">🧭 常委动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://tv.cctv.com/2026/07/28/VIDERl3T8opGiOouHAPLb7m5260728.shtml" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-summit">
+          <div class="card-idx">4</div>
+          <div class="card-body">
+            <h3 class="card-title">李强在河北唐山调研慰问时强调 持续提升防灾减灾救灾能力 切实保障人民群众生命财产安全</h3>
+            <div class="card-meta">
+              <span class="meta-cat">🧭 常委动态</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076821.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div></div><div class="tab-panel " id="panel-重要会议"><div class="card imp-high">
+          <div class="card-idx">1</div>
+          <div class="card-body">
+            <h3 class="card-title">推动经济持续向新向优向好发展——从中央政治局会议看下半年经济工作着力点</h3>
+            <div class="card-meta">
+              <span class="meta-cat">🏛 重要会议</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077122.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-high">
+          <div class="card-idx">2</div>
+          <div class="card-body">
+            <h3 class="card-title">陈文清在全国扫黑除恶专项斗争视频会议上强调 扎实开展深化扫黑除恶专项斗争 努力建设更高水平的平安中国</h3>
+            <div class="card-meta">
+              <span class="meta-cat">🏛 重要会议</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077169.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-high">
+          <div class="card-idx">3</div>
+          <div class="card-body">
+            <h3 class="card-title">APEC林业部长级会议通过联合声明</h3>
+            <div class="card-meta">
+              <span class="meta-cat">🏛 重要会议</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076848.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card imp-high">
+          <div class="card-idx">4</div>
+          <div class="card-body">
+            <h3 class="card-title">谌贻琴在全国妇联常委（扩大）会议上强调 进一步加强妇女儿童合法权益保障</h3>
+            <div class="card-meta">
+              <span class="meta-cat">🏛 重要会议</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076701.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div></div><div class="tab-panel " id="panel-人事任免"><div class="card ">
+          <div class="card-idx">1</div>
+          <div class="card-body">
+            <h3 class="card-title">国务院任免国家工作人员（2026年7月31日）</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📋 人事任免</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077171.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div></div><div class="tab-panel " id="panel-政策发布"><div class="card ">
+          <div class="card-idx">1</div>
+          <div class="card-body">
+            <h3 class="card-title">《工业绿色低碳发展“十五五”规划》发布</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7077143.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">2</div>
+          <div class="card-body">
+            <h3 class="card-title">国务院关于出境入境管理的规定</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/zhengce/content/202607/content_7077172.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">3</div>
+          <div class="card-body">
+            <h3 class="card-title">国务院关于印发《知识产权保护和运用“十五五”规划》的通知</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/zhengce/content/202607/content_7077199.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">4</div>
+          <div class="card-body">
+            <h3 class="card-title">国务院印发《知识产权保护和运用“十五五”规划》</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077206.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">5</div>
+          <div class="card-body">
+            <h3 class="card-title">《疾病预防控制“十五五”规划》发布</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7076751.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">6</div>
+          <div class="card-body">
+            <h3 class="card-title">中共中央 国务院转发《中央宣传部、司法部关于开展法治宣传教育的第九个五年规划（2026－2030年）》</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076692.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">7</div>
+          <div class="card-body">
+            <h3 class="card-title">国办印发《关于国务院行政复议案件处理程序的若干规定》的通知</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·最新政策</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/zhengce/content/202607/content_7076684.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">8</div>
+          <div class="card-body">
+            <h3 class="card-title">国务院办公厅印发《关于国务院行政复议案件处理程序的若干规定》</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076689.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">9</div>
+          <div class="card-body">
+            <h3 class="card-title">国务院办公厅印发《关于国务院行政复议案件处理程序的若干规定》的通知</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📜 政策发布</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/zhengce/content/202607/content_7076684.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div></div><div class="tab-panel active" id="panel-其他"><div class="card ">
+          <div class="card-idx">1</div>
+          <div class="card-body">
+            <h3 class="card-title">谋发展——深刻认识“最本质的特征”和“最大优势”<span class="tag-today">🆕 今日</span></h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202608/content_7077269.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">2</div>
+          <div class="card-body">
+            <h3 class="card-title">今年7550亿元中央预算内投资基本下达完毕</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7077138.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">3</div>
+          <div class="card-body">
+            <h3 class="card-title">中国智造加速出海 人工智能产品远销全球</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077105.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">4</div>
+          <div class="card-body">
+            <h3 class="card-title">何立峰与美国财政部长贝森特、贸易代表格里尔举行视频通话</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077110.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">5</div>
+          <div class="card-body">
+            <h3 class="card-title">图表：2025年我国“三新”经济增加值占GDP比重达18.39%</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7077092.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">6</div>
+          <div class="card-body">
+            <h3 class="card-title">我国物流总量稳步扩大 需求结构不断优化</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7077104.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">7</div>
+          <div class="card-body">
+            <h3 class="card-title">【“十五五”开好局起好步】2030年我国知识产权综合实力进一步增强</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076999.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">8</div>
+          <div class="card-body">
+            <h3 class="card-title">上半年全国社会物流总额为181.1万亿元</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076933.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">9</div>
+          <div class="card-body">
+            <h3 class="card-title">上半年支持科技创新和制造业发展减税降费退税1.91万亿元——税收大数据勾勒经济向好图景</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7076887.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">10</div>
+          <div class="card-body">
+            <h3 class="card-title">人民日报评论员：促进团结奋斗 汇聚磅礴力量</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076918.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">11</div>
+          <div class="card-body">
+            <h3 class="card-title">图表：2026年上半年全国社会物流总额为181.1万亿元</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7076970.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">12</div>
+          <div class="card-body">
+            <h3 class="card-title">【“十五五”开好局起好步】上半年税收收入稳步增长 新质生产力发展成效明显</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076880.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">13</div>
+          <div class="card-body">
+            <h3 class="card-title">各地区各部门全力应对台风“红霞”</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7076750.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">14</div>
+          <div class="card-body">
+            <h3 class="card-title">图表：2025年全国学生资助资金投入超过3900亿元</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7076836.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">15</div>
+          <div class="card-body">
+            <h3 class="card-title">强化汛期保障，多地多部门多措并举确保民众平安出行</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7076826.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">16</div>
+          <div class="card-body">
+            <h3 class="card-title">紧急预拨1.8亿元 支持广东、辽宁等6省做好防汛防台风应急抢险救灾工作</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076866.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">17</div>
+          <div class="card-body">
+            <h3 class="card-title">“红霞”影响持续 各地各部门采取措施积极应对</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076726.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">18</div>
+          <div class="card-body">
+            <h3 class="card-title">【“十五五”开好局起好步】推动残疾人事业全面发展高质量发展</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076724.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">19</div>
+          <div class="card-body">
+            <h3 class="card-title">凝聚侨心侨力 共襄复兴伟业——新时代侨务工作综述</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076650.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">20</div>
+          <div class="card-body">
+            <h3 class="card-title">图表：2026年上半年全国规模以上工业企业利润增长18.7%</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7076699.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">21</div>
+          <div class="card-body">
+            <h3 class="card-title">多部门联合研判“红霞”发展趋势，部署重点工作 做好灾害救助，尽快恢复生产生活秩序</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7076647.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">22</div>
+          <div class="card-body">
+            <h3 class="card-title">第十二批中央单位援疆干部人才赴疆工作</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076710.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">23</div>
+          <div class="card-body">
+            <h3 class="card-title">台风“红霞”登陆 各地各部门全力应对</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076641.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">24</div>
+          <div class="card-body">
+            <h3 class="card-title">各地区各部门全力应对台风“红霞”和强降雨天气</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7076628.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">25</div>
+          <div class="card-body">
+            <h3 class="card-title">我国成为世界上少数红树林面积持续增加的国家之一</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076642.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">26</div>
+          <div class="card-body">
+            <h3 class="card-title">截至6月底我国智能算力规模同比增长177%</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/lianbo/202607/content_7076626.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">27</div>
+          <div class="card-body">
+            <h3 class="card-title">今年以来消费品以旧换新销售额超万亿元</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076611.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">28</div>
+          <div class="card-body">
+            <h3 class="card-title">全国秋粮田管有序推进</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076612.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div><div class="card ">
+          <div class="card-idx">29</div>
+          <div class="card-body">
+            <h3 class="card-title">各地各部门积极部署应对台风“红霞”</h3>
+            <div class="card-meta">
+              <span class="meta-cat">📌 其他</span>
+              <span class="meta-src">来源：中国政府网·要闻</span>
+            </div>
+          </div>
+          <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202607/content_7076613.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+        </div></div>
+
+</div>
+<script>
+  (function() {
+    var tabs = document.querySelectorAll('.tab');
+    tabs.forEach(function(t) {
+      t.addEventListener('click', function() {
+        tabs.forEach(function(x) { x.classList.remove('active'); });
+        t.classList.add('active');
+        var panels = document.querySelectorAll('.tab-panel');
+        panels.forEach(function(p) { p.classList.remove('active'); });
+        var panel = document.getElementById('panel-' + t.getAttribute('data-cat'));
+        if (panel) panel.classList.add('active');
+      });
+    });
+  })();
+</script>
+</body>
+</html>
