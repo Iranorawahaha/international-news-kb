@@ -1,9 +1,829 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2026-08-01 17:36",
+  "version": "2.0",
+  "lastUpdated": "2026-08-01 18:28",
   "retentionDays": 7,
   "archive": {
     "2026-08-01": [
+      {
+        "title": "习近平强党兴党的故事｜治国之要 首在用人",
+        "url": "https://news.cctv.com/2026/08/01/ARTI6efFg56mrO7nVGMsUuC3260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "习近平：确保枪杆子永远听党指挥",
+        "url": "https://x0.ifengimg.com/ucms/2026_31/EC7A3D38D0D53A1AB923C0D67C07D0623A0F322B_size865_w968_h545.png",
+        "date": "2026-08-01",
+        "source": "凤凰新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "学习卡丨习近平：确保枪杆子永远听党指挥",
+        "url": "https://news.cctv.com/2026/08/01/ARTIRydhAteLLmmz6hYglOTq260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "中央政治局会议，如何部署下半年？",
+        "url": "https://news.cctv.com/2026/08/01/ARTI6dCMZNpNWwIyr9FDDb5G260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "时政新闻眼丨八一建军节前夕这次集体学习，传递了哪些重要信息？",
+        "url": "https://news.cctv.com/2026/08/01/ARTIVpqDbN6IpwhazDlyXvDr260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "国务院任免国家工作人员",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172572.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "人事任免",
+        "priority_score": 82,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "《微短剧发展管理办法》9月1日起施行",
+        "url": "https://news.cctv.com/2026/08/01/ARTI5u2geng5CkJk1qAT5mcr260731.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "《黄岩岛国家级自然保护区管理办法》发布",
+        "url": "https://news.cctv.com/2026/08/01/ARTIZhxOR02wNWChA301CBUt260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "公布《国务院关于出境入境管理的规定》",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172555.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "如何推动知识产权事业从“量”到“质”实现转变 这份“十五五”规划画出路线图↓",
+        "url": "https://news.cctv.com/2026/08/01/ARTIvHqRYCNW9MFxDGEEbnMf260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "上半年全国电力市场交易电量同比增长24.2%",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172553.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "下半年宏观政策将如何“发力+提效”确保完成全年预期目标任务？快速了解↓",
+        "url": "https://news.cctv.com/2026/08/01/ARTI7y8ZcInHLlK8UKAfsdpf260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "不断推动退役军人工作高质量发展——国新办发布会展望“十五五”时期退役军人工作发展前景",
+        "url": "https://news.cctv.com/2026/08/01/ARTIlN3AnDFBLuylP0f0HlYR260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "专家解读：下半年经济工作怎么干？",
+        "url": "https://news.cctv.com/2026/08/01/ARTIirgYynLq8fSeUYvE1fXN260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "世界能源贸易两大咽喉同时承压，中国会受到多大影响？",
+        "url": "https://news.ifeng.com/c/8vEgLYHqYzM",
+        "date": "2026-08-01",
+        "source": "凤凰新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "中乌AEO互认协议“落地” 我国外贸企业抢抓政策红利加速布局中亚市场",
+        "url": "https://news.cctv.com/2026/08/01/ARTItZzfcJsseldYwydnzubB260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "优化财政金融协同促内需政策释放出积极信号 下半年中国经济工作这样干→",
+        "url": "https://news.cctv.com/2026/08/01/ARTIaCfQVD4QtplI5tTVNsh3260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "健全金融机构治理打出“组合拳” 防范和整治大股东操纵和内部人控制问题",
+        "url": "https://news.cctv.com/2026/08/01/ARTIXW4XG00juc2Aj3UQIY3I260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "商务部新闻发言人就美国将中国企业列入所谓涉疆法案实体清单答记者问",
+        "url": "https://news.cctv.com/2026/08/01/ARTIoqULUub5Revvv1Y19RV2260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "多组数据勾勒上半年保险业“成绩单” 经济减震器和社会稳定器作用凸显",
+        "url": "https://news.cctv.com/2026/08/01/ARTI058tbiYrWTG8QsSTbi6R260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "夯实根基向未来：量子从实验室走向产业",
+        "url": "https://news.cctv.com/2026/08/01/ARTIdHXpneKJ3B0RCigF8aM0260731.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "用好各种机遇和优势 推动高质量发展行稳致远",
+        "url": "https://news.cctv.com/2026/08/01/ARTIxMVagonDW6a0lcURdIvb260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "美国对40余家中国企业实施单边制裁，商务部回应",
+        "url": "https://x0.ifengimg.com/ucms/2026_31/B5E06CBAC03386B86E49A79EB2950DD42FDA2454_size285_w768_h432.png",
+        "date": "2026-08-01",
+        "source": "凤凰新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "解读供销服务网“五年升级蓝图” 粮食安全与乡村振兴同步推进、双向赋能",
+        "url": "https://news.cctv.com/2026/08/01/ARTIjjrzk1TT7ES4uUNnxR28260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "99载浴血荣光！新时代人民军队整齐队伍向前进、淬火成钢向一流",
+        "url": "https://news.cctv.com/2026/08/01/ARTItXJjseYOa23npvX7hTWO260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "“中国共产党展现了卓越的自我革新能力”",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172563.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "“新品种+新技术”让中低产田变身“高产田” 智慧农业照进现实增收提产",
+        "url": "https://news.cctv.com/2026/08/01/ARTIfcuP9yvZXCUkk492k4gX260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "“空调自由”背后 有这四道“保险”在托底",
+        "url": "https://news.cctv.com/2026/08/01/ARTIhThMuVcinFoVno5ilh4z260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "三大运营商整治号卡乱象 低价流量卡优惠套路要留心",
+        "url": "https://news.cctv.com/2026/08/01/ARTIQMFQuCk6UtlKzK8TTiUm260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "三部门调拨1.1万件中央救灾物资支持吉林、黑龙江救灾救助工作",
+        "url": "https://news.cctv.com/2026/08/01/ARTIXdROOu5GzONoU3afbDUX260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "上海发布中心城区冰雹黄色预警，目前四预警高挂",
+        "url": "https://news.cctv.com/2026/08/01/ARTIaCKPQeigMiAclKTnkqr2260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "东北部分地区最高温超40℃ 专家详解闷热天气成因",
+        "url": "https://news.cctv.com/2026/08/01/ARTIvy4aELqWjFvIdoC5btja260731.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "两部门联合发布红色山洪灾害气象预警",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172575.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "中华人民共和国外交部关于菲律宾共和国在中国领土黄岩岛划设所谓“领海基线”的声明",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172564.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "中国国家博物馆严正声明：从未在馆外开展扫码入群、信息采集活动",
+        "url": "https://news.cctv.com/2026/08/01/ARTIiy46wWboqWwZtruAOo8M260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "中国海警位黄岩岛附近海域组织维权执法管控演练",
+        "url": "https://news.cctv.com/2026/08/01/ARTIDLCLP6QCtZuHISxsMHqV260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "中央纪委国家监委对群众身边不正之风和腐败问题集中整治工作再调度",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172558.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "习语丨“安享和平是人民之福，保卫和平是人民军队之责”",
+        "url": "https://news.cctv.com/2026/08/01/ARTI6zfWMAgyVBRWyTn0fT11260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "五个关键词，读懂王戟的选择与坚守",
+        "url": "https://news.cctv.com/2026/08/01/ARTIgs6K9nvxInxs6PKNjxQW260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "人民军队制胜向强",
+        "url": "https://military.cctv.com/2026/08/01/ARTIjxv5HvvJRclTu6Pvqk4G260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "从文化底蕴到市井风情 河南用最“中”的方式圈粉全世界",
+        "url": "https://news.cctv.com/2026/08/01/ARTIZyQn4NfZ6CXxz5hTZOU7260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "以心相交  以知促汇",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172566.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "伟大征程 | 坚定不移听党指挥 向着世界一流军队迈进",
+        "url": "https://news.cctv.com/2026/08/01/ARTIqLwOz9NPkm7pdZ1kX7AN260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "传习录丨强国必须强军，军强才能国安",
+        "url": "https://news.cctv.com/2026/08/01/ARTI62flxfWZduIlCDQIuN2F260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "传承红色基因、矢志强军保家卫国！各地多种形式庆祝中国人民解放军建军99周年",
+        "url": "https://news.cctv.com/2026/08/01/ARTIm0jB5jnxZ5jxUGv5cGpb260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "全国用电负荷三创新高 揭秘“电力超市”如何实现畅通互济？",
+        "url": "https://news.cctv.com/2026/08/01/ARTIFSHO8b6YfuCu5V5mEKg8260731.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "加快建设健康中国",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172548.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "助力老挝打造“东南亚蓄电池”",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172561.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "北斗三号卫星导航系统开通六年来“大显身手” “十五五”时期将更上一层楼",
+        "url": "https://news.cctv.com/2026/08/01/ARTIoxhtwhPLSAYGl8lz5M8X260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "南部战区位黄岩岛领海领空和周边海空域开展多个实战化科目演练",
+        "url": "https://news.cctv.com/2026/08/01/ARTIwtaKegEpss2mOs8GMi43260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "各地分类施策开展农事作业 “良机+良技+良法”助力夺取秋粮和全年粮食丰收",
+        "url": "https://news.cctv.com/2026/08/01/ARTIPzwweGSzrh7HXcMXdhEo260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "向前一步走——写在中国人民解放军建军99周年之际",
+        "url": "https://news.cctv.com/2026/08/01/ARTIQD1hYPXq4LrZNNgL0Ul8260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "周末中东部仍有大范围高温桑拿天 四川陕西等地警惕降雨叠加致灾",
+        "url": "https://news.cctv.com/2026/08/01/ARTI6EkW2AkVngwi9y4wVBTh260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "四川继续发布暴雨黄色预警",
+        "url": "https://news.cctv.com/2026/08/01/ARTIrbXyEDlgY7TzPg7WktB1260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "夏日“宝藏秘境”解锁限定体验 满目盛夏风情皆是出游佳选 你心动了吗？",
+        "url": "https://news.cctv.com/2026/08/01/ARTIYViPaQ8LMDewPO5H5mJ5260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "庆祝中国人民解放军建军99周年｜海军：驰骋万里深蓝 深耕新质战斗力建设",
+        "url": "https://news.cctv.com/2026/08/01/ARTI3JByghAdb4XiSI6UEyus260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "庆祝中国人民解放军建军99周年｜空军：在新征程上飞出大国之翼胜战航迹",
+        "url": "https://news.cctv.com/2026/08/01/ARTIQLSjJMK1SgSxMKBev8gO260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "庆祝中国人民解放军建军99周年｜陆军：赓续红色血脉 锻造胜战铁拳",
+        "url": "https://news.cctv.com/2026/08/01/ARTIFHvGiQzw9V9qkb86VVkw260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "庆祝中国共产党成立105周年优秀舞台艺术作品展演在京拉开帷幕",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172568.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "强化政治引领  深化创新发展 高质量推进国防和军队现代化",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172547.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "截至2025年末 全国参加基本养老保险超10亿人",
+        "url": "https://news.cctv.com/2026/08/01/ARTIZfQIPI2QJJ0TMq22KW53260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "扎实开展深化扫黑除恶专项斗争  努力建设更高水平的平安中国",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172557.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "持续向新向优向好发展（今日谈）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172554.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "携手共绘中泰繁荣新篇章（大使随笔）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172562.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "昆明：游客参观云南陆军讲武堂",
+        "url": "https://photo.cctv.com/2026/08/01/PHOADVtqaX8jJVfgLJnFXyVs260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "暑运绘就“流动中国”活力画卷 消夏避暑旅游列车解锁新场景、拓展消费新空间",
+        "url": "https://news.cctv.com/2026/08/01/ARTI7bMyHQfisijcklQjRQt0260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "暑运过半 全国铁路累计发送旅客4.32亿人次",
+        "url": "https://news.cctv.com/2026/08/01/ARTIeaglm4kVh3btc62lRIFb260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "本轮厄尔尼诺到底有多强？将给我国带来哪些影响？一文了解↓",
+        "url": "https://news.cctv.com/2026/08/01/ARTIcq4D3TdNSoYJmNuxrk56260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "每天10分钟，心血管悄悄在变好",
+        "url": "https://news.cctv.com/2026/08/01/ARTItlC5OMpasPVjOBFggP0j260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "水利部针对黑龙江省启动洪水防御Ⅳ级应急响应",
+        "url": "https://news.cctv.com/2026/08/01/ARTITmuAS7OSnkMOY6U7COyD260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "河北省委主要负责同志职务调整",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172573.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "海南首个“华龙一号”核电机组并网发电 探访这座清洁能源“重器”的安全密码",
+        "url": "https://news.cctv.com/2026/08/01/ARTI0SOf70zkKppGiLI2x7jc260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "深刻认识“最本质的特征”和“最大优势”",
+        "url": "https://news.cctv.com/2026/08/01/ARTIYsz9gBtesLl0g4zw3tvm260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "湖北宣恩：游绿水青山 享夏日清凉",
+        "url": "https://photo.cctv.com/2026/08/01/PHOAqbLftV66svthtWGwYCBy260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "热烈庆祝中国人民解放军建军99周年",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172570.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "煤电占比首次跌破50% 绿电如何持续壮大？",
+        "url": "https://news.cctv.com/2026/08/01/ARTI8ktjgHbRz5DtYUbdkLs2260731.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "用好机遇优势，确保实现全年预期目标",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172556.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "砥砺意志品质  永葆奋斗精神",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172569.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "第五届链博会推介会在芝加哥举办",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172565.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "紧急修复铁路线、无人机空投保供应……多地“汛”速出击保通保畅保安全",
+        "url": "https://news.cctv.com/2026/08/01/ARTIKf8PNlgc2aNYHqNWSZl6260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "联合发布十二名“最美新时代革命军人”",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172567.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "解放军驻澳门部队举行招待会庆祝建军99周年",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172571.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
       {
         "title": "谋发展——深刻认识“最本质的特征”和“最大优势”",
         "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077269.htm",
@@ -12,7 +832,107 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "贷款“明白纸”，让借款人不再“雾里看花”（政策解读）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172559.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "超强台风“白海豚”向西偏北方向移动 强度变化不大",
+        "url": "https://news.cctv.com/2026/08/01/ARTIYDjQlnxp7viRQcU2jRfE260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "郑州清晨现“火云压城”风光",
+        "url": "https://photo.cctv.com/2026/08/01/PHOALbPupa3h5kveNSOjKWhJ260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "重庆：“星河夜漂”乐享夏日清凉",
+        "url": "https://photo.cctv.com/2026/08/01/PHOAq8xm01Nfu95tPrFFTfoc260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "陈新武任重庆市代市长",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/01/content_30172574.html",
+        "date": "2026-08-01",
+        "source": "人民日报",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "降雨致四川多地受灾 已提前避险转移89696人",
+        "url": "https://news.cctv.com/2026/08/01/ARTIFraWH7N694gQ7MANRd72260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "雄商高铁河北段进入运行试验阶段",
+        "url": "https://news.cctv.com/2026/08/01/ARTIP6gYEbTtWohC4MHzz8au260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "青海海南州兴海县发生3.9级地震，震源深度10千米",
+        "url": "https://news.cctv.com/2026/08/01/ARTIm6W6YEENsMw4AdLhG0if260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "非遗“守”艺人：她把瓷器故事讲给世界听",
+        "url": "https://people.cctv.com/2026/08/01/ARTIuTHAmKObbJc3QoHF4VSd260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "高温强降雨和桑拿天持续 请注意防范",
+        "url": "https://news.cctv.com/2026/08/01/ARTIXkOeGI7muiPUXaE2H3Tm260801.shtml",
+        "date": "2026-08-01",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
       }
     ],
     "2026-07-31": [
@@ -24,27 +944,37 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
-        "title": "【视频】中央军委主席习近平签署通令 给1名个人记功",
+        "title": "中央军委主席习近平签署通令 给1名个人记功",
         "url": "https://tv.cctv.com/2026/07/31/VIDEHIOaW1OMOgdWvsnyGKqj260731.shtml",
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
-        "title": "【视频】习近平在中共中央政治局第二十七次集体学习时强调 强化政治引领 深化创新发展 高质量推进国防和军队现代化",
+        "title": "中央宣传部 中央军委政治工作部联合发布12名“最美新时代革命军人”",
+        "url": "https://news.cctv.com/2026/07/31/ARTIXGFJ3Xsg84cfIHtnFlIK260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "习近平在中共中央政治局第二十七次集体学习时强调 强化政治引领 深化创新发展 高质量推进国防和军队现代化",
         "url": "https://tv.cctv.com/2026/07/31/VIDEcBQMuI6rtfcFFsaehf69260731.shtml",
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "习近平：加快建设健康中国",
@@ -54,7 +984,7 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "李强主持召开国务院常务会议 学习贯彻习近平总书记关于上半年经济形势和做好下半年经济工作的重要讲话精神",
@@ -64,17 +994,17 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
-        "title": "【视频】李强主持召开国务院常务会议",
+        "title": "李强主持召开国务院常务会议",
         "url": "https://tv.cctv.com/2026/07/31/VIDEJ3pzFxXd8LwTosYLJ1JV260731.shtml",
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "常委动态",
-        "priority_score": 97,
+        "priority_score": 95,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "李强签署国务院令 公布《国务院关于出境入境管理的规定》",
@@ -84,7 +1014,7 @@
         "category": "常委动态",
         "priority_score": 95,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "推动经济持续向新向优向好发展——从中央政治局会议看下半年经济工作着力点",
@@ -92,9 +1022,9 @@
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "重要会议",
-        "priority_score": 85,
+        "priority_score": 88,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "陈文清在全国扫黑除恶专项斗争视频会议上强调 扎实开展深化扫黑除恶专项斗争 努力建设更高水平的平安中国",
@@ -102,9 +1032,19 @@
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "今年7550亿元中央预算内投资基本下达完毕",
+        "url": "https://www.gov.cn/lianbo/202607/content_7077138.htm",
+        "date": "2026-07-31",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
         "priority_score": 85,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "国务院任免国家工作人员（2026年7月31日）",
@@ -112,9 +1052,9 @@
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "人事任免",
-        "priority_score": 80,
+        "priority_score": 82,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "《工业绿色低碳发展“十五五”规划》发布",
@@ -122,9 +1062,9 @@
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "国务院关于出境入境管理的规定",
@@ -132,9 +1072,9 @@
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "国务院关于印发《知识产权保护和运用“十五五”规划》的通知",
@@ -142,9 +1082,9 @@
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "国务院印发《知识产权保护和运用“十五五”规划》",
@@ -152,41 +1092,121 @@
         "date": "2026-07-31",
         "source": "中国政府网·要闻",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
-        "title": "今年7550亿元中央预算内投资基本下达完毕",
-        "url": "https://www.gov.cn/lianbo/202607/content_7077138.htm",
+        "title": "市场监管总局开展光伏行业价格合规指导",
+        "url": "https://news.cctv.com/2026/07/31/ARTIKGjBmW0IRtEFw9cqAyig260731.shtml",
         "date": "2026-07-31",
-        "source": "中国政府网·要闻",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "政策发力提效 推动经济持续向新向优向好发展",
+        "url": "https://news.cctv.com/2026/07/31/ARTI42fOSxf3vq2LlEoCeD2N260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "焦点访谈｜持之以恒推进全面从严治党 推动经济持续向新向优向好发展",
+        "url": "https://news.cctv.com/2026/07/31/ARTIEYcG8sYhdtsif2NA1mSH260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "上半年我国煤电发电量占总发电量比重首次低于50%",
+        "url": "https://news.cctv.com/2026/07/31/ARTIK0HXfRG9pL1LOhPswZDM260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "北斗三号构筑时空新底座",
+        "url": "https://news.cctv.com/2026/07/31/ARTIcgYtXHZlLmcVMWzEJFnj260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "医保基金结算堵点加快打通 减轻群众就医负担",
+        "url": "https://news.cctv.com/2026/07/31/ARTIHxp5VPhqk97vv5bv4Lr7260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "我国推动退役军人工作提质增效",
+        "url": "https://news.cctv.com/2026/07/31/ARTIkxw1oFq2YIMziXzMAmie260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "新一批国家药品集采纳入65个品种",
+        "url": "https://news.cctv.com/2026/07/31/ARTIzRAAyGcOOL4777yHTC4v260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "时政微观察丨军旗永向党",
+        "url": "https://news.cctv.com/2026/07/31/ARTIfQqH89GFyMCDi7jrgTSQ260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "玛多“千湖”归来的背后",
+        "url": "https://news.cctv.com/2026/07/31/ARTIBq1h8Fl0eyLH0TgbvK24260731.shtml",
+        "date": "2026-07-31",
+        "source": "央视新闻",
+        "category": "其他",
+        "priority_score": 50,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
       }
     ],
     "2026-07-30": [
       {
-        "title": "【视频】中共中央政治局召开会议 决定召开二十届五中全会 分析研究当前经济形势和经济工作 中共中央总书记习近平主持会议",
+        "title": "中共中央政治局召开会议 决定召开二十届五中全会 分析研究当前经济形势和经济工作 中共中央总书记习近平主持会议",
         "url": "https://tv.cctv.com/2026/07/30/VIDE5qpJTTeXfKV3vVP5uvV8260730.shtml",
         "date": "2026-07-30",
         "source": "中国政府网·要闻",
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
-      {
-        "title": "【视频】就当前经济形势和下半年经济工作 中共中央召开党外人士座谈会 习近平主持并发表重要讲话",
-        "url": "https://tv.cctv.com/2026/07/30/VIDEfw9aPrBbq2cc8VbFPRdr260730.shtml",
-        "date": "2026-07-30",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "向着建军一百年奋斗目标阔步前行——以习近平同志为核心的党中央引领人民军队书写强军兴军新篇章",
@@ -196,7 +1216,17 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "就当前经济形势和下半年经济工作 中共中央召开党外人士座谈会 习近平主持并发表重要讲话",
+        "url": "https://tv.cctv.com/2026/07/30/VIDEfw9aPrBbq2cc8VbFPRdr260730.shtml",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "总书记的人民情怀 | “始终同人民同呼吸、共命运、心连心”",
@@ -206,7 +1236,27 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "何立峰与美国财政部长贝森特、贸易代表格里尔举行视频通话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077110.htm",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "图表：2025年我国“三新”经济增加值占GDP比重达18.39%",
+        "url": "https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7077092.htm",
+        "date": "2026-07-30",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "中国智造加速出海 人工智能产品远销全球",
@@ -216,27 +1266,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
-      {
-        "title": "何立峰与美国财政部长贝森特、贸易代表格里尔举行视频通话",
-        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7077110.htm",
-        "date": "2026-07-30",
-        "source": "中国政府网·要闻",
-        "category": "其他",
-        "priority_score": 50,
-        "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
-      {
-        "title": "图表：2025年我国“三新”经济增加值占GDP比重达18.39%",
-        "url": "https://www.gov.cn/zhengce/jiedu/tujie/202607/content_7077092.htm",
-        "date": "2026-07-30",
-        "source": "中国政府网·要闻",
-        "category": "其他",
-        "priority_score": 50,
-        "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "我国物流总量稳步扩大 需求结构不断优化",
@@ -246,20 +1276,10 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       }
     ],
     "2026-07-29": [
-      {
-        "title": "【视频】习近平致电祝贺诺瓦当选连任圣多美和普林西比总统",
-        "url": "https://tv.cctv.com/2026/07/29/VIDErK42PN9WCKKIsoO7FRkp260729.shtml",
-        "date": "2026-07-29",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
       {
         "title": "习近平主席特使、科技部部长阴和俊出席秘鲁总统权力交接仪式",
         "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076937.htm",
@@ -268,7 +1288,17 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "习近平致电祝贺诺瓦当选连任圣多美和普林西比总统",
+        "url": "https://tv.cctv.com/2026/07/29/VIDErK42PN9WCKKIsoO7FRkp260729.shtml",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "厚植家国情怀 携手筑梦前行——习近平总书记对侨务工作重要指示激励海内外中华儿女为强国建设、民族复兴伟业团结奋斗",
@@ -278,17 +1308,17 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
-        "title": "【视频】李强会见斯洛伐克总统",
+        "title": "李强会见斯洛伐克总统",
         "url": "https://tv.cctv.com/2026/07/29/VIDE5FJcfhYSmWrDrdhnoDqj260729.shtml",
         "date": "2026-07-29",
         "source": "中国政府网·要闻",
         "category": "元首动态",
-        "priority_score": 97,
+        "priority_score": 95,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "李强会见斯洛伐克总统佩列格里尼",
@@ -298,17 +1328,27 @@
         "category": "元首动态",
         "priority_score": 95,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
-        "title": "【“十五五”开好局起好步】2030年我国知识产权综合实力进一步增强",
+        "title": "上半年支持科技创新和制造业发展减税降费退税1.91万亿元——税收大数据勾勒经济向好图景",
+        "url": "https://www.gov.cn/lianbo/202607/content_7076887.htm",
+        "date": "2026-07-29",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "2030年我国知识产权综合实力进一步增强",
         "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076999.htm",
         "date": "2026-07-29",
         "source": "中国政府网·要闻",
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "上半年全国社会物流总额为181.1万亿元",
@@ -318,17 +1358,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
-      {
-        "title": "上半年支持科技创新和制造业发展减税降费退税1.91万亿元——税收大数据勾勒经济向好图景",
-        "url": "https://www.gov.cn/lianbo/202607/content_7076887.htm",
-        "date": "2026-07-29",
-        "source": "中国政府网·要闻",
-        "category": "其他",
-        "priority_score": 50,
-        "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "人民日报评论员：促进团结奋斗 汇聚磅礴力量",
@@ -338,7 +1368,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "图表：2026年上半年全国社会物流总额为181.1万亿元",
@@ -348,39 +1378,29 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       }
     ],
     "2026-07-28": [
       {
-        "title": "【视频】习近平举行仪式欢迎斯洛伐克总统访华",
+        "title": "习近平举行仪式欢迎斯洛伐克总统访华",
         "url": "https://tv.cctv.com/2026/07/28/VIDE3g0p2r5a0fi8QtMkI5W6260728.shtml",
         "date": "2026-07-28",
         "source": "中国政府网·要闻",
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
-        "title": "【视频】习近平同斯洛伐克总统会谈",
+        "title": "习近平同斯洛伐克总统会谈",
         "url": "https://tv.cctv.com/2026/07/28/VIDEGyTkTxv2pvmezlr3240F260728.shtml",
         "date": "2026-07-28",
         "source": "中国政府网·要闻",
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
-      {
-        "title": "【视频】习近平对侨务工作作出重要指示强调 更好凝聚侨心侨力 促进海内外中华儿女团结奋斗 王沪宁出席全国侨务工作会议并讲话",
-        "url": "https://tv.cctv.com/2026/07/28/VIDEGRqwk36Af3WfvAae2B4q260728.shtml",
-        "date": "2026-07-28",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "习近平同斯洛伐克总统佩列格里尼会谈",
@@ -390,7 +1410,7 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "习近平对侨务工作作出重要指示",
@@ -400,17 +1420,7 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
-      {
-        "title": "【视频】李强在河北唐山调研慰问",
-        "url": "https://tv.cctv.com/2026/07/28/VIDERl3T8opGiOouHAPLb7m5260728.shtml",
-        "date": "2026-07-28",
-        "source": "中国政府网·要闻",
-        "category": "常委动态",
-        "priority_score": 97,
-        "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "全国政协召开“加快农业农村现代化”专题协商会 王沪宁出席并讲话",
@@ -420,7 +1430,17 @@
         "category": "元首动态",
         "priority_score": 95,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "李强在河北唐山调研慰问",
+        "url": "https://tv.cctv.com/2026/07/28/VIDERl3T8opGiOouHAPLb7m5260728.shtml",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "常委动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "李强在河北唐山调研慰问时强调 持续提升防灾减灾救灾能力 切实保障人民群众生命财产安全",
@@ -430,7 +1450,7 @@
         "category": "常委动态",
         "priority_score": 95,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "APEC林业部长级会议通过联合声明",
@@ -438,9 +1458,9 @@
         "date": "2026-07-28",
         "source": "中国政府网·要闻",
         "category": "重要会议",
-        "priority_score": 85,
+        "priority_score": 88,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "《疾病预防控制“十五五”规划》发布",
@@ -448,29 +1468,29 @@
         "date": "2026-07-28",
         "source": "中国政府网·要闻",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
-        "title": "【视频】何立峰出席2026年亚太经合组织林业部长级会议开幕式并致辞",
+        "title": "上半年税收收入稳步增长 新质生产力发展成效明显",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076880.htm",
+        "date": "2026-07-28",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "何立峰出席2026年亚太经合组织林业部长级会议开幕式并致辞",
         "url": "https://tv.cctv.com/2026/07/28/VIDES5jlPFBwWvHPSct7meEo260728.shtml",
         "date": "2026-07-28",
         "source": "中国政府网·要闻",
         "category": "元首动态",
-        "priority_score": 52,
-        "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
-      {
-        "title": "【“十五五”开好局起好步】上半年税收收入稳步增长 新质生产力发展成效明显",
-        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076880.htm",
-        "date": "2026-07-28",
-        "source": "中国政府网·要闻",
-        "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "各地区各部门全力应对台风“红霞”",
@@ -480,7 +1500,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "图表：2025年全国学生资助资金投入超过3900亿元",
@@ -490,7 +1510,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "强化汛期保障，多地多部门多措并举确保民众平安出行",
@@ -500,7 +1520,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "王毅出席全球发展倡议5周年高级别会议",
@@ -510,7 +1530,7 @@
         "category": "元首动态",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "王毅将出席全球发展倡议5周年高级别会议",
@@ -520,7 +1540,7 @@
         "category": "元首动态",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "紧急预拨1.8亿元 支持广东、辽宁等6省做好防汛防台风应急抢险救灾工作",
@@ -530,20 +1550,10 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       }
     ],
     "2026-07-27": [
-      {
-        "title": "【视频】习近平同巴西总统通电话",
-        "url": "https://tv.cctv.com/2026/07/27/VIDEeBqNJydkEKNaPT3gjJXJ260727.shtml",
-        "date": "2026-07-27",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
       {
         "title": "习近平同巴西总统卢拉通电话",
         "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076658.htm",
@@ -552,7 +1562,17 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "习近平同巴西总统通电话",
+        "url": "https://tv.cctv.com/2026/07/27/VIDEeBqNJydkEKNaPT3gjJXJ260727.shtml",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "总书记以“三个有利于”指引世界遗产申报保护",
@@ -562,7 +1582,7 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "谌贻琴在全国妇联常委（扩大）会议上强调 进一步加强妇女儿童合法权益保障",
@@ -570,9 +1590,9 @@
         "date": "2026-07-27",
         "source": "中国政府网·要闻",
         "category": "重要会议",
-        "priority_score": 85,
+        "priority_score": 88,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "中共中央 国务院转发《中央宣传部、司法部关于开展法治宣传教育的第九个五年规划（2026－2030年）》",
@@ -580,9 +1600,9 @@
         "date": "2026-07-27",
         "source": "中国政府网·要闻",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "国办印发《关于国务院行政复议案件处理程序的若干规定》的通知",
@@ -590,9 +1610,9 @@
         "date": "2026-07-27",
         "source": "中国政府网·最新政策",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "国务院办公厅印发《关于国务院行政复议案件处理程序的若干规定》",
@@ -600,9 +1620,9 @@
         "date": "2026-07-27",
         "source": "中国政府网·要闻",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "国务院办公厅印发《关于国务院行政复议案件处理程序的若干规定》的通知",
@@ -610,9 +1630,19 @@
         "date": "2026-07-27",
         "source": "中国政府网·要闻",
         "category": "政策发布",
-        "priority_score": 75,
+        "priority_score": 80,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
+      },
+      {
+        "title": "推动残疾人事业全面发展高质量发展",
+        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076724.htm",
+        "date": "2026-07-27",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "“红霞”影响持续 各地各部门采取措施积极应对",
@@ -622,17 +1652,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
-      },
-      {
-        "title": "【“十五五”开好局起好步】推动残疾人事业全面发展高质量发展",
-        "url": "https://www.gov.cn/yaowen/liebiao/202607/content_7076724.htm",
-        "date": "2026-07-27",
-        "source": "中国政府网·要闻",
-        "category": "其他",
-        "priority_score": 50,
-        "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "凝聚侨心侨力 共襄复兴伟业——新时代侨务工作综述",
@@ -642,7 +1662,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "图表：2026年上半年全国规模以上工业企业利润增长18.7%",
@@ -652,7 +1672,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "多部门联合研判“红霞”发展趋势，部署重点工作 做好灾害救助，尽快恢复生产生活秩序",
@@ -662,7 +1682,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "第十二批中央单位援疆干部人才赴疆工作",
@@ -672,7 +1692,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       }
     ],
     "2026-07-26": [
@@ -684,7 +1704,7 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "台风“红霞”登陆 各地各部门全力应对",
@@ -694,7 +1714,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "各地区各部门全力应对台风“红霞”和强降雨天气",
@@ -704,7 +1724,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "我国成为世界上少数红树林面积持续增加的国家之一",
@@ -714,7 +1734,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "截至6月底我国智能算力规模同比增长177%",
@@ -724,7 +1744,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       }
     ],
     "2026-07-25": [
@@ -736,7 +1756,7 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "今年以来消费品以旧换新销售额超万亿元",
@@ -746,7 +1766,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "全国秋粮田管有序推进",
@@ -756,7 +1776,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "各地各部门积极部署应对台风“红霞”",
@@ -766,7 +1786,7 @@
         "category": "其他",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "吉尔吉斯斯坦总统扎帕罗夫会见王毅",
@@ -776,7 +1796,7 @@
         "category": "元首动态",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "王毅会见俄罗斯外长拉夫罗夫",
@@ -786,7 +1806,7 @@
         "category": "元首动态",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       },
       {
         "title": "王毅出席上海合作组织外长会",
@@ -796,7 +1816,7 @@
         "category": "元首动态",
         "priority_score": 50,
         "is_summit_level": false,
-        "collectedAt": "2026-08-01 17:36:06"
+        "collectedAt": "2026-08-01 18:28:37"
       }
     ]
   },
@@ -811,11 +1831,11 @@
     "2026-07-25"
   ],
   "today": "2026-08-01",
-  "todayCount": 1,
+  "todayCount": 93,
   "stats": {
-    "totalArticles": 78,
+    "totalArticles": 180,
     "dateCount": 8,
     "latestDate": "2026-08-01",
-    "summitCount": 22
+    "summitCount": 25
   }
 }
