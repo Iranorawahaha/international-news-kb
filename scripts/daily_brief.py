@@ -27,7 +27,13 @@ PORTAL_FILES = [
     os.path.join(REPO_DIR, "gh-pages", "index.html"),
 ]
 NEWS_FILE = os.path.join(REPO_DIR, "data", "news-data.json")
-AI_FILE = "/tmp/aihot_scan/merged.json"
+import os as _os
+_AI_CANDS = []
+_t = _os.environ.get("TMPDIR")
+if _t:
+    _AI_CANDS.append(_os.path.join(_t, "aihot_scan", "merged.json"))
+_AI_CANDS.append("/tmp/aihot_scan/merged.json")
+AI_FILE = next((c for c in _AI_CANDS if _os.path.exists(c)), _AI_CANDS[0])
 CN_FILE = os.path.join(REPO_DIR, "data", "china-news.json")
 
 TZ = timezone(timedelta(hours=8))
