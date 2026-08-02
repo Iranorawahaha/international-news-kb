@@ -100,6 +100,9 @@ JUNK_KEYWORDS = [
     "限时", "独家优惠", "免费领取", "点击领取",
     # 页面噪音
     "投资者关系", "京ICP", "ICP证", "版权所有", "联系我们", "关于我们", "隐私政策", "网站地图",
+    # 非中国国内内容（他国国内事务/领导人，非涉华报道）
+    "俄外交部", "乌克兰", "乌军", "基辅", "莫斯科", "特朗普发", "普京", "拜登",
+    "泽连斯基", "内塔尼亚胡", "莫迪", "马斯克发", "美国国务卿", "英媒", "美媒报",
     # 民生琐事/社会花边/文旅剩余
     "大爷", "大妈", "女子", "男子", "司机", "快递小哥", "外卖", "宠物", "猫咪", "狗狗",
     "圈粉", "市井风情", "烟火气", "出圈", "走红", "网红", "打卡地", "风景线",
@@ -151,7 +154,7 @@ def classify(title):
         for kw in kws:
             if kw in title:
                 return cat
-    return "其他"
+    return None  # 未匹配任何关注分类 → 丢弃（彻底删除"其他"类目）
 
 
 def assess_importance(title, cat):
@@ -224,6 +227,8 @@ def make_item(title, url, date, source, summary=None):
     if len(title) < 8:
         return None
     cat = classify(title)
+    if cat is None:
+        return None  # 未命中任何关注分类 → 丢弃
     return {
         "title": title,
         "url": url,

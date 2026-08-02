@@ -43,14 +43,14 @@ def build():
         for it in archive.get(d, []):
             per_cat[it.get("category", "其他")] = per_cat.get(it.get("category", "其他"), 0) + 1
 
-    cat_order = ["元首动态", "高层动态", "重要会议", "人事任免", "部委动态", "政策发布", "经贸动向", "其他"]
+    cat_order = ["元首动态", "高层动态", "重要会议", "人事任免", "部委动态", "政策发布", "经贸动向"]
     cat_map_zh = {"元首动态": "元首动态", "高层动态": "高层动态", "重要会议": "重要会议",
                   "人事任免": "人事任免", "部委动态": "部委动态", "政策发布": "政策发布",
-                  "经贸动向": "经贸动向", "其他": "其他"}
+                  "经贸动向": "经贸动向"}
 
     def cat_icon(c):
         return {"元首动态": "👑", "高层动态": "🧭", "重要会议": "🏛", "人事任免": "📋",
-                "部委动态": "🏢", "政策发布": "📜", "经贸动向": "💹", "其他": "📌"}.get(c, "📌")
+                "部委动态": "🏢", "政策发布": "📜", "经贸动向": "💹"}.get(c, "📌")
 
     # 生成卡片 HTML
     def article_card(it, idx):
@@ -90,7 +90,7 @@ def build():
     panels = []
     for c in cat_order:
         cnt = per_cat.get(c, 0)
-        active = " active" if c == "其他" else ""
+        active = " active" if c == cat_order[0] else ""
         tabs.append(f'<button class="tab{active}" data-cat="{c}">{cat_icon(c)} {cat_map_zh[c]}（{cnt}）</button>')
         items = []
         idx = 0
@@ -99,7 +99,7 @@ def build():
                 if it.get("category") == c:
                     idx += 1
                     items.append(article_card(it, idx))
-        panel_cls = "tab-panel " + ("active" if c == "其他" else "")
+        panel_cls = "tab-panel " + ("active" if c == cat_order[0] else "")
         panels.append(f'<div class="{panel_cls}" id="panel-{c}">{"".join(items) if items else f"<div class=\"empty-panel\">暂无{c}类新闻</div>"}</div>')
 
     # 日期信息
