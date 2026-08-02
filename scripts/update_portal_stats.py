@@ -35,6 +35,8 @@ FIELD_SPECS = {
     "ai_date": ("aiDate", "meta-ai-date"),
     "news_today": ("newsToday", "stat-news-today"),
     "ai_today": ("aiToday", "stat-ai-today"),
+    "cn_today": ("cnToday", "stat-cn-today"),
+    "cn_date": ("cnDate", "meta-cn-date"),
 }
 
 
@@ -68,6 +70,8 @@ def main():
     parser.add_argument("--latest", help="最近数据刷新 (YYYY-MM-DD HH:MM)")
     parser.add_argument("--news-today", help="国际新闻今日新增条数")
     parser.add_argument("--ai-today", help="AI 动态今日新增条数")
+    parser.add_argument("--cn-today", help="国内新闻今日新增条数")
+    parser.add_argument("--cn-date", help="国内新闻最近更新 (YYYY-MM-DD HH:MM)")
     args = parser.parse_args()
 
     updates = {k: v for k, v in vars(args).items() if v is not None and k in FIELD_SPECS}
