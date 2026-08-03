@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-03 20:12",
+  "lastUpdated": "2026-08-03 20:14",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -4699,57 +4699,6 @@
         "column": "美国"
       },
       {
-        "id": "auto_2026-08-03_96875",
-        "date": "2026-08-03",
-        "title": "Executive Orders",
-        "title_en": "Executive Orders",
-        "summary": "[官方信源] 白宫 发布：Executive Orders",
-        "source": "白宫",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://www.whitehouse.gov/presidential-actions/executive-orders/",
-        "priority_score": 70,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-03 20:10:29",
-        "collection_method": "us_official",
-        "column": "美国"
-      },
-      {
-        "id": "auto_2026-08-03_65551",
-        "date": "2026-08-03",
-        "title": "365 Days of Wins",
-        "title_en": "365 Days of Wins",
-        "summary": "[官方信源] 白宫 发布：365 Days of Wins",
-        "source": "白宫",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://www.whitehouse.gov/releases/2026/01/365-wins-in-365-days-president-trumps-return-marks-new-era-of-success-prosperity/",
-        "priority_score": 70,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-03 20:10:29",
-        "collection_method": "us_official",
-        "column": "美国"
-      },
-      {
-        "id": "auto_2026-08-03_11537",
-        "date": "2026-08-03",
-        "title": "Remarks and Statements",
-        "title_en": "Remarks and Statements",
-        "summary": "[官方信源] 美国财政部 发布：Remarks and Statements",
-        "source": "美国财政部",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://treasury/news/press-releases/statements-remarks",
-        "priority_score": 70,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-03 20:10:29",
-        "collection_method": "us_official",
-        "column": "美国"
-      },
-      {
         "id": "auto_2026-08-03_84757",
         "date": "2026-08-03",
         "title": "Massive Attack respond after Singapore ban over Palestine display 乐队Massive Attack回应新加坡因巴勒斯坦标语禁演",
@@ -4971,7 +4920,7 @@
     "2026-07-31"
   ],
   "stats": {
-    "totalArticles": 248,
+    "totalArticles": 245,
     "dateCount": 4,
     "latestDate": "2026-08-03",
     "oldestDate": "2026-07-31"
