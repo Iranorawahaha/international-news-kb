@@ -379,10 +379,11 @@
         .title-en {
             color: var(--primary-light);
             font-style: italic;
-            font-size: 12px;
-            margin-bottom: 4px;
+            font-size: 11px;
+            margin-bottom: 3px;
             line-height: 1.4;
             font-weight: 500;
+            opacity: 0.85;
         }
         .title-zh {
             color: var(--text);
@@ -726,9 +727,9 @@ function renderTable(articles) {
                 <td style="white-space:nowrap">${item._date || ''}</td>
                 <td>
                     <div class="title-en">${item.title_en || ''}</div>
-                    <div class="title-zh">${item.title || ''}</div>
+                    <div class="title-zh">${item.title_zh || item.title || ''}</div>
                 </td>
-                <td><div class="summary-text">${item.summary || '-'}</div></td>
+                <td><div class="summary-text">${item.summary_zh || item.summary || '-'}</div></td>
                 <td style="white-space:nowrap">${item.source || ''}</td>
                 <td style="white-space:nowrap">${item.category || ''}</td>
                 <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>

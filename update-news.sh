@@ -160,8 +160,22 @@ def convert_v11_to_v12(old_list):
     return archive
 
 def cleanup_old(archive):
+    """按新闻 date 字段清理超期数据（而非按归档 key）"""
     cutoff = (datetime.now() - timedelta(days=RETENTION_DAYS)).strftime('%Y-%m-%d')
-    return {d: arts for d, arts in archive.items() if d >= cutoff}
+    cleaned = {}
+    for d, arts in archive.items():
+        # 保留归档日本身在窗口内
+        if d < cutoff:
+            continue
+        # 但清理掉新闻 date 字段超窗口的条目
+        kept = []
+        for art in arts:
+            art_date = art.get('date') or d
+            if art_date >= cutoff:
+                kept.append(art)
+        if kept:
+            cleaned[d] = kept
+    return cleaned
 
 def is_garbage_article(article):
     """判断是否为垃圾文章"""
@@ -215,7 +229,11 @@ def deduplicate_articles(articles, archive=None):
     from difflib import SequenceMatcher as _SM
 
     # 权威信源优先级（同题合并时保留高优先级）
-    AUTHORITY_ORDER = ['路透社', '美联社', 'BBC', 'CNN', '华盛顿邮报', '纽约时报',
+    # V1.5.3: 美国官方信源（白宫/国务院/USTR/财政部/商务部/国防部）放最前
+    # —— 因为官方源有真实中文摘要/日期，媒体源是二手报道
+    AUTHORITY_ORDER = ['白宫', '美国国务院', '美国贸易代表办公室(USTR)', '美国财政部',
+                       '美国商务部', '美国国防部(war.gov)',
+                       '路透社', '美联社', 'BBC', 'CNN', '华盛顿邮报', '纽约时报',
                        '华尔街日报', '卫报', '半岛电视台', '南华早报', 'Politico']
 
     def _norm_url(u):
@@ -242,12 +260,16 @@ def deduplicate_articles(articles, archive=None):
 
     seen_keys = set()
     hist_urls = set()
+    # V1.5.3: 跨日期去重时，记录 archive 中每个 URL 对应的"档案位置"
+    # 当新版本有 is_official + title_zh 时，覆盖旧版本（保证官方源中文字段保留）
+    archive_index = {}  # url -> (date, article_dict)
     if archive:
         for _date, _arts in archive.items():
             for _a in _arts:
                 _u = _norm_url(_a.get('url'))
                 if _u:
                     hist_urls.add(_u)
+                    archive_index[_u] = (_date, _a)
 
     unique_articles = []
     duplicate_count = 0
@@ -259,8 +281,19 @@ def deduplicate_articles(articles, archive=None):
         unique_key = (title[:30], source)
         url_key = f"URL::{url}" if url else None
 
-        # 1) 跨日期去重（URL 规范化后）
+        # 1) 跨日期去重：URL 已存在于历史归档
         if url_key and url in hist_urls:
+            # V1.5.3: 如果新条目是官方源（is_official=True）且有 title_zh 翻译
+            # 而历史版本无 is_official/title_zh → 用新版本覆盖历史版本
+            old_date, old_art = archive_index.get(url, (None, None))
+            if (art.get('is_official') and art.get('title_zh')
+                    and old_art and not old_art.get('title_zh')):
+                # 用新版本覆盖旧版本（替换字段）
+                for k in art.keys():
+                    old_art[k] = art[k]
+                duplicate_count += 1
+                print(f"    🔁 官方源覆盖升级: {title[:35]}...")
+                continue
             duplicate_count += 1
             print(f"    🔁 跨日期重复跳过: {title[:40]}... (已在历史归档)")
             continue
