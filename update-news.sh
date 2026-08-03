@@ -523,6 +523,50 @@ data['lastUpdated'] = datetime.now().strftime('%Y-%m-%d %H:%M')
 
 save_data(data)
 
+# V1.5.4 终极防线：用 us-official.json 强制升级官方源字段
+# （防止 dedupe/整合丢失 is_official/title_zh/summary_zh）
+import json as _json_ff
+import re as _re_ff
+try:
+    with open('data/us-official.json', 'r', encoding='utf-8') as _ff:
+        _us = _json_ff.load(_ff)
+    _ff_norm = lambda u: (_re_ff.match(r'^\[(.+?)\]\((.+?)\)$', (u or '').strip()) and _re_ff.match(r'^\[(.+?)\]\((.+?)\)$', (u or '').strip()).group(2) or (u or '').strip()).rstrip('/').lower()
+    _ff_idx = {}
+    for _fdt, _fits in data['archive'].items():
+        for _fit in _fits:
+            _ff_idx[_ff_norm(_fit.get('url'))] = (_fdt, _fit)
+    _ff_added, _ff_upgraded = 0, 0
+    for _f_src in _us:
+        _furl = _ff_norm(_f_src.get('url'))
+        if not _furl: continue
+        _ftarget = _f_src.get('date', '')
+        if not _ftarget: continue
+        if _ftarget not in data['archive']:
+            data['archive'][_ftarget] = []
+        if _furl in _ff_idx:
+            _fodt, _foart = _ff_idx[_furl]
+            if _f_src.get('is_official') or _f_src.get('title_zh') or _f_src.get('summary_zh'):
+                for _fk in ('title','title_en','title_zh','summary','summary_en','summary_zh','date','source','category','column','priority_score','is_summit_level','importance','keywords','url','is_official','collectedAt','collection_method'):
+                    if _fk in _f_src:
+                        _foart[_fk] = _f_src[_fk]
+                if _fodt != _ftarget:
+                    data['archive'][_fodt] = [x for x in data['archive'][_fodt] if _ff_norm(x.get('url')) != _furl]
+                    data['archive'][_ftarget].append(_foart)
+                _ff_upgraded += 1
+        else:
+            data['archive'][_ftarget].append(_f_src)
+            _ff_added += 1
+    for _fdt in list(data['archive'].keys()):
+        if not data['archive'][_fdt]:
+            del data['archive'][_fdt]
+    save_data(data)
+    if _ff_added or _ff_upgraded:
+        print(f"  🛡️ 官方源字段升级: 新增 {_ff_added} 条, 升级 {_ff_upgraded} 条")
+except FileNotFoundError:
+    pass
+except Exception as _ff_e:
+    print(f"  ⚠️ 官方源字段升级失败: {_ff_e}")
+
 print("\n" + "=" * 60)
 print(f"✅ V1.2.1 数据整合完成！")
 print(f"   总新闻数: {data['stats']['totalArticles']} 条")
