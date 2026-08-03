@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-03 20:14",
+  "lastUpdated": "2026-08-03 20:45",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -3961,6 +3961,29 @@
         "column": "美国"
       },
       {
+        "id": "auto_2026-07-31_63343",
+        "date": "2026-07-31",
+        "title": "罗杰斯副国务卿与 FTC 主席及马斯克举行数字 NEXT 代表团会议",
+        "title_en": "Under Secretary Rogers Hosts Digital NEXT Delegation with FTC Chairman Ferguson and Elon Musk and Announces New Tech Industry Partnership to Advance Digital Freedom",
+        "summary": "美国国务院2026年7月31日宣布，副国务卿罗杰斯上周在旧金山召集来自30个国家的47位外国技术政策制定者参加数字NEXT活动，与马斯克、FTC主席Ferguson等对话，并启动自由技术卓越计划（FTEP）。Palantir、Anduril、Bitcoin Policy Institute、共产主义受害者基金会成为首批合作伙伴。",
+        "source": "美国国务院",
+        "category": "美国",
+        "keywords": [
+          "国务院",
+          "罗杰斯",
+          "数字NEXT",
+          "马斯克",
+          "FTEP"
+        ],
+        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/07/under-secretary-rogers-hosts-digital-next-delegation-with-ftc-chairman-ferguson-and-elon-musk-and-announces-new-tech-industry-partnership-to-advance-digital-freedom/",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-03 20:30:00",
+        "collection_method": "us_official_webfetch",
+        "column": "美国"
+      },
+      {
         "id": "auto_2026-08-03_91126",
         "date": "2026-08-03",
         "title": "Chile's Kast courts China day after US hits exports with forced labour tariff 美对智利加征关税次日智利候选人卡斯特向中国示好",
@@ -4920,7 +4943,7 @@
     "2026-07-31"
   ],
   "stats": {
-    "totalArticles": 245,
+    "totalArticles": 246,
     "dateCount": 4,
     "latestDate": "2026-08-03",
     "oldestDate": "2026-07-31"
