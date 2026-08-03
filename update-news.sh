@@ -202,24 +202,53 @@ def clean_articles(articles):
     
     return cleaned, removed_count, removal_reasons
 
-def deduplicate_articles(articles):
-    """去重处理（基于唯一键: title前30字符 + source）"""
+def deduplicate_articles(articles, archive=None):
+    """去重处理（基于 URL + 标题规范化；支持跨日期去重）
+
+    archive: 若提供，则已存在于 archive 任意日期的文章（URL 相同）视为重复，
+             直接跳过 —— 修复同一新闻连续多天被 WebFetch 重复抓回归档的问题。
+    返回: (unique_articles, duplicate_count)
+    """
+    import re as _re
     seen_keys = set()
     unique_articles = []
     duplicate_count = 0
-    
+
+    # 预构建历史 URL 集合（跨日期去重）
+    hist_urls = set()
+    if archive:
+        for _date, _arts in archive.items():
+            for _a in _arts:
+                _u = (_a.get('url') or '').strip()
+                if _u:
+                    hist_urls.add(_u)
+
+    def _norm_title(t):
+        return _re.sub(r'[^\u4e00-\u9fffA-Za-z0-9]', '', (t or '')).lower()[:40]
+
     for art in articles:
         title = art.get('title', '') or ''
         source = art.get('source', '') or '未知'
+        url = (art.get('url') or '').strip()
         unique_key = (title[:30], source)
-        
-        if unique_key not in seen_keys:
+        url_key = f"URL::{url}" if url else None
+
+        # 1) 跨日期去重：URL 已存在于历史归档 → 跳过
+        if url_key and url in hist_urls:
+            duplicate_count += 1
+            print(f"    🔁 跨日期重复跳过: {title[:40]}... (已在历史归档)")
+            continue
+        # 2) 当天内去重：标题+来源 或 URL
+        dup_this = unique_key in seen_keys or (url_key is not None and url_key in seen_keys)
+        if not dup_this:
             seen_keys.add(unique_key)
+            if url_key:
+                seen_keys.add(url_key)
             unique_articles.append(art)
         else:
             duplicate_count += 1
             print(f"    🔁 重复移除: {title[:40]}... (来源: {source})")
-    
+
     return unique_articles, duplicate_count
 
 def sort_by_importance(articles):
@@ -328,7 +357,7 @@ all_today_articles.extend(cleaned_new)
 
 if all_today_articles:
     print(f"\n  🔍 去重处理 (共 {len(all_today_articles)} 条)...")
-    unique_articles, dup_count = deduplicate_articles(all_today_articles)
+    unique_articles, dup_count = deduplicate_articles(all_today_articles, archive=data.get('archive', {}))
     if dup_count > 0:
         print(f"     移除 {dup_count} 条重复记录")
     print(f"     ✅ 去重后剩余: {len(unique_articles)} 条")
