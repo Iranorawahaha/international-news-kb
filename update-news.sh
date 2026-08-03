@@ -344,7 +344,15 @@ today = datetime.now().strftime('%Y-%m-%d')
 
 # 尝试从基础采集输出读取新数据
 new_articles = []
-temp_files = ['data/news-basic.json', 'data/news-webfetch.json']
+# V1.5.2: 接入美国官方信源（白宫/国务院/USTR/财政部/商务部/国防部）
+temp_files = ['data/news-basic.json', 'data/news-webfetch.json', 'data/us-official.json']
+
+# 官方信源导航残留过滤词（只过滤非新闻公告标题）
+OFFICIAL_NAV_WORDS = ["briefings & statements", "executive orders", "remarks and statements",
+                      "secretary statements & remarks", "presidential actions", "nominations & appointments",
+                      "presidential memoranda", "state department home", "countries & areas",
+                      "bureaus & offices", "organizational chart", "role of the treasury",
+                      "365 days of wins"]
 
 for temp_file in temp_files:
     try:
@@ -360,11 +368,33 @@ for temp_file in temp_files:
         # 关键词 schema 标准化：WebFetch 返回的 keywords 是字符串（如 "k1,k2,k3"），
         # 统一转为数组，避免前端 renderTable 抛 "keywords.map is not a function" 错误
         for art in new_articles[-len(temp_data) if isinstance(temp_data, list) else len(temp_data.get("articles", [])):]:
-            kw = art.get("keywords") if isinstance(art, dict) else None
+            if not isinstance(art, dict):
+                continue
+            kw = art.get("keywords")
             if isinstance(kw, str):
                 art["keywords"] = [k.strip() for k in kw.replace("，", ",").split(",") if k.strip()]
             elif kw is None:
                 art["keywords"] = []
+            # 官方信源字段补全（score/is_summit_level/column）
+            if art.get("is_official"):
+                if art.get("priority_score") is None or art.get("priority_score") == "":
+                    t = art.get("title", "")
+                    cn = any(k in t for k in ["China", "Chinese", "中国", "Beijing", "Taiwan", "台湾", "TikTok", "Huawei"])
+                    sm = any(k in t for k in ["President", "Trump", "Xi", "Biden", "普京", "Putin"])
+                    art["priority_score"] = 98 if (cn and sm) else (92 if cn else (88 if sm else 75))
+                if art.get("is_summit_level") is None:
+                    art["is_summit_level"] = any(k in art.get("title", "") for k in ["President", "Trump", "Xi", "Biden", "普京", "Putin"])
+                if not art.get("column"):
+                    art["column"] = "美国"
+                if not art.get("title_en"):
+                    art["title_en"] = art.get("title", "")
+                if not art.get("summary"):
+                    art["summary"] = f"[官方信源] {art.get('source','')} 发布：{art.get('title','')}"
+                # 导航残留过滤（从 new_articles 移除）
+                tl = (art.get("title", "") or "").lower()
+                if any(w in tl for w in OFFICIAL_NAV_WORDS):
+                    new_articles.pop()
+                    print(f"    🗑️ 官方导航残留移除: {art.get('title','')[:40]}")
     except FileNotFoundError:
         pass
     except Exception as e:
