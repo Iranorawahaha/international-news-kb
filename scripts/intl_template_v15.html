@@ -468,7 +468,7 @@
             <a href="ai-company-intel.html">🤖 AI 动向看板</a>
             <a href="china-news.html">🇨🇳 国内新闻看板</a>
         </nav>
-        <h1>🌍 国际新闻看板 · 情报指挥台</h1>
+        <h1>🌍 国际新闻看板</h1>
         <div class="subtitle">信源：路透社 / BBC / 南华早报 / 卫报 / CNN / 纽约时报 / 华尔街日报 / 半岛电视台 / Politico / 华盛顿邮报 / 美联社 + 美国官方信源（白宫 / 国务院 / USTR / 财政部 / 商务部 / 国防部） · 聚焦元首级、重大突发、国际制裁、地缘热点 · 该看板仅供 Ira 信息看板体系参考交流</div>
         <div class="stats-strip">
             <span class="pill">📅 时间窗：__NOW_STR__ （近 7 天）</span>
@@ -681,13 +681,20 @@ function filterNews() {
         return true;
     });
 
+    // V1.5.1 修复：日期严格分组 + 元首级优先 + 栏目内优先级 + priority_score
     filteredArticles = filteredArticles.sort((a, b) => {
         if (a._isDateSeparator || b._isDateSeparator) return 0;
-        const pa = columnPriority(a), pb = columnPriority(b);
-        if (pa !== pb) return pa - pb;
+        // 1) 日期分组（重要）：用字符串倒序，确保 8-03 永远在 8-02 之前
+        const da = a._date || '', db = b._date || '';
+        if (da !== db) return db.localeCompare(da);
+        // 2) 元首级（summit）优先
         const aS = a.is_summit_level ? -1 : 0;
         const bS = b.is_summit_level ? -1 : 0;
         if (aS !== bS) return aS - bS;
+        // 3) 栏目内优先级（①元首+涉华 ②仅涉华 ③仅元首 ④其余）
+        const pa = columnPriority(a), pb = columnPriority(b);
+        if (pa !== pb) return pa - pb;
+        // 4) priority_score 降序
         return (b.priority_score || 0) - (a.priority_score || 0);
     });
 
