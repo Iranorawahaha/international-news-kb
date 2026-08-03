@@ -406,7 +406,9 @@ all_today_articles.extend(cleaned_new)
 
 if all_today_articles:
     print(f"\n  🔍 去重处理 (共 {len(all_today_articles)} 条)...")
-    unique_articles, dup_count = deduplicate_articles(all_today_articles, archive=data.get('archive', {}))
+    # V1.3 修复：跨日期去重的"历史"应排除今天自身（否则今天已有数据被误判为历史重复清空）
+    hist_archive = {d: v for d, v in data.get('archive', {}).items() if d != today}
+    unique_articles, dup_count = deduplicate_articles(all_today_articles, archive=hist_archive)
     if dup_count > 0:
         print(f"     移除 {dup_count} 条重复记录")
     print(f"     ✅ 去重后剩余: {len(unique_articles)} 条")
@@ -574,7 +576,19 @@ for d in dates:
     count = len(archive.get(d, []))
     tabs_html += '<button class="tab-btn" data-date="%s">%s(%d)</button>' % (d, d.replace('2026-', ''), count)
 
-print(f"📊 生成V1.2 HTML: {total_count}条新闻, {len(dates)}天")
+# 六大栏目统计（用于栏目 tab）
+COLUMN_ORDER = ["中国", "美国", "欧洲", "地区热点", "国际会议", "其他"]
+COLUMN_ICONS = {"中国": "🇨🇳", "美国": "🇺🇸", "欧洲": "🇪🇺", "地区热点": "🌍", "国际会议": "🏛️", "其他": "📌"}
+column_counts = {c: 0 for c in COLUMN_ORDER}
+for _d, _arts in archive.items():
+    for _a in _arts:
+        _col = _a.get('column', '其他')
+        column_counts[_col] = column_counts.get(_col, 0) + 1
+column_tabs_html = '<button class="tab-btn active" data-column="all">全部(%d)</button>' % total_count
+for _c in COLUMN_ORDER:
+    column_tabs_html += '<button class="tab-btn" data-column="%s">%s %s(%d)</button>' % (_c, COLUMN_ICONS.get(_c, ''), _c, column_counts.get(_c, 0))
+
+print(f"📊 生成V1.2 HTML: {total_count}条新闻, {len(dates)}天, 栏目: {column_counts}")
 
 # ⭐ V1.2 HTML模板（严格遵循V1.1简洁专业风格）
 html_content = '''<!DOCTYPE html>
@@ -847,6 +861,14 @@ html_content = '''<!DOCTYPE html>
         </div>
     </div>
     
+    <!-- ⭐ V1.3新增：六大栏目Tab栏 -->
+    <div class="date-tabs-container column-tabs-container">
+        <div class="date-tabs-label">🗂️ 栏目筛选：</div>
+        <div class="date-tabs" id="columnTabs">
+            COLUMN_TABS_HOLDER
+        </div>
+    </div>
+
     <!-- ⭐ V1.2新增：日期Tab栏（V1.1简洁风格） -->
     <div class="date-tabs-container">
         <div class="date-tabs-label">📅 选择查看日期：</div>
@@ -934,6 +956,20 @@ const NEWS_DATA = ''' + json.dumps(v12_data, ensure_ascii=False) + ''';
 
 // 当前选中的日期
 let selectedDate = 'all';
+let selectedColumn = 'all';
+
+// 栏目内优先级排序（①元首+涉华 ②仅涉华 ③仅元首 ④其余）
+function columnPriority(art) {
+    const text = ((art.title || '') + ' ' + (art.title_en || '')).toLowerCase();
+    const headWords = ['习近平','特朗普','国家主席','总统','主席','首相','普京','泽连斯基','Putin','Trump','Xi'];
+    const cnWords = ['中国','中方','中美','中俄','中欧','中日','中韩','台海','台湾','涉华','对华','China','Chinese','Beijing','北京'];
+    const hasHead = headWords.some(w => text.includes(w.toLowerCase()));
+    const hasCn = cnWords.some(w => text.includes(w.toLowerCase()));
+    if (hasHead && hasCn) return 0;
+    if (hasCn) return 1;
+    if (hasHead) return 2;
+    return 3;
+}
 
 // 初始化筛选下拉框
 function initFilters() {
@@ -962,10 +998,10 @@ function initFilters() {
     });
 }
 
-// Tab切换事件
-document.querySelectorAll('.tab-btn').forEach(btn => {
+// Tab切换事件（日期 tab）——限定 #dateTabs 作用域，避免误绑栏目 tab
+document.querySelectorAll('#dateTabs .tab-btn').forEach(btn => {
     btn.addEventListener('click', function() {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('#dateTabs .tab-btn').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         selectedDate = this.dataset.date;
         filterNews();
@@ -1010,6 +1046,9 @@ function filterNews() {
     filteredArticles = filteredArticles.filter(item => {
         if (item._isDateSeparator) return true; // 保留分隔行
 
+        // V1.3: 栏目过滤
+        if (selectedColumn !== 'all' && item.column !== selectedColumn) return false;
+
         if (sourceFilter && item.source !== sourceFilter) return false;
         if (categoryFilter && item.category !== categoryFilter) return false;
 
@@ -1024,8 +1063,17 @@ function filterNews() {
         return true;
     });
 
-    // ⭐ V1.2.1 新增：按重要性排序（确保元首级优先，然后按分数降序）
-    filteredArticles = sortArticlesByImportance(filteredArticles);
+    // ⭐ V1.3: 栏目内优先级排序（①元首+涉华 ②仅涉华 ③仅元首 ④其余）+ 重要性
+    filteredArticles = filteredArticles.sort((a, b) => {
+        if (a._isDateSeparator || b._isDateSeparator) return 0;
+        const pa = columnPriority(a), pb = columnPriority(b);
+        if (pa !== pb) return pa - pb;
+        // 同优先级：元首级优先，再 priority_score
+        const aS = a.is_summit_level ? -1 : 0;
+        const bS = b.is_summit_level ? -1 : 0;
+        if (aS !== bS) return aS - bS;
+        return (b.priority_score || 0) - (a.priority_score || 0);
+    });
 
     renderTable(filteredArticles);
 }
@@ -1118,12 +1166,29 @@ function renderTable(articles) {
 
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', () => {
+    // 栏目 Tab 切换（V1.3）
+    document.querySelectorAll('#columnTabs .tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('#columnTabs .tab-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            selectedColumn = this.dataset.column;
+            // 切换栏目时重置筛选条件，避免残留筛选过滤掉全部
+            document.getElementById('searchBox').value = '';
+            document.getElementById('sourceFilter').value = '';
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('importanceFilter').value = '';
+            filterNews();
+        });
+    });
     initFilters();
     filterNews();
 });
 </script>
 </body>
 </html>'''
+
+# V1.3: 替换栏目 tab 占位符
+html_content = html_content.replace('COLUMN_TABS_HOLDER', column_tabs_html)
 
 with open(OUTPUT_PATH_GH,'w',encoding='utf-8') as f: f.write(html_content)
 with open(OUTPUT_PATH_ROOT,'w',encoding='utf-8') as f: f.write(html_content)
