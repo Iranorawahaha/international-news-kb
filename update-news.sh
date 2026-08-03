@@ -570,11 +570,11 @@ sources = set(a.get('source','未知') for a in all_articles)
 categories = set(a.get('category','其他') for a in all_articles)
 summit_count = sum(1 for a in all_articles if a.get('is_summit_level'))
 
-# 构建日期下拉 options（V1.4: 日期筛选改为独立下拉选择器）
-tabs_html = '<option value="all">全部日期（%d 条）</option>' % total_count
+# V1.5: 顶部日期表头按钮（横向）
+tabs_html = '<button class="date-btn active" data-date="all">\U0001f4c5 全部日期（%d）</button>' % total_count
 for d in dates:
     count = len(archive.get(d, []))
-    tabs_html += '<option value="%s">%s（%d 条）</option>' % (d, d.replace('2026-', '2026/'), count)
+    tabs_html += '<button class="date-btn" data-date="%s">%s（%d）</button>' % (d, d.replace('2026-', '8'), count)
 
 # 六大栏目统计（用于栏目 tab）
 COLUMN_ORDER = ["中国", "美国", "欧洲", "地区热点", "国际会议", "其他"]
@@ -584,34 +584,44 @@ for _d, _arts in archive.items():
     for _a in _arts:
         _col = _a.get('column', '其他')
         column_counts[_col] = column_counts.get(_col, 0) + 1
-# V1.4: 栏目胶囊组（大号分段控件）
-column_tabs_html = '<button class="pill active" data-column="all"><span class="pill-icon">\U0001f4cb</span>全部<span class="pill-count">%d</span></button>' % total_count
+# V1.5: 左侧栏目侧边栏列表（悬浮 sticky）
+column_tabs_html = '<button class="col-item active" data-column="all"><span class="ic">\U0001f4cb</span><span class="nm">全部</span><span class="cnt">%d</span></button>' % total_count
 for _c in COLUMN_ORDER:
     _icon = COLUMN_ICONS.get(_c, '\U0001f4cc')
     _cnt = column_counts.get(_c, 0)
-    column_tabs_html += '<button class="pill" data-column="%s"><span class="pill-icon">%s</span>%s<span class="pill-count">%d</span></button>' % (_c, _icon, _c, _cnt)
+    column_tabs_html += '<button class="col-item" data-column="%s"><span class="ic">%s</span><span class="nm">%s</span><span class="cnt">%d</span></button>' % (_c, _icon, _c, _cnt)
 
 print(f"📊 生成V1.2 HTML: {total_count}条新闻, {len(dates)}天, 栏目: {column_counts}")
 
 # ⭐ V1.4 HTML模板（深色情报指挥风）— 从独立模板文件加载，占位符替换
-TEMPLATE_PATH = PROJECT_ROOT / "scripts" / "intl_template_v14.html"
+TEMPLATE_PATH = PROJECT_ROOT / "scripts" / "intl_template_v15.html"
 with open(TEMPLATE_PATH, 'r', encoding='utf-8') as _tf:
     html_content = _tf.read()
 
 # 占位符替换
+# 计算今日新增（北京时间今日）
+from datetime import datetime, timezone, timedelta as _td
+_TZ = timezone(_td(hours=8))
+_today = datetime.now(_TZ).strftime('%Y-%m-%d')
+_today_count = 0
+for _d, _arts in archive.items():
+    for _a in _arts:
+        if _a.get('date') == _today:
+            _today_count += 1
+
 html_content = html_content.replace('__NOW_STR__', now_str)
-html_content = html_content.replace('__COLUMN_TABS__', column_tabs_html)
-html_content = html_content.replace('__DATE_OPTIONS__', tabs_html)
+html_content = html_content.replace('__NOW_FULL__', now_full)
 html_content = html_content.replace('__TOTAL_COUNT__', str(total_count))
+html_content = html_content.replace('__TODAY_COUNT__', str(_today_count))
 html_content = html_content.replace('__SOURCE_COUNT__', str(len(sources)))
 html_content = html_content.replace('__CATEGORY_COUNT__', str(len(categories)))
 html_content = html_content.replace('__SUMMIT_COUNT__', str(summit_count))
 html_content = html_content.replace('__DATE_COUNT__', str(stats.get('dateCount', len(dates))))
-html_content = html_content.replace('__NOW_FULL__', now_full)
+html_content = html_content.replace('__COLUMN_SIDEBAR__', column_tabs_html)
+html_content = html_content.replace('__DATE_HEAD_BUTTONS__', tabs_html)
 html_content = html_content.replace('__NEWS_DATA_JSON__', json.dumps(v12_data, ensure_ascii=False))
-html_content = html_content.replace('COLUMN_TABS_HOLDER', column_tabs_html)
 
-print(f"\U0001f4ca 生成V1.4 HTML: {total_count}条新闻, {len(dates)}天, 栏目: {column_counts}")
+print(f"\U0001f4ca 生成V1.5 HTML: {total_count}条新闻, {len(dates)}天, 栏目: {column_counts}")
 
 with open(OUTPUT_PATH_GH,'w',encoding='utf-8') as f: f.write(html_content)
 with open(OUTPUT_PATH_ROOT,'w',encoding='utf-8') as f: f.write(html_content)
