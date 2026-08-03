@@ -22,9 +22,10 @@ FIELD_MAP = {
 
 # 标准字段集（缺失时补默认值）
 STANDARD_KEYS = [
-    "id", "date", "title", "title_en", "summary", "source", "category",
+    "id", "date", "title", "title_en", "title_zh", "summary", "summary_en", "summary_zh",
+    "source", "category",
     "keywords", "url", "priority_score", "is_summit_level", "importance",
-    "collectedAt", "collection_method", "column",
+    "collectedAt", "collection_method", "column", "is_official",
 ]
 
 def normalize_article(art, default_date):
