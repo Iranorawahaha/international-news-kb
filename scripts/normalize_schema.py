@@ -24,7 +24,7 @@ FIELD_MAP = {
 STANDARD_KEYS = [
     "id", "date", "title", "title_en", "summary", "source", "category",
     "keywords", "url", "priority_score", "is_summit_level", "importance",
-    "collectedAt", "collection_method",
+    "collectedAt", "collection_method", "column",
 ]
 
 def normalize_article(art, default_date):
@@ -53,6 +53,8 @@ def normalize_article(art, default_date):
                 v = 0
             elif k == "is_summit_level":
                 v = False
+            elif k == "column":
+                v = "其他"
         out[k] = v
     # 清理空值 id（避免去重 key 失效）
     if not out.get("id"):
