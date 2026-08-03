@@ -1167,6 +1167,8 @@ host=github.com
     echo -e "   ✅ 历史数据自动保留7天（本地）/ 永久（飞书）"
     echo -e "   ✅ 支持按日期筛选 + 搜索 + 分类过滤"
     echo -e "   ✅ 所有新闻自动同步到飞书Base存档库"
+    # ===== C 方案：记录本次执行（供错过补跑检查） =====
+    python3 /Users/xiaoxiao/WorkBuddy/2026-08-01-14-08-40/scripts/record_run.py news --status ok
 else
     echo -e "${RED}❌ 推送失败！请检查网络和代理设置${NC}"
     exit 1
