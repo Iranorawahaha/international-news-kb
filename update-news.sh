@@ -203,42 +203,91 @@ def clean_articles(articles):
     return cleaned, removed_count, removal_reasons
 
 def deduplicate_articles(articles, archive=None):
-    """去重处理（基于 URL + 标题规范化；支持跨日期去重）
+    """去重处理（URL 规范化 + 跨日期去重 + 跨信源同题合并）
 
-    archive: 若提供，则已存在于 archive 任意日期的文章（URL 相同）视为重复，
-             直接跳过 —— 修复同一新闻连续多天被 WebFetch 重复抓回归档的问题。
+    1) URL 规范化：清洗 markdown 包裹 [url](url)，统一尾部斜杠
+    2) 跨日期去重：URL 已存在于历史归档任意日期 → 跳过（每条新闻仅出现一次）
+    3) 跨信源同题合并：不同媒体报道同一事件（标题相似度 ≥0.68），
+       保留最权威信源（Reuters/AP 优先），其余同题移除
     返回: (unique_articles, duplicate_count)
     """
     import re as _re
-    seen_keys = set()
-    unique_articles = []
-    duplicate_count = 0
+    from difflib import SequenceMatcher as _SM
 
-    # 预构建历史 URL 集合（跨日期去重）
+    # 权威信源优先级（同题合并时保留高优先级）
+    AUTHORITY_ORDER = ['路透社', '美联社', 'BBC', 'CNN', '华盛顿邮报', '纽约时报',
+                       '华尔街日报', '卫报', '半岛电视台', '南华早报', 'Politico']
+
+    def _norm_url(u):
+        """清洗 URL：解 markdown 包裹、去尾部斜杠、统一小写"""
+        u = (u or '').strip()
+        m = _re.match(r'^\[(.+?)\]\((.+?)\)$', u)
+        if m:
+            u = m.group(2)
+        return u.rstrip('/').lower()
+
+    def _norm_title(t):
+        """规范化标题：去标点/空格/常见修饰词，仅留核心词"""
+        t = (t or '').lower()
+        # 去引号/标点/英文停用词
+        t = _re.sub(r'[^a-z0-9\u4e00-\u9fff ]', ' ', t)
+        t = _re.sub(r'\b(says?|said|to|on|in|for|the|a|an|of|and|with|as|at|by|from|after|before)\b', ' ', t)
+        t = _re.sub(r'\s+', ' ', t).strip()
+        return t[:50]
+
+    def _similar(a, b):
+        if not a or not b:
+            return 0.0
+        return _SM(None, a, b).ratio()
+
+    seen_keys = set()
     hist_urls = set()
     if archive:
         for _date, _arts in archive.items():
             for _a in _arts:
-                _u = (_a.get('url') or '').strip()
+                _u = _norm_url(_a.get('url'))
                 if _u:
                     hist_urls.add(_u)
 
-    def _norm_title(t):
-        return _re.sub(r'[^\u4e00-\u9fffA-Za-z0-9]', '', (t or '')).lower()[:40]
+    unique_articles = []
+    duplicate_count = 0
 
     for art in articles:
         title = art.get('title', '') or ''
         source = art.get('source', '') or '未知'
-        url = (art.get('url') or '').strip()
+        url = _norm_url(art.get('url'))
         unique_key = (title[:30], source)
         url_key = f"URL::{url}" if url else None
 
-        # 1) 跨日期去重：URL 已存在于历史归档 → 跳过
+        # 1) 跨日期去重（URL 规范化后）
         if url_key and url in hist_urls:
             duplicate_count += 1
             print(f"    🔁 跨日期重复跳过: {title[:40]}... (已在历史归档)")
             continue
-        # 2) 当天内去重：标题+来源 或 URL
+
+        # 2) 跨信源同题合并：与已保留文章标题相似度过高 → 同题
+        norm_t = _norm_title(title)
+        merged = False
+        for kept in unique_articles:
+            kept_t = _norm_title(kept.get('title', ''))
+            if kept_t and _similar(norm_t, kept_t) >= 0.68:
+                # 同题：保留权威性更高的
+                kept_src = kept.get('source', '')
+                src_rank = AUTHORITY_ORDER.index(source) if source in AUTHORITY_ORDER else 99
+                kept_rank = AUTHORITY_ORDER.index(kept_src) if kept_src in AUTHORITY_ORDER else 99
+                if src_rank < kept_rank:
+                    # 新来的更权威 → 替换
+                    unique_articles[unique_articles.index(kept)] = art
+                    print(f"    🔁 同题替换(更权威): {title[:40]}... (来源: {source})")
+                else:
+                    duplicate_count += 1
+                    print(f"    🔁 同题合并: {title[:40]}... (来源: {source} → 保留{kept_src})")
+                merged = True
+                break
+        if merged:
+            continue
+
+        # 3) 当天内去重：标题+来源 或 URL
         dup_this = unique_key in seen_keys or (url_key is not None and url_key in seen_keys)
         if not dup_this:
             seen_keys.add(unique_key)
@@ -369,6 +418,28 @@ if all_today_articles:
     
     summit_count = sum(1 for a in sorted_articles if a.get('is_summit_level'))
     print(f"     ✅ 排序完成: {len(sorted_articles)} 条 ({summit_count} ⭐元首级)")
+
+    # 真实报道日期重分配：URL 含更早日期（如 reuters/washingtonpost/news.cn）且该日期
+    # 在保留窗口内 → 移到真实报道日期，避免 8/3 版面混入 7/31 已报道的旧闻
+    import re as _re_url
+    def _url_real_date(u):
+        if not u: return None
+        m = _re_url.search(r'(20\d{2})[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12]\d|3[01])', u)
+        if m: return f'{m.group(1)}-{m.group(2)}-{m.group(3)}'
+        m2 = _re_url.search(r'/(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])/', u)
+        if m2: return f'{m2.group(1)}-{m2.group(2)}-{m2.group(3)}'
+        return None
+
+    _min_date = min(data['archive'].keys()) if data['archive'] else today
+    _reassigned = 0
+    for _art in list(data['archive'].get(today, [])):
+        _real = _url_real_date(_art.get('url'))
+        if _real and _real < today and _real >= _min_date:
+            data['archive'].setdefault(_real, []).append(_art)
+            data['archive'][today].remove(_art)
+            _reassigned += 1
+    if _reassigned > 0:
+        print(f"     🔁 真实报道日期重分配: {_reassigned} 条移到 {_min_date}~{today} 对应日期")
 
 # 清理超过7天的旧数据
 print(f"\n  🗑️ 清理超过{RETENTION_DAYS}天的旧数据...")
