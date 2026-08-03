@@ -987,7 +987,11 @@ function renderTable(articles) {
         } else {
             globalIndex++;
             const imp = getImportance(item.priority_score || 0, item.is_summit_level);
-            const keywords = (item.keywords || []).slice(0, 3);
+            // 兼容 keywords 为字符串（如 "k1,k2,k3"）或数组
+            let kws = item.keywords;
+            if (typeof kws === 'string') kws = kws.replace(/，/g, ',').split(',').map(s => s.trim()).filter(Boolean);
+            if (!Array.isArray(kws)) kws = [];
+            const keywords = kws.slice(0, 3);
             
             // 9列完整布局（V1.1标准）
             tr.innerHTML = `
