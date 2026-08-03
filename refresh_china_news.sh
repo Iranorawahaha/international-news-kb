@@ -92,4 +92,4 @@ echo "   线上地址: https://iranorawahaha.github.io/international-news-kb/chi
 echo "   生成时间: $(date '+%Y-%m-%d %H:%M:%S %Z')"
 
 # ===== C 方案：记录本次执行（供错过补跑检查） =====
-"$PY" /Users/xiaoxiao/WorkBuddy/2026-08-01-14-08-40/scripts/record_run.py cn --status ok
+"$PY" "$(cd "$(dirname "$0")" && pwd)/scripts/record_run.py" cn --status ok

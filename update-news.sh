@@ -279,6 +279,14 @@ for temp_file in temp_files:
         elif isinstance(temp_data, dict) and 'articles' in temp_data:
             new_articles.extend(temp_data['articles'])
             print(f"  📥 从 {temp_file} 读取 {len(temp_data['articles'])} 条新闻")
+        # 关键词 schema 标准化：WebFetch 返回的 keywords 是字符串（如 "k1,k2,k3"），
+        # 统一转为数组，避免前端 renderTable 抛 "keywords.map is not a function" 错误
+        for art in new_articles[-len(temp_data) if isinstance(temp_data, list) else len(temp_data.get("articles", [])):]:
+            kw = art.get("keywords") if isinstance(art, dict) else None
+            if isinstance(kw, str):
+                art["keywords"] = [k.strip() for k in kw.replace("，", ",").split(",") if k.strip()]
+            elif kw is None:
+                art["keywords"] = []
     except FileNotFoundError:
         pass
     except Exception as e:
@@ -1168,7 +1176,7 @@ host=github.com
     echo -e "   ✅ 支持按日期筛选 + 搜索 + 分类过滤"
     echo -e "   ✅ 所有新闻自动同步到飞书Base存档库"
     # ===== C 方案：记录本次执行（供错过补跑检查） =====
-    python3 /Users/xiaoxiao/WorkBuddy/2026-08-01-14-08-40/scripts/record_run.py news --status ok
+    python3 "$(dirname "$0")/scripts/record_run.py" news --status ok
 else
     echo -e "${RED}❌ 推送失败！请检查网络和代理设置${NC}"
     exit 1
