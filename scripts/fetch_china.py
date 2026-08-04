@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-fetch_china.py — 国内新闻看板 · 权威信源抓取器 v3（Ira 信息看板体系）
+fetch_china.py — 国内新闻看板 · 权威信源抓取器 v4（Ira 信息看板体系）
 
 数据源（国家级权威 + 严格过滤）：
   1. 中国政府网·要闻      https://www.gov.cn/yaowen/liebiao/YAOWENLIEBIAO.json
   2. 中国政府网·最新政策  https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json
   3. 央视新闻             https://news.cctv.com/2019/07/gaiban/cmsdatainterface/page/china_1.jsonp
   4. 人民日报             http://paper.people.com.cn/rmrb/pc/layout/{YYYYMM}/dd 头版+要闻版
-  5. 凤凰新闻             https://news.ifeng.com/（严格过滤）
+  5. 外交部官网           https://www.mfa.gov.cn（发言人记者会 / 领导人活动 / 驻外使领馆动态）
+  6. 部委官网             https://www.mofcom.gov.cn（商务部） / www.ndrc.gov.cn（发改委） / www.cac.gov.cn（网信办）
 
-v3 改进（2026-08-01 用户反馈）：
-  - 摘要: 每条记录抓取正文首段作精简摘要（央视用 brief 字段）
-  - 权威去重: 跨信源同题去重，保留权威优先（政府网 > 央视 > 人民日报 > 凤凰）
-  - 分类重构:
-    · 元首动态: 仅限习近平总书记相关
-    · 高层动态: 政治局常委 + 政治局委员/副国级（何立峰/王毅等）
-    · 部委动态: 工信部/网信办/发改委/国办/中办/商务部/外交部等
-    · 人事任免: 中央到地方高层（含陈新武任重庆市代市长等）
-    · 政策发布 / 经贸动向 / 重要会议 / 其他
-  - 强化过滤: 天气/文旅/非遗/民俗/猎奇等杂项剔除
+v4 改进（2026-08-04 用户反馈）：
+  - ❌ 彻底删除凤凰新闻信源（不再收集）
+  - ✅ 新增"使领馆动向"类别（最高优先级）：
+      · 大使离到任/递交国书（外交部官网权威渠道，每日抓取）
+      · 外交部召见/约见/谈话等与驻华使馆互动（中等）
+      · 使馆参与/牵头的大型文化活动（最次）
+  - ✅ 加强重要会议筛选：剔除"（人民论坛）"等报纸评论栏目标记（非真正会议）
+  - ✅ 人事任免补强：高层任免 + 高官反贪腐（审查调查/双开/落马等）
+  - ✅ 部委动态拓展：商务部/发改委/网信办官网（通报/要闻/答记者问）
 """
 import json
 import os
@@ -38,22 +38,31 @@ GOV_YAOWEN = "https://www.gov.cn/yaowen/liebiao/YAOWENLIEBIAO.json"
 GOV_ZHENGCE = "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json"
 CCTV_CHINA = "https://news.cctv.com/2019/07/gaiban/cmsdatainterface/page/china_1.jsonp"
 RMRB_LAYOUT = "http://paper.people.com.cn/rmrb/pc/layout/{date_path}/node_{node:02d}.html"
-IFENG_HOME = "https://news.ifeng.com/"
+# v4: 外交部官网（使领馆动向核心信源）
+MFA_HOME = "https://www.mfa.gov.cn/web/"
+MFA_SPOKES = "https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/"       # 发言人例行记者会
+MFA_LEADER = "https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/"     # 领导人活动（含任免大使/递交国书）
+MFA_DSRM = "https://www.mfa.gov.cn/web/wjdt_674879/dsrm_674893/"          # 大使任免（驻华大使离到任权威栏目）
+# v4: 关注部委官网
+MOFCOM_NEWS = "https://www.mofcom.gov.cn/xwfb/"                            # 商务部·新闻发布
+NDRC_NEWS = "https://www.ndrc.gov.cn/xwdt/"                                # 发改委·新闻动态
+CAC_NEWS = "https://www.cac.gov.cn/"                                       # 网信办·要闻
 
 # 信源权威优先级（去重时保留优先级高的）
-SOURCE_PRIORITY = {"中国政府网·要闻": 1, "中国政府网·最新政策": 1, "央视新闻": 2, "人民日报": 3, "凤凰新闻": 4}
+SOURCE_PRIORITY = {
+    "中国政府网·要闻": 1, "中国政府网·最新政策": 1, "央视新闻": 2, "人民日报": 3,
+    "外交部": 2, "商务部": 3, "国家发改委": 3, "网信办": 3,
+}
 
 # ============ 领导人名单 ============
-# 元首动态：仅习近平总书记相关
 XI_KEYWORDS = ["习近平", "国家主席", "中央军委主席", "总书记"]
-# 高层动态：政治局常委 + 政治局委员/副国级
 PSC_KEYWORDS = ["李强", "赵乐际", "王沪宁", "蔡奇", "丁薛祥", "李希",
                 "何立峰", "王毅", "李干杰", "张国清", "陈文清", "刘国中", "石泰峰",
                 "黄坤明", "陈吉宁", "袁家军", "尹力", "马兴瑞", "信长星", "梁言顺", "王君正",
                 "李书磊", "穆虹", "秦刚", "刘建超", "李尚福", "王小洪", "张又侠", "何卫东",
                 "张春贤", "王东明", "彭清华", "郑建邦", "郝明金", "蔡达峰", "何维", "武维华",
                 "铁凝", "雪克来提", "洛桑江村", "国务院副总理", "国务院国务委员", "政治局委员"]
-# 部委关键词（V3.1 聚焦用户点名 7 大部委 + 中美贸易/经济制裁/AI/信息通信话题）
+# 部委关键词（V4 聚焦用户点名 7 大部委 + 中美贸易/经济制裁/AI/信息通信话题）
 BUWEI_KEYWORDS = [
     # 用户点名部委
     "工信部", "工业和信息化部", "网信办", "国家网信办", "中央网信办", "发改委",
@@ -63,6 +72,30 @@ BUWEI_KEYWORDS = [
     "中美贸易", "贸易战", "经济制裁", "实体清单", "出口管制", "关税",
     "AI", "人工智能", "大模型", "芯片", "半导体", "信息通信", "5G", "6G",
     "集成电路", "算力", "数据安全", "网络安全",
+]
+# v4: 使领馆动向关键词（最高优先级：大使离到任 > 召见谈话 > 文化活动）
+EMBASSY_KEYWORDS = [
+    # ① 大使离到任/递交国书（最高优先级）
+    "递交国书", "接受国书", "新任驻华大使", "驻华大使", "大使离任", "大使到任",
+    "任免大使", "驻外大使", "大使任免", "履新", "递交国书副本",
+    # ② 召见/约见/谈话等互动（中等优先级）
+    "外交部召见", "召见", "约见", "提出交涉", "照会", "驻华使馆", "使馆",
+    "使领馆", "领事馆", "总领事",
+    # ③ 使馆文化活动（最次）
+    "使馆文化", "文化周", "文化节", "使领馆活动",
+]
+# v4: 人事任免 + 反贪腐关键词（用户重点）
+PERSONNEL_KEYWORDS = [
+    "任免", "任命", "免去", "担任", "任命决定", "提请任命", "代市长", "代省长", "代县长",
+    "履新", "出任", "接任", "当选", "辞去", "代理", "任国家工作人员",
+    # 反贪腐（高官审查调查）
+    "接受审查调查", "审查调查", "纪律审查", "监察调查", "双开", "开除党籍",
+    "开除公职", "违纪违法", "涉嫌严重违纪", "落马", "被查", "留置", "立案审查",
+]
+# v4: 重要会议关键词（剔除"论坛"等易混项 → 拆分处理）
+MEETING_KEYWORDS = [
+    "会议", "全会", "座谈会", "研讨会", "集体学习", "中央经济工作会议",
+    "全国两会", "人代会", "政协会", "传达学习", "峰会", "联席会议", "领导小组会议",
 ]
 # 经贸关键词
 ECONOMY_KEYWORDS = [
@@ -111,27 +144,35 @@ JUNK_KEYWORDS = [
     "红色山洪", "山洪", "洪水", "内涝", "应急响应", "防汛", "汛情", "灾情", "天气预警",
 ]
 
-# 分类规则（按优先级顺序，v3 重构）
+# v4: 报纸评论栏目标记（非真正会议/新闻，剔除）
+COMMENT_COLUMN_MARKS = [
+    "（人民论坛）", "（人民时评）", "（评论员观察）", "（今日谈）", "（思想纵横）",
+    "（国际论坛）", "（钟声）", "（望海楼）", "（国纪平）", "（仲音）",
+    "人民论坛", "人民时评", "评论员观察",
+]
+
+# 分类规则（按优先级顺序，v4 重构：使领馆动向置顶）
 CATEGORY_RULES = [
     # 1. 元首动态：仅习近平相关
     ("元首动态", XI_KEYWORDS),
     # 2. 高层动态：政治局常委 + 政治局委员
     ("高层动态", PSC_KEYWORDS),
-    # 3. 重要会议
-    ("重要会议", ["会议", "全会", "座谈会", "研讨会", "论坛", "学习贯彻", "集体学习", "中央经济工作会议", "全国两会", "人代会", "政协会"]),
-    # 4. 人事任免（中央到地方高层）
-    ("人事任免", ["任免", "任命", "免去", "担任", "任命决定", "提请任命", "代市长", "代省长", "代县长",
-                   "履新", "出任", "接任", "当选", "辞去", "代理"]),
-    # 5. 部委动态（工信/网信/发改/国办/中办/商务/外交等）
+    # 3. 使领馆动向（v4 新增，用户最高优先级）
+    ("使领馆动向", EMBASSY_KEYWORDS),
+    # 4. 重要会议（v4：剔除"论坛"类评论栏目标记，见 make_item 前置过滤）
+    ("重要会议", MEETING_KEYWORDS),
+    # 5. 人事任免（中央到地方高层 + 反贪腐）
+    ("人事任免", PERSONNEL_KEYWORDS),
+    # 6. 部委动态（工信/网信/发改/国办/中办/商务/外交等）
     ("部委动态", BUWEI_KEYWORDS),
-    # 6. 政策发布
+    # 7. 政策发布
     ("政策发布", ["印发", "通知", "规划", "意见", "方案", "条例", "规定", "办法", "决定", "批复", "白皮书"]),
-    # 7. 经贸动向
+    # 8. 经贸动向
     ("经贸动向", ECONOMY_KEYWORDS),
 ]
 
 CATEGORY_ICONS = {
-    "元首动态": "👑", "高层动态": "🧭", "重要会议": "🏛", "人事任免": "📋",
+    "元首动态": "👑", "高层动态": "🧭", "使领馆动向": "🕊️", "重要会议": "🏛", "人事任免": "📋",
     "部委动态": "🏢", "政策发布": "📜", "经贸动向": "💹", "其他": "📌",
 }
 
@@ -147,6 +188,12 @@ def fetch(url, headers=None, timeout=12):
             req.add_header(k, v)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read().decode("utf-8", errors="ignore")
+
+
+def is_comment_column(title):
+    """v4: 报纸评论栏目标记（人民论坛等）→ 剔除，非真正会议/新闻"""
+    t = title or ""
+    return any(mark in t for mark in COMMENT_COLUMN_MARKS)
 
 
 def classify(title):
@@ -170,10 +217,21 @@ def assess_importance(title, cat):
                 score = 95
                 break
         else:
-            if cat == "重要会议":
+            if cat == "使领馆动向":
+                # 递交国书/大使离到任最高，召见次之，文化活动最低
+                if any(k in title for k in ["递交国书", "接受国书", "新任驻华大使", "大使离任", "大使到任", "任免大使", "驻外大使"]):
+                    score = 90
+                elif any(k in title for k in ["召见", "约见", "照会", "交涉"]):
+                    score = 82
+                else:
+                    score = 70
+            elif cat == "重要会议":
                 score = 88
             elif cat == "人事任免":
-                score = 85
+                if any(k in title for k in ["审查调查", "双开", "开除党籍", "落马", "被查", "违纪违法"]):
+                    score = 86  # 反贪腐
+                else:
+                    score = 85
             elif cat == "部委动态":
                 score = 78
             elif cat == "政策发布":
@@ -221,6 +279,9 @@ def extract_summary_from_url(url, max_len=100):
 
 def make_item(title, url, date, source, summary=None):
     if not title or not url or is_junk(title):
+        return None
+    # v4: 剔除报纸评论栏目标记（人民论坛/人民时评等非新闻）
+    if is_comment_column(title):
         return None
     title = re.sub(r"^【[^】]*】\s*", "", title).strip()
     title = re.sub(r"^\[[^\]]*\]\s*", "", title).strip()
@@ -326,28 +387,135 @@ def fetch_rmrb():
     return items
 
 
-def fetch_ifeng():
-    """凤凰新闻（严格过滤，仅采纳时政/高层/部委/经贸/会议/人事）"""
+# ==================== v4 新增：外交部官网（使领馆动向核心信源） ====================
+def extract_date_from_url(url):
+    """从 URL 提取日期：t20260731_xxx.shtml → 2026-07-31；/2026-07/31/ → 2026-07-31；art/2026/xxx 兜底"""
+    m = re.search(r"t(20\d{2})(\d{2})(\d{2})_", url)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    m = re.search(r"/(20\d{2})/(\d{2})/(\d{2})/", url)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    m = re.search(r"/(20\d{2})-(\d{2})/(\d{2})/", url)
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    return None
+
+
+def parse_mfa_list(h, base_url, source_name, url_filters=("shtml",), title_filters=()):
+    """通用解析外交部/部委官网列表页（<a href> + 标题）"""
     items = []
+    cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
+    seen_urls = set()
+    for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', h, re.S):
+        u, t = m.group(1), re.sub(r"<[^>]+>", "", m.group(2)).strip()
+        t = re.sub(r"\s+", " ", t).strip()
+        if not t or len(t) < 10:
+            continue
+        if not any(f in u for f in url_filters):
+            continue
+        if any(f in t for f in title_filters):
+            continue
+        if u.startswith("//"):
+            u = "https:" + u
+        elif not u.startswith("http"):
+            u = base_url.rstrip("/") + "/" + u.lstrip("./")
+        # 规范化 URL（去锚点）
+        u = u.split("#")[0]
+        if u in seen_urls:
+            continue
+        seen_urls.add(u)
+        d = extract_date_from_url(u)
+        if d is None:
+            # 标题里可能带日期（2026年7月31日 或 （2026-07-31））
+            md = re.search(r"（(20\d{2}-\d{2}-\d{2})）", t)
+            if md:
+                d = md.group(1)
+            else:
+                md = re.search(r"(20\d{2})年(\d{1,2})月(\d{1,2})日", t)
+                if md:
+                    d = f"{md.group(1)}-{int(md.group(2)):02d}-{int(md.group(3)):02d}"
+        if d is None or d < cutoff:
+            continue
+        item = make_item(t, u, d, source_name)
+        if item:
+            items.append(item)
+    return items
+
+
+def fetch_mfa():
+    """外交部官网：大使任免 + 发言人记者会 + 领导人活动 + 首页驻外使领馆动态"""
+    items = []
+    # 0. 大使任免栏目（最高优先级：驻华大使离到任/递交国书）
     try:
-        h = fetch(IFENG_HOME, timeout=10)
-        titles = re.findall(r'"title":"([^"]{8,80})"', h)
-        urls = re.findall(r'"url":"(https?://[^"]{15,120})"', h)
-        keep_cats = ("元首动态", "高层动态", "重要会议", "人事任免", "部委动态", "政策发布", "经贸动向")
-        for i, t in enumerate(titles):
-            if len(urls) > i:
-                item = make_item(t, urls[i], NOW.strftime("%Y-%m-%d"), "凤凰新闻")
-                if item and item["category"] in keep_cats:
-                    items.append(item)
-        seen, uniq = set(), []
-        for it in items:
-            if it["title"] not in seen:
-                seen.add(it["title"])
-                uniq.append(it)
-        print(f"  ✅ 凤凰新闻: 标题 {len(titles)} 条 → 采纳 {len(uniq)} 条（严格过滤）")
-        return uniq
+        h = fetch(MFA_DSRM, headers={"Referer": "https://www.mfa.gov.cn/"})
+        it = parse_mfa_list(h, "https://www.mfa.gov.cn/web/wjdt_674879/dsrm_674893",
+                            "外交部", url_filters=("shtml",))
+        items += it
+        print(f"  ✅ 外交部·大使任免: 采纳 {len(it)} 条")
     except Exception as e:
-        print(f"  ❌ 凤凰新闻: {e}")
+        print(f"  ❌ 外交部·大使任免: {e}")
+
+    # 1. 发言人例行记者会（部委动态/使领馆互动）
+    try:
+        h = fetch(MFA_SPOKES, headers={"Referer": "https://www.mfa.gov.cn/"})
+        it = parse_mfa_list(h, "https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889",
+                            "外交部", url_filters=("shtml",))
+        items += it
+        print(f"  ✅ 外交部·发言人记者会: 采纳 {len(it)} 条")
+    except Exception as e:
+        print(f"  ❌ 外交部·发言人记者会: {e}")
+
+    # 2. 领导人活动（含"国家主席习近平任免驻外大使"/递交国书等）
+    try:
+        h = fetch(MFA_LEADER, headers={"Referer": "https://www.mfa.gov.cn/"})
+        it = parse_mfa_list(h, "https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881",
+                            "外交部", url_filters=("shtml",))
+        items += it
+        print(f"  ✅ 外交部·领导人活动: 采纳 {len(it)} 条")
+    except Exception as e:
+        print(f"  ❌ 外交部·领导人活动: {e}")
+
+    # 3. 外交部首页（驻外使领馆动态：驻X国大使...）
+    try:
+        h = fetch(MFA_HOME, headers={"Referer": "https://www.mfa.gov.cn/"})
+        it = parse_mfa_list(h, "https://www.mfa.gov.cn/web",
+                            "外交部", url_filters=("shtml",))
+        items += it
+        print(f"  ✅ 外交部·首页/驻外动态: 采纳 {len(it)} 条")
+    except Exception as e:
+        print(f"  ❌ 外交部·首页: {e}")
+
+    # 抓摘要（限量）
+    print(f"  📥 外交部共 {len(items)} 条 → 抓取摘要...")
+    for it in items[:25]:
+        if not it.get("summary"):
+            it["summary"] = extract_summary_from_url(it["url"])
+    return items
+
+
+# ==================== v4 新增：关注部委官网 ====================
+def fetch_buwei_sites():
+    """商务部 / 发改委 / 网信办 官网（通报/要闻/答记者问）"""
+    items = []
+    sites = [
+        ("商务部", MOFCOM_NEWS, "https://www.mofcom.gov.cn/xwfb", ("art", "html")),
+        ("国家发改委", NDRC_NEWS, "https://www.ndrc.gov.cn/xwdt", ("html",)),
+        ("网信办", CAC_NEWS, "https://www.cac.gov.cn", ("shtml", "html", "htm")),
+    ]
+    for src, url, base, filters in sites:
+        try:
+            h = fetch(url, headers={"Referer": "https://www.gov.cn/"})
+            it = parse_mfa_list(h, base, src, url_filters=filters)
+            items += it
+            print(f"  ✅ {src}: 采纳 {len(it)} 条")
+        except Exception as e:
+            print(f"  ❌ {src}: {e}")
+
+    print(f"  📥 部委官网共 {len(items)} 条 → 抓取摘要...")
+    for it in items[:30]:
+        if not it.get("summary"):
+            it["summary"] = extract_summary_from_url(it["url"])
     return items
 
 
@@ -370,16 +538,17 @@ def normalize_title_for_dedup(title):
 
 
 def main():
-    print(f"🕗 {NOW.strftime('%Y-%m-%d %H:%M')} 北京时间 · 国内新闻抓取开始（v3）\n")
+    print(f"🕗 {NOW.strftime('%Y-%m-%d %H:%M')} 北京时间 · 国内新闻抓取开始（v4）\n")
 
     all_items = []
     all_items += fetch_gov(GOV_YAOWEN, "中国政府网·要闻")
     all_items += fetch_gov(GOV_ZHENGCE, "中国政府网·最新政策")
     all_items += fetch_cctv()
     all_items += fetch_rmrb()
-    all_items += fetch_ifeng()
+    all_items += fetch_mfa()
+    all_items += fetch_buwei_sites()
 
-    # 跨信源去重：标题相似（规范化后）时保留权威优先级高的（政府网 > 央视 > 人民日报 > 凤凰）
+    # 跨信源去重：标题相似（规范化后）时保留权威优先级高的
     seen, unique = {}, []
     for it in all_items:
         norm = normalize_title_for_dedup(it["title"])
@@ -425,7 +594,7 @@ def main():
             per_cat[it["category"]] = per_cat.get(it["category"], 0) + 1
 
     data = {
-        "version": "3.0",
+        "version": "4.0",
         "lastUpdated": NOW.strftime("%Y-%m-%d %H:%M"),
         "retentionDays": 7,
         "archive": archive,
@@ -444,7 +613,7 @@ def main():
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"\n📊 国内新闻抓取完成（v3）:")
+    print(f"\n📊 国内新闻抓取完成（v4）:")
     print(f"  总计: {total} 条 | 覆盖 {len(dates)} 天 | 今日 {data['todayCount']} 条 | ⭐元首级 {data['stats']['summitCount']} 条")
     print(f"  分类分布: {per_cat}")
     print(f"  信源分布:")
