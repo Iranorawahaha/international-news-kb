@@ -75,14 +75,14 @@ BUWEI_KEYWORDS = [
 ]
 # v4: 使领馆动向关键词（最高优先级：大使离到任 > 召见谈话 > 文化活动）
 EMBASSY_KEYWORDS = [
+    # ⚠️ 仅限外国驻华相关（中国驻外使领馆动态归部委动态/丢弃）
     # ① 大使离到任/递交国书（最高优先级）
-    "递交国书", "接受国书", "新任驻华大使", "驻华大使", "大使离任", "大使到任",
-    "任免大使", "驻外大使", "大使任免", "履新", "递交国书副本",
+    "递交国书", "接受国书", "新任驻华大使", "驻华大使", "递交国书副本", "国书副本",
+    "驻华大使到任", "驻华大使离任",
     # ② 召见/约见/谈话等互动（中等优先级）
-    "外交部召见", "召见", "约见", "提出交涉", "照会", "驻华使馆", "使馆",
-    "使领馆", "领事馆", "总领事",
+    "驻华使馆", "驻华使团", "驻华使节", "使团办", "外交部礼宾司", "召见", "约见",
     # ③ 使馆文化活动（最次）
-    "使馆文化", "文化周", "文化节", "使领馆活动",
+    "驻华使馆文化", "驻华使团", "驻华外交官",
 ]
 # v4: 人事任免 + 反贪腐关键词（用户重点）
 PERSONNEL_KEYWORDS = [
@@ -519,6 +519,65 @@ def fetch_buwei_sites():
     return items
 
 
+# ==================== v4.1：微信公众号搜索（外交部使团事务办公室）====================
+def fetch_wechat():
+    """微信公众号搜索：外交部使团事务办公室（外国驻华大使离到任/递交国书核心信源）"""
+    items = []
+    cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
+    keywords = [
+        "外交部使团事务办公室",  # 核心权威信源公众号
+    ]
+    import subprocess
+    script = os.path.join(BASE_DIR, "..", ".workbuddy", "skills", "wechat-article-search", "scripts", "search_wechat.js")
+    # 调整路径
+    if not os.path.exists(script):
+        script = os.path.join(os.path.expanduser("~"), ".workbuddy", "skills", "wechat-article-search", "scripts", "search_wechat.js")
+    if not os.path.exists(script):
+        print("  ⚠️  微信搜索脚本未找到，跳过")
+        return items
+
+    node = "/Users/xiaoxiao/.workbuddy/binaries/node/versions/22.22.2/bin/node"
+    node_modules = os.path.join(os.path.expanduser("~"), ".workbuddy", "skills", "wechat-article-search", "node_modules")
+    seen_urls = set()
+
+    for kw in keywords:
+        try:
+            r = subprocess.run(
+                [node, script, kw, "-n", "10"],
+                capture_output=True, text=True, timeout=30,
+                cwd=os.path.dirname(script),
+                env={**dict(os.environ), "NODE_PATH": node_modules}
+            )
+            data = json.loads(r.stdout) if r.returncode == 0 else None
+            if not data:
+                continue
+            for art in data.get("articles", []):
+                t = (art.get("title") or "").strip()
+                s = (art.get("summary") or "").strip()
+                d_str = (art.get("datetime") or "")[:10]
+                src_name = art.get("source", "外交部使团事务办公室")
+                u = (art.get("url") or "").strip()
+                if not t or len(t) < 8 or d_str < cutoff:
+                    continue
+                if u in seen_urls:
+                    continue
+                seen_urls.add(u)
+                # 强制来源过滤：只采纳"外交部使团事务办公室"公众号（排除自媒体）
+                if src_name != "外交部使团事务办公室":
+                    continue
+                # 筛选驻华大使/递交国书/离任到任内容
+                if not any(k in t + s for k in ["驻华大使", "递交国书", "国书副本", "大使离任", "大使到任",
+                                                  "新任大使", "驻华使馆", "驻华使团", "使团办"]):
+                    continue
+                item = make_item(t, u, d_str, src_name, summary=s[:100] + ("…" if len(s) > 100 else ""))
+                if item:
+                    items.append(item)
+            print(f"  🔍 微信搜索「{kw[:20]}」→ {len(items)} 条")
+        except Exception as e:
+            print(f"  ⚠️  微信搜索「{kw[:20]}」失败: {e}")
+    return items
+
+
 def normalize_title_for_dedup(title):
     """标题规范化（去栏目前缀/标点/同义词归一），用于跨信源去重"""
     t = title or ""
@@ -547,6 +606,7 @@ def main():
     all_items += fetch_rmrb()
     all_items += fetch_mfa()
     all_items += fetch_buwei_sites()
+    all_items += fetch_wechat()
 
     # 跨信源去重：标题相似（规范化后）时保留权威优先级高的
     seen, unique = {}, []
