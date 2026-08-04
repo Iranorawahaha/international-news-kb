@@ -310,7 +310,7 @@ def fetch_gov(url, source_name):
         data = json.loads(fetch(url))
         lst = data if isinstance(data, list) else data.get("listArrP") or data.get("data") or []
         # 政府网只保留近 7 天
-        cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
+        cutoff = (NOW - timedelta(days=6)).strftime("%Y-%m-%d")
         for it in lst:
             t = (it.get("TITLE") or "").strip()
             u = (it.get("URL") or "").strip()
@@ -341,7 +341,7 @@ def fetch_cctv():
             return items
         d = json.loads(m.group(1))
         lst = d.get("data", {}).get("list", [])
-        cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
+        cutoff = (NOW - timedelta(days=6)).strftime("%Y-%m-%d")
         for it in lst:
             t = (it.get("title") or "").strip()
             u = (it.get("url") or "").strip()
@@ -405,7 +405,7 @@ def extract_date_from_url(url):
 def parse_mfa_list(h, base_url, source_name, url_filters=("shtml",), title_filters=()):
     """通用解析外交部/部委官网列表页（<a href> + 标题）"""
     items = []
-    cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
+    cutoff = (NOW - timedelta(days=6)).strftime("%Y-%m-%d")
     seen_urls = set()
     for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', h, re.S):
         u, t = m.group(1), re.sub(r"<[^>]+>", "", m.group(2)).strip()
@@ -523,7 +523,7 @@ def fetch_buwei_sites():
 def fetch_wechat():
     """微信公众号搜索：外交部使团事务办公室（外国驻华大使离到任/递交国书核心信源）"""
     items = []
-    cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
+    cutoff = (NOW - timedelta(days=6)).strftime("%Y-%m-%d")
     keywords = [
         "外交部使团事务办公室",  # 核心权威信源公众号
     ]
@@ -644,7 +644,7 @@ def main():
         archive[d].sort(key=lambda x: (-x["priority_score"], x["title"]))
 
     # 7 天保留
-    cutoff = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
+    cutoff = (NOW - timedelta(days=6)).strftime("%Y-%m-%d")
     archive = {d: v for d, v in archive.items() if d >= cutoff}
 
     dates = sorted(archive.keys(), reverse=True)

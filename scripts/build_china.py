@@ -99,11 +99,18 @@ def build():
 
     # ============== 左侧 sidebar（sticky 栏目） ==============
     sidebar_items = []
-    sidebar_items.append(f'<button class="col-item active" data-cat="all"><span class="ic">📋</span>全部<span class="cnt">{total}</span></button>')
+    # V2.1: 栏目数字标签改为当日新增
+    today_archive = archive.get(today, [])
+    today_per_cat = {}
+    for it in today_archive:
+        c = it.get("category", "其他")
+        today_per_cat[c] = today_per_cat.get(c, 0) + 1
+    today_total = len(today_archive)
+    sidebar_items.append(f'<button class="col-item active" data-cat="all"><span class="ic">📋</span>全部<span class="cnt">新增{today_total}</span></button>')
     for c in cat_order:
-        cnt = per_cat.get(c, 0)
+        cnt = today_per_cat.get(c, 0)
         icon = cat_icon(c)
-        sidebar_items.append(f'<button class="col-item" data-cat="{esc(c)}"><span class="ic">{icon}</span>{esc(c)}<span class="cnt">{cnt}</span></button>')
+        sidebar_items.append(f'<button class="col-item" data-cat="{esc(c)}"><span class="ic">{icon}</span>{esc(c)}<span class="cnt">新增{cnt}</span></button>')
 
     # ============== 主内容区（按日期分组） ==============
     main_panels = []
@@ -371,9 +378,9 @@ def build():
   </div>
 
   <div class="kpi-grid">
+    <div class="kpi-card" style="border-left:4px solid #22a35e; background:linear-gradient(180deg,#f0fdf4,#fff);"><div class="kpi-num" style="color:#16a34a;">{today_new}</div><div class="kpi-label">🆕 今日新增</div></div>
     <div class="kpi-card kpi-main"><div class="kpi-num">{total}</div><div class="kpi-label">要闻总数（去重后）</div></div>
     <div class="kpi-card"><div class="kpi-num">{summit_count}</div><div class="kpi-label">⭐ 元首级要闻</div></div>
-    <div class="kpi-card"><div class="kpi-num">{today_new}</div><div class="kpi-label">今日新增</div></div>
     <div class="kpi-card"><div class="kpi-num">{len(dates)}</div><div class="kpi-label">覆盖天数</div></div>
   </div>
 
