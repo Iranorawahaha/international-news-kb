@@ -3,8 +3,12 @@
 """
 build_china.py — 国内新闻看板 单文件 HTML 构建器（Ira 信息看板体系）
 
+参照国际新闻 V1.5 视觉规范：
+- 浅色底 + 蓝色顶部
+- 左侧 sidebar（sticky 悬浮）+ 右侧主内容
+- 发布时间右侧醒目徽章
+
 读取 data/china-news.json，生成 china-news.html（单文件，纯内联 CSS/JS，无外部资源）。
-视觉与 AI 动向看板统一（政务深红风格 + 统一 IRA-NAV 导航）。
 """
 import json
 import os
@@ -44,15 +48,13 @@ def build():
             per_cat[it.get("category", "其他")] = per_cat.get(it.get("category", "其他"), 0) + 1
 
     cat_order = ["元首动态", "高层动态", "使领馆动向", "重要会议", "人事任免", "部委动态", "政策发布", "经贸动向"]
-    cat_map_zh = {"元首动态": "元首动态", "高层动态": "高层动态", "使领馆动向": "使领馆动向",
-                  "重要会议": "重要会议", "人事任免": "人事任免", "部委动态": "部委动态",
-                  "政策发布": "政策发布", "经贸动向": "经贸动向"}
+    cat_map_zh = {c: c for c in cat_order}
 
     def cat_icon(c):
         return {"元首动态": "👑", "高层动态": "🧭", "使领馆动向": "🕊️", "重要会议": "🏛",
                 "人事任免": "📋", "部委动态": "🏢", "政策发布": "📜", "经贸动向": "💹"}.get(c, "📌")
 
-    # 生成卡片 HTML
+    # ============== 卡片渲染（按日期分组 + 醒目时间） ==============
     def article_card(it, idx):
         title = esc(it.get("title", ""))
         url = esc(it.get("url", "#"))
@@ -60,7 +62,6 @@ def build():
         cat = it.get("category", "其他")
         score = it.get("priority_score", 0)
         summit = "⭐" if it.get("is_summit_level") else ""
-        today_mark = '<span class="tag-today">🆕 今日</span>' if it.get("date") == today else ""
         date_str = esc(it.get("date", ""))
         summary = esc(it.get("summary", "") or "")
         # 高分色
@@ -70,37 +71,74 @@ def build():
             cls = "imp-high"
         else:
             cls = ""
+        # 是否今天（更醒目）
+        is_today = (it.get("date") == today)
+        date_label_class = "date-badge today" if is_today else "date-badge"
+        date_label = f'<span class="{date_label_class}">📅 {date_str}</span>'
+        # 🆕 今日标记
+        today_mark = '<span class="tag-today">🆕 今日</span>' if is_today else ""
         summary_html = f'<p class="card-summary">{summary}</p>' if summary else ""
         return f'''<div class="card {cls}">
           <div class="card-idx">{idx}</div>
           <div class="card-body">
-            <h3 class="card-title">{summit}{title}{today_mark}</h3>
+            <div class="card-title-row">
+              <h3 class="card-title">{summit}{title}{today_mark}</h3>
+              <div class="card-meta-right">
+                {date_label}
+                <a class="card-link" href="{url}" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+              </div>
+            </div>
             {summary_html}
             <div class="card-meta">
               <span class="meta-cat">{cat_icon(cat)} {cat}</span>
-              <span class="meta-date">📅 {date_str}</span>
               <span class="meta-src">📰 {src}</span>
+              <span class="meta-imp">权重 {score}</span>
             </div>
           </div>
-          <a class="card-link" href="{url}" target="_blank" rel="noopener noreferrer">原文 ↗</a>
         </div>'''
 
-    # 生成分类 tab 面板
-    tabs = []
-    panels = []
+    # ============== 左侧 sidebar（sticky 栏目） ==============
+    sidebar_items = []
+    sidebar_items.append(f'<button class="col-item active" data-cat="all"><span class="ic">📋</span>全部<span class="cnt">{total}</span></button>')
     for c in cat_order:
         cnt = per_cat.get(c, 0)
-        active = " active" if c == cat_order[0] else ""
-        tabs.append(f'<button class="tab{active}" data-cat="{c}">{cat_icon(c)} {cat_map_zh[c]}（{cnt}）</button>')
-        items = []
-        idx = 0
+        icon = cat_icon(c)
+        sidebar_items.append(f'<button class="col-item" data-cat="{esc(c)}"><span class="ic">{icon}</span>{esc(c)}<span class="cnt">{cnt}</span></button>')
+
+    # ============== 主内容区（按日期分组） ==============
+    main_panels = []
+    # "全部" 面板：按日期分组
+    all_items_html = []
+    if dates:
         for d in dates:
-            for it in archive.get(d, []):
-                if it.get("category") == c:
-                    idx += 1
-                    items.append(article_card(it, idx))
-        panel_cls = "tab-panel " + ("active" if c == cat_order[0] else "")
-        panels.append(f'<div class="{panel_cls}" id="panel-{c}">{"".join(items) if items else f"<div class=\"empty-panel\">暂无{c}类新闻</div>"}</div>')
+            items = archive.get(d, [])
+            if not items:
+                continue
+            # 日期分组表头
+            is_today = (d == today)
+            d_cls = "date-group-header today" if is_today else "date-group-header"
+            d_label = "🆕 今天" if is_today else d
+            all_items_html.append(f'<div class="{d_cls}">📅 {d_label} <span class="date-count">{len(items)} 条</span></div>')
+            for idx, it in enumerate(items, 1):
+                all_items_html.append(article_card(it, idx))
+    empty_panel_html = '<div class="empty-panel">暂无要闻</div>'
+    main_panels.append('<div class="cat-panel active" id="cat-panel-all">' + ("".join(all_items_html) if all_items_html else empty_panel_html) + '</div>')
+
+    # 每个分类面板（也按日期分组）
+    for c in cat_order:
+        items = []
+        for d in dates:
+            cat_items = [it for it in archive.get(d, []) if it.get("category") == c]
+            if not cat_items:
+                continue
+            is_today = (d == today)
+            d_cls = "date-group-header today" if is_today else "date-group-header"
+            d_label = "🆕 今天" if is_today else d
+            items.append(f'<div class="{d_cls}">📅 {d_label} <span class="date-count">{len(cat_items)} 条</span></div>')
+            for idx, it in enumerate(cat_items, 1):
+                items.append(article_card(it, idx))
+        empty_for_cat = '<div class="empty-panel">暂无' + c + '类新闻</div>'
+        main_panels.append('<div class="cat-panel" id="cat-panel-' + esc(c) + '">' + ("".join(items) if items else empty_for_cat) + '</div>')
 
     # 日期信息
     window_start = dates[-1] if dates else NOW.strftime("%Y-%m-%d")
@@ -115,15 +153,31 @@ def build():
 <style>
   :root {{
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-    --bg: #f4f5f7; --panel: #fff; --line: #e4e7ee; --ink: #1c2434; --muted: #64707f;
-    --main: #8a1f1f; --main-dark: #6e1414; --main-soft: #fdf0ef;
+    --bg: #f4f5f7;
+    --bg-soft: #f8f9fb;
+    --panel: #fff;
+    --line: #e4e7ee;
+    --line-soft: #f0f2f6;
+    --ink: #1c2434;
+    --muted: #64707f;
+    --muted-soft: #8a96a8;
+    --main: #1e40af;
+    --main-dark: #1e3a8a;
+    --main-2: #2563eb;
+    --main-soft: #eff4ff;
+    --blue-grad-1: #1e3a8a;
+    --blue-grad-2: #1e40af;
+    --blue-grad-3: #2563eb;
+    --today: #fbbf24;
+    --today-bg: #fef3c7;
+    --today-text: #92400e;
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{ font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.65; }}
-  .wrap {{ max-width: 1120px; margin: 0 auto; padding: 20px 16px 60px; }}
+  .wrap {{ max-width: 1280px; margin: 0 auto; padding: 16px 16px 60px; }}
 
   /* 顶栏 */
-  header.hero {{ background: linear-gradient(135deg, #6e1414 0%, #8a1f1f 55%, #b04a42 100%); color: #fff; border-radius: 14px; padding: 24px 26px 20px; box-shadow: 0 8px 22px rgba(110,20,20,.18); position: relative; overflow: hidden; }}
+  header.hero {{ background: linear-gradient(135deg, var(--blue-grad-1) 0%, var(--blue-grad-2) 55%, var(--blue-grad-3) 100%); color: #fff; border-radius: 14px; padding: 22px 28px 18px; box-shadow: 0 8px 22px rgba(30,58,138,.18); position: relative; overflow: hidden; }}
   header.hero::after {{ content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,.06); }}
   .hero-back {{ display: flex; align-items: center; gap: 8px; font-size: 12.5px; margin-bottom: 12px; position: relative; z-index: 1; flex-wrap: wrap; }}
   .hero-back a {{ color: #fff; text-decoration: none; background: rgba(255,255,255,.16); padding: 4px 12px; border-radius: 999px; font-weight: 600; transition: background .15s; }}
@@ -135,52 +189,155 @@ def build():
   .hero .hero-meta {{ display: flex; gap: 10px; margin-top: 13px; flex-wrap: wrap; font-size: 12px; position: relative; z-index: 1; }}
   .hero .hero-meta span {{ background: rgba(255,255,255,.15); padding: 3px 11px; border-radius: 999px; }}
 
-  /* 刷新条 */
+  /* 刷新条（绿）+ KPI 网格 */
   .refresh-strip {{ background: #e8f7ee; border: 1px solid #bfe6cd; color: #1d7a46; border-radius: 10px; padding: 9px 16px; font-size: 12.5px; margin: 14px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
   .rs-dot {{ width: 8px; height: 8px; border-radius: 50%; background: #22a35e; box-shadow: 0 0 0 3px rgba(34,163,94,.18); }}
 
-  /* 说明条 */
-  .tip-strip {{ background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--main); border-radius: 10px; padding: 10px 16px; font-size: 12.5px; color: var(--muted); margin-bottom: 16px; }}
-
-  /* KPI */
   .kpi-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }}
   .kpi-card {{ background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }}
   .kpi-num {{ font-size: 24px; font-weight: 800; }}
   .kpi-main .kpi-num {{ color: var(--main); }}
   .kpi-label {{ font-size: 11.5px; color: var(--muted); margin-top: 2px; }}
 
-  /* 分类 tab */
-  .tabbar {{ position: sticky; top: 0; z-index: 50; background: rgba(244,245,247,.92); backdrop-filter: blur(8px); padding: 10px 0 8px; margin-bottom: 14px; }}
-  .tabbar-inner {{ display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }}
-  .tabbar-inner::-webkit-scrollbar {{ display: none; }}
-  .tab {{ flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font-size: 13px; font-weight: 600; padding: 9px 14px; border-radius: 999px; cursor: pointer; transition: all .15s; font-family: inherit; }}
-  .tab.active {{ background: var(--main); border-color: var(--main); color: #fff; }}
-  .tab:hover {{ border-color: var(--main); }}
+  /* ============== 主布局：sidebar + content ============== */
+  .layout {{ display: grid; grid-template-columns: 240px 1fr; gap: 16px; align-items: start; }}
 
-  /* 面板 */
-  .tab-panel {{ display: none; }}
-  .tab-panel.active {{ display: block; }}
-  .empty-panel {{ text-align: center; color: var(--muted); padding: 40px 0; font-size: 13px; }}
+  /* 左侧 sidebar（sticky 悬浮） */
+  .sidebar {{
+    position: sticky;
+    top: 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    box-shadow: 0 4px 14px rgba(28,36,52,.05);
+  }}
+  .sidebar-title {{ font-size: 11px; font-weight: 700; letter-spacing: 1.2px; color: var(--muted-soft); text-transform: uppercase; padding: 8px 10px 10px; display: flex; align-items: center; gap: 6px; }}
+  .sidebar-title::after {{ content: ""; flex: 1; height: 1px; background: var(--line-soft); }}
+  .col-item {{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--ink);
+    font-size: 13.5px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all .15s ease-out;
+    text-align: left;
+  }}
+  .col-item:hover {{ background: var(--main-soft); color: var(--main); border-color: var(--main-soft); }}
+  .col-item:active {{ transform: scale(0.98); }}
+  .col-item.active {{
+    background: linear-gradient(135deg, var(--main-dark), var(--main-2));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(30,64,175,.25);
+  }}
+  .col-item .ic {{ font-size: 16px; line-height: 1; }}
+  .col-item .cnt {{
+    margin-left: auto;
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    background: rgba(142,160,191,.18);
+    padding: 2px 8px;
+    border-radius: 99px;
+    color: var(--muted);
+    font-weight: 700;
+  }}
+  .col-item.active .cnt {{ background: rgba(255,255,255,.22); color: #fff; }}
 
-  /* 卡片 */
-  .card {{ display: flex; gap: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; transition: transform .15s, box-shadow .15s; align-items: center; }}
+  /* 右侧主内容 */
+  .main-content {{ min-width: 0; }}
+  .cat-panel {{ display: none; }}
+  .cat-panel.active {{ display: block; }}
+
+  /* 日期分组表头 */
+  .date-group-header {{
+    background: linear-gradient(90deg, var(--main-soft), transparent);
+    border-left: 4px solid var(--main);
+    padding: 9px 14px 9px 16px;
+    margin: 18px 0 10px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--main-dark);
+    border-radius: 0 8px 8px 0;
+    letter-spacing: 0.3px;
+    display: flex; align-items: center; gap: 10px;
+  }}
+  .date-group-header:first-child {{ margin-top: 0; }}
+  .date-group-header.today {{ background: linear-gradient(90deg, var(--today-bg), transparent); border-left-color: var(--today); color: var(--today-text); }}
+  .date-group-header .date-count {{ font-family: ui-monospace, monospace; font-size: 11.5px; color: var(--muted); background: var(--panel); padding: 2px 9px; border-radius: 99px; font-weight: 600; }}
+  .date-group-header.today .date-count {{ background: var(--today); color: #fff; }}
+
+  /* 卡片（增强样式 + 醒目时间徽章） */
+  .card {{ display: flex; gap: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px; margin-bottom: 10px; transition: transform .15s, box-shadow .15s; align-items: flex-start; }}
   .card:hover {{ transform: translateY(-2px); box-shadow: 0 6px 16px rgba(28,36,52,.08); }}
   .card.imp-summit {{ border-left: 4px solid #c9a227; background: linear-gradient(90deg, #fdfaf0, var(--panel)); }}
   .card.imp-high {{ border-left: 4px solid var(--main); }}
   .card-idx {{ flex: 0 0 26px; height: 26px; border-radius: 8px; background: #f1f3f8; color: var(--muted); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }}
   .card-body {{ flex: 1; min-width: 0; }}
-  .card-title {{ font-size: 14.5px; font-weight: 650; line-height: 1.5; }}
-  .card-summary {{ font-size: 12.5px; color: #4a5568; line-height: 1.65; margin-top: 5px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
-  .card-meta {{ display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; }}
+  .card-title-row {{ display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; }}
+  .card-title {{ font-size: 14.5px; font-weight: 650; line-height: 1.5; flex: 1; min-width: 0; }}
+  .card-meta-right {{ display: flex; flex-direction: column; gap: 6px; align-items: flex-end; flex-shrink: 0; }}
+
+  /* ⭐ 醒目时间徽章 */
+  .date-badge {{
+    font-family: ui-monospace, monospace;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--main-dark);
+    background: var(--main-soft);
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(30,64,175,.18);
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+  }}
+  .date-badge.today {{
+    background: var(--today);
+    color: #fff;
+    border-color: var(--today);
+    box-shadow: 0 0 0 2px rgba(251,191,36,.2);
+  }}
+
+  .card-link {{ font-size: 12px; color: var(--main); text-decoration: none; font-weight: 600; padding: 4px 11px; border: 1px solid var(--main); border-radius: 8px; transition: all .15s; white-space: nowrap; }}
+  .card-link:hover {{ background: var(--main); color: #fff; }}
+
+  .card-summary {{ font-size: 12.5px; color: #4a5568; line-height: 1.65; margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
+  .card-meta {{ display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; align-items: center; }}
   .meta-cat {{ font-size: 11.5px; color: var(--main); background: var(--main-soft); padding: 2px 9px; border-radius: 999px; font-weight: 600; }}
   .meta-src {{ font-size: 11.5px; color: var(--muted); }}
-  .meta-date {{ font-size: 11.5px; color: var(--muted); }}
-  .card-link {{ flex: 0 0 auto; font-size: 12px; color: var(--main); text-decoration: none; font-weight: 600; padding: 5px 12px; border: 1px solid var(--main); border-radius: 8px; transition: all .15s; }}
-  .card-link:hover {{ background: var(--main); color: #fff; }}
-  .tag-today {{ background: #22a35e; color: #fff; font-size: 10.5px; padding: 1px 7px; border-radius: 999px; margin-left: 6px; vertical-align: 1px; }}
+  .meta-imp {{ font-size: 11.5px; color: var(--muted-soft); font-family: ui-monospace, monospace; }}
+  .tag-today {{ background: var(--today); color: #fff; font-size: 10.5px; padding: 2px 8px; border-radius: 999px; margin-left: 6px; vertical-align: 1px; font-weight: 600; }}
 
+  .empty-panel {{ text-align: center; color: var(--muted); padding: 60px 0; font-size: 13px; }}
+
+  /* 响应式：移动端 sidebar 转顶横排 */
+  @media (max-width: 880px) {{
+    .layout {{ grid-template-columns: 1fr; }}
+    .sidebar {{ position: static; max-height: none; }}
+    .col-item {{
+      display: inline-flex;
+      width: auto;
+      margin-bottom: 0;
+      margin-right: 6px;
+      padding: 8px 12px;
+      font-size: 12.5px;
+    }}
+    .sidebar-title {{ display: none; }}
+  }}
   @media (max-width: 720px) {{
     .kpi-grid {{ grid-template-columns: repeat(2, 1fr); }}
+    .card-title-row {{ flex-direction: column; }}
+    .card-meta-right {{ flex-direction: row; align-self: flex-start; }}
   }}
 </style>
 </head>
@@ -213,8 +370,6 @@ def build():
     数据快照，滚动 7 天窗口
   </div>
 
-  <div class="tip-strip">💡 <b>数据源说明：</b>中国政府网要闻 + 最新政策（gov.cn）+ 央视新闻 + 人民日报头版要闻 + 外交部官网（发言人/领导人活动/驻外使领馆）+ 商务部/发改委/网信办官网。已过滤营销号/文娱/猎奇/天气/文旅/非遗等非权威内容。⭐ 为元首级（习近平总书记相关），🧭 为高层动态（政治局常委/委员），🏢 为部委动态（工信/网信/发改/国办/中办/商务/外交部等）。</div>
-
   <div class="kpi-grid">
     <div class="kpi-card kpi-main"><div class="kpi-num">{total}</div><div class="kpi-label">要闻总数（去重后）</div></div>
     <div class="kpi-card"><div class="kpi-num">{summit_count}</div><div class="kpi-label">⭐ 元首级要闻</div></div>
@@ -222,21 +377,29 @@ def build():
     <div class="kpi-card"><div class="kpi-num">{len(dates)}</div><div class="kpi-label">覆盖天数</div></div>
   </div>
 
-  <div class="tabbar"><div class="tabbar-inner">{''.join(tabs)}</div></div>
-
-  {''.join(panels)}
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-title">🗂️ 栏目导航</div>
+      {''.join(sidebar_items)}
+    </aside>
+    <main class="main-content">
+      {''.join(main_panels)}
+    </main>
+  </div>
 
 </div>
 <script>
   (function() {{
-    var tabs = document.querySelectorAll('.tab');
-    tabs.forEach(function(t) {{
-      t.addEventListener('click', function() {{
-        tabs.forEach(function(x) {{ x.classList.remove('active'); }});
-        t.classList.add('active');
-        var panels = document.querySelectorAll('.tab-panel');
-        panels.forEach(function(p) {{ p.classList.remove('active'); }});
-        var panel = document.getElementById('panel-' + t.getAttribute('data-cat'));
+    var colItems = document.querySelectorAll('.col-item');
+    colItems.forEach(function(item) {{
+      item.addEventListener('click', function() {{
+        // 切换 active
+        colItems.forEach(function(x) {{ x.classList.remove('active'); }});
+        item.classList.add('active');
+        // 切换面板
+        var cat = item.dataset.cat;
+        document.querySelectorAll('.cat-panel').forEach(function(p) {{ p.classList.remove('active'); }});
+        var panel = document.getElementById('cat-panel-' + (cat === 'all' ? 'all' : cat));
         if (panel) panel.classList.add('active');
       }});
     }});
@@ -248,8 +411,7 @@ def build():
     with open(OUT_HTML, "w", encoding="utf-8") as f:
         f.write(doc)
 
-    # JS 语法自检（防空白事故）
-    import subprocess as sp
+    # JS 语法自检
     js_blocks = re.findall(r"<script>(.*?)</script>", doc, re.S)
     ok = True
     for i, js in enumerate(js_blocks, 1):
@@ -265,7 +427,7 @@ def build():
     if not ok:
         return 1
 
-    print(f"=== 国内新闻看板 ===")
+    print(f"=== 国内新闻看板（侧边栏 V2.0）===")
     print(f"总条数: {total} | 分类: {per_cat}")
     print(f"written: {OUT_HTML} {len(doc)} bytes")
     return 0
