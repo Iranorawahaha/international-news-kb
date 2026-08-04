@@ -3,28 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ira 信息看板 · 仅供参考交流</title>
+<title>Ira 信息看板 · 国际·国内·AI 三维动态追踪</title>
 <style>
-  /* ============ 设计 Token（与两个子看板共享） ============ */
   :root {
-    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-    --bg: #f4f5f8;
-    --surface: #ffffff;
-    --ink: #1c2434;
-    --muted: #64707f;
-    --line: #e4e7ee;
-    --radius: 14px;
-    --shadow: 0 6px 20px rgba(28, 36, 52, .07);
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --bg: #fafaf7;
+    --surface: #fff;
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --muted-light: #9ca3af;
+    --line: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.05);
 
-    /* 国际新闻 · indigo */
-    --news-hue: 234;
-    --news-main: #3b4a8c;
-    --news-soft: #eef0fa;
-
-    /* AI 动向 · 深红 */
-    --ai-hue: 6;
-    --ai-main: #b4251a;
-    --ai-soft: #fdf0ef;
+    /* 国际 · 蓝 */
+    --intl: #2563eb;
+    --intl-soft: #eff6ff;
+    --intl-border: #bfdbfe;
+    /* 国内 · 红 */
+    --cn: #c41230;
+    --cn-soft: #fff5f5;
+    --cn-border: #fecaca;
+    /* AI · 琥珀金 */
+    --ai: #d97706;
+    --ai-soft: #fffbeb;
+    --ai-border: #fde68a;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -34,115 +36,164 @@
     color: var(--ink);
     line-height: 1.65;
     min-height: 100vh;
-    background-image:
-      radial-gradient(1100px 420px at 85% -10%, rgba(59,74,140,.06), transparent 60%),
-      radial-gradient(900px 400px at 8% -5%, rgba(180,37,26,.05), transparent 60%);
+    background-image: 
+      radial-gradient(500px 300px at 90% 5%, rgba(37,99,235,.04), transparent),
+      radial-gradient(400px 250px at 5% 95%, rgba(196,18,48,.03), transparent);
   }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px 60px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 8px 16px 60px; }
 
-  /* ============ 顶栏 ============ */
-  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 36px; flex-wrap: wrap; }
-  .brand { display: flex; align-items: center; gap: 12px; }
-  .brand-logo {
-    width: 44px; height: 44px; border-radius: 12px;
-    background: linear-gradient(135deg, #3b4a8c 0%, #b4251a 100%);
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; font-size: 20px; font-weight: 800; letter-spacing: .5px;
-    box-shadow: 0 4px 14px rgba(59,74,140,.3);
+  /* ── 顶部栏 ── */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; padding: 10px 0 6px; margin-bottom: 20px;
+    border-bottom: 1px solid var(--line);
   }
-  .brand-name { font-size: 20px; font-weight: 800; letter-spacing: .5px; }
-  .brand-sub { font-size: 12px; color: var(--muted); margin-top: 1px; }
-  .topbar-meta { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
-  .pill { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px; display: inline-flex; align-items: center; gap: 6px; }
-  .pill .dot { width: 7px; height: 7px; border-radius: 50%; background: #22a35e; box-shadow: 0 0 0 3px rgba(34,163,94,.15); }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 18px; font-weight: 800; color: var(--ink);
+  }
+  .brand-emoji { font-size: 24px; }
+  .brand-sub { font-size: 11.5px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+  .top-meta {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11.5px; color: var(--muted-light);
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 999px; padding: 4px 12px;
+  }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: #22a35e; }
 
-  /* ============ Hero ============ */
-  .hero { margin-bottom: 36px; }
-  .hero-kicker { font-size: 12.5px; font-weight: 600; color: var(--news-main); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-  .hero-kicker::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-  .hero h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 800; letter-spacing: 1px; line-height: 1.2; }
-  .hero h1 .grad { background: linear-gradient(120deg, #3b4a8c 10%, #5b6cb8 45%, #b4251a 90%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .hero p.lead { font-size: 15px; color: var(--muted); margin-top: 14px; max-width: 62ch; }
-  .hero-stats { display: flex; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
-  .hstat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 18px; display: flex; flex-direction: column; gap: 2px; min-width: 130px; box-shadow: var(--shadow); }
-  .hstat b { font-size: 22px; font-weight: 800; line-height: 1.2; }
-  .hstat span { font-size: 11.5px; color: var(--muted); }
-  .hstat.news b { color: var(--news-main); }
-  .hstat.ai b { color: var(--ai-main); }
-  .hstat.cn b { color: #8a1f1f; }
+  /* ── Hero ── */
+  .hero {
+    text-align: center; padding: 24px 0 32px;
+  }
+  .hero-emoji { font-size: 48px; margin-bottom: 8px; }
+  .hero h1 { font-size: 25px; font-weight: 800; letter-spacing: -.3px; }
+  .hero h1 span.intl { color: var(--intl); }
+  .hero h1 span.cn { color: var(--cn); }
+  .hero h1 span.ai { color: var(--ai); }
+  .hero p { font-size: 14px; color: var(--muted); margin-top: 8px; max-width: 54ch; margin-left: auto; margin-right: auto; }
 
-  /* ============ 看板入口卡片 ============ */
-  .boards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 30px; }
+  /* ── 看板入口三卡片 ── */
+  .boards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
   .board {
-    position: relative; display: flex; flex-direction: column;
-    background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
-    padding: 26px 26px 22px; text-decoration: none; color: inherit;
-    overflow: hidden; transition: transform .22s cubic-bezier(.2,.8,.3,1), box-shadow .22s;
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 22px 18px;
+    text-decoration: none; color: inherit;
+    box-shadow: var(--shadow);
+    transition: transform .18s, box-shadow .18s;
+    display: flex; flex-direction: column;
+  }
+  .board:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+  .board::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 16px 16px 0 0; }
+  .board.intl::before { background: var(--intl); }
+  .board.cn::before { background: var(--cn); }
+  .board.ai::before { background: var(--ai); }
+  .board-emoji { font-size: 30px; margin-bottom: 10px; }
+  .board h2 { font-size: 16px; font-weight: 750; }
+  .board .board-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin-top: 6px; flex: 1; }
+  .board .board-tags { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .tag { font-size: 11px; padding: 2px 9px; border-radius: 999px; font-weight: 600; border: 1px solid var(--line); }
+  .board.intl .tag.hot { background: var(--intl-soft); color: var(--intl); border-color: var(--intl-border); }
+  .board.cn .tag.hot { background: var(--cn-soft); color: var(--cn); border-color: var(--cn-border); }
+  .board.ai .tag.hot { background: var(--ai-soft); color: var(--ai); border-color: var(--ai-border); }
+  .board .board-foot {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line);
+  }
+  .board .board-meta { font-size: 11.5px; color: var(--muted-light); }
+  .board .board-meta b { font-size: 14px; font-weight: 700; color: var(--ink); display: block; margin-top: 1px; }
+  /* 进入看板按钮 — 醒目 */
+  .board .board-go {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13.5px; font-weight: 700; padding: 8px 16px;
+    border-radius: 10px; border: none; cursor: pointer;
+    transition: all .15s; white-space: nowrap;
+  }
+  .board.intl .board-go { background: var(--intl); color: #fff; }
+  .board.cn .board-go { background: var(--cn); color: #fff; }
+  .board.ai .board-go { background: var(--ai); color: #fff; }
+  .board:hover .board-go .arrow { transform: translateX(4px); }
+  .board .arrow { display: inline-block; transition: transform .2s; }
+
+  /* ── 日报板块 ── */
+  .daily-section {
+    margin-bottom: 28px;
+  }
+  .daily-section h2 {
+    font-size: 16px; font-weight: 750; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .daily-tabs {
+    display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap;
+  }
+  .dtab {
+    font-size: 13px; font-weight: 600; padding: 8px 16px;
+    border-radius: 10px; border: 1px solid var(--line);
+    background: var(--surface); cursor: pointer; font-family: inherit;
+    transition: all .15s; color: var(--muted);
+  }
+  .dtab:hover { border-color: var(--muted-light); }
+  .dtab.active, .dtab.intl.active { background: var(--intl-soft); color: var(--intl); border-color: var(--intl-border); }
+  .dtab.cn.active { background: var(--cn-soft); color: var(--cn); border-color: var(--cn-border); }
+  .dtab.ai.active { background: var(--ai-soft); color: var(--ai); border-color: var(--ai-border); }
+  .dtab .dtab-count { font-size: 11px; background: #f1f3f5; padding: 1px 7px; border-radius: 999px; margin-left: 4px; }
+
+  .daily-panel { display: none; }
+  .daily-panel.active { display: block; }
+  /* 日报内容改为换行列表 + 摘要，不再多列 */
+  .daily-grid { display: flex; flex-direction: column; gap: 10px; }
+  .daily-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 10px; padding: 12px 14px;
+    font-size: 13px; line-height: 1.55;
     box-shadow: var(--shadow);
   }
-  .board::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-  .board.news::before { background: linear-gradient(90deg, #3b4a8c, #7c8ad0); }
-  .board.ai::before { background: linear-gradient(90deg, #b4251a, #e0726a); }
-  .board:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(28,36,52,.12); }
-  .board-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 16px; }
-  .board.news .board-icon { background: var(--news-soft); }
-  .board.ai .board-icon { background: var(--ai-soft); }
-  .board h2 { font-size: 19px; font-weight: 750; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-  .board .desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
-  .board .tag-row { display: flex; gap: 7px; margin-top: 14px; flex-wrap: wrap; }
-  .tag { font-size: 11.5px; padding: 3px 10px; border-radius: 999px; font-weight: 600; border: 1px solid var(--line); color: var(--muted); }
-  .board.news .tag.hot { background: var(--news-soft); color: var(--news-main); border-color: transparent; }
-  .board.ai .tag.hot { background: var(--ai-soft); color: var(--ai-main); border-color: transparent; }
-  .board .meta-row { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--line); }
-  .board .meta { font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
-  .board .meta b { font-size: 13.5px; color: var(--ink); font-weight: 700; }
-  .board .go { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 700; }
-  .board.news .go { color: var(--news-main); }
-  .board.ai .go { color: var(--ai-main); }
-  .board .go .arrow { transition: transform .2s; }
-  .board:hover .go .arrow { transform: translateX(4px); }
+  .daily-item .d-dot { flex: 0 0 6px; width: 6px; height: 6px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+  .daily-item.intl .d-dot { background: var(--intl); }
+  .daily-item.cn .d-dot { background: var(--cn); }
+  .daily-item.ai .d-dot { background: var(--ai); }
+  .daily-item .d-body { flex: 1; min-width: 0; }
+  .daily-item a { color: var(--ink); text-decoration: none; font-weight: 650; }
+  .daily-item a:hover { opacity: 0.75; }
+  .daily-item .d-src { font-size: 11.5px; color: var(--muted-light); }
+  .d-summ { font-size: 12px; color: #6b7280; margin-top: 4px; line-height: 1.5; }
+  .daily-empty { font-size: 13px; color: #a0a8b5; padding: 24px; text-align: center; }
 
-  /* ============ 今日日报板块 ============ */
-  .daily { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; margin-bottom: 18px; box-shadow: var(--shadow); }
-  .daily-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
-  .daily-head h2 { font-size: 17px; font-weight: 750; }
-  .daily-date { font-size: 12.5px; color: var(--muted); }
-  .daily-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
-  .daily-col { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
-  .daily-col.news { background: #fafbff; }
-  .daily-col.ai { background: #fffafa; }
-  .daily-col.cn { background: #fff7f5; }
-  .daily-col-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-  .daily-icon { font-size: 16px; }
-  .daily-col-head h3 { font-size: 13.5px; font-weight: 700; flex: 1; }
-  .daily-count { font-size: 11.5px; color: var(--muted); background: #f1f3f8; padding: 2px 9px; border-radius: 999px; }
-  .daily-list { display: flex; flex-direction: column; gap: 8px; }
-  .daily-item { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; line-height: 1.55; }
-  .daily-item .d-dot { flex: 0 0 5px; width: 5px; height: 5px; border-radius: 50%; margin-top: 7px; }
-  .daily-col.news .daily-item .d-dot { background: var(--news-main); }
-  .daily-col.ai .daily-item .d-dot { background: var(--ai-main); }
-  .daily-col.cn .daily-item .d-dot { background: #8a1f1f; }
-  .daily-item a { color: var(--ink); text-decoration: none; }
-  .daily-item a:hover { color: var(--news-main); }
-  .daily-item .d-src { color: var(--muted); font-size: 11.5px; white-space: nowrap; margin-left: auto; }
-  .daily-empty { font-size: 12.5px; color: #a0a8b5; font-style: italic; padding: 8px 0; }
-  .d-summ { font-size: 11.5px; color: #6b7587; margin-top: 3px; line-height: 1.5; padding-left: 13px; }
-
-  /* ============ 信息条 ============ */
-  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 34px; }
-  .info-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  /* ── 底部信息 ── */
+  .info-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 14px; margin-bottom: 28px;
+  }
+  .info-card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 16px; box-shadow: var(--shadow);
+  }
   .info-card h3 { font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 6px; }
   .info-card p { font-size: 13px; color: var(--ink); line-height: 1.7; }
-  .info-card code { background: #f1f3f8; border-radius: 5px; padding: 1px 6px; font-size: 12px; color: #3b4a8c; }
+  .info-card code { background: #f1f3f5; border-radius: 5px; padding: 1px 6px; font-size: 12px; }
 
-  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.8; }
-  footer a { color: var(--news-main); text-decoration: none; }
+  footer {
+    text-align: center; font-size: 12px; color: var(--muted);
+    padding: 20px 0; border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--muted); }
 
   @media (max-width: 780px) {
     .boards { grid-template-columns: 1fr; }
-    .daily-grid { grid-template-columns: 1fr; }
     .info-grid { grid-template-columns: 1fr; }
-    .wrap { padding: 24px 14px 48px; }
+    .wrap { padding: 6px 12px 40px; }
   }
 </style>
 </head>
@@ -151,127 +202,106 @@
 
   <header class="topbar">
     <div class="brand">
-      <div class="brand-logo">Ira</div>
-      <div>
-        <div class="brand-name">Ira 信息看板</div>
-        <div class="brand-sub">仅供参考交流</div>
-      </div>
+      <span class="brand-emoji">🗺️</span>
+      <span>Ira 信息看板<span class="brand-sub">· 三维动态追踪</span></span>
     </div>
-    <div class="topbar-meta">
-      <span class="pill"><span class="dot"></span>每日 09:30 自动刷新</span>
-      <span class="pill">📅 数据快照 · 滚动 7 天</span>
+    <div class="top-meta">
+      <span class="pill"><span class="dot"></span>每日自动刷新</span>
+      <span id="top-update" class="pill">🕐 ...</span>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-kicker">Ira · 知识库</div>
-    <h1>欢迎来到 <span class="grad">Ira 信息看板</span></h1>
-    <p class="lead">一站式聚合国际政经动态与全球 AI 产业动向。聚焦监管政策、科技博弈、重大模型与产品发布——两条信息流，一个入口。仅供参考交流。</p>
-    <div class="hero-stats">
-      <div class="hstat news"><b id="stat-news-today">47</b><span>国际新闻 · 今日新增</span></div>
-      <div class="hstat ai"><b id="stat-ai-today">88</b><span>AI 动态 · 今日新增</span></div>
-      <div class="hstat cn"><b id="stat-cn-today">12</b><span>国内新闻 · 今日新增</span></div>
-      <div class="hstat"><b id="stat-latest">2026-08-04 16:35</b><span>最近数据刷新</span></div>
-    </div>
+    <div class="hero-emoji">📡</div>
+    <h1>
+      <span class="intl">国际</span> · 
+      <span class="cn">国内</span> · 
+      <span class="ai">AI</span> 三维信息看板
+    </h1>
+    <p>一站式追踪国际政经、国内政治与AI产业三大动态。聚焦监管政策、科技博弈、元首高层、模型产品发布——三个维度，一个入口。</p>
   </section>
 
-    <!-- ===== 今日日报板块（由刷新脚本注入，勿删） ===== -->
-  <section class="daily" id="daily-brief">
-    <div class="daily-head">
-      <h2>📰 今日日报</h2>
-      <span class="daily-date" id="daily-date">2026-08-04</span>
-    </div>
-    <div class="daily-grid">
-      <div class="daily-col news">
-        <div class="daily-col-head">
-          <span class="daily-icon">🌍</span>
-          <h3>国际新闻 · 今日要点</h3>
-          <span class="daily-count" id="daily-news-count">12 条</span>
-        </div>
-        <div class="daily-list" id="daily-news-list"><!--DAILY_NEWS_START--><div class="daily-item"><span class="d-dot"></span><a href="https://apnews.com/article/trump-iran-war-gulf-allies-fb81a68f999f4a7b0498ae71cbffe8e5" target="_blank" rel="noopener noreferrer">⭐New talks are &#x27;last chance&#x27; for Iran to forge a deal and avoid escalation of US strikes, Trump says 特朗普：新谈判是伊朗达成协议避免升级的“最后机会”</a><span class="d-src">美联社</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.theguardian.com/world/live/2026/aug/03/us-iran-trump-strait-of-hormuz-talks-israel-gaza-lebanon-latest-news-updates" target="_blank" rel="noopener noreferrer">⭐Trump claims Strait of Hormuz could open &#x27;by tomorrow&#x27; as Iran denies any talks taking place 特朗普称霍尔木兹海峡“明天”或重开，伊朗否认谈判</a><span class="d-src">卫报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.aljazeera.com/news/liveblog/2026/8/4/iran-war-live-tehran-denies-us-talks-as-trump-warns-of-last-chance" target="_blank" rel="noopener noreferrer">⭐Trump warns Iran of &#x27;last chance&#x27; for a deal; Israel kills 2 in Gaza 特朗普警告伊朗“最后机会”；以色列在加沙打死2人</a><span class="d-src">半岛电视台</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.aljazeera.com/news/2026/8/3/trump-blasts-duplicitous-iran-after-tehran-denies-it-is-in-talks-with-the-us" target="_blank" rel="noopener noreferrer">⭐Trump says ongoing talks are Iran&#x27;s &#x27;last chance&#x27; 特朗普称正在进行谈判是伊朗“最后机会”</a><span class="d-src">半岛电视台</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.war.gov/News/News-Stories/Article/Article/4562726/trump-establishes-military-spouse-commission/" target="_blank" rel="noopener noreferrer">⭐特朗普总统签署行政令成立军人配偶委员会</a><span class="d-src">美国国防部(war.gov)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.theguardian.com/world/2026/aug/03/trump-meets-his-obstinate-match-in-irans-hardball-regime" target="_blank" rel="noopener noreferrer">⭐Trump meets his obstinate match in Iran&#x27;s hardball regime 特朗普在伊朗强硬政权面前遇到顽固对手</a><span class="d-src">卫报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.theguardian.com/us-news/2026/aug/03/states-sue-trump-administration-tariffs" target="_blank" rel="noopener noreferrer">US states sue Trump administration over new tariffs on 60 trading partners 美国多州起诉特朗普政府60国关税政策</a><span class="d-src">卫报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.scmp.com/news/us/diplomacy/article/3362852/us-tech-giants-invited-discuss-ai-security-tests-white-house" target="_blank" rel="noopener noreferrer">US tech giants invited to discuss AI security tests at White House 白宫邀请美国科技巨头讨论AI安全测试</a><span class="d-src">南华早报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.scmp.com/news/china/military/article/3362782/surprising-how-quickly-chinas-military-closing-gap-us-analyst-lyle-goldstein" target="_blank" rel="noopener noreferrer">&#x27;Surprising&#x27; how fast China&#x27;s military is closing US gap: analyst Lyle Goldstein 美分析人士：中国军队缩小对美差距速度“惊人”</a><span class="d-src">南华早报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.wsj.com/world/middle-east/iran-says-no-talks-with-the-u-s-on-hormuz-strait-9863c9f0" target="_blank" rel="noopener noreferrer">Iran Says No Talks With the U.S. on Hormuz Strait 伊朗称不会与美国就霍尔木兹海峡谈判</a><span class="d-src">华尔街日报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.wsj.com/world/china/summertime-blues-hit-chinas-factories-69c507f8" target="_blank" rel="noopener noreferrer">Summertime Blues Hit China&#x27;s Factories 夏季困境冲击中国工厂，北京无意大规模刺激</a><span class="d-src">华尔街日报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.bbc.com/news/articles/cr7kmnyrdn7o" target="_blank" rel="noopener noreferrer">Russia says seven killed and 40 injured by Ukrainian drone hitting busy beach 俄称乌无人机袭击繁忙海滩致7死40伤</a><span class="d-src">BBC</span></div><!--DAILY_NEWS_END--></div>
-      </div>
-      <div class="daily-col ai">
-        <div class="daily-col-head">
-          <span class="daily-icon">🤖</span>
-          <h3>AI 动向 · 今日要点</h3>
-          <span class="daily-count" id="daily-ai-count">12 条</span>
-        </div>
-        <div class="daily-list" id="daily-ai-list"><!--DAILY_AI_START--><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/rohanpaul_ai/status/2084542855431819358" target="_blank" rel="noopener noreferrer">最强AI模型在议会博弈中展现持续欺骗能力</a><span class="d-src">论文 · X：Rohan Paul (@rohanpaul_ai)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://openai.com/index/apple-is-getting-this-wrong" target="_blank" rel="noopener noreferrer">苹果在 AI 策略上搞错了什么</a><span class="d-src">观点 · Hacker News 热门（buzzing.cc 中文翻译）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/karminski3/status/2084532129158025543" target="_blank" rel="noopener noreferrer">Kimi-K3 开源背后：数据飞轮才是护城河</a><span class="d-src">观点 · X：karminski (@karminski3)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.ithome.com/0/985/465.htm" target="_blank" rel="noopener noreferrer">苹果申请临时禁令，阻止 OpenAI 及两名前员工使用其机密信息</a><span class="d-src">行业 · IT之家（RSS）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/kimmonismus/status/2084528920653664435" target="_blank" rel="noopener noreferrer">OpenAI 称下一代模型将超越笔记本</a><span class="d-src">观点 · X：Kim (@kimmonismus)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://github.com/leonickson1/Swiftlet" target="_blank" rel="noopener noreferrer">Swiftlet：在 Mac 上运行 80B 版 Qwen（内存 4.3 GB），在 iPhone 上运行 35B 版</a><span class="d-src">产品 · Hacker News 热门（buzzing.cc 中文翻译）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://arxiv.org/abs/2608.01964" target="_blank" rel="noopener noreferrer">LongHorizon-Harness：面向真实世界长时程任务的智能体框架</a><span class="d-src">论文 · HuggingFace Daily Papers（社区热门论文）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://arxiv.org/abs/2608.01735" target="_blank" rel="noopener noreferrer">DAPD：双锚定策略蒸馏缓解大模型后训练中的特权幻觉</a><span class="d-src">论文 · HuggingFace Daily Papers（社区热门论文）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/rohanpaul_ai/status/2084524239076614296" target="_blank" rel="noopener noreferrer">扎克伯格：每家企业都将拥有自己的AI</a><span class="d-src">观点 · X：Rohan Paul (@rohanpaul_ai)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/cb_doge/status/2084514444487327996" target="_blank" rel="noopener noreferrer">Grok 支持批量上传图片视频分析</a><span class="d-src">观点 · X：cb_doge (@cb_doge)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/AYi_AInotes/status/2084507824193708103" target="_blank" rel="noopener noreferrer">Qwen 3.8-Max 用 GLSL 实时光追复现《星际穿越》黑洞</a><span class="d-src">观点 · X：阿易 AI Notes (@AYi_AInotes)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/foxshuo/status/2084511928425091098" target="_blank" rel="noopener noreferrer">Google 报告称未发现 AI 取代办公室工作迹象</a><span class="d-src">观点 · X：阑夕 (@foxshuo)</span></div><!--DAILY_AI_END--></div>
-      </div>
-      <div class="daily-col cn">
-        <div class="daily-col-head">
-          <span class="daily-icon">🇨🇳</span>
-          <h3>国内新闻 · 今日要点</h3>
-          <span class="daily-count" id="daily-cn-count">12 条</span>
-        </div>
-        <div class="daily-list" id="daily-cn-list"><!--DAILY_CN_START--><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTIsC6XGDcFhSIPiEeCBq6g260804.shtml" target="_blank" rel="noopener noreferrer">⭐习近平总书记关切事｜实业报国志 接力谱新篇</a><span class="d-src">元首动态 · 央视新闻</span><div class="d-summ">赓续先贤精神、做强做大实业、勇闯敢干创新……神州大地上，企业经营者们牢记殷殷嘱托，在转型升级中攻坚克难，在担当…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTI8xwQR52zbmoJ67iI4wj4260804.shtml" target="_blank" rel="noopener noreferrer">⭐时政新闻眼丨中国式现代化为何关键在科技现代化？总书记作出战略指引</a><span class="d-src">元首动态 · 央视新闻</span><div class="d-summ">《时政新闻眼》特刊聚焦习近平总书记今年以来治国理政历程和实践，领略“中国之治”的战略考量，今天为你解读总书记在…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTIxC5A4v9q3XcwqiqgWckV260804.shtml" target="_blank" rel="noopener noreferrer">中央纪委国家监委通报2026年上半年对纪检监察干部监督检查审查调查情况</a><span class="d-src">人事任免 · 央视新闻</span><div class="d-summ">全国纪检监察机关共接收涉及纪检监察干部问题线索或反映1.55万余件次，处置涉及纪检监察干部问题线索1.42万余…</div></div><div class="daily-item"><span class="d-dot"></span><a href="http://paper.people.com.cn/rmrb/pc/content/202608/04/content_30172952.html" target="_blank" rel="noopener noreferrer">《新型电力系统建设“十五五”规划》印发</a><span class="d-src">政策发布 · 人民日报</span><div class="d-summ">本报北京8月3日电&amp;nbsp;&amp;nbsp;（记者王云杉）国家发展改革委、国家能源局近日印发《新型电力系统建设“…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.gov.cn/lianbo/202608/content_7077436.htm" target="_blank" rel="noopener noreferrer">四部门印发实施方案 加快建设统一开放的交通运输市场</a><span class="d-src">政策发布 · 中国政府网·要闻</span><div class="d-summ">近日，交通运输部等四部门联合印发《交通运输纵深推进全国统一大市场建设实施方案》，旨在解决基础设施联通不足、运输…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://jingji.cctv.com/2026/08/04/ARTInSxxhfBUrt4BAtv13ApH260804.shtml" target="_blank" rel="noopener noreferrer">商务部：2026上半年我国服务进出口总额37797.5亿元</a><span class="d-src">部委动态 · 央视新闻</span><div class="d-summ">据商务部网站消息，2026年1-6月，我国服务进出口总额37797.5亿元（人民币，下同），同比增长8.3%。…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.mfa.gov.cn/web/wjbxw_new/202608/t20260804_11997715.shtml" target="_blank" rel="noopener noreferrer">外交部副部长苗得雨出席摩洛哥国王登基纪念日招待会</a><span class="d-src">部委动态 · 外交部</span><div class="d-summ">2026年7月30日，外交部副部长苗得雨应邀出席摩洛哥驻华使馆举办的穆罕默德六世国王登基纪念日（国庆）招待会，…</div></div><div class="daily-item"><span class="d-dot"></span><a href="http://paper.people.com.cn/rmrb/pc/content/202608/04/content_30172958.html" target="_blank" rel="noopener noreferrer">​“了解更多吉中合作的美好故事”（中国—吉尔吉斯斯坦媒体高质量共建“一带一路”联合采访）</a><span class="d-src">经贸动向 · 人民日报</span><div class="d-summ">近日，中国—吉尔吉斯斯坦媒体高质量共建“一带一路”联合采访团队走进中国路桥承建的比什凯克北部绕城公路建设项目、…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTILZu2Ucrb4fPH1SKnJDZc260804.shtml" target="_blank" rel="noopener noreferrer">“融”出舞台，经济循环增质效——二〇二六中国经济年中观察②</a><span class="d-src">经贸动向 · 央视新闻</span><div class="d-summ">坚定不移深化改革扩大开放，促进各类政策协同发力，拆掉要素、行业、区域、城乡之间的无形壁垒，融则通、通则活、活则…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTICTRb8W4nJdRkRBLhDZif260804.shtml" target="_blank" rel="noopener noreferrer">从“飞地粮仓”到合作育种 跨区域深度协作成为新趋势 共筑粮食安全网</a><span class="d-src">经贸动向 · 央视新闻</span><div class="d-summ">今年上半年，我国夏粮产量创历史新高，筑牢全年粮食丰产根基。现在，秋粮也陆续进入了产量形成的关键期。</div></div><div class="daily-item"><span class="d-dot"></span><a href="http://paper.people.com.cn/rmrb/pc/content/202608/04/content_30172961.html" target="_blank" rel="noopener noreferrer">南非标准银行肯尼亚子行上线人民币清算服务</a><span class="d-src">经贸动向 · 人民日报</span><div class="d-summ">本报内罗毕8月3日电&amp;nbsp;&amp;nbsp;（记者黄炜鑫）南非标准银行近日联合中国工商银行在肯尼亚首都内罗毕举…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.mfa.gov.cn/web/zwbd_673032/gzhd_673042/202608/t20260804_11998033.shtml" target="_blank" rel="noopener noreferrer">驻芝加哥总领事王保东出席中美经贸合作论坛暨第五...</a><span class="d-src">经贸动向 · 外交部</span><div class="d-summ">2026年7月30日，驻芝加哥总领事王保东出席在芝加哥举办的中美经贸合作论坛暨第五届链博会推介会并致辞。</div></div><!--DAILY_CN_END--></div>
-      </div>
-    </div>
-  </section>
-  <!-- ===== /今日日报板块 ===== -->
-
+  <!-- ================ 看板入口（移到这里，在日报上方） ================ -->
   <section class="boards">
-    <a class="board news" href="international-news.html">
-      <div class="board-icon">🌍</div>
+    <a class="board intl" href="international-news.html">
+      <div class="board-emoji">🌍</div>
       <h2>国际新闻看板</h2>
-      <p class="desc">全球权威媒体聚合：中美关系、经贸制裁、地缘政治、外交动态。双语标题 · 元首级标注 · 7 天存档，覆盖路透、BBC、南华早报等 11 大英文权威信源。</p>
-      <div class="tag-row">
-        <span class="tag hot">🔥 中美关系</span>
+      <p class="board-desc">全球权威媒体聚合 · 中美关系 · 经贸制裁 · 地缘外交 · 官方信源</p>
+      <div class="board-tags">
+        <span class="tag hot">🔥 中美博弈</span>
         <span class="tag">经贸制裁</span>
-        <span class="tag">地缘政治</span>
-        <span class="tag">外交动态</span>
+        <span class="tag">官方信源</span>
       </div>
-      <div class="meta-row">
-        <div class="meta"><span>最近更新</span><b id="meta-news-date">2026-08-04 16:25</b></div>
-        <span class="go">进入看板 <span class="arrow">→</span></span>
-      </div>
-    </a>
-
-    <a class="board ai" href="ai-company-intel.html">
-      <div class="board-icon">🤖</div>
-      <h2>AI 动向看板</h2>
-      <p class="desc">15 家中外主要 AI 公司 + 监管/科技博弈关键词全文检索：AI 行业监管、国家科技博弈为重点关注，附重大模型、产品与学术研究更新。关键词高亮 · 今日新增标识。</p>
-      <div class="tag-row">
-        <span class="tag hot">⚖️ AI 监管</span>
-        <span class="tag">科技博弈</span>
-        <span class="tag">模型发布</span>
-        <span class="tag">产品更新</span>
-      </div>
-      <div class="meta-row">
-        <div class="meta"><span>最近更新</span><b id="meta-ai-date">08-04 15:43</b></div>
-        <span class="go">进入看板 <span class="arrow">→</span></span>
+      <div class="board-foot">
+        <div class="board-meta">今日新增<b id="meta-intl-today">--</b></div>
+        <span class="board-go">进入看板 <span class="arrow">→</span></span>
       </div>
     </a>
 
     <a class="board cn" href="china-news.html">
-      <div class="board-icon">🇨🇳</div>
+      <div class="board-emoji">🇨🇳</div>
       <h2>国内新闻看板</h2>
-      <p class="desc">中国国内重要政治动向：元首及政治局常委动态、重大会议、人事任免、政策发布。数据源：<b>中国政府网</b>（gov.cn）官方要闻 + 最新政策频道，国家级权威信源。⭐ 元首级标注 · 6 大分类 tab · 7 天滚动。</p>
-      <div class="tag-row">
+      <p class="board-desc">重要政治动向 · 元首高层 · 会议人事 · 政策经贸 · 部委使领馆</p>
+      <div class="board-tags">
         <span class="tag hot">⭐ 元首动态</span>
-        <span class="tag">重要会议</span>
         <span class="tag">政策发布</span>
         <span class="tag">人事任免</span>
       </div>
-      <div class="meta-row">
-        <div class="meta"><span>最近更新</span><b id="meta-cn-date">2026-08-04 16:35</b></div>
-        <span class="go">进入看板 <span class="arrow">→</span></span>
+      <div class="board-foot">
+        <div class="board-meta">今日新增<b id="meta-cn-today">--</b></div>
+        <span class="board-go">进入看板 <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <a class="board ai" href="ai-company-intel.html">
+      <div class="board-emoji">🤖</div>
+      <h2>AI 动向看板</h2>
+      <p class="board-desc">15+ AI公司追踪 · 监管博弈 · 模型产品 · 行业观点 · 权威聚合</p>
+      <div class="board-tags">
+        <span class="tag hot">⚖️ AI监管</span>
+        <span class="tag">模型发布</span>
+        <span class="tag">科技博弈</span>
+      </div>
+      <div class="board-foot">
+        <div class="board-meta">今日新增<b id="meta-ai-today">--</b></div>
+        <span class="board-go">进入看板 <span class="arrow">→</span></span>
       </div>
     </a>
   </section>
 
+  <!-- ================ 今日日报（重新设计：标签切换 · 不再多列并排） ================ -->
+  <section class="daily-section" id="daily-brief">
+    <h2>📰 今日日报</h2>
+    <div class="daily-tabs">
+      <button class="dtab intl active" data-panel="daily-intl">🌍 国际要闻<b class="dtab-count" id="cnt-intl">--</b></button>
+      <button class="dtab cn" data-panel="daily-cn">🇨🇳 国内要闻<b class="dtab-count" id="cnt-cn">--</b></button>
+      <button class="dtab ai" data-panel="daily-ai">🤖 AI 动向<b class="dtab-count" id="cnt-ai">--</b></button>
+    </div>
+
+    <div class="daily-panel active" id="daily-intl">
+      <div class="daily-grid" id="daily-intl-list"><!--DAILY_NEWS_START--><div class="daily-item"><span class="d-dot"></span><a href="https://apnews.com/article/trump-iran-war-gulf-allies-fb81a68f999f4a7b0498ae71cbffe8e5" target="_blank" rel="noopener noreferrer">⭐New talks are &#x27;last chance&#x27; for Iran to forge a deal and avoid escalation of US strikes, Trump says 特朗普：新谈判是伊朗达成协议避免升级的“最后机会”</a><span class="d-src">美联社</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.theguardian.com/world/live/2026/aug/03/us-iran-trump-strait-of-hormuz-talks-israel-gaza-lebanon-latest-news-updates" target="_blank" rel="noopener noreferrer">⭐Trump claims Strait of Hormuz could open &#x27;by tomorrow&#x27; as Iran denies any talks taking place 特朗普称霍尔木兹海峡“明天”或重开，伊朗否认谈判</a><span class="d-src">卫报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.aljazeera.com/news/liveblog/2026/8/4/iran-war-live-tehran-denies-us-talks-as-trump-warns-of-last-chance" target="_blank" rel="noopener noreferrer">⭐Trump warns Iran of &#x27;last chance&#x27; for a deal; Israel kills 2 in Gaza 特朗普警告伊朗“最后机会”；以色列在加沙打死2人</a><span class="d-src">半岛电视台</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.aljazeera.com/news/2026/8/3/trump-blasts-duplicitous-iran-after-tehran-denies-it-is-in-talks-with-the-us" target="_blank" rel="noopener noreferrer">⭐Trump says ongoing talks are Iran&#x27;s &#x27;last chance&#x27; 特朗普称正在进行谈判是伊朗“最后机会”</a><span class="d-src">半岛电视台</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.war.gov/News/News-Stories/Article/Article/4562726/trump-establishes-military-spouse-commission/" target="_blank" rel="noopener noreferrer">⭐特朗普总统签署行政令成立军人配偶委员会</a><span class="d-src">美国国防部(war.gov)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.theguardian.com/world/2026/aug/03/trump-meets-his-obstinate-match-in-irans-hardball-regime" target="_blank" rel="noopener noreferrer">⭐Trump meets his obstinate match in Iran&#x27;s hardball regime 特朗普在伊朗强硬政权面前遇到顽固对手</a><span class="d-src">卫报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.theguardian.com/us-news/2026/aug/03/states-sue-trump-administration-tariffs" target="_blank" rel="noopener noreferrer">US states sue Trump administration over new tariffs on 60 trading partners 美国多州起诉特朗普政府60国关税政策</a><span class="d-src">卫报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.scmp.com/news/us/diplomacy/article/3362852/us-tech-giants-invited-discuss-ai-security-tests-white-house" target="_blank" rel="noopener noreferrer">US tech giants invited to discuss AI security tests at White House 白宫邀请美国科技巨头讨论AI安全测试</a><span class="d-src">南华早报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.scmp.com/news/china/military/article/3362782/surprising-how-quickly-chinas-military-closing-gap-us-analyst-lyle-goldstein" target="_blank" rel="noopener noreferrer">&#x27;Surprising&#x27; how fast China&#x27;s military is closing US gap: analyst Lyle Goldstein 美分析人士：中国军队缩小对美差距速度“惊人”</a><span class="d-src">南华早报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.wsj.com/world/middle-east/iran-says-no-talks-with-the-u-s-on-hormuz-strait-9863c9f0" target="_blank" rel="noopener noreferrer">Iran Says No Talks With the U.S. on Hormuz Strait 伊朗称不会与美国就霍尔木兹海峡谈判</a><span class="d-src">华尔街日报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.wsj.com/world/china/summertime-blues-hit-chinas-factories-69c507f8" target="_blank" rel="noopener noreferrer">Summertime Blues Hit China&#x27;s Factories 夏季困境冲击中国工厂，北京无意大规模刺激</a><span class="d-src">华尔街日报</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.bbc.com/news/articles/cr7kmnyrdn7o" target="_blank" rel="noopener noreferrer">Russia says seven killed and 40 injured by Ukrainian drone hitting busy beach 俄称乌无人机袭击繁忙海滩致7死40伤</a><span class="d-src">BBC</span></div><!--DAILY_NEWS_END--></div>
+    </div>
+    <div class="daily-panel" id="daily-cn">
+      <div class="daily-grid" id="daily-cn-list"><!--DAILY_CN_START--><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTIsC6XGDcFhSIPiEeCBq6g260804.shtml" target="_blank" rel="noopener noreferrer">⭐习近平总书记关切事｜实业报国志 接力谱新篇</a><span class="d-src">元首动态 · 央视新闻</span><div class="d-summ">赓续先贤精神、做强做大实业、勇闯敢干创新……神州大地上，企业经营者们牢记殷殷嘱托，在转型升级中攻坚克难，在担当…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTI8xwQR52zbmoJ67iI4wj4260804.shtml" target="_blank" rel="noopener noreferrer">⭐时政新闻眼丨中国式现代化为何关键在科技现代化？总书记作出战略指引</a><span class="d-src">元首动态 · 央视新闻</span><div class="d-summ">《时政新闻眼》特刊聚焦习近平总书记今年以来治国理政历程和实践，领略“中国之治”的战略考量，今天为你解读总书记在…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTIxC5A4v9q3XcwqiqgWckV260804.shtml" target="_blank" rel="noopener noreferrer">中央纪委国家监委通报2026年上半年对纪检监察干部监督检查审查调查情况</a><span class="d-src">人事任免 · 央视新闻</span><div class="d-summ">全国纪检监察机关共接收涉及纪检监察干部问题线索或反映1.55万余件次，处置涉及纪检监察干部问题线索1.42万余…</div></div><div class="daily-item"><span class="d-dot"></span><a href="http://paper.people.com.cn/rmrb/pc/content/202608/04/content_30172952.html" target="_blank" rel="noopener noreferrer">《新型电力系统建设“十五五”规划》印发</a><span class="d-src">政策发布 · 人民日报</span><div class="d-summ">本报北京8月3日电&amp;nbsp;&amp;nbsp;（记者王云杉）国家发展改革委、国家能源局近日印发《新型电力系统建设“…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.gov.cn/lianbo/202608/content_7077436.htm" target="_blank" rel="noopener noreferrer">四部门印发实施方案 加快建设统一开放的交通运输市场</a><span class="d-src">政策发布 · 中国政府网·要闻</span><div class="d-summ">近日，交通运输部等四部门联合印发《交通运输纵深推进全国统一大市场建设实施方案》，旨在解决基础设施联通不足、运输…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://jingji.cctv.com/2026/08/04/ARTInSxxhfBUrt4BAtv13ApH260804.shtml" target="_blank" rel="noopener noreferrer">商务部：2026上半年我国服务进出口总额37797.5亿元</a><span class="d-src">部委动态 · 央视新闻</span><div class="d-summ">据商务部网站消息，2026年1-6月，我国服务进出口总额37797.5亿元（人民币，下同），同比增长8.3%。…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.mfa.gov.cn/web/wjbxw_new/202608/t20260804_11997715.shtml" target="_blank" rel="noopener noreferrer">外交部副部长苗得雨出席摩洛哥国王登基纪念日招待会</a><span class="d-src">部委动态 · 外交部</span><div class="d-summ">2026年7月30日，外交部副部长苗得雨应邀出席摩洛哥驻华使馆举办的穆罕默德六世国王登基纪念日（国庆）招待会，…</div></div><div class="daily-item"><span class="d-dot"></span><a href="http://paper.people.com.cn/rmrb/pc/content/202608/04/content_30172958.html" target="_blank" rel="noopener noreferrer">​“了解更多吉中合作的美好故事”（中国—吉尔吉斯斯坦媒体高质量共建“一带一路”联合采访）</a><span class="d-src">经贸动向 · 人民日报</span><div class="d-summ">近日，中国—吉尔吉斯斯坦媒体高质量共建“一带一路”联合采访团队走进中国路桥承建的比什凯克北部绕城公路建设项目、…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTILZu2Ucrb4fPH1SKnJDZc260804.shtml" target="_blank" rel="noopener noreferrer">“融”出舞台，经济循环增质效——二〇二六中国经济年中观察②</a><span class="d-src">经贸动向 · 央视新闻</span><div class="d-summ">坚定不移深化改革扩大开放，促进各类政策协同发力，拆掉要素、行业、区域、城乡之间的无形壁垒，融则通、通则活、活则…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://news.cctv.com/2026/08/04/ARTICTRb8W4nJdRkRBLhDZif260804.shtml" target="_blank" rel="noopener noreferrer">从“飞地粮仓”到合作育种 跨区域深度协作成为新趋势 共筑粮食安全网</a><span class="d-src">经贸动向 · 央视新闻</span><div class="d-summ">今年上半年，我国夏粮产量创历史新高，筑牢全年粮食丰产根基。现在，秋粮也陆续进入了产量形成的关键期。</div></div><div class="daily-item"><span class="d-dot"></span><a href="http://paper.people.com.cn/rmrb/pc/content/202608/04/content_30172961.html" target="_blank" rel="noopener noreferrer">南非标准银行肯尼亚子行上线人民币清算服务</a><span class="d-src">经贸动向 · 人民日报</span><div class="d-summ">本报内罗毕8月3日电&amp;nbsp;&amp;nbsp;（记者黄炜鑫）南非标准银行近日联合中国工商银行在肯尼亚首都内罗毕举…</div></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.mfa.gov.cn/web/zwbd_673032/gzhd_673042/202608/t20260804_11998033.shtml" target="_blank" rel="noopener noreferrer">驻芝加哥总领事王保东出席中美经贸合作论坛暨第五...</a><span class="d-src">经贸动向 · 外交部</span><div class="d-summ">2026年7月30日，驻芝加哥总领事王保东出席在芝加哥举办的中美经贸合作论坛暨第五届链博会推介会并致辞。</div></div><!--DAILY_CN_END--></div>
+    </div>
+    <div class="daily-panel" id="daily-ai">
+      <div class="daily-grid" id="daily-ai-list"><!--DAILY_AI_START--><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/rohanpaul_ai/status/2084542855431819358" target="_blank" rel="noopener noreferrer">最强AI模型在议会博弈中展现持续欺骗能力</a><span class="d-src">论文 · X：Rohan Paul (@rohanpaul_ai)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://openai.com/index/apple-is-getting-this-wrong" target="_blank" rel="noopener noreferrer">苹果在 AI 策略上搞错了什么</a><span class="d-src">观点 · Hacker News 热门（buzzing.cc 中文翻译）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/karminski3/status/2084532129158025543" target="_blank" rel="noopener noreferrer">Kimi-K3 开源背后：数据飞轮才是护城河</a><span class="d-src">观点 · X：karminski (@karminski3)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://www.ithome.com/0/985/465.htm" target="_blank" rel="noopener noreferrer">苹果申请临时禁令，阻止 OpenAI 及两名前员工使用其机密信息</a><span class="d-src">行业 · IT之家（RSS）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/kimmonismus/status/2084528920653664435" target="_blank" rel="noopener noreferrer">OpenAI 称下一代模型将超越笔记本</a><span class="d-src">观点 · X：Kim (@kimmonismus)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://github.com/leonickson1/Swiftlet" target="_blank" rel="noopener noreferrer">Swiftlet：在 Mac 上运行 80B 版 Qwen（内存 4.3 GB），在 iPhone 上运行 35B 版</a><span class="d-src">产品 · Hacker News 热门（buzzing.cc 中文翻译）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://arxiv.org/abs/2608.01964" target="_blank" rel="noopener noreferrer">LongHorizon-Harness：面向真实世界长时程任务的智能体框架</a><span class="d-src">论文 · HuggingFace Daily Papers（社区热门论文）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://arxiv.org/abs/2608.01735" target="_blank" rel="noopener noreferrer">DAPD：双锚定策略蒸馏缓解大模型后训练中的特权幻觉</a><span class="d-src">论文 · HuggingFace Daily Papers（社区热门论文）</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/rohanpaul_ai/status/2084524239076614296" target="_blank" rel="noopener noreferrer">扎克伯格：每家企业都将拥有自己的AI</a><span class="d-src">观点 · X：Rohan Paul (@rohanpaul_ai)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/cb_doge/status/2084514444487327996" target="_blank" rel="noopener noreferrer">Grok 支持批量上传图片视频分析</a><span class="d-src">观点 · X：cb_doge (@cb_doge)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/AYi_AInotes/status/2084507824193708103" target="_blank" rel="noopener noreferrer">Qwen 3.8-Max 用 GLSL 实时光追复现《星际穿越》黑洞</a><span class="d-src">观点 · X：阿易 AI Notes (@AYi_AInotes)</span></div><div class="daily-item"><span class="d-dot"></span><a href="https://x.com/foxshuo/status/2084511928425091098" target="_blank" rel="noopener noreferrer">Google 报告称未发现 AI 取代办公室工作迹象</a><span class="d-src">观点 · X：阑夕 (@foxshuo)</span></div><!--DAILY_AI_END--></div>
+    </div>
+  </section>
+  <!-- ===== /今日日报板块 ===== -->
+
   <section class="info-grid">
     <div class="info-card">
       <h3>📡 数据来源</h3>
-      <p>国际新闻：路透社 / BBC / 南华早报 / 卫报 / CNN / 纽约时报 / 华尔街日报 / 半岛电视台 / Politico / 华盛顿邮报 / 美联社。<br>AI 动向：AI HOT 精选资讯全文检索。</p>
+      <p>国际：路透/美联社/BBC/南华早报等11大信源+美国6大官方信源<br>国内：中国政府网/央视/人民日报/外交部+部委官网+微信公众号<br>AI：AI HOT 精选资讯 · 15+中外AI公司监管博弈关键词全文检索</p>
     </div>
     <div class="info-card">
       <h3>🔄 更新机制</h3>
-      <p>每日 <b>09:40</b> 自动刷新数据快照并推送 GitHub Pages；两个看板均标注最近刷新时间与今日新增，方便核对时效。</p>
+      <p>每日 <b>09:30</b> 自动刷新数据快照并推送 GitHub Pages · 滚动 <b>7 天</b> 窗口 · 时效、准确、可追溯</p>
     </div>
     <div class="info-card">
-      <h3>🔗 访问入口</h3>
-      <p>本页为统一入口；也可直接访问子看板：<code>/international-news.html</code> 与 <code>/ai-company-intel.html</code>。</p>
+      <h3>🔗 快速访问</h3>
+      <p><code>/international-news.html</code> 国际 · <code>/china-news.html</code> 国内 · <code>/ai-company-intel.html</code> AI动向</p>
     </div>
   </section>
 
@@ -282,27 +312,31 @@
 
 </div>
 <script>
-  // 门户统计占位符（由 refresh 脚本注入实际数据）
-  var PLACEHOLDERS = {
-    newsToday: "47",
-    aiToday: "88",
-    latest: "2026-08-04 16:35",
-    newsDate: "2026-08-04 16:25",
-    aiDate: "08-04 15:43"
-  };
-  function fill(id, key) {
-    var el = document.getElementById(id);
-    if (el && PLACEHOLDERS[key] && PLACEHOLDERS[key].indexOf("{{") !== 0) {
-      el.textContent = PLACEHOLDERS[key];
-    }
-  }
-  fill("stat-news-today", "newsToday");
-  fill("stat-ai-today", "aiToday");
-  fill("stat-cn-today", "cnToday");
-  fill("stat-latest", "latest");
-  fill("meta-news-date", "newsDate");
-  fill("meta-ai-date", "aiDate");
-  fill("meta-cn-date", "cnDate");
+var PLACEHOLDERS = {
+  intlToday: "47", cnToday: "12", aiToday: "88", latest: "2026-08-04 16:35"
+};
+function fill(id, key) {
+  var el = document.getElementById(id);
+  if (el && PLACEHOLDERS[key]) el.textContent = PLACEHOLDERS[key];
+}
+fill("meta-intl-today", "intlToday");
+fill("meta-cn-today", "cnToday");
+fill("meta-ai-today", "aiToday");
+document.getElementById("top-update").textContent = "🕐 " + PLACEHOLDERS.latest;
+
+// 日报标签切换
+(function() {
+  var tabs = document.querySelectorAll(".dtab");
+  tabs.forEach(function(t) {
+    t.addEventListener("click", function() {
+      tabs.forEach(function(x) { x.classList.remove("active"); });
+      t.classList.add("active");
+      document.querySelectorAll(".daily-panel").forEach(function(p) { p.classList.remove("active"); });
+      var panel = document.getElementById(t.dataset.panel);
+      if (panel) panel.classList.add("active");
+    });
+  });
+})();
 </script>
 </body>
 </html>
