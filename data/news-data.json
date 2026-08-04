@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-04 09:25",
+  "lastUpdated": "2026-08-04 09:29",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -1903,12 +1903,12 @@
       {
         "id": "auto_2026-08-03_5576",
         "date": "2026-07-31",
-        "title": "Alert to Countries, Companies, and Other Entities Regarding North Korean IT Workers",
+        "title": "罗杰斯副国务卿与 FTC 主席及马斯克举行数字 NEXT 代表团会议",
         "title_en": "Alert to Countries, Companies, and Other Entities Regarding North Korean IT Workers",
-        "title_zh": null,
-        "summary": "This alert is jointly issued by the U.S. Department of State and Federal Bureau of Investigation; Japan&#8217;s Ministry of Foreign Affairs, National Cybersecurity Office, National Police Agency, Ministry of Finance, and Ministry of Economy, Trade and Industry; the Republic of Korea&#8217;s Ministry of Foreign Affairs and National Police Agency; Australia&#8217;s Department of Foreign Affairs and [&hellip;]",
-        "summary_en": "This alert is jointly issued by the U.S. Department of State and Federal Bureau of Investigation; Japan&#8217;s Ministry of Foreign Affairs, National Cybersecurity Office, National Police Agency, Ministry of Finance, and Ministry of Economy, Trade and Industry; the Republic of Korea&#8217;s Ministry of Foreign Affairs and National Police Agency; Australia&#8217;s Department of Foreign Affairs and [&hellip;]",
-        "summary_zh": null,
+        "title_zh": "罗杰斯副国务卿与 FTC 主席及马斯克举行数字 NEXT 代表团会议",
+        "summary": "美国国务院2026年7月31日宣布，副国务卿罗杰斯上周在旧金山召集来自30个国家的47位外国技术政策制定者参加数字NEXT活动，与马斯克、FTC主席Ferguson等对话，并启动自由技术卓越计划（FTEP）。Palantir、Anduril、Bitcoin Policy Institute、共产主义受害者基金会成为首批合作伙伴。",
+        "summary_en": "On July 31, 2026, the State Department announced that Under Secretary Rogers hosted 47 foreign tech policymakers from 30 countries in San Francisco for Digital NEXT, with Elon Musk and FTC Chairman Ferguson. She also launched the Freedom Tech Excellence Program (FTEP) with Palantir, Anduril, etc.",
+        "summary_zh": "美国国务院2026年7月31日宣布，副国务卿罗杰斯上周在旧金山召集来自30个国家的47位外国技术政策制定者参加数字NEXT活动，与马斯克、FTC主席Ferguson等对话，并启动自由技术卓越计划（FTEP）。Palantir、Anduril、Bitcoin Policy Institute、共产主义受害者基金会成为首批合作伙伴。",
         "source": "美国国务院",
         "category": "美国",
         "keywords": [],
@@ -5596,13 +5596,13 @@
       },
       {
         "id": "auto_2026-08-03_37953",
-        "date": "2026-07-30",
-        "title": "Statement by Members of the High-Level Mission of OAS Member States to Bolivia",
+        "date": "2026-07-31",
+        "title": "罗杰斯副国务卿与 FTC 主席及马斯克举行数字 NEXT 代表团会议",
         "title_en": "Statement by Members of the High-Level Mission of OAS Member States to Bolivia",
-        "title_zh": null,
-        "summary": "The text of the following statement will be released by the Governments of the United States of America, Argentina, Canada, Chile, Panama, Peru, and Uruguay. At the invitation of the Government of the Plurinational State of Bolivia and pursuant to the resolution adopted by the General Assembly of the Organization of American States, members of the High-Level Mission traveled [&hellip;]",
-        "summary_en": "The text of the following statement will be released by the Governments of the United States of America, Argentina, Canada, Chile, Panama, Peru, and Uruguay. At the invitation of the Government of the Plurinational State of Bolivia and pursuant to the resolution adopted by the General Assembly of the Organization of American States, members of the High-Level Mission traveled [&hellip;]",
-        "summary_zh": null,
+        "title_zh": "罗杰斯副国务卿与 FTC 主席及马斯克举行数字 NEXT 代表团会议",
+        "summary": "美国国务院2026年7月31日宣布，副国务卿罗杰斯上周在旧金山召集来自30个国家的47位外国技术政策制定者参加数字NEXT活动，与马斯克、FTC主席Ferguson等对话，并启动自由技术卓越计划（FTEP）。Palantir、Anduril、Bitcoin Policy Institute、共产主义受害者基金会成为首批合作伙伴。",
+        "summary_en": "On July 31, 2026, the State Department announced that Under Secretary Rogers hosted 47 foreign tech policymakers from 30 countries in San Francisco for Digital NEXT, with Elon Musk and FTC Chairman Ferguson. She also launched the Freedom Tech Excellence Program (FTEP) with Palantir, Anduril, etc.",
+        "summary_zh": "美国国务院2026年7月31日宣布，副国务卿罗杰斯上周在旧金山召集来自30个国家的47位外国技术政策制定者参加数字NEXT活动，与马斯克、FTC主席Ferguson等对话，并启动自由技术卓越计划（FTEP）。Palantir、Anduril、Bitcoin Policy Institute、共产主义受害者基金会成为首批合作伙伴。",
         "source": "美国国务院",
         "category": "美国",
         "keywords": [],
@@ -5648,10 +5648,10 @@
         "date": "2026-07-29",
         "title": "Presidential Message on the Birthday of Alexis de Tocqueville",
         "title_en": "Presidential Message on the Birthday of Alexis de Tocqueville",
-        "title_zh": null,
+        "title_zh": "总统祝词：纪念 Alexis de Tocqueville 诞辰",
         "summary": "Today, our Nation honors the life, legacy, and enduring wisdom of Alexis de Tocqueville—a great witness to the promise of our young Republic and one of",
         "summary_en": "Today, our Nation honors the life, legacy, and enduring wisdom of Alexis de Tocqueville—a great witness to the promise of our young Republic and one of",
-        "summary_zh": null,
+        "summary_zh": "特朗普总统2026年7月29日发表祝词，纪念伟大的政治思想家 Alexis de Tocqueville 的诞辰。Tocqueville 回到法国后发表了《论美国的民主》，成为对政治与人性最深刻反思之一。",
         "source": "白宫",
         "category": "美国",
         "keywords": [],
@@ -5666,13 +5666,13 @@
       },
       {
         "id": "auto_2026-08-03_7985",
-        "date": "2026-07-29",
+        "date": "2026-07-30",
         "title": "Crime Plummets to Another Historic Low Under President Trump",
         "title_en": "Crime Plummets to Another Historic Low Under President Trump",
-        "title_zh": null,
+        "title_zh": "特朗普总统任内犯罪率再创历史新低",
         "summary": "Under President Donald J. Trump, violent crime is collapsing at a pace unmatched in modern American history. A new mid-year report confirms that homicides",
         "summary_en": "Under President Donald J. Trump, violent crime is collapsing at a pace unmatched in modern American history. A new mid-year report confirms that homicides",
-        "summary_zh": null,
+        "summary_zh": "特朗普总统任内，美国暴力犯罪率以现代美国历史上前所未有的速度下降，犯罪飙升时代彻底结束。这是本届政府不懈执行法治、支持警察、调配资源打击犯罪的结果。",
         "source": "白宫",
         "category": "美国",
         "keywords": [],
@@ -5714,7 +5714,7 @@
     ],
     "2026-05-18": [
       {
-        "id": "auto_2026-05-18_67700",
+        "id": "auto_2026-05-18_89028",
         "date": "2026-05-18",
         "title": "To Facilitate Positive Adjustment to Competition from Imports of Quartz Surface Products",
         "title_en": "To Facilitate Positive Adjustment to Competition from Imports of Quartz Surface Products",
@@ -5737,7 +5737,7 @@
     ],
     "2026-07-24": [
       {
-        "id": "auto_2026-07-24_54759",
+        "id": "auto_2026-07-24_41990",
         "date": "2026-07-24",
         "title": "美国钢铁工人、制造商和农民盛赞特朗普总统为打击全球供应链中强迫劳动而采取的关税行动",
         "title_en": "American Steelworkers, Manufacturers, and Farmers Praise President Trump's Tariff Action to Combat Forced Labor in Global Supply Chains",
@@ -5766,7 +5766,7 @@
     ],
     "2026-07-23": [
       {
-        "id": "auto_2026-07-23_69843",
+        "id": "auto_2026-07-23_86525",
         "date": "2026-07-23",
         "title": "格里尔大使就欧盟制造跨大西洋贸易关系不确定性发表声明",
         "title_en": "Ambassador Greer Issues Statement on the European Union Creating Uncertainty in our Transatlantic Trade Relationship",
@@ -5793,7 +5793,7 @@
         "is_official": true
       },
       {
-        "id": "auto_2026-07-23_39001",
+        "id": "auto_2026-07-23_99077",
         "date": "2026-07-23",
         "title": "USTR 就强迫劳动问题采取 301 条款调查最终行动",
         "title_en": "USTR Takes Action in Forced Labor Section 301 Investigations",
@@ -5822,7 +5822,7 @@
     ],
     "2026-07-16": [
       {
-        "id": "auto_2026-07-16_28459",
+        "id": "auto_2026-07-16_32733",
         "date": "2026-07-16",
         "title": "特朗普政府再获 TSMC 1000 亿美元投资，美国半导体制造总投资达 2650 亿美元",
         "title_en": "Trump Administration Secures an Additional $100 Billion U.S. Semiconductor Manufacturing Investment for a Total of $265 Billion from TSMC",
@@ -5851,7 +5851,7 @@
     ],
     "2026-06-29": [
       {
-        "id": "auto_2026-06-29_75352",
+        "id": "auto_2026-06-29_2146",
         "date": "2026-06-29",
         "title": "美国商务部任命 Andrew Silberstein 为美国投资加速器执行董事",
         "title_en": "U.S. Department of Commerce Names Andrew Silberstein Executive Director of the U.S. Investment Accelerator",
@@ -5879,7 +5879,7 @@
     ],
     "2026-05-20": [
       {
-        "id": "auto_2026-05-20_35439",
+        "id": "auto_2026-05-20_94083",
         "date": "2026-05-20",
         "title": "商务部根据《海岸带管理法》启动对加州海岸管理项目审查",
         "title_en": "Commerce Department Initiates Review of California Coastal Management Program under Coastal Zone Management Act",
