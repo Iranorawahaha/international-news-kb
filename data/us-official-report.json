@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-08-04 09:29",
+  "sites": [
+    {
+      "site": "白宫",
+      "url": "https://www.whitehouse.gov/news/",
+      "status": "✅ 成功",
+      "count": 8
+    },
+    {
+      "site": "美国国务院",
+      "url": "https://www.state.gov/press-releases/",
+      "status": "✅ 成功",
+      "count": 9
+    },
+    {
+      "site": "美国财政部",
+      "url": "https://home.treasury.gov/news/press-releases",
+      "status": "✅ 成功",
+      "count": 0
+    }
+  ],
+  "webfetch_required": [
+    {
+      "source": "美国商务部",
+      "url": "https://www.commerce.gov/news/press-releases",
+      "category": "美国",
+      "note": "美国商务部 有 WAF/反爬（curl 不可达），需用 WebFetch 工具抓取每个公告页（含中文翻译、真实日期、摘要）后写入 us-official-webfetch.json"
+    },
+    {
+      "source": "美国国防部(war.gov)",
+      "url": "https://www.defense.gov/News/Press-Releases/",
+      "category": "美国",
+      "note": "美国国防部(war.gov) 有 WAF/反爬（curl 不可达），需用 WebFetch 工具抓取每个公告页（含中文翻译、真实日期、摘要）后写入 us-official-webfetch.json"
+    },
+    {
+      "source": "美国贸易代表办公室(USTR)",
+      "url": "https://ustr.gov/",
+      "category": "美国",
+      "note": "美国贸易代表办公室(USTR) 有 WAF/反爬（curl 不可达），需用 WebFetch 工具抓取每个公告页（含中文翻译、真实日期、摘要）后写入 us-official-webfetch.json"
+    }
+  ],
+  "total": 24
+}
