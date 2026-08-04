@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-04 16:21",
+  "lastUpdated": "2026-08-04 16:25",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -7629,29 +7629,6 @@
         "column": "其他",
         "is_official": null
       }
-    ],
-    "2026-05-18": [
-      {
-        "id": "auto_2026-05-18_14861",
-        "date": "2026-05-18",
-        "title": "To Facilitate Positive Adjustment to Competition from Imports of Quartz Surface Products",
-        "title_en": "To Facilitate Positive Adjustment to Competition from Imports of Quartz Surface Products",
-        "title_zh": null,
-        "summary": "Presidential Actions TO FACILITATE POSITIVE ADJUSTMENT TO COMPETITION FROM IMPORTS OF QUARTZ SURFACE PRODUCTS Proclamations July 31, 2026 BY THE PRESIDENT OF THE UNITED STATES OF AMERICA",
-        "summary_en": "Presidential Actions TO FACILITATE POSITIVE ADJUSTMENT TO COMPETITION FROM IMPORTS OF QUARTZ SURFACE PRODUCTS Proclamations July 31, 2026 BY THE PRESIDENT OF THE UNITED STATES OF AMERICA",
-        "summary_zh": null,
-        "source": "白宫",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://www.whitehouse.gov/presidential-actions/2026/07/to-facilitate-positive-adjustment-to-competition-from-imports-of-quartz-surface-products/",
-        "priority_score": 75,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-04 09:29:46",
-        "collection_method": "us_official",
-        "column": "美国",
-        "is_official": true
-      }
     ]
   },
   "dates": [
@@ -7661,13 +7638,12 @@
     "2026-08-01",
     "2026-07-31",
     "2026-07-30",
-    "2026-07-29",
-    "2026-05-18"
+    "2026-07-29"
   ],
   "stats": {
-    "totalArticles": 309,
-    "dateCount": 8,
+    "totalArticles": 308,
+    "dateCount": 7,
     "latestDate": "2026-08-04",
-    "oldestDate": "2026-05-18"
+    "oldestDate": "2026-07-29"
   }
 }
