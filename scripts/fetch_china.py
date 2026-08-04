@@ -565,12 +565,15 @@ def fetch_wechat():
                 # 强制来源过滤：只采纳"外交部使团事务办公室"公众号（排除自媒体）
                 if src_name != "外交部使团事务办公室":
                     continue
-                # 筛选驻华大使/递交国书/离任到任内容
-                if not any(k in t + s for k in ["驻华大使", "递交国书", "国书副本", "大使离任", "大使到任",
-                                                  "新任大使", "驻华使馆", "驻华使团", "使团办"]):
-                    continue
+                # 该公众号所有文章直接归入"使领馆动向"（用户指定）
                 item = make_item(t, u, d_str, src_name, summary=s[:100] + ("…" if len(s) > 100 else ""))
                 if item:
+                    item["category"] = "使领馆动向"
+                    # 调整重要度：驻华大使相关 = 90，一般活动 = 75
+                    if any(k in t + s for k in ["递交国书", "国书副本", "新任大使", "离任", "到任", "驻华大使"]):
+                        item["priority_score"] = 90
+                    else:
+                        item["priority_score"] = 75
                     items.append(item)
             print(f"  🔍 微信搜索「{kw[:20]}」→ {len(items)} 条")
         except Exception as e:
