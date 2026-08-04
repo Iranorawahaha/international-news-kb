@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-04 09:34",
+  "lastUpdated": "2026-08-04 16:09",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -6199,6 +6199,32 @@
         "collection_method": "us_official_webfetch",
         "column": "美国",
         "is_official": true
+      },
+      {
+        "id": "auto_2026-08-04_81239",
+        "date": "2026-08-04",
+        "title": "Democratic-led states sue to block Trump's latest wave of tariffs 民主党州起诉阻止特朗普最新关税浪潮",
+        "title_en": "Democratic-led states sue to block Trump's latest wave of tariffs",
+        "title_zh": null,
+        "summary": "多个由民主党领导的州联合提起诉讼，试图阻止特朗普政府最新一轮关税政策，贸易政策的法律斗争进一步升级。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "Politico",
+        "category": "经贸制裁",
+        "keywords": [
+          "关税",
+          "贸易",
+          "诉讼",
+          "民主党"
+        ],
+        "url": "https://www.politico.com/news/2026/08/03/democratic-states-trump-tariffs-01023161",
+        "priority_score": 90,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-04 16:03:19",
+        "collection_method": "legacy",
+        "column": "美国",
+        "is_official": null
       }
     ],
     "2026-07-30": [
@@ -7453,6 +7479,27 @@
         "is_official": true
       },
       {
+        "id": "auto_2026-08-03_16831",
+        "date": "2026-08-04",
+        "title": "Spain: Travel Advisory Updated to Raise Ceuta to Level 3",
+        "title_en": "Spain: Travel Advisory Updated to Raise Ceuta to Level 3",
+        "title_zh": null,
+        "summary": "[官方信源] 美国国务院 发布的相关公告",
+        "summary_en": "",
+        "summary_zh": null,
+        "source": "美国国务院",
+        "category": "美国",
+        "keywords": [],
+        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/spain-travel-advisory-updated-to-raise-ceuta-to-level-3/",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-04 09:29:46",
+        "collection_method": "us_official",
+        "column": "美国",
+        "is_official": true
+      },
+      {
         "id": "auto_2026-08-04_23277",
         "date": "2026-08-04",
         "title": "China is working towards 100% renewable power at its Antarctic bases by 2035 中国南极科考站2035年实现100%可再生能源",
@@ -7581,32 +7628,11 @@
         "collection_method": "legacy",
         "column": "其他",
         "is_official": null
-      },
-      {
-        "id": "auto_2026-08-03_16831",
-        "date": "2026-08-04",
-        "title": "Spain: Travel Advisory Updated to Raise Ceuta to Level 3",
-        "title_en": "Spain: Travel Advisory Updated to Raise Ceuta to Level 3",
-        "title_zh": null,
-        "summary": "[官方信源] 美国国务院 发布的相关公告",
-        "summary_en": "",
-        "summary_zh": null,
-        "source": "美国国务院",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/spain-travel-advisory-updated-to-raise-ceuta-to-level-3/",
-        "priority_score": 75,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-04 09:29:46",
-        "collection_method": "us_official",
-        "column": "美国",
-        "is_official": true
       }
     ],
     "2026-05-18": [
       {
-        "id": "auto_2026-05-18_37584",
+        "id": "auto_2026-05-18_95088",
         "date": "2026-05-18",
         "title": "To Facilitate Positive Adjustment to Competition from Imports of Quartz Surface Products",
         "title_en": "To Facilitate Positive Adjustment to Competition from Imports of Quartz Surface Products",
@@ -7639,7 +7665,7 @@
     "2026-05-18"
   ],
   "stats": {
-    "totalArticles": 308,
+    "totalArticles": 309,
     "dateCount": 8,
     "latestDate": "2026-08-04",
     "oldestDate": "2026-05-18"
