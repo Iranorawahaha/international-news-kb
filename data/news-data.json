@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-05 09:28",
+  "lastUpdated": "2026-08-05 11:49",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -358,7 +358,7 @@
         "importance": "[\"🔴极高\"]",
         "collectedAt": "2026-08-01 15:54:26",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -904,7 +904,7 @@
         "importance": "[\"🟠高\"]",
         "collectedAt": "2026-08-01 15:54:26",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -4640,7 +4640,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -4874,7 +4874,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -5727,7 +5727,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -5753,7 +5753,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6510,7 +6510,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6536,7 +6536,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6562,7 +6562,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6588,7 +6588,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6640,7 +6640,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6873,7 +6873,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -7030,7 +7030,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -7448,7 +7448,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -7682,7 +7682,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -7708,7 +7708,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -7786,7 +7786,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8290,6 +8290,32 @@
         "collection_method": "webfetch",
         "column": "美国",
         "is_official": true
+      },
+      {
+        "id": "auto_2026-08-04_17240",
+        "date": "2026-08-04",
+        "title": "U.S. Revokes Visa of Top Brazilian Diplomat, Dialing Up Tensions 美国撤销巴西高级外交官签证 紧张升级",
+        "title_en": "U.S. Revokes Visa of Top Brazilian Diplomat, Dialing Up Tensions",
+        "title_zh": null,
+        "summary": "美国国务院取消了巴西驻华盛顿大使的签证，两国间外交危机进一步加深。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "纽约时报",
+        "category": "地缘政治",
+        "keywords": [
+          "美国",
+          "巴西",
+          "大使签证",
+          "外交危机"
+        ],
+        "url": "https://www.nytimes.com/2026/08/04/world/americas/brazil-ambassador-us-visa.html",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-05 11:49:33",
+        "collection_method": "legacy",
+        "column": "美国",
+        "is_official": null
       }
     ],
     "2026-08-05": [
@@ -8316,7 +8342,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8342,7 +8368,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8368,7 +8394,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8394,7 +8420,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8420,7 +8446,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8682,7 +8708,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8949,6 +8975,53 @@
         "is_official": null
       },
       {
+        "id": "auto_2026-08-03_16831",
+        "date": "2026-08-05",
+        "title": "Spain: Travel Advisory Updated to Raise Ceuta to Level 3",
+        "title_en": "Spain: Travel Advisory Updated to Raise Ceuta to Level 3",
+        "title_zh": "国务院更新西班牙旅行警告：休达地区升至3级",
+        "summary": "美国国务院将西班牙整体旅行建议维持在2级（因恐怖主义与骚乱提高警惕），并将休达（Ceuta）升至3级“重新考虑旅行”。因摩洛哥大量移民涌入休达可能引发不可预测的安全局势，西班牙已部署军队、国家警察和国民警卫队应对，建议美国公民慎重前往该地区。",
+        "summary_en": "",
+        "summary_zh": "美国国务院将西班牙整体旅行建议维持在2级（因恐怖主义与骚乱提高警惕），并将休达（Ceuta）升至3级“重新考虑旅行”。因摩洛哥大量移民涌入休达可能引发不可预测的安全局势，西班牙已部署军队、国家警察和国民警卫队应对，建议美国公民慎重前往该地区。",
+        "source": "美国国务院",
+        "category": "美国",
+        "keywords": [],
+        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/spain-travel-advisory-updated-to-raise-ceuta-to-level-3/",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-05 09:23:41",
+        "collection_method": "us_official",
+        "column": "美国",
+        "is_official": true
+      },
+      {
+        "id": "auto_2026-08-04_4056",
+        "date": "2026-08-04",
+        "title": "US revokes Brazil ambassador's visa as diplomatic tensions escalate 美巴外交紧张升级 美国撤销巴西大使签证",
+        "title_en": "US revokes Brazil ambassador's visa as diplomatic tensions escalate",
+        "title_zh": null,
+        "summary": "随着美巴外交紧张局势不断升级，美国撤销了巴西驻美大使的签证，双方关系面临严重考验。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "BBC",
+        "category": "地缘政治",
+        "keywords": [
+          "美国",
+          "巴西",
+          "签证",
+          "外交紧张"
+        ],
+        "url": "https://www.bbc.com/news/articles/cy9wpww7dyro",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-05 11:49:33",
+        "collection_method": "legacy",
+        "column": "美国",
+        "is_official": null
+      },
+      {
         "id": "auto_2026-08-04_45586",
         "date": "2026-08-04",
         "title": "'I feel like I dug my own grave': The workers caught in the AI transition “我感觉自己给自己挖了坑”：AI转型中被波及的工人们",
@@ -9024,7 +9097,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -9050,7 +9123,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -9337,27 +9410,6 @@
         "collection_method": "legacy",
         "column": "中国",
         "is_official": null
-      },
-      {
-        "id": "auto_2026-08-03_16831",
-        "date": "2026-08-05",
-        "title": "Spain: Travel Advisory Updated to Raise Ceuta to Level 3",
-        "title_en": "Spain: Travel Advisory Updated to Raise Ceuta to Level 3",
-        "title_zh": "国务院更新西班牙旅行警告：休达地区升至3级",
-        "summary": "美国国务院将西班牙整体旅行建议维持在2级（因恐怖主义与骚乱提高警惕），并将休达（Ceuta）升至3级“重新考虑旅行”。因摩洛哥大量移民涌入休达可能引发不可预测的安全局势，西班牙已部署军队、国家警察和国民警卫队应对，建议美国公民慎重前往该地区。",
-        "summary_en": "",
-        "summary_zh": "美国国务院将西班牙整体旅行建议维持在2级（因恐怖主义与骚乱提高警惕），并将休达（Ceuta）升至3级“重新考虑旅行”。因摩洛哥大量移民涌入休达可能引发不可预测的安全局势，西班牙已部署军队、国家警察和国民警卫队应对，建议美国公民慎重前往该地区。",
-        "source": "美国国务院",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/spain-travel-advisory-updated-to-raise-ceuta-to-level-3/",
-        "priority_score": 75,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-05 09:23:41",
-        "collection_method": "us_official",
-        "column": "美国",
-        "is_official": true
       }
     ]
   },
@@ -9372,7 +9424,7 @@
     "2026-07-29"
   ],
   "stats": {
-    "totalArticles": 375,
+    "totalArticles": 377,
     "dateCount": 8,
     "latestDate": "2026-08-05",
     "oldestDate": "2026-07-29"
