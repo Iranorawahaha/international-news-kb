@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-05 15:19",
+  "lastUpdated": "2026-08-05 15:45",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -358,7 +358,7 @@
         "importance": "[\"🔴极高\"]",
         "collectedAt": "2026-08-01 15:54:26",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -379,7 +379,7 @@
         "importance": "[\"🔴极高\"]",
         "collectedAt": "2026-08-01 15:54:26",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -841,7 +841,7 @@
         "importance": "[\"🟠高\"]",
         "collectedAt": "2026-08-01 15:54:26",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -904,7 +904,7 @@
         "importance": "[\"🟠高\"]",
         "collectedAt": "2026-08-01 15:54:26",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -1093,7 +1093,7 @@
         "importance": "[\"🟠高\"]",
         "collectedAt": "2026-08-01 15:54:26",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -1492,7 +1492,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -1674,7 +1674,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -1700,7 +1700,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -1939,7 +1939,7 @@
         "importance": "高",
         "collectedAt": "2026-08-04 09:29:46",
         "collection_method": "us_official",
-        "column": "美国",
+        "column": "其他",
         "is_official": true
       },
       {
@@ -2314,7 +2314,7 @@
         "importance": "中",
         "collectedAt": "2026-08-01 15:54:26",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -2725,7 +2725,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -2803,7 +2803,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -2829,7 +2829,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:22:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -3134,7 +3134,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -3342,7 +3342,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -3628,7 +3628,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -3809,7 +3809,7 @@
         "importance": "中",
         "collectedAt": "2026-08-02 09:25:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -4326,7 +4326,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:22:52",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -4351,7 +4351,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:22:52",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -4403,7 +4403,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "美国",
         "is_official": null
       }
     ],
@@ -4640,7 +4640,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -4692,7 +4692,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -4770,7 +4770,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -4796,7 +4796,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -4874,7 +4874,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -5030,7 +5030,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -5082,7 +5082,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -5160,7 +5160,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -5212,7 +5212,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -5238,7 +5238,7 @@
         "importance": "中",
         "collectedAt": "2026-08-03 14:39:27",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "欧洲",
         "is_official": null
       },
       {
@@ -5701,7 +5701,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -5779,7 +5779,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -5935,7 +5935,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6013,7 +6013,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6039,7 +6039,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6065,7 +6065,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6344,7 +6344,7 @@
         "importance": "⭐元首级",
         "collectedAt": "2026-08-04 09:29:46",
         "collection_method": "us_official",
-        "column": "美国",
+        "column": "其他",
         "is_official": true
       },
       {
@@ -6365,7 +6365,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:29:46",
         "collection_method": "us_official",
-        "column": "美国",
+        "column": "其他",
         "is_official": true
       },
       {
@@ -6847,7 +6847,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "中国",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -6978,7 +6978,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "经济金融",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -7004,7 +7004,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "中国",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -7056,7 +7056,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "经济金融",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -7187,7 +7187,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "其他",
         "is_official": null
       },
       {
@@ -7422,7 +7422,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "其他",
         "is_official": null
       },
       {
@@ -7656,7 +7656,7 @@
         "importance": "中",
         "collectedAt": "2026-08-04 09:34:49",
         "collection_method": "legacy",
-        "column": "其他",
+        "column": "中国",
         "is_official": null
       },
       {
@@ -7708,7 +7708,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -7734,7 +7734,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -7889,7 +7889,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -7915,7 +7915,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "泛涉华",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -7941,7 +7941,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "泛涉华",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -7966,7 +7966,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "其他",
         "is_official": null
       },
       {
@@ -7992,7 +7992,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8019,7 +8019,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8045,7 +8045,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8071,7 +8071,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "其他",
         "is_official": null
       },
       {
@@ -8149,7 +8149,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8174,7 +8174,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8200,7 +8200,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "其他",
         "is_official": null
       },
       {
@@ -8314,7 +8314,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 11:49:33",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       }
     ],
@@ -8342,7 +8342,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "地区热点",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -8525,7 +8525,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8762,7 +8762,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "泛涉华",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8788,7 +8788,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8840,7 +8840,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8867,7 +8867,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8893,7 +8893,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "其他",
         "is_official": null
       },
       {
@@ -8945,7 +8945,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -8971,7 +8971,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "泛涉华",
+        "column": "中国",
         "is_official": null
       },
       {
@@ -9018,7 +9018,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 11:49:33",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -9044,7 +9044,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
@@ -9149,7 +9149,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "其他",
         "is_official": null
       },
       {
@@ -9175,7 +9175,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "美国",
+        "column": "其他",
         "is_official": null
       },
       {
@@ -9201,7 +9201,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "欧洲",
+        "column": "美国",
         "is_official": null
       },
       {
@@ -9382,7 +9382,7 @@
         "importance": "中",
         "collectedAt": "2026-08-05 09:28:20",
         "collection_method": "legacy",
-        "column": "热点",
+        "column": "地区热点",
         "is_official": null
       },
       {
