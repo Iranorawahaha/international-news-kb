@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>IRA 情报双语速览</title>
+<title>双语速览</title>
 <script src="https://unpkg.com/@mozilla/readability@0.5.0/Readability.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <style>
@@ -61,12 +61,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .render-area .hi img{width:100%;height:auto;border-radius:8px;display:block}
 .render-area .ex{font-size:15px;color:#444;line-height:1.75;margin-bottom:6px;font-style:italic}
 .render-area .ez{font-size:14px;color:#555;line-height:1.75;margin-bottom:28px}
+
+.manual-fallback{display:none;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:16px;margin-bottom:16px}
+.manual-fallback.active{display:block}
+.manual-fallback h3{font-size:14px;color:#92400e;margin-bottom:8px}
+.manual-fallback p{font-size:12px;color:#a16207;margin-bottom:10px;line-height:1.6}
+.manual-fallback textarea{width:100%;min-height:200px;padding:10px;border:1px solid #fde68a;border-radius:6px;font-size:12px;font-family:Georgia,serif;line-height:1.6;resize:vertical;outline:none}
+.manual-fallback textarea:focus{border-color:#f59e0b}
+.manual-fallback .actions{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.manual-fallback input[type=text]{width:100%;padding:8px 10px;border:1px solid #fde68a;border-radius:6px;font-size:13px;margin-bottom:8px;outline:none}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>📋 IRA 情报双语速览</h1>
+  <h1>📋 双语速览</h1>
   <span class="badge">客户端版</span>
 </div>
 
@@ -89,6 +98,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 
   <!-- 错误 -->
   <div class="error" id="error"></div>
+
+  <!-- 手动粘贴 fallback（所有代理都失败时显示） -->
+  <div class="manual-fallback" id="manualFallback">
+    <h3>📋 手动粘贴原文（终极兜底）</h3>
+    <p>所有自动抓取都失败了（可能被付费墙/反爬拦截）。请在浏览器里打开原文，<strong>选中正文部分复制</strong>，然后粘贴到下面。系统会继续生成双语截图。</p>
+    <input type="text" id="manualTitle" placeholder="原文标题" />
+    <input type="text" id="manualByline" placeholder="作者 / 信源（可选）" />
+    <input type="text" id="manualUrl" placeholder="原文链接（可选）" />
+    <textarea id="manualText" placeholder="粘贴原文正文（支持纯文本或 HTML）"></textarea>
+    <div class="actions">
+      <button class="btn btn-primary" onclick="processManual()">生成双语截图</button>
+      <button class="btn btn-outline" onclick="closeManual()">取消</button>
+    </div>
+  </div>
 
   <!-- 结果 -->
   <div class="result" id="result">
@@ -114,6 +137,7 @@ function resetUI() {
   document.getElementById('progress').classList.remove('active');
   document.getElementById('result').classList.remove('active');
   document.getElementById('error').classList.remove('active');
+  document.getElementById('manualFallback').classList.remove('active');
   document.getElementById('renderArea').innerHTML = '';
   document.getElementById('goBtn').disabled = false;
   document.getElementById('goBtn').textContent = '生成截图';
@@ -126,6 +150,116 @@ function showError(msg) {
   el.classList.add('active');
   document.getElementById('goBtn').disabled = false;
   document.getElementById('goBtn').textContent = '生成截图';
+
+  // 如果是抓取失败，自动展开手动粘贴面板
+  if (msg.includes('代理') || msg.includes('抓取') || msg.includes('HTTP 4') || msg.includes('HTTP 5')) {
+    document.getElementById('manualUrl').value = document.getElementById('urlInput').value;
+    document.getElementById('manualFallback').classList.add('active');
+    // 自动滚动到面板
+    setTimeout(() => {
+      document.getElementById('manualFallback').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  }
+}
+
+function closeManual() {
+  document.getElementById('manualFallback').classList.remove('active');
+}
+
+function resetManual() {
+  document.getElementById('manualTitle').value = '';
+  document.getElementById('manualByline').value = '';
+  document.getElementById('manualUrl').value = '';
+  document.getElementById('manualText').value = '';
+  closeManual();
+}
+
+// 处理手动粘贴的文本
+async function processManual() {
+  const title = document.getElementById('manualTitle').value.trim();
+  const byline = document.getElementById('manualByline').value.trim();
+  const url = document.getElementById('manualUrl').value.trim() || '手动粘贴';
+  const rawText = document.getElementById('manualText').value.trim();
+
+  if (!rawText) {
+    alert('请粘贴原文内容');
+    return;
+  }
+
+  resetUI();
+  initSteps();
+  document.getElementById('progress').classList.add('active');
+  document.getElementById('goBtn').disabled = true;
+  document.getElementById('goBtn').textContent = '处理中...';
+  document.getElementById('error').classList.remove('active');
+
+  const startTime = Date.now();
+
+  try {
+    // Step 1: 跳过（手动粘贴）
+    stepCurrent(1);
+    await new Promise(r => setTimeout(r, 200));
+    stepDone(1);
+
+    // Step 2: 解析粘贴的内容
+    stepCurrent(2);
+    // 智能解析：如果是 HTML 则提取文本，否则按段落分割
+    let paragraphs;
+    if (rawText.trim().startsWith('<')) {
+      const doc = new DOMParser().parseFromString(rawText, 'text/html');
+      paragraphs = Array.from(doc.querySelectorAll('p, h2, h3, li'))
+        .map(el => el.textContent.trim())
+        .filter(t => t.length > 15);
+    } else {
+      paragraphs = rawText.split(/\n\s*\n+/)
+        .map(p => p.trim())
+        .filter(p => p.length > 15);
+    }
+
+    if (paragraphs.length === 0) {
+      throw new Error('粘贴的内容没有有效段落');
+    }
+
+    const article = {
+      title: title || '手动粘贴的文章',
+      byline: byline,
+      excerpt: paragraphs[0].substring(0, 200),
+      siteName: '手动粘贴',
+      content: paragraphs,
+      images: [],
+      url,
+    };
+    stepDone(2);
+    console.log('手动粘贴:', article.content.length, '段');
+
+    // Step 3: 翻译
+    stepCurrent(3);
+    const translations = {};
+    translations.title = await translateText(article.title);
+    if (article.excerpt) translations.excerpt = await translateText(article.excerpt);
+    translations.paragraphs = await translateBatch(article.content);
+    stepDone(3);
+    console.log('翻译完成:', translations.paragraphs.filter(Boolean).length, '段');
+
+    // Step 4 & 5: 渲染 + 截图
+    stepCurrent(4);
+    stepCurrent(5);
+    const dataUrl = await renderAndCapture(article, translations);
+    stepDone(4);
+    stepDone(5);
+
+    document.getElementById('previewImg').src = dataUrl;
+    document.getElementById('result').classList.add('active');
+    generatedImage = dataUrl;
+
+    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+    document.getElementById('goBtn').textContent = '完成 (' + elapsed + 's)';
+    document.getElementById('goBtn').disabled = true;
+
+  } catch (err) {
+    console.error(err);
+    showError(err.message || '处理失败');
+  }
 }
 
 function stepDone(n) {
@@ -145,31 +279,71 @@ function initSteps() {
   }
 }
 
-// ===================== CORS 代理 =====================
+// ===================== CORS 代理（按优先级）=====================
+// 用 Wayback Machine 时需要先解析跳转拿到真实地址
 const CORS_PROXIES = [
+  // 第一波：通用代理（成功率最高）
   (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
   (url) => 'https://corsproxy.io/?' + encodeURIComponent(url),
+  // 第二波：归档/缓存（对付费墙更有效）
+  (url) => 'https://web.archive.org/web/0/' + url,  // Wayback Machine 0 = 最新快照
+  (url) => 'https://archive.org/wayback/available?url=' + encodeURIComponent(url),
+  // 第三波：Google 缓存
+  (url) => 'https://webcache.googleusercontent.com/search?q=cache:' + encodeURIComponent(url),
 ];
 
 async function fetchProxied(url, timeout = 20000) {
-  let lastErr;
-  for (const proxyFn of CORS_PROXIES) {
+  const errors = [];
+  for (let i = 0; i < CORS_PROXIES.length; i++) {
+    const proxyFn = CORS_PROXIES[i];
     const proxyUrl = proxyFn(url);
     try {
       const controller = new AbortController();
       const timer = setTimeout(() => controller.abort(), timeout);
-      const resp = await fetch(proxyUrl, { signal: controller.signal });
+      const resp = await fetch(proxyUrl, { signal: controller.signal, redirect: 'follow' });
       clearTimeout(timer);
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       const text = await resp.text();
-      if (text.length > 3000) return text;
+
+      // Wayback Machine 的 /web/0/ 路径会包含 iframe + 实际页面，需要提取
+      if (proxyUrl.includes('web.archive.org/web/0/')) {
+        // 直接抓的内容已经是正文部分
+        if (text.length > 3000) {
+          console.log('  ✓ Wayback Machine 抓取成功');
+          return text;
+        }
+        throw new Error('Wayback 内容太短');
+      }
+
+      // archive.org/wayback/available 返回 JSON，需要二次抓取
+      if (proxyUrl.includes('archive.org/wayback/available')) {
+        const json = JSON.parse(text);
+        const archived = json?.archived_snapshots?.closest?.url;
+        if (!archived) throw new Error('无归档快照');
+        console.log('  找到归档快照:', archived);
+        const controller2 = new AbortController();
+        const timer2 = setTimeout(() => controller2.abort(), timeout);
+        const resp2 = await fetch(archived, { signal: controller2.signal });
+        clearTimeout(timer2);
+        const text2 = await resp2.text();
+        if (text2.length > 3000) {
+          console.log('  ✓ 通过归档快照抓取成功');
+          return text2;
+        }
+        throw new Error('归档快照内容太短');
+      }
+
+      if (text.length > 3000) {
+        console.log(`  ✓ 通过代理 ${i + 1} 抓取成功`);
+        return text;
+      }
       throw new Error('Response too short: ' + text.length);
     } catch (e) {
-      lastErr = e;
-      console.warn(`CORS proxy failed (${proxyUrl.substring(0,40)}...): ${e.message}`);
+      errors.push(`代理 ${i + 1}: ${e.message}`);
+      console.warn(`  ✗ 代理 ${i + 1} 失败: ${e.message}`);
     }
   }
-  throw lastErr || new Error('All CORS proxies failed');
+  throw new Error('所有代理均失败\n' + errors.join('\n'));
 }
 
 // ===================== 正文提取 =====================
@@ -291,7 +465,7 @@ function buildBilingualHTML(article, translations) {
     imagesHtml +
     parasHtml +
     '<div class="ft">' +
-      '<div class="row"><span class="logo">IRA 情报双语速览</span><span>' + dateStr + '</span></div>' +
+      '<div class="row"><span class="logo">双语速览</span><span>' + dateStr + '</span></div>' +
       '<div style="margin-top:8px;font-size:11px"><span>原文: </span><a href="' + esc(url) + '" target="_blank">' + esc(url.substring(0, 70)) + '...</a></div>' +
     '</div>' +
   '</div>';
