@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-06 17:45",
+  "lastUpdated": "2026-08-06 17:48",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -10207,48 +10207,6 @@
         "collection_method": "legacy",
         "column": "地区热点",
         "is_official": null
-      },
-      {
-        "id": "auto_2026-08-05_54382",
-        "date": "2026-08-05",
-        "title": "打击CJNG贩毒集团：美国宣布逾1亿美元悬赏及签证限制",
-        "title_en": "Degrading CJNG: Announcing over $100 Million in Reward Offers and Visa Restrictions",
-        "title_zh": "打击CJNG贩毒集团：美国宣布逾1亿美元悬赏及签证限制",
-        "summary": "In a historic and decisive action in support of President Trump’s mission to eliminate narco-terrorist cartels threatening the American people, the U.S. Department of State’s Bureau of International Narcotics and Law Enforcement Affairs is announcing reward offers under the Narcotics Rewards Program (NRP) and Transnational Organized Crime Rewards Program (TOCRP) totaling up to $102 million [&hellip;]",
-        "summary_en": "In a historic and decisive action in support of President Trump’s mission to eliminate narco-terrorist cartels threatening the American people, the U.S. Department of State’s Bureau of International Narcotics and Law Enforcement Affairs is announcing reward offers under the Narcotics Rewards Program (NRP) and Transnational Organized Crime Rewards Program (TOCRP) totaling up to $102 million [&hellip;]",
-        "summary_zh": "美国国务院国际麻醉品与执法事务局宣布依据毒品奖励计划（NRP）等提供逾1亿美元悬赏，并实施签证限制，以打击威胁美国民众的CJNG贩毒集团。",
-        "source": "美国国务院",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/degrading-cjng-announcing-over-100-million-in-reward-offers-and-visa-restrictions/",
-        "priority_score": 75,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-06 09:20:38",
-        "collection_method": "us_official",
-        "column": "美国",
-        "is_official": true
-      },
-      {
-        "id": "auto_2026-08-05_40261",
-        "date": "2026-08-05",
-        "title": "美国更新刚果（金）埃博拉疫情应对进展（8月5日）",
-        "title_en": "Ebola Response Update – August 5, 2026",
-        "title_zh": "美国更新刚果（金）埃博拉疫情应对进展（8月5日）",
-        "summary": "The Department of State, in close coordination with the U.S. Centers for Disease Control and Prevention (CDC), and in partnership with the governments of the Democratic Republic of the Congo (DRC), Uganda, and other countries in the region, is continuing to mount a rapid and comprehensive response to the Ebola outbreak in the DRC. While [&hellip;]",
-        "summary_en": "The Department of State, in close coordination with the U.S. Centers for Disease Control and Prevention (CDC), and in partnership with the governments of the Democratic Republic of the Congo (DRC), Uganda, and other countries in the region, is continuing to mount a rapid and comprehensive response to the Ebola outbreak in the DRC. While [&hellip;]",
-        "summary_zh": "美国国务院与CDC密切协调，并与刚果（金）、乌干达等国政府合作，继续对刚果（金）埃博拉疫情采取快速、全面的应对行动。",
-        "source": "美国国务院",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/ebola-response-update-august-5-2026/",
-        "priority_score": 75,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-06 09:20:38",
-        "collection_method": "us_official",
-        "column": "美国",
-        "is_official": true
       }
     ],
     "2026-08-06": [
@@ -11205,7 +11163,7 @@
     "2026-07-30"
   ],
   "stats": {
-    "totalArticles": 444,
+    "totalArticles": 442,
     "dateCount": 8,
     "latestDate": "2026-08-06",
     "oldestDate": "2026-07-30"
