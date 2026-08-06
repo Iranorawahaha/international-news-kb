@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-06 17:42",
+  "lastUpdated": "2026-08-06 17:45",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -10209,7 +10209,7 @@
         "is_official": null
       },
       {
-        "id": "auto_2026-08-05_90121",
+        "id": "auto_2026-08-05_54382",
         "date": "2026-08-05",
         "title": "打击CJNG贩毒集团：美国宣布逾1亿美元悬赏及签证限制",
         "title_en": "Degrading CJNG: Announcing over $100 Million in Reward Offers and Visa Restrictions",
@@ -10230,7 +10230,7 @@
         "is_official": true
       },
       {
-        "id": "auto_2026-08-05_42769",
+        "id": "auto_2026-08-05_40261",
         "date": "2026-08-05",
         "title": "美国更新刚果（金）埃博拉疫情应对进展（8月5日）",
         "title_en": "Ebola Response Update – August 5, 2026",
