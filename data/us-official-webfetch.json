@@ -1,5 +1,58 @@
 [
   {
+    "title": "美国海岸警卫队参加巴拿马运河反威胁演习（Panamax 2026）",
+    "title_en": "Coast Guard Participates in Panama Canal Counter-Threat Exercise",
+    "title_zh": "美国海岸警卫队参加巴拿马运河反威胁演习（Panamax 2026）",
+    "summary": "美国海岸警卫队参加8月3日启动的Panamax 2026演习前期会议，该两年一度的演习是西半球最大军演之一，今年将持续至8月13日，共有19国参加，在巴拿马运河及东太平洋地区演练联合通信、机动与战术，确保运河自由通航。",
+    "summary_zh": "美国海岸警卫队参加8月3日启动的Panamax 2026演习前期会议，该两年一度的演习是西半球最大军演之一，今年将持续至8月13日，共有19国参加，在巴拿马运河及东太平洋地区演练联合通信、机动与战术，确保运河自由通航。",
+    "summary_en": "The U.S. Coast Guard participated in the pre-sail conference for Exercise Panamax 2026, one of the largest military exercises in the Western Hemisphere, running until Aug. 13 with 19 countries practicing integrated operations to protect the Panama Canal.",
+    "url": "https://www.war.gov/News/News-Stories/Article/Article/4564659/coast-guard-participates-in-panama-canal-counter-threat-exercise/",
+    "date": "2026-08-05",
+    "source": "美国国防部(war.gov)",
+    "category": "美国",
+    "column": "美国",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "⭐重要",
+    "keywords": [
+      "美国",
+      "国防部",
+      "巴拿马运河",
+      "军演",
+      "西半球"
+    ],
+    "is_official": true,
+    "collectedAt": "2026-08-06 09:20:00",
+    "collection_method": "us_official_webfetch"
+  },
+  {
+    "title": "美国南方司令部成立西半球联合特遣部队，强化打击跨国威胁",
+    "title_en": "Southcom Establishes Joint Task Force Western Hemisphere",
+    "title_zh": "美国南方司令部成立西半球联合特遣部队，强化打击跨国威胁",
+    "summary": "美国南方司令部8月4日激活\"西半球联合特遣部队\"（JTF-WHEM），由陆战队少将贾拉德指挥，整合美军能力与美洲反卡特尔联盟18个伙伴国家，统一指挥控制以打击威胁、强化地区安全并快速响应危机。",
+    "summary_zh": "美国南方司令部8月4日激活\"西半球联合特遣部队\"（JTF-WHEM），由陆战队少将贾拉德指挥，整合美军能力与美洲反卡特尔联盟18个伙伴国家，统一指挥控制以打击威胁、强化地区安全并快速响应危机。",
+    "summary_en": "U.S. Southern Command activated Joint Task Force Western Hemisphere to synchronize U.S. military operations with allies and partners, integrating capabilities with the 18 partner nations of the Americas Counter Cartel Coalition to counter threats and respond rapidly to crises.",
+    "url": "https://www.war.gov/News/News-Stories/Article/Article/4564574/southcom-establishes-joint-task-force-western-hemisphere/",
+    "date": "2026-08-05",
+    "source": "美国国防部(war.gov)",
+    "category": "美国",
+    "column": "美国",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "⭐重要",
+    "keywords": [
+      "美国",
+      "国防部",
+      "南方司令部",
+      "联合特遣部队",
+      "西半球",
+      "卡特尔"
+    ],
+    "is_official": true,
+    "collectedAt": "2026-08-06 09:20:00",
+    "collection_method": "us_official_webfetch"
+  },
+  {
     "title": "特朗普总统签署行政令成立军人配偶委员会",
     "title_en": "Trump Establishes Military Spouse Commission",
     "title_zh": "特朗普总统签署行政令成立军人配偶委员会",
@@ -14,7 +67,12 @@
     "priority_score": 88,
     "is_summit_level": true,
     "importance": "⭐元首级",
-    "keywords": ["特朗普", "行政令", "军人配偶", "国防部"],
+    "keywords": [
+      "特朗普",
+      "行政令",
+      "军人配偶",
+      "国防部"
+    ],
     "is_official": true,
     "collectedAt": "2026-08-04 09:30:00",
     "collection_method": "us_official_webfetch"
@@ -34,7 +92,13 @@
     "priority_score": 82,
     "is_summit_level": false,
     "importance": "高",
-    "keywords": ["环太平洋军演", "RIMPAC", "印太", "海上安全", "30国"],
+    "keywords": [
+      "环太平洋军演",
+      "RIMPAC",
+      "印太",
+      "海上安全",
+      "30国"
+    ],
     "is_official": true,
     "collectedAt": "2026-08-04 09:30:00",
     "collection_method": "us_official_webfetch"
@@ -54,7 +118,12 @@
     "priority_score": 75,
     "is_summit_level": false,
     "importance": "中",
-    "keywords": ["反无人机", "C-UAS", "国防工业", "无人机"],
+    "keywords": [
+      "反无人机",
+      "C-UAS",
+      "国防工业",
+      "无人机"
+    ],
     "is_official": true,
     "collectedAt": "2026-08-04 09:30:00",
     "collection_method": "us_official_webfetch"
@@ -74,7 +143,13 @@
     "priority_score": 78,
     "is_summit_level": false,
     "importance": "中",
-    "keywords": ["PAC-3", "THAAD", "导弹拦截", "诺斯罗普·格鲁曼", "国防工业"],
+    "keywords": [
+      "PAC-3",
+      "THAAD",
+      "导弹拦截",
+      "诺斯罗普·格鲁曼",
+      "国防工业"
+    ],
     "is_official": true,
     "collectedAt": "2026-08-04 09:30:00",
     "collection_method": "us_official_webfetch"
@@ -94,7 +169,12 @@
     "priority_score": 76,
     "is_summit_level": false,
     "importance": "中",
-    "keywords": ["海军陆战队", "巴拿马运河", "印太", "两栖作战"],
+    "keywords": [
+      "海军陆战队",
+      "巴拿马运河",
+      "印太",
+      "两栖作战"
+    ],
     "is_official": true,
     "collectedAt": "2026-08-04 09:30:00",
     "collection_method": "us_official_webfetch"
@@ -114,7 +194,12 @@
     "priority_score": 72,
     "is_summit_level": false,
     "importance": "中",
-    "keywords": ["美国财政部", "TBAC", "借款", "经济报告"],
+    "keywords": [
+      "美国财政部",
+      "TBAC",
+      "借款",
+      "经济报告"
+    ],
     "is_official": true,
     "collectedAt": "2026-08-04 09:30:00",
     "collection_method": "us_official_webfetch"
@@ -134,9 +219,83 @@
     "priority_score": 72,
     "is_summit_level": false,
     "importance": "中",
-    "keywords": ["美国财政部", "国债发行", "借款预估", "财政"],
+    "keywords": [
+      "美国财政部",
+      "国债发行",
+      "借款预估",
+      "财政"
+    ],
     "is_official": true,
     "collectedAt": "2026-08-04 09:30:00",
     "collection_method": "us_official_webfetch"
+  },
+  {
+    "title": "U.S.-UK Financial Regulatory Working Group Summer 2026: Joint Statement",
+    "title_zh": "美英金融监管工作组发布2026年夏季联合声明",
+    "summary": "The U.S.-UK Financial Regulatory Working Group issued a joint statement following its Summer 2026 meeting, reaffirming continued cooperation on financial regulation, cross-border market access and supervisory coordination between the two countries.",
+    "summary_zh": "美英金融监管工作组在2026年夏季会议后发布联合声明，重申两国在金融监管、跨境市场准入与监管协调方面的持续合作。",
+    "url": "https://home.treasury.gov/news/press-releases/sb0586",
+    "date": "2026-08-04",
+    "source": "美国财政部",
+    "is_official": true,
+    "category": "经济金融",
+    "keywords": [
+      "美英",
+      "金融监管",
+      "金融合作"
+    ],
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Trump Administration Secures an Additional $100 Billion U.S. Semiconductor Manufacturing Investment for a Total of $265 Billion from TSMC",
+    "title_zh": "台积电再投1000亿美元 在美半导体投资总额达2650亿美元",
+    "summary": "As a result of the historic U.S.-Taiwan trade and investment deal, TSMC announced an incremental $100 billion investment for a total of $265 billion in the United States, adding four advanced semiconductor manufacturing facilities and bringing the total to 12 leading-edge facilities.",
+    "summary_zh": "得益于美台贸易与投资协议，台积电宣布新增1000亿美元对美投资，在美投资总额达2650亿美元，将新增4座先进半导体制造设施，全美总计达12座先进制程与封测设施。",
+    "url": "https://www.commerce.gov/news/press-releases/2026/07/trump-administration-secures-additional-100-billion-us-semiconductor",
+    "date": "2026-07-16",
+    "source": "美国商务部",
+    "is_official": true,
+    "category": "经贸制裁",
+    "keywords": [
+      "台积电",
+      "半导体",
+      "对美投资",
+      "TSMC"
+    ],
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "American Steelworkers, Manufacturers, and Farmers Praise President Trump's Tariff Action to Combat Forced Labor in Global Supply Chains",
+    "title_zh": "美国钢铁工人、制造商与农民支持特朗普打击全球供应链强迫劳动的关税行动",
+    "summary": "USTR highlighted support from American steelworkers, manufacturers and farmers for President Trump's tariff action targeting forced labor in global supply chains, including tariffs on imports produced with forced labor.",
+    "summary_zh": "美国贸易代表办公室援引美国钢铁工人、制造商与农民对特朗普总统针对全球供应链强迫劳动的关税行动的支持，该行动对使用强迫劳动生产的进口商品加征关税。",
+    "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/american-steelworkers-manufacturers-and-farmers-praise-president-trumps-tariff-action-combat-forced",
+    "date": "2026-07-24",
+    "source": "USTR",
+    "is_official": true,
+    "category": "经贸制裁",
+    "keywords": [
+      "强迫劳动",
+      "关税",
+      "供应链"
+    ],
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "The Office of Strategic Capital Signs $820 Million Conditional Loan Commitment with Performance Drone Works to Expand Domestic Drone Component Manufacturing",
+    "title_zh": "战略资本办公室与Performance Drone Works签署8.2亿美元贷款承诺 扩大本土无人机零部件制造",
+    "summary": "The Office of Strategic Capital signed an $820 million conditional loan commitment with Performance Drone Works to expand domestic manufacturing of drone components, strengthening the resilience of the U.S. defense supply chain.",
+    "summary_zh": "美国国防部战略资本办公室（OSC）与Performance Drone Works签署8.2亿美元有条件贷款承诺，用于扩大美国本土无人机零部件制造产能，强化国防供应链韧性。",
+    "url": "https://www.war.gov/News/Releases/Release/Article/4561771/the-office-of-strategic-capital-signs-820-million-conditional-loan-commitment-w/",
+    "date": "2026-07-31",
+    "source": "美国国防部(war.gov)",
+    "is_official": true,
+    "category": "国防安全",
+    "keywords": [
+      "无人机",
+      "国防供应链",
+      "战略资本"
+    ],
+    "collection_method": "webfetch"
   }
 ]
