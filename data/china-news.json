@@ -38,6 +38,39 @@
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
+        "title": "商务部新闻发言人就对相关进口打印复印办公设备发起对外贸易国家安全调查答记者问",
+        "url": "https://news.cctv.com/2026/08/05/ARTIeY0qApRSuoS09hhdrIQo260805.shtml",
+        "date": "2026-08-05",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "商务部新闻发言人就对相关进口打印复印办公设备发起对外贸易国家安全调查答记者问。",
+        "collectedAt": "2026-08-06 09:20:35"
+      },
+      {
+        "title": "商务部：加强无人机相关两用物项对美国出口管制",
+        "url": "https://news.cctv.com/2026/08/05/ARTIsnIJaR5ktI6CaU6pEFth260805.shtml",
+        "date": "2026-08-05",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "8月5日，商务部发布公告，根据《中华人民共和国出口管制法》和《中华人民共和国两用物项出口管制条例》等法律法规有关规定，为维护国家安全和利益、履行防扩散等国际义务，决定加强无人机相关两用物项对美国出口管…",
+        "collectedAt": "2026-08-06 09:20:35"
+      },
+      {
+        "title": "商务部：对相关进口打印复印办公设备发起对外贸易国家安全立案调查",
+        "url": "https://news.cctv.com/2026/08/05/ARTINsQaIg7oAY0rmVz1ES5K260805.shtml",
+        "date": "2026-08-05",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "商务部公布对相关进口打印复印办公设备发起对外贸易国家安全立案调查。",
+        "collectedAt": "2026-08-06 09:20:35"
+      },
+      {
         "title": "驻安哥拉大使张斌拜会安国民议会议长德阿尔梅达",
         "url": "https://www.mfa.gov.cn/web/zwbd_673032/wshd_673034/202608/t20260805_11998725.shtml",
         "date": "2026-08-05",
@@ -82,28 +115,6 @@
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
-        "title": "商务部新闻发言人就对相关进口打印复印办公设备发起对外贸易国家安全调查答记者问",
-        "url": "https://news.cctv.com/2026/08/05/ARTIeY0qApRSuoS09hhdrIQo260805.shtml",
-        "date": "2026-08-05",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 78,
-        "is_summit_level": false,
-        "summary": "商务部新闻发言人就对相关进口打印复印办公设备发起对外贸易国家安全调查答记者问。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "商务部：加强无人机相关两用物项对美国出口管制",
-        "url": "https://news.cctv.com/2026/08/05/ARTIsnIJaR5ktI6CaU6pEFth260805.shtml",
-        "date": "2026-08-05",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 78,
-        "is_summit_level": false,
-        "summary": "8月5日，商务部发布公告，根据《中华人民共和国出口管制法》和《中华人民共和国两用物项出口管制条例》等法律法规有关规定，为维护国家安全和利益、履行防扩散等国际义务，决定加强无人机相关两用物项对美国出口管…",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
         "title": "商务部：对应用DNA科学公司等6家美国实体采取反制措施",
         "url": "https://news.cctv.com/2026/08/05/ARTIPDweomnXYOQgVAASgmPh260805.shtml",
         "date": "2026-08-05",
@@ -112,17 +123,6 @@
         "priority_score": 78,
         "is_summit_level": false,
         "summary": "经国家反外国制裁工作协调机制批准，现公布《关于对应用DNA科学公司等6家美国实体采取反制措施的决定》，自2026年8月5日起施行。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "商务部：对相关进口打印复印办公设备发起对外贸易国家安全立案调查",
-        "url": "https://news.cctv.com/2026/08/05/ARTINsQaIg7oAY0rmVz1ES5K260805.shtml",
-        "date": "2026-08-05",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 78,
-        "is_summit_level": false,
-        "summary": "商务部公布对相关进口打印复印办公设备发起对外贸易国家安全立案调查。",
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
@@ -655,14 +655,14 @@
     ],
     "2026-08-06": [
       {
-        "title": "中国AI连续14周“霸榜”！从硬核数据看硬核实力",
-        "url": "https://news.cctv.com/2026/08/06/ARTIqZZnPL6rCCIrafMqB1KM260806.shtml",
+        "title": "中国发起首例对外贸易国家安全调查",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/06/content_30173378.html",
         "date": "2026-08-06",
-        "source": "央视新闻",
+        "source": "人民日报",
         "category": "部委动态",
-        "priority_score": 78,
+        "priority_score": 88,
         "is_summit_level": false,
-        "summary": "据全球多模型聚合平台数据显示，最新一周AI大模型调用量榜单，排名前五的产品中国占四席，中国AI已连续14周“霸榜”全球。大模型、AI智能体、具身智能等“中国智造”已成为中国式现代化的又一亮丽名片。",
+        "summary": "本报北京8月5日电&nbsp;&nbsp;商务部5日发布公告，对相关进口打印复印办公设备发起了对外贸易国家安全调查。商务部新闻发言人当天表示，此次调查是中国首例对外贸易国家安全调查。",
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
@@ -677,47 +677,14 @@
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
-        "title": "“希望引进更多中国经验和技术”（中国—吉尔吉斯斯坦媒体高质量共建“一带一路”联合采访）",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/06/content_30173376.html",
+        "title": "中国AI连续14周“霸榜”！从硬核数据看硬核实力",
+        "url": "https://news.cctv.com/2026/08/06/ARTIqZZnPL6rCCIrafMqB1KM260806.shtml",
         "date": "2026-08-06",
-        "source": "人民日报",
+        "source": "央视新闻",
         "category": "经贸动向",
         "priority_score": 72,
         "is_summit_level": false,
-        "summary": "日前，中国—吉尔吉斯斯坦媒体高质量共建“一带一路”联合采访团队走进吉尔吉斯斯坦伊塞克湖州和楚河州，采访中国援吉灌溉系统改造工程和中企投资建设的楚河州100兆瓦光伏项目，深入了解中国企业如何有效利用当地…",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "“时间是最宝贵的资源”（高质量发展微视角）",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/06/content_30173368.html",
-        "date": "2026-08-06",
-        "source": "人民日报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "上半年，我国数字产品制造业增势强劲，3D打印设备产品产量同比增长48.5%。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "中国发起首例对外贸易国家安全调查",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/06/content_30173378.html",
-        "date": "2026-08-06",
-        "source": "人民日报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "本报北京8月5日电&nbsp;&nbsp;商务部5日发布公告，对相关进口打印复印办公设备发起了对外贸易国家安全调查。商务部新闻发言人当天表示，此次调查是中国首例对外贸易国家安全调查。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "以创新破瓶颈  以实业强产业（亲历者说）",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/06/content_30173369.html",
-        "date": "2026-08-06",
-        "source": "人民日报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "作为扎根深圳、深耕工业级3D打印领域的科创企业，我们亲历了我国工业级3D打印产业从跟跑到并跑、从依赖进口到自主可控的跨越。",
+        "summary": "据全球多模型聚合平台数据显示，最新一周AI大模型调用量榜单，排名前五的产品中国占四席，中国AI已连续14周“霸榜”全球。大模型、AI智能体、具身智能等“中国智造”已成为中国式现代化的又一亮丽名片。",
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
@@ -743,9 +710,9 @@
     "2026-07-31"
   ],
   "today": "2026-08-06",
-  "todayCount": 7,
+  "todayCount": 4,
   "stats": {
-    "totalArticles": 65,
+    "totalArticles": 62,
     "dateCount": 7,
     "latestDate": "2026-08-06",
     "summitCount": 9
