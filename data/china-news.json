@@ -5,17 +5,6 @@
   "archive": {
     "2026-08-05": [
       {
-        "title": "时习之丨习近平深情礼赞新时代英雄",
-        "url": "https://news.cctv.com/2026/08/05/ARTIqKBHhJfQtYMo5ZOhSiOU260805.shtml",
-        "date": "2026-08-05",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "2026年7月1日，习近平总书记在庆祝中国共产党成立105周年大会上指出，人民是历史的创造者，是真正的英雄。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
         "title": "时政新闻眼丨如何把百年大党建设得更加坚强有力？总书记这样部署",
         "url": "https://news.cctv.com/2026/08/05/ARTIsBy5RmbVPkf8dNUvWSG7260805.shtml",
         "date": "2026-08-05",
@@ -27,14 +16,14 @@
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
-        "title": "驻拉合尔总领事孙彦出席巴基斯坦华商会学习习近平...",
-        "url": "https://www.mfa.gov.cn/web/zwbd_673032/jghd_673046/202608/t20260805_11998721.shtml",
+        "title": "商务部就对美系列涉华消极措施实施反制答记者问",
+        "url": "https://jingji.cctv.com/2026/08/05/ARTIrAUvOXciLk1k9dr21CuA260805.shtml",
         "date": "2026-08-05",
-        "source": "外交部",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "2026年8月4日，驻拉合尔总领事孙彦出席巴基斯坦华商会学习习近平总书记关于侨务工作重要指示精神座谈会，与华商会会长陈钱江、名誉会长曾令斌等商会代表座谈交流。",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "商务部新闻发言人就对美国联邦通信委员会、美国土安全部系列涉华消极措施实施反制答记者问。",
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
@@ -60,6 +49,17 @@
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
+        "title": "商务部：对应用DNA科学公司等6家美国实体采取反制措施",
+        "url": "https://news.cctv.com/2026/08/05/ARTIPDweomnXYOQgVAASgmPh260805.shtml",
+        "date": "2026-08-05",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "经国家反外国制裁工作协调机制批准，现公布《关于对应用DNA科学公司等6家美国实体采取反制措施的决定》，自2026年8月5日起施行。",
+        "collectedAt": "2026-08-06 09:20:35"
+      },
+      {
         "title": "商务部：对相关进口打印复印办公设备发起对外贸易国家安全立案调查",
         "url": "https://news.cctv.com/2026/08/05/ARTINsQaIg7oAY0rmVz1ES5K260805.shtml",
         "date": "2026-08-05",
@@ -71,14 +71,14 @@
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
-        "title": "驻安哥拉大使张斌拜会安国民议会议长德阿尔梅达",
-        "url": "https://www.mfa.gov.cn/web/zwbd_673032/wshd_673034/202608/t20260805_11998725.shtml",
+        "title": "商务部：对美国合规性测试公司采取反制措施",
+        "url": "https://news.cctv.com/2026/08/05/ARTIZgrYkGOAZpKaRDUXzzzg260805.shtml",
         "date": "2026-08-05",
-        "source": "外交部",
-        "category": "重要会议",
+        "source": "央视新闻",
+        "category": "部委动态",
         "priority_score": 88,
         "is_summit_level": false,
-        "summary": "2026年8月3日，驻安哥拉大使张斌拜会安国民议会议长德阿尔梅达。安国民议会主席团第一秘书邓波、外委会主席萨卡拉参加会见。",
+        "summary": "经国家反外国制裁工作协调机制批准，现公布《关于对美国合规性测试公司采取反制措施的决定》，自2026年8月5日起施行。",
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
@@ -101,39 +101,6 @@
         "priority_score": 78,
         "is_summit_level": false,
         "summary": "近日，经国务院批准，中国气象局与国家发展和改革委员会联合印发《国家综合气象观测系统建设“十五五”规划》（以下简称《规划》），对未来五年国家综合气象观测系统建设作出部署。《规划》着眼气象防灾减灾和经济社…",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "商务部就对美系列涉华消极措施实施反制答记者问",
-        "url": "https://jingji.cctv.com/2026/08/05/ARTIrAUvOXciLk1k9dr21CuA260805.shtml",
-        "date": "2026-08-05",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 78,
-        "is_summit_level": false,
-        "summary": "商务部新闻发言人就对美国联邦通信委员会、美国土安全部系列涉华消极措施实施反制答记者问。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "商务部：对应用DNA科学公司等6家美国实体采取反制措施",
-        "url": "https://news.cctv.com/2026/08/05/ARTIPDweomnXYOQgVAASgmPh260805.shtml",
-        "date": "2026-08-05",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 78,
-        "is_summit_level": false,
-        "summary": "经国家反外国制裁工作协调机制批准，现公布《关于对应用DNA科学公司等6家美国实体采取反制措施的决定》，自2026年8月5日起施行。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "商务部：对美国合规性测试公司采取反制措施",
-        "url": "https://news.cctv.com/2026/08/05/ARTIZgrYkGOAZpKaRDUXzzzg260805.shtml",
-        "date": "2026-08-05",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 78,
-        "is_summit_level": false,
-        "summary": "经国家反外国制裁工作协调机制批准，现公布《关于对美国合规性测试公司采取反制措施的决定》，自2026年8月5日起施行。",
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
@@ -189,17 +156,6 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "中国消费者协会今天（5日）发布投诉情况分析显示，今年上半年，全国消协组织共受理消费者投诉985928件，同比下降1.01%，已解决567926件，为消费者挽回经济损失4.47亿元。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "亲人离世了 财产怎么查？浙江上线“个人身后金融事”一站式查询系统",
-        "url": "https://news.cctv.com/2026/08/05/ARTItrDNEcyDLiLJnmfHwrGG260805.shtml",
-        "date": "2026-08-05",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "亲人离世了，家人并不清楚逝者在哪家银行有存款、买没买保险、有没有理财等等，现在，这个困扰有了新办法。8月4日，浙江上线了“个人身后金融事”一站式查询系统，不但解决难题，也让金融服务更有温度。",
         "collectedAt": "2026-08-06 09:20:35"
       },
       {
@@ -266,17 +222,6 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "今年上半年数据显示，以高端制造、数字经济、现代服务为代表的新动能对经济增长的贡献率超过了四成。",
-        "collectedAt": "2026-08-06 09:20:35"
-      },
-      {
-        "title": "驻爱尔兰大使赵希源出席全欧及全英中国经济学会202...",
-        "url": "https://www.mfa.gov.cn/web/zwbd_673032/gzhd_673042/202608/t20260805_11998708.shtml",
-        "date": "2026-08-05",
-        "source": "外交部",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "2026年8月3日，驻爱尔兰大使赵希源应邀出席在都柏林大学举办的全欧及全英中国经济学会2026年会开幕式并致辞。年会主题为“可持续金融、人工智能和循环经济：迈向可持续未来的道路”。",
         "collectedAt": "2026-08-06 09:20:35"
       }
     ],
@@ -712,9 +657,9 @@
   "today": "2026-08-06",
   "todayCount": 4,
   "stats": {
-    "totalArticles": 62,
+    "totalArticles": 57,
     "dateCount": 7,
     "latestDate": "2026-08-06",
-    "summitCount": 9
+    "summitCount": 7
   }
 }
