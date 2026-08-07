@@ -42,10 +42,47 @@ HIGH_SIGNALS = [
     '投资', 'invest', '融资', 'funding', 'IPO',
 ]
 
+# 高优先重大事件信号（V2.0 精细化：仅"行业监管·科技博弈·重大突破"层面）
+HIGH_EVENTS = [
+    # 行业监管 / 国家科技博弈
+    '监管', 'regulation', '法案', 'act', '合规', 'compliance',
+    '禁令', 'ban', '禁止', '禁止令',
+    '制裁', 'sanction',
+    '出口管制', 'export control', '实体清单',
+    '科技战', 'tech war', '中美', 'US-China',
+    '反垄断', 'antitrust', '垄断', 'monopoly',
+    '调查', 'investigation', '起诉', 'sue', 'lawsuit', '诉讼',
+    '听证', 'hearing', '国会', 'congress', '参议院', 'senate',
+    '国家', 'national', '政府', 'government',
+    '安全', 'security', '国安', 'national security',
+    # 重大突破
+    '突破', 'breakthrough', '首次', 'first', '前所', '创纪录', 'record',
+    '万亿参数', 'trillion', '新架构', 'architecture',
+    '碾压', '超越', '超过', '超车', '反超',
+    '收购', 'acquis', '并购', 'M&A',
+    'IPO', '上市', '战略配售', '募资',
+    # 黄仁勋/重大事件
+    '黄仁勋', 'Jensen Huang', 'GTC',
+    # 重大格局变化
+    '降价', 'price cut', '免费', 'free',
+    '估值', 'valuation', '融资', 'funding', '融资额',
+]
+
+# 降权信号（属于产品小更新/评测/教程 → 不该被归高）
+DEMOTE_SIGNALS = [
+    '博客', 'blog', '教你', 'how to',
+    'benchmark', '评测', '测评', 'ranking',
+    'GitHub', '代码', 'code', 'demo',
+    '专访', 'interview', '对话', 'podcast',
+    '应用案例', '使用技巧', '教程', 'tutorial',
+    '个人观点', '看法', '观点', 'opinion',
+    '纪念', '周年', 'history', '历史回顾',
+    '版本', 'v6', 'v7', 'patch', '更新',
+]
+
 MEDIUM_SIGNALS = [
     '产品', 'product', '功能', 'feature', '更新', 'update',
-    '合作', 'partner', '融资', 'funding',
-    '开源', 'open source', '论文', 'paper',
+    '合作', 'partner', '开源', 'open source', '论文', 'paper',
     '招聘', 'hire',
 ]
 
@@ -58,65 +95,59 @@ def url_hash(url):
 
 
 def classify_ai_importance(art):
-    """V3 AI重要性评分"""
+    """V2.0 精细化 AI 重要性评分
+    高优标准：行业监管 · 国家科技博弈 · 重大突破
+    仅命中15家重点公司不够，必须 + 重大事件信号
+    """
     text = (art.get('title', '') + ' ' + art.get('title_en', '') +
             art.get('summary', '') + art.get('summary_en', '')).lower()
-    
+
     # ── 1. 检查是否命中 15 家重点公司 ──
-    has_key_company = False
     matched_companies = []
     for c, cl in zip(KEY_COMPANIES, KEY_COMPANIES_LOWER):
         if cl in text:
-            has_key_company = True
             matched_companies.append(c)
-    
+    has_key_company = bool(matched_companies)
+
     if not has_key_company:
-        # 不涉及15家重点公司 → 检查是否AI通用动态
         has_ai = any(k in text for k in ['AI', '人工智能', 'artificial intelligence', '大模型', 'LLM'])
-        if not has_ai:
-            return 50, [], 'low'
-        # 有AI但无重点公司 → 中
-        return 65, [], 'medium'
-    
-    # ── 2. 高优先判定 ──
-    high_hits = [k for k in HIGH_SIGNALS if k.lower() in text]
-    
-    # Special: NVIDIA/Huang Renxun any news → high priority
-    if any(c in matched_companies for c in ['NVIDIA']) and len(high_hits) >= 0:
-        has_high_relevance = any(k in text for k in [
-            '黄仁勋', 'jensen', '芯片', 'chip', 'GPU', '收购', 'acquis',
-            '发布', 'release', '制裁', 'sanction', '突破', 'record',
-            '投资', 'invest', '合作', 'partner', '监管', 'regulation',
-        ])
-        if has_high_relevance:
-            return 92, matched_companies, 'high'
-    
-    # Huawei any major news → high
-    if any(c in matched_companies for c in ['华为', 'Huawei']):
-        return 92, matched_companies, 'high'
-    
-    # Chip/acquisition/model/regulation + key company → high
-    major_signals = ['收购', 'acquis', '芯片', 'chip', '大模型', 'LLM', 'GPT',
-                     '监管', 'regulation', '法案', 'act', '禁令', 'ban',
-                     '出口管制', '制裁', 'sanction', '科技战',
-                     '突破', 'breakthrough', '参数', 'parameter']
-    if any(s.lower() in text for s in major_signals):
-        return 92, matched_companies, 'high'
-    
-    # DeepSeek/OpenAI/Anthropic very significant → high
-    if any(c in matched_companies for c in ['DeepSeek', 'OpenAI', 'Anthropic']):
-        return 88, matched_companies, 'high'
-    
-    # ── 3. 中优先 ──
-    med_hits = [k for k in MEDIUM_SIGNALS if k.lower() in text]
-    if med_hits:
-        return 72, matched_companies, 'medium'
-    
-    # 有重点公司提及 → 至少中
-    if has_key_company:
+        return (50, [], 'low') if not has_ai else (60, [], 'medium')
+
+    # ── 2. 重大事件信号 ──
+    high_hits = [k for k in HIGH_EVENTS if k.lower() in text]
+    demote_hits = [k for k in DEMOTE_SIGNALS if k.lower() in text]
+
+    # Special: NVIDIA / 华为 任何重大事件 → 高
+    nvidia_hit = 'NVIDIA' in matched_companies
+    huawei_hit = any(c in matched_companies for c in ['华为', 'Huawei'])
+
+    # ── 3. 判定优先级 ──
+    # 3a. 纯产品/评测/教程类 → 强制降级
+    if demote_hits and not high_hits:
+        # 没有重大事件信号，且属于产品/评测类 → 中（不归高）
         return 65, matched_companies, 'medium'
-    
-    return 50, matched_companies, 'low'
+
+    # 3b. NVIDIA + 任何信号 → 高（用户原则：NVIDIA 所有动向都重要）
+    if nvidia_hit and high_hits:
+        return 92, matched_companies, 'high'
+
+    # 3c. 华为 + 任何重大事件 → 高
+    if huawei_hit and high_hits:
+        return 92, matched_companies, 'high'
+
+    # 3d. 重大事件信号（监管/科技战/突破）+ 重点公司 → 高
+    if high_hits:
+        # 优先给"监管/科技战/突破"加 92 分
+        super_signals = ['监管', 'regulation', '法案', '出口管制', 'sanction', '制裁',
+                         '科技战', 'tech war', '突破', 'breakthrough', '收购', 'acquis',
+                         '万亿参数', 'trillion', '黄仁勋', 'Jensen Huang', '反垄断',
+                         'antitrust', '起诉', 'sue', 'lawsuit', 'IPO', '上市', '募资']
+        if any(s.lower() in text for s in super_signals):
+            return 92, matched_companies, 'high'
+        return 88, matched_companies, 'high'
+
+    # 3e. 仅有 15 公司 + 普通动态 → 中
+    return 65, matched_companies, 'medium'
 
 
 def fetch_from_aihot():

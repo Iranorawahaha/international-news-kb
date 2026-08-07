@@ -55,6 +55,7 @@ def main():
     html = html.replace('__TODAY_COUNT__', str(today_count))
     html = html.replace('__DATE_COUNT__', str(len(dates)))
     html = html.replace('__SOURCE_COUNT__', str(source_count))
+    html = html.replace('__COMPANY_COUNT__', str(len(KEY_COMPANIES)))
     html = html.replace('__COMPANY_CHIPS__', company_html)
     html = html.replace('__COMPANY_OPTIONS__', opts)
     html = html.replace('__NOW_STR__', now_str)

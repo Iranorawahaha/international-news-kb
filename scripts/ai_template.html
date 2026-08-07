@@ -3,102 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI 看板 — Ira 信息看板</title>
+<title>AI 动向看板 — Ira 信息看板</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#f7f8fb; --panel:#fff; --line:#e2e5ed;
   --accent:#c0292b; --accent-dark:#7a1518; --accent-soft:#fdf0ef;
-  --ink:#1c2333; --muted:#79859b; --mark-bg:#ffecd2; --mark-ink:#7a3d00;
+  --ink:#1c2333; --muted:#79859b;
+  --yellow:#f59e0b; --yellow-dark:#b45309; --yellow-soft:#fef3c7;
   --main:#2563eb; --main-soft:#eff6ff; --main-dark:#1d4ed8;
   --font:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
   --mono:ui-monospace,monospace;
 }
 body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.65;min-height:100vh}
 
-/* Header */
-.header{
-  background:linear-gradient(135deg,#1e1f2e,#2a2f45);
-  color:#fff;padding:28px 32px;overflow:hidden;position:relative;
+/* ===== 顶部门户导航 (对齐国内版) ===== */
+.portal-bar{
+  background:var(--panel);
+  border-bottom:1px solid var(--line);
+  padding:12px 32px;
+  display:flex;align-items:center;gap:24px;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
 }
-.header::after{
-  content:'';position:absolute;top:-30%;right:-5%;
-  width:350px;height:350px;background:radial-gradient(circle,rgba(255,255,255,0.06),transparent 70%);pointer-events:none;
+.portal-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:var(--ink)}
+.portal-brand-icon{
+  width:32px;height:32px;border-radius:8px;
+  background:linear-gradient(135deg,var(--yellow),#fbbf24);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:18px;font-weight:800;
+  box-shadow:0 2px 6px rgba(245,158,11,.3);
 }
-.header-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:relative}
-.header h1{font-size:26px;font-weight:800;letter-spacing:-.5px}
-.header .subtitle{font-size:12.5px;opacity:0.72;margin-top:6px;position:relative}
-.stats-strip{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;position:relative}
-.stats-strip .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:rgba(255,255,255,0.12);font-size:13px;font-weight:500}
-.stats-strip .pill .v{font-weight:700}
-.stats-strip .pill.red{background:rgba(220,38,38,0.2)}
-.stats-strip .pill.green{background:rgba(16,185,129,0.18)}
-.nav-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;position:relative}
-.nav-links a{padding:5px 14px;border-radius:99px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:500;transition:all .15s}
-.nav-links a:hover{background:rgba(255,255,255,0.2);color:#fff}
-.nav-links a.active{background:#fff;color:var(--main);font-weight:700}
+.portal-nav{display:flex;gap:8px;flex:1}
+.portal-nav a{
+  padding:6px 16px;border-radius:8px;
+  text-decoration:none;font-size:13px;font-weight:600;
+  transition:all .15s;color:#475569;
+}
+.portal-nav a:hover{background:var(--main-soft);color:var(--main)}
+.portal-nav a.active{
+  background:linear-gradient(135deg,var(--yellow),#fbbf24);
+  color:#fff;box-shadow:0 2px 6px rgba(245,158,11,.25);
+}
+.portal-meta{margin-left:auto;font-size:11.5px;color:var(--muted)}
+.portal-meta b{color:var(--ink);font-weight:600}
 
-/* Wrap */
-.wrap{max-width:1400px;margin:0 auto;padding:18px 24px 44px;display:flex;gap:20px;align-items:flex-start}
+/* ===== 黄色 hero header ===== */
+.hero{
+  background:linear-gradient(135deg,#f59e0b 0%,#fbbf24 50%,#fcd34d 100%);
+  color:#422006;
+  padding:26px 32px 32px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-10%;
+  width:480px;height:480px;
+  background:radial-gradient(circle,rgba(255,255,255,0.18),transparent 70%);
+  pointer-events:none;
+}
+.hero h1{font-size:28px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px;position:relative}
+.hero .subtitle{font-size:13px;opacity:0.78;position:relative;max-width:920px}
+.hero-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;position:relative}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:7px 14px;border-radius:99px;
+  background:rgba(255,255,255,0.55);
+  font-size:13px;font-weight:500;color:#422006;
+  border:1px solid rgba(255,255,255,0.4);
+  backdrop-filter:blur(8px);
+}
+.hero-pill .v{font-weight:700}
+.hero-pill.red{background:rgba(220,38,38,0.18);border-color:rgba(220,38,38,0.25)}
+.hero-pill.green{background:rgba(34,197,94,0.2);border-color:rgba(34,197,94,0.3)}
 
-/* Sidebar */
-.sidebar{flex:0 0 200px;position:sticky;top:18px}
-.sidebar h3{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
-.cat-chips{display:flex;flex-direction:column;gap:6px}
-.cat-chip{display:flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:13px;cursor:pointer;transition:all .12s;font-weight:500}
-.cat-chip:hover{border-color:var(--accent);background:var(--accent-soft)}
-.cat-chip.active{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-dark);font-weight:700}
-.cat-chip-name{flex:1}
-.cat-chip-cnt{font-size:11.5px;color:var(--muted);font-weight:600}
+/* ===== Wrap ===== */
+.wrap{max-width:1400px;margin:0 auto;padding:16px 24px 44px;display:flex;gap:18px;align-items:flex-start}
 
-/* Main */
+/* ===== 侧边栏 ===== */
+.sidebar{flex:0 0 200px;position:sticky;top:16px}
+.sidebar h3{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.cat-chips{display:flex;flex-direction:column;gap:5px}
+.cat-chip{display:flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 11px;font-size:12.5px;cursor:pointer;transition:all .12s;font-weight:500;color:var(--ink)}
+.cat-chip:hover{border-color:var(--yellow);background:var(--yellow-soft)}
+.cat-chip.active{border-color:var(--yellow);background:var(--yellow-soft);color:var(--yellow-dark);font-weight:700}
+.cat-chip-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cat-chip-cnt{font-size:11px;color:var(--muted);font-weight:600;background:var(--bg);padding:1px 7px;border-radius:99px}
+
+/* ===== 主内容区 ===== */
 .main-content{flex:1;min-width:0}
 
-/* Date header */
+/* ===== 刷新条 ===== */
+.refresh-strip{
+  background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #22c55e;
+  border-radius:10px;padding:10px 14px;font-size:12.5px;color:#166534;
+  margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+}
+.refresh-strip b{color:#15803d;font-weight:700}
+.rs-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.15)}
+
+/* ===== 过滤栏 ===== */
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+.filter-row input,.filter-row select{
+  padding:6px 12px;border:1px solid var(--line);border-radius:8px;
+  font-size:13px;background:var(--panel);font-family:var(--font);outline:none;
+}
+.filter-row input:focus,.filter-row select:focus{border-color:var(--yellow)}
+.filter-row input{flex:1;min-width:160px}
+
+/* ===== 日期分组表头 (同国内版) ===== */
 .date-group-header{
-  background:linear-gradient(90deg,var(--main-soft),transparent);
-  border-left:4px solid var(--main);
+  background:linear-gradient(90deg,var(--yellow-soft),transparent);
+  border-left:4px solid var(--yellow);
   padding:9px 14px 9px 16px;margin:18px 0 10px;
-  font-size:13.5px;font-weight:700;color:var(--main-dark);
+  font-size:13.5px;font-weight:700;color:var(--yellow-dark);
   border-radius:0 8px 8px 0;letter-spacing:.3px;
   display:flex;align-items:center;gap:10px;
 }
 .date-group-header:first-child{margin-top:0}
-.date-group-header.today{background:linear-gradient(90deg,#ecfdf5,transparent);border-left-color:#16a34a;color:#047857}
+.date-group-header.today{background:linear-gradient(90deg,#dcfce7,transparent);border-left-color:#22c55e;color:#166534}
 .date-group-header .date-count{font-family:var(--mono);font-size:11.5px;color:var(--muted);background:var(--panel);padding:2px 9px;border-radius:99px;font-weight:600}
-.date-group-header.today .date-count{background:#16a34a;color:#fff}
+.date-group-header.today .date-count{background:#22c55e;color:#fff}
 
-/* Cards */
-.card{display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px;margin-bottom:9px;transition:all .15s;align-items:flex-start}
+/* ===== 卡片 (对齐国内版) ===== */
+.card{
+  display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);
+  border-radius:11px;padding:13px 14px;margin-bottom:9px;
+  transition:transform .15s,box-shadow .15s;align-items:flex-start;
+}
 .card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(28,36,52,.08)}
 .card.high{border-left:4px solid #dc2626}
-.card.medium{border-left:3px solid #eab308}
+.card.medium{border-left:3px solid #f59e0b}
 .card.low{border-left:2px solid var(--line)}
-.card-idx{flex:0 0 28px;height:28px;border-radius:7px;background:#f1f3f8;color:var(--muted);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+.card-idx{
+  flex:0 0 32px;height:32px;border-radius:8px;
+  background:var(--yellow-soft);color:var(--yellow-dark);
+  font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);
+}
+.card.high .card-idx{background:#fef2f2;color:#dc2626}
+.card.medium .card-idx{background:var(--yellow-soft);color:var(--yellow-dark)}
+.card.low .card-idx{background:#f1f5f9;color:#94a3b8}
+
 .card-body{flex:1;min-width:0}
-.card-title{font-size:14px;font-weight:650;line-height:1.5;margin-bottom:4px}
+.card-title{font-size:14.5px;font-weight:650;line-height:1.5;margin-bottom:3px}
 .card-title a{color:inherit;text-decoration:none}
 .card-title a:hover{color:var(--accent)}
 .card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:12px;color:var(--muted);margin:3px 0 5px}
 .meta-src{font-weight:600;color:#3a4356}
 .card-summary{font-size:13px;color:#4a5568;line-height:1.6}
+
 .badge-imp{display:inline-flex;align-items:center;gap:3px;font-size:11px;padding:2px 8px;border-radius:99px;font-weight:600}
 .badge-high{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
-.badge-medium{background:#fefce8;color:#a16207;border:1px solid #fde68a}
+.badge-medium{background:var(--yellow-soft);color:var(--yellow-dark);border:1px solid #fde68a}
 .badge-low{background:#f8fafc;color:#94a3b8;border:1px solid #e2e8f0}
-.badge-company{display:inline-flex;align-items:center;font-size:10.5px;padding:1px 7px;border-radius:99px;font-weight:600;background:#fef3c7;color:#92400e;margin-left:4px}
+.badge-company{display:inline-flex;align-items:center;font-size:10.5px;padding:1px 7px;border-radius:99px;font-weight:600;background:var(--yellow-soft);color:var(--yellow-dark);margin-left:3px}
 .tag-origin{font-size:10px;padding:1px 6px;border-radius:99px;font-weight:500}
 .tag-aihot{background:#e0f2fe;color:#0369a1}
 .tag-international{background:#f3e8ff;color:#7c3aed}
+
 .empty-state{text-align:center;padding:40px;color:var(--muted);font-size:14px}
 
-/* Filter row */
-.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
-.filter-row input,.filter-row select{padding:6px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;background:var(--panel);font-family:var(--font)}
-.filter-row input{flex:1;min-width:160px}
-.filter-row select{min-width:100px}
-
-/* Responsive */
 @media(max-width:760px){
   .wrap{flex-direction:column;padding:12px}
   .sidebar{flex:auto;position:static}
@@ -108,22 +174,30 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1
 </head>
 <body>
 
-<div class="header">
-  <div class="header-top">
-    <h1>🤖 AI 看板</h1>
-  </div>
-  <div class="subtitle">15家重点公司追踪 · 芯片/大模型/监管 · 7天滚动窗口</div>
-  <div class="stats-strip">
-    <span class="pill red">🔴 高优先：<span class="v">__HIGH_COUNT__</span> 条</span>
-    <span class="pill green">🆕 今日新增：<span class="v">__TODAY_COUNT__</span> 条</span>
-    <span class="pill">📅 覆盖：<span class="v">__DATE_COUNT__</span> 天</span>
-    <span class="pill">📡 信源：<span class="v">__SOURCE_COUNT__</span> 个</span>
-  </div>
-  <div class="nav-links">
+<!-- 顶部门户导航 -->
+<div class="portal-bar">
+  <a href="https://iranorawahaha.github.io/international-news-kb/" class="portal-brand" style="text-decoration:none;color:inherit">
+    <span class="portal-brand-icon">🤖</span>
+    <span>Ira 信息看板</span>
+  </a>
+  <div class="portal-nav">
     <a href="international-news.html">🌍 国际</a>
     <a href="china-news.html">🇨🇳 国内</a>
-    <a href="ai-news.html" class="active">🤖 AI</a>
-    <span style="color:rgba(255,255,255,0.5);font-size:12px;margin-left:auto">__NOW_STR__</span>
+    <a href="ai-news.html" class="active">🤖 AI动向</a>
+  </div>
+  <div class="portal-meta">每日 <b>09:30</b> 刷新 · 滚动 <b>7</b> 天</div>
+</div>
+
+<!-- 黄色 hero header -->
+<div class="hero">
+  <h1>🤖 AI 动向看板</h1>
+  <div class="subtitle">15家重点公司追踪 · 行业监管 · 国家科技博弈 · 重大技术突破 · 7天滚动</div>
+  <div class="hero-stats">
+    <span class="hero-pill red">🔴 高优先：<span class="v">__HIGH_COUNT__</span> 条</span>
+    <span class="hero-pill green">🆕 今日新增：<span class="v">__TODAY_COUNT__</span> 条</span>
+    <span class="hero-pill">📅 覆盖：<span class="v">__DATE_COUNT__</span> 天</span>
+    <span class="hero-pill">📡 信源：<span class="v">__SOURCE_COUNT__</span> 个</span>
+    <span class="hero-pill">🏢 重点公司：<span class="v">__COMPANY_COUNT__</span> 家</span>
   </div>
 </div>
 
@@ -143,6 +217,11 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1
   </aside>
 
   <main class="main-content">
+    <div class="refresh-strip">
+      <span class="rs-dot"></span>
+      <b>最近刷新：</b>__NOW_STR__ 北京时间（每日自动刷新）·
+      <b>今日新增 __TODAY_COUNT__ 条</b>·滚动 7 天窗口
+    </div>
     <div class="filter-row">
       <input type="text" id="searchBox" placeholder="🔍 搜索标题/摘要..." oninput="filterNews()">
       <select id="companyFilter" onchange="filterNews()">
@@ -163,14 +242,11 @@ let selectedImp = 'all';
 let selectedCompany = '';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Init sidebar counts
-  const all = NEWS_DATA.stats.totalArticles;
-  document.getElementById('cnt-all').textContent = all;
+  document.getElementById('cnt-all').textContent = NEWS_DATA.stats.totalArticles;
   document.getElementById('cnt-high').textContent = NEWS_DATA.stats.highCount;
   document.getElementById('cnt-medium').textContent = NEWS_DATA.stats.mediumCount;
   document.getElementById('cnt-low').textContent = NEWS_DATA.stats.lowCount;
 
-  // Imp chips
   document.querySelectorAll('#impChips .cat-chip').forEach(chip => {
     chip.addEventListener('click', () => {
       document.querySelectorAll('#impChips .cat-chip').forEach(c => c.classList.remove('active'));
@@ -180,7 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Company chips
   document.querySelectorAll('#coChips .cat-chip').forEach(chip => {
     chip.addEventListener('click', () => {
       document.querySelectorAll('#coChips .cat-chip').forEach(c => c.classList.remove('active'));
@@ -224,7 +299,6 @@ function filterNews() {
 
     if (!articles.length && !(selectedImp === 'all' && !selectedCompany)) return;
 
-    // Date header
     const dt = new Date(d + 'T00:00:00');
     const wd = weekdayMap[dt.getDay()];
     const isToday = d === today;
@@ -233,7 +307,6 @@ function filterNews() {
     hdr.innerHTML = `<span>📅 ${dt.getMonth()+1}月${dt.getDate()}日</span><span>${wd}${isToday ? ' · 今日' : ''}</span><span class="date-count">${articles.length} 条</span>`;
     area.appendChild(hdr);
 
-    // Cards
     articles.forEach(a => {
       const card = document.createElement('div');
       card.className = 'card ' + (a.importance || 'low');
@@ -241,7 +314,7 @@ function filterNews() {
       const tags = (a.company_tags || []).slice(0,3).map(c => `<span class="badge-company">${c}</span>`).join('');
       const originTag = a.origin === 'international' 
         ? '<span class="tag-origin tag-international">🌍国际</span>' 
-        : '<span class="tag-origin tag-aihot">📡AI HOT</span>';
+        : '<span class="tag-origin tag-aihot">📡AIHOT</span>';
       const impLabel = a.importance === 'high' ? '🔴高' : (a.importance === 'medium' ? '🟡中' : '⚪低');
       const impCls = a.importance === 'high' ? 'badge-high' : (a.importance === 'medium' ? 'badge-medium' : 'badge-low');
       const url = a.url || a.original_url || '#';
@@ -249,7 +322,7 @@ function filterNews() {
       const summary = a.summary || '';
 
       card.innerHTML = `
-        <div class="card-idx" style="background:${score>=88?'#fef2f2':(score>=65?'#fefce8':'#f8fafc')};color:${score>=88?'#dc2626':(score>=65?'#a16207':'#94a3b8')}">${score}</div>
+        <div class="card-idx">${score}</div>
         <div class="card-body">
           <div class="card-title"><a href="${url}" target="_blank">${title}</a></div>
           <div class="card-meta">
