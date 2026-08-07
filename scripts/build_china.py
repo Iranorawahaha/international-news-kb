@@ -112,24 +112,41 @@ def build():
         icon = cat_icon(c)
         sidebar_items.append(f'<button class="col-item" data-cat="{esc(c)}"><span class="ic">{icon}</span>{esc(c)}<span class="cnt">新增{cnt}</span></button>')
 
+    # ============== 日期标签栏 ==============
+    weekday_map = {0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六'}
+    date_tabs = []
+    for d in dates:
+        dt = datetime.strptime(d, '%Y-%m-%d')
+        wd = weekday_map[dt.weekday()]
+        is_today = (d == today)
+        total_in_date = len(archive.get(d, []))
+        active_cls = 'active' if is_today else ''
+        date_tabs.append(f'<button class="date-tab {active_cls}" data-date="{d}">{dt.month}月{dt.day}日 {wd}<span class="date-tab-cnt">{total_in_date}</span></button>')
+    date_tabs_html = '\n        '.join(date_tabs)
+
     # ============== 主内容区（按日期分组） ==============
     main_panels = []
     # "全部" 面板：按日期分组
     all_items_html = []
-    if dates:
-        for d in dates:
-            items = archive.get(d, [])
-            if not items:
-                continue
-            # 日期分组表头
-            is_today = (d == today)
-            d_cls = "date-group-header today" if is_today else "date-group-header"
-            d_label = "🆕 今天" if is_today else d
-            all_items_html.append(f'<div class="{d_cls}">📅 {d_label} <span class="date-count">{len(items)} 条</span></div>')
-            for idx, it in enumerate(items, 1):
-                all_items_html.append(article_card(it, idx))
+    for d in dates:
+        items = archive.get(d, [])
+        if not items: continue
+        is_today = (d == today)
+        d_cls = "date-group-header today" if is_today else "date-group-header"
+        d_label = "🆕 今天" if is_today else d
+        all_items_html.append(f'<div class="{d_cls}">📅 {d_label} <span class="date-count">{len(items)} 条</span></div>')
+        for idx, it in enumerate(items, 1):
+            all_items_html.append(article_card(it, idx))
     empty_panel_html = '<div class="empty-panel">暂无要闻</div>'
     main_panels.append('<div class="cat-panel active" id="cat-panel-all">' + ("".join(all_items_html) if all_items_html else empty_panel_html) + '</div>')
+
+    # 每个日期的面板
+    for d in dates:
+        items = archive.get(d, [])
+        date_html = []
+        for idx, it in enumerate(items, 1):
+            date_html.append(article_card(it, idx))
+        main_panels.append(f'<div class="cat-panel" id="cat-panel-date-{d}">' + ("".join(date_html) if date_html else empty_panel_html) + '</div>')
 
     # 每个分类面板（也按日期分组）
     for c in cat_order:
@@ -196,6 +213,28 @@ def build():
   .hero .hero-meta span {{ background: rgba(255,255,255,.15); padding: 3px 11px; border-radius: 999px; }}
 
   /* 搜索框 */
+  .search-bar {{ margin: 10px 0; }}
+
+  /* 日期标签栏 */
+  .date-tabs {{
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
+  }}
+  .date-tab {{
+    padding: 7px 14px; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--panel); color: var(--ink); font-size: 13px; font-weight: 600;
+    font-family: var(--font); cursor: pointer; transition: all .15s;
+    display: flex; align-items: center; gap: 6px;
+  }}
+  .date-tab:hover {{ border-color: var(--main); background: var(--main-soft); }}
+  .date-tab.active {{
+    background: linear-gradient(135deg, var(--main-dark), var(--main-2));
+    color: #fff; border-color: var(--main); box-shadow: 0 4px 12px rgba(220,38,38,.25);
+  }}
+  .date-tab-cnt {{
+    font-family: ui-monospace, monospace; font-size: 11px;
+    background: rgba(0,0,0,.06); padding: 1px 7px; border-radius: 99px; font-weight: 700;
+  }}
+  .date-tab.active .date-tab-cnt {{ background: rgba(255,255,255,.2); }}
   .search-bar {{ margin: 10px 0; }}
   .search-bar input {{
     width: 100%; padding: 8px 16px; border: 2px solid var(--line);
@@ -351,6 +390,13 @@ def build():
       {''.join(sidebar_items)}
     </aside>
     <main class="main-content">
+      <div class="date-tabs" id="dateTabs">
+        <button class="date-tab active" data-date="all">📅 全部</button>
+        {date_tabs_html}
+      </div>
+      <div class="search-bar">
+        <input type="text" id="searchBox" placeholder="🔍 搜索标题、信源、摘要..." oninput="doSearch()">
+      </div>
       {''.join(main_panels)}
     </main>
   </div>
@@ -359,15 +405,40 @@ def build():
 <script>
   (function() {{
     var colItems = document.querySelectorAll('.col-item');
+    var dateTabs = document.querySelectorAll('#dateTabs .date-tab');
+    var activeCat = 'all';
+    var activeDate = 'all';
+
+    function switchPanel() {{
+      var targetId;
+      if (activeDate !== 'all') {{
+        targetId = 'cat-panel-date-' + activeDate;
+      }} else {{
+        targetId = 'cat-panel-all';
+      }}
+      document.querySelectorAll('.cat-panel').forEach(function(p) {{ p.classList.remove('active'); }});
+      var panel = document.getElementById(targetId);
+      if (panel) panel.classList.add('active');
+      doSearch();
+    }}
+
+    // 栏目切换
     colItems.forEach(function(item) {{
       item.addEventListener('click', function() {{
         colItems.forEach(function(x) {{ x.classList.remove('active'); }});
         item.classList.add('active');
-        var cat = item.dataset.cat;
-        document.querySelectorAll('.cat-panel').forEach(function(p) {{ p.classList.remove('active'); }});
-        var panel = document.getElementById('cat-panel-' + (cat === 'all' ? 'all' : cat));
-        if (panel) panel.classList.add('active');
-        doSearch();
+        activeCat = item.dataset.cat;
+        switchPanel();
+      }});
+    }});
+
+    // 日期切换
+    dateTabs.forEach(function(tab) {{
+      tab.addEventListener('click', function() {{
+        dateTabs.forEach(function(t) {{ t.classList.remove('active'); }});
+        tab.classList.add('active');
+        activeDate = tab.dataset.date;
+        switchPanel();
       }});
     }});
 
@@ -377,31 +448,51 @@ def build():
       if (!activePanel) return;
       var cards = activePanel.querySelectorAll('.card');
       var headers = activePanel.querySelectorAll('.date-group-header');
-      var hasVisible = false;
+      // 筛选栏目
+      if (activeCat !== 'all') {{
+        cards.forEach(function(c) {{
+          var catEl = c.querySelector('.meta-cat');
+          var cat = catEl ? catEl.textContent.trim() : '';
+          if (!cat.includes(activeCat)) c.classList.add('hidden');
+          else c.classList.remove('hidden');
+        }});
+      }}
       if (!q) {{
         cards.forEach(function(c) {{ c.classList.remove('hidden'); }});
-        headers.forEach(function(h) {{ h.classList.remove('hidden'); }});
+        if (headers.length) headers.forEach(function(h) {{ h.classList.remove('hidden'); }});
+        // 重新 apply 栏目筛选
+        if (activeCat !== 'all') {{
+          cards.forEach(function(c) {{
+            var catEl = c.querySelector('.meta-cat');
+            var cat = catEl ? catEl.textContent.trim() : '';
+            if (!cat.includes(activeCat)) c.classList.add('hidden');
+          }});
+        }}
         return;
       }}
       cards.forEach(function(c) {{
         var t = (c.textContent || '').toLowerCase();
-        if (t.includes(q)) {{
-          c.classList.remove('hidden');
-          hasVisible = true;
-        }} else {{
-          c.classList.add('hidden');
+        if (t.includes(q)) c.classList.remove('hidden');
+        else c.classList.add('hidden');
+        // 同时筛选栏目
+        if (activeCat !== 'all' && !c.classList.contains('hidden')) {{
+          var catEl = c.querySelector('.meta-cat');
+          var cat = catEl ? catEl.textContent.trim() : '';
+          if (!cat.includes(activeCat)) c.classList.add('hidden');
         }}
       }});
       // 隐藏空日期分组
-      headers.forEach(function(h) {{
-        var next = h.nextElementSibling;
-        var anyVisible = false;
-        while (next && !next.classList.contains('date-group-header')) {{
-          if (!next.classList.contains('hidden')) anyVisible = true;
-          next = next.nextElementSibling;
-        }}
-        h.classList.toggle('hidden', !anyVisible);
-      }});
+      if (headers.length) {{
+        headers.forEach(function(h) {{
+          var next = h.nextElementSibling;
+          var anyVisible = false;
+          while (next && !next.classList.contains('date-group-header')) {{
+            if (!next.classList.contains('hidden')) anyVisible = true;
+            next = next.nextElementSibling;
+          }}
+          h.classList.toggle('hidden', !anyVisible);
+        }});
+      }}
     }};
   }})();
 </script>
