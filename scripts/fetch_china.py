@@ -47,11 +47,14 @@ MFA_DSRM = "https://www.mfa.gov.cn/web/wjdt_674879/dsrm_674893/"          # 大�
 MOFCOM_NEWS = "https://www.mofcom.gov.cn/xwfb/"                            # 商务部·新闻发布
 NDRC_NEWS = "https://www.ndrc.gov.cn/xwdt/"                                # 发改委·新闻动态
 CAC_NEWS = "https://www.cac.gov.cn/"                                       # 网信办·要闻
+# V5: 联合早报中文网 — 人事任免/中国政治动态权威海外信源
+ZAOBAO_CHINA = "https://www.zaobao.com/news/china"
 
 # 信源权威优先级（去重时保留优先级高的）
 SOURCE_PRIORITY = {
     "中国政府网·要闻": 1, "中国政府网·最新政策": 1, "央视新闻": 2, "人民日报": 3,
     "外交部": 2, "商务部": 3, "国家发改委": 3, "网信办": 3,
+    "联合早报": 4,
 }
 
 # ============ 领导人名单 ============
@@ -181,6 +184,15 @@ JUNK_KEYWORDS = [
     #   "学习习近平总书记关于..." → 外围学习活动，非元首动态
     #   （注意：fetch 阶段可能截断标题，缩短匹配词作为兜底）
     "学习习近平总书记关于", "学习习近平",
+    # V5: 过滤评论回顾类——非时事新闻
+    "人民情怀", "关切事", "专题片丨", "纪实丨", "系列述评",
+    "述评之一", "述评之二", "述评之三", "述评之四",
+    "思想理论品格", "理论品格",
+    "治国理政纪实", "新发展理念",
+    # V5.1: 评论/思想/综述类（非时事新闻）  
+    "经济思想", "党建思想", "外交思想", "法治思想", "生态文明思想",
+    "强军思想", "破浪前行", "行稳致远",
+    "夯实基础——习近平总书记引领",  # 综述评论标题
     #   地方微观服务（"个人身后金融事"）
     "身后金融事", "个人身后", "一站式查询系统",
     #   驻外大使拜会外国议长/出席学术活动（非重点国，不重要）
@@ -549,18 +561,30 @@ def fetch_mfa():
     return items
 
 
-# ==================== v4 新增：关注部委官网 ====================
+# ==================== v5 修复：部委官网 + 联合早报人事 ====================
 def fetch_buwei_sites():
-    """商务部 / 发改委 / 网信办 官网（通报/要闻/答记者问）"""
+    """商务部 / 发改委 / 网信办 官网（通报/要闻/答记者问）
+    v5: MOFCOM 被反爬(403)，改用中国政府网的商务部tag + 加更多 User-Agent 头
+    """
     items = []
     sites = [
-        ("商务部", MOFCOM_NEWS, "https://www.mofcom.gov.cn/xwfb", ("art", "html")),
+        # 商务部使用 http + 完整 UA 绕反爬
+        ("商务部", "http://www.mofcom.gov.cn/article/xwfb/", "http://www.mofcom.gov.cn/article/xwfb", ("shtml", "html")),
         ("国家发改委", NDRC_NEWS, "https://www.ndrc.gov.cn/xwdt", ("html",)),
         ("网信办", CAC_NEWS, "https://www.cac.gov.cn", ("shtml", "html", "htm")),
     ]
     for src, url, base, filters in sites:
         try:
-            h = fetch(url, headers={"Referer": "https://www.gov.cn/"})
+            # 商务部需要更强的浏览器头来绕反爬
+            extra_headers = {}
+            if 'mofcom' in url:
+                extra_headers = {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    "Referer": "http://www.mofcom.gov.cn/",
+                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                    "Accept-Language": "zh-CN,zh;q=0.9",
+                }
+            h = fetch(url, headers=extra_headers if extra_headers else {"Referer": "https://www.gov.cn/"})
             it = parse_mfa_list(h, base, src, url_filters=filters)
             items += it
             print(f"  ✅ {src}: 采纳 {len(it)} 条")
@@ -571,6 +595,24 @@ def fetch_buwei_sites():
     for it in items[:30]:
         if not it.get("summary"):
             it["summary"] = extract_summary_from_url(it["url"])
+    return items
+
+
+# ==================== v5 新增：联合早报中文网 ====================
+def fetch_zaobao():
+    """联合早报中文网——中国政治/人事任免动态"""
+    items = []
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+            "Referer": "https://www.zaobao.com/",
+        }
+        h = fetch(ZAOBAO_CHINA, headers=headers)
+        it = parse_mfa_list(h, "https://www.zaobao.com/news/china", "联合早报", url_filters=("story",))
+        items += it
+        print(f"  ✅ 联合早报·中国: 采纳 {len(it)} 条")
+    except Exception as e:
+        print(f"  ❌ 联合早报: {e}")
     return items
 
 
@@ -664,6 +706,7 @@ def main():
     all_items += fetch_rmrb()
     all_items += fetch_mfa()
     all_items += fetch_buwei_sites()
+    all_items += fetch_zaobao()
     all_items += fetch_wechat()
 
     # 跨信源去重：标题相似（规范化后）时保留权威优先级高的
