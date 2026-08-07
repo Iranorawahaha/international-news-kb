@@ -127,7 +127,8 @@ WEBFETCH_SOURCES = [
     {
         'name': '路透社',
         'url': 'https://www.reuters.com/world/',
-        'prompt': '提取今天（2026年7月31日）的国际新闻，重点关注：1.中美关系 2.地缘政治 3.AI科技 4.经贸制裁。列出最重要的8-10条新闻，每条必须包含：\n1) **英文原标题**（English title，必须是文章的原始英文标题）\n2) **中文翻译标题**（简短翻译）\n3) 2-3句话摘要\n4) 关键词（用逗号分隔）\n5) **完整的原文链接URL**（https://开头的完整文章地址）\n⚠️ 格式要求：输出时每条新闻的标题格式为"English Title 中文翻译"，例如："Ukraine\'s envoy to US: We need missiles 乌克兰驻美大使紧急呼吁：我们需要导弹"\n⚠️ URL是必填项，不能省略。用中文输出。',
+        'prompt': '提取今天（2026年7月31日）的国际新闻，重点关注：1.中美关系 2.地缘政治 3.AI科技 4.经贸制裁。列出最重要的8-10条新闻，每条必须包含：\n1) **英文原标题**（English title，必须是文章的原始英文标题）\n2) **中文翻译标题**（简短翻译）\n3) 2-3句话摘要\n4) 关键词（用逗号分隔）\n5) **完整的原文链接URL**（https://开头的完整文章地址）\n⚠️ 格式要求：输出时每条新闻的标题格式为"English Title 中文翻译"，例如："Ukraine\'s envoy to US: We need missiles 乌克兰驻美大使紧急呼吁：我们需要导弹"\n⚠️ URL是必填项，不能省略。
+⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 1,  # 最高优先级
         'required': True,  # 🔴 必选
         'expected_count': 8,
@@ -145,7 +146,7 @@ WEBFETCH_SOURCES = [
     {
         'name': '南华早报',
         'url': 'https://www.scmp.com/news/china',
-        'prompt': '提取今天关于中国和国际的重要新闻，重点关注：1.中美关系 2.中国外交 3.亚太局势。列出6条新闻，每条包含：\n1) **英文原标题**（SCMP文章原始英文标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.scmp.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL是强制要求。用中文输出。',
+        'prompt': '提取今天关于中国和国际的重要新闻，重点关注：1.中美关系 2.中国外交 3.亚太局势。列出6条新闻，每条包含：\n1) **英文原标题**（SCMP文章原始英文标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.scmp.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL是强制要求。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可，不需要完整全文；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 3,
         'required': True,  # 🔴 必选
         'expected_count': 6,
@@ -154,7 +155,7 @@ WEBFETCH_SOURCES = [
     {
         'name': '卫报',
         'url': 'https://www.theguardian.com/international',
-        'prompt': '提取今天最重要的国际新闻，重点关注：1.全球政治 2.气候变化 3.经济危机。列出4-5条新闻，每条包含：\n1) **英文原标题**（The Guardian原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.theguardian.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'prompt': '提取今天最重要的国际新闻，重点关注：1.全球政治 2.气候变化 3.经济危机。列出4-5条新闻，每条包含：\n1) **英文原标题**（The Guardian原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.theguardian.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 4,
         'required': True,  # 🔴 必选
         'expected_count': 5,
@@ -164,7 +165,7 @@ WEBFETCH_SOURCES = [
     {
         'name': 'CNN',
         'url': 'https://www.cnn.com/world',
-        'prompt': '提取今天最重要的国际新闻，重点关注：1.美国政治 2.全球冲突 3.经济动态。列出5-6条新闻，每条必须包含：\n1) **英文原标题**（CNN原始标题）\n2) **中文翻译标题**\n3) 简要摘要\n4) 关键词\n5) **完整URL**（https://www.cnn.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'prompt': '提取今天最重要的国际新闻，重点关注：1.美国政治 2.全球冲突 3.经济动态。列出5-6条新闻，每条必须包含：\n1) **英文原标题**（CNN原始标题）\n2) **中文翻译标题**\n3) 简要摘要\n4) 关键词\n5) **完整URL**（https://www.cnn.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 5,
         'required': True,  # 🔴 必选
         'expected_count': 5,
@@ -173,7 +174,7 @@ WEBFETCH_SOURCES = [
     {
         'name': '纽约时报',
         'url': 'https://www.nytimes.com/world',
-        'prompt': '提取今天最重要的国际新闻和分析报道，重点关注：1.中美关系深度分析 2.地缘政治 3.全球经济。列出4-5条高质量新闻，每条包含：\n1) **英文原标题**（NYT原始标题）\n2) **中文翻译标题**\n3) 详细摘要\n4) 关键词\n5) **完整URL**（https://www.nytimes.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'prompt': '提取今天最重要的国际新闻和分析报道，重点关注：1.中美关系深度分析 2.地缘政治 3.全球经济。列出4-5条高质量新闻，每条包含：\n1) **英文原标题**（NYT原始标题）\n2) **中文翻译标题**\n3) 详细摘要\n4) 关键词\n5) **完整URL**（https://www.nytimes.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 6,
         'required': True,  # 🔴 必选
         'expected_count': 4,
@@ -182,7 +183,7 @@ WEBFETCH_SOURCES = [
     {
         'name': '华尔街日报',
         'url': 'https://www.wsj.com/world',
-        'prompt': '提取今天最重要的全球商业、政治和经济新闻，重点关注：1.中美贸易 2.全球经济 3.资本市场。列出4-5条高质量新闻，每条包含：\n1) **英文原标题**（WSJ原始标题）\n2) **中文翻译标题**\n3) 详细摘要\n4) 关键词\n5) **完整URL**（https://www.wsj.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'prompt': '提取今天最重要的全球商业、政治和经济新闻，重点关注：1.中美贸易 2.全球经济 3.资本市场。列出4-5条高质量新闻，每条包含：\n1) **英文原标题**（WSJ原始标题）\n2) **中文翻译标题**\n3) 详细摘要\n4) 关键词\n5) **完整URL**（https://www.wsj.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 7,
         'required': True,  # 🔴 必选 (V1.2.2新增)
         'expected_count': 4,
@@ -192,7 +193,7 @@ WEBFETCH_SOURCES = [
     {
         'name': '半岛电视台',
         'url': 'https://www.aljazeera.com/news',
-        'prompt': '提取今天关于中东、亚洲、非洲和发展中国家的重要新闻，重点关注：1.巴以冲突 2.能源政治 3.全球南方视角。列出4-5条新闻，每条包含：\n1) **英文原标题**（Al Jazeera原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.aljazeera.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'prompt': '提取今天关于中东、亚洲、非洲和发展中国家的重要新闻，重点关注：1.巴以冲突 2.能源政治 3.全球南方视角。列出4-5条新闻，每条包含：\n1) **英文原标题**（Al Jazeera原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.aljazeera.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 8,
         'required': True,
         'expected_count': 4,
@@ -201,7 +202,7 @@ WEBFETCH_SOURCES = [
     {
         'name': 'Politico',
         'url': 'https://www.politico.com/world',
-        'prompt': '提取今天关于全球政治、外交政策、贸易谈判的重要新闻，重点关注：1.欧美关系 2.全球贸易政策 3.国际外交动态。列出3-4条新闻，每条包含：\n1) **英文原标题**（Politico原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.politico.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'prompt': '提取今天关于全球政治、外交政策、贸易谈判的重要新闻，重点关注：1.欧美关系 2.全球贸易政策 3.国际外交动态。列出3-4条新闻，每条包含：\n1) **英文原标题**（Politico原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.politico.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 9,
         'required': True,
         'expected_count': 3,
@@ -210,7 +211,7 @@ WEBFETCH_SOURCES = [
     {
         'name': '华盛顿邮报',
         'url': 'https://www.washingtonpost.com/world',
-        'prompt': '提取今天最重要的国际新闻，重点关注：1.美国外交政策 2.民主与治理 3.全球危机。列出3-4条新闻，每条包含：\n1) **英文原标题**（Washington Post原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.washingtonpost.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'prompt': '提取今天最重要的国际新闻，重点关注：1.美国外交政策 2.民主与治理 3.全球危机。列出3-4条新闻，每条包含：\n1) **英文原标题**（Washington Post原始标题）\n2) **中文翻译标题**\n3) 摘要\n4) 关键词\n5) **完整URL**（https://www.washingtonpost.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 10,
         'required': True,
         'expected_count': 3,
@@ -219,7 +220,7 @@ WEBFETCH_SOURCES = [
     {
         'name': '美联社',
         'url': 'https://apnews.com/world-news',
-        'prompt': '提取今天全球重大突发新闻和重要事件，重点关注：1. Breaking news 2. 重大冲突 3. 自然灾害。列出4-5条快讯式新闻，每条包含：\n1) **英文原标题**（AP News原始标题）\n2) **中文翻译标题**\n3) 简要摘要\n4) 关键词\n5) **完整URL**（https://apnews.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。用中文输出。',
+        'prompt': '提取今天全球重大突发新闻和重要事件，重点关注：1. Breaking news 2. 重大冲突 3. 自然灾害。列出4-5条快讯式新闻，每条包含：\n1) **英文原标题**（AP News原始标题）\n2) **中文翻译标题**\n3) 简要摘要\n4) 关键词\n5) **完整URL**（https://apnews.com/...）\n⚠️ 标题格式："English Title 中文翻译"\n⚠️ URL必填。\n⚠️ 新增要求：同时输出每条新闻的 **body_en**（英文原文正文前1500字，取文章开篇内容即可；如无法获取正文则输出空字符串）。用中文输出。',
         'priority': 11,
         'required': True,
         'expected_count': 4,

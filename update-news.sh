@@ -480,9 +480,10 @@ if all_today_articles:
     sorted_articles = sort_by_importance(unique_articles)
     
     data['archive'][today] = sorted_articles
-    
-    summit_count = sum(1 for a in sorted_articles if a.get('is_summit_level'))
-    print(f"     ✅ 排序完成: {len(sorted_articles)} 条 ({summit_count} ⭐元首级)")
+
+    # V2.0: 高优先级计数（替代旧版元首级）
+    _high_priority = sum(1 for a in sorted_articles if (a.get('is_official') or a.get('is_summit_level') or (a.get('priority_score') or 0) >= 88))
+    print(f"     ✅ 排序完成: {len(sorted_articles)} 条 (高优先级 {_high_priority} 条)")
 
     # 真实报道日期重分配：URL 含更早日期（如 reuters/washingtonpost/news.cn）且该日期
     # 在保留窗口内 → 移到真实报道日期，避免 8/3 版面混入 7/31 已报道的旧闻
@@ -518,6 +519,35 @@ if cleaned_count > 0:
 else:
     print(f"     ✅ 无需清理")
 
+# V1.7: 重新跑六大栏目分类器（WebFetch LLM 用了旧标签 "热点/泛涉华/经济金融"，
+# 俄乌冲突需归"地区热点"——手动旧分类会失效，统一用分类器重置）
+import os as _os_rc, sys as _sys_rc
+_proj_dir = _os_rc.environ.get('PROJECT_DIR') or _os_rc.getcwd()
+if _sys_rc.path[0] != _proj_dir:
+    _sys_rc.path.insert(0, _proj_dir)
+try:
+    from scripts.classify_columns import classify_column as _classify_rc
+    _rc_count = 0
+    _rc_ru_ua = 0
+    for _rc_dt, _rc_as in data['archive'].items():
+        for _rc_a in _rc_as:
+            _rc_title = _rc_a.get('title_zh') or _rc_a.get('title', '') or ''
+            _rc_title_en = _rc_a.get('title_en', '') or ''
+            _rc_summary = _rc_a.get('summary_zh') or _rc_a.get('summary', '') or ''
+            _rc_new = _classify_rc(_rc_title, _rc_title_en, _rc_summary)
+            if _rc_a.get('column') != _rc_new:
+                _rc_a['column'] = _rc_new
+                _rc_count += 1
+                _rc_is_ru_ua = any(k in _rc_title+_rc_title_en for k in ['俄乌','乌克兰','Ukraine','Russia','泽连斯基','Zelensky','普京','Putin'])
+                if _rc_new == '地区热点' and _rc_is_ru_ua:
+                    _rc_ru_ua += 1
+    if _rc_count:
+        print(f"  🔁 V1.7 重新分类: {_rc_count} 条已重置为六栏标准（其中俄乌相关 {_rc_ru_ua} 条归入地区热点）")
+    else:
+        print(f"  ✅ V1.7 重新分类: 所有条目已符合六栏标准")
+except Exception as _rc_e:
+    print(f"  ⚠️ V1.7 重新分类失败: {_rc_e}")
+
 update_stats(data)
 data['lastUpdated'] = datetime.now().strftime('%Y-%m-%d %H:%M')
 
@@ -536,17 +566,20 @@ try:
         for _fit in _fits:
             _ff_idx[_ff_norm(_fit.get('url'))] = (_fdt, _fit)
     _ff_added, _ff_upgraded = 0, 0
+    _cutoff_str = (datetime.now() - timedelta(days=RETENTION_DAYS)).strftime('%Y-%m-%d')
     for _f_src in _us:
         _furl = _ff_norm(_f_src.get('url'))
         if not _furl: continue
         _ftarget = _f_src.get('date', '')
         if not _ftarget: continue
+        # V1.5.7: 终极防线也严格按 7 天窗口过滤（防止 5-18 等超期数据被加回）
+        if _ftarget < _cutoff_str: continue
         if _ftarget not in data['archive']:
             data['archive'][_ftarget] = []
         if _furl in _ff_idx:
             _fodt, _foart = _ff_idx[_furl]
             if _f_src.get('is_official') or _f_src.get('title_zh') or _f_src.get('summary_zh'):
-                for _fk in ('title','title_en','title_zh','summary','summary_en','summary_zh','date','source','category','column','priority_score','is_summit_level','importance','keywords','url','is_official','collectedAt','collection_method'):
+                for _fk in ('title','title_en','title_zh','summary','summary_en','summary_zh','date','source','category','column','priority_score','is_summit_level','importance','keywords','url','is_official','collectedAt','collection_method','body_en'):
                     if _fk in _f_src:
                         _foart[_fk] = _f_src[_fk]
                 if _fodt != _ftarget:
@@ -578,9 +611,8 @@ if data['dates']:
     print(f"\n   📅 日期分布:")
     for d in data['dates']:
         count = len(data['archive'][d])
-        summit = sum(1 for a in data['archive'][d] if a.get('is_summit_level'))
-        high_priority = sum(1 for a in data['archive'][d] if (a.get('priority_score') or 0) >= 90)
-        print(f"     • {d}: {count} 条 ({summit} ⭐ | {high_priority} 🔴高重要)")
+        high_priority = sum(1 for a in data['archive'][d] if (a.get('is_official') or a.get('is_summit_level') or (a.get('priority_score') or 0) >= 88))
+        print(f"     • {d}: {count} 条 (高优先级 {high_priority} 条)")
 
 INTEGRATE_V121
 
@@ -675,13 +707,25 @@ for date_str in dates:
 total_count = len(all_articles)
 sources = set(a.get('source','未知') for a in all_articles)
 categories = set(a.get('category','其他') for a in all_articles)
-summit_count = sum(1 for a in all_articles if a.get('is_summit_level'))
+# V2.0: 高优先级要闻数（替代旧版"元首级"统计）—— 涉华/对华/中美元首/官方信源 全部计入
+# 判定：priority_score >= 88 或 is_summit_level=True 或 is_official=True
+_high_keys = ['中国', '习近平', '中美', '中俄', '中欧', '台海', '涉华', '对华',
+              'China', 'Chinese', 'Beijing', 'TikTok', '华为', 'Huawei',
+              'USTR', '关税', '制裁', '实体清单', '出口管制', 'DeepSeek', 'Qwen',
+              '特朗普', 'Trump', '鲁比奥', 'Rubio', '万斯', 'Vance', '贝森特', 'Bessent']
+def _is_high_priority(a):
+    if a.get('is_official'): return True
+    if a.get('is_summit_level'): return True
+    if (a.get('priority_score') or 0) >= 88: return True
+    text = (a.get('title_zh','') or a.get('title','') or '') + ' ' + (a.get('title_en','') or '')
+    return any(k in text for k in _high_keys)
+high_count = sum(1 for a in all_articles if _is_high_priority(a))
 
 # V1.5: 顶部日期表头按钮（横向）
 tabs_html = '<button class="date-btn active" data-date="all">\U0001f4c5 全部日期（%d）</button>' % total_count
 for d in dates:
     count = len(archive.get(d, []))
-    tabs_html += '<button class="date-btn" data-date="%s">%s（%d）</button>' % (d, d.replace('2026-', '8'), count)
+    tabs_html += '<button class="date-btn" data-date="%s">%s（%d）</button>' % (d, d.replace('2026-', '').replace('-', '/'), count)
 
 # 六大栏目统计（用于栏目 tab）
 COLUMN_ORDER = ["中国", "美国", "欧洲", "地区热点", "国际会议", "其他"]
@@ -691,12 +735,15 @@ for _d, _arts in archive.items():
     for _a in _arts:
         _col = _a.get('column', '其他')
         column_counts[_col] = column_counts.get(_col, 0) + 1
-# V1.5: 左侧栏目侧边栏列表（悬浮 sticky）
-column_tabs_html = '<button class="col-item active" data-column="all"><span class="ic">\U0001f4cb</span><span class="nm">全部</span><span class="cnt">%d</span></button>' % total_count
+# V1.5.6: 左侧栏目侧边栏列表（当日新增数量）
+_today_str = dates[0] if dates else ''
+_today_archive = archive.get(_today_str, [])
+_all_today_count = len(_today_archive)
+column_tabs_html = '<button class="col-item active" data-column="all"><span class="ic">📋</span><span class="nm">全部</span><span class="cnt">新增%d</span></button>' % _all_today_count
 for _c in COLUMN_ORDER:
-    _icon = COLUMN_ICONS.get(_c, '\U0001f4cc')
-    _cnt = column_counts.get(_c, 0)
-    column_tabs_html += '<button class="col-item" data-column="%s"><span class="ic">%s</span><span class="nm">%s</span><span class="cnt">%d</span></button>' % (_c, _icon, _c, _cnt)
+    _icon = COLUMN_ICONS.get(_c, '📌')
+    _today_cnt = sum(1 for _a in _today_archive if _a.get('column') == _c)
+    column_tabs_html += '<button class="col-item" data-column="%s"><span class="ic">%s</span><span class="nm">%s</span><span class="cnt">新增%d</span></button>' % (_c, _icon, _c, _today_cnt)
 
 print(f"📊 生成V1.2 HTML: {total_count}条新闻, {len(dates)}天, 栏目: {column_counts}")
 
@@ -722,7 +769,7 @@ html_content = html_content.replace('__TOTAL_COUNT__', str(total_count))
 html_content = html_content.replace('__TODAY_COUNT__', str(_today_count))
 html_content = html_content.replace('__SOURCE_COUNT__', str(len(sources)))
 html_content = html_content.replace('__CATEGORY_COUNT__', str(len(categories)))
-html_content = html_content.replace('__SUMMIT_COUNT__', str(summit_count))
+html_content = html_content.replace('__HIGH_COUNT__', str(high_count))
 html_content = html_content.replace('__DATE_COUNT__', str(stats.get('dateCount', len(dates))))
 html_content = html_content.replace('__COLUMN_SIDEBAR__', column_tabs_html)
 html_content = html_content.replace('__DATE_HEAD_BUTTONS__', tabs_html)
@@ -736,7 +783,7 @@ with open(OUTPUT_PATH_ROOT,'w',encoding='utf-8') as f: f.write(html_content)
 print(f"✅ V1.4 HTML已生成:")
 print(f"   📁 gh-pages/international-news.html")
 print(f"   📁 international-news.html (根目录)")
-print(f"   📊 {total_count}条新闻 | {len(dates)}天存档 | {summit_count}条元首级")
+print(f"   📊 {total_count}条新闻 | {len(dates)}天存档 | {high_count}条高优先级")
 GENERATE_HTML_V12
 
 # V1.3.2: 生成后立即 JS 语法预检（独立脚本，防 <script> 语法错误导致页面空白）
@@ -823,7 +870,7 @@ git commit -m "📰 V1.2 新闻更新 - $TODAY $TIME (${FINAL_COUNT}条)
 • 总新闻数: ${FINAL_COUNT} 条
 • 存档天数: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(len(d.get('dates',[])))") 天
 • 信源覆盖: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(len(set(x.get('source','') for v in d.get('archive',{}).values() for x in v)))") 个
-• 元首级新闻: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(1 for v in d.get('archive',{}).values() for x in v if x.get('is_summit_level')))") 条
+• 高优先级新闻: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(1 for v in d.get('archive',{}).values() for x in v if x.get('is_official') or x.get('is_summit_level') or (x.get('priority_score') or 0) >= 88))") 条
 
 ✨ V1.2 新特性:
 ✅ 7天数据存档（不再清空历史）
@@ -831,7 +878,7 @@ git commit -m "📰 V1.2 新闻更新 - $TODAY $TIME (${FINAL_COUNT}条)
 ✅ 按日期分组的数据结构
 ✅ 自动清理超过7天的旧数据
 ✅ 飞书Base永久存档（增量同步）⭐
-✅ 保留V1.1所有特性（双语/5级分类/元首级/V1.1UI）
+✅ V2.0 体系：高/中/低 三档重要性 + 俄乌归地区热点 + 自动重新分类
 
 更新时间: $(date '+%Y-%m-%d %H:%M:%S')
 脚本版本: V1.2 Final (数据存档版)"

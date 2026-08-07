@@ -372,7 +372,7 @@ body{font-family:var(--font);min-height:100dvh;display:flex;flex-direction:colum
     <label>外媒报道链接</label>
     <div class="url-row">
       <input type="url" id="urlInput" placeholder="粘贴外媒报道链接（SCMP / WSJ / NYT / BBC...）" autofocus />
-      <button id="goBtn" onclick="startPipeline()">生成双语长截图</button>
+      <button id="goBtn" onclick="handleGo()">生成双语长截图</button>
     </div>
     <p class="hint">处理约需 30-60 秒，请耐心等待</p>
   </div>
@@ -816,13 +816,177 @@ async function copyImage(){
   }catch(e){alert('复制失败，请使用下载按钮');}
 }
 
-document.getElementById('urlInput').addEventListener('keydown',e=>{if(e.key==='Enter')startPipeline();});
+document.getElementById('urlInput').addEventListener('keydown',e=>{if(e.key==='Enter')handleGo();});
 
 (function(){
-  const params=new URLSearchParams(window.location.search);
-  const url=params.get('url');
-  if(url){document.getElementById('urlInput').value=url;startPipeline();}
+  // V3.0: 从 localStorage 读取全文数据（由看板 📸 按钮写入）
+  const raw = localStorage.getItem('_ira_bilingual_shot');
+  let url, titleEn, titleZh, summary, summaryZh, bodyEn, source;
+  
+  if (raw) {
+    try {
+      const d = JSON.parse(raw);
+      url = d.url || '';
+      titleEn = d.title_en || '';
+      titleZh = d.title_zh || '';
+      summary = d.summary || '';
+      summaryZh = d.summary_zh || '';
+      bodyEn = d.body_en || '';
+      source = d.source || '';
+    } catch(e) {}
+    // 清理 localStorage（用过即删）
+    localStorage.removeItem('_ira_bilingual_shot');
+  }
+  
+  // 如果 localStorage 没有，试试 URL 参数（旧版兼容）
+  if (!url) {
+    const params = new URLSearchParams(window.location.search);
+    url = params.get('url') || '';
+    titleEn = params.get('title_en') || '';
+    titleZh = params.get('title_zh') || '';
+    summary = params.get('summary') || '';
+    summaryZh = params.get('summary_zh') || '';
+    source = params.get('source') || '';
+  }
+  
+  _PARAMS_DATA = {url, titleEn, titleZh, summary, summaryZh, bodyEn, source};
+  
+  if (url) {
+    document.getElementById('urlInput').value = url;
+    if (summary || summaryZh || bodyEn || titleEn || titleZh) {
+      startFromData(_PARAMS_DATA);
+    } else {
+      document.getElementById('error').classList.add('active');
+      document.getElementById('error').innerHTML = '⚠️ 请使用国际新闻看板中的「📸 双语」按钮打开';
+      document.getElementById('manualUrl').value = url;
+      document.getElementById('manualFallback').classList.add('active');
+    }
+  }
 })();
+
+// ===================== 数据驱动模式（V3.0，不需要代理） =====================
+// 全局缓存：页面加载时从 URL 参数读取的数据
+let _PARAMS_DATA = null;
+
+function handleGo(){
+  const url=document.getElementById('urlInput').value.trim();
+  if(!url)return;
+  // 如果 URL 参数中有预先传入的摘要数据 → 直接渲染
+  if(_PARAMS_DATA&&_PARAMS_DATA.url===url){
+    startFromData(_PARAMS_DATA);
+    return;
+  }
+  // 否则提示用户使用看板中的 📸 按钮
+  showError('请使用国际新闻看板中的「📸 双语」按钮打开此页面（需要附带文章摘要数据）');
+}
+
+async function startFromData(data){
+  resetUI();initSteps();
+  document.getElementById('progress').classList.add('active');
+  document.getElementById('goBtn').disabled=true;
+  document.getElementById('goBtn').textContent='生成中…';
+  document.getElementById('error').classList.remove('active');
+
+  const t0=Date.now();
+  try{
+    stepCurrent(1);
+    stepDone(1); // 数据已就绪
+
+    stepCurrent(2);
+    stepDone(2); // 无需翻译
+
+    stepCurrent(3);
+    // 构建双语卡片
+    const card=buildCardFromData(data);
+    const area=document.getElementById('renderArea');
+    area.innerHTML=card;
+    stepDone(3);
+
+    stepCurrent(4);
+    stepCurrent(5);
+    await new Promise(r=>setTimeout(r,800));
+    const canvas=await html2canvas(area,{scale:2,useCORS:true,allowTaint:true,backgroundColor:'#fbfaf7',logging:false});
+    area.innerHTML='';
+    const dataUrl=canvas.toDataURL('image/png');
+    stepDone(4);stepDone(5);
+
+    document.getElementById('previewImg').src=dataUrl;
+    document.getElementById('result').classList.add('active');
+    generatedImage=dataUrl;
+
+    const elapsed=((Date.now()-t0)/1000).toFixed(1);
+    document.getElementById('goBtn').textContent='完成（'+elapsed+'s）';
+  }catch(err){
+    console.error(err);
+    showError(err.message||'生成失败');
+  }finally{
+    document.getElementById('goBtn').disabled=false;
+  }
+}
+
+function esc(s){return(String(s||'')).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function buildCardFromData(d){
+  const titleEn = esc(d.titleEn);
+  const titleZh = esc(d.titleZh);
+  const sum = esc((d.summary||'').substring(0,600));
+  const sumZh = esc((d.summaryZh||'').substring(0,600));
+  const body = esc((d.bodyEn||'').substring(0,8000)); // 全文
+  const src = esc(d.source||'');
+  const u = esc(d.url||'');
+
+  let bodyHtml = '';
+  if (body && body.length > 50) {
+    // 将全文按段落拆分
+    const paras = body.split(/\n\n+/).filter(p => p.trim().length > 20);
+    bodyHtml = '<div style="margin-bottom:18px;background:#f1f5f9;border-radius:10px;padding:20px 22px;">'+
+      '<div style="font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">'+
+      '📄 原文正文 (Full Text)</div>'+
+      paras.map(p => '<p style="font-size:13px;color:#334155;line-height:1.9;margin-bottom:12px;">'+esc(p.trim())+'</p>').join('')+
+    '</div>';
+  }
+
+  return ''+
+  '<div style="width:720px;padding:32px 36px;font-family:-apple-system,BlinkMacSystemFont,\'PingFang SC\',\'Microsoft YaHei\',sans-serif;background:#fbfaf7;">'+
+    '<div style="background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;border-radius:14px;padding:24px 28px;margin-bottom:20px;">'+
+      '<div style="font-size:13px;opacity:0.85;margin-bottom:4px;">🌍 国际新闻看板 · 双语速览</div>'+
+      '<div style="font-size:13px;opacity:0.7;">Ira Information Dashboard · Bilingual Brief</div>'+
+    '</div>'+
+    
+    '<div style="margin-bottom:16px;">'+
+      '<div style="font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Original Headline</div>'+
+      '<div style="font-size:17px;font-weight:700;color:#1e293b;line-height:1.5;">'+(titleEn||titleZh)+'</div>'+
+    '</div>'+
+    
+    (titleZh&&titleEn?(
+    '<div style="margin-bottom:16px;">'+
+      '<div style="font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">中文标题</div>'+
+      '<div style="font-size:17px;font-weight:700;color:#1e293b;line-height:1.5;">'+titleZh+'</div>'+
+    '</div>'):'')+
+
+    (sumZh?(
+    '<div style="margin-bottom:14px;background:#f1f5f9;border-radius:10px;padding:16px 18px;">'+
+      '<div style="font-size:12px;color:#64748b;margin-bottom:6px;">📝 中文摘要</div>'+
+      '<div style="font-size:14px;color:#334155;line-height:1.85;">'+sumZh+'</div>'+
+    '</div>'):'')+
+
+    (sum?(
+    '<div style="margin-bottom:14px;background:#f1f5f9;border-radius:10px;padding:16px 18px;">'+
+      '<div style="font-size:12px;color:#64748b;margin-bottom:6px;">📝 English Summary</div>'+
+      '<div style="font-size:13px;color:#475569;line-height:1.85;font-style:italic;">'+sum+'</div>'+
+    '</div>'):'')+
+
+    // 全文正文（主菜）
+    bodyHtml +
+
+    '<div style="border-top:1px solid #e2e8f0;padding-top:14px;margin-top:14px;display:flex;justify-content:space-between;align-items:center;">'+
+      '<div style="font-size:12px;color:#94a3b8;">'+(src?'📰 '+src:'')+'</div>'+
+      '<div style="font-size:11px;color:#94a3b8;">'+u.substring(0,60)+'...</div>'+
+    '</div>'+
+
+    '<div style="text-align:center;margin-top:20px;font-size:11px;color:#cbd5e1;letter-spacing:0.5px;">仅供学习交流 · Powered by Ira 信息看板</div>'+
+  '</div>';
+}
 </script>
 </body>
 </html>
