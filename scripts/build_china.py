@@ -156,35 +156,35 @@ def build():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>国内新闻看板 · 中国国内重要政治动向（近 7 天）</title>
+<title>国内新闻看板 · Ira 信息看板</title>
 <style>
   :root {{
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-    --bg: #f4f5f7;
-    --bg-soft: #f8f9fb;
+    --bg: #fdf2f2;
+    --bg-soft: #fef8f8;
     --panel: #fff;
-    --line: #e4e7ee;
-    --line-soft: #f0f2f6;
+    --line: #f5d0d0;
+    --line-soft: #fce8e8;
     --ink: #1c2434;
     --muted: #64707f;
     --muted-soft: #8a96a8;
-    --main: #1e40af;
-    --main-dark: #1e3a8a;
-    --main-2: #2563eb;
-    --main-soft: #eff4ff;
-    --blue-grad-1: #1e3a8a;
-    --blue-grad-2: #1e40af;
-    --blue-grad-3: #2563eb;
-    --today: #fbbf24;
-    --today-bg: #fef3c7;
-    --today-text: #92400e;
+    --main: #dc2626;
+    --main-dark: #991b1b;
+    --main-2: #ef4444;
+    --main-soft: #fef2f2;
+    --red-grad-1: #991b1b;
+    --red-grad-2: #b91c1c;
+    --red-grad-3: #dc2626;
+    --today: #dc2626;
+    --today-bg: #fef2f2;
+    --today-text: #991b1b;
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{ font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.65; }}
   .wrap {{ max-width: 1280px; margin: 0 auto; padding: 16px 16px 60px; }}
 
-  /* 顶栏 */
-  header.hero {{ background: linear-gradient(135deg, var(--blue-grad-1) 0%, var(--blue-grad-2) 55%, var(--blue-grad-3) 100%); color: #fff; border-radius: 14px; padding: 22px 28px 18px; box-shadow: 0 8px 22px rgba(30,58,138,.18); position: relative; overflow: hidden; }}
+  /* 顶栏 — 红色 */
+  header.hero {{ background: linear-gradient(135deg, var(--red-grad-1) 0%, var(--red-grad-2) 55%, var(--red-grad-3) 100%); color: #fff; border-radius: 14px; padding: 22px 28px 18px; box-shadow: 0 8px 22px rgba(153,27,27,.25); position: relative; overflow: hidden; }}
   header.hero::after {{ content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,.06); }}
   .hero-back {{ display: flex; align-items: center; gap: 8px; font-size: 12.5px; margin-bottom: 12px; position: relative; z-index: 1; flex-wrap: wrap; }}
   .hero-back a {{ color: #fff; text-decoration: none; background: rgba(255,255,255,.16); padding: 4px 12px; border-radius: 999px; font-weight: 600; transition: background .15s; }}
@@ -192,153 +192,111 @@ def build():
   .hero-back-sep {{ opacity: .6; }}
   .hero-back-cur {{ background: rgba(255,255,255,.1); padding: 4px 12px; border-radius: 999px; }}
   .hero h1 {{ font-size: 21px; font-weight: 700; letter-spacing: .5px; }}
-  .hero .sub {{ font-size: 12.5px; opacity: .88; margin-top: 5px; }}
   .hero .hero-meta {{ display: flex; gap: 10px; margin-top: 13px; flex-wrap: wrap; font-size: 12px; position: relative; z-index: 1; }}
   .hero .hero-meta span {{ background: rgba(255,255,255,.15); padding: 3px 11px; border-radius: 999px; }}
 
-  /* 刷新条（绿）+ KPI 网格 */
-  .refresh-strip {{ background: #e8f7ee; border: 1px solid #bfe6cd; color: #1d7a46; border-radius: 10px; padding: 9px 16px; font-size: 12.5px; margin: 14px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
-  .rs-dot {{ width: 8px; height: 8px; border-radius: 50%; background: #22a35e; box-shadow: 0 0 0 3px rgba(34,163,94,.18); }}
+  /* 搜索框 */
+  .search-bar {{ margin: 10px 0; }}
+  .search-bar input {{
+    width: 100%; padding: 8px 16px; border: 2px solid var(--line);
+    border-radius: 10px; font-size: 14px; font-family: var(--font);
+    outline: none; transition: border-color .15s;
+  }}
+  .search-bar input:focus {{ border-color: var(--main); }}
 
+  /* 刷新条 */
+  .refresh-strip {{ background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; border-radius: 10px; padding: 9px 16px; font-size: 12.5px; margin: 14px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
+  .rs-dot {{ width: 8px; height: 8px; border-radius: 50%; background: #dc2626; box-shadow: 0 0 0 3px rgba(220,38,38,.18); }}
+
+  /* KPI */
   .kpi-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }}
   .kpi-card {{ background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }}
   .kpi-num {{ font-size: 24px; font-weight: 800; }}
   .kpi-main .kpi-num {{ color: var(--main); }}
   .kpi-label {{ font-size: 11.5px; color: var(--muted); margin-top: 2px; }}
 
-  /* ============== 主布局：sidebar + content ============== */
+  /* 主布局 */
   .layout {{ display: grid; grid-template-columns: 240px 1fr; gap: 16px; align-items: start; }}
-
-  /* 左侧 sidebar（sticky 悬浮） */
   .sidebar {{
-    position: sticky;
-    top: 16px;
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 10px;
-    max-height: calc(100vh - 32px);
-    overflow-y: auto;
-    box-shadow: 0 4px 14px rgba(28,36,52,.05);
+    position: sticky; top: 16px; background: var(--panel);
+    border: 1px solid var(--line); border-radius: 12px; padding: 10px;
+    max-height: calc(100vh - 32px); overflow-y: auto;
+    box-shadow: 0 4px 14px rgba(153,27,27,.08);
   }}
   .sidebar-title {{ font-size: 11px; font-weight: 700; letter-spacing: 1.2px; color: var(--muted-soft); text-transform: uppercase; padding: 8px 10px 10px; display: flex; align-items: center; gap: 6px; }}
   .sidebar-title::after {{ content: ""; flex: 1; height: 1px; background: var(--line-soft); }}
   .col-item {{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 4px;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--ink);
-    font-size: 13.5px;
-    font-weight: 600;
-    font-family: inherit;
-    cursor: pointer;
-    transition: all .15s ease-out;
+    display: flex; align-items: center; gap: 10px; width: 100%;
+    padding: 10px 12px; margin-bottom: 4px; border-radius: 10px;
+    border: 1px solid transparent; background: transparent;
+    color: var(--ink); font-size: 13.5px; font-weight: 600;
+    font-family: inherit; cursor: pointer; transition: all .15s ease-out;
     text-align: left;
   }}
   .col-item:hover {{ background: var(--main-soft); color: var(--main); border-color: var(--main-soft); }}
   .col-item:active {{ transform: scale(0.98); }}
   .col-item.active {{
     background: linear-gradient(135deg, var(--main-dark), var(--main-2));
-    color: #fff;
-    box-shadow: 0 4px 14px rgba(30,64,175,.25);
+    color: #fff; box-shadow: 0 4px 14px rgba(220,38,38,.35);
   }}
   .col-item .ic {{ font-size: 16px; line-height: 1; }}
   .col-item .cnt {{
-    margin-left: auto;
-    font-family: ui-monospace, monospace;
-    font-size: 11px;
-    background: rgba(142,160,191,.18);
-    padding: 2px 8px;
-    border-radius: 99px;
-    color: var(--muted);
-    font-weight: 700;
+    margin-left: auto; font-family: ui-monospace, monospace;
+    font-size: 11px; background: rgba(180,150,150,.18);
+    padding: 2px 8px; border-radius: 99px; color: var(--muted); font-weight: 700;
   }}
   .col-item.active .cnt {{ background: rgba(255,255,255,.22); color: #fff; }}
 
-  /* 右侧主内容 */
+  /* 主内容 */
   .main-content {{ min-width: 0; }}
   .cat-panel {{ display: none; }}
   .cat-panel.active {{ display: block; }}
 
-  /* 日期分组表头 */
+  /* 日期分组 */
   .date-group-header {{
     background: linear-gradient(90deg, var(--main-soft), transparent);
-    border-left: 4px solid var(--main);
-    padding: 9px 14px 9px 16px;
-    margin: 18px 0 10px;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--main-dark);
-    border-radius: 0 8px 8px 0;
-    letter-spacing: 0.3px;
-    display: flex; align-items: center; gap: 10px;
+    border-left: 4px solid var(--main); padding: 9px 14px 9px 16px;
+    margin: 18px 0 10px; font-size: 13.5px; font-weight: 700;
+    color: var(--main-dark); border-radius: 0 8px 8px 0;
+    letter-spacing: 0.3px; display: flex; align-items: center; gap: 10px;
   }}
   .date-group-header:first-child {{ margin-top: 0; }}
   .date-group-header.today {{ background: linear-gradient(90deg, var(--today-bg), transparent); border-left-color: var(--today); color: var(--today-text); }}
   .date-group-header .date-count {{ font-family: ui-monospace, monospace; font-size: 11.5px; color: var(--muted); background: var(--panel); padding: 2px 9px; border-radius: 99px; font-weight: 600; }}
   .date-group-header.today .date-count {{ background: var(--today); color: #fff; }}
 
-  /* 卡片（增强样式 + 醒目时间徽章） */
+  /* 卡片 */
   .card {{ display: flex; gap: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px; margin-bottom: 10px; transition: transform .15s, box-shadow .15s; align-items: flex-start; }}
-  .card:hover {{ transform: translateY(-2px); box-shadow: 0 6px 16px rgba(28,36,52,.08); }}
+  .card:hover {{ transform: translateY(-2px); box-shadow: 0 6px 16px rgba(153,27,27,.1); }}
   .card.imp-summit {{ border-left: 4px solid #c9a227; background: linear-gradient(90deg, #fdfaf0, var(--panel)); }}
   .card.imp-high {{ border-left: 4px solid var(--main); }}
-  .card-idx {{ flex: 0 0 26px; height: 26px; border-radius: 8px; background: #f1f3f8; color: var(--muted); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }}
+  .card-idx {{ flex: 0 0 26px; height: 26px; border-radius: 8px; background: var(--main-soft); color: var(--main-dark); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }}
   .card-body {{ flex: 1; min-width: 0; }}
   .card-title-row {{ display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; }}
   .card-title {{ font-size: 14.5px; font-weight: 650; line-height: 1.5; flex: 1; min-width: 0; }}
   .card-meta-right {{ display: flex; flex-direction: column; gap: 6px; align-items: flex-end; flex-shrink: 0; }}
-
-  /* ⭐ 醒目时间徽章 */
   .date-badge {{
-    font-family: ui-monospace, monospace;
-    font-size: 12.5px;
-    font-weight: 700;
-    color: var(--main-dark);
-    background: var(--main-soft);
-    padding: 5px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(30,64,175,.18);
-    white-space: nowrap;
-    letter-spacing: 0.3px;
+    font-family: ui-monospace, monospace; font-size: 12.5px; font-weight: 700;
+    color: var(--main-dark); background: var(--main-soft);
+    padding: 5px 12px; border-radius: 8px;
+    border: 1px solid rgba(220,38,38,.18); white-space: nowrap; letter-spacing: 0.3px;
   }}
-  .date-badge.today {{
-    background: var(--today);
-    color: #fff;
-    border-color: var(--today);
-    box-shadow: 0 0 0 2px rgba(251,191,36,.2);
-  }}
-
+  .date-badge.today {{ background: var(--today); color: #fff; border-color: var(--today); box-shadow: 0 0 0 2px rgba(220,38,38,.2); }}
   .card-link {{ font-size: 12px; color: var(--main); text-decoration: none; font-weight: 600; padding: 4px 11px; border: 1px solid var(--main); border-radius: 8px; transition: all .15s; white-space: nowrap; }}
   .card-link:hover {{ background: var(--main); color: #fff; }}
-
   .card-summary {{ font-size: 12.5px; color: #4a5568; line-height: 1.65; margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
   .card-meta {{ display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; align-items: center; }}
   .meta-cat {{ font-size: 11.5px; color: var(--main); background: var(--main-soft); padding: 2px 9px; border-radius: 999px; font-weight: 600; }}
   .meta-src {{ font-size: 11.5px; color: var(--muted); }}
   .meta-imp {{ font-size: 11.5px; color: var(--muted-soft); font-family: ui-monospace, monospace; }}
   .tag-today {{ background: var(--today); color: #fff; font-size: 10.5px; padding: 2px 8px; border-radius: 999px; margin-left: 6px; vertical-align: 1px; font-weight: 600; }}
-
+  .hidden {{ display: none !important; }}
   .empty-panel {{ text-align: center; color: var(--muted); padding: 60px 0; font-size: 13px; }}
 
-  /* 响应式：移动端 sidebar 转顶横排 */
   @media (max-width: 880px) {{
     .layout {{ grid-template-columns: 1fr; }}
     .sidebar {{ position: static; max-height: none; }}
-    .col-item {{
-      display: inline-flex;
-      width: auto;
-      margin-bottom: 0;
-      margin-right: 6px;
-      padding: 8px 12px;
-      font-size: 12.5px;
-    }}
+    .col-item {{ display: inline-flex; width: auto; margin-bottom: 0; margin-right: 6px; padding: 8px 12px; font-size: 12.5px; }}
     .sidebar-title {{ display: none; }}
   }}
   @media (max-width: 720px) {{
@@ -360,8 +318,7 @@ def build():
       <span class="hero-back-sep">|</span>
       <span class="hero-back-cur">🇨🇳 国内新闻看板</span>
     </div>
-    <h1>国内新闻看板 · 中国国内重要政治动向</h1>
-    <p class="sub">信源：中国政府网要闻 + 最新政策 + 央视新闻 + 人民日报 + 外交部官网 + 商务部/发改委/网信办官网（国家级权威信源）· 聚焦元首动态、高层动态、使领馆动向、重要会议、人事任免、部委动态、政策发布、经贸动向 · Ira 信息看板 · 仅供参考交流</p>
+    <h1>国内新闻看板</h1>
     <div class="hero-meta">
       <span>📅 时间窗：{esc(window_start)} ~ {esc(window_end)}（近 7 天）</span>
       <span>🎯 要闻总数：{total} 条（去重）</span>
@@ -373,15 +330,19 @@ def build():
   <div class="refresh-strip">
     <span class="rs-dot"></span>
     <b>最近刷新：</b>{esc(NOW.strftime("%Y-%m-%d %H:%M"))} 北京时间（每日自动刷新） ·
-    <b>今日新增 {today_new} 条</b> ·
-    数据快照，滚动 7 天窗口
+    <b>今日新增 {today_new} 条</b> · 滚动 7 天窗口 ·
+    信源权重：中国政府网 &gt; 部委官网 &gt; 媒体 · 已排除"人民情怀"回顾评述栏目
   </div>
 
   <div class="kpi-grid">
-    <div class="kpi-card" style="border-left:4px solid #22a35e; background:linear-gradient(180deg,#f0fdf4,#fff);"><div class="kpi-num" style="color:#16a34a;">{today_new}</div><div class="kpi-label">🆕 今日新增</div></div>
+    <div class="kpi-card" style="border-left:4px solid #dc2626; background:linear-gradient(180deg,#fef2f2,#fff);"><div class="kpi-num" style="color:#dc2626;">{today_new}</div><div class="kpi-label">🆕 今日新增</div></div>
     <div class="kpi-card kpi-main"><div class="kpi-num">{total}</div><div class="kpi-label">要闻总数（去重后）</div></div>
     <div class="kpi-card"><div class="kpi-num">{summit_count}</div><div class="kpi-label">⭐ 元首级要闻</div></div>
     <div class="kpi-card"><div class="kpi-num">{len(dates)}</div><div class="kpi-label">覆盖天数</div></div>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" id="searchBox" placeholder="🔍 搜索标题、信源、摘要..." oninput="doSearch()">
   </div>
 
   <div class="layout">
@@ -400,16 +361,48 @@ def build():
     var colItems = document.querySelectorAll('.col-item');
     colItems.forEach(function(item) {{
       item.addEventListener('click', function() {{
-        // 切换 active
         colItems.forEach(function(x) {{ x.classList.remove('active'); }});
         item.classList.add('active');
-        // 切换面板
         var cat = item.dataset.cat;
         document.querySelectorAll('.cat-panel').forEach(function(p) {{ p.classList.remove('active'); }});
         var panel = document.getElementById('cat-panel-' + (cat === 'all' ? 'all' : cat));
         if (panel) panel.classList.add('active');
+        doSearch();
       }});
     }});
+
+    window.doSearch = function() {{
+      var q = (document.getElementById('searchBox').value || '').toLowerCase();
+      var activePanel = document.querySelector('.cat-panel.active');
+      if (!activePanel) return;
+      var cards = activePanel.querySelectorAll('.card');
+      var headers = activePanel.querySelectorAll('.date-group-header');
+      var hasVisible = false;
+      if (!q) {{
+        cards.forEach(function(c) {{ c.classList.remove('hidden'); }});
+        headers.forEach(function(h) {{ h.classList.remove('hidden'); }});
+        return;
+      }}
+      cards.forEach(function(c) {{
+        var t = (c.textContent || '').toLowerCase();
+        if (t.includes(q)) {{
+          c.classList.remove('hidden');
+          hasVisible = true;
+        }} else {{
+          c.classList.add('hidden');
+        }}
+      }});
+      // 隐藏空日期分组
+      headers.forEach(function(h) {{
+        var next = h.nextElementSibling;
+        var anyVisible = false;
+        while (next && !next.classList.contains('date-group-header')) {{
+          if (!next.classList.contains('hidden')) anyVisible = true;
+          next = next.nextElementSibling;
+        }}
+        h.classList.toggle('hidden', !anyVisible);
+      }});
+    }};
   }})();
 </script>
 </body>
