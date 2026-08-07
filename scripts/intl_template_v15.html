@@ -695,30 +695,30 @@ document.getElementById('dateHeader').addEventListener('click', function(e) {
 });
 
 // V2.0 新重要性体系：高（涉华/对华制裁/AI科技战/中美元首）→ 中（非涉华热点）→ 低（一般）
+// V3.0 重要性判定（用户框定标准，2026-08-07）
 function getImportance(score, isSummit, titleText) {
     const text = (titleText || '').toLowerCase();
-    // 高优先级：涉华、对华经贸制裁、AI科技战、中美元首
-    const highKeys = ['中国','习近平','Xi','中美','中俄','中欧','中日','中韩',
-        '台海','台湾','涉华','对华','China','Chinese','Beijing','北京',
-        '北戴河','beidaihe','政治局','国务院','外交部','国防部','商务部','USTR',
-        '对华关税','关税','制裁','实体清单','出口管制','301条款','UFLPA',
-        '强迫劳动','新疆','维吾尔','芯片战','芯片管制','AI竞争','半导体管制',
-        'DeepSeek','Qwen','华为','Huawei','中芯','TikTok','字节跳动','微信',
-        '特朗普','Trump','鲁比奥','Rubio','万斯','Vance','赫格塞斯','Hegseth',
-        '贝森特','Bessent','王毅','何立峰','拜登','Biden'];
-    if (highKeys.some(w => text.includes(w.toLowerCase()))) {
-        return { level: 'high', rank: 2, label: '🟠高', cls: 'badge-high' };
+    const hasCN = ['中国','china ','chinese','beijing','北京','北京','中美','中欧','中俄','中日','中韩','对华','涉华','习近平','xi jinping','台海','taiwan','台湾','pla','deepseek','qwen','华为','huawei','中芯','tiktok','字节跳动','访华','赴华'].some(w => text.includes(w));
+
+    if (!hasCN) {
+        // 不涉华：美国/欧洲重要政治 → 中
+        const mid = ['trump','特朗普','rubio','鲁比奥','biden','拜登','congress','国会','pentagon','五角大楼','white house','白宫','eu ','brussels','nato','北约','关税','tariff','trade war','ai guidelines','ai safety','ai model','open source model'].some(w => text.includes(w));
+        return mid ? { level:'medium', rank:1, label:'🟡中', cls:'badge-medium' }
+                   : { level:'low', rank:0, label:'🟢低', cls:'badge-low' };
     }
-    // 中优先级：非涉华地区热点（伊朗/霍尔木兹/俄乌/朝鲜等）
-    const midKeys = ['伊朗','Iran','Hormuz','霍尔木兹','俄乌','俄罗斯','Ukraine',
-        '朝鲜','North Korea','金正恩','Kim','哈马斯','Hamas','以色列','Israel',
-        '加沙','Gaza','胡塞','Houthi','沙特','Saudi','阿联酋','UAE',
-        '巴基斯坦','Pakistan','印度','India','缅甸','Myanmar','菲律宾','Philippines',
-        '莫迪','Modi','泽连斯基','Zelensky','普京','Putin'];
-    if (midKeys.some(w => text.includes(w.toLowerCase()))) {
-        return { level: 'medium', rank: 1, label: '🟡中', cls: 'badge-medium' };
-    }
-    return { level: 'low', rank: 0, label: '🟢低', cls: 'badge-low' };
+
+    // 涉华 → 高优先信号
+    const isHigh = ['习近平','xi jinping','李强','国家主席','政治局','北戴河','制裁','出口管制','实体清单','uflpa','对台军售','arms sale','ustr','关税壁垒','summit','峰会','apec','g7','g20','quad','慕安会'].some(w => text.includes(w))
+        || ['芯片','半导体','大模型','deepseek','qwen','huawei','华为','中芯','集成电路','open model','ai model','export control','chip war','semiconductor','nvidia','gpu','算力','compute','ai芯片','ai竞争','ai race','silicon'].some(w => text.includes(w));
+    if (isHigh) return { level:'high', rank:2, label:'🔴高', cls:'badge-high' };
+
+    // 台海高冲突（封锁/军演/美方/对台军售）
+    const twHigh = ['对台军售','arms sale','blockade','封锁','战备','汉光','军演','military exercise','missile','导弹','trump','特朗普','pentagon','五角大楼','us navy','美军','sea blockade','war games'].some(w => text.includes(w));
+    if (('taiwan' in text || text.includes('台湾') || text.includes('台海')) && twHigh)
+        return { level:'high', rank:2, label:'🔴高', cls:'badge-high' };
+
+    // 涉华但非高优先 → 中
+    return { level:'medium', rank:1, label:'🟡中', cls:'badge-medium' };
 }
 
 function filterNews() {
