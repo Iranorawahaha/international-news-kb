@@ -10,7 +10,7 @@
 |------|------|
 | 🏠 **门户首页** | https://iranorawahaha.github.io/international-news-kb/ |
 | 🌍 国际新闻看板 | https://iranorawahaha.github.io/international-news-kb/international-news.html |
-| 🤖 AI 动向看板 | https://iranorawahaha.github.io/international-news-kb/ai-company-intel.html |
+| 🤖 AI 动向看板 | https://iranorawahaha.github.io/international-news-kb/ai-news.html |
 | 🇨🇳 国内新闻看板 | https://iranorawahaha.github.io/international-news-kb/china-news.html |
 
 ---
@@ -151,7 +151,7 @@ JUNK_KEYWORDS = [
 international-news-kb/
 ├── index.html                          # 门户（Ira 信息看板）
 ├── international-news.html             # 国际新闻看板
-├── ai-company-intel.html               # AI 动向看板
+├── ai-news.html               # AI 动向看板
 ├── china-news.html                     # 国内新闻看板
 ├── data/
 │   ├── news-data.json                  # 国际新闻（7 天滚动）

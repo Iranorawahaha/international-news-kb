@@ -6,7 +6,7 @@
 |------|------|
 | **🏠 Ira 信息看板（门户）** | https://iranorawahaha.github.io/international-news-kb/ |
 | 🌍 国际新闻看板 | https://iranorawahaha.github.io/international-news-kb/international-news.html |
-| 🤖 AI 动向看板 | https://iranorawahaha.github.io/international-news-kb/ai-company-intel.html |
+| 🤖 AI 动向看板 | https://iranorawahaha.github.io/international-news-kb/ai-news.html |
 
 ---
 
@@ -19,7 +19,7 @@ Ira 信息看板（index.html 门户）
 │   ├── 整合: update-news.sh（去重/清洗/排序/7天存档）
 │   ├── 存储: data/news-data.json（本地7天）+ 飞书 Base（永久）
 │   └── 部署: GitHub Pages (main 分支根目录)
-└── 🤖 AI 动向看板 (ai-company-intel.html)
+└── 🤖 AI 动向看板 (ai-news.html)
     ├── 采集: AI HOT v1 API（15 家公司 + 监管/科技博弈关键词）
     ├── 构建: build_v2.py（分类/高亮/监管标签）
     └── 部署: refresh_board.sh → GitHub Pages
