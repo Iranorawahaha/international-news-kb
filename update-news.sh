@@ -749,18 +749,11 @@ for date_str in dates:
 total_count = len(all_articles)
 sources = set(a.get('source','未知') for a in all_articles)
 categories = set(a.get('category','其他') for a in all_articles)
-# V2.0: 高优先级要闻数（替代旧版"元首级"统计）—— 涉华/对华/中美元首/官方信源 全部计入
-# 判定：priority_score >= 88 或 is_summit_level=True 或 is_official=True
-_high_keys = ['中国', '习近平', '中美', '中俄', '中欧', '台海', '涉华', '对华',
-              'China', 'Chinese', 'Beijing', 'TikTok', '华为', 'Huawei',
-              'USTR', '关税', '制裁', '实体清单', '出口管制', 'DeepSeek', 'Qwen',
-              '特朗普', 'Trump', '鲁比奥', 'Rubio', '万斯', 'Vance', '贝森特', 'Bessent']
+# V3.0: 高优先级要闻数（V3 标准：仅涉华重大 / 台海冲突，priority_score >= 88）
 def _is_high_priority(a):
     if a.get('is_official'): return True
-    if a.get('is_summit_level'): return True
     if (a.get('priority_score') or 0) >= 88: return True
-    text = (a.get('title_zh','') or a.get('title','') or '') + ' ' + (a.get('title_en','') or '')
-    return any(k in text for k in _high_keys)
+    return False
 high_count = sum(1 for a in all_articles if _is_high_priority(a))
 
 # V1.5: 顶部日期表头按钮（横向）
@@ -912,7 +905,7 @@ git commit -m "📰 V1.2 新闻更新 - $TODAY $TIME (${FINAL_COUNT}条)
 • 总新闻数: ${FINAL_COUNT} 条
 • 存档天数: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(len(d.get('dates',[])))") 天
 • 信源覆盖: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(len(set(x.get('source','') for v in d.get('archive',{}).values() for x in v)))") 个
-• 高优先级新闻: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(1 for v in d.get('archive',{}).values() for x in v if x.get('is_official') or x.get('is_summit_level') or (x.get('priority_score') or 0) >= 88))") 条
+• 高优先级新闻: $(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(1 for v in d.get('archive',{}).values() for x in v if x.get('is_official') or (x.get('priority_score') or 0) >= 88))") 条
 
 ✨ V1.2 新特性:
 ✅ 7天数据存档（不再清空历史）
