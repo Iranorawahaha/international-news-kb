@@ -13,7 +13,7 @@ NAV_SNIPPET = '''<!-- ===== IRA-NAV-V4: Ira 信息看板 统一导航（自动�
   <a href="./" style="font-weight:700;color:#4b5563;text-decoration:none;padding:0 6px 0 0;border-right:1px solid #e5e7eb;margin-right:2px;">🏠 Ira 信息看板</a>
   <a href="international-news.html" style="color:#2563eb;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#eff6ff;border:1px solid #bfdbfe;">🌍 国际</a>
   <a href="china-news.html" style="color:#c41230;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fff5f5;border:1px solid #fecaca;">🇨🇳 国内</a>
-  <a href="ai-company-intel.html" style="color:#d97706;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fffbeb;border:1px solid #fde68a;">🤖 AI动向</a>
+  <a href="ai-news.html" style="color:#d97706;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fffbeb;border:1px solid #fde68a;">🤖 AI动向</a>
   <span style="color:#9ca3af;margin-left:auto;font-size:11.5px;">每日 09:30 刷新 · 滚动 7 天</span>
 </div>
 <!-- ===== /IRA-NAV-V4 ===== -->'''
@@ -37,8 +37,8 @@ def main():
     targets = sys.argv[1:] if len(sys.argv) > 1 else [
         os.path.join(base, "international-news.html"),
         os.path.join(base, "gh-pages", "international-news.html"),
-        os.path.join(base, "ai-company-intel.html"),
-        os.path.join(base, "gh-pages", "ai-company-intel.html"),
+        os.path.join(base, "ai-news.html"),
+        os.path.join(base, "gh-pages", "ai-news.html"),
         os.path.join(base, "china-news.html"),
         os.path.join(base, "gh-pages", "china-news.html"),
     ]

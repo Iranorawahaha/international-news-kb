@@ -356,7 +356,7 @@ def build():
       <span class="hero-back-sep">|</span>
       <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html" target="_blank" rel="noopener noreferrer">🌍 国际新闻看板</a>
       <span class="hero-back-sep">|</span>
-      <a href="https://iranorawahaha.github.io/international-news-kb/ai-company-intel.html" target="_blank" rel="noopener noreferrer">🤖 AI 动向看板</a>
+      <a href="https://iranorawahaha.github.io/international-news-kb/ai-news.html" target="_blank" rel="noopener noreferrer">🤖 AI 动向看板</a>
       <span class="hero-back-sep">|</span>
       <span class="hero-back-cur">🇨🇳 国内新闻看板</span>
     </div>

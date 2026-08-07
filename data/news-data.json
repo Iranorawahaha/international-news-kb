@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-07 14:42",
+  "lastUpdated": "2026-08-07 16:06",
   "retentionDays": 7,
   "archive": {
     "2026-08-01": [
@@ -11589,6 +11589,34 @@
         "body_en": null
       },
       {
+        "id": "auto_2026-08-07_86538",
+        "date": "2026-08-07",
+        "title": "Trump says Iran war will end 'pretty soon', Hormuz deal looms 特朗普称对伊战争将\"很快\"结束，霍尔木兹协议在望",
+        "title_en": "Trump says Iran war will end 'pretty soon', Hormuz deal looms",
+        "title_zh": "特朗普称对伊战争将\"很快\"结束，霍尔木兹协议在望",
+        "summary": "美国、伊朗和阿曼接近达成重开霍尔木兹海峡的临时协议，特朗普表示战争很快结束，伊朗议会则称谈判仅在伊朗与阿曼之间进行。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "半岛电视台",
+        "category": "地缘政治",
+        "keywords": [
+          "特朗普",
+          "伊朗",
+          "霍尔木兹",
+          "战争",
+          "协议"
+        ],
+        "url": "https://www.aljazeera.com/news/liveblog/2026/8/7/trump-says-war-cant-go-much-longer-hormuz-deal-close",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-07 16:06:55",
+        "collection_method": "legacy",
+        "column": "美国",
+        "is_official": null,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-08-06_51177",
         "date": "2026-08-07",
         "title": "Adjusting Imports of Polysilicon and its Derivatives into the United States",
@@ -12608,7 +12636,7 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-07_25584",
+        "id": "auto_2026-08-07_70047",
         "date": "2026-08-07",
         "title": "Bolivia National Day",
         "title_en": "Bolivia National Day",
@@ -12630,7 +12658,7 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-07_89052",
+        "id": "auto_2026-08-07_36379",
         "date": "2026-08-07",
         "title": "Targeting Enablers of the Cuban Regime’s Arms Imports and Foreign Military Cooperation Fact Sheet",
         "title_en": "Targeting Enablers of the Cuban Regime’s Arms Imports and Foreign Military Cooperation Fact Sheet",
@@ -13557,7 +13585,7 @@
     "2026-08-01"
   ],
   "stats": {
-    "totalArticles": 514,
+    "totalArticles": 515,
     "dateCount": 7,
     "latestDate": "2026-08-07",
     "oldestDate": "2026-08-01"
