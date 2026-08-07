@@ -353,73 +353,79 @@
         tbody tr { transition: background 0.1s; }
         tbody tr:hover { background: var(--primary-bg); }
 
-        /* 9 列列宽 — V2.2: 标题列缩减，摘要列固定最小宽，防 zoom 变形 */
-        table { table-layout: fixed; }
-        th:nth-child(1), td:nth-child(1) { width: 40px; text-align: center; color: var(--text-faint); font-family: var(--mono); }
-        th:nth-child(2), td:nth-child(2) { width: 88px; font-family: var(--mono); font-size: 12px; }
-        th:nth-child(3), td:nth-child(3) { width: 240px; word-break: break-word; }
+        /* 9 列列宽 — V2.4: 移除 table-layout:fixed（破坏日期分组 colspan），改用 overflow 控制防 zoom 变形 */
+        th:nth-child(1), td:nth-child(1) { width: 40px; min-width: 40px; text-align: center; color: var(--text-faint); font-family: var(--mono); }
+        th:nth-child(2), td:nth-child(2) { width: 88px; min-width: 88px; font-family: var(--mono); font-size: 12px; }
+        th:nth-child(3), td:nth-child(3) { width: 240px; min-width: 200px; max-width: 280px; word-break: break-word; }
         th:nth-child(4), td:nth-child(4) { min-width: 180px; word-break: break-word; overflow-wrap: break-word; }
-        th:nth-child(5), td:nth-child(5) { width: 80px; }
-        th:nth-child(6), td:nth-child(6) { width: 80px; }
-        th:nth-child(7), td:nth-child(7) { width: 80px; }
-        th:nth-child(8), td:nth-child(8) { width: 120px; }
-        th:nth-child(9), td:nth-child(9) { width: 120px; }
+        th:nth-child(5), td:nth-child(5) { width: 80px; min-width: 70px; }
+        th:nth-child(6), td:nth-child(6) { width: 80px; min-width: 70px; }
+        th:nth-child(7), td:nth-child(7) { width: 80px; min-width: 70px; }
+        th:nth-child(8), td:nth-child(8) { width: 120px; min-width: 100px; }
+        th:nth-child(9), td:nth-child(9) { width: 120px; min-width: 100px; }
 
-        /* 日期分组表头 — V2.3: 参照国内新闻版面，强化醒目度（渐变背景+左侧色条+圆角+计数徽章+今日高亮） */
-        .date-separator { background: transparent !important; }
-        .date-separator td {
-            padding: 12px 18px !important;
-            background: linear-gradient(90deg, var(--primary-bg) 0%, var(--primary-bg) 60%, transparent 100%);
-            border-left: 4px solid var(--primary);
-            border-bottom: 1px solid var(--primary-bg-2) !important;
-            border-top: 1px solid var(--primary-bg-2);
-            border-radius: 0 8px 8px 0;
-            font-size: 14px;
+        /* 日期分组表头 — V2.4: 从表格行改为表格前的独立 sticky 区块，避免 table-layout:fixed 截断 */
+        .date-group-divider {
+            background: linear-gradient(90deg, var(--primary-bg) 0%, var(--primary-bg) 70%, transparent 100%);
+            border-left: 5px solid var(--primary);
+            border-bottom: 1px solid var(--primary-bg-2);
+            border-radius: 0 10px 10px 0;
+            padding: 12px 20px;
+            margin: 18px 0 12px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--primary);
             letter-spacing: 0.5px;
-            margin: 16px 0 10px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 14px;
+            box-shadow: var(--shadow-sm);
         }
-        .date-separator:first-child td { margin-top: 0; }
-        .date-separator.today td {
-            background: linear-gradient(90deg, #ecfdf5 0%, #ecfdf5 60%, transparent 100%);
+        .date-group-divider:first-child { margin-top: 0; }
+        .date-group-divider.today {
+            background: linear-gradient(90deg, #ecfdf5 0%, #ecfdf5 70%, transparent 100%);
             border-left-color: #16a34a;
             color: #047857;
         }
-        .date-separator .date-count {
-            font-family: ui-monospace, monospace;
-            font-size: 11.5px;
-            color: var(--text-dim);
-            background: white;
-            padding: 2px 10px;
-            border-radius: 99px;
-            font-weight: 600;
-            border: 1px solid var(--primary-bg-2);
+        .date-group-divider .date-icon {
+            font-size: 18px;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,.08));
         }
-        .date-separator.today .date-count {
+        .date-group-divider .date-main {
+            font-family: ui-monospace, monospace;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .date-group-divider .date-weekday {
+            font-size: 12px;
+            color: var(--text-dim);
+            font-weight: 500;
+            background: white;
+            padding: 3px 10px;
+            border-radius: 99px;
+            border: 1px solid var(--border);
+        }
+        .date-group-divider.today .date-weekday {
             background: #16a34a;
             color: white;
             border-color: #16a34a;
         }
-        .date-separator .date-weekday {
-            font-size: 11px;
-            color: var(--text-faint);
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-        .date-separator .date-icon {
-            font-size: 16px;
-            filter: drop-shadow(0 1px 1px rgba(0,0,0,.08));
-        }
-        .date-separator .date-summary {
-            margin-left: auto;
-            font-size: 11px;
-            color: var(--text-faint);
-            font-weight: 500;
+        .date-group-divider .date-count {
             font-family: ui-monospace, monospace;
+            font-size: 12px;
+            color: var(--text-dim);
+            background: var(--primary);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 99px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        .date-group-divider .date-iso {
+            font-family: ui-monospace, monospace;
+            font-size: 11px;
+            color: var(--text-faint);
+            font-weight: 500;
         }
 
         /* 标题 */
@@ -775,7 +781,7 @@ function renderTable(articles) {
     // 双语截图服务地址（部署在同一个 GitHub Pages 下，无需单独服务）
     const SCREENSHOT_BASE_URL = 'https://iranorawahaha.github.io/international-news-kb/bilingual-screenshot.html';
     let globalIndex = 0;
-    // V2.3: 强化日期分组 — 星期/计数徽章/今日高亮/右侧概要
+    // V2.4: 日期分组表头 — 改用块级元素，绕过 table-layout:fixed 的列宽约束
     const TODAY_DATE = new Date().toISOString().slice(0, 10);
     const WEEKDAY_MAP = {0:'周日',1:'周一',2:'周二',3:'周三',4:'周四',5:'周五',6:'周六'};
     function fmtDateHeader(dateStr, count) {
@@ -783,17 +789,15 @@ function renderTable(articles) {
         const weekday = WEEKDAY_MAP[d.getDay()] || '';
         const md = (d.getMonth()+1) + '月' + d.getDate() + '日';
         const isToday = dateStr === TODAY_DATE;
-        const todayBadge = isToday ? 'today' : '';
-        // 概览：统计该日期的高/中/低条数
-        let highCnt = 0, medCnt = 0;
-        // 已在 filterNews 里计算过一遍，但这里需要重新算一遍（不严谨，简化）
-        return `<td colspan="9">
-            <div style="display:flex;align-items:center;gap:10px;">
+        const todayCls = isToday ? ' today' : '';
+        const weekdayLabel = weekday + (isToday ? ' · 今日' : '');
+        return `<td colspan="9" style="padding:0 !important; border:none !important; background:transparent !important;">
+            <div class="date-group-divider${todayCls}">
                 <span class="date-icon">📅</span>
-                <span style="font-family:ui-monospace,monospace;">${md}</span>
-                <span class="date-weekday">${weekday}${isToday ? ' · 今日' : ''}</span>
+                <span class="date-main">${md}</span>
+                <span class="date-weekday">${weekdayLabel}</span>
+                <span class="date-iso">${dateStr}</span>
                 <span class="date-count">${count} 条</span>
-                <span class="date-summary">${dateStr}</span>
             </div>
         </td>`;
     }
