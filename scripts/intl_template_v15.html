@@ -712,9 +712,9 @@ function getImportance(score, isSummit, titleText) {
         || ['芯片','半导体','大模型','deepseek','qwen','huawei','华为','中芯','集成电路','open model','ai model','export control','chip war','semiconductor','nvidia','gpu','算力','compute','ai芯片','ai竞争','ai race','silicon'].some(w => text.includes(w));
     if (isHigh) return { level:'high', rank:2, label:'🔴高', cls:'badge-high' };
 
-    // 台海高冲突（封锁/军演/美方/对台军售）
+    // 台海高冲突（封锁/军演/美方/对台军售）— 注意：JS 的 `in` 操作符对字符串无效，必须用 includes
     const twHigh = ['对台军售','arms sale','blockade','封锁','战备','汉光','军演','military exercise','missile','导弹','trump','特朗普','pentagon','五角大楼','us navy','美军','sea blockade','war games'].some(w => text.includes(w));
-    if (('taiwan' in text || text.includes('台湾') || text.includes('台海')) && twHigh)
+    if ((text.includes('taiwan') || text.includes('台湾') || text.includes('台海')) && twHigh)
         return { level:'high', rank:2, label:'🔴高', cls:'badge-high' };
 
     // 涉华但非高优先 → 中
