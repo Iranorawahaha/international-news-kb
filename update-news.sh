@@ -609,19 +609,24 @@ try:
         if not data['archive'][_fdt]:
             del data['archive'][_fdt]
 
-    # V2.5 终极重归类：所有日期组中，date 字段与 collectedAt 日期不一致的文章 → 移到 collectedAt 日期组
-    # （确保 8/7 9:30 抓到的、发表日=8/6 的文章，归到 8/7 版面下，不被 force-upgrade 覆盖回去）
+    # V2.5 终极重归类：按 collectedAt 归档 + 确保 date 字段 = archive key
     from collections import defaultdict as _dd_rc
     _rc_v25_reassigned = 0
+    _rc_v25_fixed_date = 0
     _rc_v25_by_target = _dd_rc(list)
     for _rc_dt in list(data['archive'].keys()):
         for _rc_a in list(data['archive'][_rc_dt]):
             _rc_col = (_rc_a.get('collectedAt') or '')[:10]
+            # 情况1：collectedAt 指向不同日期组 → 移到目标组
             if _rc_col and _rc_col != _rc_dt:
                 _rc_a['date'] = _rc_col
                 _rc_v25_by_target[_rc_col].append(_rc_a)
                 data['archive'][_rc_dt].remove(_rc_a)
                 _rc_v25_reassigned += 1
+            # 情况2：在正确的组但 date 字段不对齐（force-upgrade 可能覆盖回去）→ 修正字段
+            elif _rc_a.get('date') != _rc_dt:
+                _rc_a['date'] = _rc_dt
+                _rc_v25_fixed_date += 1
     # 把移动出去的加到目标组
     for _rc_target, _rc_arts in _rc_v25_by_target.items():
         if _rc_target not in data['archive']:
@@ -631,8 +636,8 @@ try:
     for _rc_dt in list(data['archive'].keys()):
         if not data['archive'][_rc_dt]:
             del data['archive'][_rc_dt]
-    if _rc_v25_reassigned:
-        print(f"  📅 V2.5 终极重归类: {_rc_v25_reassigned} 条 (date → collectedAt)")
+    if _rc_v25_reassigned or _rc_v25_fixed_date:
+        print(f"  📅 V2.5 终极重归类: {_rc_v25_reassigned} 条归位, {_rc_v25_fixed_date} 条修正date字段")
 
     save_data(data)
     if _ff_added or _ff_upgraded:
