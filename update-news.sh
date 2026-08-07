@@ -457,6 +457,21 @@ if new_articles:
         for reason, count in reasons_new.items():
             print(f"       • {reason}: {count} 条")
     print(f"     ✅ 清洗后剩余: {len(cleaned_new)} 条")
+
+    # V2.5 日期归类：X日版面覆盖 X-1日 9:30 ~ X日 9:30
+    # 新抓到"昨天发表"的文章 → 归入今天版（用户不会倒回去查昨天版面）
+    # 更早日期的文章保持原日期不变（已是历史存档）
+    from datetime import datetime as _dt_v25, timedelta as _td_v25
+    _yesterday = (_dt_v25.now() - _td_v25(days=1)).strftime('%Y-%m-%d')
+    _reassigned = 0
+    for _a in cleaned_new:
+        _ad = _a.get('date', '')
+        # 仅重归类昨天的——昨天 9:30 后发表、今天才抓到的，实际属于今天的资讯窗口
+        if _ad and _ad == _yesterday:
+            _a['date'] = today
+            _reassigned += 1
+    if _reassigned:
+        print(f"  🔄 日期重归类: {_reassigned} 条（昨天发表→归入今天版面）")
 else:
     cleaned_new = []
     print(f"\n  ℹ️ 无新数据需要处理")
