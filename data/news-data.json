@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-07 09:36",
+  "lastUpdated": "2026-08-07 10:13",
   "retentionDays": 7,
   "archive": {
     "2026-07-31": [
@@ -12388,6 +12388,34 @@
         "is_official": null
       },
       {
+        "id": "auto_2026-08-06_68246",
+        "date": "2026-08-06",
+        "title": "China adds US sanctions, drone curbs in trade tit-for-tat 中国反制升级：加码对美制裁与无人机出口管制",
+        "title_en": "China adds US sanctions, drone curbs in trade tit-for-tat",
+        "title_zh": "中国反制升级：加码对美制裁与无人机出口管制",
+        "summary": "北京收紧对美无人机出口管制，并对协助美国针对新疆措施的企业实施制裁，这是中美贸易摩擦升级的最新一轮反制，商务部还公布6家美国实体反制清单。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "南华早报",
+        "category": "经贸制裁",
+        "keywords": [
+          "中国",
+          "反制",
+          "制裁",
+          "无人机",
+          "出口管制",
+          "中美"
+        ],
+        "url": "https://www.scmp.com/plus/news/china/politics/article/3363167/china-adds-us-sanctions-drone-curbs-trade-tit-tat",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-07 10:13:10",
+        "collection_method": "legacy",
+        "column": "美国",
+        "is_official": null
+      },
+      {
         "id": "auto_2026-08-06_11486",
         "date": "2026-08-06",
         "title": "Artificial Intelligence used to design brand new viruses 人工智能被用于设计全新病毒",
@@ -12652,6 +12680,33 @@
         "is_summit_level": false,
         "importance": "中",
         "collectedAt": "2026-08-07 09:36:03",
+        "collection_method": "legacy",
+        "column": "美国",
+        "is_official": null
+      },
+      {
+        "id": "auto_2026-08-06_66946",
+        "date": "2026-08-06",
+        "title": "Trump again tries to limit US birthright citizenship with new executive orders 特朗普再次以新行政令试图限制美国出生公民权",
+        "title_en": "Trump again tries to limit US birthright citizenship with new executive orders",
+        "title_zh": "特朗普再次以新行政令试图限制美国出生公民权",
+        "summary": "特朗普签署新行政令，寻求限制美国出生公民权并打击\"生育旅游\"。一个月前最高法院驳回了其此前限制该权利的努力。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "BBC",
+        "category": "美国政治",
+        "keywords": [
+          "特朗普",
+          "出生公民权",
+          "行政令",
+          "移民",
+          "最高法院"
+        ],
+        "url": "https://www.bbc.com/news/articles/cj63966j95yo",
+        "priority_score": 78,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-07 10:13:10",
         "collection_method": "legacy",
         "column": "美国",
         "is_official": null
@@ -12954,6 +13009,33 @@
         "is_official": null
       },
       {
+        "id": "auto_2026-08-06_7022",
+        "date": "2026-08-06",
+        "title": "ACLU blasts Trump's new orders on birthright citizenship, saying they are doomed to fail in court ACLU抨击特朗普出生公民权新令，称注定在法庭失败",
+        "title_en": "ACLU blasts Trump's new orders on birthright citizenship, saying they are doomed to fail in court",
+        "title_zh": "ACLU抨击特朗普出生公民权新令，称注定在法庭失败",
+        "summary": "特朗普签署针对出生公民权的新行政令，美国公民自由联盟批评这些命令注定在法庭失败。一个月前最高法院刚驳回特朗普限制出生公民权的早期尝试。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "卫报",
+        "category": "美国政治",
+        "keywords": [
+          "特朗普",
+          "出生公民权",
+          "ACLU",
+          "行政令",
+          "法庭"
+        ],
+        "url": "https://www.theguardian.com/us-news/live/2026/aug/06/senators-anthony-fauci-contempt-of-congress-michiganu-democrats-republicans-trump-politics-latest-news-updates",
+        "priority_score": 70,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-07 10:13:10",
+        "collection_method": "legacy",
+        "column": "美国",
+        "is_official": null
+      },
+      {
         "id": "auto_2026-08-06_69261",
         "date": "2026-08-06",
         "title": "Senate committee votes to hold Fauci in contempt for refusing to answer COVID questions 参议院委员会投票以藐视国会追究福奇",
@@ -13073,7 +13155,7 @@
     "2026-07-31"
   ],
   "stats": {
-    "totalArticles": 515,
+    "totalArticles": 518,
     "dateCount": 8,
     "latestDate": "2026-08-07",
     "oldestDate": "2026-07-31"
