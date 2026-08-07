@@ -152,12 +152,12 @@
             font-size: 32px; font-weight: 800; line-height: 1.1;
             color: var(--primary);
         }
-        .stat-card.summit .stat-number { color: var(--gold); }
+        .stat-card.high-priority .stat-number { color: #ea580c; }
         .stat-card .stat-label {
             color: var(--text-dim); font-size: 13px;
             margin-top: 6px; font-weight: 500;
         }
-        .stat-card.summit .stat-label { color: var(--gold); font-weight: 600; }
+        .stat-card.high-priority .stat-label { color: #ea580c; font-weight: 600; }
 
         /* ===== 主区域：左栏目栏 + 右内容区 ===== */
         .main-grid {
@@ -353,26 +353,73 @@
         tbody tr { transition: background 0.1s; }
         tbody tr:hover { background: var(--primary-bg); }
 
-        /* 9 列列宽 */
-        th:nth-child(1), td:nth-child(1) { width: 44px; text-align: center; color: var(--text-faint); font-family: var(--mono); }
-        th:nth-child(2), td:nth-child(2) { width: 96px; font-family: var(--mono); font-size: 12px; }
-        th:nth-child(3), td:nth-child(3) { width: 300px; }
-        th:nth-child(4), td:nth-child(4) { width: auto; }
-        th:nth-child(5), td:nth-child(5) { width: 88px; }
-        th:nth-child(6), td:nth-child(6) { width: 88px; }
-        th:nth-child(7), td:nth-child(7) { width: 88px; }
-        th:nth-child(8), td:nth-child(8) { width: 140px; }
-        th:nth-child(9), td:nth-child(9) { width: 84px; }
+        /* 9 列列宽 — V2.2: 标题列缩减，摘要列固定最小宽，防 zoom 变形 */
+        table { table-layout: fixed; }
+        th:nth-child(1), td:nth-child(1) { width: 40px; text-align: center; color: var(--text-faint); font-family: var(--mono); }
+        th:nth-child(2), td:nth-child(2) { width: 88px; font-family: var(--mono); font-size: 12px; }
+        th:nth-child(3), td:nth-child(3) { width: 240px; word-break: break-word; }
+        th:nth-child(4), td:nth-child(4) { min-width: 180px; word-break: break-word; overflow-wrap: break-word; }
+        th:nth-child(5), td:nth-child(5) { width: 80px; }
+        th:nth-child(6), td:nth-child(6) { width: 80px; }
+        th:nth-child(7), td:nth-child(7) { width: 80px; }
+        th:nth-child(8), td:nth-child(8) { width: 120px; }
+        th:nth-child(9), td:nth-child(9) { width: 120px; }
 
-        /* 日期分隔行 */
-        .date-separator { background: var(--primary-bg) !important; }
+        /* 日期分组表头 — V2.3: 参照国内新闻版面，强化醒目度（渐变背景+左侧色条+圆角+计数徽章+今日高亮） */
+        .date-separator { background: transparent !important; }
         .date-separator td {
-            padding: 10px 14px !important;
-            font-size: 13px; font-weight: 700;
-            color: var(--primary) !important;
+            padding: 12px 18px !important;
+            background: linear-gradient(90deg, var(--primary-bg) 0%, var(--primary-bg) 60%, transparent 100%);
+            border-left: 4px solid var(--primary);
             border-bottom: 1px solid var(--primary-bg-2) !important;
-            font-family: var(--mono);
+            border-top: 1px solid var(--primary-bg-2);
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary);
             letter-spacing: 0.5px;
+            margin: 16px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .date-separator:first-child td { margin-top: 0; }
+        .date-separator.today td {
+            background: linear-gradient(90deg, #ecfdf5 0%, #ecfdf5 60%, transparent 100%);
+            border-left-color: #16a34a;
+            color: #047857;
+        }
+        .date-separator .date-count {
+            font-family: ui-monospace, monospace;
+            font-size: 11.5px;
+            color: var(--text-dim);
+            background: white;
+            padding: 2px 10px;
+            border-radius: 99px;
+            font-weight: 600;
+            border: 1px solid var(--primary-bg-2);
+        }
+        .date-separator.today .date-count {
+            background: #16a34a;
+            color: white;
+            border-color: #16a34a;
+        }
+        .date-separator .date-weekday {
+            font-size: 11px;
+            color: var(--text-faint);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .date-separator .date-icon {
+            font-size: 16px;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,.08));
+        }
+        .date-separator .date-summary {
+            margin-left: auto;
+            font-size: 11px;
+            color: var(--text-faint);
+            font-weight: 500;
+            font-family: ui-monospace, monospace;
         }
 
         /* 标题 */
@@ -395,8 +442,8 @@
 
         /* 摘要 */
         .summary-text {
-            color: var(--text-dim); font-size: 12px; line-height: 1.6;
-            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+            color: var(--text-dim); font-size: 13px; line-height: 1.66;
+            white-space: normal; word-break: break-word;
         }
 
         /* 重要性徽章 */
@@ -405,11 +452,10 @@
             border-radius: 99px; font-size: 11px; font-weight: 600;
             white-space: nowrap;
         }
-        .badge-summit   { background: #fef3c7; color: #b45309; border: 1px solid #fcd34d; }
-        .badge-critical { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
         .badge-high     { background: #ffedd5; color: #c2410c; border: 1px solid #fdba74; }
         .badge-medium   { background: var(--primary-bg); color: var(--primary); border: 1px solid var(--primary-bg-2); }
         .badge-low      { background: var(--panel-2); color: var(--text-faint); border: 1px solid var(--border); }
+        /* V2.0 已删除 summit/critical 等级，仅保留高/中/低三档（badge-summit/badge-critical 已废弃）*/
 
         /* 关键词 */
         .keyword-tag {
@@ -431,6 +477,20 @@
             transition: all 0.15s;
         }
         .link-btn:hover { background: var(--primary-2); box-shadow: 0 2px 8px rgba(30,58,138,0.3); }
+
+        /* 双语截图按钮 */
+        .screenshot-btn {
+            display: inline-block; padding: 5px 10px;
+            background: #16a34a;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 11px; font-weight: 600;
+            white-space: nowrap;
+            margin-left: 4px;
+            transition: all 0.15s;
+        }
+        .screenshot-btn:hover { background: #15803d; box-shadow: 0 2px 8px rgba(22,163,74,0.3); }
 
         /* 空状态 */
         .empty-state { padding: 48px 20px; text-align: center; color: var(--text-faint); font-size: 14px; }
@@ -470,12 +530,12 @@
             <a href="china-news.html">🇨🇳 国内新闻看板</a>
         </nav>
         <h1>🌍 国际新闻看板</h1>
-        <div class="subtitle">信源：路透社 / BBC / 南华早报 / 卫报 / CNN / 纽约时报 / 华尔街日报 / 半岛电视台 / Politico / 华盛顿邮报 / 美联社 + 美国官方信源（白宫 / 国务院 / USTR / 财政部 / 商务部 / 国防部） · 聚焦元首级、重大突发、国际制裁、地缘热点 · 该看板仅供 Ira 信息看板体系参考交流</div>
+        <div class="subtitle">信源：路透社 / BBC / 南华早报 / 卫报 / CNN / 纽约时报 / 华尔街日报 / 半岛电视台 / Politico / 华盛顿邮报 / 美联社 + 美国官方信源（白宫 / 国务院 / USTR / 财政部 / 商务部 / 国防部） · 聚焦中美博弈、重大突发、国际制裁、地缘热点 · 该看板仅供 Ira 信息看板体系参考交流</div>
         <div class="stats-strip">
             <span class="pill">📅 时间窗：__NOW_STR__ （近 7 天）</span>
             <span class="pill">📊 要闻总数：<span class="v">__TOTAL_COUNT__</span> 条</span>
             <span class="pill green">📰 今日新增：<span class="v">__TODAY_COUNT__</span> 条</span>
-            <span class="pill gold">⭐ 元首级：<span class="v">__SUMMIT_COUNT__</span> 条</span>
+            <span class="pill gold">🔴 高优先级：<span class="v">__HIGH_COUNT__</span> 条</span>
         </div>
     </div>
 
@@ -488,22 +548,21 @@
     <!-- 数据源说明 -->
     <div class="source-note">
         💡 <span class="tag">数据源说明</span>国际权威媒体（路透/BBC/南华早报等）+ 美国官方信源（白宫/国务院/USTR/财政部/商务部/国防部）· 已过滤营销号/文娱/猎奇/天气等非权威内容。
-        <span class="tag">⭐ 元首级</span>为习近平/特朗普/普京等大国领导人相关，<span class="tag">高层动态</span>为政治局常委/国务委员/部长等部门，<span class="tag">部委动态</span>为各部委办/商务/外交/宣传部等。
     </div>
 
     <!-- 顶部统计卡片 -->
     <div class="stats-grid">
+        <div class="stat-card" style="border-left: 4px solid #22a35e; background: linear-gradient(180deg, #f0fdf4, #fff);">
+            <div class="stat-number" style="color: #16a34a;">__TODAY_COUNT__</div>
+            <div class="stat-label">🆕 今日新增</div>
+        </div>
         <div class="stat-card">
             <div class="stat-number">__TOTAL_COUNT__</div>
             <div class="stat-label">要闻总数（去重后）</div>
         </div>
-        <div class="stat-card summit">
-            <div class="stat-number">__SUMMIT_COUNT__</div>
-            <div class="stat-label">⭐ 元首级要闻</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">__TODAY_COUNT__</div>
-            <div class="stat-label">今日新增</div>
+        <div class="stat-card high-priority">
+            <div class="stat-number">__HIGH_COUNT__</div>
+            <div class="stat-label">🔴 高优先级要闻</div>
         </div>
         <div class="stat-card">
             <div class="stat-number">__DATE_COUNT__</div>
@@ -541,8 +600,6 @@
                 <span class="label">重要性</span>
                 <select class="filter-select" id="importanceFilter" onchange="filterNews()">
                     <option value="">全部</option>
-                    <option value="summit">⭐元首级</option>
-                    <option value="critical">🔴极高</option>
                     <option value="high">🟠高</option>
                     <option value="medium">🟡中</option>
                     <option value="low">🟢低</option>
@@ -583,18 +640,7 @@ const NEWS_DATA = __NEWS_DATA_JSON__;
 let selectedDate = 'all';
 let selectedColumn = 'all';
 
-function columnPriority(art) {
-    const text = ((art.title || '') + ' ' + (art.title_en || '')).toLowerCase();
-    const headWords = ['习近平','特朗普','国家主席','总统','主席','首相','普京','泽连斯基','Putin','Trump','Xi'];
-    const cnWords = ['中国','中方','中美','中俄','中欧','中日','中韩','台海','台湾','涉华','对华','China','Chinese','Beijing','北京'];
-    const hasHead = headWords.some(w => text.includes(w.toLowerCase()));
-    const hasCn = cnWords.some(w => text.includes(w.toLowerCase()));
-    if (hasHead && hasCn) return 0;
-    if (hasCn) return 1;
-    if (hasHead) return 2;
-    return 3;
-}
-
+// V1.5.6: 增强重要性——外媒报道中国高层=极高重要度
 function initFilters() {
     const sourceSet = new Set();
     const categorySet = new Set();
@@ -642,12 +688,31 @@ document.getElementById('dateHeader').addEventListener('click', function(e) {
     filterNews();
 });
 
-function getImportance(score, isSummit) {
-    if (isSummit || score >= 95) return { level: 'summit', label: '⭐元首级', cls: 'badge-summit' };
-    if (score >= 90) return { level: 'critical', label: '🔴极高', cls: 'badge-critical' };
-    if (score >= 85) return { level: 'high', label: '🟠高', cls: 'badge-high' };
-    if (score >= 75) return { level: 'medium', label: '🟡中', cls: 'badge-medium' };
-    return { level: 'low', label: '🟢低', cls: 'badge-low' };
+// V2.0 新重要性体系：高（涉华/对华制裁/AI科技战/中美元首）→ 中（非涉华热点）→ 低（一般）
+function getImportance(score, isSummit, titleText) {
+    const text = (titleText || '').toLowerCase();
+    // 高优先级：涉华、对华经贸制裁、AI科技战、中美元首
+    const highKeys = ['中国','习近平','Xi','中美','中俄','中欧','中日','中韩',
+        '台海','台湾','涉华','对华','China','Chinese','Beijing','北京',
+        '北戴河','beidaihe','政治局','国务院','外交部','国防部','商务部','USTR',
+        '对华关税','关税','制裁','实体清单','出口管制','301条款','UFLPA',
+        '强迫劳动','新疆','维吾尔','芯片战','芯片管制','AI竞争','半导体管制',
+        'DeepSeek','Qwen','华为','Huawei','中芯','TikTok','字节跳动','微信',
+        '特朗普','Trump','鲁比奥','Rubio','万斯','Vance','赫格塞斯','Hegseth',
+        '贝森特','Bessent','王毅','何立峰','拜登','Biden'];
+    if (highKeys.some(w => text.includes(w.toLowerCase()))) {
+        return { level: 'high', rank: 2, label: '🟠高', cls: 'badge-high' };
+    }
+    // 中优先级：非涉华地区热点（伊朗/霍尔木兹/俄乌/朝鲜等）
+    const midKeys = ['伊朗','Iran','Hormuz','霍尔木兹','俄乌','俄罗斯','Ukraine',
+        '朝鲜','North Korea','金正恩','Kim','哈马斯','Hamas','以色列','Israel',
+        '加沙','Gaza','胡塞','Houthi','沙特','Saudi','阿联酋','UAE',
+        '巴基斯坦','Pakistan','印度','India','缅甸','Myanmar','菲律宾','Philippines',
+        '莫迪','Modi','泽连斯基','Zelensky','普京','Putin'];
+    if (midKeys.some(w => text.includes(w.toLowerCase()))) {
+        return { level: 'medium', rank: 1, label: '🟡中', cls: 'badge-medium' };
+    }
+    return { level: 'low', rank: 0, label: '🟢低', cls: 'badge-low' };
 }
 
 function filterNews() {
@@ -673,8 +738,8 @@ function filterNews() {
         if (selectedColumn !== 'all' && item.column !== selectedColumn) return false;
         if (sourceFilter && item.source !== sourceFilter) return false;
         if (categoryFilter && item.category !== categoryFilter) return false;
-        const imp = getImportance(item.priority_score || 0, item.is_summit_level);
-        if (importanceFilter && imp.level !== importanceFilter) return false;
+        item._imp = getImportance(item.priority_score || 0, item.is_summit_level, (item.title_zh || '') + ' ' + (item.title_en || ''));
+        if (importanceFilter && item._imp.level !== importanceFilter) return false;
         if (searchText) {
             const searchIn = [(item.title || ''), (item.title_en || ''), (item.summary || ''), (item.keywords || []).join(' ')].join(' ').toLowerCase();
             if (!searchIn.includes(searchText)) return false;
@@ -682,20 +747,17 @@ function filterNews() {
         return true;
     });
 
-    // V1.5.1 修复：日期严格分组 + 元首级优先 + 栏目内优先级 + priority_score
+    // V2.0 排序：① 日期分组 ② 重要性等级（高>中>低）③ priority_score
     filteredArticles = filteredArticles.sort((a, b) => {
         if (a._isDateSeparator || b._isDateSeparator) return 0;
-        // 1) 日期分组（重要）：用字符串倒序，确保 8-03 永远在 8-02 之前
+        // 1) 日期分组（最重要）：字符串倒序
         const da = a._date || '', db = b._date || '';
         if (da !== db) return db.localeCompare(da);
-        // 2) 元首级（summit）优先
-        const aS = a.is_summit_level ? -1 : 0;
-        const bS = b.is_summit_level ? -1 : 0;
-        if (aS !== bS) return aS - bS;
-        // 3) 栏目内优先级（①元首+涉华 ②仅涉华 ③仅元首 ④其余）
-        const pa = columnPriority(a), pb = columnPriority(b);
-        if (pa !== pb) return pa - pb;
-        // 4) priority_score 降序
+        // 2) 重要性等级排序（核心）：高(2) > 中(1) > 低(0)
+        const ar = (a._imp && a._imp.rank) || 0;
+        const br = (b._imp && b._imp.rank) || 0;
+        if (ar !== br) return br - ar;
+        // 3) priority_score 降序
         return (b.priority_score || 0) - (a.priority_score || 0);
     });
 
@@ -709,15 +771,40 @@ function renderTable(articles) {
         tbody.innerHTML = '<tr><td colspan="9"><div class="empty-state">📭 当前筛选条件下无新闻</div></td></tr>';
         return;
     }
+
+    // 双语截图服务地址（部署在同一个 GitHub Pages 下，无需单独服务）
+    const SCREENSHOT_BASE_URL = 'https://iranorawahaha.github.io/international-news-kb/bilingual-screenshot.html';
     let globalIndex = 0;
+    // V2.3: 强化日期分组 — 星期/计数徽章/今日高亮/右侧概要
+    const TODAY_DATE = new Date().toISOString().slice(0, 10);
+    const WEEKDAY_MAP = {0:'周日',1:'周一',2:'周二',3:'周三',4:'周四',5:'周五',6:'周六'};
+    function fmtDateHeader(dateStr, count) {
+        const d = new Date(dateStr + 'T00:00:00');
+        const weekday = WEEKDAY_MAP[d.getDay()] || '';
+        const md = (d.getMonth()+1) + '月' + d.getDate() + '日';
+        const isToday = dateStr === TODAY_DATE;
+        const todayBadge = isToday ? 'today' : '';
+        // 概览：统计该日期的高/中/低条数
+        let highCnt = 0, medCnt = 0;
+        // 已在 filterNews 里计算过一遍，但这里需要重新算一遍（不严谨，简化）
+        return `<td colspan="9">
+            <div style="display:flex;align-items:center;gap:10px;">
+                <span class="date-icon">📅</span>
+                <span style="font-family:ui-monospace,monospace;">${md}</span>
+                <span class="date-weekday">${weekday}${isToday ? ' · 今日' : ''}</span>
+                <span class="date-count">${count} 条</span>
+                <span class="date-summary">${dateStr}</span>
+            </div>
+        </td>`;
+    }
     articles.forEach((item) => {
         const tr = document.createElement('tr');
         if (item._isDateSeparator) {
             tr.className = 'date-separator';
-            tr.innerHTML = `<td colspan="9">📅 ${item._date} · ${item._count} 条新闻</td>`;
+            tr.innerHTML = fmtDateHeader(item._date, item._count);
         } else {
             globalIndex++;
-            const imp = getImportance(item.priority_score || 0, item.is_summit_level);
+            const imp = item._imp || getImportance(item.priority_score || 0, item.is_summit_level, ((item.title_zh || '') + ' ' + (item.title_en || '')));
             let kws = item.keywords;
             if (typeof kws === 'string') kws = kws.replace(/，/g, ',').split(',').map(s => s.trim()).filter(Boolean);
             if (!Array.isArray(kws)) kws = [];
@@ -726,15 +813,14 @@ function renderTable(articles) {
                 <td>${globalIndex}</td>
                 <td style="white-space:nowrap">${item._date || ''}</td>
                 <td>
-                    <div class="title-en">${item.title_en || ''}</div>
-                    <div class="title-zh">${item.title_zh || item.title || ''}</div>
+                    ${(item.title_en && item.title_zh && item.title_en.trim() === item.title_zh.trim()) ? "<div class=\"title-zh\">" + (item.title_zh || '') + "</div>" : "<div class=\"title-en\">" + (item.title_en || '') + "</div><div class=\"title-zh\">" + (item.title_zh || item.title || '') + "</div>"}
                 </td>
                 <td><div class="summary-text">${item.summary_zh || item.summary || '-'}</div></td>
                 <td style="white-space:nowrap">${item.source || ''}</td>
                 <td style="white-space:nowrap">${item.category || ''}</td>
                 <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
                 <td>${keywords.map(k => `<span class="keyword-tag">${k}</span>`).join('')}</td>
-                <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文↗</a>` : '-'}</td>
+                <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文↗</a><a href="${SCREENSHOT_BASE_URL}?url=${encodeURIComponent(item.url)}&title_en=${encodeURIComponent(item.title_en || '')}&title_zh=${encodeURIComponent(item.title_zh || '')}" target="_blank" class="screenshot-btn" title="生成中英双语长截图">📸 双语</a>` : '-'}</td>
             `;
         }
         tbody.appendChild(tr);

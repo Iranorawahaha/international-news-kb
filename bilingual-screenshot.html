@@ -13,24 +13,24 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
 :root{
-  --bg: oklch(97% 0.005 250);
-  --bg-elev: oklch(100% 0 0);
-  --ink: oklch(20% 0.015 250);
-  --ink-2: oklch(40% 0.012 250);
-  --ink-3: oklch(55% 0.01 250);
-  --ink-4: oklch(70% 0.008 250);
-  --header-from: oklch(20% 0.04 265);
-  --header-to: oklch(15% 0.035 270);
-  --header-text: oklch(98% 0.005 250);
-  --pill-bg: oklch(28% 0.025 270 / .4);
-  --pill-text: oklch(95% 0.01 250);
-  --pill-border: oklch(100% 0 0 / .12);
-  --accent: oklch(60% 0.18 250);
-  --accent-soft: oklch(70% 0.14 250);
-  --border: oklch(90% 0.008 250);
-  --border-soft: oklch(95% 0.005 250);
-  --shadow: 0 4px 24px -8px oklch(20% 0.04 250 / .12), 0 2px 6px -2px oklch(20% 0.04 250 / .06);
-  --shadow-card: 0 1px 0 oklch(0% 0 0 / .03), 0 0 0 1px oklch(0% 0 0 / .04);
+  --bg: #f8fafc;
+  --bg-elev: #ffffff;
+  --ink: #1e293b;
+  --ink-2: #475569;
+  --ink-3: #64748b;
+  --ink-4: #94a3b8;
+  --header-from: #1e3a8a;
+  --header-to: #1a1f4d;
+  --header-text: #f8fafc;
+  --pill-bg: rgba(28, 38, 88, 0.4);
+  --pill-text: #e2e8f0;
+  --pill-border: rgba(255, 255, 255, 0.12);
+  --accent: #1d4ed8;
+  --accent-soft: #3b82f6;
+  --border: #cbd5e1;
+  --border-soft: #f1f5f9;
+  --shadow: 0 4px 24px -8px rgba(30, 58, 138, 0.12), 0 2px 6px -2px rgba(30, 58, 138, 0.06);
+  --shadow-card: 0 1px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.04);
   --radius: 12px;
   --radius-lg: 16px;
   --font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
@@ -50,7 +50,7 @@ body{font-family:var(--font);min-height:100dvh;display:flex;flex-direction:colum
 }
 .hero::before{
   content:"";position:absolute;inset:0;
-  background:radial-gradient(ellipse at top,oklch(40% 0.08 250 / .25),transparent 70%);
+  background:radial-gradient(ellipse at top,rgba(70, 90, 200, 0.25),transparent 70%);
   pointer-events:none;
 }
 .hero-inner{position:relative;z-index:1;max-width:560px;margin:0 auto}
@@ -64,7 +64,7 @@ body{font-family:var(--font);min-height:100dvh;display:flex;flex-direction:colum
 .hero .tagline{
   font-size:clamp(0.95rem,2vw,1.05rem);
   font-weight:400;
-  color:oklch(80% 0.02 250);
+  color:#94a3b8;
   margin-bottom:28px;
   letter-spacing:.01em;
 }
@@ -126,7 +126,7 @@ body{font-family:var(--font);min-height:100dvh;display:flex;flex-direction:colum
 }
 .input-card input:focus{
   border-color:var(--accent);
-  box-shadow:0 0 0 4px oklch(70% 0.14 250 / .12);
+  box-shadow:0 0 0 4px rgba(59, 130, 246, 0.12);
 }
 .input-card input::placeholder{color:var(--ink-4)}
 .input-card button{
@@ -178,11 +178,11 @@ body{font-family:var(--font);min-height:100dvh;display:flex;flex-direction:colum
 .error-card{
   display:none;margin-bottom:24px;
   padding:14px 18px;
-  background:oklch(98% 0.01 20);
-  border:1px solid oklch(85% 0.06 20);
-  border-left:3px solid oklch(60% 0.16 20);
+  background:#fef2f2;
+  border:1px solid #fca5a5;
+  border-left:3px solid #dc2626;
   border-radius:8px;
-  font-size:.85rem;color:oklch(40% 0.1 20);
+  font-size:.85rem;color:#991b1b;
   line-height:1.6;
 }
 .error-card.active{display:block}
@@ -319,7 +319,7 @@ body{font-family:var(--font);min-height:100dvh;display:flex;flex-direction:colum
 /* ── 渲染区（截图用） ── */
 .render-area{
   position:fixed;left:-9999px;top:0;width:720px;
-  background:oklch(98% 0.005 85);
+  background:#fefce8;
   font-family:"Newsreader",Georgia,serif;
 }
 .render-area .st{display:inline-block;font-size:12px;color:var(--ink-3);background:var(--bg);padding:3px 14px;border-radius:2px;margin-bottom:24px;font-family:var(--font)}
@@ -330,7 +330,7 @@ body{font-family:var(--font);min-height:100dvh;display:flex;flex-direction:colum
 .render-area .pb{margin-bottom:22px;padding-bottom:18px;border-bottom:1px dashed var(--border)}
 .render-area .pb:last-child{border-bottom:none}
 .render-area .en{font-size:17px;color:var(--ink);line-height:1.9;margin-bottom:10px}
-.render-area .zh{font-size:14px;color:var(--ink-2);line-height:1.85;padding-left:14px;border-left:2px solid oklch(80% 0.04 250 / .3);font-family:var(--font)}
+.render-area .zh{font-size:14px;color:var(--ink-2);line-height:1.85;padding-left:14px;border-left:2px solid rgba(148, 163, 184, 0.3);font-family:var(--font)}
 .render-area .ft{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);font-size:12px;color:var(--ink-3);font-family:var(--font)}
 .render-area .ft .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 .render-area .ft .logo{font-weight:600;color:var(--ink);font-size:13px}
@@ -528,16 +528,17 @@ function initSteps(){
   }
 }
 
-// ===================== 抓取代理 =====================
+// ===================== 抓取代理（V2.3：多源并发+回退） =====================
 const PROXIES=[
   url=>'https://api.allorigins.win/raw?url='+encodeURIComponent(url),
   url=>'https://corsproxy.io/?'+encodeURIComponent(url),
+  url=>'https://api.codetabs.com/v1/proxy/?quest='+encodeURIComponent(url),
   url=>'https://web.archive.org/web/0/'+url,
-  url=>'https://archive.org/wayback/available?url='+encodeURIComponent(url),
   url=>'https://webcache.googleusercontent.com/search?q=cache:'+encodeURIComponent(url),
+  url=>'https://api.allorigins.win/get?url='+encodeURIComponent(url),
 ];
 
-async function fetchProxied(url,timeout=20000){
+async function fetchProxied(url,timeout=15000){
   const errors=[];
   for(let i=0;i<PROXIES.length;i++){
     const proxyUrl=PROXIES[i](url);
@@ -547,7 +548,15 @@ async function fetchProxied(url,timeout=20000){
       const resp=await fetch(proxyUrl,{signal:ctrl.signal,redirect:'follow'});
       clearTimeout(t);
       if(!resp.ok)throw new Error('HTTP '+resp.status);
-      const text=await resp.text();
+
+      let text;
+      // allorigins /get 返回 JSON，需要解包 contents 字段
+      if(proxyUrl.includes('allorigins.win/get')){
+        const json=await resp.json();
+        text=json?.contents||'';
+      }else{
+        text=await resp.text();
+      }
 
       if(proxyUrl.includes('archive.org/wayback/available')){
         const json=JSON.parse(text);
@@ -558,17 +567,17 @@ async function fetchProxied(url,timeout=20000){
         const r2=await fetch(archived,{signal:c2.signal});
         clearTimeout(t2);
         const t2text=await r2.text();
-        if(t2text.length>3000)return t2text;
+        if(t2text.length>2000)return t2text;
         throw new Error('归档快照内容太短');
       }
 
-      if(text.length>3000)return text;
-      throw new Error('内容太短');
+      if(text.length>2000)return text;
+      throw new Error('内容太短 ('+text.length+')');
     }catch(e){
-      errors.push(e.message);
+      errors.push((i+1)+':'+e.message);
     }
   }
-  throw new Error('无法获取文章内容');
+  throw new Error('所有代理均失败：'+errors.join('; '));
 }
 
 // ===================== 正文提取 =====================
