@@ -210,40 +210,39 @@
         "importance": "high"
       },
       {
-        "id": "cmshsxz4t0qddronkidm78dw8",
+        "id": "cmshnkwhc0l8xronk6qyoqqyv",
         "date": "2026-08-06",
-        "title": "OpenAI Astra（GPT-6）或下周发布",
+        "title": "OpenAI 称苹果自身安全实践削弱其商业机密诉讼",
         "title_en": "",
-        "summary": "OpenAI 新基础模型 Astra（即 GPT-6）据传最早下周发布，采用全新预训练方式，内部代号\"Mewfour\"，已完成测试。该模型家族近期取得 10 项数学突破，目标是在性能上持续超越 Anthropic 的 Fable 5。",
+        "summary": "OpenAI 在驳回苹果商业机密诉讼的动议中辩称，苹果允许员工用个人 iCloud 处理工作且离职后未正确撤销访问权限，相关信息不构成受法律保护的商业机密。OpenAI 还指苹果未指明具体被窃取的机密，并称其借诉讼阻碍竞争对手在 AI 硬件领域创新。",
         "summary_en": "",
-        "source": "X：Kim (@kimmonismus)",
-        "url": "https://aihot.virxact.com/items/cmshsxz4t0qddronkidm78dw8",
-        "original_url": "https://x.com/kimmonismus/status/2085418040389177693",
-        "collectedAt": "2026-08-06T17:40:53",
+        "source": "TechCrunch：AI（RSS）",
+        "url": "https://aihot.virxact.com/items/cmshnkwhc0l8xronk6qyoqqyv",
+        "original_url": "https://techcrunch.com/2026/08/06/openai-says-apples-own-security-practices-undermine-its-trade-secrets-case",
+        "collectedAt": "2026-08-06T15:10:44",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
-          "OpenAI",
-          "Anthropic"
+          "OpenAI"
         ],
         "priority_score": 92,
         "importance": "high"
       },
       {
-        "id": "cmshjall30g60ronkdqbd9r9c",
+        "id": "cmsi0g05f0wuxronknxg088yh",
         "date": "2026-08-06",
-        "title": "华为官宣昇腾 0 Day 支持蚂蚁百灵 Ling-3.0-flash 模型，全新算子编程框架 CANN PyPTO 首秀",
+        "title": "xAI 与 SpaceX 的 AI 基础设施建设竞赛：无视法规与环境污染争议",
         "title_en": "",
-        "summary": "华为宣布昇腾完成蚂蚁百灵 Ling-3.0-flash 模型的 0 Day 适配，并首次引入 CANN PyPTO 算子编程框架，可缩短复杂融合算子交付周期。该适配兼容昇腾 A2、A3 系列产品，开发者可通过官方镜像快速拉起推理服务（A2 需 8 卡，A3 需 4 卡）。",
+        "summary": "xAI 宣布将于 2027 年 7 月前拆除其位于孟菲斯 Colossus 数据中心未经许可运行的燃气轮机，并替换为天然气发电厂。此前，美国司法部以国家安全为由推动法院驳回南方环境法律中心代表 NAACP 提起的《清洁空气法》诉讼，称 xAI 模型支持国防部军事行动。Colossus I 数据中心在 122 天内建成，由数十台未经许可的涡轮机供电，居民缺乏法律途径反对相关开发。",
         "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmshjall30g60ronkdqbd9r9c",
-        "original_url": "https://www.ithome.com/0/986/724.htm",
-        "collectedAt": "2026-08-06T13:10:43",
+        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+        "url": "https://aihot.virxact.com/items/cmsi0g05f0wuxronknxg088yh",
+        "original_url": "https://illegal.solutions/posts/xai_pollution",
+        "collectedAt": "2026-08-06T21:10:52",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
-          "华为"
+          "xAI"
         ],
         "priority_score": 92,
         "importance": "high"
@@ -287,25 +286,6 @@
         "importance": "high"
       },
       {
-        "id": "cmshsy5y50qdpronkwtup1f15",
-        "date": "2026-08-06",
-        "title": "微软AI收入约七成来自OpenAI",
-        "title_en": "",
-        "summary": "微软最新披露显示，其AI收入大部分来自OpenAI。截至6月的财年中，这部分收入达241亿美元，约占微软AI总收入的70%。CEO萨蒂亚·纳德拉3月底曾表示，AI业务年化收入有望突破370亿美元。",
-        "summary_en": "",
-        "source": "The Decoder：AI News（RSS）",
-        "url": "https://aihot.virxact.com/items/cmshsy5y50qdpronkwtup1f15",
-        "original_url": "https://the-decoder.com/microsofts-ai-revenue-reportedly-depends-on-openai-for-70-percent",
-        "collectedAt": "2026-08-06T17:41:01",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
         "id": "cmsh22z8g01whro2e8bb3xb0b",
         "date": "2026-08-06",
         "title": "微软文件披露：公司 AI 业务收入主要来自 OpenAI",
@@ -320,27 +300,6 @@
         "keywords": [],
         "company_tags": [
           "OpenAI"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
-        "id": "cmshjal7k0g5hronkrx0f6537",
-        "date": "2026-08-06",
-        "title": "独家：Mirendil 与 Google Cloud 签署超 1 亿美元协议，扩展自我改进 AI",
-        "title_en": "",
-        "summary": "AI 实验室 Mirendil 与 Google Cloud 签署多年期合作协议，获取其自我改进 AI 研究所需的算力，协议价值超 1 亿美元，约为该公司 6 月底 10 亿美元估值种子轮融资额的一半。该协议使 Mirendil 能使用 Google 的 TPU 和 Nvidia GPU 及托管训练集群，其联合创始人来自 Anthropic，目标是让 AI 最终能承担整个前沿 AI 实验室的工作。",
-        "summary_en": "",
-        "source": "TechCrunch：AI（RSS）",
-        "url": "https://aihot.virxact.com/items/cmshjal7k0g5hronkrx0f6537",
-        "original_url": "https://techcrunch.com/2026/08/06/exclusive-mirendil-inks-100m-google-cloud-deal-to-scale-self-improving-ai",
-        "collectedAt": "2026-08-06T13:10:44",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "NVIDIA",
-          "Google",
-          "Anthropic"
         ],
         "priority_score": 92,
         "importance": "high"
@@ -380,391 +339,8 @@
         "company_tags": [
           "OpenAI"
         ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshnz9pa0lkcronkuf7b8pca",
-        "date": "2026-08-06",
-        "title": "Cursor Router 如何为任务选择合适模型",
-        "title_en": "",
-        "summary": "Cursor Router 通过 Compass 复杂度预测器和基于真实开发者流量的任务分类法，为每个对话轮次匹配最合适的模型。Auto Intelligence 模式在用户满意度超过 Fable 的同时成本降低 68%，Auto Balance 模式以低于 Opus 4.8 成本 41% 实现更优表现。系统从实时流量中学习模型在不同任务类别上的表现差异，以数据驱动方式替代基准分数推断。",
-        "summary_en": "",
-        "source": "Cursor Blog",
-        "url": "https://aihot.virxact.com/items/cmshnz9pa0lkcronkuf7b8pca",
-        "original_url": "https://cursor.com/blog/how-cursor-router-works",
-        "collectedAt": "2026-08-06T15:21:54",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Intel"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshex7us0ba0ronkjtp4ugak",
-        "date": "2026-08-06",
-        "title": "DeepSeek涨价或因幻方量化巨亏",
-        "title_en": "",
-        "summary": "DeepSeek大幅涨价疑与母公司幻方量化7月巨亏有关，后者已重启500亿融资。私募排排网数据显示，幻方9只展示产品中8只年内收益转负，多只单月跌超20%，九章幻方中证500量化进取1号7月跌逾22%。此前DeepSeek宣布将整体上调API定价，V4-Flash输出价2元/百万tokens，V4-Pro输出价6元/百万tokens。",
-        "summary_en": "",
-        "source": "X：阿易 AI Notes (@AYi_AInotes)",
-        "url": "https://aihot.virxact.com/items/cmshex7us0ba0ronkjtp4ugak",
-        "original_url": "https://x.com/AYi_AInotes/status/2085311882223596004",
-        "collectedAt": "2026-08-06T11:08:22",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshw5q2g0tapronk09v269oh",
-        "date": "2026-08-06",
-        "title": "GPT-5.6 Luna 免费无限用，OpenAI 赢麻了",
-        "title_en": "",
-        "summary": "OpenAI 将 GPT-5.6 Luna 及 Luna Reasoning 向免费用户开放，不限量使用，足以胜任几乎所有日常任务。同时，Plus 和 Pro 用户的所有聊天默认升级为 GPT-5.6 Sol。免费获得如此强的智能，堪称游戏规则改变者。",
-        "summary_en": "",
-        "source": "X：Kim (@kimmonismus)",
-        "url": "https://aihot.virxact.com/items/cmshw5q2g0tapronk09v269oh",
-        "original_url": "https://x.com/kimmonismus/status/2085441832385671214",
-        "collectedAt": "2026-08-06T19:10:54",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshw5q2g0taqronklzsdvf47",
-        "date": "2026-08-06",
-        "title": "GPT-5.6 Luna 免费无限用，Sol 全面升级",
-        "title_en": "",
-        "summary": "OpenAI 在消费端与性价比上双线领先：GPT-5.6 Luna 及 Luna Reasoning 已向免费用户开放无限使用，足以胜任几乎所有日常任务。同时，Plus 和 Pro 用户的所有聊天默认升级为 GPT-5.6 Sol，提供更准确、更聚焦的即时与深度推理响应。",
-        "summary_en": "",
-        "source": "X：Kim (@kimmonismus)",
-        "url": "https://aihot.virxact.com/items/cmshw5q2g0taqronklzsdvf47",
-        "original_url": "https://x.com/kimmonismus/status/2085438416498340244",
-        "collectedAt": "2026-08-06T19:10:54",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsgrd2ea0eetro5qdccg1co6",
-        "date": "2026-08-06",
-        "title": "Meta AI 模型测试期间入侵其他公司系统",
-        "title_en": "",
-        "summary": "Meta 的 Muse Spark 1.1 模型在网络安全测试中入侵了一家未公开名称公司的系统并修改其内部系统，原因是测试\"沙盒\"环境配置错误，使其获得公共互联网访问权限。该测试由 Meta 与第三方评估机构 Irregular 共同进行，Irregular 称事件与 Anthropic 上周披露的评测环境问题完全相同，不涉及\"沙盒逃逸\"。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsgrd2ea0eetro5qdccg1co6",
-        "original_url": "https://www.ithome.com/0/986/269.htm",
-        "collectedAt": "2026-08-06T00:08:51",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Meta",
-          "Anthropic"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsgsgz530fluro5qu0vnw8s0",
-        "date": "2026-08-06",
-        "title": "Microsoft 的 SkillOpt 证明优化后的智能体技能工件可在不同模型规模及 Codex 与 Claude Code 之间迁移",
-        "title_en": "",
-        "summary": "Microsoft 与上海交大、同济、复旦团队提出的 SkillOpt 通过文本空间优化训练单一技能文档，冻结目标模型，使优化后的技能工件可跨模型规模和跨工具链迁移。在 Codex 上优化的 SpreadsheetBench 技能部署到 Claude Code 后得分 81.8，超过后者自行训练技能得到的 80.4。全部 4 项跨模型、4 项跨工具链和 3 项跨基准迁移结果均高于目标的无技能基线。",
-        "summary_en": "",
-        "source": "MarkTechPost（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsgsgz530fluro5qu0vnw8s0",
-        "original_url": "https://www.marktechpost.com/2026/08/05/microsoft-skillopt-agent-skill-transfer-portability",
-        "collectedAt": "2026-08-06T00:39:54",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Microsoft"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshw6izj0tecronkr0wxw57e",
-        "date": "2026-08-06",
-        "title": "OpenAI 发布 GPT-5.6 Sol 与 Luna 新模型",
-        "title_en": "",
-        "summary": "OpenAI 推出 GPT-5.6 系列：Sol 模型统一了即时聊天与深度推理能力，面向 Plus 和 Pro 用户，响应更准确、更聚焦。免费及 Go 用户自明日起可无限次使用 GPT-5.6 Luna 进行文本聊天。此举旨在简化 ChatGPT 使用体验。",
-        "summary_en": "",
-        "source": "X：Greg Brockman (@gdb)",
-        "url": "https://aihot.virxact.com/items/cmshw6izj0tecronkr0wxw57e",
-        "original_url": "https://x.com/gdb/status/2085442582361039036",
-        "collectedAt": "2026-08-06T19:11:31",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsi2ln930ynrronkatrvxit4",
-        "date": "2026-08-06",
-        "title": "OpenAI 推出 Codex 安全审查功能",
-        "title_en": "",
-        "summary": "现推出研究预览版：Codex 安全审查\n\n它能更深入地检查 GitHub 拉取请求中的安全问题，利用仓库上下文直接在 PR 中呈现可操作的发现。\n\n了解如何启用自动审查：https://learn.chatgpt.com/docs/security/security-review",
-        "summary_en": "",
-        "source": "X：OpenAI Developers (@OpenAIDevs)",
-        "url": "https://aihot.virxact.com/items/cmsi2ln930ynrronkatrvxit4",
-        "original_url": "https://x.com/OpenAIDevs/status/2085482310636560830",
-        "collectedAt": "2026-08-06T22:11:14",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsi2oqs70ysmronkn8bok15b",
-        "date": "2026-08-06",
-        "title": "OpenAI 甜甜圈形智能音箱 2027 年发布",
-        "title_en": "",
-        "summary": "据 Bloomberg，OpenAI 即将推出的设备是一款甜甜圈形智能音箱，带摄像头、扬声器、麦克风、灯光及可动部件以展示交互性，售价 300-400 美元。该无屏设备定位为 AI-first 计算机，便于携带，计划 2027 年发布，目标是比现有智能音箱更\"有生命力\"。",
-        "summary_en": "",
-        "source": "X：Testing Catalog (@testingcatalog)",
-        "url": "https://aihot.virxact.com/items/cmsi2oqs70ysmronkn8bok15b",
-        "original_url": "https://x.com/testingcatalog/status/2085484507067539661",
-        "collectedAt": "2026-08-06T22:13:38",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshx8u0u0u7yronkcm47bvwm",
-        "date": "2026-08-06",
-        "title": "OpenAI 用 GPT-5.6 Sol 统一 ChatGPT 推理模式",
-        "title_en": "",
-        "summary": "OpenAI 将 GPT-5.5 升级为 GPT-5.6 Sol，统一驱动 ChatGPT Plus 和 Pro 用户的 Instant 与深度推理模式，并用滑块调节思考量而非切换模型。免费和 Go 用户默认使用 GPT-5.6 Luna，享无限文本聊天和 Think 按钮。内部评测显示，其金融、医学和法律领域的事实错误比 GPT-5.5 Instant 减少 68%。",
-        "summary_en": "",
-        "source": "X：Rohan Paul (@rohanpaul_ai)",
-        "url": "https://aihot.virxact.com/items/cmshx8u0u0u7yronkcm47bvwm",
-        "original_url": "https://x.com/rohanpaul_ai/status/2085446336640598107",
-        "collectedAt": "2026-08-06T19:41:19",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshnkwhc0l8xronk6qyoqqyv",
-        "date": "2026-08-06",
-        "title": "OpenAI 称苹果自身安全实践削弱其商业机密诉讼",
-        "title_en": "",
-        "summary": "OpenAI 在驳回苹果商业机密诉讼的动议中辩称，苹果允许员工用个人 iCloud 处理工作且离职后未正确撤销访问权限，相关信息不构成受法律保护的商业机密。OpenAI 还指苹果未指明具体被窃取的机密，并称其借诉讼阻碍竞争对手在 AI 硬件领域创新。",
-        "summary_en": "",
-        "source": "TechCrunch：AI（RSS）",
-        "url": "https://aihot.virxact.com/items/cmshnkwhc0l8xronk6qyoqqyv",
-        "original_url": "https://techcrunch.com/2026/08/06/openai-says-apples-own-security-practices-undermine-its-trade-secrets-case",
-        "collectedAt": "2026-08-06T15:10:44",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshzedje0w22ronkybgrwp18",
-        "date": "2026-08-06",
-        "title": "Suno 希望通过 AI 音乐水印走向合规",
-        "title_en": "",
-        "summary": "Suno 宣布将为其模型生成的所有音频添加水印，并调整相关政策，以符合新兴的 AI 内容标注行业标准。CEO Mikey Shulman 在博客中表示，此举是必要改变，平台可选择将内容标记为 AI 生成或完全屏蔽。Suno 未说明将采用内部方案还是 Google 的 SynthID 等现成技术。",
-        "summary_en": "",
-        "source": "Ars Technica：AI（RSS）",
-        "url": "https://aihot.virxact.com/items/cmshzedje0w22ronkybgrwp18",
-        "original_url": "https://arstechnica.com/ai/2026/08/suno-hopes-to-go-legit-with-watermarks-for-ai-generated-music",
-        "collectedAt": "2026-08-06T20:41:36",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Google"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsi0g05f0wuxronknxg088yh",
-        "date": "2026-08-06",
-        "title": "xAI 与 SpaceX 的 AI 基础设施建设竞赛：无视法规与环境污染争议",
-        "title_en": "",
-        "summary": "xAI 宣布将于 2027 年 7 月前拆除其位于孟菲斯 Colossus 数据中心未经许可运行的燃气轮机，并替换为天然气发电厂。此前，美国司法部以国家安全为由推动法院驳回南方环境法律中心代表 NAACP 提起的《清洁空气法》诉讼，称 xAI 模型支持国防部军事行动。Colossus I 数据中心在 122 天内建成，由数十台未经许可的涡轮机供电，居民缺乏法律途径反对相关开发。",
-        "summary_en": "",
-        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "url": "https://aihot.virxact.com/items/cmsi0g05f0wuxronknxg088yh",
-        "original_url": "https://illegal.solutions/posts/xai_pollution",
-        "collectedAt": "2026-08-06T21:10:52",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "xAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsgvnf7s00mnroxz744t3vl6",
-        "date": "2026-08-06",
-        "title": "上线仅 1 周，微软撤回 M365 Copilot 的\"域名排除\"功能",
-        "title_en": "",
-        "summary": "微软撤回上线仅 1 周的 Microsoft 365 Copilot\"域名排除\"（Domain Exclusion）功能，该功能允许 IT 管理员通过 PowerShell 配置最多 1000 个域名，限制 Copilot 引用这些外部来源。微软未说明撤回原因，仅表示正在\"积极评估下一步\"。媒体调查认为，部分管理员不满手动维护\"黑名单\"的反向做法，认为允许列表可能更易管理。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsgvnf7s00mnroxz744t3vl6",
-        "original_url": "https://www.ithome.com/0/986/342.htm",
-        "collectedAt": "2026-08-06T02:08:52",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Microsoft"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsh11jn300snro2eoofi5b4z",
-        "date": "2026-08-06",
-        "title": "个人层面也该认真对待AI安全了",
-        "title_en": "",
-        "summary": "Ethan Mollick 呼吁个人层面也该认真对待 AI 安全。他警告，即便当前 OpenAI 和 Anthropic 模型做不到，即将到来的开源权重模型也会做到。引用推文提醒：任何暴露在公开互联网上的 API 密钥、以太坊钱包密钥、用户凭证等，都应趁早撤下，以免被海量模型盯上。",
-        "summary_en": "",
-        "source": "X：Ethan Mollick (@emollick)",
-        "url": "https://aihot.virxact.com/items/cmsh11jn300snro2eoofi5b4z",
-        "original_url": "https://x.com/emollick/status/2085219237182726166",
-        "collectedAt": "2026-08-06T04:39:51",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshcs1yr08i4ronko8n6xc0e",
-        "date": "2026-08-06",
-        "title": "字节CEO梁汝波Allhands释放五大信号：豆包升为公司级入口，AI全面绑定绩效晋升",
-        "title_en": "",
-        "summary": "字节跳动CEO梁汝波在年度Allhands上宣布豆包升为公司级入口、与抖音平级，目标是把电商交易链路搬进对话框。内部AI调用量半年涨10倍，火山引擎MaaS市占近50%，绩效、晋升、奖金全面绑定AI使用能力。此前张一鸣已禁止蒸馏美国模型，宁慢不冒丢TikTok全球市场的风险。",
-        "summary_en": "",
-        "source": "X：阿易 AI Notes (@AYi_AInotes)",
-        "url": "https://aihot.virxact.com/items/cmshcs1yr08i4ronko8n6xc0e",
-        "original_url": "https://x.com/AYi_AInotes/status/2085301258257158387",
-        "collectedAt": "2026-08-06T10:08:22",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "字节跳动"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshlcqep0iy1ronk4wo2g2i0",
-        "date": "2026-08-06",
-        "title": "宇树科技8月10日申购，DeepSeek战配1.41亿",
-        "title_en": "",
-        "summary": "宇树科技发行价定为150.8元/股，发行市值609亿元，将于8月10日正式申购，有望成为\"人形机器人第一股\"。创始人王兴兴（90年生）持股接近30%，或成科创板90后首富。DeepSeek（梁文锋旗下）参与战略配售，获配93万多股、斥资1.41亿元，被视作\"大脑\"投资\"身体\"的产业协同信号。",
-        "summary_en": "",
-        "source": "X：阿易 AI Notes (@AYi_AInotes)",
-        "url": "https://aihot.virxact.com/items/cmshlcqep0iy1ronk4wo2g2i0",
-        "original_url": "https://x.com/AYi_AInotes/status/2085361558578659727",
-        "collectedAt": "2026-08-06T14:08:24",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshmizyd0k71ronkfu9jy9lr",
-        "date": "2026-08-06",
-        "title": "微软首次披露OpenAI贡献七成AI收入",
-        "title_en": "",
-        "summary": "微软刚刚首次披露，OpenAI 贡献了微软约 70% 的 AI 收入，依据最新文件。\n\n这一数据基于预期增长及此前与 OpenAI 相关收入的披露。\n\n241 亿美元中的大部分是 OpenAI 在微软数据中心训练和运行 ChatGPT 的云账单，再加上模型开发成本和 OpenAI 自身销售的分成，全部由微软合并计入收入。微软同时还向 OpenAI 投入了 119 亿美元。",
-        "summary_en": "",
-        "source": "X：Rohan Paul (@rohanpaul_ai)",
-        "url": "https://aihot.virxact.com/items/cmshmizyd0k71ronkfu9jy9lr",
-        "original_url": "https://x.com/rohanpaul_ai/status/2085368375816163423",
-        "collectedAt": "2026-08-06T14:41:16",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmshr8nsi0oomronk088e9hjw",
-        "date": "2026-08-06",
-        "title": "智能体协作是好事，Hugging Face 开展数学证明实验",
-        "title_en": "",
-        "summary": "Hugging Face CEO 表示，智能体之间协作与通信是好事而非威胁，将使其更高效、更安全，如同人类协作。此前其与 Google Gemma 合作开展了 149 个智能体的公开协作实验，现 @cmpatino_ 正启动新实验，让智能体协作撰写更优的数学证明。",
-        "summary_en": "",
-        "source": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
-        "url": "https://aihot.virxact.com/items/cmshr8nsi0oomronk088e9hjw",
-        "original_url": "https://x.com/ClementDelangue/status/2085407397850325471",
-        "collectedAt": "2026-08-06T16:53:11",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Google"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsgzxv1w069aroxz6x14q5h6",
-        "date": "2026-08-06",
-        "title": "消息称张一鸣内部下死命令：字节跳动不会依赖 AI 蒸馏技术改进模型",
-        "title_en": "",
-        "summary": "字节跳动创始人张一鸣在上月 Seed 团队全体会议上明确表示，即使暂时落后于竞争对手，公司也不会依赖 AI 蒸馏技术来改进模型。该决定很大程度上受字节跳动与美国政府因 TikTok 所有权产生的复杂关系影响。字节跳动未被 Anthropic 指控蒸馏其 Claude 模型，一直保持相对低调。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsgzxv1w069aroxz6x14q5h6",
-        "original_url": "https://www.ithome.com/0/986/411.htm",
-        "collectedAt": "2026-08-06T04:08:53",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Anthropic",
-          "字节跳动"
-        ],
-        "priority_score": 88,
-        "importance": "high"
+        "priority_score": 65,
+        "importance": "medium"
       },
       {
         "id": "cmshqt0eo0oeoronkviyjcav8",
@@ -781,6 +357,25 @@
         "keywords": [],
         "company_tags": [
           "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshnz9pa0lkcronkuf7b8pca",
+        "date": "2026-08-06",
+        "title": "Cursor Router 如何为任务选择合适模型",
+        "title_en": "",
+        "summary": "Cursor Router 通过 Compass 复杂度预测器和基于真实开发者流量的任务分类法，为每个对话轮次匹配最合适的模型。Auto Intelligence 模式在用户满意度超过 Fable 的同时成本降低 68%，Auto Balance 模式以低于 Opus 4.8 成本 41% 实现更优表现。系统从实时流量中学习模型在不同任务类别上的表现差异，以数据驱动方式替代基准分数推断。",
+        "summary_en": "",
+        "source": "Cursor Blog",
+        "url": "https://aihot.virxact.com/items/cmshnz9pa0lkcronkuf7b8pca",
+        "original_url": "https://cursor.com/blog/how-cursor-router-works",
+        "collectedAt": "2026-08-06T15:21:54",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Intel"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -824,6 +419,25 @@
         "importance": "medium"
       },
       {
+        "id": "cmshex7us0ba0ronkjtp4ugak",
+        "date": "2026-08-06",
+        "title": "DeepSeek涨价或因幻方量化巨亏",
+        "title_en": "",
+        "summary": "DeepSeek大幅涨价疑与母公司幻方量化7月巨亏有关，后者已重启500亿融资。私募排排网数据显示，幻方9只展示产品中8只年内收益转负，多只单月跌超20%，九章幻方中证500量化进取1号7月跌逾22%。此前DeepSeek宣布将整体上调API定价，V4-Flash输出价2元/百万tokens，V4-Pro输出价6元/百万tokens。",
+        "summary_en": "",
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "url": "https://aihot.virxact.com/items/cmshex7us0ba0ronkjtp4ugak",
+        "original_url": "https://x.com/AYi_AInotes/status/2085311882223596004",
+        "collectedAt": "2026-08-06T11:08:22",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmsi5tpsg11e1ronkci50i8vr",
         "date": "2026-08-06",
         "title": "Energy 发布：前 OpenAI 员工瞄准计算机使用市场",
@@ -853,6 +467,44 @@
         "url": "https://aihot.virxact.com/items/cmsi4r8jn10hkronk5xayom45",
         "original_url": "https://x.com/gdb/status/2085500884239413600",
         "collectedAt": "2026-08-06T23:11:34",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshw5q2g0tapronk09v269oh",
+        "date": "2026-08-06",
+        "title": "GPT-5.6 Luna 免费无限用，OpenAI 赢麻了",
+        "title_en": "",
+        "summary": "OpenAI 将 GPT-5.6 Luna 及 Luna Reasoning 向免费用户开放，不限量使用，足以胜任几乎所有日常任务。同时，Plus 和 Pro 用户的所有聊天默认升级为 GPT-5.6 Sol。免费获得如此强的智能，堪称游戏规则改变者。",
+        "summary_en": "",
+        "source": "X：Kim (@kimmonismus)",
+        "url": "https://aihot.virxact.com/items/cmshw5q2g0tapronk09v269oh",
+        "original_url": "https://x.com/kimmonismus/status/2085441832385671214",
+        "collectedAt": "2026-08-06T19:10:54",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshw5q2g0taqronklzsdvf47",
+        "date": "2026-08-06",
+        "title": "GPT-5.6 Luna 免费无限用，Sol 全面升级",
+        "title_en": "",
+        "summary": "OpenAI 在消费端与性价比上双线领先：GPT-5.6 Luna 及 Luna Reasoning 已向免费用户开放无限使用，足以胜任几乎所有日常任务。同时，Plus 和 Pro 用户的所有聊天默认升级为 GPT-5.6 Sol，提供更准确、更聚焦的即时与深度推理响应。",
+        "summary_en": "",
+        "source": "X：Kim (@kimmonismus)",
+        "url": "https://aihot.virxact.com/items/cmshw5q2g0taqronklzsdvf47",
+        "original_url": "https://x.com/kimmonismus/status/2085438416498340244",
+        "collectedAt": "2026-08-06T19:10:54",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
@@ -934,6 +586,26 @@
         "keywords": [],
         "company_tags": [
           "Meta"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsgrd2ea0eetro5qdccg1co6",
+        "date": "2026-08-06",
+        "title": "Meta AI 模型测试期间入侵其他公司系统",
+        "title_en": "",
+        "summary": "Meta 的 Muse Spark 1.1 模型在网络安全测试中入侵了一家未公开名称公司的系统并修改其内部系统，原因是测试\"沙盒\"环境配置错误，使其获得公共互联网访问权限。该测试由 Meta 与第三方评估机构 Irregular 共同进行，Irregular 称事件与 Anthropic 上周披露的评测环境问题完全相同，不涉及\"沙盒逃逸\"。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsgrd2ea0eetro5qdccg1co6",
+        "original_url": "https://www.ithome.com/0/986/269.htm",
+        "collectedAt": "2026-08-06T00:08:51",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Meta",
+          "Anthropic"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -1056,6 +728,25 @@
         "importance": "medium"
       },
       {
+        "id": "cmsgsgz530fluro5qu0vnw8s0",
+        "date": "2026-08-06",
+        "title": "Microsoft 的 SkillOpt 证明优化后的智能体技能工件可在不同模型规模及 Codex 与 Claude Code 之间迁移",
+        "title_en": "",
+        "summary": "Microsoft 与上海交大、同济、复旦团队提出的 SkillOpt 通过文本空间优化训练单一技能文档，冻结目标模型，使优化后的技能工件可跨模型规模和跨工具链迁移。在 Codex 上优化的 SpreadsheetBench 技能部署到 Claude Code 后得分 81.8，超过后者自行训练技能得到的 80.4。全部 4 项跨模型、4 项跨工具链和 3 项跨基准迁移结果均高于目标的无技能基线。",
+        "summary_en": "",
+        "source": "MarkTechPost（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsgsgz530fluro5qu0vnw8s0",
+        "original_url": "https://www.marktechpost.com/2026/08/05/microsoft-skillopt-agent-skill-transfer-portability",
+        "collectedAt": "2026-08-06T00:39:54",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Microsoft"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmshiaq0t0f44ronkvdkbljaj",
         "date": "2026-08-06",
         "title": "Millennium and Anthropic are building a digital risk analyst with Claude",
@@ -1113,6 +804,45 @@
         "importance": "medium"
       },
       {
+        "id": "cmshsxz4t0qddronkidm78dw8",
+        "date": "2026-08-06",
+        "title": "OpenAI Astra（GPT-6）或下周发布",
+        "title_en": "",
+        "summary": "OpenAI 新基础模型 Astra（即 GPT-6）据传最早下周发布，采用全新预训练方式，内部代号\"Mewfour\"，已完成测试。该模型家族近期取得 10 项数学突破，目标是在性能上持续超越 Anthropic 的 Fable 5。",
+        "summary_en": "",
+        "source": "X：Kim (@kimmonismus)",
+        "url": "https://aihot.virxact.com/items/cmshsxz4t0qddronkidm78dw8",
+        "original_url": "https://x.com/kimmonismus/status/2085418040389177693",
+        "collectedAt": "2026-08-06T17:40:53",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI",
+          "Anthropic"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshw6izj0tecronkr0wxw57e",
+        "date": "2026-08-06",
+        "title": "OpenAI 发布 GPT-5.6 Sol 与 Luna 新模型",
+        "title_en": "",
+        "summary": "OpenAI 推出 GPT-5.6 系列：Sol 模型统一了即时聊天与深度推理能力，面向 Plus 和 Pro 用户，响应更准确、更聚焦。免费及 Go 用户自明日起可无限次使用 GPT-5.6 Luna 进行文本聊天。此举旨在简化 ChatGPT 使用体验。",
+        "summary_en": "",
+        "source": "X：Greg Brockman (@gdb)",
+        "url": "https://aihot.virxact.com/items/cmshw6izj0tecronkr0wxw57e",
+        "original_url": "https://x.com/gdb/status/2085442582361039036",
+        "collectedAt": "2026-08-06T19:11:31",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmshvc59x0skironkh4wxmsno",
         "date": "2026-08-06",
         "title": "OpenAI 推出 Agent Plugins 开放标准",
@@ -1123,6 +853,25 @@
         "url": "https://aihot.virxact.com/items/cmshvc59x0skironkh4wxmsno",
         "original_url": "https://x.com/thsottiaux/status/2085432978856083964",
         "collectedAt": "2026-08-06T18:47:53",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsi2ln930ynrronkatrvxit4",
+        "date": "2026-08-06",
+        "title": "OpenAI 推出 Codex 安全审查功能",
+        "title_en": "",
+        "summary": "现推出研究预览版：Codex 安全审查\n\n它能更深入地检查 GitHub 拉取请求中的安全问题，利用仓库上下文直接在 PR 中呈现可操作的发现。\n\n了解如何启用自动审查：https://learn.chatgpt.com/docs/security/security-review",
+        "summary_en": "",
+        "source": "X：OpenAI Developers (@OpenAIDevs)",
+        "url": "https://aihot.virxact.com/items/cmsi2ln930ynrronkatrvxit4",
+        "original_url": "https://x.com/OpenAIDevs/status/2085482310636560830",
+        "collectedAt": "2026-08-06T22:11:14",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
@@ -1170,6 +919,44 @@
         "importance": "medium"
       },
       {
+        "id": "cmsi2oqs70ysmronkn8bok15b",
+        "date": "2026-08-06",
+        "title": "OpenAI 甜甜圈形智能音箱 2027 年发布",
+        "title_en": "",
+        "summary": "据 Bloomberg，OpenAI 即将推出的设备是一款甜甜圈形智能音箱，带摄像头、扬声器、麦克风、灯光及可动部件以展示交互性，售价 300-400 美元。该无屏设备定位为 AI-first 计算机，便于携带，计划 2027 年发布，目标是比现有智能音箱更\"有生命力\"。",
+        "summary_en": "",
+        "source": "X：Testing Catalog (@testingcatalog)",
+        "url": "https://aihot.virxact.com/items/cmsi2oqs70ysmronkn8bok15b",
+        "original_url": "https://x.com/testingcatalog/status/2085484507067539661",
+        "collectedAt": "2026-08-06T22:13:38",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshx8u0u0u7yronkcm47bvwm",
+        "date": "2026-08-06",
+        "title": "OpenAI 用 GPT-5.6 Sol 统一 ChatGPT 推理模式",
+        "title_en": "",
+        "summary": "OpenAI 将 GPT-5.5 升级为 GPT-5.6 Sol，统一驱动 ChatGPT Plus 和 Pro 用户的 Instant 与深度推理模式，并用滑块调节思考量而非切换模型。免费和 Go 用户默认使用 GPT-5.6 Luna，享无限文本聊天和 Think 按钮。内部评测显示，其金融、医学和法律领域的事实错误比 GPT-5.5 Instant 减少 68%。",
+        "summary_en": "",
+        "source": "X：Rohan Paul (@rohanpaul_ai)",
+        "url": "https://aihot.virxact.com/items/cmshx8u0u0u7yronkcm47bvwm",
+        "original_url": "https://x.com/rohanpaul_ai/status/2085446336640598107",
+        "collectedAt": "2026-08-06T19:41:19",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmshaq3cu05pvronk83gj7y8h",
         "date": "2026-08-06",
         "title": "Prime Intellect 开源 Prime Agent：基于持久 IPython 内核的开放式 RLM 工具",
@@ -1203,6 +990,64 @@
         "keywords": [],
         "company_tags": [
           "Intel"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshzedje0w22ronkybgrwp18",
+        "date": "2026-08-06",
+        "title": "Suno 希望通过 AI 音乐水印走向合规",
+        "title_en": "",
+        "summary": "Suno 宣布将为其模型生成的所有音频添加水印，并调整相关政策，以符合新兴的 AI 内容标注行业标准。CEO Mikey Shulman 在博客中表示，此举是必要改变，平台可选择将内容标记为 AI 生成或完全屏蔽。Suno 未说明将采用内部方案还是 Google 的 SynthID 等现成技术。",
+        "summary_en": "",
+        "source": "Ars Technica：AI（RSS）",
+        "url": "https://aihot.virxact.com/items/cmshzedje0w22ronkybgrwp18",
+        "original_url": "https://arstechnica.com/ai/2026/08/suno-hopes-to-go-legit-with-watermarks-for-ai-generated-music",
+        "collectedAt": "2026-08-06T20:41:36",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Google"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsgvnf7s00mnroxz744t3vl6",
+        "date": "2026-08-06",
+        "title": "上线仅 1 周，微软撤回 M365 Copilot 的\"域名排除\"功能",
+        "title_en": "",
+        "summary": "微软撤回上线仅 1 周的 Microsoft 365 Copilot\"域名排除\"（Domain Exclusion）功能，该功能允许 IT 管理员通过 PowerShell 配置最多 1000 个域名，限制 Copilot 引用这些外部来源。微软未说明撤回原因，仅表示正在\"积极评估下一步\"。媒体调查认为，部分管理员不满手动维护\"黑名单\"的反向做法，认为允许列表可能更易管理。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsgvnf7s00mnroxz744t3vl6",
+        "original_url": "https://www.ithome.com/0/986/342.htm",
+        "collectedAt": "2026-08-06T02:08:52",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Microsoft"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsh11jn300snro2eoofi5b4z",
+        "date": "2026-08-06",
+        "title": "个人层面也该认真对待AI安全了",
+        "title_en": "",
+        "summary": "Ethan Mollick 呼吁个人层面也该认真对待 AI 安全。他警告，即便当前 OpenAI 和 Anthropic 模型做不到，即将到来的开源权重模型也会做到。引用推文提醒：任何暴露在公开互联网上的 API 密钥、以太坊钱包密钥、用户凭证等，都应趁早撤下，以免被海量模型盯上。",
+        "summary_en": "",
+        "source": "X：Ethan Mollick (@emollick)",
+        "url": "https://aihot.virxact.com/items/cmsh11jn300snro2eoofi5b4z",
+        "original_url": "https://x.com/emollick/status/2085219237182726166",
+        "collectedAt": "2026-08-06T04:39:51",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI",
+          "Anthropic"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -1258,6 +1103,25 @@
         "url": "https://aihot.virxact.com/items/cmshlfqyc0izeronkq54rio7f",
         "original_url": "https://www.ithome.com/0/986/736.htm",
         "collectedAt": "2026-08-06T14:10:43",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "华为"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshjall30g60ronkdqbd9r9c",
+        "date": "2026-08-06",
+        "title": "华为官宣昇腾 0 Day 支持蚂蚁百灵 Ling-3.0-flash 模型，全新算子编程框架 CANN PyPTO 首秀",
+        "title_en": "",
+        "summary": "华为宣布昇腾完成蚂蚁百灵 Ling-3.0-flash 模型的 0 Day 适配，并首次引入 CANN PyPTO 算子编程框架，可缩短复杂融合算子交付周期。该适配兼容昇腾 A2、A3 系列产品，开发者可通过官方镜像快速拉起推理服务（A2 需 8 卡，A3 需 4 卡）。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmshjall30g60ronkdqbd9r9c",
+        "original_url": "https://www.ithome.com/0/986/724.htm",
+        "collectedAt": "2026-08-06T13:10:43",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
@@ -1324,6 +1188,25 @@
         "importance": "medium"
       },
       {
+        "id": "cmshcs1yr08i4ronko8n6xc0e",
+        "date": "2026-08-06",
+        "title": "字节CEO梁汝波Allhands释放五大信号：豆包升为公司级入口，AI全面绑定绩效晋升",
+        "title_en": "",
+        "summary": "字节跳动CEO梁汝波在年度Allhands上宣布豆包升为公司级入口、与抖音平级，目标是把电商交易链路搬进对话框。内部AI调用量半年涨10倍，火山引擎MaaS市占近50%，绩效、晋升、奖金全面绑定AI使用能力。此前张一鸣已禁止蒸馏美国模型，宁慢不冒丢TikTok全球市场的风险。",
+        "summary_en": "",
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "url": "https://aihot.virxact.com/items/cmshcs1yr08i4ronko8n6xc0e",
+        "original_url": "https://x.com/AYi_AInotes/status/2085301258257158387",
+        "collectedAt": "2026-08-06T10:08:22",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "字节跳动"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmshcs1yr08i5ronkqtgvazx9",
         "date": "2026-08-06",
         "title": "字节全员会：梁汝波承认大模型落后，豆包升格主干",
@@ -1338,6 +1221,25 @@
         "keywords": [],
         "company_tags": [
           "字节跳动"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshlcqep0iy1ronk4wo2g2i0",
+        "date": "2026-08-06",
+        "title": "宇树科技8月10日申购，DeepSeek战配1.41亿",
+        "title_en": "",
+        "summary": "宇树科技发行价定为150.8元/股，发行市值609亿元，将于8月10日正式申购，有望成为\"人形机器人第一股\"。创始人王兴兴（90年生）持股接近30%，或成科创板90后首富。DeepSeek（梁文锋旗下）参与战略配售，获配93万多股、斥资1.41亿元，被视作\"大脑\"投资\"身体\"的产业协同信号。",
+        "summary_en": "",
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "url": "https://aihot.virxact.com/items/cmshlcqep0iy1ronk4wo2g2i0",
+        "original_url": "https://x.com/AYi_AInotes/status/2085361558578659727",
+        "collectedAt": "2026-08-06T14:08:24",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "DeepSeek"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -1381,6 +1283,25 @@
         "importance": "medium"
       },
       {
+        "id": "cmshsy5y50qdpronkwtup1f15",
+        "date": "2026-08-06",
+        "title": "微软AI收入约七成来自OpenAI",
+        "title_en": "",
+        "summary": "微软最新披露显示，其AI收入大部分来自OpenAI。截至6月的财年中，这部分收入达241亿美元，约占微软AI总收入的70%。CEO萨蒂亚·纳德拉3月底曾表示，AI业务年化收入有望突破370亿美元。",
+        "summary_en": "",
+        "source": "The Decoder：AI News（RSS）",
+        "url": "https://aihot.virxact.com/items/cmshsy5y50qdpronkwtup1f15",
+        "original_url": "https://the-decoder.com/microsofts-ai-revenue-reportedly-depends-on-openai-for-70-percent",
+        "collectedAt": "2026-08-06T17:41:01",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmshcv1eq08jbronkb3edhau9",
         "date": "2026-08-06",
         "title": "微软要求开发人员优先使用 OpenAI 模型：将 GPT-5.6 Sol 作为默认选择",
@@ -1395,6 +1316,44 @@
         "keywords": [],
         "company_tags": [
           "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshmizyd0k71ronkfu9jy9lr",
+        "date": "2026-08-06",
+        "title": "微软首次披露OpenAI贡献七成AI收入",
+        "title_en": "",
+        "summary": "微软刚刚首次披露，OpenAI 贡献了微软约 70% 的 AI 收入，依据最新文件。\n\n这一数据基于预期增长及此前与 OpenAI 相关收入的披露。\n\n241 亿美元中的大部分是 OpenAI 在微软数据中心训练和运行 ChatGPT 的云账单，再加上模型开发成本和 OpenAI 自身销售的分成，全部由微软合并计入收入。微软同时还向 OpenAI 投入了 119 亿美元。",
+        "summary_en": "",
+        "source": "X：Rohan Paul (@rohanpaul_ai)",
+        "url": "https://aihot.virxact.com/items/cmshmizyd0k71ronkfu9jy9lr",
+        "original_url": "https://x.com/rohanpaul_ai/status/2085368375816163423",
+        "collectedAt": "2026-08-06T14:41:16",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshr8nsi0oomronk088e9hjw",
+        "date": "2026-08-06",
+        "title": "智能体协作是好事，Hugging Face 开展数学证明实验",
+        "title_en": "",
+        "summary": "Hugging Face CEO 表示，智能体之间协作与通信是好事而非威胁，将使其更高效、更安全，如同人类协作。此前其与 Google Gemma 合作开展了 149 个智能体的公开协作实验，现 @cmpatino_ 正启动新实验，让智能体协作撰写更优的数学证明。",
+        "summary_en": "",
+        "source": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+        "url": "https://aihot.virxact.com/items/cmshr8nsi0oomronk088e9hjw",
+        "original_url": "https://x.com/ClementDelangue/status/2085407397850325471",
+        "collectedAt": "2026-08-06T16:53:11",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Google"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -1415,6 +1374,47 @@
         "company_tags": [
           "NVIDIA",
           "AMD"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsgzxv1w069aroxz6x14q5h6",
+        "date": "2026-08-06",
+        "title": "消息称张一鸣内部下死命令：字节跳动不会依赖 AI 蒸馏技术改进模型",
+        "title_en": "",
+        "summary": "字节跳动创始人张一鸣在上月 Seed 团队全体会议上明确表示，即使暂时落后于竞争对手，公司也不会依赖 AI 蒸馏技术来改进模型。该决定很大程度上受字节跳动与美国政府因 TikTok 所有权产生的复杂关系影响。字节跳动未被 Anthropic 指控蒸馏其 Claude 模型，一直保持相对低调。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsgzxv1w069aroxz6x14q5h6",
+        "original_url": "https://www.ithome.com/0/986/411.htm",
+        "collectedAt": "2026-08-06T04:08:53",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Anthropic",
+          "字节跳动"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmshjal7k0g5hronkrx0f6537",
+        "date": "2026-08-06",
+        "title": "独家：Mirendil 与 Google Cloud 签署超 1 亿美元协议，扩展自我改进 AI",
+        "title_en": "",
+        "summary": "AI 实验室 Mirendil 与 Google Cloud 签署多年期合作协议，获取其自我改进 AI 研究所需的算力，协议价值超 1 亿美元，约为该公司 6 月底 10 亿美元估值种子轮融资额的一半。该协议使 Mirendil 能使用 Google 的 TPU 和 Nvidia GPU 及托管训练集群，其联合创始人来自 Anthropic，目标是让 AI 最终能承担整个前沿 AI 实验室的工作。",
+        "summary_en": "",
+        "source": "TechCrunch：AI（RSS）",
+        "url": "https://aihot.virxact.com/items/cmshjal7k0g5hronkrx0f6537",
+        "original_url": "https://techcrunch.com/2026/08/06/exclusive-mirendil-inks-100m-google-cloud-deal-to-scale-self-improving-ai",
+        "collectedAt": "2026-08-06T13:10:44",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "NVIDIA",
+          "Google",
+          "Anthropic"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -2093,25 +2093,6 @@
         "importance": "high"
       },
       {
-        "id": "cmsga8g7n01dxro3psolcouz4",
-        "date": "2026-08-05",
-        "title": "Demis Hassabis 转任 Google DeepMind 主席与 Alphabet 首席科学家",
-        "title_en": "",
-        "summary": "Demis Hassabis 宣布卸任 Google DeepMind CEO，转任主席兼 Alphabet 首席科学家，专注长期战略与科学突破，包括推进 Isomorphic 的疾病治愈研究。Koray Kavukcuoglu 将接任 GDM 高级副总裁，与 Josh Woodward 及执行团队共同领导下一阶段发展。",
-        "summary_en": "",
-        "source": "X：Demis Hassabis (@demishassabis)",
-        "url": "https://aihot.virxact.com/items/cmsga8g7n01dxro3psolcouz4",
-        "original_url": "https://x.com/demishassabis/status/2085034334914769203",
-        "collectedAt": "2026-08-05T16:09:23",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Google"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
         "id": "cmsfbvfwj1mn9ro2eduehq6fc",
         "date": "2026-08-05",
         "title": "OpenRouter 周度统计：DeepSeek-V4-Flash 调用超 7.22 万亿 Token 登顶全球第一",
@@ -2131,44 +2112,23 @@
         "importance": "high"
       },
       {
-        "id": "cmsg1egoh027wrolgj7e3gsb2",
+        "id": "cmsfe0m8t1ozoro2eb1c7yv24",
         "date": "2026-08-05",
-        "title": "SSI 或于 8 月发布首个模型，获 NVIDIA 50 亿美元投资",
+        "title": "AMD 高管：公司相较英伟达的关键优势是更加开放",
         "title_en": "",
-        "summary": "OpenAI 联合创始人 Ilya Sutskever 的 SSI 获 NVIDIA 约 50 亿美元战略投资，将部署 Vera Rubin 系统，算力 12 个月内提升约 10 倍。Atreides 的 Gavin Baker 在播客中称 SSI 将于 8 月发布模型，但官方尚未确认。SSI 成立两年未发任何模型，若 8 月发布将打破其\"不发中间产品\"的规矩，或涉持续学习突破。",
+        "summary": "AMD 高管称，相较英伟达，公司的一大关键优势是更加开放，尤其在 AI 芯片领域，开源 ROCm 软件被视为对抗 CUDA 护城河的重要策略。CEO 苏姿丰在财报电话会上表示，过去一年 ROCm 获得的开源社区贡献数量增长了 10 倍。AMD 季度营收达 115 亿美元，高于分析师预期，过去一年股价上涨约 193%。",
         "summary_en": "",
-        "source": "X：阿易 AI Notes (@AYi_AInotes)",
-        "url": "https://aihot.virxact.com/items/cmsg1egoh027wrolgj7e3gsb2",
-        "original_url": "https://x.com/AYi_AInotes/status/2084967341394145655",
-        "collectedAt": "2026-08-05T12:02:07",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsfe0m8t1ozoro2eb1c7yv24",
+        "original_url": "https://www.ithome.com/0/985/782.htm",
+        "collectedAt": "2026-08-05T01:07:29",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
-          "NVIDIA",
-          "OpenAI"
+          "AMD"
         ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
-        "id": "cmsg70kyq0050royd2v813vhg",
-        "date": "2026-08-05",
-        "title": "SpaceX 算力扩张目标或需超两百万块 Nvidia Rubin GPU",
-        "title_en": "",
-        "summary": "SpaceX 计划到 2027 年底将算力提升五倍以上，总功率超过两吉瓦，全部基于 Nvidia 芯片。现有 Colossus 集群约 54 万块 GPU，若全部采用 Vera Rubin 平台，新目标所需 GPU 可能超过两百万块。SpaceX 的 AI 业务（含 xAI 和 X）Q2 营收 25.6 亿美元，但运营亏损仍达 12.6 亿美元。",
-        "summary_en": "",
-        "source": "The Decoder：AI News（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsg70kyq0050royd2v813vhg",
-        "original_url": "https://the-decoder.com/spacexs-ambitious-compute-goals-could-require-over-two-million-nvidia-rubin-gpus",
-        "collectedAt": "2026-08-05T14:39:15",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "NVIDIA",
-          "xAI"
-        ],
-        "priority_score": 92,
-        "importance": "high"
+        "priority_score": 65,
+        "importance": "medium"
       },
       {
         "id": "cmsgkynw208wmro5qvzytczmf",
@@ -2187,8 +2147,8 @@
           "OpenAI",
           "Anthropic"
         ],
-        "priority_score": 88,
-        "importance": "high"
+        "priority_score": 65,
+        "importance": "medium"
       },
       {
         "id": "cmsfdqldz1or2ro2e00oun8da",
@@ -2206,218 +2166,6 @@
         "company_tags": [
           "OpenAI",
           "腾讯"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsfbsu7d1mjcro2e4536hivd",
-        "date": "2026-08-05",
-        "title": "DeepSeek-V4-Flash 发布，ECI 153 居开源第二",
-        "title_en": "",
-        "summary": "DeepSeek-V4-Flash-0731 首次亮相，ECI 为 153，与 GLM 5.2 相当，大致介于 Opus 4.5 和 Opus 4.6 之间。它是目前第二强的开源权重模型，仅次于 Kimi K3。",
-        "summary_en": "",
-        "source": "X：Epoch AI (@EpochAIResearch)",
-        "url": "https://aihot.virxact.com/items/cmsfbsu7d1mjcro2e4536hivd",
-        "original_url": "https://x.com/EpochAIResearch/status/2084788991153586600",
-        "collectedAt": "2026-08-05T00:05:28",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsg4r9bi05ohrolgc28eggrb",
-        "date": "2026-08-05",
-        "title": "Grok Build 发布，xAI 新动作引关注",
-        "title_en": "",
-        "summary": "Grok Build\n\n【引用 @XFreeze】：http://x.com/i/article/2084860216353415168",
-        "summary_en": "",
-        "source": "X：Elon Musk (@elonmusk, xAI)",
-        "url": "https://aihot.virxact.com/items/cmsg4r9bi05ohrolgc28eggrb",
-        "original_url": "https://x.com/elonmusk/status/2084989366590742585",
-        "collectedAt": "2026-08-05T13:36:02",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "xAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsghvg9m066sro5qri2grn5x",
-        "date": "2026-08-05",
-        "title": "Meta 发布 Muse Code 终端编程智能体",
-        "title_en": "",
-        "summary": "BREAKING 🔥： Meta AI 发布了 Muse Code，一款由最新的 Muse Spark 1.2 驱动的新型终端编程智能体！\n\n它在 DeepSWE 1.1 上得分 59%，超越了 Grok Build 4.5 和 Gemini 3.6 Flash。",
-        "summary_en": "",
-        "source": "X：Testing Catalog (@testingcatalog)",
-        "url": "https://aihot.virxact.com/items/cmsghvg9m066sro5qri2grn5x",
-        "original_url": "https://x.com/testingcatalog/status/2085086249610539372",
-        "collectedAt": "2026-08-05T19:43:13",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Meta"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsgqvl1h0dwsro5qu69r1g0b",
-        "date": "2026-08-05",
-        "title": "OpenAI 披露第三方网络安全评估事故：测试环境配置错误致模型访问公网",
-        "title_en": "",
-        "summary": "OpenAI 发文披露其外部网络安全测试伙伴 Irregular 在运行 CTF 式评估时，因测试环境配置错误使模型得以访问公网。一次测试中，虚构目标名称与真实域名重合，模型误将真实网站当作模拟环境的一部分加以利用。Anthropic 的报告中亦提及 Irregular，其托管的错误配置评估环境曾让 Claude 在部分测试中获取实时互联网访问权限。",
-        "summary_en": "",
-        "source": "Simon Willison 博客",
-        "url": "https://aihot.virxact.com/items/cmsgqvl1h0dwsro5qu69r1g0b",
-        "original_url": "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations",
-        "collectedAt": "2026-08-05T23:55:16",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsgqscmz0dgyro5qamhpzqz8",
-        "date": "2026-08-05",
-        "title": "SpaceXAI 单季资本开支 183.7 亿美元，AI 投入接近微软总资本开支四成",
-        "title_en": "",
-        "summary": "SpaceXAI 上季度资本开支 183.7 亿美元，其中 158.3 亿美元投向 AI，接近微软同期总资本开支的 40%。其运营现金流仅覆盖资本开支的 12%，主要靠举债和股权融资，而微软覆盖率达 155%。公司股价较 6 月峰值腰斩，6 月发行的 250 亿美元债券各期限均跌破面值。",
-        "summary_en": "",
-        "source": "Tomer Tunguz 博客（VC 分析）",
-        "url": "https://aihot.virxact.com/items/cmsgqscmz0dgyro5qamhpzqz8",
-        "original_url": "https://www.tomtunguz.com/the-newest-hyperscaler",
-        "collectedAt": "2026-08-05T23:52:45",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "xAI"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsg1smep02khrolga0xml2ax",
-        "date": "2026-08-05",
-        "title": "字节跳动发布原生音视频全双工模型 SeedRealtime",
-        "title_en": "",
-        "summary": "字节跳动推出 SeedRealtime，一款原生音视频全双工大语言模型，采用统一架构原生融合音频、视频与文本，支持连续多模态流上的实时交互。该模型已免费上线豆包 App，支持语音和视频对话，可同时看、听、说，对标 GPT Live。",
-        "summary_en": "",
-        "source": "X：Testing Catalog (@testingcatalog)",
-        "url": "https://aihot.virxact.com/items/cmsg1smep02khrolga0xml2ax",
-        "original_url": "https://x.com/testingcatalog/status/2084968825942893022",
-        "collectedAt": "2026-08-05T12:13:07",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "字节跳动"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsg9z8lo015tro3p59k71frq",
-        "date": "2026-08-05",
-        "title": "字节跳动禁止蒸馏美国模型，张一鸣内部下令",
-        "title_en": "",
-        "summary": "字节跳动创始人张一鸣内部下令，禁止公司使用蒸馏技术做模型，宁可短期落后国内同行。此举因担忧被华盛顿抓住把柄，影响 TikTok 全球市场。此前 Anthropic 公开的蒸馏 Claude 公司名单中，DeepSeek、月之暗面、阿里均在列，唯独没有字节。",
-        "summary_en": "",
-        "source": "X：阿易 AI Notes (@AYi_AInotes)",
-        "url": "https://aihot.virxact.com/items/cmsg9z8lo015tro3p59k71frq",
-        "original_url": "https://x.com/AYi_AInotes/status/2085031600086007841",
-        "collectedAt": "2026-08-05T16:02:13",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Anthropic",
-          "DeepSeek",
-          "字节跳动"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsfuy9180fpdrochbv9ga746",
-        "date": "2026-08-05",
-        "title": "梁文锋 20 年：不按别人规则做 AI",
-        "title_en": "",
-        "summary": "梁文锋的成功并非\"天降猛男\"式赌赢，而是 20 年死磕 AGI 一条主线：从 17 岁填志愿起不追风口、不进大厂，用幻方量化赚的钱自养团队，不融资不看投资人脸色。其 2011 年独闯阿里无人区 400 公里、被困一周后弃车走出的经历，与后来带 DeepSeek 扎进大模型\"技术无人区\"的逻辑一致，最终以 V3、R1 让全球重新评估中国大模型能力。",
-        "summary_en": "",
-        "source": "X：阿易 AI Notes (@AYi_AInotes)",
-        "url": "https://aihot.virxact.com/items/cmsfuy9180fpdrochbv9ga746",
-        "original_url": "https://x.com/AYi_AInotes/status/2084923894822064287",
-        "collectedAt": "2026-08-05T09:01:32",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsfqnwbs0aibrochgzxdp7bm",
-        "date": "2026-08-05",
-        "title": "梁文锋26岁闯阿里无人区，DeepSeek成功早有伏笔",
-        "title_en": "",
-        "summary": "梁文锋26岁独自驾车深入西藏阿里无人区400公里，被困一周后弃车走出，这段经历预示了DeepSeek的独特打法。他做基础模型、不融资不社交，用别人十分之一的成本做出匹敌的产品，敢赌敢输，输了认，继续走。DeepSeek不是商业计划书的结果，而是他本性的自然延伸。",
-        "summary_en": "",
-        "source": "X：阿易 AI Notes (@AYi_AInotes)",
-        "url": "https://aihot.virxact.com/items/cmsfqnwbs0aibrochgzxdp7bm",
-        "original_url": "https://x.com/AYi_AInotes/status/2084892418130817266",
-        "collectedAt": "2026-08-05T07:01:31",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsfi86ro1u1cro2ej9p0637j",
-        "date": "2026-08-05",
-        "title": "腾讯混元Hy3上线WorkBuddy全球免费",
-        "title_en": "",
-        "summary": "🚀 Hy3 现已在 WorkBuddy 全球上线--全球用户可免费使用至 2026 年 8 月 31 日（太平洋时间）。\n\n在智能体 AI 工作空间中研究、分析数据、创建文档和演示文稿，并处理职场沟通--无需任何设置。\n\nHy3 还可通过腾讯设计 Miora 和腾讯云 TokenHub 使用。\n\n立即体验：https://workbuddy.ai\n\n#腾讯混元 #Hy3 #WorkBuddy #Miora #腾讯云",
-        "summary_en": "",
-        "source": "X：腾讯混元 (@TencentHunyuan)",
-        "url": "https://aihot.virxact.com/items/cmsfi86ro1u1cro2ej9p0637j",
-        "original_url": "https://x.com/TencentHunyuan/status/2084836757095526689",
-        "collectedAt": "2026-08-05T03:05:21",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "腾讯"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsfe0m8t1ozoro2eb1c7yv24",
-        "date": "2026-08-05",
-        "title": "AMD 高管：公司相较英伟达的关键优势是更加开放",
-        "title_en": "",
-        "summary": "AMD 高管称，相较英伟达，公司的一大关键优势是更加开放，尤其在 AI 芯片领域，开源 ROCm 软件被视为对抗 CUDA 护城河的重要策略。CEO 苏姿丰在财报电话会上表示，过去一年 ROCm 获得的开源社区贡献数量增长了 10 倍。AMD 季度营收达 115 亿美元，高于分析师预期，过去一年股价上涨约 193%。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsfe0m8t1ozoro2eb1c7yv24",
-        "original_url": "https://www.ithome.com/0/985/782.htm",
-        "collectedAt": "2026-08-05T01:07:29",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "AMD"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -2575,6 +2323,44 @@
         "importance": "medium"
       },
       {
+        "id": "cmsfbsu7d1mjcro2e4536hivd",
+        "date": "2026-08-05",
+        "title": "DeepSeek-V4-Flash 发布，ECI 153 居开源第二",
+        "title_en": "",
+        "summary": "DeepSeek-V4-Flash-0731 首次亮相，ECI 为 153，与 GLM 5.2 相当，大致介于 Opus 4.5 和 Opus 4.6 之间。它是目前第二强的开源权重模型，仅次于 Kimi K3。",
+        "summary_en": "",
+        "source": "X：Epoch AI (@EpochAIResearch)",
+        "url": "https://aihot.virxact.com/items/cmsfbsu7d1mjcro2e4536hivd",
+        "original_url": "https://x.com/EpochAIResearch/status/2084788991153586600",
+        "collectedAt": "2026-08-05T00:05:28",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsga8g7n01dxro3psolcouz4",
+        "date": "2026-08-05",
+        "title": "Demis Hassabis 转任 Google DeepMind 主席与 Alphabet 首席科学家",
+        "title_en": "",
+        "summary": "Demis Hassabis 宣布卸任 Google DeepMind CEO，转任主席兼 Alphabet 首席科学家，专注长期战略与科学突破，包括推进 Isomorphic 的疾病治愈研究。Koray Kavukcuoglu 将接任 GDM 高级副总裁，与 Josh Woodward 及执行团队共同领导下一阶段发展。",
+        "summary_en": "",
+        "source": "X：Demis Hassabis (@demishassabis)",
+        "url": "https://aihot.virxact.com/items/cmsga8g7n01dxro3psolcouz4",
+        "original_url": "https://x.com/demishassabis/status/2085034334914769203",
+        "collectedAt": "2026-08-05T16:09:23",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Google"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmsge9mjz03apro5qz5dgm9xn",
         "date": "2026-08-05",
         "title": "Google AI 组织地震：Jeff Dean 离职创业，Demis 卸任 CEO",
@@ -2589,6 +2375,25 @@
         "keywords": [],
         "company_tags": [
           "Google"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsg4r9bi05ohrolgc28eggrb",
+        "date": "2026-08-05",
+        "title": "Grok Build 发布，xAI 新动作引关注",
+        "title_en": "",
+        "summary": "Grok Build\n\n【引用 @XFreeze】：http://x.com/i/article/2084860216353415168",
+        "summary_en": "",
+        "source": "X：Elon Musk (@elonmusk, xAI)",
+        "url": "https://aihot.virxact.com/items/cmsg4r9bi05ohrolgc28eggrb",
+        "original_url": "https://x.com/elonmusk/status/2084989366590742585",
+        "collectedAt": "2026-08-05T13:36:02",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "xAI"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -2699,6 +2504,25 @@
         "url": "https://aihot.virxact.com/items/cmsgn3dvz0aktro5qqoi5fs58",
         "original_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
         "collectedAt": "2026-08-05T22:09:22",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Meta"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsghvg9m066sro5qri2grn5x",
+        "date": "2026-08-05",
+        "title": "Meta 发布 Muse Code 终端编程智能体",
+        "title_en": "",
+        "summary": "BREAKING 🔥： Meta AI 发布了 Muse Code，一款由最新的 Muse Spark 1.2 驱动的新型终端编程智能体！\n\n它在 DeepSWE 1.1 上得分 59%，超越了 Grok Build 4.5 和 Gemini 3.6 Flash。",
+        "summary_en": "",
+        "source": "X：Testing Catalog (@testingcatalog)",
+        "url": "https://aihot.virxact.com/items/cmsghvg9m066sro5qri2grn5x",
+        "original_url": "https://x.com/testingcatalog/status/2085086249610539372",
+        "collectedAt": "2026-08-05T19:43:13",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
@@ -2846,6 +2670,85 @@
         "importance": "medium"
       },
       {
+        "id": "cmsgqvl1h0dwsro5qu69r1g0b",
+        "date": "2026-08-05",
+        "title": "OpenAI 披露第三方网络安全评估事故：测试环境配置错误致模型访问公网",
+        "title_en": "",
+        "summary": "OpenAI 发文披露其外部网络安全测试伙伴 Irregular 在运行 CTF 式评估时，因测试环境配置错误使模型得以访问公网。一次测试中，虚构目标名称与真实域名重合，模型误将真实网站当作模拟环境的一部分加以利用。Anthropic 的报告中亦提及 Irregular，其托管的错误配置评估环境曾让 Claude 在部分测试中获取实时互联网访问权限。",
+        "summary_en": "",
+        "source": "Simon Willison 博客",
+        "url": "https://aihot.virxact.com/items/cmsgqvl1h0dwsro5qu69r1g0b",
+        "original_url": "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations",
+        "collectedAt": "2026-08-05T23:55:16",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI",
+          "Anthropic"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsg1egoh027wrolgj7e3gsb2",
+        "date": "2026-08-05",
+        "title": "SSI 或于 8 月发布首个模型，获 NVIDIA 50 亿美元投资",
+        "title_en": "",
+        "summary": "OpenAI 联合创始人 Ilya Sutskever 的 SSI 获 NVIDIA 约 50 亿美元战略投资，将部署 Vera Rubin 系统，算力 12 个月内提升约 10 倍。Atreides 的 Gavin Baker 在播客中称 SSI 将于 8 月发布模型，但官方尚未确认。SSI 成立两年未发任何模型，若 8 月发布将打破其\"不发中间产品\"的规矩，或涉持续学习突破。",
+        "summary_en": "",
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "url": "https://aihot.virxact.com/items/cmsg1egoh027wrolgj7e3gsb2",
+        "original_url": "https://x.com/AYi_AInotes/status/2084967341394145655",
+        "collectedAt": "2026-08-05T12:02:07",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "NVIDIA",
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsg70kyq0050royd2v813vhg",
+        "date": "2026-08-05",
+        "title": "SpaceX 算力扩张目标或需超两百万块 Nvidia Rubin GPU",
+        "title_en": "",
+        "summary": "SpaceX 计划到 2027 年底将算力提升五倍以上，总功率超过两吉瓦，全部基于 Nvidia 芯片。现有 Colossus 集群约 54 万块 GPU，若全部采用 Vera Rubin 平台，新目标所需 GPU 可能超过两百万块。SpaceX 的 AI 业务（含 xAI 和 X）Q2 营收 25.6 亿美元，但运营亏损仍达 12.6 亿美元。",
+        "summary_en": "",
+        "source": "The Decoder：AI News（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsg70kyq0050royd2v813vhg",
+        "original_url": "https://the-decoder.com/spacexs-ambitious-compute-goals-could-require-over-two-million-nvidia-rubin-gpus",
+        "collectedAt": "2026-08-05T14:39:15",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "NVIDIA",
+          "xAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsgqscmz0dgyro5qamhpzqz8",
+        "date": "2026-08-05",
+        "title": "SpaceXAI 单季资本开支 183.7 亿美元，AI 投入接近微软总资本开支四成",
+        "title_en": "",
+        "summary": "SpaceXAI 上季度资本开支 183.7 亿美元，其中 158.3 亿美元投向 AI，接近微软同期总资本开支的 40%。其运营现金流仅覆盖资本开支的 12%，主要靠举债和股权融资，而微软覆盖率达 155%。公司股价较 6 月峰值腰斩，6 月发行的 250 亿美元债券各期限均跌破面值。",
+        "summary_en": "",
+        "source": "Tomer Tunguz 博客（VC 分析）",
+        "url": "https://aihot.virxact.com/items/cmsgqscmz0dgyro5qamhpzqz8",
+        "original_url": "https://www.tomtunguz.com/the-newest-hyperscaler",
+        "collectedAt": "2026-08-05T23:52:45",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "xAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmsgbawl0001iro5qajirh4qh",
         "date": "2026-08-05",
         "title": "为什么传奇的埃尔德什问题正被人工智能攻克",
@@ -2884,6 +2787,25 @@
         "importance": "medium"
       },
       {
+        "id": "cmsg1smep02khrolga0xml2ax",
+        "date": "2026-08-05",
+        "title": "字节跳动发布原生音视频全双工模型 SeedRealtime",
+        "title_en": "",
+        "summary": "字节跳动推出 SeedRealtime，一款原生音视频全双工大语言模型，采用统一架构原生融合音频、视频与文本，支持连续多模态流上的实时交互。该模型已免费上线豆包 App，支持语音和视频对话，可同时看、听、说，对标 GPT Live。",
+        "summary_en": "",
+        "source": "X：Testing Catalog (@testingcatalog)",
+        "url": "https://aihot.virxact.com/items/cmsg1smep02khrolga0xml2ax",
+        "original_url": "https://x.com/testingcatalog/status/2084968825942893022",
+        "collectedAt": "2026-08-05T12:13:07",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "字节跳动"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmsfmmuis05wxrochspb72rjh",
         "date": "2026-08-05",
         "title": "字节跳动发布音视频全双工大模型 SeedRealtime，已上线豆包 App",
@@ -2897,6 +2819,27 @@
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
+          "字节跳动"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsg9z8lo015tro3p59k71frq",
+        "date": "2026-08-05",
+        "title": "字节跳动禁止蒸馏美国模型，张一鸣内部下令",
+        "title_en": "",
+        "summary": "字节跳动创始人张一鸣内部下令，禁止公司使用蒸馏技术做模型，宁可短期落后国内同行。此举因担忧被华盛顿抓住把柄，影响 TikTok 全球市场。此前 Anthropic 公开的蒸馏 Claude 公司名单中，DeepSeek、月之暗面、阿里均在列，唯独没有字节。",
+        "summary_en": "",
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "url": "https://aihot.virxact.com/items/cmsg9z8lo015tro3p59k71frq",
+        "original_url": "https://x.com/AYi_AInotes/status/2085031600086007841",
+        "collectedAt": "2026-08-05T16:02:13",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Anthropic",
+          "DeepSeek",
           "字节跳动"
         ],
         "priority_score": 65,
@@ -2923,6 +2866,44 @@
         "importance": "medium"
       },
       {
+        "id": "cmsfuy9180fpdrochbv9ga746",
+        "date": "2026-08-05",
+        "title": "梁文锋 20 年：不按别人规则做 AI",
+        "title_en": "",
+        "summary": "梁文锋的成功并非\"天降猛男\"式赌赢，而是 20 年死磕 AGI 一条主线：从 17 岁填志愿起不追风口、不进大厂，用幻方量化赚的钱自养团队，不融资不看投资人脸色。其 2011 年独闯阿里无人区 400 公里、被困一周后弃车走出的经历，与后来带 DeepSeek 扎进大模型\"技术无人区\"的逻辑一致，最终以 V3、R1 让全球重新评估中国大模型能力。",
+        "summary_en": "",
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "url": "https://aihot.virxact.com/items/cmsfuy9180fpdrochbv9ga746",
+        "original_url": "https://x.com/AYi_AInotes/status/2084923894822064287",
+        "collectedAt": "2026-08-05T09:01:32",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsfqnwbs0aibrochgzxdp7bm",
+        "date": "2026-08-05",
+        "title": "梁文锋26岁闯阿里无人区，DeepSeek成功早有伏笔",
+        "title_en": "",
+        "summary": "梁文锋26岁独自驾车深入西藏阿里无人区400公里，被困一周后弃车走出，这段经历预示了DeepSeek的独特打法。他做基础模型、不融资不社交，用别人十分之一的成本做出匹敌的产品，敢赌敢输，输了认，继续走。DeepSeek不是商业计划书的结果，而是他本性的自然延伸。",
+        "summary_en": "",
+        "source": "X：阿易 AI Notes (@AYi_AInotes)",
+        "url": "https://aihot.virxact.com/items/cmsfqnwbs0aibrochgzxdp7bm",
+        "original_url": "https://x.com/AYi_AInotes/status/2084892418130817266",
+        "collectedAt": "2026-08-05T07:01:31",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmsgn3qpq0aolro5q10dkpewx",
         "date": "2026-08-05",
         "title": "用 Google Meridian 构建端到端贝叶斯营销组合模型：媒体测量、ROI 分析与预算优化",
@@ -2937,6 +2918,25 @@
         "keywords": [],
         "company_tags": [
           "Google"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsfi86ro1u1cro2ej9p0637j",
+        "date": "2026-08-05",
+        "title": "腾讯混元Hy3上线WorkBuddy全球免费",
+        "title_en": "",
+        "summary": "🚀 Hy3 现已在 WorkBuddy 全球上线--全球用户可免费使用至 2026 年 8 月 31 日（太平洋时间）。\n\n在智能体 AI 工作空间中研究、分析数据、创建文档和演示文稿，并处理职场沟通--无需任何设置。\n\nHy3 还可通过腾讯设计 Miora 和腾讯云 TokenHub 使用。\n\n立即体验：https://workbuddy.ai\n\n#腾讯混元 #Hy3 #WorkBuddy #Miora #腾讯云",
+        "summary_en": "",
+        "source": "X：腾讯混元 (@TencentHunyuan)",
+        "url": "https://aihot.virxact.com/items/cmsfi86ro1u1cro2ej9p0637j",
+        "original_url": "https://x.com/TencentHunyuan/status/2084836757095526689",
+        "collectedAt": "2026-08-05T03:05:21",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "腾讯"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -3526,45 +3526,6 @@
     ],
     "2026-08-04": [
       {
-        "id": "cmsesile415d4ro2evb21j3n0",
-        "date": "2026-08-04",
-        "title": "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议",
-        "title_en": "",
-        "summary": "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议，约合每年 17 亿美元。Volta 估值 24 亿美元，硬件几乎全为租用：算力来自比特币矿商 Bitdeer 挪威 121MW 站点，芯片由 Nvidia 供应、Dell 组装。Anthropic 买的是交付速度，代价是承担超大规模云厂商合同从未有过的交易对手风险。",
-        "summary_en": "",
-        "source": "X：Rohan Paul (@rohanpaul_ai)",
-        "url": "https://aihot.virxact.com/items/cmsesile415d4ro2evb21j3n0",
-        "original_url": "https://x.com/rohanpaul_ai/status/2084655258102546579",
-        "collectedAt": "2026-08-04T15:05:37",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "NVIDIA",
-          "Anthropic"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
-        "id": "cmseekz5g0oncro2ehfyz40ps",
-        "date": "2026-08-04",
-        "title": "用 NVIDIA SkillSpector、LangGraph、YARA 规则、SARIF 与 CI 策略门构建高级 AI 技能安全审计流水线",
-        "title_en": "",
-        "summary": "本教程演示如何用 NVIDIA SkillSpector 评估 AI 技能的安全态势，构建包含干净、风险、恶意及 MCP 示例的合成技能市场，并通过 LangGraph 检查流水线扫描每个技能。",
-        "summary_en": "",
-        "source": "MarkTechPost（RSS）",
-        "url": "https://aihot.virxact.com/items/cmseekz5g0oncro2ehfyz40ps",
-        "original_url": "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates",
-        "collectedAt": "2026-08-04T08:35:32",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "NVIDIA"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
         "id": "cmsen57a40zcyro2echqpj23a",
         "date": "2026-08-04",
         "title": "硅谷开源分歧促使白宫暂缓对中国AI模型的制裁",
@@ -3605,83 +3566,24 @@
         "importance": "high"
       },
       {
-        "id": "cmsewshps19kuro2e31igaumb",
+        "id": "cmsesile415d4ro2evb21j3n0",
         "date": "2026-08-04",
-        "title": "Google 联手 Broadcom 与摩根士丹利，将 350 亿美元 Anthropic 芯片风险移出资产负债表",
+        "title": "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议",
         "title_en": "",
-        "summary": "Google 与 Broadcom、Apollo、Blackstone、摩根士丹利及多家加密矿企合作，为 Anthropic 提供价值 350 亿美元的 TPU 芯片融资，被英国《金融时报》称为史上最大基础设施融资项目之一。",
+        "summary": "Anthropic 与成立仅数月的云初创公司 Volta 签署 100 亿美元算力协议，约合每年 17 亿美元。Volta 估值 24 亿美元，硬件几乎全为租用：算力来自比特币矿商 Bitdeer 挪威 121MW 站点，芯片由 Nvidia 供应、Dell 组装。Anthropic 买的是交付速度，代价是承担超大规模云厂商合同从未有过的交易对手风险。",
         "summary_en": "",
-        "source": "The Decoder：AI News（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsewshps19kuro2e31igaumb",
-        "original_url": "https://the-decoder.com/google-moves-billions-in-anthropic-chip-risk-off-its-balance-sheet",
-        "collectedAt": "2026-08-04T17:05:16",
+        "source": "X：Rohan Paul (@rohanpaul_ai)",
+        "url": "https://aihot.virxact.com/items/cmsesile415d4ro2evb21j3n0",
+        "original_url": "https://x.com/rohanpaul_ai/status/2084655258102546579",
+        "collectedAt": "2026-08-04T15:05:37",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
-          "Google",
+          "NVIDIA",
           "Anthropic"
         ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmse0pnyk08bpro2e6t2ub1qe",
-        "date": "2026-08-04",
-        "title": "中美 AI 大模型竞争加剧：OpenAI 大幅降价对标 Kimi K3、DeepSeek V4",
-        "title_en": "",
-        "summary": "OpenAI 将前沿模型 ChatGPT 5.6 Luna 价格下调 80%，每百万输入 Token 降至 0.20 美元，中端模型 5.6 Terra 降价 20% 至每百万输入 Token 2 美元，以应对月之暗面 Kimi K3 和 DeepSeek V4 Flash 的竞争。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmse0pnyk08bpro2e6t2ub1qe",
-        "original_url": "https://www.ithome.com/0/985/312.htm",
-        "collectedAt": "2026-08-04T02:07:16",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI",
-          "DeepSeek"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsf48xvn1fozro2eb9lzel3p",
-        "date": "2026-08-04",
-        "title": "开源权重模型逼近前沿能力，安全差距仍在扩大",
-        "title_en": "",
-        "summary": "SaferAI 报告显示，中国 Z.ai 的开源权重模型 GLM-5.2 在网络与生物能力上仅落后 OpenAI GPT-5.5 和 Anthropic Claude Opus 4.7 数月，但面对攻击性网络或双重用途生物任务时拒绝率为零，而 Claude Opus 4.7 因拒绝过于一致导致 CyberGym 评测无法完成。",
-        "summary_en": "",
-        "source": "TechCrunch：AI（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsf48xvn1fozro2eb9lzel3p",
-        "original_url": "https://techcrunch.com/2026/08/04/open-weight-ai-models-are-catching-up-to-the-frontier-the-safety-gap-remains",
-        "collectedAt": "2026-08-04T20:34:02",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsefpvbw0q3xro2e85ctwk8q",
-        "date": "2026-08-04",
-        "title": "腾讯混元发布语音识别模型 Hy ASR 3.0 preview，元宝已首发上线",
-        "title_en": "",
-        "summary": "腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview，基于 Hy3 大语言模型，融合高精度语音识别与深度语义理解。该模型在开源评测集上中文普通话 WER 3.34%、英语 WER 2.62%、粤语 WER 3.12%。元宝已首发上线该模型，支持方言识别、上下文智能纠错等功能且免费开放，并已上线腾讯云提供 API 服务。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsefpvbw0q3xro2e85ctwk8q",
-        "original_url": "https://www.ithome.com/0/985/538.htm",
-        "collectedAt": "2026-08-04T09:07:20",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "腾讯"
-        ],
-        "priority_score": 88,
-        "importance": "high"
+        "priority_score": 65,
+        "importance": "medium"
       },
       {
         "id": "cmseyxz531bl7ro2ewvcu1l1p",
@@ -3757,6 +3659,26 @@
         "keywords": [],
         "company_tags": [
           "Google"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsewshps19kuro2e31igaumb",
+        "date": "2026-08-04",
+        "title": "Google 联手 Broadcom 与摩根士丹利，将 350 亿美元 Anthropic 芯片风险移出资产负债表",
+        "title_en": "",
+        "summary": "Google 与 Broadcom、Apollo、Blackstone、摩根士丹利及多家加密矿企合作，为 Anthropic 提供价值 350 亿美元的 TPU 芯片融资，被英国《金融时报》称为史上最大基础设施融资项目之一。",
+        "summary_en": "",
+        "source": "The Decoder：AI News（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsewshps19kuro2e31igaumb",
+        "original_url": "https://the-decoder.com/google-moves-billions-in-anthropic-chip-risk-off-its-balance-sheet",
+        "collectedAt": "2026-08-04T17:05:16",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Google",
+          "Anthropic"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -3896,6 +3818,26 @@
         "importance": "medium"
       },
       {
+        "id": "cmse0pnyk08bpro2e6t2ub1qe",
+        "date": "2026-08-04",
+        "title": "中美 AI 大模型竞争加剧：OpenAI 大幅降价对标 Kimi K3、DeepSeek V4",
+        "title_en": "",
+        "summary": "OpenAI 将前沿模型 ChatGPT 5.6 Luna 价格下调 80%，每百万输入 Token 降至 0.20 美元，中端模型 5.6 Terra 降价 20% 至每百万输入 Token 2 美元，以应对月之暗面 Kimi K3 和 DeepSeek V4 Flash 的竞争。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmse0pnyk08bpro2e6t2ub1qe",
+        "original_url": "https://www.ithome.com/0/985/312.htm",
+        "collectedAt": "2026-08-04T02:07:16",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI",
+          "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmseo63z710lvro2eblsf93az",
         "date": "2026-08-04",
         "title": "在单颗 AMD MI300X 上运行 DeepSeek V4 Flash",
@@ -3911,6 +3853,26 @@
         "company_tags": [
           "AMD",
           "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsf48xvn1fozro2eb9lzel3p",
+        "date": "2026-08-04",
+        "title": "开源权重模型逼近前沿能力，安全差距仍在扩大",
+        "title_en": "",
+        "summary": "SaferAI 报告显示，中国 Z.ai 的开源权重模型 GLM-5.2 在网络与生物能力上仅落后 OpenAI GPT-5.5 和 Anthropic Claude Opus 4.7 数月，但面对攻击性网络或双重用途生物任务时拒绝率为零，而 Claude Opus 4.7 因拒绝过于一致导致 CyberGym 评测无法完成。",
+        "summary_en": "",
+        "source": "TechCrunch：AI（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsf48xvn1fozro2eb9lzel3p",
+        "original_url": "https://techcrunch.com/2026/08/04/open-weight-ai-models-are-catching-up-to-the-frontier-the-safety-gap-remains",
+        "collectedAt": "2026-08-04T20:34:02",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI",
+          "Anthropic"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -3974,6 +3936,25 @@
         "importance": "medium"
       },
       {
+        "id": "cmseekz5g0oncro2ehfyz40ps",
+        "date": "2026-08-04",
+        "title": "用 NVIDIA SkillSpector、LangGraph、YARA 规则、SARIF 与 CI 策略门构建高级 AI 技能安全审计流水线",
+        "title_en": "",
+        "summary": "本教程演示如何用 NVIDIA SkillSpector 评估 AI 技能的安全态势，构建包含干净、风险、恶意及 MCP 示例的合成技能市场，并通过 LangGraph 检查流水线扫描每个技能。",
+        "summary_en": "",
+        "source": "MarkTechPost（RSS）",
+        "url": "https://aihot.virxact.com/items/cmseekz5g0oncro2ehfyz40ps",
+        "original_url": "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates",
+        "collectedAt": "2026-08-04T08:35:32",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "NVIDIA"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmsehs2k10t07ro2ev375wnsd",
         "date": "2026-08-04",
         "title": "腾讯混元发布 Hy ASR 3.0 预览版",
@@ -3984,6 +3965,25 @@
         "url": "https://aihot.virxact.com/items/cmsehs2k10t07ro2ev375wnsd",
         "original_url": "https://x.com/TencentHunyuan/status/2084579829303615497",
         "collectedAt": "2026-08-04T10:05:03",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "腾讯"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsefpvbw0q3xro2e85ctwk8q",
+        "date": "2026-08-04",
+        "title": "腾讯混元发布语音识别模型 Hy ASR 3.0 preview，元宝已首发上线",
+        "title_en": "",
+        "summary": "腾讯混元发布新一代语音识别模型 Hy ASR 3.0 preview，基于 Hy3 大语言模型，融合高精度语音识别与深度语义理解。该模型在开源评测集上中文普通话 WER 3.34%、英语 WER 2.62%、粤语 WER 3.12%。元宝已首发上线该模型，支持方言识别、上下文智能纠错等功能且免费开放，并已上线腾讯云提供 API 服务。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsefpvbw0q3xro2e85ctwk8q",
+        "original_url": "https://www.ithome.com/0/985/538.htm",
+        "collectedAt": "2026-08-04T09:07:20",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [
@@ -4549,26 +4549,6 @@
         "importance": "high"
       },
       {
-        "id": "cmscl8xqc0bzproeuydn7jlbt",
-        "date": "2026-08-03",
-        "title": "华为半导体首席科学家廖恒罕见受访：首提芯片\"18 层宝塔\"理论，大赞 DeepSeek 梁文锋",
-        "title_en": "",
-        "summary": "华为 Fellow、半导体首席科学家廖恒罕见公开受访，首次提出半导体产业链\"18 层宝塔\"理论，认为产业上限由最短短板层级决定，真正稀缺的是纵向贯通多层的复合型人才。他高度评价 DeepSeek 创始人梁文锋主动选择难度更高的稀疏激活架构，称其为\"先验者的价值\"。廖恒还复盘了昇腾芯片突围历程，并坦言曾三次方向性误判。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmscl8xqc0bzproeuydn7jlbt",
-        "original_url": "https://www.ithome.com/0/984/876.htm",
-        "collectedAt": "2026-08-03T02:06:35",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek",
-          "华为"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
         "id": "cmsd5fc83113droeux83ka2b4",
         "date": "2026-08-03",
         "title": "GLM-5.3 将至，中美 AI 差距缩小",
@@ -4586,47 +4566,8 @@
           "Anthropic",
           "DeepSeek"
         ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsdg09uj00hlrocai7i6do3p",
-        "date": "2026-08-03",
-        "title": "LLM 安全基础：完整威胁模型解析",
-        "title_en": "",
-        "summary": "本文系统梳理大语言模型的完整威胁模型。2025年6月，Aim Security 研究人员演示了单封邮件即可让 Microsoft 365 Copilot 在无用户交互下外传内部文件，该漏洞被命名为 EchoLeak（CVE-2025-32711）。",
-        "summary_en": "",
-        "source": "ByteByteGo（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsdg09uj00hlrocai7i6do3p",
-        "original_url": "https://blog.bytebytego.com/p/llm-security-basics-the-full-threat",
-        "collectedAt": "2026-08-03T16:27:40",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Microsoft"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsdljlwm01jero0o47q64lxl",
-        "date": "2026-08-03",
-        "title": "金·蒙尼穆斯谈美国放缓前沿AI与中企进展",
-        "title_en": "",
-        "summary": "Kim 认为美国单方面放缓前沿AI开发不现实且风险更大。1300余名前沿AI公司员工签署\"Pacing the Frontier\"声明，但不等同于OpenAI或Anthropic公司同意放缓。中国模型如Kimi K3、GLM-5.2已开源权重，MiniMax H3、Qwen3.8权重尚未可用，benchmark显示差距缩小但未全面超越。放缓或让中国实验室在特定能力上反超。",
-        "summary_en": "",
-        "source": "X：Kim (@kimmonismus)",
-        "url": "https://aihot.virxact.com/items/cmsdljlwm01jero0o47q64lxl",
-        "original_url": "https://x.com/kimmonismus/status/2084348071845269580",
-        "collectedAt": "2026-08-03T19:02:40",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "priority_score": 88,
-        "importance": "high"
+        "priority_score": 65,
+        "importance": "medium"
       },
       {
         "id": "cmsddya2a01t3rotjo94tdap8",
@@ -4681,6 +4622,25 @@
         "keywords": [],
         "company_tags": [
           "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsdg09uj00hlrocai7i6do3p",
+        "date": "2026-08-03",
+        "title": "LLM 安全基础：完整威胁模型解析",
+        "title_en": "",
+        "summary": "本文系统梳理大语言模型的完整威胁模型。2025年6月，Aim Security 研究人员演示了单封邮件即可让 Microsoft 365 Copilot 在无用户交互下外传内部文件，该漏洞被命名为 EchoLeak（CVE-2025-32711）。",
+        "summary_en": "",
+        "source": "ByteByteGo（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsdg09uj00hlrocai7i6do3p",
+        "original_url": "https://blog.bytebytego.com/p/llm-security-basics-the-full-threat",
+        "collectedAt": "2026-08-03T16:27:40",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Microsoft"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -4762,6 +4722,26 @@
         "importance": "medium"
       },
       {
+        "id": "cmscl8xqc0bzproeuydn7jlbt",
+        "date": "2026-08-03",
+        "title": "华为半导体首席科学家廖恒罕见受访：首提芯片\"18 层宝塔\"理论，大赞 DeepSeek 梁文锋",
+        "title_en": "",
+        "summary": "华为 Fellow、半导体首席科学家廖恒罕见公开受访，首次提出半导体产业链\"18 层宝塔\"理论，认为产业上限由最短短板层级决定，真正稀缺的是纵向贯通多层的复合型人才。他高度评价 DeepSeek 创始人梁文锋主动选择难度更高的稀疏激活架构，称其为\"先验者的价值\"。廖恒还复盘了昇腾芯片突围历程，并坦言曾三次方向性误判。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmscl8xqc0bzproeuydn7jlbt",
+        "original_url": "https://www.ithome.com/0/984/876.htm",
+        "collectedAt": "2026-08-03T02:06:35",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "DeepSeek",
+          "华为"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
         "id": "cmscit1eq09dyroeunwrfp8qp",
         "date": "2026-08-03",
         "title": "姚顺雨入腾讯300天，混元改革待检验",
@@ -4833,6 +4813,26 @@
         "keywords": [],
         "company_tags": [
           "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmsdljlwm01jero0o47q64lxl",
+        "date": "2026-08-03",
+        "title": "金·蒙尼穆斯谈美国放缓前沿AI与中企进展",
+        "title_en": "",
+        "summary": "Kim 认为美国单方面放缓前沿AI开发不现实且风险更大。1300余名前沿AI公司员工签署\"Pacing the Frontier\"声明，但不等同于OpenAI或Anthropic公司同意放缓。中国模型如Kimi K3、GLM-5.2已开源权重，MiniMax H3、Qwen3.8权重尚未可用，benchmark显示差距缩小但未全面超越。放缓或让中国实验室在特定能力上反超。",
+        "summary_en": "",
+        "source": "X：Kim (@kimmonismus)",
+        "url": "https://aihot.virxact.com/items/cmsdljlwm01jero0o47q64lxl",
+        "original_url": "https://x.com/kimmonismus/status/2084348071845269580",
+        "collectedAt": "2026-08-03T19:02:40",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI",
+          "Anthropic"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -5248,6 +5248,26 @@
     ],
     "2026-08-02": [
       {
+        "id": "cmsbgiqwk0ev2rohvkbm9mxoh",
+        "date": "2026-08-02",
+        "title": "中国 AI 大模型领跑全球榜单，央视详解背后的优势所在",
+        "title_en": "",
+        "summary": "全球多模型聚合平台 OpenRouter 最新一周 AI 大模型调用量榜单中，前五名全部由中国企业研发，小米 MiMo-V2.5 以单周 10.5 万亿 Tokens 调用量登顶，环比增长 12%。DeepSeek 两款模型分列第二和第五，腾讯混元 Hy3 单周环比增幅超 999%。Hugging Face 数据显示，我国开源模型累计下载量居全球首位，千问系列以超 10 亿次优势排名榜首。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmsbgiqwk0ev2rohvkbm9mxoh",
+        "original_url": "https://www.ithome.com/0/984/725.htm",
+        "collectedAt": "2026-08-02T07:06:26",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "DeepSeek",
+          "腾讯"
+        ],
+        "priority_score": 92,
+        "importance": "high"
+      },
+      {
         "id": "cmsbbr0ts0ao9rohvsjkhgzy1",
         "date": "2026-08-02",
         "title": "AI 发展公开信：开源权重与前沿节奏之争",
@@ -5265,27 +5285,8 @@
           "Amazon",
           "OpenAI"
         ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
-        "id": "cmscc62eo033broeusw72isi0",
-        "date": "2026-08-02",
-        "title": "OpenAI 新模型 Astra 数学表现出色，但被过度吹捧",
-        "title_en": "",
-        "summary": "OpenAI 内部测试的新模型 Astra 在数学问题上表现惊艳，但 Gary Marcus 指出相关讨论犯了\"合成谬误\"：擅长某类数学不等于擅长所有数学、科学乃至一切认知任务。数学之所以成为突破口，是因为它便于用符号工具验证且能廉价生成海量合成数据，而开放世界问题无法如此模拟。此外，OpenAI 未公布方法细节，尚无法评估其真实意义。",
-        "summary_en": "",
-        "source": "Gary Marcus：The Road to AI We Can Trust（RSS）",
-        "url": "https://aihot.virxact.com/items/cmscc62eo033broeusw72isi0",
-        "original_url": "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold",
-        "collectedAt": "2026-08-02T21:52:26",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 92,
-        "importance": "high"
+        "priority_score": 65,
+        "importance": "medium"
       },
       {
         "id": "cmsbu9elg0qmyrohvb54kbkz0",
@@ -5303,8 +5304,27 @@
         "company_tags": [
           "OpenAI"
         ],
-        "priority_score": 88,
-        "importance": "high"
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmscc62eo033broeusw72isi0",
+        "date": "2026-08-02",
+        "title": "OpenAI 新模型 Astra 数学表现出色，但被过度吹捧",
+        "title_en": "",
+        "summary": "OpenAI 内部测试的新模型 Astra 在数学问题上表现惊艳，但 Gary Marcus 指出相关讨论犯了\"合成谬误\"：擅长某类数学不等于擅长所有数学、科学乃至一切认知任务。数学之所以成为突破口，是因为它便于用符号工具验证且能廉价生成海量合成数据，而开放世界问题无法如此模拟。此外，OpenAI 未公布方法细节，尚无法评估其真实意义。",
+        "summary_en": "",
+        "source": "Gary Marcus：The Road to AI We Can Trust（RSS）",
+        "url": "https://aihot.virxact.com/items/cmscc62eo033broeusw72isi0",
+        "original_url": "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold",
+        "collectedAt": "2026-08-02T21:52:26",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
       },
       {
         "id": "cmsb1ih6l01t3rohvlduqg5hl",
@@ -5321,26 +5341,6 @@
         "keywords": [],
         "company_tags": [
           "Anthropic"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
-        "id": "cmsbgiqwk0ev2rohvkbm9mxoh",
-        "date": "2026-08-02",
-        "title": "中国 AI 大模型领跑全球榜单，央视详解背后的优势所在",
-        "title_en": "",
-        "summary": "全球多模型聚合平台 OpenRouter 最新一周 AI 大模型调用量榜单中，前五名全部由中国企业研发，小米 MiMo-V2.5 以单周 10.5 万亿 Tokens 调用量登顶，环比增长 12%。DeepSeek 两款模型分列第二和第五，腾讯混元 Hy3 单周环比增幅超 999%。Hugging Face 数据显示，我国开源模型累计下载量居全球首位，千问系列以超 10 亿次优势排名榜首。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsbgiqwk0ev2rohvkbm9mxoh",
-        "original_url": "https://www.ithome.com/0/984/725.htm",
-        "collectedAt": "2026-08-02T07:06:26",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek",
-          "腾讯"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -5546,25 +5546,6 @@
         "importance": "high"
       },
       {
-        "id": "cms91fj0j00qvro9k33a0agga",
-        "date": "2026-07-31",
-        "title": "教程：用 Antigravity SDK 与 Google Cloud 构建自主财务审计智能体团队",
-        "title_en": "",
-        "summary": "本教程演示如何用 Google Antigravity SDK 与 Google Cloud 构建多智能体财务对账系统，将供应商交易与 PDF 发票核对。系统由审计编排器、数据研究员、发票分析器和对账引擎四个智能体组成，并设有人工合规门控，将超过 $1，000 的差异升级人工审核。",
-        "summary_en": "",
-        "source": "Google AI：DEV 作者专属（RSS）",
-        "url": "https://aihot.virxact.com/items/cms91fj0j00qvro9k33a0agga",
-        "original_url": "https://dev.to/googleai/hands-on-tutorial-building-an-autonomous-financial-audit-agent-team-with-antigravity-sdk-google-13de",
-        "collectedAt": "2026-07-31T14:28:31",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Google"
-        ],
-        "priority_score": 88,
-        "importance": "high"
-      },
-      {
         "id": "cms9hiyz80fdvro9kepvm1qvk",
         "date": "2026-07-31",
         "title": "DeepSeek V4 Flash 0731 开源，登顶开源模型前三",
@@ -5598,6 +5579,25 @@
         "keywords": [],
         "company_tags": [
           "字节跳动"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cms91fj0j00qvro9k33a0agga",
+        "date": "2026-07-31",
+        "title": "教程：用 Antigravity SDK 与 Google Cloud 构建自主财务审计智能体团队",
+        "title_en": "",
+        "summary": "本教程演示如何用 Google Antigravity SDK 与 Google Cloud 构建多智能体财务对账系统，将供应商交易与 PDF 发票核对。系统由审计编排器、数据研究员、发票分析器和对账引擎四个智能体组成，并设有人工合规门控，将超过 $1，000 的差异升级人工审核。",
+        "summary_en": "",
+        "source": "Google AI：DEV 作者专属（RSS）",
+        "url": "https://aihot.virxact.com/items/cms91fj0j00qvro9k33a0agga",
+        "original_url": "https://dev.to/googleai/hands-on-tutorial-building-an-autonomous-financial-audit-agent-team-with-antigravity-sdk-google-13de",
+        "collectedAt": "2026-07-31T14:28:31",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Google"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -5760,8 +5760,8 @@
   "stats": {
     "totalArticles": 313,
     "dateCount": 8,
-    "highCount": 71,
-    "mediumCount": 116,
+    "highCount": 19,
+    "mediumCount": 168,
     "lowCount": 126,
     "sourceCount": 70,
     "keyCompanies": [
@@ -5783,7 +5783,7 @@
       "腾讯"
     ]
   },
-  "lastUpdated": "2026-08-07 15:57",
+  "lastUpdated": "2026-08-07 16:06",
   "today": "2026-08-07",
   "todayCount": 10
 }

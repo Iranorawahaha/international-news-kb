@@ -900,7 +900,7 @@ fi
 
 FINAL_COUNT=$(python3 -c "import json;d=json.load(open('data/news-data.json'));print(sum(len(v) for v in d.get('archive',{}).values()) if isinstance(d,dict) else len(d))")
 
-git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-company-intel.html gh-pages/ai-company-intel.html china-news.html gh-pages/china-news.html scripts/inject_nav.py scripts/update_portal_stats.py scripts/normalize_schema.py scripts/daily_brief.py scripts/fetch_china.py scripts/build_china.py data/news-data.json data/china-news.json scripts/data_converter_v12.py scripts/sync_to_feishu.py
+git add index.html international-news.html gh-pages/index.html gh-pages/international-news.html ai-news.html gh-pages/ai-news.html china-news.html gh-pages/china-news.html scripts/inject_nav.py scripts/update_portal_stats.py scripts/normalize_schema.py scripts/daily_brief.py scripts/fetch_china.py scripts/build_china.py data/news-data.json data/china-news.json scripts/data_converter_v12.py scripts/sync_to_feishu.py
 
 TODAY=$(date "+%Y-%m-%d")
 TIME=$(date "+%H:%M")

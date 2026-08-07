@@ -70,14 +70,26 @@ HIGH_EVENTS = [
 
 # 降权信号（属于产品小更新/评测/教程 → 不该被归高）
 DEMOTE_SIGNALS = [
-    '博客', 'blog', '教你', 'how to',
-    'benchmark', '评测', '测评', 'ranking',
-    'GitHub', '代码', 'code', 'demo',
+    # 评测/benchmark 类
+    'benchmark', '评测', '测评', '排行', 'ranking', '分数', '榜单',
+    'baseline', '对比', '比较评测',
+    # 教程/科普
+    '博客', 'blog', '教你', 'how to', 'howto',
+    'GitHub', '代码', 'code', 'demo', '示例',
     '专访', 'interview', '对话', 'podcast',
-    '应用案例', '使用技巧', '教程', 'tutorial',
+    '应用案例', '使用技巧', '教程', 'tutorial', '指南', 'guide',
     '个人观点', '看法', '观点', 'opinion',
     '纪念', '周年', 'history', '历史回顾',
-    '版本', 'v6', 'v7', 'patch', '更新',
+    '版本', 'v6', 'v7', 'patch', '更新', '升级',
+    # 过度吹捧/水评
+    '过度吹捧', '被吹', '被高估', 'overhyped', '过度炒作',
+    '宣称', '声称', '号称',
+    # 框架评测
+    '框架', 'framework', 'sdk', 'SDK',
+    # 普通产品更新
+    '小升级', '小更新', '新增', '新功能', '小功能',
+    '防诈骗', '防骚扰', '防护',  # 华为鸿蒙那种小功能
+    '个人理财', '食谱', '娱乐',
 ]
 
 MEDIUM_SIGNALS = [
@@ -122,31 +134,55 @@ def classify_ai_importance(art):
     huawei_hit = any(c in matched_companies for c in ['华为', 'Huawei'])
 
     # ── 3. 判定优先级 ──
-    # 3a. 纯产品/评测/教程类 → 强制降级
-    if demote_hits and not high_hits:
-        # 没有重大事件信号，且属于产品/评测类 → 中（不归高）
+    # 3a. 强监管/突破类（永远高优先级，不受 demote 影响）
+    # 关键：用词边界/正则避免误匹配（如"突破口"、"研发"等）
+    import re as _re
+    super_patterns = [
+        (r'监管', 'regulation'), (r'法案', 'act'), (r'出口管制', 'export control'),
+        (r'制裁', 'sanction'), (r'科技战', 'tech war'), (r'反垄断', 'antitrust'),
+        (r'起诉', 'sue'), (r'诉讼', 'lawsuit'), (r'实体清单', 'entity list'),
+        (r'万亿参数', 'trillion'), (r'黄仁勋', 'Jensen Huang'),
+        (r'收购', 'acqui'), (r'并购', 'M&A'), (r'IPO', 'IPO'),
+        (r'上市.*(配售|发行|定价)', 'IPO'), (r'募资', 'funding'),
+        (r'(重大|重大|关键|革命性).*突破', 'breakthrough'), (r'突破性', 'breakthrough'),
+        (r'打破.*纪录', 'record'), (r'创纪录', 'record'),
+        (r'首次(突破|实现|达成)', 'first'),
+        (r'超越(人类|专家|对手)', 'surpass'),
+    ]
+    has_super = False
+    for pat, _ in super_patterns:
+        if _re.search(pat, text, _re.I):
+            has_super = True
+            break
+    # 兼容简单的 super 关键词（避免遗漏）
+    simple_super = ['起诉', 'lawsuit', 'sue', 'antitrust', '反垄断',
+                    'IPO', '上市', '募资', '收购', 'acquis', '黄仁勋', 'Jensen Huang',
+                    '万亿', 'trillion', '出口管制', '实体清单', '制裁', 'sanction',
+                    '监管', '法案', 'act', '科技战', 'tech war', '出口管控']
+    if not has_super:
+        has_super = any(s.lower() in text for s in simple_super)
+
+    # 3b. 纯产品/评测/教程类（强制中）
+    if demote_hits and not has_super:
         return 65, matched_companies, 'medium'
 
-    # 3b. NVIDIA + 任何信号 → 高（用户原则：NVIDIA 所有动向都重要）
-    if nvidia_hit and high_hits:
+    # 3c. NVIDIA + 强信号 → 高（用户原则：NVIDIA 监管/突破类高优）
+    if nvidia_hit and has_super:
         return 92, matched_companies, 'high'
 
-    # 3c. 华为 + 任何重大事件 → 高
-    if huawei_hit and high_hits:
+    # 3d. 华为 + 强信号 → 高
+    if huawei_hit and has_super:
         return 92, matched_companies, 'high'
 
-    # 3d. 重大事件信号（监管/科技战/突破）+ 重点公司 → 高
+    # 3e. 有超级信号 → 高
+    if has_super:
+        return 92, matched_companies, 'high'
+
+    # 3f. 有普通 high_hits（如 合作/融资 但非强信号）→ 中（避免产品动态归高）
     if high_hits:
-        # 优先给"监管/科技战/突破"加 92 分
-        super_signals = ['监管', 'regulation', '法案', '出口管制', 'sanction', '制裁',
-                         '科技战', 'tech war', '突破', 'breakthrough', '收购', 'acquis',
-                         '万亿参数', 'trillion', '黄仁勋', 'Jensen Huang', '反垄断',
-                         'antitrust', '起诉', 'sue', 'lawsuit', 'IPO', '上市', '募资']
-        if any(s.lower() in text for s in super_signals):
-            return 92, matched_companies, 'high'
-        return 88, matched_companies, 'high'
+        return 65, matched_companies, 'medium'
 
-    # 3e. 仅有 15 公司 + 普通动态 → 中
+    # 3g. 仅有 15 公司提及 → 中
     return 65, matched_companies, 'medium'
 
 
