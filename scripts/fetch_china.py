@@ -43,10 +43,13 @@ MFA_HOME = "https://www.mfa.gov.cn/web/"
 MFA_SPOKES = "https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/"       # 发言人例行记者会
 MFA_LEADER = "https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/"     # 领导人活动（含任免大使/递交国书）
 MFA_DSRM = "https://www.mfa.gov.cn/web/wjdt_674879/dsrm_674893/"          # 大使任免（驻华大使离到任权威栏目）
-# v4: 关注部委官网
-MOFCOM_NEWS = "https://www.mofcom.gov.cn/xwfb/"                            # 商务部·新闻发布
+# v5.1: 关注部委官网（商务部改用移动版绕过反爬）
+MOFCOM_XWRC = "https://m.mofcom.gov.cn/article/xwfb/xwrcxw/"              # 商务部·日常新闻发布（移动版）
+MOFCOM_BLD = "https://m.mofcom.gov.cn/article/xwfb/xwbldhd/"               # 商务部·部领导活动
+MOFCOM_BASE = "https://m.mofcom.gov.cn"
 NDRC_NEWS = "https://www.ndrc.gov.cn/xwdt/"                                # 发改委·新闻动态
 CAC_NEWS = "https://www.cac.gov.cn/"                                       # 网信办·要闻
+MIIT_NEWS = "https://www.miit.gov.cn/xwdt/gxdt/"                           # 工信部·工作动态
 # V5: 联合早报中文网 — 人事任免/中国政治动态权威海外信源
 ZAOBAO_CHINA = "https://www.zaobao.com/news/china"
 
@@ -561,31 +564,41 @@ def fetch_mfa():
     return items
 
 
-# ==================== v5 修复：部委官网 + 联合早报人事 ====================
+# ==================== v5.1 修复：部委官网（商务部移动版 + 工信部 + 联合早报） ====================
 def fetch_buwei_sites():
-    """商务部 / 发改委 / 网信办 官网（通报/要闻/答记者问）
-    v5: MOFCOM 被反爬(403)，改用中国政府网的商务部tag + 加更多 User-Agent 头
-    """
+    """商务部 / 发改委 / 网信办 / 工信部 官网（通报/要闻/答记者问）"""
     items = []
-    sites = [
-        # 商务部使用 http + 完整 UA 绕反爬
-        ("商务部", "http://www.mofcom.gov.cn/article/xwfb/", "http://www.mofcom.gov.cn/article/xwfb", ("shtml", "html")),
-        ("国家发改委", NDRC_NEWS, "https://www.ndrc.gov.cn/xwdt", ("html",)),
-        ("网信办", CAC_NEWS, "https://www.cac.gov.cn", ("shtml", "html", "htm")),
+    mofcom_headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Referer": "https://m.mofcom.gov.cn/",
+        "Accept": "text/html,application/xhtml+xml",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+    }
+    # 商务部：移动版日常新闻 + 部领导活动
+    mofcom_pages = [
+        ("商务部", MOFCOM_XWRC, "https://m.mofcom.gov.cn/article/xwfb/xwrcxw"),
+        ("商务部", MOFCOM_BLD, "https://m.mofcom.gov.cn/article/xwfb/xwbldhd"),
     ]
-    for src, url, base, filters in sites:
+    for src, url, base in mofcom_pages:
         try:
-            # 商务部需要更强的浏览器头来绕反爬
-            extra_headers = {}
-            if 'mofcom' in url:
-                extra_headers = {
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                    "Referer": "http://www.mofcom.gov.cn/",
-                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                    "Accept-Language": "zh-CN,zh;q=0.9",
-                }
-            h = fetch(url, headers=extra_headers if extra_headers else {"Referer": "https://www.gov.cn/"})
-            it = parse_mfa_list(h, base, src, url_filters=filters)
+            h = fetch(url, headers=mofcom_headers)
+            it = parse_mfa_list(h, base, src, url_filters=("shtml", "html"))
+            items += it
+            print(f"  ✅ {src}: 采纳 {len(it)} 条")
+        except Exception as e:
+            print(f"  ❌ {src}: {e}")
+
+    # 发改委 + 网信办
+    other_sites = [
+        ("国家发改委", NDRC_NEWS, "https://www.ndrc.gov.cn/xwdt"),
+        ("网信办", CAC_NEWS, "https://www.cac.gov.cn"),
+        ("工信部", MIIT_NEWS, "https://www.miit.gov.cn/xwdt/gxdt"),
+    ]
+    for src, url, base in other_sites:
+        try:
+            h = fetch(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+                                      "Referer": base})
+            it = parse_mfa_list(h, base, src, url_filters=("shtml", "html", "htm"))
             items += it
             print(f"  ✅ {src}: 采纳 {len(it)} 条")
         except Exception as e:
@@ -598,7 +611,7 @@ def fetch_buwei_sites():
     return items
 
 
-# ==================== v5 新增：联合早报中文网 ====================
+# ==================== v5.1 修复：联合早报中文网（自定义解析器 + make_item） ====================
 def fetch_zaobao():
     """联合早报中文网——中国政治/人事任免动态"""
     items = []
@@ -606,11 +619,25 @@ def fetch_zaobao():
         headers = {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
             "Referer": "https://www.zaobao.com/",
+            "Accept-Language": "zh-CN,zh;q=0.9",
         }
         h = fetch(ZAOBAO_CHINA, headers=headers)
-        it = parse_mfa_list(h, "https://www.zaobao.com/news/china", "联合早报", url_filters=("story",))
-        items += it
-        print(f"  ✅ 联合早报·中国: 采纳 {len(it)} 条")
+        stories = re.findall(r'href="(/news/china/story\d+-\d+)"[^>]*>(.*?)</a>', h)
+        seen = set()
+        for link, raw_title in stories:
+            url = "https://www.zaobao.com" + link
+            title = re.sub(r'<[^>]+>', '', raw_title).strip()
+            if not title or len(title) < 10 or title in seen:
+                continue
+            seen.add(title)
+            date_match = re.search(r'story(\d{8})-\d+', link)
+            date_str = date_match.group(1) if date_match else NOW.strftime("%Y%m%d")
+            date_fmt = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
+            # 通过 make_item 走正常分类/评分流程
+            item = make_item(title, url, date_fmt, "联合早报")
+            if item:
+                items.append(item)
+        print(f"  ✅ 联合早报·中国: 采纳 {len(items)} 条")
     except Exception as e:
         print(f"  ❌ 联合早报: {e}")
     return items
