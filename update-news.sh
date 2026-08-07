@@ -585,7 +585,8 @@ try:
     for _f_src in _us:
         _furl = _ff_norm(_f_src.get('url'))
         if not _furl: continue
-        _ftarget = _f_src.get('date', '')
+        # V2.5: 用 collectedAt 日期做归档（而非发表日 date），与昨日文章归今天版面一致
+        _ftarget = (_f_src.get('collectedAt') or '')[:10] or _f_src.get('date', '')
         if not _ftarget: continue
         # V1.5.7: 终极防线也严格按 7 天窗口过滤（防止 5-18 等超期数据被加回）
         if _ftarget < _cutoff_str: continue
@@ -607,6 +608,32 @@ try:
     for _fdt in list(data['archive'].keys()):
         if not data['archive'][_fdt]:
             del data['archive'][_fdt]
+
+    # V2.5 终极重归类：所有日期组中，date 字段与 collectedAt 日期不一致的文章 → 移到 collectedAt 日期组
+    # （确保 8/7 9:30 抓到的、发表日=8/6 的文章，归到 8/7 版面下，不被 force-upgrade 覆盖回去）
+    from collections import defaultdict as _dd_rc
+    _rc_v25_reassigned = 0
+    _rc_v25_by_target = _dd_rc(list)
+    for _rc_dt in list(data['archive'].keys()):
+        for _rc_a in list(data['archive'][_rc_dt]):
+            _rc_col = (_rc_a.get('collectedAt') or '')[:10]
+            if _rc_col and _rc_col != _rc_dt:
+                _rc_a['date'] = _rc_col
+                _rc_v25_by_target[_rc_col].append(_rc_a)
+                data['archive'][_rc_dt].remove(_rc_a)
+                _rc_v25_reassigned += 1
+    # 把移动出去的加到目标组
+    for _rc_target, _rc_arts in _rc_v25_by_target.items():
+        if _rc_target not in data['archive']:
+            data['archive'][_rc_target] = []
+        data['archive'][_rc_target].extend(_rc_arts)
+    # 删除空组
+    for _rc_dt in list(data['archive'].keys()):
+        if not data['archive'][_rc_dt]:
+            del data['archive'][_rc_dt]
+    if _rc_v25_reassigned:
+        print(f"  📅 V2.5 终极重归类: {_rc_v25_reassigned} 条 (date → collectedAt)")
+
     save_data(data)
     if _ff_added or _ff_upgraded:
         print(f"  🛡️ 官方源字段升级: 新增 {_ff_added} 条, 升级 {_ff_upgraded} 条")
