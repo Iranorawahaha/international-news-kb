@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-07 14:31",
+  "lastUpdated": "2026-08-07 14:42",
   "retentionDays": 7,
   "archive": {
     "2026-08-01": [
@@ -5437,7 +5437,7 @@
     "2026-08-06": [
       {
         "id": "auto_2026-08-05_52703",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "China announces countermeasures against Washington, including controls on drone exports to the US 中国宣布对美反制措施，包括无人机出口管制",
         "title_en": "China announces countermeasures against Washington, including controls on drone exports to the US",
         "title_zh": "中国宣布对美反制措施，包括无人机出口管制",
@@ -5465,7 +5465,7 @@
       },
       {
         "id": "auto_2026-08-05_84173",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "US hawks push Trump on multibillion-dollar Taiwan arms deal ahead of Xi summit 习特会前美国鹰派推动特朗普批准数十亿美元对台军售",
         "title_en": "US hawks push Trump on multibillion-dollar Taiwan arms deal ahead of Xi summit",
         "title_zh": "习特会前美国鹰派推动特朗普批准数十亿美元对台军售",
@@ -5575,8 +5575,65 @@
         "body_en": null
       },
       {
+        "id": "auto_2026-08-05_79743",
+        "date": "2026-08-06",
+        "title": "美国海岸警卫队参加巴拿马运河反威胁演习（Panamax 2026）",
+        "title_en": "Coast Guard Participates in Panama Canal Counter-Threat Exercise",
+        "title_zh": "美国海岸警卫队参加巴拿马运河反威胁演习（Panamax 2026）",
+        "summary": "美国海岸警卫队参加8月3日启动的Panamax 2026演习前期会议，该两年一度的演习是西半球最大军演之一，今年将持续至8月13日，共有19国参加，在巴拿马运河及东太平洋地区演练联合通信、机动与战术，确保运河自由通航。",
+        "summary_en": "The U.S. Coast Guard participated in the pre-sail conference for Exercise Panamax 2026, one of the largest military exercises in the Western Hemisphere, running until Aug. 13 with 19 countries practicing integrated operations to protect the Panama Canal.",
+        "summary_zh": "美国海岸警卫队参加8月3日启动的Panamax 2026演习前期会议，该两年一度的演习是西半球最大军演之一，今年将持续至8月13日，共有19国参加，在巴拿马运河及东太平洋地区演练联合通信、机动与战术，确保运河自由通航。",
+        "source": "美国国防部(war.gov)",
+        "category": "美国",
+        "keywords": [
+          "美国",
+          "国防部",
+          "巴拿马运河",
+          "军演",
+          "西半球"
+        ],
+        "url": "https://www.war.gov/News/News-Stories/Article/Article/4564659/coast-guard-participates-in-panama-canal-counter-threat-exercise/",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "importance": "⭐重要",
+        "collectedAt": "2026-08-06 09:20:00",
+        "collection_method": "us_official_webfetch",
+        "column": "美国",
+        "is_official": true,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-05_13045",
+        "date": "2026-08-06",
+        "title": "美国南方司令部成立西半球联合特遣部队，强化打击跨国威胁",
+        "title_en": "Southcom Establishes Joint Task Force Western Hemisphere",
+        "title_zh": "美国南方司令部成立西半球联合特遣部队，强化打击跨国威胁",
+        "summary": "美国南方司令部8月4日激活\"西半球联合特遣部队\"（JTF-WHEM），由陆战队少将贾拉德指挥，整合美军能力与美洲反卡特尔联盟18个伙伴国家，统一指挥控制以打击威胁、强化地区安全并快速响应危机。",
+        "summary_en": "U.S. Southern Command activated Joint Task Force Western Hemisphere to synchronize U.S. military operations with allies and partners, integrating capabilities with the 18 partner nations of the Americas Counter Cartel Coalition to counter threats and respond rapidly to crises.",
+        "summary_zh": "美国南方司令部8月4日激活\"西半球联合特遣部队\"（JTF-WHEM），由陆战队少将贾拉德指挥，整合美军能力与美洲反卡特尔联盟18个伙伴国家，统一指挥控制以打击威胁、强化地区安全并快速响应危机。",
+        "source": "美国国防部(war.gov)",
+        "category": "美国",
+        "keywords": [
+          "美国",
+          "国防部",
+          "南方司令部",
+          "联合特遣部队",
+          "西半球",
+          "卡特尔"
+        ],
+        "url": "https://www.war.gov/News/News-Stories/Article/Article/4564574/southcom-establishes-joint-task-force-western-hemisphere/",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "importance": "⭐重要",
+        "collectedAt": "2026-08-06 09:20:00",
+        "collection_method": "us_official_webfetch",
+        "column": "美国",
+        "is_official": true,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-08-05_95464",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "China urged to protect underwater cables amid growing fears of ocean sabotage 政策期刊呼吁中国立法保护海底光缆以应对\"海洋破坏\"",
         "title_en": "China urged to protect underwater cables amid growing fears of ocean sabotage",
         "title_zh": "政策期刊呼吁中国立法保护海底光缆以应对\"海洋破坏\"",
@@ -5604,7 +5661,7 @@
       },
       {
         "id": "auto_2026-08-05_82257",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "U.S. to Halt Key Metal Waste Exports in Push to Break China Reliance 美国叫停关键金属废料出口以摆脱对华依赖",
         "title_en": "U.S. to Halt Key Metal Waste Exports in Push to Break China Reliance",
         "title_zh": "美国叫停关键金属废料出口以摆脱对华依赖",
@@ -5633,7 +5690,7 @@
       },
       {
         "id": "auto_2026-08-05_57715",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "US to shut five consulates as critics fear China could fill diplomatic vacuum 美国拟关闭五座领事馆，批评者担忧中国填补外交真空",
         "title_en": "US to shut five consulates as critics fear China could fill diplomatic vacuum",
         "title_zh": "美国拟关闭五座领事馆，批评者担忧中国填补外交真空",
@@ -5773,7 +5830,7 @@
       },
       {
         "id": "auto_2026-08-05_3814",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Reform UK plan to return asylum seekers using navy 'dangerous in practice' 英国改革党拟用海军遣返寻求庇护者被指\"实践危险\"",
         "title_en": "Reform UK plan to return asylum seekers using navy 'dangerous in practice'",
         "title_zh": "英国改革党拟用海军遣返寻求庇护者被指\"实践危险\"",
@@ -5917,7 +5974,7 @@
       },
       {
         "id": "auto_2026-08-05_8608",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Trump administration pays back $100bn in 'Liberation Day' tariffs to businesses 特朗普政府向企业退还1000亿美元\"解放日\"关税",
         "title_en": "Trump administration pays back $100bn in 'Liberation Day' tariffs to businesses",
         "title_zh": "特朗普政府向企业退还1000亿美元\"解放日\"关税",
@@ -5989,7 +6046,7 @@
       },
       {
         "id": "auto_2026-08-05_18383",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "AP Exclusive: Trump's immigration crackdown has detained more than 50 military spouses and parents AP独家：特朗普移民打击已拘留逾50名军人配偶和父母",
         "title_en": "AP Exclusive: Trump's immigration crackdown has detained more than 50 military spouses and parents",
         "title_zh": "AP独家：特朗普移民打击已拘留逾50名军人配偶和父母",
@@ -6073,7 +6130,7 @@
       },
       {
         "id": "auto_2026-08-05_13135",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Ukraine Seeks Decadeslong Security Guarantee as Trump Offers 15 Years 乌克兰要求数十年期安全保障，特朗普仅给15年",
         "title_en": "Ukraine Seeks Decadeslong Security Guarantee as Trump Offers 15 Years",
         "title_zh": "乌克兰要求数十年期安全保障，特朗普仅给15年",
@@ -6123,7 +6180,7 @@
       },
       {
         "id": "auto_2026-08-05_1565",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Will Trump Leave Ukraine Without Patriots? 社论：特朗普会任由乌克兰耗尽防空力量吗",
         "title_en": "Will Trump Leave Ukraine Without Patriots?",
         "title_zh": "社论：特朗普会任由乌克兰耗尽防空力量吗",
@@ -6311,7 +6368,7 @@
       },
       {
         "id": "auto_2026-08-05_65775",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Trump claims China is fuelling resistance to AI data centres in the US 特朗普称中国煽动美国国内抵制AI数据中心建设",
         "title_en": "Trump claims China is fuelling resistance to AI data centres in the US",
         "title_zh": "特朗普称中国煽动美国国内抵制AI数据中心建设",
@@ -6339,7 +6396,7 @@
       },
       {
         "id": "auto_2026-08-04_32367",
-        "date": "2026-08-04",
+        "date": "2026-08-06",
         "title": "US revokes Brazil ambassador's visa in escalation of diplomatic feud 美吊销巴西大使签证，外交争端升级",
         "title_en": "US revokes Brazil ambassador's visa in escalation of diplomatic feud",
         "title_zh": "美吊销巴西大使签证，外交争端升级",
@@ -6478,7 +6535,7 @@
       },
       {
         "id": "auto_2026-08-05_97920",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Israel strikes south Lebanon after first evacuation warning in weeks 以色列数周来首次发布撤离警告后空袭黎巴嫩南部",
         "title_en": "Israel strikes south Lebanon after first evacuation warning in weeks",
         "title_zh": "以色列数周来首次发布撤离警告后空袭黎巴嫩南部",
@@ -6506,7 +6563,7 @@
       },
       {
         "id": "auto_2026-08-05_30746",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Iran and Oman agree on coordinates of route through Strait of Hormuz 伊朗外交部：已与阿曼就霍尔木兹海峡航线坐标达成一致",
         "title_en": "Iran and Oman agree on coordinates of route through Strait of Hormuz",
         "title_zh": "伊朗外交部：已与阿曼就霍尔木兹海峡航线坐标达成一致",
@@ -6673,7 +6730,7 @@
       },
       {
         "id": "auto_2026-08-05_55056",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Russian barrage in Ukraine's capital region kills 17 as air defenses fall short 俄军猛攻乌克兰首都地区致17死，防空力不从心",
         "title_en": "Russian barrage in Ukraine's capital region kills 17 as air defenses fall short",
         "title_zh": "俄军猛攻乌克兰首都地区致17死，防空力不从心",
@@ -6701,7 +6758,7 @@
       },
       {
         "id": "auto_2026-08-05_80365",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Zelenskyy calls for more air defences as Russian attack on Kyiv kills at least 17 俄袭击基辅致至少17死，泽连斯基呼吁更多防空系统",
         "title_en": "Zelenskyy calls for more air defences as Russian attack on Kyiv kills at least 17",
         "title_zh": "俄袭击基辅致至少17死，泽连斯基呼吁更多防空系统",
@@ -6729,7 +6786,7 @@
       },
       {
         "id": "auto_2026-08-05_88435",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Why Russia's ballistic missiles are increasingly getting through Ukrainian defenses 分析：俄弹道导弹为何越来越频繁突破乌防空",
         "title_en": "Why Russia's ballistic missiles are increasingly getting through Ukrainian defenses",
         "title_zh": "分析：俄弹道导弹为何越来越频繁突破乌防空",
@@ -6813,7 +6870,7 @@
       },
       {
         "id": "auto_2026-08-05_58697",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Drone carrying explosives found at German airport, police say 德国警方：机场发现携带爆炸物的无人机",
         "title_en": "Drone carrying explosives found at German airport, police say",
         "title_zh": "德国警方：机场发现携带爆炸物的无人机",
@@ -6869,7 +6926,7 @@
       },
       {
         "id": "auto_2026-08-05_76618",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Iran and the US say a Strait of Hormuz deal is close, but one or both would have to back down 美伊均称霍尔木兹协议接近达成，但需一方或双方让步",
         "title_en": "Iran and the US say a Strait of Hormuz deal is close, but one or both would have to back down",
         "title_zh": "美伊均称霍尔木兹协议接近达成，但需一方或双方让步",
@@ -6924,7 +6981,7 @@
       },
       {
         "id": "auto_2026-08-05_61549",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "U.S. Offers Ukraine Security Guarantee in Bid to Break Peace-Talks Deadlock 美国提出乌克兰安全保障以打破和谈僵局",
         "title_en": "U.S. Offers Ukraine Security Guarantee in Bid to Break Peace-Talks Deadlock",
         "title_zh": "美国提出乌克兰安全保障以打破和谈僵局",
@@ -7046,7 +7103,7 @@
       },
       {
         "id": "auto_2026-08-05_18726",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Iran, Oman, US 'close' to Hormuz deal: What do they all want? 解读：伊朗、阿曼、美国\"接近\"霍尔木兹协议，各方诉求是什么",
         "title_en": "Iran, Oman, US 'close' to Hormuz deal: What do they all want?",
         "title_zh": "解读：伊朗、阿曼、美国\"接近\"霍尔木兹协议，各方诉求是什么",
@@ -7130,7 +7187,7 @@
       },
       {
         "id": "auto_2026-08-05_75894",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "US officials push back on reports of dangerously low munitions supplies 美官员反驳弹药库存\"危险偏低\"的报道",
         "title_en": "US officials push back on reports of dangerously low munitions supplies",
         "title_zh": "美官员反驳弹药库存\"危险偏低\"的报道",
@@ -7158,7 +7215,7 @@
       },
       {
         "id": "auto_2026-08-05_17692",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "At least one Lebanese person, two Israeli soldiers killed in south Lebanon 黎巴嫩南部至少1名黎巴嫩人、2名以军士兵身亡",
         "title_en": "At least one Lebanese person, two Israeli soldiers killed in south Lebanon",
         "title_zh": "黎巴嫩南部至少1名黎巴嫩人、2名以军士兵身亡",
@@ -7186,7 +7243,7 @@
       },
       {
         "id": "auto_2026-08-05_58437",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Most Americans say US has not achieved war goals in Iran: survey 民调：多数美国人认为美国对伊战争未达目标",
         "title_en": "Most Americans say US has not achieved war goals in Iran: survey",
         "title_zh": "民调：多数美国人认为美国对伊战争未达目标",
@@ -7213,7 +7270,7 @@
       },
       {
         "id": "auto_2026-08-05_78500",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "UN rights chief alarmed by rise in Iran executions since March 联合国人权高专对3月以来伊朗处决人数上升表示震惊",
         "title_en": "UN rights chief alarmed by rise in Iran executions since March",
         "title_zh": "联合国人权高专对3月以来伊朗处决人数上升表示震惊",
@@ -7240,7 +7297,7 @@
       },
       {
         "id": "auto_2026-08-05_45187",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Pakistan restricts international media reporting 巴基斯坦限制国际媒体在全国大部分地区报道",
         "title_en": "Pakistan restricts international media reporting",
         "title_zh": "巴基斯坦限制国际媒体在全国大部分地区报道",
@@ -7323,7 +7380,7 @@
       },
       {
         "id": "auto_2026-08-05_54007",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Exiled PM vows to return to Bangladesh despite execution threat 流亡孟加拉国前总理誓言回国，尽管面临死刑威胁",
         "title_en": "Exiled PM vows to return to Bangladesh despite execution threat",
         "title_zh": "流亡孟加拉国前总理誓言回国，尽管面临死刑威胁",
@@ -7406,7 +7463,7 @@
       },
       {
         "id": "auto_2026-08-05_90669",
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "title": "Abdul El-Sayed wins Michigan Democratic primary for Senate in blow to AIPAC 阿卜杜勒·埃尔-萨耶德赢得密歇根民主党参议员初选",
         "title_en": "Abdul El-Sayed wins Michigan Democratic primary for Senate in blow to AIPAC",
         "title_zh": "阿卜杜勒·埃尔-萨耶德赢得密歇根民主党参议员初选",
@@ -7486,63 +7543,6 @@
         "column": "地区热点",
         "is_official": null,
         "body_en": null
-      },
-      {
-        "id": "auto_2026-08-05_79743",
-        "date": "2026-08-05",
-        "title": "美国海岸警卫队参加巴拿马运河反威胁演习（Panamax 2026）",
-        "title_en": "Coast Guard Participates in Panama Canal Counter-Threat Exercise",
-        "title_zh": "美国海岸警卫队参加巴拿马运河反威胁演习（Panamax 2026）",
-        "summary": "美国海岸警卫队参加8月3日启动的Panamax 2026演习前期会议，该两年一度的演习是西半球最大军演之一，今年将持续至8月13日，共有19国参加，在巴拿马运河及东太平洋地区演练联合通信、机动与战术，确保运河自由通航。",
-        "summary_en": "The U.S. Coast Guard participated in the pre-sail conference for Exercise Panamax 2026, one of the largest military exercises in the Western Hemisphere, running until Aug. 13 with 19 countries practicing integrated operations to protect the Panama Canal.",
-        "summary_zh": "美国海岸警卫队参加8月3日启动的Panamax 2026演习前期会议，该两年一度的演习是西半球最大军演之一，今年将持续至8月13日，共有19国参加，在巴拿马运河及东太平洋地区演练联合通信、机动与战术，确保运河自由通航。",
-        "source": "美国国防部(war.gov)",
-        "category": "美国",
-        "keywords": [
-          "美国",
-          "国防部",
-          "巴拿马运河",
-          "军演",
-          "西半球"
-        ],
-        "url": "https://www.war.gov/News/News-Stories/Article/Article/4564659/coast-guard-participates-in-panama-canal-counter-threat-exercise/",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "importance": "⭐重要",
-        "collectedAt": "2026-08-06 09:20:00",
-        "collection_method": "us_official_webfetch",
-        "column": "美国",
-        "is_official": true,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-05_13045",
-        "date": "2026-08-05",
-        "title": "美国南方司令部成立西半球联合特遣部队，强化打击跨国威胁",
-        "title_en": "Southcom Establishes Joint Task Force Western Hemisphere",
-        "title_zh": "美国南方司令部成立西半球联合特遣部队，强化打击跨国威胁",
-        "summary": "美国南方司令部8月4日激活\"西半球联合特遣部队\"（JTF-WHEM），由陆战队少将贾拉德指挥，整合美军能力与美洲反卡特尔联盟18个伙伴国家，统一指挥控制以打击威胁、强化地区安全并快速响应危机。",
-        "summary_en": "U.S. Southern Command activated Joint Task Force Western Hemisphere to synchronize U.S. military operations with allies and partners, integrating capabilities with the 18 partner nations of the Americas Counter Cartel Coalition to counter threats and respond rapidly to crises.",
-        "summary_zh": "美国南方司令部8月4日激活\"西半球联合特遣部队\"（JTF-WHEM），由陆战队少将贾拉德指挥，整合美军能力与美洲反卡特尔联盟18个伙伴国家，统一指挥控制以打击威胁、强化地区安全并快速响应危机。",
-        "source": "美国国防部(war.gov)",
-        "category": "美国",
-        "keywords": [
-          "美国",
-          "国防部",
-          "南方司令部",
-          "联合特遣部队",
-          "西半球",
-          "卡特尔"
-        ],
-        "url": "https://www.war.gov/News/News-Stories/Article/Article/4564574/southcom-establishes-joint-task-force-western-hemisphere/",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "importance": "⭐重要",
-        "collectedAt": "2026-08-06 09:20:00",
-        "collection_method": "us_official_webfetch",
-        "column": "美国",
-        "is_official": true,
-        "body_en": null
       }
     ],
     "2026-08-04": [
@@ -7618,6 +7618,197 @@
         "importance": "高",
         "collectedAt": "2026-08-04 09:29:46",
         "collection_method": "us_official",
+        "column": "美国",
+        "is_official": true,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-04_33870",
+        "date": "2026-08-04",
+        "title": "特朗普总统签署行政令成立军人配偶委员会",
+        "title_en": "Trump Establishes Military Spouse Commission",
+        "title_zh": "特朗普总统签署行政令成立军人配偶委员会",
+        "summary": "特朗普总统8月3日在白宫椭圆形办公室签署行政命令，成立总统军人配偶委员会。该委员会旨在解决军人家庭面临的就业、教育等难题，为军人配偶提供更多支持。",
+        "summary_en": "President Donald J. Trump signed an executive order in the White House's Oval Office establishing the President's Military Spouse Commission to address challenges facing military families.",
+        "summary_zh": "特朗普总统8月3日在白宫椭圆形办公室签署行政命令，成立总统军人配偶委员会。该委员会旨在解决军人家庭面临的就业、教育等难题，为军人配偶提供更多支持。",
+        "source": "美国国防部(war.gov)",
+        "category": "美国",
+        "keywords": [
+          "特朗普",
+          "行政令",
+          "军人配偶",
+          "国防部"
+        ],
+        "url": "https://www.war.gov/News/News-Stories/Article/Article/4562726/trump-establishes-military-spouse-commission/",
+        "priority_score": 88,
+        "is_summit_level": true,
+        "importance": "⭐元首级",
+        "collectedAt": "2026-08-04 09:30:00",
+        "collection_method": "us_official_webfetch",
+        "column": "美国",
+        "is_official": true,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-04_38454",
+        "date": "2026-08-04",
+        "title": "史上最大环太平洋联合军演成功收官：30国参与",
+        "title_en": "Largest Pacific Joint Maritime Exercise Successfully Concludes",
+        "title_zh": "史上最大环太平洋联合军演成功收官：30国参与",
+        "summary": "第30届环太平洋军事演习（RIMPAC）成功收官，共有30个国家参与。演习展示了通过信任、合作和共同价值观加强海上安全的重要性，是迄今规模最大的一届。",
+        "summary_en": "The 30th iteration of Exercise Rim of the Pacific brought together 30 nations and demonstrated that maritime security is strengthened through trust, cooperation and shared values.",
+        "summary_zh": "第30届环太平洋军事演习（RIMPAC）成功收官，共有30个国家参与。演习展示了通过信任、合作和共同价值观加强海上安全的重要性，是迄今规模最大的一届。",
+        "source": "美国国防部(war.gov)",
+        "category": "美国",
+        "keywords": [
+          "环太平洋军演",
+          "RIMPAC",
+          "印太",
+          "海上安全",
+          "30国"
+        ],
+        "url": "https://www.war.gov/News/News-Stories/Article/Article/4562605/largest-pacific-joint-maritime-exercise-successfully-concludes/",
+        "priority_score": 82,
+        "is_summit_level": false,
+        "importance": "高",
+        "collectedAt": "2026-08-04 09:30:00",
+        "collection_method": "us_official_webfetch",
+        "column": "地区热点",
+        "is_official": true,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-04_81947",
+        "date": "2026-08-04",
+        "title": "美国战争部与诺斯罗普·格鲁曼签署框架协议，扩大PAC-3与THAAD部件产能",
+        "title_en": "Department of War Signs Framework Agreements With Northrop Grumman to Ramp Production of PAC-3, THAAD Components",
+        "title_zh": "美国战争部与诺斯罗普·格鲁曼签署框架协议，扩大PAC-3与THAAD部件产能",
+        "summary": "美国战争部与诺斯罗普·格鲁曼和洛克希德·马丁合作，签署两份框架协议以扩大关键导弹拦截器部件的生产能力，应对库存压力，保障防空反导系统供应。",
+        "summary_en": "The War Department, in cooperation with Northrop Grumman and Lockheed Martin, announced two framework agreements to expand production capacity of critical missile-interceptor components amid stockpile strain.",
+        "summary_zh": "美国战争部与诺斯罗普·格鲁曼和洛克希德·马丁合作，签署两份框架协议以扩大关键导弹拦截器部件的生产能力，应对库存压力，保障防空反导系统供应。",
+        "source": "美国国防部(war.gov)",
+        "category": "美国",
+        "keywords": [
+          "PAC-3",
+          "THAAD",
+          "导弹拦截",
+          "诺斯罗普·格鲁曼",
+          "国防工业"
+        ],
+        "url": "https://www.war.gov/News/Releases/Release/Article/4562167/department-of-war-signs-framework-agreements-with-northrop-grumman-to-ramp-prod/",
+        "priority_score": 78,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-04 09:30:00",
+        "collection_method": "us_official_webfetch",
+        "column": "美国",
+        "is_official": true,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-04_65392",
+        "date": "2026-08-04",
+        "title": "美国海军陆战队远征部队自2008年以来首次通过巴拿马运河",
+        "title_en": "Marine Expeditionary Unit Transits Panama Canal",
+        "title_zh": "美国海军陆战队远征部队自2008年以来首次通过巴拿马运河",
+        "summary": "第24海军陆战队远征部队（Littoral Combat Force 24）搭乘圣安东尼奥号两栖运输船坞舰通过巴拿马运河，这是2008年以来海军陆战队远征部队首次穿越该运河。",
+        "summary_en": "The 24th Marine Expeditionary Unit recently transited the Panama Canal aboard USS San Antonio, marking the first time a Marine expeditionary unit has navigated the canal since 2008.",
+        "summary_zh": "第24海军陆战队远征部队（Littoral Combat Force 24）搭乘圣安东尼奥号两栖运输船坞舰通过巴拿马运河，这是2008年以来海军陆战队远征部队首次穿越该运河。",
+        "source": "美国国防部(war.gov)",
+        "category": "美国",
+        "keywords": [
+          "海军陆战队",
+          "巴拿马运河",
+          "印太",
+          "两栖作战"
+        ],
+        "url": "https://www.war.gov/News/News-Stories/Article/Article/4562420/marine-expeditionary-unit-transits-panama-canal/",
+        "priority_score": 76,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-04 09:30:00",
+        "collection_method": "us_official_webfetch",
+        "column": "地区热点",
+        "is_official": true,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-04_15740",
+        "date": "2026-08-04",
+        "title": "美国战争部强化反无人机市场，扩大经认证技术准入",
+        "title_en": "Department of War Enhances C-UAS Marketplace to Expand Access to Validated Technologies",
+        "title_zh": "美国战争部强化反无人机市场，扩大经认证技术准入",
+        "summary": "美国战争部通过第401联合跨部门工作组强化反无人机系统（C-UAS）市场，帮助军方机构、国内执法部门及国际盟友识别、评估和采购经认证的反无人机技术。",
+        "summary_en": "The Department of War, through Joint Interagency Task Force 401, is enhancing its counter-unmanned aerial system marketplace to help military organizations, law enforcement and allies acquire validated counter-drone technologies.",
+        "summary_zh": "美国战争部通过第401联合跨部门工作组强化反无人机系统（C-UAS）市场，帮助军方机构、国内执法部门及国际盟友识别、评估和采购经认证的反无人机技术。",
+        "source": "美国国防部(war.gov)",
+        "category": "美国",
+        "keywords": [
+          "反无人机",
+          "C-UAS",
+          "国防工业",
+          "无人机"
+        ],
+        "url": "https://www.war.gov/News/Releases/Release/Article/4563104/department-of-war-enhances-c-uas-marketplace-to-expand-access-to-validated-tech/",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-04 09:30:00",
+        "collection_method": "us_official_webfetch",
+        "column": "美国",
+        "is_official": true,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-03_83448",
+        "date": "2026-08-04",
+        "title": "美国财政部发布2026年8月3日政府借款咨询委员会经济报告",
+        "title_en": "Economy Statement for the Treasury Borrowing Advisory Committee",
+        "title_zh": "美国财政部发布2026年8月3日政府借款咨询委员会经济报告",
+        "summary": "美国财政部8月3日向政府借款咨询委员会（TBAC）发布经济报告，概述当前美国经济形势与财政状况，为季度借款计划提供依据。",
+        "summary_en": "Treasury released its economy statement for the Treasury Borrowing Advisory Committee on August 3, 2026, outlining current U.S. economic and fiscal conditions.",
+        "summary_zh": "美国财政部8月3日向政府借款咨询委员会（TBAC）发布经济报告，概述当前美国经济形势与财政状况，为季度借款计划提供依据。",
+        "source": "美国财政部",
+        "category": "美国",
+        "keywords": [
+          "美国财政部",
+          "TBAC",
+          "借款",
+          "经济报告"
+        ],
+        "url": "https://home.treasury.gov/news/press-releases/sb0585",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-04 09:30:00",
+        "collection_method": "us_official_webfetch",
+        "column": "美国",
+        "is_official": true,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-03_54595",
+        "date": "2026-08-04",
+        "title": "美国财政部公布市场可售借款规模预估",
+        "title_en": "Treasury Announces Marketable Borrowing Estimates",
+        "title_zh": "美国财政部公布市场可售借款规模预估",
+        "summary": "美国财政部8月3日公布市场可售借款预估，为未来数月联邦政府国债发行计划提供指引，反映联邦财政融资需求变化。",
+        "summary_en": "Treasury announced its marketable borrowing estimates on August 3, 2026, providing guidance for federal debt issuance in coming months.",
+        "summary_zh": "美国财政部8月3日公布市场可售借款预估，为未来数月联邦政府国债发行计划提供指引，反映联邦财政融资需求变化。",
+        "source": "美国财政部",
+        "category": "美国",
+        "keywords": [
+          "美国财政部",
+          "国债发行",
+          "借款预估",
+          "财政"
+        ],
+        "url": "https://home.treasury.gov/news/press-releases/sb0584",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-04 09:30:00",
+        "collection_method": "us_official_webfetch",
         "column": "美国",
         "is_official": true,
         "body_en": null
@@ -7757,33 +7948,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-04_15740",
-        "date": "2026-08-04",
-        "title": "美国战争部强化反无人机市场，扩大经认证技术准入",
-        "title_en": "Department of War Enhances C-UAS Marketplace to Expand Access to Validated Technologies",
-        "title_zh": "美国战争部强化反无人机市场，扩大经认证技术准入",
-        "summary": "美国战争部通过第401联合跨部门工作组强化反无人机系统（C-UAS）市场，帮助军方机构、国内执法部门及国际盟友识别、评估和采购经认证的反无人机技术。",
-        "summary_en": "The Department of War, through Joint Interagency Task Force 401, is enhancing its counter-unmanned aerial system marketplace to help military organizations, law enforcement and allies acquire validated counter-drone technologies.",
-        "summary_zh": "美国战争部通过第401联合跨部门工作组强化反无人机系统（C-UAS）市场，帮助军方机构、国内执法部门及国际盟友识别、评估和采购经认证的反无人机技术。",
-        "source": "美国国防部(war.gov)",
-        "category": "美国",
-        "keywords": [
-          "反无人机",
-          "C-UAS",
-          "国防工业",
-          "无人机"
-        ],
-        "url": "https://www.war.gov/News/Releases/Release/Article/4563104/department-of-war-enhances-c-uas-marketplace-to-expand-access-to-validated-tech/",
-        "priority_score": 75,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-04 09:30:00",
-        "collection_method": "us_official_webfetch",
-        "column": "美国",
-        "is_official": true,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-08-04_23277",
         "date": "2026-08-04",
         "title": "China is working towards 100% renewable power at its Antarctic bases by 2035 中国南极科考站2035年实现100%可再生能源",
@@ -7835,33 +7999,6 @@
         "collection_method": "legacy",
         "column": "中国",
         "is_official": null,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-04_33870",
-        "date": "2026-08-04",
-        "title": "特朗普总统签署行政令成立军人配偶委员会",
-        "title_en": "Trump Establishes Military Spouse Commission",
-        "title_zh": "特朗普总统签署行政令成立军人配偶委员会",
-        "summary": "特朗普总统8月3日在白宫椭圆形办公室签署行政命令，成立总统军人配偶委员会。该委员会旨在解决军人家庭面临的就业、教育等难题，为军人配偶提供更多支持。",
-        "summary_en": "President Donald J. Trump signed an executive order in the White House's Oval Office establishing the President's Military Spouse Commission to address challenges facing military families.",
-        "summary_zh": "特朗普总统8月3日在白宫椭圆形办公室签署行政命令，成立总统军人配偶委员会。该委员会旨在解决军人家庭面临的就业、教育等难题，为军人配偶提供更多支持。",
-        "source": "美国国防部(war.gov)",
-        "category": "美国",
-        "keywords": [
-          "特朗普",
-          "行政令",
-          "军人配偶",
-          "国防部"
-        ],
-        "url": "https://www.war.gov/News/News-Stories/Article/Article/4562726/trump-establishes-military-spouse-commission/",
-        "priority_score": 88,
-        "is_summit_level": true,
-        "importance": "⭐元首级",
-        "collectedAt": "2026-08-04 09:30:00",
-        "collection_method": "us_official_webfetch",
-        "column": "美国",
-        "is_official": true,
         "body_en": null
       },
       {
@@ -8561,89 +8698,6 @@
         "collectedAt": "2026-08-04 09:29:46",
         "collection_method": "us_official",
         "column": "美国",
-        "is_official": true,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-04_38454",
-        "date": "2026-08-04",
-        "title": "史上最大环太平洋联合军演成功收官：30国参与",
-        "title_en": "Largest Pacific Joint Maritime Exercise Successfully Concludes",
-        "title_zh": "史上最大环太平洋联合军演成功收官：30国参与",
-        "summary": "第30届环太平洋军事演习（RIMPAC）成功收官，共有30个国家参与。演习展示了通过信任、合作和共同价值观加强海上安全的重要性，是迄今规模最大的一届。",
-        "summary_en": "The 30th iteration of Exercise Rim of the Pacific brought together 30 nations and demonstrated that maritime security is strengthened through trust, cooperation and shared values.",
-        "summary_zh": "第30届环太平洋军事演习（RIMPAC）成功收官，共有30个国家参与。演习展示了通过信任、合作和共同价值观加强海上安全的重要性，是迄今规模最大的一届。",
-        "source": "美国国防部(war.gov)",
-        "category": "美国",
-        "keywords": [
-          "环太平洋军演",
-          "RIMPAC",
-          "印太",
-          "海上安全",
-          "30国"
-        ],
-        "url": "https://www.war.gov/News/News-Stories/Article/Article/4562605/largest-pacific-joint-maritime-exercise-successfully-concludes/",
-        "priority_score": 82,
-        "is_summit_level": false,
-        "importance": "高",
-        "collectedAt": "2026-08-04 09:30:00",
-        "collection_method": "us_official_webfetch",
-        "column": "地区热点",
-        "is_official": true,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-04_81947",
-        "date": "2026-08-04",
-        "title": "美国战争部与诺斯罗普·格鲁曼签署框架协议，扩大PAC-3与THAAD部件产能",
-        "title_en": "Department of War Signs Framework Agreements With Northrop Grumman to Ramp Production of PAC-3, THAAD Components",
-        "title_zh": "美国战争部与诺斯罗普·格鲁曼签署框架协议，扩大PAC-3与THAAD部件产能",
-        "summary": "美国战争部与诺斯罗普·格鲁曼和洛克希德·马丁合作，签署两份框架协议以扩大关键导弹拦截器部件的生产能力，应对库存压力，保障防空反导系统供应。",
-        "summary_en": "The War Department, in cooperation with Northrop Grumman and Lockheed Martin, announced two framework agreements to expand production capacity of critical missile-interceptor components amid stockpile strain.",
-        "summary_zh": "美国战争部与诺斯罗普·格鲁曼和洛克希德·马丁合作，签署两份框架协议以扩大关键导弹拦截器部件的生产能力，应对库存压力，保障防空反导系统供应。",
-        "source": "美国国防部(war.gov)",
-        "category": "美国",
-        "keywords": [
-          "PAC-3",
-          "THAAD",
-          "导弹拦截",
-          "诺斯罗普·格鲁曼",
-          "国防工业"
-        ],
-        "url": "https://www.war.gov/News/Releases/Release/Article/4562167/department-of-war-signs-framework-agreements-with-northrop-grumman-to-ramp-prod/",
-        "priority_score": 78,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-04 09:30:00",
-        "collection_method": "us_official_webfetch",
-        "column": "美国",
-        "is_official": true,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-04_65392",
-        "date": "2026-08-04",
-        "title": "美国海军陆战队远征部队自2008年以来首次通过巴拿马运河",
-        "title_en": "Marine Expeditionary Unit Transits Panama Canal",
-        "title_zh": "美国海军陆战队远征部队自2008年以来首次通过巴拿马运河",
-        "summary": "第24海军陆战队远征部队（Littoral Combat Force 24）搭乘圣安东尼奥号两栖运输船坞舰通过巴拿马运河，这是2008年以来海军陆战队远征部队首次穿越该运河。",
-        "summary_en": "The 24th Marine Expeditionary Unit recently transited the Panama Canal aboard USS San Antonio, marking the first time a Marine expeditionary unit has navigated the canal since 2008.",
-        "summary_zh": "第24海军陆战队远征部队（Littoral Combat Force 24）搭乘圣安东尼奥号两栖运输船坞舰通过巴拿马运河，这是2008年以来海军陆战队远征部队首次穿越该运河。",
-        "source": "美国国防部(war.gov)",
-        "category": "美国",
-        "keywords": [
-          "海军陆战队",
-          "巴拿马运河",
-          "印太",
-          "两栖作战"
-        ],
-        "url": "https://www.war.gov/News/News-Stories/Article/Article/4562420/marine-expeditionary-unit-transits-panama-canal/",
-        "priority_score": 76,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-04 09:30:00",
-        "collection_method": "us_official_webfetch",
-        "column": "地区热点",
         "is_official": true,
         "body_en": null
       },
@@ -9537,66 +9591,12 @@
         "column": "地区热点",
         "is_official": null,
         "body_en": null
-      },
-      {
-        "id": "auto_2026-08-03_83448",
-        "date": "2026-08-03",
-        "title": "美国财政部发布2026年8月3日政府借款咨询委员会经济报告",
-        "title_en": "Economy Statement for the Treasury Borrowing Advisory Committee",
-        "title_zh": "美国财政部发布2026年8月3日政府借款咨询委员会经济报告",
-        "summary": "美国财政部8月3日向政府借款咨询委员会（TBAC）发布经济报告，概述当前美国经济形势与财政状况，为季度借款计划提供依据。",
-        "summary_en": "Treasury released its economy statement for the Treasury Borrowing Advisory Committee on August 3, 2026, outlining current U.S. economic and fiscal conditions.",
-        "summary_zh": "美国财政部8月3日向政府借款咨询委员会（TBAC）发布经济报告，概述当前美国经济形势与财政状况，为季度借款计划提供依据。",
-        "source": "美国财政部",
-        "category": "美国",
-        "keywords": [
-          "美国财政部",
-          "TBAC",
-          "借款",
-          "经济报告"
-        ],
-        "url": "https://home.treasury.gov/news/press-releases/sb0585",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-04 09:30:00",
-        "collection_method": "us_official_webfetch",
-        "column": "美国",
-        "is_official": true,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-03_54595",
-        "date": "2026-08-03",
-        "title": "美国财政部公布市场可售借款规模预估",
-        "title_en": "Treasury Announces Marketable Borrowing Estimates",
-        "title_zh": "美国财政部公布市场可售借款规模预估",
-        "summary": "美国财政部8月3日公布市场可售借款预估，为未来数月联邦政府国债发行计划提供指引，反映联邦财政融资需求变化。",
-        "summary_en": "Treasury announced its marketable borrowing estimates on August 3, 2026, providing guidance for federal debt issuance in coming months.",
-        "summary_zh": "美国财政部8月3日公布市场可售借款预估，为未来数月联邦政府国债发行计划提供指引，反映联邦财政融资需求变化。",
-        "source": "美国财政部",
-        "category": "美国",
-        "keywords": [
-          "美国财政部",
-          "国债发行",
-          "借款预估",
-          "财政"
-        ],
-        "url": "https://home.treasury.gov/news/press-releases/sb0584",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-04 09:30:00",
-        "collection_method": "us_official_webfetch",
-        "column": "美国",
-        "is_official": true,
-        "body_en": null
       }
     ],
     "2026-08-05": [
       {
         "id": "auto_2026-08-04_94141",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "US AI leaders are using Chinese open models for cybersecurity. Here's why 美国AI领袖正使用中国开源模型做网络安全，原因如下",
         "title_en": "US AI leaders are using Chinese open models for cybersecurity. Here's why",
         "title_zh": null,
@@ -9624,7 +9624,7 @@
       },
       {
         "id": "auto_2026-08-04_54505",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "How Taiwan is preparing for a PLA sea blockade in its biggest war games 台湾如何在其最大规模军演中为解放军海上封锁做准备",
         "title_en": "How Taiwan is preparing for a PLA sea blockade in its biggest war games",
         "title_zh": null,
@@ -9651,7 +9651,7 @@
       },
       {
         "id": "auto_2026-08-04_62119",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Bachelet-led panel urges Latin America not to choose sides in US-China rivalry 巴切莱特领衔小组敦促拉美不要在美中竞争中选边站",
         "title_en": "Bachelet-led panel urges Latin America not to choose sides in US-China rivalry",
         "title_zh": null,
@@ -9678,7 +9678,7 @@
       },
       {
         "id": "auto_2026-08-03_83413",
-        "date": "2026-08-03",
+        "date": "2026-08-05",
         "title": "How China's US$900 million port deal in Angola shows its lead on US interests 中国在安哥拉的9亿美元港口协议如何展现对美利益领先",
         "title_en": "How China's US$900 million port deal in Angola shows its lead on US interests",
         "title_zh": null,
@@ -9733,7 +9733,7 @@
       },
       {
         "id": "auto_2026-08-04_60729",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Japan sounds alarm over China's expanding Pacific footprint, vows defence boost 日本对中国扩大太平洋足迹发出警报 誓言加强防务",
         "title_en": "Japan sounds alarm over China's expanding Pacific footprint, vows defence boost",
         "title_zh": null,
@@ -9761,7 +9761,7 @@
       },
       {
         "id": "auto_2026-08-03_60666",
-        "date": "2026-08-03",
+        "date": "2026-08-05",
         "title": "Open Questions | China's military goal is to stand neck and neck with US: ex-PLA colonel Zhou Bo 前解放军上校周波：中国军事目标是与美国并驾齐驱",
         "title_en": "Open Questions | China's military goal is to stand neck and neck with US: ex-PLA colonel Zhou Bo",
         "title_zh": null,
@@ -9815,7 +9815,7 @@
       },
       {
         "id": "auto_2026-08-04_9774",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Why China's military is laser-focused on 'disruptive' technologies 为什么中国军队高度聚焦“颠覆性”技术",
         "title_en": "Why China's military is laser-focused on 'disruptive' technologies",
         "title_zh": null,
@@ -9843,7 +9843,7 @@
       },
       {
         "id": "auto_2026-08-04_32306",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "China's Tibet autonomous region showcases elderly care and ethnic unity to foreign journalists 中国西藏自治区向外媒记者展示养老服务和民族团结",
         "title_en": "China's Tibet autonomous region showcases elderly care and ethnic unity to foreign journalists",
         "title_zh": null,
@@ -9897,7 +9897,7 @@
       },
       {
         "id": "auto_2026-08-04_96101",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "EU chief criticises Spain's migrant plan after Ceuta crisis meeting 欧盟领导人批评西班牙移民计划 此前召开休达危机会议",
         "title_en": "EU chief criticises Spain's migrant plan after Ceuta crisis meeting",
         "title_zh": null,
@@ -9924,7 +9924,7 @@
       },
       {
         "id": "auto_2026-08-04_21924",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "China Chases a Journalist Abroad 中国在海外追查一名记者",
         "title_en": "China Chases a Journalist Abroad",
         "title_zh": null,
@@ -9951,7 +9951,7 @@
       },
       {
         "id": "auto_2026-08-04_60958",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "White House AI Guidelines Exempt U.S. Open Models From Government Review 白宫AI指导方针豁免美国开源模型接受政府审查",
         "title_en": "White House AI Guidelines Exempt U.S. Open Models From Government Review",
         "title_zh": null,
@@ -10031,7 +10031,7 @@
       },
       {
         "id": "auto_2026-08-04_67640",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "White House to meet AI firms on advanced model safety 白宫将与AI公司会面讨论先进模型安全",
         "title_en": "White House to meet AI firms on advanced model safety",
         "title_zh": null,
@@ -10058,7 +10058,7 @@
       },
       {
         "id": "auto_2026-08-03_91808",
-        "date": "2026-08-03",
+        "date": "2026-08-05",
         "title": "Yen hits three-month high after Trump helps prop up currency 日元在特朗普支撑汇率后升至三个月高点",
         "title_en": "Yen hits three-month high after Trump helps prop up currency",
         "title_zh": null,
@@ -10085,7 +10085,7 @@
       },
       {
         "id": "auto_2026-08-04_20564",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Armed man arrested near Trump's golf course ahead of president's visit 特朗普到访前，武装男子在其高尔夫球场附近被捕",
         "title_en": "Armed man arrested near Trump's golf course ahead of president's visit",
         "title_zh": null,
@@ -10112,7 +10112,7 @@
       },
       {
         "id": "auto_2026-08-04_1638",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "How Trump's Financial Windfall Stiffened Opposition to Landmark Crypto Bill 特朗普的财务收益如何加剧对里程碑式加密货币法案的反对",
         "title_en": "How Trump's Financial Windfall Stiffened Opposition to Landmark Crypto Bill",
         "title_zh": null,
@@ -10139,7 +10139,7 @@
       },
       {
         "id": "auto_2026-08-04_7191",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "EU commends Spain's 'swift response' to Ceuta migrant crisis 欧盟赞扬西班牙对休达移民危机的“迅速应对”",
         "title_en": "EU commends Spain's 'swift response' to Ceuta migrant crisis",
         "title_zh": null,
@@ -10166,7 +10166,7 @@
       },
       {
         "id": "auto_2026-08-04_93183",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "'Maximum use': Iran boosts military strength during ceasefire with US 伊朗在美伊停火期间增强军力",
         "title_en": "'Maximum use': Iran boosts military strength during ceasefire with US",
         "title_zh": null,
@@ -10193,7 +10193,7 @@
       },
       {
         "id": "auto_2026-08-04_32081",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Europe wants to kick its Palantir habit 欧洲想戒掉对Palantir的依赖",
         "title_en": "Europe wants to kick its Palantir habit",
         "title_zh": null,
@@ -10269,7 +10269,7 @@
       },
       {
         "id": "auto_2026-08-04_44452",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "AI used new levels of 'autonomy and deception' to trick people in safety test AI在安全测试中以更高“自主性与欺骗性”诱骗人类",
         "title_en": "AI used new levels of 'autonomy and deception' to trick people in safety test",
         "title_zh": null,
@@ -10378,7 +10378,7 @@
       },
       {
         "id": "auto_2026-08-04_34612",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Iran and Oman make progress on a deal to reopen the Strait of Hormuz, officials say 官员称伊朗与阿曼就重开霍尔木兹海峡达成协议取得进展",
         "title_en": "Iran and Oman make progress on a deal to reopen the Strait of Hormuz, officials say",
         "title_zh": null,
@@ -10405,7 +10405,7 @@
       },
       {
         "id": "auto_2026-08-04_17162",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Jerusalem's most important Muslim religious site facing 'imminent' threat of Israeli takeover, says Jordan 约旦称耶路撒冷最重要穆斯林圣地面临以色列接管“迫在眉睫”威胁",
         "title_en": "Jerusalem's most important Muslim religious site facing 'imminent' threat of Israeli takeover, says Jordan",
         "title_zh": null,
@@ -10459,7 +10459,7 @@
       },
       {
         "id": "auto_2026-08-04_54441",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Netanyahu says no Israeli withdrawal from Gaza until Hamas has been completely disarmed 内塔尼亚胡称哈马斯完全解除武装前以色列不会从加沙撤军",
         "title_en": "Netanyahu says no Israeli withdrawal from Gaza until Hamas has been completely disarmed",
         "title_zh": null,
@@ -10487,7 +10487,7 @@
       },
       {
         "id": "auto_2026-08-04_89448",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Oil prices fall on hopes Strait of Hormuz could reopen 油价因霍尔木兹海峡有望重开而下跌",
         "title_en": "Oil prices fall on hopes Strait of Hormuz could reopen",
         "title_zh": null,
@@ -10514,7 +10514,7 @@
       },
       {
         "id": "auto_2026-08-04_46969",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "One killed, five injured in Russian ballistic missile attack on Kyiv 俄军弹道导弹袭击基辅致1死5伤",
         "title_en": "One killed, five injured in Russian ballistic missile attack on Kyiv",
         "title_zh": null,
@@ -10567,7 +10567,7 @@
       },
       {
         "id": "auto_2026-08-04_27296",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Rubio hopes US can reach Hormuz deal with Iran 'very shortly' as officials say progress has been made 鲁比奥希望美伊能“很快”达成霍尔木兹协议 官员称已取得进展",
         "title_en": "Rubio hopes US can reach Hormuz deal with Iran 'very shortly' as officials say progress has been made",
         "title_zh": null,
@@ -10675,7 +10675,7 @@
       },
       {
         "id": "auto_2026-08-04_17896",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "US and Qatar report progress on Iran ceasefire and reopening Hormuz strait 美卡报告伊朗停火及重开霍尔木兹海峡取得进展",
         "title_en": "US and Qatar report progress on Iran ceasefire and reopening Hormuz strait",
         "title_zh": null,
@@ -10729,7 +10729,7 @@
       },
       {
         "id": "auto_2026-08-04_4056",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "US revokes Brazil ambassador's visa as diplomatic tensions escalate 美巴外交紧张升级 美国撤销巴西大使签证",
         "title_en": "US revokes Brazil ambassador's visa as diplomatic tensions escalate",
         "title_zh": null,
@@ -10783,7 +10783,7 @@
       },
       {
         "id": "auto_2026-08-04_28999",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "US says deal on reopening Hormuz close as Iran, Oman hold 'positive' talks 美国称重开霍尔木兹协议接近达成 伊朗阿曼会谈“积极”",
         "title_en": "US says deal on reopening Hormuz close as Iran, Oman hold 'positive' talks",
         "title_zh": null,
@@ -10838,7 +10838,7 @@
       },
       {
         "id": "auto_2026-08-04_64192",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Video shows Russian drone chasing Ukrainian street vendor in 'human safari' attack 视频显示俄军无人机追击乌克兰街头商贩的“人类狩猎”式袭击",
         "title_en": "Video shows Russian drone chasing Ukrainian street vendor in 'human safari' attack",
         "title_zh": null,
@@ -10957,7 +10957,7 @@
       },
       {
         "id": "auto_2026-08-04_45586",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "'I feel like I dug my own grave': The workers caught in the AI transition “我感觉自己给自己挖了坑”：AI转型中被波及的工人们",
         "title_en": "'I feel like I dug my own grave': The workers caught in the AI transition",
         "title_zh": null,
@@ -10984,7 +10984,7 @@
       },
       {
         "id": "auto_2026-08-04_76536",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "OpenAI Calls Apple's Trade-Secret Suit 'Careless' and 'Oddly Personal' OpenAI称苹果的商业秘密诉讼“草率”且“奇怪地针对个人”",
         "title_en": "OpenAI Calls Apple's Trade-Secret Suit 'Careless' and 'Oddly Personal'",
         "title_zh": null,
@@ -11012,7 +11012,7 @@
       },
       {
         "id": "auto_2026-08-04_5852",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "Iran's president denies threatening to resign during talks over Strait of Hormuz 伊朗总统否认在霍尔木兹海峡谈判中威胁辞职",
         "title_en": "Iran's president denies threatening to resign during talks over Strait of Hormuz",
         "title_zh": null,
@@ -11039,7 +11039,7 @@
       },
       {
         "id": "auto_2026-08-04_44036",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "SpaceX Says Spending Spree Is Supercharging AI Revenues SpaceX称支出狂潮正大幅提升AI收入",
         "title_en": "SpaceX Says Spending Spree Is Supercharging AI Revenues",
         "title_zh": null,
@@ -11066,7 +11066,7 @@
       },
       {
         "id": "auto_2026-08-04_28102",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "SpaceX beats revenue expectations in first earnings report after IPO crash SpaceX在IPO暴跌后首份财报中超出营收预期",
         "title_en": "SpaceX beats revenue expectations in first earnings report after IPO crash",
         "title_zh": null,
@@ -11093,7 +11093,7 @@
       },
       {
         "id": "auto_2026-08-04_7173",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "OpenAI pays $3.2m to settle claims it discriminated against US workers OpenAI支付320万美元了结歧视美国员工指控",
         "title_en": "OpenAI pays $3.2m to settle claims it discriminated against US workers",
         "title_zh": null,
@@ -11174,7 +11174,7 @@
       },
       {
         "id": "auto_2026-08-04_54308",
-        "date": "2026-08-04",
+        "date": "2026-08-05",
         "title": "US stocks hit records as profits keep piling up for Palantir and others, while oil prices ease 美股创历史新高 Palantir等利润攀升 油价回落",
         "title_en": "US stocks hit records as profits keep piling up for Palantir and others, while oil prices ease",
         "title_zh": null,
@@ -11389,7 +11389,7 @@
     "2026-08-07": [
       {
         "id": "auto_2026-08-06_41054",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Will latest trade 'speed bump' slow China-US ties, or even stop Xi-Trump summit? 最新贸易\"减速带\"会否拖慢中美关系甚至阻碍习特峰会？",
         "title_en": "Will latest trade 'speed bump' slow China-US ties, or even stop Xi-Trump summit?",
         "title_zh": "最新贸易\"减速带\"会否拖慢中美关系甚至阻碍习特峰会？",
@@ -11417,7 +11417,7 @@
       },
       {
         "id": "auto_2026-08-06_71576",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Private Sector Answers President Trump’s Call to Lower Prices for American Families",
         "title_en": "Private Sector Answers President Trump’s Call to Lower Prices for American Families",
         "title_zh": "私营部门响应特朗普总统号召为美国家庭降低物价",
@@ -11439,7 +11439,7 @@
       },
       {
         "id": "auto_2026-08-06_54004",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Fraud.gov: Track the Trump Administration’s Relentless War on Fraud",
         "title_en": "Fraud.gov: Track the Trump Administration’s Relentless War on Fraud",
         "title_zh": "Fraud.gov：追踪特朗普政府打击欺诈的持续行动",
@@ -11461,7 +11461,7 @@
       },
       {
         "id": "auto_2026-08-05_25189",
-        "date": "2026-08-05",
+        "date": "2026-08-07",
         "title": "President Trump and Republicans Deliver Big Wins for the Silver State",
         "title_en": "President Trump and Republicans Deliver Big Wins for the Silver State",
         "title_zh": "特朗普总统与共和党人为内华达州带来重大胜利",
@@ -11483,7 +11483,7 @@
       },
       {
         "id": "auto_2026-08-05_57451",
-        "date": "2026-08-05",
+        "date": "2026-08-07",
         "title": "FBI Secretly Opened Probe Alleging Trump Fired Comey Because He Was a Russian Asset, Declassified Memos Show",
         "title_en": "FBI Secretly Opened Probe Alleging Trump Fired Comey Because He Was a Russian Asset, Declassified Memos Show",
         "title_zh": "解密备忘录显示：FBI 曾秘密立案指控特朗普因科米被指为俄资产而解雇他",
@@ -11534,7 +11534,7 @@
       },
       {
         "id": "auto_2026-08-06_96833",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "US sets 15% polysilicon tariff, price floors to challenge China's dominance 美国对多晶硅设15%关税与价格底线，挑战中国主导地位",
         "title_en": "US sets 15% polysilicon tariff, price floors to challenge China's dominance",
         "title_zh": "美国对多晶硅设15%关税与价格底线，挑战中国主导地位",
@@ -11562,7 +11562,7 @@
       },
       {
         "id": "auto_2026-08-06_3682",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "DeepSeek signals 'significant' price hike, testing its low-cost edge DeepSeek释放\"大幅\"涨价信号，考验低价优势",
         "title_en": "DeepSeek signals 'significant' price hike, testing its low-cost edge",
         "title_zh": "DeepSeek释放\"大幅\"涨价信号，考验低价优势",
@@ -11589,36 +11589,8 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-07_84404",
-        "date": "2026-08-07",
-        "title": "Trump says Iran war will end 'pretty soon', Hormuz deal looms 特朗普称对伊战争将\"很快\"结束，霍尔木兹协议在望",
-        "title_en": "Trump says Iran war will end 'pretty soon', Hormuz deal looms",
-        "title_zh": "特朗普称对伊战争将\"很快\"结束，霍尔木兹协议在望",
-        "summary": "美国、伊朗和阿曼接近达成重开霍尔木兹海峡的临时协议，特朗普表示战争很快结束，伊朗议会则称谈判仅在伊朗与阿曼之间进行。",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "半岛电视台",
-        "category": "地缘政治",
-        "keywords": [
-          "特朗普",
-          "伊朗",
-          "霍尔木兹",
-          "战争",
-          "协议"
-        ],
-        "url": "https://www.aljazeera.com/news/liveblog/2026/8/7/trump-says-war-cant-go-much-longer-hormuz-deal-close",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-07 14:31:12",
-        "collection_method": "legacy",
-        "column": "美国",
-        "is_official": null,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-08-06_51177",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Adjusting Imports of Polysilicon and its Derivatives into the United States",
         "title_en": "Adjusting Imports of Polysilicon and its Derivatives into the United States",
         "title_zh": "调整美国多晶硅及其衍生物进口",
@@ -11640,7 +11612,7 @@
       },
       {
         "id": "auto_2026-08-06_11748",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Continuing to Protect the Meaning and Value of American Citizenship",
         "title_en": "Continuing to Protect the Meaning and Value of American Citizenship",
         "title_zh": "继续保护美国公民身份的意义与价值",
@@ -11662,7 +11634,7 @@
       },
       {
         "id": "auto_2026-08-06_35184",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Ending Birth Tourism",
         "title_en": "Ending Birth Tourism",
         "title_zh": "终止\"生育旅游\"",
@@ -11684,7 +11656,7 @@
       },
       {
         "id": "auto_2026-08-06_43769",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "National Purple Heart Day, 2026",
         "title_en": "National Purple Heart Day, 2026",
         "title_zh": "2026年全国紫心勋章日",
@@ -11706,7 +11678,7 @@
       },
       {
         "id": "auto_2026-08-05_72051",
-        "date": "2026-08-05",
+        "date": "2026-08-07",
         "title": "Degrading CJNG: Announcing over $100 Million in Reward Offers and Visa Restrictions",
         "title_en": "Degrading CJNG: Announcing over $100 Million in Reward Offers and Visa Restrictions",
         "title_zh": "打击CJNG贩毒集团：宣布逾1亿美元悬赏与签证限制",
@@ -11728,7 +11700,7 @@
       },
       {
         "id": "auto_2026-08-06_53995",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "United States Announces Historic $2 Billion in Health and Humanitarian Assistance to Faith-Based Organizations",
         "title_en": "United States Announces Historic $2 Billion in Health and Humanitarian Assistance to Faith-Based Organizations",
         "title_zh": "美国宣布向信仰组织提供20亿美元健康与人道主义援助（历史性）",
@@ -11750,7 +11722,7 @@
       },
       {
         "id": "auto_2026-08-06_31580",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Welcoming Talks in Caracas to Advance Venezuela’s Political Transition",
         "title_en": "Welcoming Talks in Caracas to Advance Venezuela’s Political Transition",
         "title_zh": "欢迎加拉加斯会谈推进委内瑞拉政治过渡",
@@ -11772,7 +11744,7 @@
       },
       {
         "id": "auto_2026-08-06_46326",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Targeting Enablers of the Cuban Regime’s Arms Imports and Foreign Military Cooperation",
         "title_en": "Targeting Enablers of the Cuban Regime’s Arms Imports and Foreign Military Cooperation",
         "title_zh": "打击古巴政权武器进口与对外军事合作的支持者",
@@ -11794,7 +11766,7 @@
       },
       {
         "id": "auto_2026-08-06_32517",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "United States to Host Ministerial Launch Event for IAEA’s Maritime Nuclear Initiative in Washington",
         "title_en": "United States to Host Ministerial Launch Event for IAEA’s Maritime Nuclear Initiative in Washington",
         "title_zh": "美国将在华盛顿主办国际原子能机构海事核倡议部长级启动活动",
@@ -11816,7 +11788,7 @@
       },
       {
         "id": "auto_2026-08-06_20846",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Jamaica National Day",
         "title_en": "Jamaica National Day",
         "title_zh": "牙买加国庆日贺词",
@@ -11838,7 +11810,7 @@
       },
       {
         "id": "auto_2026-08-05_37546",
-        "date": "2026-08-05",
+        "date": "2026-08-07",
         "title": "U.S. Participation in Special Meeting at the OAS Permanent Council on Nicaragua",
         "title_en": "U.S. Participation in Special Meeting at the OAS Permanent Council on Nicaragua",
         "title_zh": "美国参加美洲国家组织常设理事会尼加拉瓜问题特别会议",
@@ -11860,7 +11832,7 @@
       },
       {
         "id": "auto_2026-08-05_38523",
-        "date": "2026-08-05",
+        "date": "2026-08-07",
         "title": "Secretary Rubio’s Meeting with UK Foreign Secretary Miliband",
         "title_en": "Secretary Rubio’s Meeting with UK Foreign Secretary Miliband",
         "title_zh": "国务卿卢比奥会见英国外交大臣米利班德",
@@ -11882,7 +11854,7 @@
       },
       {
         "id": "auto_2026-08-06_45649",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Leipzig drone bomb was found near Ukrainian plane carrying ammunition, say police 德国警方：莱比锡无人机炸弹位于载弹乌克兰飞机附近",
         "title_en": "Leipzig drone bomb was found near Ukrainian plane carrying ammunition, say police",
         "title_zh": "德国警方：莱比锡无人机炸弹位于载弹乌克兰飞机附近",
@@ -11911,7 +11883,7 @@
       },
       {
         "id": "auto_2026-08-06_18813",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "China confirms 2 deaths in Scarborough Shoal crash during Philippine ship chase 中国确认2名海警在黄岩岛追船碰撞事故中身亡",
         "title_en": "China confirms 2 deaths in Scarborough Shoal crash during Philippine ship chase",
         "title_zh": "中国确认2名海警在黄岩岛追船碰撞事故中身亡",
@@ -11939,7 +11911,7 @@
       },
       {
         "id": "auto_2026-08-06_98718",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Argentina extends US$19 billion China currency swap despite US pressure 阿根廷无视美施压续签190亿美元人民币货币互换",
         "title_en": "Argentina extends US$19 billion China currency swap despite US pressure",
         "title_zh": "阿根廷无视美施压续签190亿美元人民币货币互换",
@@ -11967,7 +11939,7 @@
       },
       {
         "id": "auto_2026-08-06_25141",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Chinese media slams US think tank after it hails 46% drop in China student visas 中国媒体抨击美智库欢呼中国学生签证下降46%",
         "title_en": "Chinese media slams US think tank after it hails 46% drop in China student visas",
         "title_zh": "中国媒体抨击美智库欢呼中国学生签证下降46%",
@@ -11995,7 +11967,7 @@
       },
       {
         "id": "auto_2026-08-06_97507",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Chinese AI robot delivers needle-free pig vaccinations with 93% accuracy 中国AI机器人实现93%准确率无针猪疫苗注射",
         "title_en": "Chinese AI robot delivers needle-free pig vaccinations with 93% accuracy",
         "title_zh": "中国AI机器人实现93%准确率无针猪疫苗注射",
@@ -12023,7 +11995,7 @@
       },
       {
         "id": "auto_2026-08-06_12988",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Iran's Ghalibaf accuses Trump of conducting show diplomacy 'on loop' 伊朗议长卡利巴夫指责特朗普\"循环上演\"作秀外交",
         "title_en": "Iran's Ghalibaf accuses Trump of conducting show diplomacy 'on loop'",
         "title_zh": "伊朗议长卡利巴夫指责特朗普\"循环上演\"作秀外交",
@@ -12051,7 +12023,7 @@
       },
       {
         "id": "auto_2026-08-05_93994",
-        "date": "2026-08-05",
+        "date": "2026-08-07",
         "title": "Carney says US trade talks are 'nasty' after Trump criticizes Canada's leadership 特朗普批评加拿大领导层后，卡尼称美加贸易谈判\"恶劣\"",
         "title_en": "Carney says US trade talks are 'nasty' after Trump criticizes Canada's leadership",
         "title_zh": "特朗普批评加拿大领导层后，卡尼称美加贸易谈判\"恶劣\"",
@@ -12079,7 +12051,7 @@
       },
       {
         "id": "auto_2026-08-06_66139",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Trump signs new executive orders seeking to limit US birthright citizenship 特朗普签署新行政令寻求限制美国出生公民权",
         "title_en": "Trump signs new executive orders seeking to limit US birthright citizenship",
         "title_zh": "特朗普签署新行政令寻求限制美国出生公民权",
@@ -12106,7 +12078,7 @@
       },
       {
         "id": "auto_2026-08-06_68256",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "'Mamma mia!': Trump tariffs refund ignites 53% profit spike at Nintendo \"哎呀！\"特朗普关税退款助推任天堂利润飙升53%",
         "title_en": "'Mamma mia!': Trump tariffs refund ignites 53% profit spike at Nintendo",
         "title_zh": "\"哎呀！\"特朗普关税退款助推任天堂利润飙升53%",
@@ -12134,7 +12106,7 @@
       },
       {
         "id": "auto_2026-08-06_54531",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Trump denies US weapons shortage and says information 'leakers' being 'hunted down' 特朗普否认美军武器短缺，称正在追查信息泄露者",
         "title_en": "Trump denies US weapons shortage and says information 'leakers' being 'hunted down'",
         "title_zh": "特朗普否认美军武器短缺，称正在追查信息泄露者",
@@ -12162,7 +12134,7 @@
       },
       {
         "id": "auto_2026-08-06_70896",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "US diplomat Rubio targets Cuban military officials, companies in sanctions 美国务卿鲁比奥制裁古巴军方官员与相关企业",
         "title_en": "US diplomat Rubio targets Cuban military officials, companies in sanctions",
         "title_zh": "美国务卿鲁比奥制裁古巴军方官员与相关企业",
@@ -12190,7 +12162,7 @@
       },
       {
         "id": "auto_2026-08-06_69261",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Senate committee votes to hold Fauci in contempt for refusing to answer COVID questions 参议院委员会投票以藐视国会追究福奇",
         "title_en": "Senate committee votes to hold Fauci in contempt for refusing to answer COVID questions",
         "title_zh": "参议院委员会投票以藐视国会追究福奇",
@@ -12217,7 +12189,7 @@
       },
       {
         "id": "auto_2026-08-06_64415",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Trump administration's latest buyback of offshore wind leases brings total to nearly $4 billion 特朗普政府最新回购海上风电租约，总额逼近40亿美元",
         "title_en": "Trump administration's latest buyback of offshore wind leases brings total to nearly $4 billion",
         "title_zh": "特朗普政府最新回购海上风电租约，总额逼近40亿美元",
@@ -12245,7 +12217,7 @@
       },
       {
         "id": "auto_2026-08-06_29832",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Iran and US say agreement on Strait of Hormuz is close 伊朗与美国表示霍尔木兹海峡协议接近达成",
         "title_en": "Iran and US say agreement on Strait of Hormuz is close",
         "title_zh": "伊朗与美国表示霍尔木兹海峡协议接近达成",
@@ -12273,7 +12245,7 @@
       },
       {
         "id": "auto_2026-08-06_82241",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Nato to 'urgently' get air defences for Ukraine, as Zelenskyy warns of surge in Russian missile production 北约承诺\"紧急\"为乌克兰提供防空，泽连斯基警告俄导弹产量激增",
         "title_en": "Nato to 'urgently' get air defences for Ukraine, as Zelenskyy warns of surge in Russian missile production",
         "title_zh": "北约承诺\"紧急\"为乌克兰提供防空，泽连斯基警告俄导弹产量激增",
@@ -12301,7 +12273,7 @@
       },
       {
         "id": "auto_2026-08-03_10892",
-        "date": "2026-08-03",
+        "date": "2026-08-07",
         "title": "Mideast Optimism Outweighs Hormuz Disruption 中东乐观情绪盖过霍尔木兹海峡干扰",
         "title_en": "Mideast Optimism Outweighs Hormuz Disruption",
         "title_zh": "中东乐观情绪盖过霍尔木兹海峡干扰",
@@ -12329,7 +12301,7 @@
       },
       {
         "id": "auto_2026-08-06_11486",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Artificial Intelligence used to design brand new viruses 人工智能被用于设计全新病毒",
         "title_en": "Artificial Intelligence used to design brand new viruses",
         "title_zh": "人工智能被用于设计全新病毒",
@@ -12357,7 +12329,7 @@
       },
       {
         "id": "auto_2026-08-06_95816",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Safety fears as scientists make first viruses designed by AI 科学家用AI设计出首批病毒引发安全担忧",
         "title_en": "Safety fears as scientists make first viruses designed by AI",
         "title_zh": "科学家用AI设计出首批病毒引发安全担忧",
@@ -12385,7 +12357,7 @@
       },
       {
         "id": "auto_2026-08-06_11703",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Israeli attacks wound eight in Lebanon despite Rome talks 罗马谈判之际以色列袭击黎巴嫩致8人受伤",
         "title_en": "Israeli attacks wound eight in Lebanon despite Rome talks",
         "title_zh": "罗马谈判之际以色列袭击黎巴嫩致8人受伤",
@@ -12413,7 +12385,7 @@
       },
       {
         "id": "auto_2026-08-06_12632",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "'No red line': South Lebanon residents outraged as Israel resumes strikes \"没有红线\"：黎南部居民愤怒谴责以色列恢复打击",
         "title_en": "'No red line': South Lebanon residents outraged as Israel resumes strikes",
         "title_zh": "\"没有红线\"：黎南部居民愤怒谴责以色列恢复打击",
@@ -12469,7 +12441,7 @@
       },
       {
         "id": "auto_2026-08-06_65748",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Israel charges settler over killing of Palestinian involved in Oscar-winning West Bank film 以色列起诉杀害奥斯卡获奖西岸影片中巴勒斯坦人的定居者",
         "title_en": "Israel charges settler over killing of Palestinian involved in Oscar-winning West Bank film",
         "title_zh": "以色列起诉杀害奥斯卡获奖西岸影片中巴勒斯坦人的定居者",
@@ -12497,7 +12469,7 @@
       },
       {
         "id": "auto_2026-08-06_4029",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Israel charges West Bank settler over death of renowned Palestinian activist 以色列起诉西岸定居者涉知名巴勒斯坦活动家死亡案",
         "title_en": "Israel charges West Bank settler over death of renowned Palestinian activist",
         "title_zh": "以色列起诉西岸定居者涉知名巴勒斯坦活动家死亡案",
@@ -12525,7 +12497,7 @@
       },
       {
         "id": "auto_2026-08-06_67626",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Ceuta's leader says 100 died in border rush as up to 5,000 still in enclave 休达领导人称边境冲击致100人死亡，仍有多达5000人滞留",
         "title_en": "Ceuta's leader says 100 died in border rush as up to 5,000 still in enclave",
         "title_zh": "休达领导人称边境冲击致100人死亡，仍有多达5000人滞留",
@@ -12553,7 +12525,7 @@
       },
       {
         "id": "auto_2026-08-06_13682",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "First OpenAI, now Meta - why do AI hacks keep happening? 先是OpenAI再是Meta——AI黑客事件为何频发？",
         "title_en": "First OpenAI, now Meta - why do AI hacks keep happening?",
         "title_zh": "先是OpenAI再是Meta——AI黑客事件为何频发？",
@@ -12581,7 +12553,7 @@
       },
       {
         "id": "auto_2026-08-06_57940",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "Trump's Gaza Board of Peace issues first building contract – for a military base 特朗普\"加沙和平委员会\"首发建设合同：竟是一座军事基地",
         "title_en": "Trump's Gaza Board of Peace issues first building contract – for a military base",
         "title_zh": "特朗普\"加沙和平委员会\"首发建设合同：竟是一座军事基地",
@@ -12609,7 +12581,7 @@
       },
       {
         "id": "auto_2026-08-06_32404",
-        "date": "2026-08-06",
+        "date": "2026-08-07",
         "title": "US suspends avocado inspections in Mexican state of Michoacan due to threat 美国因安全威胁暂停墨西哥米却肯州牛油果检验",
         "title_en": "US suspends avocado inspections in Mexican state of Michoacan due to threat",
         "title_zh": "美国因安全威胁暂停墨西哥米却肯州牛油果检验",
@@ -12636,8 +12608,8 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-06_12500",
-        "date": "2026-08-06",
+        "id": "auto_2026-08-07_25584",
+        "date": "2026-08-07",
         "title": "Bolivia National Day",
         "title_en": "Bolivia National Day",
         "title_zh": "玻利维亚国庆日贺词",
@@ -12658,8 +12630,8 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-06_80243",
-        "date": "2026-08-06",
+        "id": "auto_2026-08-07_89052",
+        "date": "2026-08-07",
         "title": "Targeting Enablers of the Cuban Regime’s Arms Imports and Foreign Military Cooperation Fact Sheet",
         "title_en": "Targeting Enablers of the Cuban Regime’s Arms Imports and Foreign Military Cooperation Fact Sheet",
         "title_zh": "打击古巴政权武器进口与对外军事合作的支持者",
@@ -13585,7 +13557,7 @@
     "2026-08-01"
   ],
   "stats": {
-    "totalArticles": 515,
+    "totalArticles": 514,
     "dateCount": 7,
     "latestDate": "2026-08-07",
     "oldestDate": "2026-08-01"
