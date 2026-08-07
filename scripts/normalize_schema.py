@@ -26,6 +26,7 @@ STANDARD_KEYS = [
     "source", "category",
     "keywords", "url", "priority_score", "is_summit_level", "importance",
     "collectedAt", "collection_method", "column", "is_official",
+    "body_en",  # V3.0: WebFetch 输出的原文全文（双语截图用）
 ]
 
 def normalize_article(art, default_date):
