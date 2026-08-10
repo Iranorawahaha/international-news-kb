@@ -792,10 +792,10 @@ function renderTable(articles) {
         return;
     }
 
-    // 双语截图 V3.0 — 全文存入 localStorage，绕过 URL 长度限制
+    // 双语截图 V3.0 —  全文存入 localStorage，绕过 URL 长度限制
     // body_en 由 WebFetch prompt 输出，存在于 NEWS_DATA JSON 中
     const SCREENSHOT_BASE_URL = 'https://iranorawahaha.github.io/international-news-kb/bilingual-screenshot.html';
-    function openScreenshot(item) {
+    window.openScreenshot = function(item) {
         const data = {
             url: item.url || '',
             title_en: item.title_en || '',

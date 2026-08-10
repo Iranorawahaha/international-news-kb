@@ -2,416 +2,991 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>IRA 情报双语速览</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双语速览</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@mozilla/readability@0.5.0/Readability.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f5;color:#333;min-height:100vh}
-.header{background:#1a1a2e;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.header h1{font-size:18px;font-weight:600}
-.header .badge{font-size:11px;background:rgba(255,255,255,0.15);padding:3px 10px;border-radius:12px}
-.container{max-width:600px;margin:0 auto;padding:20px}
-.url-bar{display:flex;gap:8px;margin-bottom:16px}
-.url-bar input{flex:1;padding:12px 14px;border:2px solid #ddd;border-radius:10px;font-size:14px;outline:none;transition:border .2s}
-.url-bar input:focus{border-color:#1a1a2e}
-.url-bar button{padding:12px 20px;background:#1a1a2e;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:transform .1s}
-.url-bar button:active{transform:scale(0.97)}
-.url-bar button:disabled{opacity:0.5;cursor:not-allowed}
-.hint{font-size:12px;color:#999;margin-bottom:20px}
-.progress{display:none;background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
-.progress.active{display:block}
-.progress .step{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:13px;color:#999}
-.progress .step.done{color:#16a34a}
-.progress .step.current{color:#1a1a2e;font-weight:600}
-.progress .step .icon{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
-.progress .step.done .icon{background:#dcfce7;color:#16a34a}
-.progress .step.current .icon{background:#e8eaff;color:#1a1a2e;animation:pulse 1s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
-.result{display:none}
-.result.active{display:block}
-.preview-wrap{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08);margin-bottom:16px}
-.preview-wrap img{width:100%;display:block}
-.actions{display:flex;gap:8px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:none;text-decoration:none;transition:transform .1s}
-.btn:active{transform:scale(0.97)}
-.btn-primary{background:#1a1a2e;color:#fff}
-.btn-green{background:#16a34a;color:#fff}
-.btn-outline{background:#fff;color:#333;border:1px solid #ddd}
-.error{display:none;background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:16px;margin-bottom:16px;font-size:13px;color:#991b1b}
-.error.active{display:block}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
-/* 双语渲染预览区（截图前隐藏，截图时展示） */
-.render-area{position:fixed;left:-9999px;top:0;width:720px;background:#faf9f6;font-family:Georgia,"Noto Serif SC",serif;z-index:9999}
-.render-area .st{display:inline-block;font-size:12px;color:#555;background:#eee;padding:3px 14px;border-radius:4px;margin-bottom:24px;font-family:-apple-system,sans-serif}
-.render-area .te{font-size:26px;font-weight:700;line-height:1.35;color:#111;margin-bottom:10px}
-.render-area .tz{font-size:18px;font-weight:500;line-height:1.5;color:#333;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid #ddd}
-.render-area .meta{display:flex;align-items:center;gap:16px;font-size:13px;color:#666;margin-bottom:28px;font-family:-apple-system,sans-serif;flex-wrap:wrap}
-.render-area .meta .rt{background:#e8e8e8;padding:2px 10px;border-radius:3px;font-weight:600;color:#444;white-space:nowrap}
-.render-area .pb{margin-bottom:22px;padding-bottom:18px;border-bottom:1px dashed #e4e4e4}
+:root{
+  --bg: #f8fafc;
+  --bg-elev: #ffffff;
+  --ink: #1e293b;
+  --ink-2: #475569;
+  --ink-3: #64748b;
+  --ink-4: #94a3b8;
+  --header-from: #1e3a8a;
+  --header-to: #1a1f4d;
+  --header-text: #f8fafc;
+  --pill-bg: rgba(28, 38, 88, 0.4);
+  --pill-text: #e2e8f0;
+  --pill-border: rgba(255, 255, 255, 0.12);
+  --accent: #1d4ed8;
+  --accent-soft: #3b82f6;
+  --border: #cbd5e1;
+  --border-soft: #f1f5f9;
+  --shadow: 0 4px 24px -8px rgba(30, 58, 138, 0.12), 0 2px 6px -2px rgba(30, 58, 138, 0.06);
+  --shadow-card: 0 1px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --radius: 12px;
+  --radius-lg: 16px;
+  --font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+html{background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);min-height:100dvh;display:flex;flex-direction:column;line-height:1.6}
+
+/* ── 头部 ── */
+.hero{
+  background:linear-gradient(180deg,var(--header-from) 0%,var(--header-to) 100%);
+  color:var(--header-text);
+  padding:64px 24px 56px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at top,rgba(70, 90, 200, 0.25),transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:1;max-width:560px;margin:0 auto}
+.hero h1{
+  font-size:clamp(2rem,5vw,2.6rem);
+  font-weight:700;
+  letter-spacing:-.02em;
+  line-height:1.2;
+  margin-bottom:10px;
+}
+.hero .tagline{
+  font-size:clamp(0.95rem,2vw,1.05rem);
+  font-weight:400;
+  color:#94a3b8;
+  margin-bottom:28px;
+  letter-spacing:.01em;
+}
+.hero .pills{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:10px;
+}
+.hero .pill{
+  display:inline-flex;align-items:center;
+  padding:7px 16px;
+  background:var(--pill-bg);
+  border:1px solid var(--pill-border);
+  color:var(--pill-text);
+  border-radius:999px;
+  font-size:.82rem;font-weight:500;
+  backdrop-filter:blur(8px);
+}
+
+/* ── 主容器 ── */
+.main-wrap{
+  flex:1;
+  max-width:920px;
+  margin:-28px auto 0;
+  padding:0 24px 48px;
+  position:relative;
+  z-index:2;
+  width:100%;
+}
+
+/* ── 输入卡片（主区） ── */
+.input-card{
+  background:var(--bg-elev);
+  border-radius:var(--radius-lg);
+  padding:28px;
+  box-shadow:var(--shadow);
+  margin-bottom:32px;
+}
+.input-card label{
+  display:block;
+  font-size:.85rem;font-weight:600;
+  color:var(--ink-2);
+  margin-bottom:12px;
+  letter-spacing:.01em;
+}
+.input-card .url-row{
+  display:flex;gap:10px;
+}
+.input-card input{
+  flex:1;
+  font-family:var(--font);
+  font-size:.95rem;
+  padding:14px 16px;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  background:var(--bg-elev);
+  color:var(--ink);
+  outline:none;
+  transition:border-color .15s,box-shadow .15s;
+}
+.input-card input:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+.input-card input::placeholder{color:var(--ink-4)}
+.input-card button{
+  font-family:var(--font);
+  font-size:.92rem;font-weight:600;
+  padding:14px 28px;
+  background:var(--ink);
+  color:var(--bg-elev);
+  border:none;border-radius:10px;
+  cursor:pointer;white-space:nowrap;
+  letter-spacing:.01em;
+  transition:background .15s,transform .1s;
+}
+.input-card button:hover{background:var(--ink-2)}
+.input-card button:active{transform:scale(.98)}
+.input-card button:disabled{opacity:.5;pointer-events:none}
+.input-card .hint{
+  font-size:.8rem;color:var(--ink-3);
+  margin-top:12px;text-align:center;
+}
+
+/* ── 进度指示 ── */
+.progress-card{
+  display:none;margin-bottom:24px;
+  background:var(--bg-elev);
+  border-radius:var(--radius);
+  padding:20px 24px;
+  box-shadow:var(--shadow-card);
+}
+.progress-card.active{display:block}
+.progress-card .step{
+  display:flex;align-items:center;gap:12px;
+  padding:5px 0;
+  font-size:.85rem;color:var(--ink-4);
+  transition:color .3s;
+}
+.progress-card .step .dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--ink-4);
+  flex-shrink:0;transition:background .3s;
+}
+.progress-card .step.done{color:var(--ink-2)}
+.progress-card .step.done .dot{background:var(--ink-2)}
+.progress-card .step.current{color:var(--ink);font-weight:600}
+.progress-card .step.current .dot{background:var(--accent);animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ── 错误提示 ── */
+.error-card{
+  display:none;margin-bottom:24px;
+  padding:14px 18px;
+  background:#fef2f2;
+  border:1px solid #fca5a5;
+  border-left:3px solid #dc2626;
+  border-radius:8px;
+  font-size:.85rem;color:#991b1b;
+  line-height:1.6;
+}
+.error-card.active{display:block}
+
+/* ── 手动粘贴 ── */
+.manual-card{
+  display:none;margin-bottom:24px;
+  background:var(--bg-elev);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:var(--shadow-card);
+}
+.manual-card.active{display:block}
+.manual-card h2{
+  font-size:1rem;font-weight:600;margin-bottom:6px;
+}
+.manual-card .desc{
+  font-size:.85rem;color:var(--ink-3);margin-bottom:16px;
+  line-height:1.6;
+}
+.manual-card input[type=text],
+.manual-card textarea{
+  width:100%;padding:10px 12px;
+  border:1.5px solid var(--border);
+  border-radius:8px;
+  background:var(--bg-elev);
+  font-family:var(--font);
+  font-size:.88rem;color:var(--ink);
+  margin-bottom:10px;outline:none;
+  transition:border-color .15s;
+}
+.manual-card input:focus,.manual-card textarea:focus{
+  border-color:var(--accent);
+}
+.manual-card textarea{
+  min-height:200px;resize:vertical;
+  font-family:"Source Han Serif SC","Noto Serif SC",Georgia,serif;
+  font-size:.95rem;line-height:1.7;
+}
+.manual-card .btn-row{
+  display:flex;gap:8px;
+}
+
+/* ── 通用按钮 ── */
+.btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--font);
+  font-size:.88rem;font-weight:500;
+  padding:10px 20px;border-radius:8px;
+  cursor:pointer;border:none;
+  letter-spacing:.01em;
+  transition:background .15s,transform .1s;
+}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--ink);color:var(--bg-elev)}
+.btn-primary:hover{background:var(--ink-2)}
+.btn-secondary{background:var(--bg-elev);color:var(--ink);border:1px solid var(--border)}
+.btn-secondary:hover{background:var(--bg)}
+
+/* ── 结果区 ── */
+.result-card{
+  display:none;margin-bottom:32px;
+}
+.result-card.active{display:block}
+.result-card .preview-frame{
+  background:var(--bg-elev);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  margin-bottom:16px;
+  border:1px solid var(--border-soft);
+}
+.result-card .preview-frame img{width:100%;display:block}
+.result-card .btn-row{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ── 功能卡片网格（保留原版视觉） ── */
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-bottom:32px;
+}
+.feature{
+  background:var(--bg-elev);
+  border-radius:var(--radius);
+  padding:24px 20px;
+  text-align:center;
+  box-shadow:var(--shadow-card);
+}
+.feature .icon{
+  font-size:32px;margin-bottom:12px;
+  display:flex;justify-content:center;
+  height:40px;align-items:center;
+}
+.feature .icon svg{width:32px;height:32px;stroke:var(--ink-2);fill:none;stroke-width:1.5}
+.feature h3{
+  font-size:.95rem;font-weight:600;
+  margin-bottom:6px;color:var(--ink);
+}
+.feature p{
+  font-size:.82rem;color:var(--ink-3);
+  line-height:1.5;
+}
+
+/* ── 信源说明 ── */
+.sources-bar{
+  text-align:center;margin-bottom:32px;
+  padding:20px 24px;
+  background:var(--bg-elev);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-card);
+}
+.sources-bar .label{
+  font-size:.75rem;font-weight:600;
+  color:var(--ink-3);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  margin-bottom:10px;
+}
+.sources-bar .sources{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:6px;
+}
+.sources-bar .source{
+  font-size:.78rem;
+  padding:3px 10px;
+  background:var(--bg);
+  color:var(--ink-2);
+  border-radius:4px;
+  font-weight:500;
+}
+
+/* ── 渲染区（截图用） ── */
+.render-area{
+  position:fixed;left:-9999px;top:0;width:720px;
+  background:#fefce8;
+  font-family:"Newsreader",Georgia,serif;
+}
+.render-area .st{display:inline-block;font-size:12px;color:var(--ink-3);background:var(--bg);padding:3px 14px;border-radius:2px;margin-bottom:24px;font-family:var(--font)}
+.render-area .te{font-size:26px;font-weight:600;line-height:1.35;color:var(--ink);margin-bottom:10px;letter-spacing:-.01em}
+.render-area .tz{font-size:18px;font-weight:400;line-height:1.5;color:var(--ink-2);margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.render-area .meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--ink-3);margin-bottom:28px;font-family:var(--font);flex-wrap:wrap}
+.render-area .meta .rt{background:var(--bg);padding:2px 10px;border-radius:2px;font-weight:500;color:var(--ink-2);white-space:nowrap}
+.render-area .pb{margin-bottom:22px;padding-bottom:18px;border-bottom:1px dashed var(--border)}
 .render-area .pb:last-child{border-bottom:none}
-.render-area .en{font-size:17px;color:#1a1a1a;line-height:1.9;margin-bottom:10px}
-.render-area .zh{font-size:14px;color:#555;line-height:1.85;padding-left:14px;border-left:3px solid #d0d0d0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
-.render-area .ft{margin-top:48px;padding-top:24px;border-top:2px solid #ddd;font-size:12px;color:#999;font-family:-apple-system,sans-serif}
-.render-area .ft a{color:#555}
+.render-area .en{font-size:17px;color:var(--ink);line-height:1.9;margin-bottom:10px}
+.render-area .zh{font-size:14px;color:var(--ink-2);line-height:1.85;padding-left:14px;border-left:2px solid rgba(148, 163, 184, 0.3);font-family:var(--font)}
+.render-area .ft{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);font-size:12px;color:var(--ink-3);font-family:var(--font)}
 .render-area .ft .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.render-area .ft .logo{font-weight:700;color:#111;font-size:13px}
+.render-area .ft .logo{font-weight:600;color:var(--ink);font-size:13px}
+.render-area .ft .learning{font-size:10px;color:var(--ink-3);margin-top:6px;letter-spacing:.05em}
 .render-area .hi{margin-bottom:28px}
-.render-area .hi img{width:100%;height:auto;border-radius:8px;display:block}
-.render-area .ex{font-size:15px;color:#444;line-height:1.75;margin-bottom:6px;font-style:italic}
-.render-area .ez{font-size:14px;color:#555;line-height:1.75;margin-bottom:28px}
+.render-area .hi img{width:100%;height:auto;border-radius:2px;display:block}
+
+/* ── 页脚 ── */
+.site-footer{
+  font-size:.75rem;color:var(--ink-3);
+  text-align:center;padding:24px 24px 36px;
+  letter-spacing:.02em;
+}
+.site-footer .divider{
+  display:block;width:32px;height:1px;
+  background:var(--border);margin:0 auto 16px;
+}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>📋 IRA 情报双语速览</h1>
-  <span class="badge">客户端版</span>
-</div>
-
-<div class="container">
-  <!-- 输入区 -->
-  <div class="url-bar">
-    <input type="url" id="urlInput" placeholder="粘贴外媒报道链接（SCMP / WSJ / NYT / BBC...）" />
-    <button id="goBtn" onclick="startPipeline()">生成截图</button>
+<header class="hero">
+  <div class="hero-inner">
+    <h1>双语速览</h1>
+    <p class="tagline">外媒报道一键转中英双语对照长图</p>
+    <div class="pills">
+      <span class="pill">中英双语对照</span>
+      <span class="pill">保留原版式</span>
+      <span class="pill">仅供学习交流</span>
+      <span class="pill">PC + 手机通用</span>
+    </div>
   </div>
-  <div class="hint">在浏览器内完成：抓取 → 翻译 → 渲染 → 截图 · 约 15-30 秒</div>
+</header>
+
+<main class="main-wrap">
+
+  <!-- 输入区 -->
+  <div class="input-card" id="inputStage">
+    <label>外媒报道链接</label>
+    <div class="url-row">
+      <input type="url" id="urlInput" placeholder="粘贴外媒报道链接（SCMP / WSJ / NYT / BBC...）" autofocus />
+      <button id="goBtn" onclick="handleGo()">生成双语长截图</button>
+    </div>
+    <p class="hint">处理约需 30-60 秒，请耐心等待</p>
+  </div>
 
   <!-- 进度 -->
-  <div class="progress" id="progress">
-    <div class="step" id="step1"><span class="icon">1</span> CORS 代理抓取页面</div>
-    <div class="step" id="step2"><span class="icon">2</span> 提取正文</div>
-    <div class="step" id="step3"><span class="icon">3</span> Google Translate 翻译</div>
-    <div class="step" id="step4"><span class="icon">4</span> 渲染双语版面</div>
-    <div class="step" id="step5"><span class="icon">5</span> 生成截图</div>
+  <div class="progress-card" id="progress">
+    <div class="step" id="step1"><span class="dot"></span> 获取文章</div>
+    <div class="step" id="step2"><span class="dot"></span> 提取正文</div>
+    <div class="step" id="step3"><span class="dot"></span> 翻译对照</div>
+    <div class="step" id="step4"><span class="dot"></span> 排版渲染</div>
+    <div class="step" id="step5"><span class="dot"></span> 生成截图</div>
   </div>
 
   <!-- 错误 -->
-  <div class="error" id="error"></div>
+  <div class="error-card" id="error"></div>
 
-  <!-- 结果 -->
-  <div class="result" id="result">
-    <div class="preview-wrap">
-      <img id="previewImg" alt="双语长截图预览" />
-    </div>
-    <div class="actions">
-      <button class="btn btn-primary" id="downloadBtn" onclick="downloadImage()">⬇️ 下载截图</button>
-      <button class="btn btn-green" id="copyBtn" onclick="copyImage()">📋 复制图片</button>
-      <button class="btn btn-outline" id="newBtn" onclick="resetUI()">🔄 重新生成</button>
+  <!-- 手动粘贴 -->
+  <div class="manual-card" id="manualFallback">
+    <h2>手动粘贴原文</h2>
+    <p class="desc">自动获取未能成功。请在浏览器中打开原文，选中正文复制后粘贴到下方，系统将继续完成翻译与截图。</p>
+    <input type="text" id="manualTitle" placeholder="原文标题" />
+    <input type="text" id="manualByline" placeholder="作者或来源（选填）" />
+    <input type="text" id="manualUrl" placeholder="原文链接（选填）" />
+    <textarea id="manualText" placeholder="在此粘贴原文正文（支持纯文本或 HTML）"></textarea>
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="processManual()">生成双语截图</button>
+      <button class="btn btn-secondary" onclick="closeManual()">取消</button>
     </div>
   </div>
 
-  <!-- 双语渲染隐藏区 -->
-  <div class="render-area" id="renderArea"></div>
-</div>
+  <!-- 结果 -->
+  <div class="result-card" id="result">
+    <div class="preview-frame">
+      <img id="previewImg" alt="双语长截图" />
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="downloadImage()">下载 PNG</button>
+      <button class="btn btn-secondary" onclick="copyImage()">复制到剪贴板</button>
+      <button class="btn btn-secondary" onclick="resetUI();scrollToInput()">重新生成</button>
+    </div>
+  </div>
+
+  <!-- 功能网格 -->
+  <div class="features-grid">
+    <div class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+      </div>
+      <h3>中英双语对照</h3>
+      <p>英文原文在上，中文译文在下，逐段对照</p>
+    </div>
+    <div class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+      </div>
+      <h3>保留原版式</h3>
+      <p>标题/摘要/图片/段落结构完整还原</p>
+    </div>
+    <div class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h12a4 4 0 014 4v12H8a4 4 0 01-4-4V4z"/><path d="M4 4v12a4 4 0 004 4"/><path d="M9 8h7M9 12h7"/></svg>
+      </div>
+      <h3>智能翻译</h3>
+      <p>内置自动翻译引擎，逐段对照中英文</p>
+    </div>
+    <div class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+      </div>
+      <h3>全平台通用</h3>
+      <p>PC 浏览器 + 手机浏览器均可使用</p>
+    </div>
+  </div>
+
+  <!-- 信源 -->
+  <div class="sources-bar">
+    <div class="label">支持的信源</div>
+    <div class="sources">
+      <span class="source">SCMP</span>
+      <span class="source">WSJ</span>
+      <span class="source">NYT</span>
+      <span class="source">Bloomberg</span>
+      <span class="source">BBC</span>
+      <span class="source">Reuters</span>
+      <span class="source">CNN</span>
+      <span class="source">The Guardian</span>
+      <span class="source">Politico</span>
+      <span class="source">Washington Post</span>
+      <span class="source">AP News</span>
+      <span class="source">Al Jazeera</span>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <span class="divider"></span>
+  仅供学习交流使用
+</footer>
+
+<!-- 隐藏渲染区 -->
+<div class="render-area" id="renderArea"></div>
 
 <script>
-// ===================== 状态 =====================
+// ===================== 状态管理 =====================
 let generatedImage = null;
 
-function resetUI() {
+function scrollToInput(){
+  document.getElementById('inputStage').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function resetUI(){
   document.getElementById('progress').classList.remove('active');
   document.getElementById('result').classList.remove('active');
   document.getElementById('error').classList.remove('active');
-  document.getElementById('renderArea').innerHTML = '';
-  document.getElementById('goBtn').disabled = false;
-  document.getElementById('goBtn').textContent = '生成截图';
-  generatedImage = null;
+  document.getElementById('manualFallback').classList.remove('active');
+  document.getElementById('renderArea').innerHTML='';
+  document.getElementById('goBtn').disabled=false;
+  document.getElementById('goBtn').textContent='生成双语长截图';
+  generatedImage=null;
 }
 
-function showError(msg) {
-  const el = document.getElementById('error');
-  el.textContent = '❌ ' + msg;
+function showError(msg){
+  const el=document.getElementById('error');
+  el.textContent=msg;
   el.classList.add('active');
-  document.getElementById('goBtn').disabled = false;
-  document.getElementById('goBtn').textContent = '生成截图';
+  document.getElementById('goBtn').disabled=false;
+  document.getElementById('goBtn').textContent='生成双语长截图';
+
+  if(msg.includes('代理')||msg.includes('抓取')||msg.includes('HTTP 4')||msg.includes('HTTP 5')||msg.includes('获取')){
+    document.getElementById('manualUrl').value=document.getElementById('urlInput').value;
+    document.getElementById('manualFallback').classList.add('active');
+    setTimeout(()=>document.getElementById('manualFallback').scrollIntoView({behavior:'smooth',block:'center'}),150);
+  }
 }
 
-function stepDone(n) {
-  const el = document.getElementById('step' + n);
-  el.classList.remove('current');
-  el.classList.add('done');
+function closeManual(){
+  document.getElementById('manualFallback').classList.remove('active');
 }
 
-function stepCurrent(n) {
-  const el = document.getElementById('step' + n);
+function stepDone(n){
+  const el=document.getElementById('step'+n);
+  el.classList.remove('current');el.classList.add('done');
+}
+function stepCurrent(n){
+  const el=document.getElementById('step'+n);
   el.classList.add('current');
 }
-
-function initSteps() {
-  for (let i = 1; i <= 5; i++) {
-    document.getElementById('step' + i).classList.remove('done', 'current');
+function initSteps(){
+  for(let i=1;i<=5;i++){
+    const el=document.getElementById('step'+i);
+    el.classList.remove('done','current');
   }
 }
 
-// ===================== CORS 代理 =====================
-const CORS_PROXIES = [
-  (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
-  (url) => 'https://corsproxy.io/?' + encodeURIComponent(url),
+// ===================== 抓取代理（V2.3：多源并发+回退） =====================
+const PROXIES=[
+  url=>'https://api.allorigins.win/raw?url='+encodeURIComponent(url),
+  url=>'https://corsproxy.io/?'+encodeURIComponent(url),
+  url=>'https://api.codetabs.com/v1/proxy/?quest='+encodeURIComponent(url),
+  url=>'https://web.archive.org/web/0/'+url,
+  url=>'https://webcache.googleusercontent.com/search?q=cache:'+encodeURIComponent(url),
+  url=>'https://api.allorigins.win/get?url='+encodeURIComponent(url),
 ];
 
-async function fetchProxied(url, timeout = 20000) {
-  let lastErr;
-  for (const proxyFn of CORS_PROXIES) {
-    const proxyUrl = proxyFn(url);
-    try {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), timeout);
-      const resp = await fetch(proxyUrl, { signal: controller.signal });
-      clearTimeout(timer);
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const text = await resp.text();
-      if (text.length > 3000) return text;
-      throw new Error('Response too short: ' + text.length);
-    } catch (e) {
-      lastErr = e;
-      console.warn(`CORS proxy failed (${proxyUrl.substring(0,40)}...): ${e.message}`);
+async function fetchProxied(url,timeout=15000){
+  const errors=[];
+  for(let i=0;i<PROXIES.length;i++){
+    const proxyUrl=PROXIES[i](url);
+    try{
+      const ctrl=new AbortController();
+      const t=setTimeout(()=>ctrl.abort(),timeout);
+      const resp=await fetch(proxyUrl,{signal:ctrl.signal,redirect:'follow'});
+      clearTimeout(t);
+      if(!resp.ok)throw new Error('HTTP '+resp.status);
+
+      let text;
+      // allorigins /get 返回 JSON，需要解包 contents 字段
+      if(proxyUrl.includes('allorigins.win/get')){
+        const json=await resp.json();
+        text=json?.contents||'';
+      }else{
+        text=await resp.text();
+      }
+
+      if(proxyUrl.includes('archive.org/wayback/available')){
+        const json=JSON.parse(text);
+        const archived=json?.archived_snapshots?.closest?.url;
+        if(!archived)throw new Error('无归档快照');
+        const c2=new AbortController();
+        const t2=setTimeout(()=>c2.abort(),timeout);
+        const r2=await fetch(archived,{signal:c2.signal});
+        clearTimeout(t2);
+        const t2text=await r2.text();
+        if(t2text.length>2000)return t2text;
+        throw new Error('归档快照内容太短');
+      }
+
+      if(text.length>2000)return text;
+      throw new Error('内容太短 ('+text.length+')');
+    }catch(e){
+      errors.push((i+1)+':'+e.message);
     }
   }
-  throw lastErr || new Error('All CORS proxies failed');
+  throw new Error('所有代理均失败：'+errors.join('; '));
 }
 
 // ===================== 正文提取 =====================
-function extractArticle(html, url) {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(html, 'text/html');
+function extractArticle(html,url){
+  const parser=new DOMParser();
+  const doc=parser.parseFromString(html,'text/html');
+  const reader=new Readability(doc);
+  const article=reader.parse();
+  if(!article||!article.content)throw new Error('无法从页面提取正文');
 
-  const reader = new Readability(doc);
-  const article = reader.parse();
-  if (!article || !article.content) {
-    throw new Error('无法从页面提取正文');
-  }
-
-  // 提取段落
-  const contentDom = new DOMParser().parseFromString(article.content, 'text/html');
-  const paragraphs = [];
-  const seen = new Set();
-  contentDom.body.querySelectorAll('p, h2, h3, h4, li, blockquote').forEach(el => {
-    const text = el.textContent.trim();
-    if (text.length < 15) return;
-    const lower = text.toLowerCase();
-    if (lower.includes('cookie') || lower.includes('advertisement') ||
-        lower.includes('subscribe') || lower.includes('newsletter')) return;
-    if (seen.has(text)) return;
-    seen.add(text);
-    paragraphs.push(text);
+  const contentDom=new DOMParser().parseFromString(article.content,'text/html');
+  const paragraphs=[],seen=new Set();
+  contentDom.body.querySelectorAll('p,h2,h3,h4,li,blockquote').forEach(el=>{
+    const text=el.textContent.trim();
+    if(text.length<15)return;
+    const lower=text.toLowerCase();
+    if(lower.includes('cookie')||lower.includes('advertisement')||lower.includes('subscribe')||lower.includes('newsletter'))return;
+    if(seen.has(text))return;
+    seen.add(text);paragraphs.push(text);
   });
 
-  // 提取图片
-  const images = [];
-  contentDom.body.querySelectorAll('img').forEach(img => {
-    const src = img.src || img.getAttribute('data-src');
-    if (src && !src.startsWith('data:')) images.push(src);
+  const images=[];
+  contentDom.body.querySelectorAll('img').forEach(img=>{
+    const src=img.src||img.getAttribute('data-src');
+    if(src&&!src.startsWith('data:'))images.push(src);
   });
 
-  return {
-    title: article.title || '',
-    byline: article.byline || '',
-    excerpt: article.excerpt || '',
-    siteName: article.siteName || '',
-    content: paragraphs,
-    images: images.slice(0, 2),
+  return{
+    title:article.title||'',
+    byline:article.byline||'',
+    excerpt:article.excerpt||'',
+    siteName:article.siteName||'',
+    content:paragraphs,
+    images:images.slice(0,2),
     url,
   };
 }
 
 // ===================== 翻译 =====================
-async function translateBatch(texts) {
-  const results = [];
-  for (let i = 0; i < texts.length; i += 5) {
-    const batch = texts.slice(i, i + 5);
-    const combined = batch.join('\n\n---\n\n');
-    const translated = await translateText(combined);
-    const parts = translated.split(/\n*---\n*/).map(s => s.trim()).filter(Boolean);
-    if (parts.length === batch.length) {
-      results.push(...parts);
-    } else {
-      results.push(...batch.map(() => translated));
-    }
+async function translateText(text){
+  try{
+    const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q='+encodeURIComponent(text);
+    const resp=await fetch(url);
+    const result=await resp.json();
+    if(result?.[0])return result[0].map(p=>p[0]).join('');
+  }catch(e){}
+  return'';
+}
+
+async function translateBatch(texts){
+  const results=[];
+  for(let i=0;i<texts.length;i+=5){
+    const batch=texts.slice(i,i+5);
+    const combined=batch.join('\n\n---\n\n');
+    const translated=await translateText(combined);
+    const parts=translated.split(/\n*---\n*/).map(s=>s.trim()).filter(Boolean);
+    if(parts.length===batch.length)results.push(...parts);
+    else results.push(...batch.map(()=>translated));
   }
   return results;
 }
 
-async function translateText(text) {
-  try {
-    const url = 'https://translate.googleapis.com/translate_a/single' +
-      '?client=gtx&sl=en&tl=zh-CN&dt=t&q=' + encodeURIComponent(text);
-
-    const resp = await fetch(url);
-    const result = await resp.json();
-    if (result?.[0]) {
-      return result[0].map(part => part[0]).join('');
-    }
-  } catch (e) {
-    console.error('Google Translate error:', e);
-  }
-  return '';
-}
-
 // ===================== 双语渲染 =====================
-function buildBilingualHTML(article, translations) {
-  const esc = (t) => {
-    if (!t) return '';
-    return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  };
+function buildBilingualHTML(article,translations){
+  const esc=t=>{if(!t)return'';return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');};
+  const{title,byline,excerpt,siteName,content,images,url}=article;
+  const titleZh=translations.title||'';
+  const excerptZh=translations.excerpt||'';
+  const wordCount=content.join(' ').split(/\s+/).length;
+  const readMin=Math.max(1,Math.round(wordCount/200));
+  const now=new Date();
+  const dateStr=now.toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric'});
 
-  const { title, byline, excerpt, siteName, content, images, url } = article;
-  const titleZh = translations.title || '';
-  const excerptZh = translations.excerpt || '';
-  const wordCount = content.join(' ').split(/\s+/).length;
-  const readMin = Math.max(1, Math.round(wordCount / 200));
-  const now = new Date();
-  const dateStr = now.toLocaleDateString('zh-CN', { year:'numeric', month:'long', day:'numeric' });
+  let imgs='';
+  images.forEach(src=>{imgs+='<div class="hi"><img src="'+esc(src)+'" alt="" style="width:100%;height:auto;border-radius:2px" /></div>';});
 
-  let imagesHtml = '';
-  images.forEach(src => {
-    imagesHtml += '<div class="hi"><img src="' + esc(src) + '" alt="" style="width:100%;height:auto;border-radius:8px" /></div>';
+  let paras='';
+  content.forEach((en,i)=>{
+    const zh=translations.paragraphs?.[i]||'';
+    paras+='<div class="pb"><p class="en">'+esc(en)+'</p>';
+    if(zh)paras+='<p class="zh">'+esc(zh)+'</p>';
+    paras+='</div>';
   });
 
-  let parasHtml = '';
-  content.forEach((en, i) => {
-    const zh = translations.paragraphs?.[i] || '';
-    parasHtml += '<div class="pb"><p class="en">' + esc(en) + '</p>';
-    if (zh) parasHtml += '<p class="zh">' + esc(zh) + '</p>';
-    parasHtml += '</div>';
-  });
-
-  return '<div style="padding:40px 36px 60px">' +
-    '<div class="st">' + esc(siteName || '新闻来源') + '</div>' +
-    '<h1 class="te">' + esc(title) + '</h1>' +
-    (titleZh ? '<h2 class="tz">' + esc(titleZh) + '</h2>' : '') +
-    '<div class="meta">' +
-      (byline ? '<span>' + esc(byline) + '</span>' : '') +
-      '<span class="rt">' + readMin + ' 分钟阅读</span>' +
-      '<span>' + dateStr + '</span>' +
-    '</div>' +
-    (excerpt ? '<div class="ex">' + esc(excerpt) + '</div>' : '') +
-    (excerptZh ? '<div class="ez">' + esc(excerptZh) + '</div>' : '') +
-    imagesHtml +
-    parasHtml +
-    '<div class="ft">' +
-      '<div class="row"><span class="logo">IRA 情报双语速览</span><span>' + dateStr + '</span></div>' +
-      '<div style="margin-top:8px;font-size:11px"><span>原文: </span><a href="' + esc(url) + '" target="_blank">' + esc(url.substring(0, 70)) + '...</a></div>' +
-    '</div>' +
+  return'<div style="padding:40px 36px 60px">'+
+    '<div class="st">'+esc(siteName||'新闻来源')+'</div>'+
+    '<h1 class="te">'+esc(title)+'</h1>'+
+    (titleZh?'<h2 class="tz">'+esc(titleZh)+'</h2>':'')+
+    '<div class="meta">'+
+      (byline?'<span>'+esc(byline)+'</span>':'')+
+      '<span class="rt">'+readMin+' 分钟阅读</span>'+
+      '<span>'+dateStr+'</span>'+
+    '</div>'+
+    (excerpt?'<div class="ex">'+esc(excerpt)+'</div>':'')+
+    (excerptZh?'<div class="ez">'+esc(excerptZh)+'</div>':'')+
+    imgs+paras+
+    '<div class="ft">'+
+      '<div class="row"><span class="logo">双语速览</span><span>'+dateStr+'</span></div>'+
+      '<div class="learning">仅供学习交流</div>'+
+      '<div style="margin-top:6px;font-size:11px"><span>原文: </span><a href="'+esc(url)+'" target="_blank" style="color:inherit">'+esc(url.substring(0,70))+'...</a></div>'+
+    '</div>'+
   '</div>';
 }
 
 // ===================== 截图 =====================
-async function renderAndCapture(article, translations) {
-  const area = document.getElementById('renderArea');
-  area.innerHTML = buildBilingualHTML(article, translations);
-
-  // 等待图片加载
-  await new Promise(r => setTimeout(r, 1500));
-
-  const canvas = await html2canvas(area, {
-    scale: 2,
-    useCORS: true,
-    allowTaint: true,
-    backgroundColor: '#faf9f6',
-    logging: false,
-  });
-
-  area.innerHTML = '';
+async function renderAndCapture(article,translations){
+  const area=document.getElementById('renderArea');
+  area.innerHTML=buildBilingualHTML(article,translations);
+  await new Promise(r=>setTimeout(r,1500));
+  const canvas=await html2canvas(area,{scale:2,useCORS:true,allowTaint:true,backgroundColor:'#fbfaf7',logging:false});
+  area.innerHTML='';
   return canvas.toDataURL('image/png');
 }
 
 // ===================== 主流程 =====================
-async function startPipeline() {
-  const url = document.getElementById('urlInput').value.trim();
-  if (!url) return;
+async function startPipeline(){
+  const url=document.getElementById('urlInput').value.trim();
+  if(!url)return;
 
-  resetUI();
-  initSteps();
+  resetUI();initSteps();
   document.getElementById('progress').classList.add('active');
-  document.getElementById('goBtn').disabled = true;
-  document.getElementById('goBtn').textContent = '处理中...';
+  document.getElementById('goBtn').disabled=true;
+  document.getElementById('goBtn').textContent='处理中…';
   document.getElementById('error').classList.remove('active');
 
-  const startTime = Date.now();
+  const t0=Date.now();
 
-  try {
-    // Step 1: 抓取
+  try{
     stepCurrent(1);
-    const html = await fetchProxied(url);
+    const html=await fetchProxied(url);
     stepDone(1);
-    console.log('Fetched HTML:', html.length, 'chars');
 
-    // Step 2: 提取
     stepCurrent(2);
-    const article = extractArticle(html, url);
+    const article=extractArticle(html,url);
     stepDone(2);
-    console.log('Extracted:', article.content.length, 'paragraphs,', article.images.length, 'images');
 
-    // Step 3: 翻译
     stepCurrent(3);
-    const translations = {};
-    translations.title = await translateText(article.title);
-    if (article.excerpt) translations.excerpt = await translateText(article.excerpt);
-    translations.paragraphs = await translateBatch(article.content);
+    const translations={};
+    translations.title=await translateText(article.title);
+    if(article.excerpt)translations.excerpt=await translateText(article.excerpt);
+    translations.paragraphs=await translateBatch(article.content);
     stepDone(3);
-    console.log('Translated:', translations.paragraphs.filter(Boolean).length, 'of', translations.paragraphs.length, 'paragraphs');
 
-    // Step 4: 渲染 + Step 5: 截图
     stepCurrent(4);
     stepCurrent(5);
-    const dataUrl = await renderAndCapture(article, translations);
-    stepDone(4);
-    stepDone(5);
+    const dataUrl=await renderAndCapture(article,translations);
+    stepDone(4);stepDone(5);
 
-    // 显示结果
-    document.getElementById('previewImg').src = dataUrl;
+    document.getElementById('previewImg').src=dataUrl;
     document.getElementById('result').classList.add('active');
-    generatedImage = dataUrl;
+    generatedImage=dataUrl;
 
-    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-    document.getElementById('goBtn').textContent = '完成 (' + elapsed + 's)';
-    document.getElementById('goBtn').disabled = true;
+    const elapsed=((Date.now()-t0)/1000).toFixed(1);
+    document.getElementById('goBtn').textContent='完成（'+elapsed+'s）';
+    document.getElementById('goBtn').disabled=true;
 
-  } catch (err) {
+  }catch(err){
     console.error(err);
-    showError(err.message || '处理失败');
+    showError(err.message||'处理失败');
+  }
+}
+
+// ===================== 手动粘贴 =====================
+async function processManual(){
+  const title=document.getElementById('manualTitle').value.trim();
+  const byline=document.getElementById('manualByline').value.trim();
+  const url=document.getElementById('manualUrl').value.trim()||'手动粘贴';
+  const rawText=document.getElementById('manualText').value.trim();
+  if(!rawText){alert('请粘贴原文内容');return;}
+
+  resetUI();initSteps();
+  document.getElementById('progress').classList.add('active');
+  document.getElementById('goBtn').disabled=true;
+  document.getElementById('goBtn').textContent='处理中…';
+  document.getElementById('error').classList.remove('active');
+
+  const t0=Date.now();
+
+  try{
+    stepCurrent(1);
+    await new Promise(r=>setTimeout(r,200));
+    stepDone(1);
+
+    stepCurrent(2);
+    let paragraphs;
+    if(rawText.trim().startsWith('<')){
+      const doc=new DOMParser().parseFromString(rawText,'text/html');
+      paragraphs=Array.from(doc.querySelectorAll('p,h2,h3,li')).map(el=>el.textContent.trim()).filter(t=>t.length>15);
+    }else{
+      paragraphs=rawText.split(/\n\s*\n+/).map(p=>p.trim()).filter(p=>p.length>15);
+    }
+    if(!paragraphs.length)throw new Error('粘贴的内容没有有效段落');
+    const article={title:title||'手动粘贴的文章',byline,excerpt:paragraphs[0].substring(0,200),siteName:'手动粘贴',content:paragraphs,images:[],url};
+    stepDone(2);
+
+    stepCurrent(3);
+    const translations={};
+    translations.title=await translateText(article.title);
+    if(article.excerpt)translations.excerpt=await translateText(article.excerpt);
+    translations.paragraphs=await translateBatch(article.content);
+    stepDone(3);
+
+    stepCurrent(4);stepCurrent(5);
+    const dataUrl=await renderAndCapture(article,translations);
+    stepDone(4);stepDone(5);
+
+    document.getElementById('previewImg').src=dataUrl;
+    document.getElementById('result').classList.add('active');
+    generatedImage=dataUrl;
+
+    const elapsed=((Date.now()-t0)/1000).toFixed(1);
+    document.getElementById('goBtn').textContent='完成（'+elapsed+'s）';
+    document.getElementById('goBtn').disabled=true;
+
+  }catch(err){
+    console.error(err);
+    showError(err.message||'处理失败');
   }
 }
 
 // ===================== 下载/复制 =====================
-function downloadImage() {
-  if (!generatedImage) return;
-  const a = document.createElement('a');
-  a.href = generatedImage;
-  a.download = 'bilingual-screenshot.png';
-  a.click();
+function downloadImage(){
+  if(!generatedImage)return;
+  const a=document.createElement('a');
+  a.href=generatedImage;a.download='bilingual-screenshot.png';a.click();
 }
 
-async function copyImage() {
-  if (!generatedImage) return;
-  try {
-    const resp = await fetch(generatedImage);
-    const blob = await resp.blob();
-    await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
-    const btn = document.getElementById('copyBtn');
-    btn.textContent = '✓ 已复制!';
-    setTimeout(() => btn.textContent = '📋 复制图片', 2000);
-  } catch (e) {
-    alert('复制失败，请使用下载按钮');
+async function copyImage(){
+  if(!generatedImage)return;
+  try{
+    const resp=await fetch(generatedImage);
+    const blob=await resp.blob();
+    await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+    const btn=document.querySelector('.result-card .btn-secondary');
+    if(btn){btn.textContent='已复制';setTimeout(()=>btn.textContent='复制到剪贴板',2000);}
+  }catch(e){alert('复制失败，请使用下载按钮');}
+}
+
+document.getElementById('urlInput').addEventListener('keydown',e=>{if(e.key==='Enter')handleGo();});
+
+(function(){
+  // V3.0: 从 localStorage 读取全文数据（由看板 📸 按钮写入）
+  const raw = localStorage.getItem('_ira_bilingual_shot');
+  let url, titleEn, titleZh, summary, summaryZh, bodyEn, source;
+  
+  if (raw) {
+    try {
+      const d = JSON.parse(raw);
+      url = d.url || '';
+      titleEn = d.title_en || '';
+      titleZh = d.title_zh || '';
+      summary = d.summary || '';
+      summaryZh = d.summary_zh || '';
+      bodyEn = d.body_en || '';
+      source = d.source || '';
+    } catch(e) {}
+    // 清理 localStorage（用过即删）
+    localStorage.removeItem('_ira_bilingual_shot');
   }
-}
-
-// 回车键触发
-document.getElementById('urlInput').addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') startPipeline();
-});
-
-// URL 参数自动填充
-(function() {
-  const params = new URLSearchParams(window.location.search);
-  const url = params.get('url');
+  
+  // 如果 localStorage 没有，试试 URL 参数（旧版兼容）
+  if (!url) {
+    const params = new URLSearchParams(window.location.search);
+    url = params.get('url') || '';
+    titleEn = params.get('title_en') || '';
+    titleZh = params.get('title_zh') || '';
+    summary = params.get('summary') || '';
+    summaryZh = params.get('summary_zh') || '';
+    source = params.get('source') || '';
+  }
+  
+  _PARAMS_DATA = {url, titleEn, titleZh, summary, summaryZh, bodyEn, source};
+  
   if (url) {
     document.getElementById('urlInput').value = url;
-    startPipeline();
+    if (summary || summaryZh || bodyEn || titleEn || titleZh) {
+      startFromData(_PARAMS_DATA);
+    } else {
+      document.getElementById('error').classList.add('active');
+      document.getElementById('error').innerHTML = '⚠️ 请使用国际新闻看板中的「📸 双语」按钮打开';
+      document.getElementById('manualUrl').value = url;
+      document.getElementById('manualFallback').classList.add('active');
+    }
   }
 })();
+
+// ===================== 数据驱动模式（V3.0，不需要代理） =====================
+// 全局缓存：页面加载时从 URL 参数读取的数据
+let _PARAMS_DATA = null;
+
+function handleGo(){
+  const url=document.getElementById('urlInput').value.trim();
+  if(!url)return;
+  // 如果 URL 参数中有预先传入的摘要数据 → 直接渲染
+  if(_PARAMS_DATA&&_PARAMS_DATA.url===url){
+    startFromData(_PARAMS_DATA);
+    return;
+  }
+  // 否则提示用户使用看板中的 📸 按钮
+  showError('请使用国际新闻看板中的「📸 双语」按钮打开此页面（需要附带文章摘要数据）');
+}
+
+async function startFromData(data){
+  resetUI();initSteps();
+  document.getElementById('progress').classList.add('active');
+  document.getElementById('goBtn').disabled=true;
+  document.getElementById('goBtn').textContent='生成中…';
+  document.getElementById('error').classList.remove('active');
+
+  const t0=Date.now();
+  try{
+    stepCurrent(1);
+    stepDone(1); // 数据已就绪
+
+    stepCurrent(2);
+    stepDone(2); // 无需翻译
+
+    stepCurrent(3);
+    // 构建双语卡片
+    const card=buildCardFromData(data);
+    const area=document.getElementById('renderArea');
+    area.innerHTML=card;
+    stepDone(3);
+
+    stepCurrent(4);
+    stepCurrent(5);
+    await new Promise(r=>setTimeout(r,800));
+    const canvas=await html2canvas(area,{scale:2,useCORS:true,allowTaint:true,backgroundColor:'#fbfaf7',logging:false});
+    area.innerHTML='';
+    const dataUrl=canvas.toDataURL('image/png');
+    stepDone(4);stepDone(5);
+
+    document.getElementById('previewImg').src=dataUrl;
+    document.getElementById('result').classList.add('active');
+    generatedImage=dataUrl;
+
+    const elapsed=((Date.now()-t0)/1000).toFixed(1);
+    document.getElementById('goBtn').textContent='完成（'+elapsed+'s）';
+  }catch(err){
+    console.error(err);
+    showError(err.message||'生成失败');
+  }finally{
+    document.getElementById('goBtn').disabled=false;
+  }
+}
+
+function esc(s){return(String(s||'')).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function buildCardFromData(d){
+  const titleEn = esc(d.titleEn);
+  const titleZh = esc(d.titleZh);
+  const sum = esc((d.summary||'').substring(0,600));
+  const sumZh = esc((d.summaryZh||'').substring(0,600));
+  const body = esc((d.bodyEn||'').substring(0,8000)); // 全文
+  const src = esc(d.source||'');
+  const u = esc(d.url||'');
+
+  let bodyHtml = '';
+  if (body && body.length > 50) {
+    // 将全文按段落拆分
+    const paras = body.split(/\n\n+/).filter(p => p.trim().length > 20);
+    bodyHtml = '<div style="margin-bottom:18px;background:#f1f5f9;border-radius:10px;padding:20px 22px;">'+
+      '<div style="font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">'+
+      '📄 原文正文 (Full Text)</div>'+
+      paras.map(p => '<p style="font-size:13px;color:#334155;line-height:1.9;margin-bottom:12px;">'+esc(p.trim())+'</p>').join('')+
+    '</div>';
+  }
+
+  return ''+
+  '<div style="width:720px;padding:32px 36px;font-family:-apple-system,BlinkMacSystemFont,\'PingFang SC\',\'Microsoft YaHei\',sans-serif;background:#fbfaf7;">'+
+    '<div style="background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;border-radius:14px;padding:24px 28px;margin-bottom:20px;">'+
+      '<div style="font-size:13px;opacity:0.85;margin-bottom:4px;">🌍 国际新闻看板 · 双语速览</div>'+
+      '<div style="font-size:13px;opacity:0.7;">Ira Information Dashboard · Bilingual Brief</div>'+
+    '</div>'+
+    
+    '<div style="margin-bottom:16px;">'+
+      '<div style="font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Original Headline</div>'+
+      '<div style="font-size:17px;font-weight:700;color:#1e293b;line-height:1.5;">'+(titleEn||titleZh)+'</div>'+
+    '</div>'+
+    
+    (titleZh&&titleEn?(
+    '<div style="margin-bottom:16px;">'+
+      '<div style="font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">中文标题</div>'+
+      '<div style="font-size:17px;font-weight:700;color:#1e293b;line-height:1.5;">'+titleZh+'</div>'+
+    '</div>'):'')+
+
+    (sumZh?(
+    '<div style="margin-bottom:14px;background:#f1f5f9;border-radius:10px;padding:16px 18px;">'+
+      '<div style="font-size:12px;color:#64748b;margin-bottom:6px;">📝 中文摘要</div>'+
+      '<div style="font-size:14px;color:#334155;line-height:1.85;">'+sumZh+'</div>'+
+    '</div>'):'')+
+
+    (sum?(
+    '<div style="margin-bottom:14px;background:#f1f5f9;border-radius:10px;padding:16px 18px;">'+
+      '<div style="font-size:12px;color:#64748b;margin-bottom:6px;">📝 English Summary</div>'+
+      '<div style="font-size:13px;color:#475569;line-height:1.85;font-style:italic;">'+sum+'</div>'+
+    '</div>'):'')+
+
+    // 全文正文（主菜）
+    bodyHtml +
+
+    '<div style="border-top:1px solid #e2e8f0;padding-top:14px;margin-top:14px;display:flex;justify-content:space-between;align-items:center;">'+
+      '<div style="font-size:12px;color:#94a3b8;">'+(src?'📰 '+src:'')+'</div>'+
+      '<div style="font-size:11px;color:#94a3b8;">'+u.substring(0,60)+'...</div>'+
+    '</div>'+
+
+    '<div style="text-align:center;margin-top:20px;font-size:11px;color:#cbd5e1;letter-spacing:0.5px;">仅供学习交流 · Powered by Ira 信息看板</div>'+
+  '</div>';
+}
 </script>
 </body>
 </html>
