@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-10 09:32",
+  "lastUpdated": "2026-08-10 09:44",
   "retentionDays": 7,
   "archive": {
     "2026-08-03": [
@@ -3910,6 +3910,34 @@
         "is_summit_level": false,
         "importance": "中",
         "collectedAt": "2026-08-06 09:42:09",
+        "collection_method": "legacy",
+        "column": "地区热点",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-06_76239",
+        "date": "2026-08-10",
+        "title": "Israel charges settler over killing of Palestinian activist in West Bank in rare prosecution 以色列罕见起诉杀害西岸巴勒斯坦活动家的定居者",
+        "title_en": "Israel charges settler over killing of Palestinian activist in West Bank in rare prosecution",
+        "title_zh": "以色列罕见起诉杀害西岸巴勒斯坦活动家的定居者",
+        "summary": "以色列罕见地对一名定居者提起诉讼，指控其杀害约旦河西岸巴勒斯坦活动人士，被视为以色列司法系统对此类案件的罕见追责，发生在以色列大选临近之际。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "CNN",
+        "category": "地缘政治",
+        "keywords": [
+          "以色列",
+          "定居者",
+          "巴勒斯坦",
+          "西岸",
+          "起诉"
+        ],
+        "url": "https://www.cnn.com/2026/08/06/middleeast/israel-settler-charged-palestinian-death-no-other-land-intl",
+        "priority_score": 70,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-10 09:14:53",
         "collection_method": "legacy",
         "column": "地区热点",
         "is_official": null,
@@ -10390,7 +10418,7 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-10_69993",
+        "id": "auto_2026-08-10_77636",
         "date": "2026-08-10",
         "title": "Côte d’Ivoire National Day",
         "title_en": "Côte d’Ivoire National Day",
@@ -10409,34 +10437,6 @@
         "collection_method": "us_official",
         "column": "美国",
         "is_official": true,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-06_76239",
-        "date": "2026-08-10",
-        "title": "Israel charges settler over killing of Palestinian activist in West Bank in rare prosecution 以色列罕见起诉杀害西岸巴勒斯坦活动家的定居者",
-        "title_en": "Israel charges settler over killing of Palestinian activist in West Bank in rare prosecution",
-        "title_zh": "以色列罕见起诉杀害西岸巴勒斯坦活动家的定居者",
-        "summary": "以色列罕见地对一名定居者提起诉讼，指控其杀害约旦河西岸巴勒斯坦活动人士，被视为以色列司法系统对此类案件的罕见追责，发生在以色列大选临近之际。",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "CNN",
-        "category": "地缘政治",
-        "keywords": [
-          "以色列",
-          "定居者",
-          "巴勒斯坦",
-          "西岸",
-          "起诉"
-        ],
-        "url": "https://www.cnn.com/2026/08/06/middleeast/israel-settler-charged-palestinian-death-no-other-land-intl",
-        "priority_score": 70,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-10 09:14:53",
-        "collection_method": "legacy",
-        "column": "地区热点",
-        "is_official": null,
         "body_en": null
       }
     ],
@@ -10485,52 +10485,6 @@
         "is_official": true,
         "body_en": null
       }
-    ],
-    "2026-08-01": [
-      {
-        "id": "basic_14_5553",
-        "date": "2026-08-01",
-        "title": "从北约峰会看美欧关系走向",
-        "title_en": null,
-        "title_zh": null,
-        "summary": "从北约峰会看美欧关系走向",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "新华网",
-        "category": "国际政治",
-        "keywords": [],
-        "url": "https://www.news.cn/world/20260710/8c3d9472ffa1415bb67c8bb404d62011/c.html",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-01 14:25:53",
-        "collection_method": "basic",
-        "column": "国际会议",
-        "is_official": null,
-        "body_en": null
-      },
-      {
-        "id": "basic_11_5553",
-        "date": "2026-08-01",
-        "title": "美伊冲突外溢 中东硝烟四起",
-        "title_en": null,
-        "title_zh": null,
-        "summary": "美伊冲突外溢 中东硝烟四起",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "新华网",
-        "category": "地缘政治",
-        "keywords": [],
-        "url": "https://www.news.cn/world/20260730/477aa4fa269d4204b5f41d35e80a58c8/c.html",
-        "priority_score": 70,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-01 14:25:53",
-        "collection_method": "basic",
-        "column": "地区热点",
-        "is_official": null,
-        "body_en": null
-      }
     ]
   },
   "dates": [
@@ -10540,14 +10494,13 @@
     "2026-08-06",
     "2026-08-05",
     "2026-08-04",
-    "2026-08-03",
-    "2026-08-01"
+    "2026-08-03"
   ],
   "stats": {
-    "totalArticles": 393,
-    "dateCount": 8,
+    "totalArticles": 391,
+    "dateCount": 7,
     "latestDate": "2026-08-10",
-    "oldestDate": "2026-08-01"
+    "oldestDate": "2026-08-03"
   },
   "today": "2026-08-07",
   "todayCount": 85
