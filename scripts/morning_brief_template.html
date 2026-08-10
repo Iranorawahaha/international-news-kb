@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ira 信息看板 · 每日早报 2026-08-10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* === 基础 === */
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #faf8f4;
+    color: #1a1a2e;
+    line-height: 1.7;
+    padding: 32px 16px 48px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+
+  /* === 顶部报头（轻量、不喧宾夺主） === */
+  .masthead {
+    padding: 0 0 16px;
+    border-bottom: 2px solid #1a1a2e;
+    margin-bottom: 24px;
+  }
+  .masthead-top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .brand {
+    font-family: "Fraunces", "Noto Serif SC", serif;
+    font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #1a1a2e;
+  }
+  .brand .cny { font-family: "Noto Serif SC", serif; font-weight: 500; }
+  .vol {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
+    font-size: 12px; color: #6b7280; letter-spacing: 0.5px;
+  }
+  .masthead-meta {
+    display: flex; align-items: baseline; gap: 16px;
+    font-size: 12px; color: #6b7280;
+    font-family: "Fraunces", serif;
+  }
+  .masthead-meta .weekday {
+    font-weight: 600; color: #b91c1c;
+    font-family: "Noto Serif SC", serif;
+  }
+  .masthead-meta .date { font-weight: 500; }
+  .masthead-meta .count { margin-left: auto; }
+
+  /* === 顶部 intro === */
+  .intro {
+    font-family: "Noto Serif SC", "PingFang SC", serif;
+    font-size: 14.5px; line-height: 1.85; color: #374151;
+    margin: 18px 0 28px; padding: 0;
+    border-left: 3px solid #b91c1c; padding-left: 16px;
+  }
+  .intro a { color: #1a1a2e; text-decoration: none; border-bottom: 1.5px solid #b91c1c; font-weight: 600; }
+  .intro b { color: #b91c1c; font-weight: 700; }
+
+  /* === 区块标题（报纸分栏感） === */
+  .section-title {
+    display: flex; align-items: baseline; gap: 12px;
+    margin: 32px 0 16px; padding-bottom: 8px;
+    border-bottom: 1px solid #1a1a2e;
+  }
+  .section-title .ch {
+    font-family: "Noto Serif SC", serif;
+    font-weight: 700; font-size: 24px; letter-spacing: -0.3px;
+  }
+  .section-title .en {
+    font-family: "Fraunces", serif; font-style: italic;
+    font-weight: 500; font-size: 14px; color: #9ca3af;
+  }
+  .section-title .meta {
+    margin-left: auto; font-size: 12px; color: #6b7280;
+    font-family: "Fraunces", serif; font-style: italic;
+  }
+  .section-title.intl .ch { color: #1e3a8a; }
+  .section-title.intl { border-bottom-color: #1e3a8a; }
+  .section-title.dom .ch { color: #b91c1c; }
+  .section-title.dom { border-bottom-color: #b91c1c; }
+
+  /* === 卡片（极简，没有阴影） === */
+  .card {
+    padding: 16px 0;
+    border-bottom: 1px dotted #d4d4d8;
+  }
+  .card:last-child { border-bottom: none; }
+  .card-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .card-num {
+    font-family: "Fraunces", serif; font-weight: 700;
+    font-size: 13px; color: #b91c1c; min-width: 24px;
+  }
+  .section-title.intl ~ .card .card-num { color: #1e3a8a; }
+  .card-title-en {
+    font-family: "Fraunces", serif; font-style: italic;
+    font-size: 12.5px; color: #9ca3af; margin-bottom: 4px; margin-left: 34px;
+    line-height: 1.4;
+  }
+  .card-title-zh {
+    font-family: "Noto Serif SC", serif;
+    font-size: 16px; font-weight: 700; line-height: 1.45;
+    margin-left: 34px;
+  }
+  .card-title-zh a { color: #1a1a2e; text-decoration: none; }
+  .card-title-zh a:hover { color: #b91c1c; }
+  .card-meta {
+    display: flex; gap: 8px; margin: 6px 0 8px 34px; flex-wrap: wrap;
+    font-size: 11px;
+  }
+  .tag { font-weight: 600; color: #6b7280; padding: 1px 0; }
+  .tag-src { color: #1e3a8a; }
+  .tag-src::before { content: "· "; color: #d4d4d8; }
+  .tag-cat { color: #b91c1c; }
+  .card-summary {
+    font-family: "Noto Serif SC", serif;
+    font-size: 13.5px; color: #4b5563; line-height: 1.8;
+    margin-left: 34px;
+  }
+
+  /* === 底部跳转区 === */
+  .footer-nav {
+    margin: 36px 0 20px;
+    padding: 16px 0;
+    border-top: 1px solid #1a1a2e;
+    border-bottom: 1px solid #1a1a2e;
+    display: flex; justify-content: space-between;
+    font-family: "Noto Serif SC", serif;
+    font-size: 12px;
+  }
+  .footer-nav a {
+    color: #1a1a2e; text-decoration: none; font-weight: 600;
+  }
+  .footer-nav a:hover { color: #b91c1c; }
+
+  .sources-box {
+    font-size: 11px; color: #6b7280; line-height: 1.85;
+    margin: 16px 0;
+    padding: 12px 0;
+    border-bottom: 1px dotted #d4d4d8;
+  }
+  .sources-box b { color: #1a1a2e; font-weight: 600; }
+
+  .footer-credits {
+    text-align: center; font-size: 11px; color: #9ca3af;
+    padding: 16px 0; line-height: 1.8;
+    font-family: "Fraunces", serif; font-style: italic;
+  }
+  .footer-credits a { color: #1a1a2e; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ===== 极简顶部 ===== -->
+<header class="masthead">
+  <div class="masthead-top">
+    <div class="brand">Ira <span class="cny">信息看板</span></div>
+    <div class="vol">{{VOL}}</div>
+  </div>
+  <div class="masthead-meta">
+    <span class="weekday">{{WEEKDAY}}</span>
+    <span class="date">{{DATE_STR}}</span>
+    <span class="count">{{COUNT}} 条精选</span>
+  </div>
+</header>
+
+<p class="intro">
+  <a href="https://iranorawahaha.github.io/international-news-kb/">Ira 信息看板</a>
+  每日追踪中美关系、地缘政治、经贸制裁、AI 科技等国际国内重大动向。过去 24 小时各版面新增
+  <b>{{INTL_TODAY}}</b> 篇国际新闻、<b>{{DOM_TOTAL}}</b> 篇国内要闻，以下为较高重要性新闻速览。
+</p>
+
+<!-- ===== 国际 ===== -->
+<div class="section-title intl">
+    <span class="ch">国际要闻</span>
+    <span class="en">International</span>
+    <span class="meta">{{INTL_COUNT}} stories</span>
+  </div>
+  {{INTL_CARDS}}<div class="card-title-en">How a Drone 'Hellscape' Might Stop a Chinese Invasion of Taiwan</div>
+  <div class="card-title-zh"><a href="https://www.nytimes.com/2026/08/09/world/asia/taiwan-drone-china-invasion.html" target="_blank">无人机"地狱景观"如何阻止中国大陆对台军事行动</a></div>
+  <div class="card-meta"><span class="tag tag-src">纽约时报</span></div>
+  <div class="card-summary">美国智库提出用大规模低成本无人机群在台海周边构成"地狱景观"防线，以阻止中国大陆对台湾的军事行动。该方案设想利用数千架无人机同时攻击登陆舰队，以量换质。然而分析也指出中国大陆的反无人机能力正在快速提升。</div>
+</div>
+
+<!-- ===== 国内 ===== -->
+<div class="section-title dom">
+    <span class="ch">国内要闻</span>
+    <span class="en">China</span>
+    <span class="meta">{{DOM_COUNT}} stories</span>
+  </div>
+  {{DOM_CARDS}}<div class="card-title-zh"><a href="https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html" target="_blank">关于印发《煤炭工业发展"十五五"规划》的通知</a></div>
+  <div class="card-meta"><span class="tag tag-cat">政策发布</span><span class="tag tag-src">国家发改委</span></div>
+  <div class="card-summary">国家发展改革委印发《煤炭工业发展"十五五"规划》，明确煤炭产供储销体系建设目标，推动煤炭清洁高效利用和安全生产水平提升，保障国家能源安全。</div>
+</div>
+
+<!-- ===== 底部 ===== -->
+<div class="footer-nav">
+  <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html">国际看板 →</a>
+  <a href="https://iranorawahaha.github.io/international-news-kb/china-news.html">国内看板 →</a>
+  <a href="https://iranorawahaha.github.io/international-news-kb/ai-news.html">AI 看板 →</a>
+</div>
+
+<div class="sources-box">
+  <b>📡 今日信源（14 家）</b><br>
+  国际外媒：Reuters · AP News · BBC · CNN · The Guardian · The New York Times · The Wall Street Journal · Financial Times · South China Morning Post · Al Jazeera · The Washington Post · Politico<br>
+  中国官方与权威：中国政府网（要闻 / 最新政策）· 央视新闻 · 人民日报 · 外交部 · 国家发改委 · 商务部 · 联合早报（海外中文权威）
+</div>
+
+<div class="footer-credits">
+  📮 Ira 信息看板 · 每日自动生成 · 仅供参考交流<br>
+  🌐 iranorawahaha.github.io/international-news-kb
+</div>
+
+</div>
+</body>
+</html>

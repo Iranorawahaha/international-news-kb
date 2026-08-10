@@ -16,6 +16,8 @@ classify_columns.py — 国际新闻六大栏目分类器（Ira 信息看板）
       沙特王储敦促特朗普"优先对话" →【美国】（涉及特朗普决策）
       鲁比奥绕行计划 →【美国】
       伊朗对美国军队发动突袭导弹攻击 →【地区热点】（主体是伊朗）
+      俄军袭击基辅 →【地区热点】（俄乌战争，2026-08 修复）
+      欧盟对俄制裁 →【欧洲】（欧盟主语，非俄乌战争主语）
 
 栏目内优先级排序：
   ① 元首+涉华（最高） ② 仅涉华 ③ 仅元首 ④ 其余
@@ -50,8 +52,8 @@ CN_LEADERS = ["习近平", "国家主席", "中国元首", "中国外交部", "�
 EU_LEADERS = ["欧盟", "European Union", "欧洲议会", "欧洲委员会", "欧盟委员会", "冯德莱恩",
               "von der Leyen", "德国", "默克尔", "朔尔茨", "Scholz", "马克龙", "Macron",
               "法国", "英国", "英国首相", "斯塔默", "Starmer", "意大利", "西班牙", "葡萄牙",
-              "荷兰", "比利时", "瑞典", "挪威", "丹麦", "芬兰", "波兰", "乌克兰", "乌克兰总统",
-              "泽连斯基", "Zelensky", "匈牙利", "奥班", "Orban", "希腊", "奥地利", "瑞士",
+              "荷兰", "比利时", "瑞典", "挪威", "丹麦", "芬兰", "波兰",  # ← 移走"乌克兰""泽连斯基"（俄乌战争当事方，不属于欧洲主体）
+              "匈牙利", "奥班", "Orban", "希腊", "奥地利", "瑞士",
               "爱尔兰", "捷克", "斯洛伐克", "罗马尼亚", "保加利亚", "克罗地亚", "塞尔维亚",
               "北约", "NATO", "英法", "法德", "英国脱欧", "欧洲央行", "欧央行", "欧元区"]
 
@@ -74,7 +76,13 @@ HOTSPOT_KEYS = ["中东", "伊朗", "以色列", "加沙", "哈马斯", "真主�
                 "肯尼亚", "埃塞俄比亚", "南非", "埃及", "利比亚", "苏丹", "索马里", "刚果",
                 "导弹袭击", "空袭", "冲突", "战争", "爆发冲突", "武装", "民兵", "叛军", "枪击",
                 "袭击事件", "爆炸", "暗杀", "政变", "大选结果", "选举结果", "伊朗对", "伊朗发动",
-                "俄军", "乌军", "以军", "哈马斯袭击", "无人机袭击"]
+                "俄军", "乌军", "以军", "哈马斯袭击", "无人机袭击",
+                # 俄乌战争英文主语（避免纯英文标题漏识别）
+                "Russia", "Russian", "Ukraine", "Ukrainian", "Kyiv", "Kiev",
+                "Zelensky", "Zelenskyy", "Moscow", "Kremlin",
+                "Donetsk", "Luhansk", "Kherson", "Mariupol",
+                "Russian forces", "Russian missile", "Russian drone", "Russian attack",
+                "Ukrainian forces", "Ukrainian capital"]
 
 # 涉华信号（用于优先级①/②判定）
 CN_SIGNALS = ["中国", "中方", "中美", "中俄", "中欧", "中日", "中韩", "台海", "台湾",
@@ -105,6 +113,37 @@ def classify_column(title, title_en="", summary=""):
     if any(k.lower() in text.lower() for k in CONFERENCE_KEYS):
         return "国际会议"
 
+    # 0.4 俄乌战争特例（用户原则：俄乌冲突相关不归欧洲，归地区热点）
+    #   标题主语是俄乌战争（Russia/Ukraine/Putin/Zelensky/Kyiv 等）→ 地区热点
+    #   例外：欧盟/北约主语（EU force / EU sanctions / NATO / 欧洲对俄）→ 欧洲
+    #   例外：特朗普/白宫直接行为 → 美国
+    RU_UA_WAR_KEYS = ["俄乌", "乌克兰", "泽连斯基", "Zelensky", "Zelenskyy",
+                      "俄罗斯", "普京", "Putin", "克里姆林宫", "Kremlin",
+                      "Moscow", "莫斯科", "Kyiv", "Kiev", "基辅",
+                      "Ukraine", "Ukrainian", "Russia", "Russian",
+                      "顿涅茨克", "Donetsk", "卢甘斯克", "Luhansk",
+                      "Russian forces", "Russian missile", "Russian drone",
+                      "Ukrainian forces", "Ukrainian capital"]
+    EU_NATO_RU_SUBJ = ["EU force", "EU sanctions", "EU 制裁", "欧盟对俄",
+                       "European Union sanctions", "EU 牵头", "EU-led",
+                       "Italy-led", "Italian-led", "British-led", "Germany-led",
+                       "NATO ", "NATO秘书长", "NATO chief", "北约秘书长",
+                       "北约东扩", "NATO expansion", "欧洲对俄",
+                       "波兰支持", "波兰援乌", "欧盟对乌", "EU's ",
+                       "European response", "Europe's response",
+                       # EU 主导对俄/对乌行动（任意 EU + sanctions/announce/impose/approve）
+                       "EU announces", "EU imposes", "EU approves", "EU adopts",
+                       "EU unveils", "EU targets", "EU extends", "EU agrees",
+                       "EU agrees new", "EU to sanction", "EU agrees on Russia",
+                       "EU greenlights", "EU prepares"]
+    is_ru_ua_war = any(k in t for k in RU_UA_WAR_KEYS)
+    is_eu_nato_ru_subj = any(k in t for k in EU_NATO_RU_SUBJ)
+    if is_ru_ua_war and not is_eu_nato_ru_subj:
+        # 例外：特朗普/白宫直接行为 → 美国
+        if any(k in t for k in ["特朗普", "Trump", "白宫", "美国总统"]):
+            return "美国"
+        return "地区热点"
+
     # 0.5 热点主语优先：标题开头是热点主体（伊朗/俄/朝等）→ 地区热点
     #    —— "伊朗对美国军队发动突袭导弹攻击" → 地区热点（伊朗是发起方）
     HOTSPOT_SUBJECT = ["伊朗", "以色列", "哈马斯", "真主党", "胡塞武装", "俄罗斯", "俄军",
@@ -128,6 +167,20 @@ def classify_column(title, title_en="", summary=""):
     US_MILITARY = ["美军", "美国军队", "美国打击", "美国空袭", "美国袭击", "美国连夜",
                    "美国对", "美国向", "美国宣布", "美方打击", "美国国防部", "五角大楼"]
     if (any(k.lower() in text.lower() for k in US_STRONG) or any(k in t for k in US_MILITARY))             and not any(k in t for k in CN_HEAD_STRONG):
+        # V1.6 例外：伊朗/霍尔木兹相关地缘冲突，非直接特朗普主体 → 地区热点
+        # —— "美国连夜打击伊朗数十个目标" → 地区热点（冲突主体是美伊，不是特朗普个人）
+        # —— "伊朗在霍尔木兹海峡袭击美军" → 地区热点
+        # V1.7 修复：US 强主体（特朗普/鲁比奥/白宫等）已在此分支，例外不应再覆盖强主体决策行为
+        # —— "鲁比奥绕行计划：世界能否摆脱霍尔木兹海峡咽喉" → 美国（鲁比奥决策归美方）
+        # V1.7 修复：US 军事主体（美军/美国打击等）也优先于伊朗冲突例外
+        # —— "美军对伊朗实施打击" → 美国（美军直接行为归美方）
+        IRAN_CONFLICT_WORDS = ["伊朗", "霍尔木兹", "Hormuz", "美伊", "伊朗战争", "伊朗冲突"]
+        is_iran_conflict = any(k in t or k.lower() in text.lower() for k in IRAN_CONFLICT_WORDS)
+        is_us_strong_direct = any(k in t for k in US_STRONG)
+        is_us_military_direct = any(k in t for k in US_MILITARY)
+        is_trump_direct = any(k in t for k in ["特朗普", "Trump"])
+        if is_iran_conflict and not is_trump_direct and not is_us_strong_direct and not is_us_military_direct:
+            return "地区热点"
         return "美国"
 
     # 2. 中国强主体优先：习近平/外交部/商务部等中方主体为核心决策方
@@ -145,11 +198,11 @@ def classify_column(title, title_en="", summary=""):
     if any(k in t for k in HOTSPOT_HEAD):
         return "地区热点"
 
-    # 4. 欧洲主体优先（欧盟/德国/法国等）
+    # 4. 欧洲主体优先（欧盟/德国/法国等）—— 乌克兰/泽连斯基/俄乌已上提
     #    —— "欧盟拟对中国电动车加征关税" → 欧洲
     EU_HEAD = ["欧盟", "欧洲议会", "欧洲委员会", "欧盟委员会", "冯德莱恩", "德国", "朔尔茨",
                "法国", "马克龙", "英国", "斯塔默", "意大利", "西班牙", "葡萄牙", "荷兰",
-               "比利时", "波兰", "乌克兰", "泽连斯基", "北约", "匈牙利", "奥班", "瑞典", "挪威"]
+               "比利时", "波兰", "北约", "匈牙利", "奥班", "瑞典", "挪威", "丹麦", "芬兰"]
     if any(k in t for k in EU_HEAD):
         return "欧洲"
 
