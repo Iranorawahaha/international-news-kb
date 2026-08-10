@@ -585,8 +585,8 @@ try:
     for _f_src in _us:
         _furl = _ff_norm(_f_src.get('url'))
         if not _furl: continue
-        # V2.5: 用 collectedAt 日期做归档（而非发表日 date），与昨日文章归今天版面一致
-        _ftarget = (_f_src.get('collectedAt') or '')[:10] or _f_src.get('date', '')
+        # V2.5.1: 用发表日 date 归档（collectedAt 在周末断档时不可靠，V2.5 final reclassify 会处理正常 1 天位移）
+        _ftarget = _f_src.get('date', '')
         if not _ftarget: continue
         # V1.5.7: 终极防线也严格按 7 天窗口过滤（防止 5-18 等超期数据被加回）
         if _ftarget < _cutoff_str: continue
@@ -617,12 +617,21 @@ try:
     for _rc_dt in list(data['archive'].keys()):
         for _rc_a in list(data['archive'][_rc_dt]):
             _rc_col = (_rc_a.get('collectedAt') or '')[:10]
-            # 情况1：collectedAt 指向不同日期组 → 移到目标组
+            # 情况1：collectedAt 与当前组不同，且日期差 ≤1 天（正常日更）→ 移到目标组
+            #   ⚠️ 周末断档包：采集日 - 发表日 ≥ 2 天 → 保持原日期分组（不挤到今天）
             if _rc_col and _rc_col != _rc_dt:
-                _rc_a['date'] = _rc_col
-                _rc_v25_by_target[_rc_col].append(_rc_a)
-                data['archive'][_rc_dt].remove(_rc_a)
-                _rc_v25_reassigned += 1
+                from datetime import datetime as _dt
+                try:
+                    d1 = _dt.strptime(_rc_col, '%Y-%m-%d')
+                    d2 = _dt.strptime(_rc_dt, '%Y-%m-%d')
+                    gap = abs((d1 - d2).days)
+                except:
+                    gap = 0
+                if gap <= 1:
+                    _rc_a['date'] = _rc_col
+                    _rc_v25_by_target[_rc_col].append(_rc_a)
+                    data['archive'][_rc_dt].remove(_rc_a)
+                    _rc_v25_reassigned += 1
             # 情况2：在正确的组但 date 字段不对齐（force-upgrade 可能覆盖回去）→ 修正字段
             elif _rc_a.get('date') != _rc_dt:
                 _rc_a['date'] = _rc_dt
