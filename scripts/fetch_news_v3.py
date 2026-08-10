@@ -442,8 +442,8 @@ class EnhancedNewsFetcher:
                     score = max(score, 78)
                     break
 
-        # 权威信源加分
-        authoritative_sources = ['人民网-国际', '中国外交部', '新华网']
+        # 权威信源加分（V2.5.1: 仅外媒信源，中文源已永久移除）
+        authoritative_sources = []
         if source_name in authoritative_sources and score < 75:
             score = max(score, 70)
 
