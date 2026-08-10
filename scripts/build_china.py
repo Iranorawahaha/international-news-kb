@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-build_china.py — 国内重大新闻看板 单文件 HTML 构建器 v2（Ira 信息看板体系）
+build_china.py — 国内重大新闻看板 单文件 HTML 构建器 v3（Ira 信息看板体系）
 
-视觉规范（v5 用户偏好）：
-- 浅色底 + 蓝色主色调顶部
+视觉规范（v5.4 用户偏好）：
+- 浅色底 + 红色主色调政务风
 - 左侧 sidebar（sticky 悬浮）+ 右侧主内容
-- 透视表式日期×类别交叉筛选交互
+- 透视表式日期×类别交叉筛选交互（日期/合计可点击展开当天全部新闻）
 - 表格要素齐全；大标题不花哨
 
 读取 data/china-news.json，生成 china-news.html（单文件，纯内联 CSS/JS，无外部资源）。
@@ -56,7 +56,7 @@ def build():
                 "人事任免": "📋", "部委动态": "🏢", "政策发布": "📜", "经贸动向": "💹"}.get(c, "📌")
 
     # ============== 透视表数据预计算 ==============
-    pivot = {}  # {date: {cat: count}}
+    pivot = {}
     for d in dates:
         pivot[d] = {}
         for c in cat_order:
@@ -130,7 +130,7 @@ def build():
     for c in cat_order:
         pivot_headers += f'<th class="pv-th pv-cat-hd">{cat_icon(c)} {c[:2]}</th>'
     pivot_headers += '<th class="pv-th pv-total-hd">合计</th>'
-    # 数据行
+    # 数据行 — 日期列与合计列均可点击
     for d in dates:
         dt = datetime.strptime(d, '%Y-%m-%d')
         wd = weekday_map[dt.weekday()]
@@ -139,7 +139,8 @@ def build():
         date_label = f'<span class="pv-date">{dt.month}月{dt.day}日</span><span class="pv-wd">{wd}</span>'
         if is_today:
             date_label += '<span class="pv-today-dot"></span>'
-        cells = f'<td class="pv-cell pv-date-cell">{date_label}</td>'
+        # 日期列：可点击 → 显示当天全部
+        cells = f'<td class="pv-cell pv-date-cell" data-date="{d}">{date_label}</td>'
         row_total = 0
         for c in cat_order:
             cnt = pivot[d].get(c, 0)
@@ -148,7 +149,8 @@ def build():
                 cells += f'<td class="pv-cell pv-num-cell" data-date="{d}" data-cat="{esc(c)}"><span class="pv-num">{cnt}</span><span class="pv-label">条</span></td>'
             else:
                 cells += f'<td class="pv-cell pv-zero-cell">—</td>'
-        cells += f'<td class="pv-cell pv-total-cell"><span class="pv-total-num">{row_total}</span></td>'
+        # 合计列：可点击 → 显示当天全部
+        cells += f'<td class="pv-cell pv-total-cell" data-date="{d}"><span class="pv-total-num">{row_total}</span></td>'
         pivot_rows.append(f'<tr class="{row_cls}">{cells}</tr>')
 
     pivot_html = f'''<div class="pivot-wrapper">
@@ -177,6 +179,18 @@ def build():
         '<div class="cat-panel active" id="cat-panel-all">' + (
             "".join(all_items_html) if all_items_html else empty_panel_html) + '</div>')
 
+    # 日期-全部 面板（点击日期列/合计列展开当天全部新闻）
+    for d in dates:
+        items = archive.get(d, [])
+        date_html = []
+        # 不再插入日期分组头部（因为整个面板就是这个日期的）
+        for idx, it in enumerate(items, 1):
+            date_html.append(article_card(it, idx))
+        panel_id = f"cat-panel-{d}-all"
+        main_panels.append(
+            f'<div class="cat-panel" id="{panel_id}">' + (
+                "".join(date_html) if date_html else f'<div class="empty-panel">该日暂无新闻</div>') + '</div>')
+
     # 每个 日期×类别 交叉面板
     for d in dates:
         for c in cat_order:
@@ -202,24 +216,24 @@ def build():
 <style>
   :root {{
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-    --bg: #f8fafc;
-    --bg-soft: #f0f4ff;
+    --bg: #fdf2f2;
+    --bg-soft: #fef8f8;
     --panel: #fff;
-    --line: #dbeafe;
-    --line-soft: #e0e7ff;
-    --ink: #1e293b;
-    --muted: #64748b;
-    --muted-soft: #94a3b8;
-    --main: #2563eb;
-    --main-dark: #1d4ed8;
-    --main-2: #3b82f6;
-    --main-soft: #eff6ff;
-    --blue-grad-1: #1e3a5f;
-    --blue-grad-2: #1d4ed8;
-    --blue-grad-3: #3b82f6;
-    --today: #2563eb;
-    --today-bg: #eff6ff;
-    --today-text: #1d4ed8;
+    --line: #f5d0d0;
+    --line-soft: #fce8e8;
+    --ink: #1c2434;
+    --muted: #64707f;
+    --muted-soft: #8a96a8;
+    --main: #dc2626;
+    --main-dark: #991b1b;
+    --main-2: #ef4444;
+    --main-soft: #fef2f2;
+    --red-grad-1: #991b1b;
+    --red-grad-2: #b91c1c;
+    --red-grad-3: #dc2626;
+    --today: #dc2626;
+    --today-bg: #fef2f2;
+    --today-text: #991b1b;
     --summit: #f59e0b;
     --summit-bg: #fffbeb;
   }}
@@ -227,8 +241,8 @@ def build():
   body {{ font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.65; }}
   .wrap {{ max-width: 1320px; margin: 0 auto; padding: 16px 16px 60px; }}
 
-  /* 顶栏 — 蓝色 */
-  header.hero {{ background: linear-gradient(135deg, var(--blue-grad-1) 0%, var(--blue-grad-2) 55%, var(--blue-grad-3) 100%); color: #fff; border-radius: 14px; padding: 22px 28px 18px; box-shadow: 0 8px 22px rgba(37,99,235,.25); position: relative; overflow: hidden; }}
+  /* 顶栏 — 红色政务风 */
+  header.hero {{ background: linear-gradient(135deg, var(--red-grad-1) 0%, var(--red-grad-2) 55%, var(--red-grad-3) 100%); color: #fff; border-radius: 14px; padding: 22px 28px 18px; box-shadow: 0 8px 22px rgba(153,27,27,.25); position: relative; overflow: hidden; }}
   header.hero::after {{ content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,.06); }}
   .hero-back {{ display: flex; align-items: center; gap: 8px; font-size: 12.5px; margin-bottom: 12px; position: relative; z-index: 1; flex-wrap: wrap; }}
   .hero-back a {{ color: #fff; text-decoration: none; background: rgba(255,255,255,.16); padding: 4px 12px; border-radius: 999px; font-weight: 600; transition: background .15s; }}
@@ -240,8 +254,8 @@ def build():
   .hero .hero-meta span {{ background: rgba(255,255,255,.15); padding: 3px 11px; border-radius: 999px; }}
 
   /* 刷新条 */
-  .refresh-strip {{ background: var(--main-soft); border: 1px solid #bfdbfe; color: var(--main-dark); border-radius: 10px; padding: 9px 16px; font-size: 12.5px; margin: 14px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
-  .rs-dot {{ width: 8px; height: 8px; border-radius: 50%; background: var(--main); box-shadow: 0 0 0 3px rgba(37,99,235,.18); }}
+  .refresh-strip {{ background: var(--main-soft); border: 1px solid #fecaca; color: var(--main-dark); border-radius: 10px; padding: 9px 16px; font-size: 12.5px; margin: 14px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
+  .rs-dot {{ width: 8px; height: 8px; border-radius: 50%; background: var(--main); box-shadow: 0 0 0 3px rgba(220,38,38,.18); }}
 
   /* KPI */
   .kpi-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }}
@@ -250,8 +264,8 @@ def build():
   .kpi-main .kpi-num {{ color: var(--main); }}
   .kpi-label {{ font-size: 11.5px; color: var(--muted); margin-top: 2px; }}
 
-  /* ===== 透视表 ===== */
-  .pivot-wrapper {{ margin-bottom: 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); box-shadow: 0 2px 8px rgba(37,99,235,.06); }}
+  /* ===== 透视表（红色主题） ===== */
+  .pivot-wrapper {{ margin-bottom: 20px; overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); box-shadow: 0 2px 8px rgba(220,38,38,.06); }}
   .pivot-table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
   .pivot-table thead {{ background: linear-gradient(180deg, var(--main-soft), #fff); }}
   .pv-th {{ padding: 10px 8px; font-weight: 700; font-size: 11.5px; color: var(--muted); border-bottom: 2px solid var(--line); text-align: center; white-space: nowrap; letter-spacing: 0.3px; }}
@@ -262,7 +276,13 @@ def build():
   .pv-row:hover {{ background: var(--main-soft); }}
   .pv-row.today {{ background: linear-gradient(90deg, var(--today-bg), transparent); }}
   .pv-cell {{ padding: 6px 8px; text-align: center; border-bottom: 1px solid var(--line-soft); }}
-  .pv-date-cell {{ text-align: left; padding-left: 14px; }}
+  .pv-date-cell {{ text-align: left; padding-left: 14px; cursor: pointer; transition: background .15s; }}
+  .pv-date-cell:hover {{ background: var(--main); color: #fff; }}
+  .pv-date-cell:hover .pv-date,
+  .pv-date-cell:hover .pv-wd {{ color: #fff; }}
+  .pv-date-cell.active {{ background: var(--main); color: #fff; }}
+  .pv-date-cell.active .pv-date,
+  .pv-date-cell.active .pv-wd {{ color: #fff; }}
   .pv-date {{ font-weight: 700; font-size: 13.5px; color: var(--ink); }}
   .pv-wd {{ font-size: 10.5px; color: var(--muted-soft); margin-left: 6px; }}
   .pv-today-dot {{ display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--main); margin-left: 8px; vertical-align: middle; }}
@@ -274,7 +294,11 @@ def build():
   .pv-num-cell:hover .pv-label {{ color: #fff; }}
   .pv-num-cell.active .pv-label {{ color: #fff; }}
   .pv-zero-cell {{ color: var(--muted-soft); font-size: 11px; }}
-  .pv-total-cell {{ font-weight: 700; }}
+  .pv-total-cell {{ font-weight: 700; cursor: pointer; transition: background .15s; border-radius: 4px; }}
+  .pv-total-cell:hover {{ background: var(--main); color: #fff; }}
+  .pv-total-cell.active {{ background: var(--main); color: #fff; }}
+  .pv-total-cell:hover .pv-total-num {{ color: #fff; }}
+  .pv-total-cell.active .pv-total-num {{ color: #fff; }}
   .pv-total-num {{ font-family: ui-monospace, monospace; color: var(--main-dark); font-size: 14px; }}
 
   /* 搜索框 */
@@ -292,7 +316,7 @@ def build():
     position: sticky; top: 16px; background: var(--panel);
     border: 1px solid var(--line); border-radius: 12px; padding: 10px;
     max-height: calc(100vh - 32px); overflow-y: auto;
-    box-shadow: 0 4px 14px rgba(37,99,235,.08);
+    box-shadow: 0 4px 14px rgba(153,27,27,.08);
   }}
   .sidebar-title {{ font-size: 11px; font-weight: 700; letter-spacing: 1.2px; color: var(--muted-soft); text-transform: uppercase; padding: 8px 10px 10px; display: flex; align-items: center; gap: 6px; }}
   .sidebar-title::after {{ content: ""; flex: 1; height: 1px; background: var(--line-soft); }}
@@ -308,12 +332,12 @@ def build():
   .col-item:active {{ transform: scale(0.98); }}
   .col-item.active {{
     background: linear-gradient(135deg, var(--main-dark), var(--main-2));
-    color: #fff; box-shadow: 0 4px 14px rgba(37,99,235,.35);
+    color: #fff; box-shadow: 0 4px 14px rgba(220,38,38,.35);
   }}
   .col-item .ic {{ font-size: 16px; line-height: 1; }}
   .col-item .cnt {{
     margin-left: auto; font-family: ui-monospace, monospace;
-    font-size: 11px; background: rgba(37,99,235,.1);
+    font-size: 11px; background: rgba(180,150,150,.18);
     padding: 2px 8px; border-radius: 99px; color: var(--muted); font-weight: 700;
   }}
   .col-item.active .cnt {{ background: rgba(255,255,255,.22); color: #fff; }}
@@ -323,7 +347,7 @@ def build():
   .cat-panel {{ display: none; }}
   .cat-panel.active {{ display: block; }}
 
-  /* 透视表选中信息 */
+  /* 透视表筛选状态 */
   .pivot-info {{
     display: flex; align-items: center; gap: 8px;
     padding: 8px 14px; margin-bottom: 14px;
@@ -356,7 +380,7 @@ def build():
 
   /* 卡片 */
   .card {{ display: flex; gap: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px; margin-bottom: 10px; transition: transform .15s, box-shadow .15s; align-items: flex-start; }}
-  .card:hover {{ transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37,99,235,.1); }}
+  .card:hover {{ transform: translateY(-2px); box-shadow: 0 6px 16px rgba(153,27,27,.1); }}
   .card.imp-summit {{ border-left: 4px solid var(--summit); background: linear-gradient(90deg, var(--summit-bg), var(--panel)); }}
   .card.imp-high {{ border-left: 4px solid var(--main); }}
   .card-idx {{ flex: 0 0 26px; height: 26px; border-radius: 8px; background: var(--main-soft); color: var(--main-dark); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }}
@@ -368,9 +392,9 @@ def build():
     font-family: ui-monospace, monospace; font-size: 12.5px; font-weight: 700;
     color: var(--main-dark); background: var(--main-soft);
     padding: 5px 12px; border-radius: 8px;
-    border: 1px solid rgba(37,99,235,.18); white-space: nowrap; letter-spacing: 0.3px;
+    border: 1px solid rgba(220,38,38,.18); white-space: nowrap; letter-spacing: 0.3px;
   }}
-  .date-badge.today {{ background: var(--today); color: #fff; border-color: var(--today); box-shadow: 0 0 0 2px rgba(37,99,235,.2); }}
+  .date-badge.today {{ background: var(--today); color: #fff; border-color: var(--today); box-shadow: 0 0 0 2px rgba(220,38,38,.2); }}
   .card-link {{ font-size: 12px; color: var(--main); text-decoration: none; font-weight: 600; padding: 4px 11px; border: 1px solid var(--main); border-radius: 8px; transition: all .15s; white-space: nowrap; }}
   .card-link:hover {{ background: var(--main); color: #fff; }}
   .card-summary {{ font-size: 12.5px; color: #4a5568; line-height: 1.65; margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
@@ -422,11 +446,11 @@ def build():
     <span class="rs-dot"></span>
     <b>最近刷新：</b>{esc(NOW.strftime("%Y-%m-%d %H:%M"))} 北京时间（每日自动刷新） ·
     <b>今日新增 {today_new} 条</b> · 滚动 7 天窗口 ·
-    信源：中国政府网 > 5部委官网 > 央媒 · V5 聚焦 7 大类别
+    透视表：点日期/合计可看当天全部，点分类单元格可看（日期×类别）筛选
   </div>
 
   <div class="kpi-grid">
-    <div class="kpi-card" style="border-left:4px solid #2563eb; background:linear-gradient(180deg,#eff6ff,#fff);"><div class="kpi-num" style="color:#2563eb;">{today_new}</div><div class="kpi-label">🆕 今日新增</div></div>
+    <div class="kpi-card" style="border-left:4px solid #dc2626; background:linear-gradient(180deg,#fef2f2,#fff);"><div class="kpi-num" style="color:#dc2626;">{today_new}</div><div class="kpi-label">🆕 今日新增</div></div>
     <div class="kpi-card kpi-main"><div class="kpi-num">{total}</div><div class="kpi-label">要闻总数（去重后）</div></div>
     <div class="kpi-card" style="border-left:4px solid #f59e0b; background:linear-gradient(180deg,#fffbeb,#fff);"><div class="kpi-num" style="color:#f59e0b;">{summit_count}</div><div class="kpi-label">⭐ 元首级要闻</div></div>
     <div class="kpi-card"><div class="kpi-num">{len(dates)}</div><div class="kpi-label">覆盖天数</div></div>
@@ -437,7 +461,7 @@ def build():
 
   <!-- 透视表筛选状态 -->
   <div class="pivot-info hidden" id="pivotInfo">
-    📌 当前筛选：<span class="pi-badge" id="piDate"></span> × <span class="pi-badge" id="piCat"></span>
+    📌 当前筛选：<span class="pi-badge" id="piLabel"></span>
     <button class="pi-clear" onclick="clearPivot()">✕ 清除筛选</button>
   </div>
 
@@ -459,9 +483,10 @@ def build():
 <script>
   (function() {{
     var colItems = document.querySelectorAll('.col-item');
-    var pivotCells = document.querySelectorAll('.pv-num-cell');
+    var numCells = document.querySelectorAll('.pv-num-cell');
+    var dateCells = document.querySelectorAll('.pv-date-cell');
+    var totalCells = document.querySelectorAll('.pv-total-cell');
     var activeCat = 'all';
-    var activeDate = 'all';
     var activePanelId = 'cat-panel-all';
 
     function switchPanel(panelId) {{
@@ -472,35 +497,65 @@ def build():
       doSearch();
     }}
 
-    // 透视表点击
-    pivotCells.forEach(function(cell) {{
+    function clearCellActive() {{
+      numCells.forEach(function(c) {{ c.classList.remove('active'); }});
+      dateCells.forEach(function(c) {{ c.classList.remove('active'); }});
+      totalCells.forEach(function(c) {{ c.classList.remove('active'); }});
+    }}
+
+    function showPivotInfo(label) {{
+      var pi = document.getElementById('pivotInfo');
+      pi.classList.remove('hidden');
+      document.getElementById('piLabel').textContent = label;
+    }}
+
+    // 透视表 — 分类单元格：日期×类别
+    numCells.forEach(function(cell) {{
       cell.addEventListener('click', function() {{
-        // 去激活所有透视单元格
-        pivotCells.forEach(function(c) {{ c.classList.remove('active'); }});
+        clearCellActive();
         cell.classList.add('active');
+        activeCat = 'all';
 
-        activeDate = cell.dataset.date;
-        activeCat = cell.dataset.cat;
-
-        // 更新透视表信息条
-        var pi = document.getElementById('pivotInfo');
-        pi.classList.remove('hidden');
-        document.getElementById('piDate').textContent = activeDate;
-        document.getElementById('piCat').textContent = activeCat;
-
-        // 侧边栏取消激活
+        var d = cell.dataset.date;
+        var c = cell.dataset.cat;
+        showPivotInfo(d + ' · ' + c);
         colItems.forEach(function(x) {{ x.classList.remove('active'); }});
+        switchPanel('cat-panel-' + d + '-' + c);
+      }});
+    }});
 
-        // 切换到对应面板
-        switchPanel('cat-panel-' + activeDate + '-' + activeCat);
+    // 透视表 — 日期列：当天全部
+    dateCells.forEach(function(cell) {{
+      cell.addEventListener('click', function() {{
+        clearCellActive();
+        cell.classList.add('active');
+        activeCat = 'all';
+
+        var d = cell.dataset.date;
+        showPivotInfo(d + ' · 当天全部');
+        colItems.forEach(function(x) {{ x.classList.remove('active'); }});
+        switchPanel('cat-panel-' + d + '-all');
+      }});
+    }});
+
+    // 透视表 — 合计列：当天全部（与日期列同行为）
+    totalCells.forEach(function(cell) {{
+      cell.addEventListener('click', function() {{
+        clearCellActive();
+        cell.classList.add('active');
+        activeCat = 'all';
+
+        var d = cell.dataset.date;
+        showPivotInfo(d + ' · 当天全部');
+        colItems.forEach(function(x) {{ x.classList.remove('active'); }});
+        switchPanel('cat-panel-' + d + '-all');
       }});
     }});
 
     // 清除透视表筛选
     window.clearPivot = function() {{
-      pivotCells.forEach(function(c) {{ c.classList.remove('active'); }});
+      clearCellActive();
       document.getElementById('pivotInfo').classList.add('hidden');
-      activeDate = 'all';
       activeCat = 'all';
       colItems.forEach(function(x) {{ x.classList.remove('active'); }});
       var allBtn = document.querySelector('.col-item[data-cat="all"]');
@@ -516,9 +571,8 @@ def build():
         activeCat = item.dataset.cat;
 
         // 透视表筛选被覆盖时清除透视状态
-        pivotCells.forEach(function(c) {{ c.classList.remove('active'); }});
+        clearCellActive();
         document.getElementById('pivotInfo').classList.add('hidden');
-        activeDate = 'all';
 
         switchPanel('cat-panel-all');
       }});
@@ -587,7 +641,7 @@ def build():
     if not ok:
         return 1
 
-    print(f"=== 国内重大新闻看板 V5（蓝色透视表）===")
+    print(f"=== 国内重大新闻看板 V5.4（红色透视表+日期点击）===")
     print(f"总条数: {total} | 分类(7类): {per_cat}")
     print(f"written: {OUT_HTML} {len(doc)} bytes")
     return 0
