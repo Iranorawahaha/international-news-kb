@@ -5061,46 +5061,6 @@
     ],
     "2026-08-03": [
       {
-        "id": "cmsd2eb6p0xa1roeu0vfso261",
-        "date": "2026-08-03",
-        "title": "TrendForce 预测：全球九大云服务供应商今年资本支出增长 90%",
-        "title_en": "",
-        "summary": "TrendForce 预计 Alphabet、亚马逊、Meta、微软、Oracle 及阿里巴巴、百度、字节跳动、腾讯今年总体资本支出将突破 8867 亿美元，同比增长 90%；2027 年预计进一步增长 49% 至 1.32 万亿美元。该机构同时将 2026 年 AI 服务器出货量增幅预期上调至 31%。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsd2eb6p0xa1roeu0vfso261",
-        "original_url": "https://www.ithome.com/0/985/134.htm",
-        "collectedAt": "2026-08-03T10:06:39",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Meta",
-          "字节跳动",
-          "阿里巴巴"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
-        "id": "cmsd27kfe0x4troeu19vzfj0p",
-        "date": "2026-08-03",
-        "title": "中国风投回暖：AI与机器人重燃信心",
-        "title_en": "",
-        "summary": "中国风投市场经历三年低迷后现复苏迹象，至少60只新美元基金正寻求募资约350亿美元，红杉中国（HSG）、IDG资本等机构筹备新基金。投资者将中国AI视为对冲美国科技风险的工具，看好DeepSeek、月之暗面等公司的低成本与快速进展。但业内称这仅是选择性重启，并非全面风投繁荣。",
-        "summary_en": "",
-        "source": "X：X.PIN (@thexpin)",
-        "url": "https://aihot.virxact.com/items/cmsd27kfe0x4troeu19vzfj0p",
-        "original_url": "https://x.com/thexpin/status/2084211130076209198",
-        "collectedAt": "2026-08-03T10:01:27",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
         "id": "cmsddya2a01t3rotjo94tdap8",
         "date": "2026-08-03",
         "title": "Google Agent Skills 幕后：如何构建、测试与规模化",
@@ -5115,25 +5075,6 @@
         "keywords": [],
         "company_tags": [
           "Google"
-        ],
-        "priority_score": 65,
-        "importance": "medium"
-      },
-      {
-        "id": "cmsctn15v0mp8roeuyn4bsthv",
-        "date": "2026-08-03",
-        "title": "Grok Build v0.2.119 发布：增强 Auto 模式与 Bash 权限",
-        "title_en": "",
-        "summary": "xAI 发布 Grok Build v0.2.119，扩展 Auto 模式自动批准范围，并允许开发者用自由格式 glob 模式编辑 Bash 命令的\"始终允许\"权限。长回复新增可点击箭头跳回开头，/btw 侧问复用父会话缓存前缀以加速响应，同时修复多项连接与界面问题。",
-        "summary_en": "",
-        "source": "X：Elon Musk (@elonmusk, xAI)",
-        "url": "https://aihot.virxact.com/items/cmsctn15v0mp8roeuyn4bsthv",
-        "original_url": "https://x.com/elonmusk/status/2084156097405849727",
-        "collectedAt": "2026-08-03T06:01:31",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "xAI"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -5158,25 +5099,6 @@
         "importance": "medium"
       },
       {
-        "id": "cmscn7d6n0ervroeu0rg4q27x",
-        "date": "2026-08-03",
-        "title": "MiniMax-H3 模型正式公开发布",
-        "title_en": "",
-        "summary": "MiniMax-H3 现已公开发布 https://huggingface.co/MiniMaxAI/MiniMax-H3",
-        "summary_en": "",
-        "source": "X：MiniMax (@MiniMax_AI)",
-        "url": "https://aihot.virxact.com/items/cmscn7d6n0ervroeu0rg4q27x",
-        "original_url": "https://x.com/MiniMax_AI/status/2084106804032872591",
-        "collectedAt": "2026-08-03T03:01:23",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "xAI"
-        ],
-        "priority_score": 65,
-        "importance": "medium"
-      },
-      {
         "id": "cmsdnw33203cnro0o9qowau7c",
         "date": "2026-08-03",
         "title": "SpaceXAI 为 Grok 语音开发 Orbs 功能",
@@ -5191,45 +5113,6 @@
         "keywords": [],
         "company_tags": [
           "xAI"
-        ],
-        "priority_score": 65,
-        "importance": "medium"
-      },
-      {
-        "id": "cmscl8xqc0bzproeuydn7jlbt",
-        "date": "2026-08-03",
-        "title": "华为半导体首席科学家廖恒罕见受访：首提芯片\"18 层宝塔\"理论，大赞 DeepSeek 梁文锋",
-        "title_en": "",
-        "summary": "华为 Fellow、半导体首席科学家廖恒罕见公开受访，首次提出半导体产业链\"18 层宝塔\"理论，认为产业上限由最短短板层级决定，真正稀缺的是纵向贯通多层的复合型人才。他高度评价 DeepSeek 创始人梁文锋主动选择难度更高的稀疏激活架构，称其为\"先验者的价值\"。廖恒还复盘了昇腾芯片突围历程，并坦言曾三次方向性误判。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmscl8xqc0bzproeuydn7jlbt",
-        "original_url": "https://www.ithome.com/0/984/876.htm",
-        "collectedAt": "2026-08-03T02:06:35",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek",
-          "华为"
-        ],
-        "priority_score": 65,
-        "importance": "medium"
-      },
-      {
-        "id": "cmscrhqp70kcvroeul9lvpsaf",
-        "date": "2026-08-03",
-        "title": "字节发布视频模型 Dreamina Seedance 2.5",
-        "title_en": "",
-        "summary": "字节跳动推出视频模型 Dreamina Seedance 2.5，单片段最多支持 50 个参考文件，可一次生成 30 秒连续视频，前 7 天仅在 Dreamina 平台运行。该模型支持同时输入 30 张图像、10 段视频和 10 段音频，并允许在提示词中使用时间戳（如 【0s-5s】）作为分镜脚本。",
-        "summary_en": "",
-        "source": "X：Rohan Paul (@rohanpaul_ai)",
-        "url": "https://aihot.virxact.com/items/cmscrhqp70kcvroeul9lvpsaf",
-        "original_url": "https://x.com/rohanpaul_ai/status/2084140807263498513",
-        "collectedAt": "2026-08-03T05:01:25",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "字节跳动"
         ],
         "priority_score": 65,
         "importance": "medium"
@@ -5274,23 +5157,6 @@
         "importance": "medium"
       },
       {
-        "id": "cmsd094cn0uatroeua3j9m6hg",
-        "date": "2026-08-03",
-        "title": "AI 大模型周榜：阿里千问 3.8-Max 空降综合前五，字节即梦 5.0 生图第六",
-        "title_en": "",
-        "summary": "Arena 发布 2026 年第 31 周 AI 大模型排行榜，阿里 qwen3.8-max 以 1496 分空降综合榜第 5 名，成为排名最高的国产模型，仅比榜首 claude-fable-5（1509 分）低 13 分。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsd094cn0uatroeua3j9m6hg",
-        "original_url": "https://www.ithome.com/0/985/081.htm",
-        "collectedAt": "2026-08-03T09:06:38",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 60,
-        "importance": "medium"
-      },
-      {
         "id": "cmsdg5joy00q0rocasz5iiimg",
         "date": "2026-08-03",
         "title": "欧盟《人工智能法案》第 50 条透明度规则正式生效",
@@ -5306,23 +5172,6 @@
         "company_tags": [],
         "priority_score": 60,
         "importance": "medium"
-      },
-      {
-        "id": "cmscl21k10bseroeu61kzc8vj",
-        "date": "2026-08-03",
-        "title": "14款AI模型生成\"哈布斯堡式下颌青蛙\"SVG测试：部分模型偏离指令添加虚构元素",
-        "title_en": "",
-        "summary": "一项非正式测试让14款主流AI模型生成\"拥有哈布斯堡式下颌的青蛙\"SVG图片，考察指令忠实度。Claude Opus 5、GPT-5.5、Gemini 3.6 Flash等模型在注释中添加了超出要求的解剖学解读甚至虚构的皇室元素，而Claude Sonnet 5、GPT-5.4-mini、Gemini 2.5 Pro等则保持纯粹的结构性标注。",
-        "summary_en": "",
-        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "url": "https://aihot.virxact.com/items/cmscl21k10bseroeu61kzc8vj",
-        "original_url": "https://frogs.vaguespac.es/",
-        "collectedAt": "2026-08-03T02:01:14",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
       },
       {
         "id": "cmsd6q57g12pwroeu6iacjuqj",
@@ -5342,23 +5191,6 @@
         "importance": "low"
       },
       {
-        "id": "cmscne3ve0eurroeufwk70rsq",
-        "date": "2026-08-03",
-        "title": "MiniMax H3 正式开源：通用视频模型支持多模态上下文与 2K 分辨率",
-        "title_en": "",
-        "summary": "MiniMax 今日正式开源新一代通用视频模型 MiniMax H3，可统一理解文本、图像、视频和音频构成的多模态上下文，生成最高 2K 分辨率、最长 15 秒且带原生立体声音频的视频。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmscne3ve0eurroeufwk70rsq",
-        "original_url": "https://www.ithome.com/0/984/937.htm",
-        "collectedAt": "2026-08-03T03:06:36",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
-      },
-      {
         "id": "cmsdv83cg000lro2eyp49endp",
         "date": "2026-08-03",
         "title": "Palantir 强劲季度后，CEO Alex Karp 称 AI 行业\"马克思主义\"",
@@ -5369,57 +5201,6 @@
         "url": "https://aihot.virxact.com/items/cmsdv83cg000lro2eyp49endp",
         "original_url": "https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist",
         "collectedAt": "2026-08-03T23:33:40",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
-      },
-      {
-        "id": "cmscmcwkm0db3roeuh76fy6q3",
-        "date": "2026-08-03",
-        "title": "Qwen3.8-Max 下周开源权重，系 Qwen-Max 首次",
-        "title_en": "",
-        "summary": "阿里通义千问宣布 Qwen3.8-Max 将于下周开源权重，这是 Qwen 首次开源 Max 级模型，同时 Qwen3.8-27B 也将开源。该模型为 2.4T 参数，是继 Kimi K3 后第二个超 2T 参数的开源权重模型，定价输入 $2.0/M tokens、输出 $6.0/M tokens。",
-        "summary_en": "",
-        "source": "X：Yuchen Jin (@Yuchenj_UW)",
-        "url": "https://aihot.virxact.com/items/cmscmcwkm0db3roeuh76fy6q3",
-        "original_url": "https://x.com/Yuchenj_UW/status/2084105482743287960",
-        "collectedAt": "2026-08-03T02:37:41",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
-      },
-      {
-        "id": "cmscuphe70njuroeuqno2jvcx",
-        "date": "2026-08-03",
-        "title": "Qwen3.8-Max 登顶前端代码榜第四",
-        "title_en": "",
-        "summary": "通义千问 Qwen3.8-Max 在 Frontend Code Arena 排行榜以 1，668 分位列第四，仅次于 Claude Opus 5（Max）的 1，705 分和 Kimi K3（Max）的 1，676 分，与 Claude Opus 5（High）的 1，669 分持平。该模型在消费产品、品牌营销、游戏等多个领域均排名靠前。",
-        "summary_en": "",
-        "source": "X：通义千问 / Qwen (@Alibaba_Qwen)",
-        "url": "https://aihot.virxact.com/items/cmscuphe70njuroeuqno2jvcx",
-        "original_url": "https://x.com/Alibaba_Qwen/status/2084161181321982200",
-        "collectedAt": "2026-08-03T06:31:25",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
-      },
-      {
-        "id": "cmscpce9o0huyroeuivzlo0w6",
-        "date": "2026-08-03",
-        "title": "Qwen3.8-Max：编程与协同办公的新标杆",
-        "title_en": "",
-        "summary": "通义千问发布 Qwen3.8-Max，定位为编程与协同办公场景的新标杆。该模型在相关任务上设定了新的性能基准，具体参数规模、benchmark 分数及可用性（开源或 API）细节尚未在原文中披露。",
-        "summary_en": "",
-        "source": "Hacker News 热门（buzzing.cc 中文翻译）",
-        "url": "https://aihot.virxact.com/items/cmscpce9o0huyroeuivzlo0w6",
-        "original_url": "https://qwen.ai/blog?id=qwen3.8",
-        "collectedAt": "2026-08-03T04:01:16",
         "origin": "aihot",
         "keywords": [],
         "company_tags": [],
@@ -5476,78 +5257,27 @@
         "company_tags": [],
         "priority_score": 50,
         "importance": "low"
-      },
+      }
+    ],
+    "2026-08-10": [
       {
-        "id": "cmsd2eb6p0xa3roeuq31h9xbc",
-        "date": "2026-08-03",
-        "title": "讯飞 AI 眼镜体验：翻译成熟完善，AI 助理近在眼前",
-        "title_en": "",
-        "summary": "科大讯飞发布首款AI眼镜，主打翻译场景，支持旁听同传、面对面翻译等四大模式，覆盖122种语言，依托5+1麦克风阵列可清晰捕捉8-10米内声音，翻译延迟约1秒。眼镜重40g，搭载1200万像素摄像头，支持视觉翻译，并可调用桌面助手Loomy完成总结、存档等任务。售价4299元，续航可支撑一个白天高强度使用。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmsd2eb6p0xa3roeuq31h9xbc",
-        "original_url": "https://www.ithome.com/0/985/131.htm",
-        "collectedAt": "2026-08-03T10:06:39",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
-      },
-      {
-        "id": "cmsd150ba0vjuroeucg907wnd",
-        "date": "2026-08-03",
-        "title": "通义千问 Qwen3.8 Max 上线 OpenCode Go",
-        "title_en": "",
-        "summary": "出发！🚀\n\nQwen3.8 Max 现已登陆 OpenCode Go。",
-        "summary_en": "",
-        "source": "X：通义千问 / Qwen (@Alibaba_Qwen)",
-        "url": "https://aihot.virxact.com/items/cmsd150ba0vjuroeucg907wnd",
-        "original_url": "https://x.com/Alibaba_Qwen/status/2084210175838470430",
-        "collectedAt": "2026-08-03T09:31:27",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
-      },
-      {
-        "id": "cmscm4qki0d4jroeuuoqd7zgu",
-        "date": "2026-08-03",
-        "title": "通义千问发布 Qwen3.8-Max，2.4T 参数开源在即",
-        "title_en": "",
-        "summary": "通义千问发布最强模型 Qwen3.8-Max，参数规模达 2.4T，主打自主编程与多模态能力，可完成 10 天以上自进化开发及 500+ 轮芯片设计优化。模型将于下周开源权重，同步开源的还有 Qwen3.8-27B。API 定价为输入 $2.0/M tokens、输出 $6.0/M tokens。",
-        "summary_en": "",
-        "source": "X：通义千问 / Qwen (@Alibaba_Qwen)",
-        "url": "https://aihot.virxact.com/items/cmscm4qki0d4jroeuuoqd7zgu",
-        "original_url": "https://x.com/Alibaba_Qwen/status/2084100707423289643",
-        "collectedAt": "2026-08-03T02:31:21",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
-      },
-      {
-        "id": "cmscl25py0buwroeu29arj56b",
-        "date": "2026-08-03",
-        "title": "通义千问发布Qwen3.8-Max，树立编程协作新标杆",
-        "title_en": "",
-        "summary": "认识 Qwen3.8-Max：编程与协作的新标杆。",
-        "summary_en": "",
-        "source": "X：通义千问 / Qwen (@Alibaba_Qwen)",
-        "url": "https://aihot.virxact.com/items/cmscl25py0buwroeu29arj56b",
-        "original_url": "https://x.com/Alibaba_Qwen/status/2084093402967396594",
-        "collectedAt": "2026-08-03T02:01:20",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
+        "title_zh": "马斯克旗下xAI起诉明尼苏达州首部禁止\"脱衣\"AI技术法律",
+        "title_en": "Elon Musk's xAI sues Minnesota over its first-in-the-nation law banning 'nudification' technology",
+        "summary_zh": null,
+        "summary_en": "xAI起诉明尼苏达州全美首部禁止\"脱衣\"AI技术的法律，围绕AI生成内容的监管边界与言论自由展开法律战。",
+        "url": "https://apnews.com/article/minnesota-artificial-intelligence-nudification-x-elon-musk-deepfake-131184be939d540de093b567b12c9e16",
+        "source": "美联社",
+        "date": "2026-08-10",
+        "priority_score": 70,
+        "importance": "中",
+        "company_tags": [
+          "AI"
+        ]
       }
     ]
   },
   "dates": [
+    "2026-08-10",
     "2026-08-09",
     "2026-08-08",
     "2026-08-07",
@@ -5557,11 +5287,11 @@
     "2026-08-03"
   ],
   "stats": {
-    "totalArticles": 303,
+    "totalArticles": 288,
     "dateCount": 7,
-    "highCount": 26,
-    "mediumCount": 153,
-    "lowCount": 124,
+    "highCount": 24,
+    "mediumCount": 148,
+    "lowCount": 115,
     "sourceCount": 65,
     "keyCompanies": [
       "NVIDIA",
@@ -5582,7 +5312,7 @@
       "腾讯"
     ]
   },
-  "lastUpdated": "2026-08-10 09:31",
-  "today": "2026-08-09",
+  "lastUpdated": "2026-08-10 17:35",
+  "today": "2026-08-10",
   "todayCount": 3
 }
