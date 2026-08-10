@@ -792,23 +792,7 @@ function renderTable(articles) {
         return;
     }
 
-    // 双语截图 V3.0 —  全文存入 localStorage，绕过 URL 长度限制
-    // body_en 由 WebFetch prompt 输出，存在于 NEWS_DATA JSON 中
-    const SCREENSHOT_BASE_URL = 'https://iranorawahaha.github.io/international-news-kb/bilingual-screenshot.html';
-    window.openScreenshot = function(item) {
-        const data = {
-            url: item.url || '',
-            title_en: item.title_en || '',
-            title_zh: item.title_zh || item.title || '',
-            summary: item.summary || '',
-            summary_zh: item.summary_zh || '',
-            body_en: item.body_en || '',
-            source: item.source || '',
-            date: item._date || '',
-        };
-        localStorage.setItem('_ira_bilingual_shot', JSON.stringify(data));
-        window.open(SCREENSHOT_BASE_URL, '_blank');
-    }
+    // （📸 双语截图按钮已暂时移除，等待 fetch_body 能力就绪）
     let globalIndex = 0;
     // V2.4: 日期分组表头 — 改用块级元素，绕过 table-layout:fixed 的列宽约束
     const TODAY_DATE = new Date().toISOString().slice(0, 10);
@@ -853,7 +837,7 @@ function renderTable(articles) {
                 <td style="white-space:nowrap">${item.category || ''}</td>
                 <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
                 <td>${keywords.map(k => `<span class="keyword-tag">${k}</span>`).join('')}</td>
-                <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文↗</a><span onclick="openScreenshot({url:'${(item.url||'').replace(/'/g,"\\'")}',title_en:'${(item.title_en||'').replace(/'/g,"\\'")}',title_zh:'${((item.title_zh||item.title||'')).replace(/'/g,"\\'")}',summary:'${(item.summary||'').replace(/'/g,"\\'")}',summary_zh:'${(item.summary_zh||'').replace(/'/g,"\\'")}',body_en:'${(item.body_en||'').replace(/'/g,"\\'").replace(/\\n/g,' ')}',source:'${(item.source||'').replace(/'/g,"\\'")}',_date:'${(item._date||'').replace(/'/g,"\\'")}'})" class="screenshot-btn" title="生成中英双语长截图" style="cursor:pointer">📸 双语</span>` : '-'}</td>
+                <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文↗</a>` : '-'}</td>
             `;
         }
         tbody.appendChild(tr);
