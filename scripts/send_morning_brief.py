@@ -95,7 +95,7 @@ def build_html(intl, dom, intl_today, intl_total, dom_total):
       <div class="card-head"><span class="card-num">{num}</span></div>
       <div class="card-title-en">{te}</div>
       <div class="card-title-zh"><a href="{url}" target="_blank">{tz}</a></div>
-      <div class="card-meta"><span class="tag tag-src">{src}</span></div>
+      <div class="card-meta">{src}</div>
       <div class="card-summary">{summary}</div>
     </div>'''
 
@@ -110,7 +110,7 @@ def build_html(intl, dom, intl_today, intl_total, dom_total):
         return f'''<div class="card">
       <div class="card-head"><span class="card-num">{num}</span></div>
       <div class="card-title-zh"><a href="{url}" target="_blank">{t}</a></div>
-      <div class="card-meta"><span class="tag tag-cat">{cat}</span><span class="tag tag-src">{src}</span></div>
+      <div class="card-meta">{cat} <span class="sep">|</span> {src}</div>
       <div class="card-summary">{summary}</div>
     </div>'''
 

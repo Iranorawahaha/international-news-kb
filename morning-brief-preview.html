@@ -11,61 +11,52 @@
   /* === 基础 === */
   body {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: #faf8f4;
-    color: #1a1a2e;
-    line-height: 1.7;
-    padding: 32px 16px 48px;
-    margin: 0;
+    background: #faf8f4; color: #1a1a2e; line-height: 1.7;
+    padding: 32px 16px 48px; margin: 0;
     -webkit-font-smoothing: antialiased;
-    font-feature-settings: "kern" 1, "liga" 1;
   }
   .wrap { max-width: 680px; margin: 0 auto; }
 
-  /* === 顶部报头（轻量、不喧宾夺主） === */
-  .masthead {
-    padding: 0 0 16px;
-    border-bottom: 2px solid #1a1a2e;
-    margin-bottom: 24px;
-  }
-  .masthead-top {
-    display: flex; align-items: baseline; justify-content: space-between;
-    margin-bottom: 6px;
-  }
-  .brand {
-    font-family: "Fraunces", "Noto Serif SC", serif;
-    font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #1a1a2e;
-  }
+  /* === 顶部 === */
+  .masthead { padding: 0 0 20px; border-bottom: 2px solid #1a1a2e; margin-bottom: 28px; }
+  .masthead-top { display: flex; align-items: baseline; justify-content: space-between; }
+  .brand { font-family: "Fraunces", "Noto Serif SC", serif; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #1a1a2e; }
   .brand .cny { font-family: "Noto Serif SC", serif; font-weight: 500; }
-  .vol {
-    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
-    font-size: 12px; color: #6b7280; letter-spacing: 0.5px;
-  }
-  .masthead-meta {
-    display: flex; align-items: baseline; gap: 16px;
-    font-size: 12px; color: #6b7280;
-    font-family: "Fraunces", serif;
-  }
-  .masthead-meta .weekday {
-    font-weight: 600; color: #b91c1c;
-    font-family: "Noto Serif SC", serif;
-  }
-  .masthead-meta .date { font-weight: 500; }
-  .masthead-meta .count { margin-left: auto; }
+  .vol { font-family: "Fraunces", serif; font-style: italic; font-weight: 500; font-size: 12px; color: #6b7280; }
 
-  /* === 顶部 intro === */
+  /* 日期徽章 */
+  .date-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #1a1a2e; border-radius: 12px; padding: 8px 10px 8px 8px;
+    margin: 12px 0 0; color: #fff;
+  }
+  .date-tag .day-num {
+    background: #b91c1c; border-radius: 8px;
+    font-family: "Fraunces", serif; font-weight: 900; font-size: 30px;
+    padding: 6px 14px; line-height: 1; letter-spacing: -1px;
+  }
+  .date-tag .day-meta { font-family: "Noto Serif SC", serif; }
+  .date-tag .weekday { font-size: 15px; font-weight: 700; line-height: 1.2; }
+  .date-tag .date-str { font-size: 11px; color: rgba(255,255,255,.7); }
+  .date-tag .stats {
+    margin-left: auto; font-size: 12px; color: rgba(255,255,255,.8);
+    font-family: "Fraunces", serif; font-weight: 500;
+  }
+
+  /* === Intro 引语 === */
   .intro {
-    font-family: "Noto Serif SC", "PingFang SC", serif;
+    font-family: "Noto Serif SC", serif;
     font-size: 14.5px; line-height: 1.85; color: #374151;
-    margin: 18px 0 28px; padding: 0;
+    margin: 20px 0 32px;
     border-left: 3px solid #b91c1c; padding-left: 16px;
   }
   .intro a { color: #1a1a2e; text-decoration: none; border-bottom: 1.5px solid #b91c1c; font-weight: 600; }
   .intro b { color: #b91c1c; font-weight: 700; }
 
-  /* === 区块标题（报纸分栏感） === */
+  /* === 区块标题 === */
   .section-title {
     display: flex; align-items: baseline; gap: 12px;
-    margin: 32px 0 16px; padding-bottom: 8px;
+    margin: 36px 0 18px; padding-bottom: 8px;
     border-bottom: 1px solid #1a1a2e;
   }
   .section-title .ch {
@@ -73,100 +64,100 @@
     font-weight: 700; font-size: 24px; letter-spacing: -0.3px;
   }
   .section-title .en {
-    font-family: "Fraunces", serif; font-style: italic;
-    font-weight: 500; font-size: 14px; color: #9ca3af;
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
+    font-size: 14px; color: #9ca3af;
   }
-  .section-title .meta {
-    margin-left: auto; font-size: 12px; color: #6b7280;
-    font-family: "Fraunces", serif; font-style: italic;
-  }
+  .section-title .meta { margin-left: auto; font-size: 12px; color: #6b7280; font-family: "Fraunces", serif; font-style: italic; }
   .section-title.intl .ch { color: #1e3a8a; }
   .section-title.intl { border-bottom-color: #1e3a8a; }
   .section-title.dom .ch { color: #b91c1c; }
   .section-title.dom { border-bottom-color: #b91c1c; }
 
-  /* === 卡片（极简，没有阴影） === */
+  /* === 卡片 === */
   .card {
-    padding: 16px 0;
-    border-bottom: 1px dotted #d4d4d8;
+    background: #fff; border-radius: 14px;
+    padding: 18px 20px; margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    border-left: 3px solid transparent;
   }
-  .card:last-child { border-bottom: none; }
-  .card-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+  .section-title.intl ~ .card { border-left-color: #1e3a8a; }
+  .section-title.dom ~ .card { border-left-color: #dc2626; }
+
+  .card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
   .card-num {
     font-family: "Fraunces", serif; font-weight: 700;
-    font-size: 13px; color: #b91c1c; min-width: 24px;
+    font-size: 12px; color: #fff; min-width: 28px; height: 28px;
+    background: #1a1a2e; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
   }
-  .section-title.intl ~ .card .card-num { color: #1e3a8a; }
+  .section-title.intl ~ .card .card-num { background: #1e3a8a; }
+  .section-title.dom ~ .card .card-num { background: #dc2626; }
+
   .card-title-en {
     font-family: "Fraunces", serif; font-style: italic;
-    font-size: 12.5px; color: #9ca3af; margin-bottom: 4px; margin-left: 34px;
+    font-size: 12.5px; color: #9ca3af; margin-bottom: 4px;
     line-height: 1.4;
   }
   .card-title-zh {
     font-family: "Noto Serif SC", serif;
     font-size: 16px; font-weight: 700; line-height: 1.45;
-    margin-left: 34px;
   }
   .card-title-zh a { color: #1a1a2e; text-decoration: none; }
   .card-title-zh a:hover { color: #b91c1c; }
-  .card-meta {
-    display: flex; gap: 8px; margin: 6px 0 8px 34px; flex-wrap: wrap;
-    font-size: 11px;
-  }
-  .tag { font-weight: 600; color: #6b7280; padding: 1px 0; }
-  .tag-src { color: #1e3a8a; }
-  .tag-src::before { content: "· "; color: #d4d4d8; }
-  .tag-cat { color: #b91c1c; }
+  .card-meta { font-size: 11px; color: #6b7280; margin: 8px 0; }
+  .card-meta .sep { color: #d4d4d8; margin: 0 6px; }
   .card-summary {
     font-family: "Noto Serif SC", serif;
     font-size: 13.5px; color: #4b5563; line-height: 1.8;
-    margin-left: 34px;
   }
 
-  /* === 底部跳转区 === */
+  /* === 底部跳转卡片 === */
   .footer-nav {
-    margin: 36px 0 20px;
-    padding: 16px 0;
-    border-top: 1px solid #1a1a2e;
-    border-bottom: 1px solid #1a1a2e;
-    display: flex; justify-content: space-between;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 12px; margin: 36px 0 20px;
+  }
+  .nav-card {
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 14px;
+    padding: 18px 14px; text-align: center;
+    text-decoration: none; display: block;
+    box-shadow: 0 2px 6px rgba(0,0,0,.04);
+    transition: all .2s;
+  }
+  .nav-card:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.08); }
+  .nav-icon { font-size: 26px; margin-bottom: 6px; }
+  .nav-name {
     font-family: "Noto Serif SC", serif;
-    font-size: 12px;
+    font-size: 13px; font-weight: 700; margin-top: 2px;
   }
-  .footer-nav a {
-    color: #1a1a2e; text-decoration: none; font-weight: 600;
-  }
-  .footer-nav a:hover { color: #b91c1c; }
-
-  .sources-box {
-    font-size: 11px; color: #6b7280; line-height: 1.85;
-    margin: 16px 0;
-    padding: 12px 0;
-    border-bottom: 1px dotted #d4d4d8;
-  }
+  .nav-desc { font-size: 10.5px; color: #6b7280; margin-top: 3px; font-family: "Fraunces", serif; font-style: italic; }
+  .nav-intl .nav-name { color: #1e3a8a; }
+  .nav-intl { border-left: 3px solid #1e3a8a; }
+  .nav-dom .nav-name { color: #dc2626; }
+  .nav-dom { border-left: 3px solid #dc2626; }
+  .nav-ai .nav-name { color: #7c3aed; }
+  .nav-ai { border-left: 3px solid #7c3aed; }
+  .sources-box { font-size: 11px; color: #6b7280; line-height: 1.85; margin: 16px 0; padding: 12px 0; border-bottom: 1px dotted #d4d4d8; }
   .sources-box b { color: #1a1a2e; font-weight: 600; }
-
-  .footer-credits {
-    text-align: center; font-size: 11px; color: #9ca3af;
-    padding: 16px 0; line-height: 1.8;
-    font-family: "Fraunces", serif; font-style: italic;
-  }
+  .footer-credits { text-align: center; font-size: 11px; color: #9ca3af; padding: 16px 0; line-height: 1.8; }
   .footer-credits a { color: #1a1a2e; text-decoration: none; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<!-- ===== 极简顶部 ===== -->
 <header class="masthead">
   <div class="masthead-top">
     <div class="brand">Ira <span class="cny">信息看板</span></div>
     <div class="vol">Vol. 8 · No. 10</div>
   </div>
-  <div class="masthead-meta">
-    <span class="weekday">星期一</span>
-    <span class="date">2026 年 8 月 10 日</span>
-    <span class="count">12 条精选</span>
+  <div class="date-tag">
+    <div class="day-num">10</div>
+    <div class="day-meta">
+      <div class="weekday">星期一</div>
+      <div class="date-str">2026 年 8 月 10 日</div>
+    </div>
+    <div class="stats">12 条精选</div>
   </div>
 </header>
 
@@ -178,108 +169,119 @@
 
 <!-- ===== 国际 ===== -->
 <div class="section-title intl">
-    <span class="ch">国际要闻</span>
-    <span class="en">International</span>
-    <span class="meta">6 stories</span>
-  </div>
+  <span class="ch">国际要闻</span>
+  <span class="en">International</span>
+  <span class="meta">6 stories</span>
+</div>
   <div class="card">
       <div class="card-head"><span class="card-num">01</span></div>
       <div class="card-title-en">US and Israeli physicists hail China's glueball discovery as a 'triumph'</div>
       <div class="card-title-zh"><a href="https://www.scmp.com/news/china/science/article/3363444/matter-pure-force-us-israeli-physicists-hail-chinas-glueball-discovery-triumph" target="_blank">美以物理学家盛赞中国胶球发现为“胜利”</a></div>
-      <div class="card-meta"><span class="tag tag-src">南华早报</span></div>
+      <div class="card-meta">南华早报</div>
       <div class="card-summary">中国团队在北京正负电子对撞机上发现胶子球（glueball）存在的决定性证据，解开50年物理学谜题，全球专家予以高度评价，中国社交媒体热议诺贝尔奖前景。</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">02</span></div>
       <div class="card-title-en">How Beijing's hypersonic 'carrier killers' could distract US in a Taiwan conflict</div>
       <div class="card-title-zh"><a href="https://www.scmp.com/news/china/military/article/3363386/how-chinas-hypersonic-carrier-killers-could-distract-us-forces-taiwan-conflict" target="_blank">分析：北京高超音速“航母杀手”如何在台海冲突中牵制美军</a></div>
-      <div class="card-meta"><span class="tag tag-src">南华早报</span></div>
+      <div class="card-meta">南华早报</div>
       <div class="card-summary">报道称中国正在量产反舰导弹，旨在台海冲突中将美国太平洋舰队牵制在远海，为解放军在其他方向行动创造空间。分析认为这构成对美军介入台海的重要威慑能力。</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">03</span></div>
       <div class="card-title-en">China adds US sanctions, drone curbs in trade tit-for-tat</div>
       <div class="card-title-zh"><a href="https://www.scmp.com/plus/news/china/politics/article/3363167/china-adds-us-sanctions-drone-curbs-trade-tit-tat" target="_blank">中国反制升级：加码对美制裁与无人机出口管制</a></div>
-      <div class="card-meta"><span class="tag tag-src">南华早报</span></div>
+      <div class="card-meta">南华早报</div>
       <div class="card-summary">北京收紧对美无人机出口管制，并对协助美国针对新疆措施的企业实施制裁，这是中美贸易摩擦升级的最新一轮反制，商务部还公布6家美国实体反制清单。</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">04</span></div>
       <div class="card-title-en">Chinese EV sales surge to new high in Europe putting tariffs under scrutiny</div>
       <div class="card-title-zh"><a href="https://www.theguardian.com/business/2026/aug/09/chinese-electric-car-sales-surge-to-a-record-high-in-europe" target="_blank">中国电动汽车欧洲销量创新高，关税政策再受审视</a></div>
-      <div class="card-meta"><span class="tag tag-src">卫报</span></div>
+      <div class="card-meta">卫报</div>
       <div class="card-summary">数据显示中国电动汽车在欧洲销量创下历史新高，使欧盟对中国电动车关税的有效性受到质疑。尽管征收关税，中国车企仍凭借成本优势扩大市场份额。</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">05</span></div>
       <div class="card-title-en">Can Europe stay united in China trade battle? Ceuta crisis offers a warning</div>
       <div class="card-title-zh"><a href="https://www.scmp.com/news/china/diplomacy/article/3363438/can-europe-stay-united-china-trade-battle-ceuta-migrant-crisis-offers-warning" target="_blank">欧中贸易战中欧洲能否保持团结？休达危机给出警示</a></div>
-      <div class="card-meta"><span class="tag tag-src">南华早报</span></div>
+      <div class="card-meta">南华早报</div>
       <div class="card-summary">分析认为，西班牙与意大利因移民问题爆发边界争端显示欧盟内部团结脆弱，这为欧洲在对华贸易战中能否维持统一立场敲响警钟，各国利益分歧可能削弱布鲁塞尔的对华谈判筹码。</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">06</span></div>
       <div class="card-title-en">How a Drone 'Hellscape' Might Stop a Chinese Invasion of Taiwan</div>
       <div class="card-title-zh"><a href="https://www.nytimes.com/2026/08/09/world/asia/taiwan-drone-china-invasion.html" target="_blank">无人机“地狱景观”如何阻止中国大陆对台军事行动</a></div>
-      <div class="card-meta"><span class="tag tag-src">纽约时报</span></div>
+      <div class="card-meta">纽约时报</div>
       <div class="card-summary">受乌克兰战场经验的启发，台当局正押注大规模无人机来威慑潜在的登陆行动，在汉光演习中演练无人机作战体系，试图以低成本的无人机集群弥补兵力差距。</div>
     </div><div class="card-title-en">How a Drone 'Hellscape' Might Stop a Chinese Invasion of Taiwan</div>
   <div class="card-title-zh"><a href="https://www.nytimes.com/2026/08/09/world/asia/taiwan-drone-china-invasion.html" target="_blank">无人机"地狱景观"如何阻止中国大陆对台军事行动</a></div>
-  <div class="card-meta"><span class="tag tag-src">纽约时报</span></div>
+  <div class="card-meta">纽约时报</div>
   <div class="card-summary">美国智库提出用大规模低成本无人机群在台海周边构成"地狱景观"防线，以阻止中国大陆对台湾的军事行动。该方案设想利用数千架无人机同时攻击登陆舰队，以量换质。然而分析也指出中国大陆的反无人机能力正在快速提升。</div>
 </div>
 
 <!-- ===== 国内 ===== -->
 <div class="section-title dom">
-    <span class="ch">国内要闻</span>
-    <span class="en">China</span>
-    <span class="meta">6 stories</span>
-  </div>
+  <span class="ch">国内要闻</span>
+  <span class="en">China</span>
+  <span class="meta">6 stories</span>
+</div>
   <div class="card">
       <div class="card-head"><span class="card-num">01</span></div>
       <div class="card-title-zh"><a href="https://www.gov.cn/yaowen/liebiao/202608/content_7077772.htm" target="_blank">潮起渤海湾 奋楫“十五五”——党中央国务院邀请优秀专家人才代表北戴河休假侧记</a></div>
-      <div class="card-meta"><span class="tag tag-cat">高层动态</span><span class="tag tag-src">中国政府网·要闻</span></div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 中国政府网·要闻</div>
       <div class="card-summary">夏日的北戴河，海天寥廓，碧波万顷。</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">02</span></div>
       <div class="card-title-zh"><a href="https://news.cctv.com/2026/08/10/ARTIdB4u4bj4y9EWkW5pOhnS260810.shtml" target="_blank">2026年深圳APEC峰会进入倒计时100天！</a></div>
-      <div class="card-meta"><span class="tag tag-cat">重要会议</span><span class="tag tag-src">央视新闻</span></div>
+      <div class="card-meta">重要会议 <span class="sep">|</span> 央视新闻</div>
       <div class="card-summary">今天，亚太经合组织（APEC）第三十三次领导人非正式会议进入倒计时100天。</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">03</span></div>
       <div class="card-title-zh"><a href="https://www.gov.cn/yaowen/liebiao/202608/content_7077797.htm" target="_blank">国务院任免国家工作人员（2026年8月10日）</a></div>
-      <div class="card-meta"><span class="tag tag-cat">人事任免</span><span class="tag tag-src">中国政府网·要闻</span></div>
+      <div class="card-meta">人事任免 <span class="sep">|</span> 中国政府网·要闻</div>
       <div class="card-summary">任命孙硕鹏为民政部副部长；任命蒋玮（女）为中国老龄协会会长。</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">04</span></div>
       <div class="card-title-zh"><a href="https://www.zaobao.com/news/china/story20260810-9498173" target="_blank">新疆生产建设兵团生态环境局原局长吴彬被查</a></div>
-      <div class="card-meta"><span class="tag tag-cat">人事任免</span><span class="tag tag-src">联合早报</span></div>
+      <div class="card-meta">人事任免 <span class="sep">|</span> 联合早报</div>
       <div class="card-summary">暂无摘要</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">05</span></div>
       <div class="card-title-zh"><a href="https://www.gov.cn/lianbo/202608/content_7077773.htm" target="_blank">上半年生成式人工智能领域新设企业增长28.0%</a></div>
-      <div class="card-meta"><span class="tag tag-cat">经贸动向</span><span class="tag tag-src">中国政府网·要闻</span></div>
+      <div class="card-meta">经贸动向 <span class="sep">|</span> 中国政府网·要闻</div>
       <div class="card-summary">市场监管总局公布的数据显示：上半年，全国新设“8大新兴产业+9大未来产业”相关企业56.1万户，保持稳定增长态势，为推动新质生产力发展注入源头活水。其中，生成式人工智能领域新设企业5.5万户，同比增长…</div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">06</span></div>
       <div class="card-title-zh"><a href="https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html" target="_blank">关于印发《煤炭工业发展“十五五”规划》的通知</a></div>
-      <div class="card-meta"><span class="tag tag-cat">政策发布</span><span class="tag tag-src">国家发改委</span></div>
+      <div class="card-meta">政策发布 <span class="sep">|</span> 国家发改委</div>
       <div class="card-summary">暂无摘要</div>
     </div><div class="card-title-zh"><a href="https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html" target="_blank">关于印发《煤炭工业发展"十五五"规划》的通知</a></div>
-  <div class="card-meta"><span class="tag tag-cat">政策发布</span><span class="tag tag-src">国家发改委</span></div>
+  <div class="card-meta">政策发布 <span class="sep">|</span> 国家发改委</div>
   <div class="card-summary">国家发展改革委印发《煤炭工业发展"十五五"规划》，明确煤炭产供储销体系建设目标，推动煤炭清洁高效利用和安全生产水平提升，保障国家能源安全。</div>
 </div>
 
-<!-- ===== 底部 ===== -->
 <div class="footer-nav">
-  <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html">国际看板 →</a>
-  <a href="https://iranorawahaha.github.io/international-news-kb/china-news.html">国内看板 →</a>
-  <a href="https://iranorawahaha.github.io/international-news-kb/ai-news.html">AI 看板 →</a>
+  <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html" class="nav-card nav-intl">
+    <div class="nav-icon">🌍</div>
+    <div class="nav-name">国际看板</div>
+    <div class="nav-desc">56 篇 · 全外媒</div>
+  </a>
+  <a href="https://iranorawahaha.github.io/international-news-kb/china-news.html" class="nav-card nav-dom">
+    <div class="nav-icon">🇨🇳</div>
+    <div class="nav-name">国内看板</div>
+    <div class="nav-desc">13 篇 · 国家级权威</div>
+  </a>
+  <a href="https://iranorawahaha.github.io/international-news-kb/ai-news.html" class="nav-card nav-ai">
+    <div class="nav-icon">🤖</div>
+    <div class="nav-name">AI 看板</div>
+    <div class="nav-desc">关注行业前沿</div>
+  </a>
 </div>
 
 <div class="sources-box">
