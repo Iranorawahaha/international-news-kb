@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-10 10:29",
+  "lastUpdated": "2026-08-10 10:39",
   "retentionDays": 7,
   "archive": {
     "2026-08-03": [
@@ -10351,24 +10351,30 @@
         "body_en": null
       },
       {
-        "id": "basic_14_5553",
+        "id": "auto_2026-08-10_50799",
         "date": "2026-08-10",
-        "title": "从北约峰会看美欧关系走向",
-        "title_en": null,
-        "title_zh": null,
-        "summary": "从北约峰会看美欧关系走向",
+        "title": "US and Israeli physicists hail China's glueball discovery as a 'triumph' 美以物理学家盛赞中国胶球发现为“胜利”",
+        "title_en": "US and Israeli physicists hail China's glueball discovery as a 'triumph'",
+        "title_zh": "美以物理学家盛赞中国胶球发现为“胜利”",
+        "summary": "中国团队在北京正负电子对撞机上发现胶子球（glueball）存在的决定性证据，解开50年物理学谜题，全球专家予以高度评价，中国社交媒体热议诺贝尔奖前景。",
         "summary_en": null,
         "summary_zh": null,
-        "source": "新华网",
-        "category": "国际政治",
-        "keywords": [],
-        "url": "https://www.news.cn/world/20260710/8c3d9472ffa1415bb67c8bb404d62011/c.html",
+        "source": "南华早报",
+        "category": "科技",
+        "keywords": [
+          "中国",
+          "胶球",
+          "粒子物理",
+          "科学",
+          "北京正负电子对撞机"
+        ],
+        "url": "https://www.scmp.com/news/china/science/article/3363444/matter-pure-force-us-israeli-physicists-hail-chinas-glueball-discovery-triumph",
         "priority_score": 95,
         "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-01 14:25:53",
-        "collection_method": "basic",
-        "column": "国际会议",
+        "importance": "high",
+        "collectedAt": "2026-08-10 09:51:11",
+        "collection_method": "legacy",
+        "column": "中国",
         "is_official": null,
         "body_en": null
       },
@@ -10851,34 +10857,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-10_50799",
-        "date": "2026-08-10",
-        "title": "US and Israeli physicists hail China's glueball discovery as a 'triumph' 美以物理学家盛赞中国胶球发现为“胜利”",
-        "title_en": "US and Israeli physicists hail China's glueball discovery as a 'triumph'",
-        "title_zh": "美以物理学家盛赞中国胶球发现为“胜利”",
-        "summary": "中国团队在北京正负电子对撞机上发现胶子球（glueball）存在的决定性证据，解开50年物理学谜题，全球专家予以高度评价，中国社交媒体热议诺贝尔奖前景。",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "南华早报",
-        "category": "科技",
-        "keywords": [
-          "中国",
-          "胶球",
-          "粒子物理",
-          "科学",
-          "北京正负电子对撞机"
-        ],
-        "url": "https://www.scmp.com/news/china/science/article/3363444/matter-pure-force-us-israeli-physicists-hail-chinas-glueball-discovery-triumph",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "importance": "medium",
-        "collectedAt": "2026-08-10 09:51:11",
-        "collection_method": "legacy",
-        "column": "中国",
-        "is_official": null,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-08-10_55774",
         "date": "2026-08-10",
         "title": "ACLU blasts Trump's new orders on birthright citizenship, saying they are doomed to fail in court ACLU抨击特朗普出生公民权新令，称注定在法庭失败",
@@ -10959,28 +10937,6 @@
         "collectedAt": "2026-08-10 09:28:25",
         "collection_method": "legacy",
         "column": "美国",
-        "is_official": null,
-        "body_en": null
-      },
-      {
-        "id": "basic_11_5553",
-        "date": "2026-08-10",
-        "title": "美伊冲突外溢 中东硝烟四起",
-        "title_en": null,
-        "title_zh": null,
-        "summary": "美伊冲突外溢 中东硝烟四起",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "新华网",
-        "category": "地缘政治",
-        "keywords": [],
-        "url": "https://www.news.cn/world/20260730/477aa4fa269d4204b5f41d35e80a58c8/c.html",
-        "priority_score": 70,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-01 14:25:53",
-        "collection_method": "basic",
-        "column": "地区热点",
         "is_official": null,
         "body_en": null
       },
@@ -12056,7 +12012,7 @@
     "2026-08-03"
   ],
   "stats": {
-    "totalArticles": 447,
+    "totalArticles": 445,
     "dateCount": 8,
     "latestDate": "2026-08-10",
     "oldestDate": "2026-08-03"
