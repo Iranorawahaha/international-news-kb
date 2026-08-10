@@ -293,13 +293,16 @@ def build_html(intl, dom, intl_today, intl_total, dom_total):
     return html
 
 
-def send_email(html_body):
+def send_email(html_body, intl_count, dom_count):
     """通过 QQ SMTP 发送邮件"""
-    total = html_body.count('<div class="card summary">') + html_body.count('<div class="card">')
+    from email.header import Header
+
+    total = intl_count + dom_count
+    subject = Header(f'Ira 早报 · {TODAY} · {total}条精选', 'utf-8')
 
     msg = MIMEMultipart('alternative')
-    msg['Subject'] = f'📰 Ira 早报 · {TODAY} {WEEKDAY_CN[NOW.weekday()]} · {total_approx(html_body)}条精选'
-    msg['From'] = f'Ira 信息看板 <{SMTP_USER}>'
+    msg['Subject'] = subject
+    msg['From'] = f'Ira Daily Brief <{SMTP_USER}>'
     msg['To'] = TO_EMAIL
 
     msg.attach(MIMEText(html_body, 'html', 'utf-8'))
@@ -356,7 +359,7 @@ def main():
 
     sent = False
     if do_send:
-        sent = send_email(html)
+        sent = send_email(html, len(intl), len(dom))
 
     save_log(len(intl), len(dom), sent)
 
