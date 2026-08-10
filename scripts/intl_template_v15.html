@@ -698,6 +698,20 @@ document.getElementById('dateHeader').addEventListener('click', function(e) {
 // V3.0 重要性判定（用户框定标准，2026-08-07）
 function getImportance(score, isSummit, titleText) {
     const text = (titleText || '').toLowerCase();
+
+    // ⚠️ V2.5.3: 数据中的 priority_score 优先（>=92 = 高，>=65 = 中）
+    //   标题关键词仅在数据无 priority_score 时作为兜底
+    if (typeof score === 'number' && score >= 88) {
+        return { level:'high', rank:2, label:'🔴高', cls:'badge-high' };
+    }
+    if (typeof score === 'number' && score >= 65) {
+        return { level:'medium', rank:1, label:'🟡中', cls:'badge-medium' };
+    }
+    // 没有有效 priority_score 才用关键词兜底
+    if (typeof score === 'number' && score > 0) {
+        return { level:'low', rank:0, label:'⚪低', cls:'badge-low' };
+    }
+
     const hasCN = ['中国','china ','chinese','beijing','北京','北京','中美','中欧','中俄','中日','中韩','对华','涉华','习近平','xi jinping','台海','taiwan','台湾','pla','deepseek','qwen','华为','huawei','中芯','tiktok','字节跳动','访华','赴华'].some(w => text.includes(w));
 
     if (!hasCN) {
