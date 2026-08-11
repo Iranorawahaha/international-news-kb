@@ -694,7 +694,7 @@ def build():
     <div class="hero-meta">
       <span>📅 {esc(date_label)}</span>
       <span>🕐 生成时间：{esc(generated)} 北京时间</span>
-      <span>🔄 每日 08:00 自动刷新</span>
+      <span>🔄 每日 09:30 自动刷新</span>
     </div>
   </header>
 
@@ -802,7 +802,7 @@ def build_empty():
     <h1>🏛 使领馆事务看板</h1>
     <div class="hero-meta">
       <span>📅 日期：{esc(window_end)}</span>
-      <span>🔄 每日 08:00 自动刷新</span>
+      <span>🔄 每日 09:30 自动刷新</span>
     </div>
   </header>
   <div class="brief-container">
