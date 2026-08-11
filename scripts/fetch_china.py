@@ -796,9 +796,32 @@ def main():
     cutoff = (NOW - timedelta(days=6)).strftime("%Y-%m-%d")
     archive = {d: v for d, v in archive.items() if d >= cutoff}
 
+    # V2.6 日期护栏：collectedAt=今天但 archive 组不是今天的 → 移到今天
+    _v26_moved = 0
+    _today_v26 = NOW.strftime("%Y-%m-%d")
+    for _v26_dt in list(archive.keys()):
+        if _v26_dt == _today_v26:
+            continue
+        _keep = []
+        for _a in archive[_v26_dt]:
+            _c = (_a.get("collectedAt", "") or "")[:10]
+            if _c == _today_v26:
+                _a["date"] = _today_v26
+                archive.setdefault(_today_v26, []).append(_a)
+                _v26_moved += 1
+            else:
+                _keep.append(_a)
+        if _keep:
+            archive[_v26_dt] = _keep
+        else:
+            del archive[_v26_dt]
+    if _v26_moved:
+        print(f"  🛡️ V2.6 日期护栏: {_v26_moved} 条移到今天")
+    # 重新排序
+    today = _today_v26
     dates = sorted(archive.keys(), reverse=True)
+
     total = sum(len(v) for v in archive.values())
-    today = NOW.strftime("%Y-%m-%d")
 
     per_cat = {}
     for d in dates:
