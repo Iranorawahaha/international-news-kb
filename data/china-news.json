@@ -246,17 +246,6 @@
         "collectedAt": "2026-08-11 10:09:30"
       },
       {
-        "title": "“每日读画”三百期座谈会在京举办",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/11/content_30174306.html",
-        "date": "2026-08-11",
-        "source": "人民日报",
-        "category": "重要会议",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "本报北京8月10日电&nbsp;&nbsp;（记者马苏薇）为进一步深入学习贯彻习近平文化思想，加强和改进人民日报文艺宣传报道，深化主流媒体系统性变革，近日，“每日读画”300期座谈会在人民日报社举办。…",
-        "collectedAt": "2026-08-11 10:09:30"
-      },
-      {
         "title": "中国对美碧根果征反倾销保证金",
         "url": "https://www.zaobao.com/news/china/story20260811-9499821",
         "date": "2026-08-11",
@@ -353,17 +342,6 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "2013年11月，湘西十八洞村。习近平总书记走进黑黢黢的木屋，握住苗族大姐石拔三的手，脱口而出的“自我介绍”让人心头一热。",
-        "collectedAt": "2026-08-11 10:09:30"
-      },
-      {
-        "title": "潮起渤海湾 奋楫“十五五”——党中央国务院邀请优秀专家人才代表北戴河休假侧记",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077772.htm",
-        "date": "2026-08-11",
-        "source": "中国政府网·要闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "夏日的北戴河，海天寥廓，碧波万顷。",
         "collectedAt": "2026-08-11 10:09:30"
       },
       {
@@ -599,7 +577,7 @@
   "today": "2026-08-11",
   "todayCount": 32,
   "stats": {
-    "totalArticles": 52,
+    "totalArticles": 50,
     "dateCount": 6,
     "latestDate": "2026-08-11",
     "summitCount": 7
