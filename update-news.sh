@@ -666,7 +666,9 @@ try:
 
     # V2.6 日期护栏：任何 collectedAt 标记为今天的文章，必须归到今天的 archive 组
     #   防止 force-upgrade 按原始 date 分组的文章滞留在昨天
-    _today = datetime.now(TZ).strftime('%Y-%m-%d')
+    from datetime import datetime as _dt_v26, timezone as _tz_v26, timedelta as _td_v26
+    _TZ_V26 = _tz_v26(_td_v26(hours=8))
+    _today = _dt_v26.now(_TZ_V26).strftime('%Y-%m-%d')
     _v26_moved = 0
     for _v26_dt in list(data['archive'].keys()):
         if _v26_dt == _today: continue

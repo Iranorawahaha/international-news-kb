@@ -796,16 +796,18 @@ def main():
     cutoff = (NOW - timedelta(days=6)).strftime("%Y-%m-%d")
     archive = {d: v for d, v in archive.items() if d >= cutoff}
 
-    # V2.6 日期护栏：collectedAt=今天但 archive 组不是今天的 → 移到今天
+    # V2.6 日期护栏：仅当 collectedAt=今天 且 date=yesterday → 移到今天（更早的不动，防重抓干扰）
     _v26_moved = 0
     _today_v26 = NOW.strftime("%Y-%m-%d")
+    _yesterday_v26 = (NOW - timedelta(days=1)).strftime("%Y-%m-%d")
     for _v26_dt in list(archive.keys()):
         if _v26_dt == _today_v26:
             continue
         _keep = []
         for _a in archive[_v26_dt]:
             _c = (_a.get("collectedAt", "") or "")[:10]
-            if _c == _today_v26:
+            _d = _a.get("date", "")
+            if _c == _today_v26 and _d == _yesterday_v26:
                 _a["date"] = _today_v26
                 archive.setdefault(_today_v26, []).append(_a)
                 _v26_moved += 1
