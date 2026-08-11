@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使领馆事务看板 · Ira 信息看板</title>
+<style>
+  :root {
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --bg: #f6f9f8;
+    --panel: #ffffff;
+    --line: #e2e8e7;
+    --line-soft: #eef2f1;
+    --ink: #1e293b;
+    --muted: #64748b;
+    --muted-soft: #94a3b8;
+    /* Teal 青绿色系 */
+    --teal: #0d9488;
+    --teal-dark: #0f766e;
+    --teal-light: #14b8a6;
+    --teal-soft: #f0fdfa;
+    --teal-border: #99f6e4;
+    --teal-grad-1: #0f766e;
+    --teal-grad-2: #0d9488;
+    --teal-grad-3: #14b8a6;
+    /* 辅助色 */
+    --gold: #f59e0b;
+    --gold-bg: #fffbeb;
+    --red: #ef4444;
+    --red-soft: #fef2f2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(500px 300px at 85% 5%, rgba(13,148,136,.04), transparent),
+      radial-gradient(400px 250px at 5% 90%, rgba(15,118,110,.03), transparent);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 16px 20px 60px; }
+
+  /* ===== 顶部青绿 Header（Ira体系统一） ===== */
+  header.hero {
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 24px 32px 22px;
+    box-shadow: 0 8px 24px rgba(15,118,110,.3);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  header.hero::after {
+    content: "";
+    position: absolute;
+    right: -60px; top: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.06);
+  }
+  .hero-nav {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 14px; position: relative; z-index: 1;
+  }
+  .hero-nav a {
+    padding: 5px 14px; border-radius: 99px;
+    background: rgba(255,255,255,.12);
+    color: rgba(255,255,255,.85);
+    text-decoration: none; font-size: 13px; font-weight: 500;
+    transition: all .15s;
+  }
+  .hero-nav a:hover { background: rgba(255,255,255,.22); color: #fff; }
+  .hero-nav a.active { background: #fff; color: #0f766e; font-weight: 700; }
+  .hero-nav-sep { opacity: .5; padding: 5px 2px; color: rgba(255,255,255,.6); }
+  .hero h1 { font-size: 24px; font-weight: 800; letter-spacing: -.3px; position: relative; z-index: 1; }
+  .hero-meta {
+    display: flex; gap: 10px; margin-top: 13px; flex-wrap: wrap;
+    font-size: 12.5px; position: relative; z-index: 1;
+  }
+  .hero-meta span {
+    background: rgba(255,255,255,.15);
+    padding: 4px 12px; border-radius: 99px;
+  }
+
+  /* ===== 简报容器 ===== */
+  .brief-container {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.05);
+    margin-bottom: 20px;
+  }
+  .brief-header {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--line-soft);
+  }
+  .brief-header h1 {
+    font-size: 22px; font-weight: 800;
+    color: var(--teal-dark); letter-spacing: .3px;
+  }
+  .brief-header .brief-date {
+    font-size: 13px; color: var(--muted); margin-top: 6px;
+  }
+
+  /* ===== 本期重点 ===== */
+  .highlights {
+    background: linear-gradient(135deg, var(--teal-soft), #fff);
+    border: 1px solid var(--teal-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  .highlights h2 {
+    font-size: 14px; font-weight: 700; color: var(--teal-dark);
+    margin-bottom: 10px;
+  }
+  .highlights ul {
+    list-style: none; padding: 0;
+  }
+  .highlights li {
+    font-size: 13.5px; color: var(--ink); padding: 4px 0;
+    line-height: 1.6;
+  }
+  .highlights li b { color: var(--teal); margin-right: 4px; }
+
+  /* ===== 简要数据 ===== */
+  .data-summary {
+    font-size: 12.5px; color: var(--muted);
+    background: #f8faf9;
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  /* ===== 模块 ===== */
+  .module {
+    margin-bottom: 28px;
+  }
+  .module:last-child { margin-bottom: 0; }
+  .module-title {
+    font-size: 17px; font-weight: 750;
+    color: var(--ink);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid var(--teal-border);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mod-count {
+    font-size: 12px; font-weight: 600;
+    background: var(--teal-soft); color: var(--teal);
+    padding: 2px 10px; border-radius: 99px;
+    margin-left: auto;
+  }
+
+  /* ===== 事件卡 ===== */
+  .event-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--teal);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    transition: box-shadow .15s;
+  }
+  .event-card:hover { box-shadow: 0 4px 12px rgba(13,148,136,.08); }
+  .event-card.visit-card { border-left-color: #6366f1; }
+  .event-card.uscn-card { border-left-color: #dc2626; }
+
+  .ev-header {
+    display: flex; align-items: center; gap: 8px;
+    flex-wrap: wrap; margin-bottom: 6px;
+  }
+  .ev-country {
+    font-size: 14px; font-weight: 700; color: var(--ink);
+  }
+  .ev-post-badge {
+    font-size: 11px; font-weight: 600;
+    background: var(--teal-soft); color: var(--teal);
+    padding: 1px 8px; border-radius: 99px;
+  }
+  .ev-type {
+    font-size: 13px; color: var(--teal-dark); font-weight: 600;
+  }
+  .ev-person-title {
+    font-size: 13px; color: var(--ink); font-weight: 600;
+  }
+  .ev-cn-person {
+    font-size: 13.5px; font-weight: 700; color: #dc2626;
+  }
+  .ev-us-person {
+    font-size: 13.5px; font-weight: 700; color: #2563eb;
+  }
+  .ev-vs {
+    color: var(--muted-soft); font-weight: 400;
+  }
+  .ev-divider {
+    color: var(--muted-soft); font-size: 12px;
+  }
+  .ev-badge {
+    font-size: 10.5px; font-weight: 600;
+    padding: 2px 8px; border-radius: 99px;
+  }
+  .ev-badge.confirmed {
+    background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;
+  }
+  .ev-badge.unconfirmed {
+    background: var(--red-soft); color: #dc2626; border: 1px solid #fecaca;
+  }
+  .ev-badge.mutual {
+    background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe;
+  }
+  .ev-badge.unilateral {
+    background: #fffbeb; color: #d97706; border: 1px solid #fde68a;
+  }
+
+  .ev-status {
+    font-size: 12.5px; color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .ev-status b { color: var(--teal-dark); }
+  .ev-person {
+    display: inline-block;
+    font-size: 13px; font-weight: 600;
+    background: #f1f5f9; color: var(--ink);
+    padding: 3px 10px; border-radius: 6px;
+    margin-bottom: 6px;
+  }
+  .ev-desc {
+    font-size: 13.5px; color: var(--ink); line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .ev-ambassador {
+    font-size: 12.5px; padding: 6px 12px;
+    border-radius: 8px; margin-bottom: 6px;
+  }
+  .ev-ambassador.amb-confirmed {
+    background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0;
+  }
+  .ev-ambassador.amb-unknown {
+    background: #f8fafc; color: var(--muted); border: 1px solid var(--line);
+  }
+  .ev-outcomes {
+    font-size: 12.5px; padding: 6px 12px;
+    background: #fffbeb; color: #92400e;
+    border: 1px solid #fde68a; border-radius: 8px;
+    margin-bottom: 6px;
+  }
+  .ev-stance {
+    font-size: 12.5px; padding: 6px 12px;
+    margin-bottom: 4px; border-radius: 8px;
+    line-height: 1.6;
+  }
+  .stake-label {
+    display: inline-block;
+    font-size: 10.5px; font-weight: 700;
+    padding: 1px 7px; border-radius: 99px;
+    margin-right: 8px;
+  }
+  .stake-label.cn {
+    background: #fef2f2; color: #dc2626; border: 1px solid #fecaca;
+  }
+  .stake-label.us {
+    background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe;
+  }
+  .ev-sources {
+    font-size: 12px; color: var(--muted);
+    margin-top: 8px; padding-top: 8px;
+    border-top: 1px dashed var(--line-soft);
+  }
+  .ev-sources a {
+    color: var(--teal); text-decoration: none; font-weight: 600;
+  }
+  .ev-sources a:hover { text-decoration: underline; }
+
+  /* ===== 补充观察 ===== */
+  .supplementary {
+    margin-top: 28px; padding-top: 20px;
+    border-top: 2px dashed var(--line);
+  }
+  .supplementary h2 {
+    font-size: 14px; font-weight: 700; color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .supplementary ul {
+    list-style: none; padding: 0;
+  }
+  .supplementary li {
+    font-size: 12.5px; color: var(--muted);
+    padding: 3px 0; padding-left: 16px;
+    position: relative;
+  }
+  .supplementary li::before {
+    content: "·"; position: absolute; left: 4px; color: var(--muted-soft);
+  }
+
+  /* ===== 空状态 & 免责声明 ===== */
+  .empty-state {
+    text-align: center; padding: 60px 20px;
+    color: var(--muted); font-size: 14px;
+  }
+  .disclaimer {
+    margin-top: 28px; padding: 14px 18px;
+    background: #f8faf9; border: 1px solid var(--line-soft);
+    border-radius: 10px;
+    font-size: 11.5px; color: var(--muted-soft);
+    line-height: 1.7; text-align: center;
+  }
+
+  footer {
+    text-align: center; font-size: 12px; color: var(--muted);
+    padding: 20px 0; margin-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--muted); }
+
+  @media (max-width: 768px) {
+    .wrap { padding: 10px 12px 40px; }
+    .brief-container { padding: 20px 16px; }
+    header.hero { padding: 18px 20px 16px; }
+    .ev-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-nav">
+      <a href="https://iranorawahaha.github.io/international-news-kb/">🏠 Ira 门户</a>
+      <span class="hero-nav-sep">|</span>
+      <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html">🌍 国际新闻</a>
+      <span class="hero-nav-sep">|</span>
+      <a href="https://iranorawahaha.github.io/international-news-kb/china-news.html">🇨🇳 国内新闻</a>
+      <span class="hero-nav-sep">|</span>
+      <a href="https://iranorawahaha.github.io/international-news-kb/ai-news.html">🤖 AI 动向</a>
+      <span class="hero-nav-sep">|</span>
+      <a class="active" href="diplomatic-affairs.html">🏛 使领馆事务</a>
+    </div>
+    <h1>🏛 使领馆事务看板</h1>
+    <div class="hero-meta">
+      <span>📅 覆盖时间：2026-08-03 — 2026-08-10（北京时间）</span>
+      <span>🕐 生成时间：2026-08-10T19:00:00+08:00 北京时间</span>
+      <span>🔄 每日 08:00 自动刷新</span>
+    </div>
+  </header>
+
+  <div class="brief-container">
+    <div class="brief-header">
+      <h1>国际事务公开信息摘要｜2026-08-03—2026-08-10</h1>
+      <div class="brief-date">覆盖时间：2026-08-03 — 2026-08-10（北京时间）</div>
+    </div>
+    <section class="highlights">
+      <h2>📌 本期重点</h2>
+      <ul><li><b>#1</b> 多哥新任驻华大使阿菲宁杜递交国书副本（8月7日）</li><li><b>#2</b> 王毅在马尼拉会见美国国务卿鲁比奥，为习近平主席9月访美铺路（7月22日）</li><li><b>#3</b> 国际原子能机构总干事格罗西访华，王毅会见并强调多边主义（8月1日）</li></ul>
+    </section><section class="data-summary"><span>📊</span> 外交代表人事变化：3项｜驻沪穗总领事人事：1项｜高级官员访华：2项｜中美互动：1项</section><section class="module" id="mod-personnel">
+      <h2 class="module-title">🌐 外交代表人事变化<span class="mod-count">3 项</span></h2>
+      <div class="event-card">
+          <div class="ev-header">
+            <span class="ev-country">多哥</span>
+            <span class="ev-divider">｜</span>
+            <span class="ev-type">递交国书副本</span>
+            <span class="ev-badge confirmed">✓ 已确认</span>
+          </div>
+          <div class="ev-status">当前状态：<b>已递交国书副本</b> · 日期：2026-08-07</div>
+          <span class="ev-person">阿菲宁杜（Afèignindou GNASSINGBE）</span>
+          <p class="ev-desc">8月7日，外交部部长助理兼礼宾司司长洪磊接受多哥新任驻华大使阿菲宁杜递交国书副本。阿菲宁杜大使于8月1日抵华。</p>
+          <div class="ev-sources">📎 <a href="https://www.fmprc.gov.cn/web/wjbxw_new/202608/t20260807_12000481.shtml" target="_blank" rel="noopener noreferrer">外交部官网</a></div>
+        </div><div class="event-card">
+          <div class="ev-header">
+            <span class="ev-country">几内亚</span>
+            <span class="ev-divider">｜</span>
+            <span class="ev-type">即将赴华履新</span>
+            <span class="ev-badge confirmed">✓ 已确认</span>
+          </div>
+          <div class="ev-status">当前状态：<b>已任命、待赴华</b> · 日期：2026-08-05</div>
+          <span class="ev-person">孔戴</span>
+          <p class="ev-desc">8月5日，驻几内亚大使孙勇会见几新任驻华大使孔戴，双方就中几双边关系、两国务实合作深入交换意见。孙大使祝贺孔戴即将赴华履新。</p>
+          <div class="ev-sources">📎 <a href="https://www.mfa.gov.cn/web/zwbd_673032/202608/t20260810_12001181.shtml" target="_blank" rel="noopener noreferrer">外交部官网</a></div>
+        </div><div class="event-card">
+          <div class="ev-header">
+            <span class="ev-country">智利</span>
+            <span class="ev-divider">｜</span>
+            <span class="ev-type">递交国书副本</span>
+            <span class="ev-badge confirmed">✓ 已确认</span>
+          </div>
+          <div class="ev-status">当前状态：<b>已递交国书副本</b> · 日期：2026-07-07</div>
+          <span class="ev-person">席尔瓦</span>
+          <p class="ev-desc">7月7日，外交部部长助理兼礼宾司司长洪磊接受智利新任驻华大使席尔瓦递交国书副本。席尔瓦大使于7月2日抵华。</p>
+          <div class="ev-sources">📎 <a href="https://www.163.com/dy/article/L18RJGGK0534A4SC.html" target="_blank" rel="noopener noreferrer">外交部官网（via 网易转载）</a></div>
+        </div>
+    </section><section class="module" id="mod-consuls">
+      <h2 class="module-title">🏢 驻上海、驻广州总领事人事<span class="mod-count">1 项</span></h2>
+      <div class="event-card">
+          <div class="ev-header">
+            <span class="ev-country">保加利亚</span>
+            <span class="ev-post-badge">驻上海</span>
+            <span class="ev-divider">｜</span>
+            <span class="ev-type">离任</span>
+            <span class="ev-badge confirmed">✓ 已确认</span>
+          </div>
+          <div class="ev-status">当前状态：<b>已离任</b> · 日期：2026-07-24</div>
+          <span class="ev-person">斯帕索夫</span>
+          <p class="ev-desc">7月24日，保加利亚驻上海总领事斯帕索夫拜会上海市人民政府外事办公室副主任方晓，举行离任辞别会见。斯帕索夫于2021年4月至2026年7月在任。</p>
+          <div class="ev-sources">📎 <a href="https://mfa.bg/zh/embassies/chinagc/news/48714" target="_blank" rel="noopener noreferrer">保加利亚外交部官网</a></div>
+        </div>
+    </section><section class="module" id="mod-visits">
+      <h2 class="module-title">✈️ 外国重要高级官员访华<span class="mod-count">2 项</span></h2>
+      <div class="event-card visit-card">
+          <div class="ev-header">
+            <span class="ev-country">国际组织</span>
+            <span class="ev-divider">｜</span>
+            <span class="ev-person-title">格罗西 · 国际原子能机构总干事</span>
+            <span class="ev-badge confirmed">✓ 已确认</span>
+          </div>
+          <div class="ev-status">日期：2026-08-01</div>
+          <p class="ev-desc">中共中央政治局委员、外交部长王毅在北京会见国际原子能机构总干事格罗西。王毅强调中国坚定恪守多边主义，维护联合国宪章权威；格罗西表示国际原子能机构坚持一个中国政策。</p>
+          <div class="ev-ambassador amb-unknown">🎯 驻华大使参与：不适用</div>
+          <div class="ev-outcomes">📋 官方明确成果：双方同意在解决热点问题、推动和平利用核能方面深化沟通协作，共同维护国际核不扩散体系。</div>
+          <div class="ev-sources">📎 <a href="https://wx.laserfair.com/FCGI/22136/" target="_blank" rel="noopener noreferrer">央视新闻</a></div>
+        </div><div class="event-card visit-card">
+          <div class="ev-header">
+            <span class="ev-country">白俄罗斯</span>
+            <span class="ev-divider">｜</span>
+            <span class="ev-person-title">卢卡申科 · 总统</span>
+            <span class="ev-badge unconfirmed">⚠ 待核实</span>
+          </div>
+          <div class="ev-status">日期：2026-08-09</div>
+          <p class="ev-desc">习近平主席在北京会见白俄罗斯总统卢卡申科。双方就深化中白全天候全面战略伙伴关系交换意见。</p>
+          <div class="ev-ambassador amb-unknown">🎯 驻华大使参与：待核实</div>
+          <div class="ev-outcomes">📋 官方明确成果：官方未公布具体成果。</div>
+          <div class="ev-sources">📎 <a href="https://www.mfa.gov.cn" target="_blank" rel="noopener noreferrer">外交部官网</a></div>
+        </div>
+    </section><section class="module" id="mod-uscn">
+      <h2 class="module-title">🇨🇳🇺🇸 中美高级官员互动<span class="mod-count">1 项</span></h2>
+      <div class="event-card uscn-card">
+          <div class="ev-header">
+            <span class="ev-cn-person">🇨🇳 王毅（中共中央政治局委员、外交部长）</span>
+            <span class="ev-vs">—</span>
+            <span class="ev-us-person">🇺🇸 鲁比奥（美国国务卿）</span>
+            <span class="ev-divider">｜</span>
+            <span class="ev-type">线下会见</span>
+            <span class="ev-badge mutual">双方共同确认</span>
+          </div>
+          <div class="ev-status">日期：2026-07-22</div>
+          <p class="ev-desc">王毅在马尼拉出席东盟外长会期间会见美国国务卿鲁比奥。双方就中美关系及国际地区热点问题交换意见，会晤持续约90分钟。</p>
+          <div class="ev-stance"><span class="stake-label cn">中方重点</span>今年是中美关系「大年」，两国元首北京会晤确立了建设性战略稳定关系定位；要求美方尊重中国核心利益、恪守一个中国原则、管控矛盾分歧。</div>
+          <div class="ev-stance"><span class="stake-label us">美方重点</span>鲁比奥表示需为习近平主席9月访美奠定基础，确认讨论了台湾问题和中美贸易委员会，认为中美必须保持关系。</div>
+          <div class="ev-outcomes">📋 官方明确结果：双方同意共同落实两国元首共识，发挥政治外交渠道作用，筹备下阶段高层交往，推动中美建设性战略稳定关系取得实质进展。</div>
+          <div class="ev-sources">📎 <a href="https://www.toutiao.com/article/7668991112157217280" target="_blank" rel="noopener noreferrer">央视新闻</a> · <a href="https://www.163.com/game/article/DK3UFFO400318PFH_mobile.html" target="_blank" rel="noopener noreferrer">Reuters</a></div>
+        </div>
+    </section><section class="supplementary">
+      <h2>🔍 补充观察</h2>
+      <ul><li>白俄罗斯总统卢卡申科访华事件仅见外交部首页摘要，待官方详细报道确认后补充完整信息。</li><li>智利大使事件发生在7月7日，数据窗口外但在7天首次运行回看范围内，作为参考收录。</li></ul>
+    </section>
+    <div class="disclaimer">本摘要基于合法公开、可回溯的信息来源整理，部分内容由人工智能辅助生成，仅供个人学习、研究及固定小范围交流参考，不构成新闻发布、专业意见或对事实完整性的保证。摘要不包含非公开信息、内部材料或未经合法授权获取的内容。人物姓名译法、职务、事件状态、会谈议题及具体成果，请以相关机构最新官方原文为准。未经重新进行合规评估，不应将本摘要用于面向不特定公众的发布、公开订阅或商业传播。</div>
+  </div>
+
+  <footer>
+    数据来自权威公开信源 · 仅供个人参考交流 · 版权归原作者所有<br>
+    由 WorkBuddy 自动构建 · <a href="https://github.com/Iranorawahaha/international-news-kb" target="_blank" rel="noopener noreferrer">项目仓库</a>
+  </footer>
+
+</div>
+</body>
+</html>

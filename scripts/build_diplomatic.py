@@ -388,13 +388,13 @@ def build():
   }}
   .wrap {{ max-width: 1100px; margin: 0 auto; padding: 16px 20px 60px; }}
 
-  /* ===== 顶部蓝色 Header（Ira体系统一） ===== */
+  /* ===== 顶部青绿 Header（Ira体系统一） ===== */
   header.hero {{
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%);
     color: #fff;
     border-radius: 16px;
     padding: 24px 32px 22px;
-    box-shadow: 0 8px 24px rgba(30,58,138,.25);
+    box-shadow: 0 8px 24px rgba(15,118,110,.3);
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
@@ -419,7 +419,7 @@ def build():
     transition: all .15s;
   }}
   .hero-nav a:hover {{ background: rgba(255,255,255,.22); color: #fff; }}
-  .hero-nav a.active {{ background: #fff; color: #1e3a8a; font-weight: 700; }}
+  .hero-nav a.active {{ background: #fff; color: #0f766e; font-weight: 700; }}
   .hero-nav-sep {{ opacity: .5; padding: 5px 2px; color: rgba(255,255,255,.6); }}
   .hero h1 {{ font-size: 24px; font-weight: 800; letter-spacing: -.3px; position: relative; z-index: 1; }}
   .hero-meta {{
@@ -749,9 +749,9 @@ def build_empty():
   body {{ font-family: var(--font); background: var(--bg); color: var(--ink); line-height: 1.7; min-height: 100vh; }}
   .wrap {{ max-width: 1100px; margin: 0 auto; padding: 16px 20px 60px; }}
   header.hero {{
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%);
     color: #fff; border-radius: 16px; padding: 24px 32px 22px;
-    box-shadow: 0 8px 24px rgba(30,58,138,.25); margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(15,118,110,.3); margin-bottom: 20px;
   }}
   .hero-nav {{
     display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
@@ -762,7 +762,7 @@ def build_empty():
     text-decoration: none; font-size: 13px; font-weight: 500;
   }}
   .hero-nav a:hover {{ background: rgba(255,255,255,.22); color: #fff; }}
-  .hero-nav a.active {{ background: #fff; color: #1e3a8a; font-weight: 700; }}
+  .hero-nav a.active {{ background: #fff; color: #0f766e; font-weight: 700; }}
   .hero-nav-sep {{ opacity: .5; padding: 5px 2px; color: rgba(255,255,255,.6); }}
   .hero h1 {{ font-size: 24px; font-weight: 800; }}
   .hero-meta {{

@@ -79,6 +79,7 @@
   .hero h1 span.intl { color: var(--intl); }
   .hero h1 span.cn { color: var(--cn); }
   .hero h1 span.ai { color: var(--ai); }
+  .hero h1 span.dip { color: var(--dip); }
   .hero p { font-size: 14px; color: var(--muted); margin-top: 8px; max-width: 54ch; margin-left: auto; margin-right: auto; }
 
   /* ── 看板入口 2x2 网格 ── */
@@ -104,6 +105,7 @@
   .board.intl::before { background: var(--intl); }
   .board.cn::before { background: var(--cn); }
   .board.ai::before { background: var(--ai); }
+  .board.dip::before { background: var(--dip); }
   .board-emoji { font-size: 30px; margin-bottom: 10px; }
   .board h2 { font-size: 16px; font-weight: 750; }
   .board .board-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin-top: 6px; flex: 1; }
@@ -112,6 +114,7 @@
   .board.intl .tag.hot { background: var(--intl-soft); color: var(--intl); border-color: var(--intl-border); }
   .board.cn .tag.hot { background: var(--cn-soft); color: var(--cn); border-color: var(--cn-border); }
   .board.ai .tag.hot { background: var(--ai-soft); color: var(--ai); border-color: var(--ai-border); }
+  .board.dip .tag.hot { background: var(--dip-soft); color: var(--dip); border-color: var(--dip-border); }
   .board .board-foot {
     display: flex; align-items: center; justify-content: space-between;
     margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line);
@@ -128,6 +131,7 @@
   .board.intl .board-go { background: var(--intl); color: #fff; }
   .board.cn .board-go { background: var(--cn); color: #fff; }
   .board.ai .board-go { background: var(--ai); color: #fff; }
+  .board.dip .board-go { background: var(--dip); color: #fff; }
   .board:hover .board-go .arrow { transform: translateX(4px); }
   .board .arrow { display: inline-block; transition: transform .2s; }
 
@@ -208,7 +212,7 @@
   <header class="topbar">
     <div class="brand">
       <span class="brand-emoji">🗺️</span>
-      <span>Ira 信息看板<span class="brand-sub">· 三维动态追踪</span></span>
+      <span>Ira 信息看板<span class="brand-sub">· 四维动态追踪</span></span>
     </div>
     <div class="top-meta">
       <span class="pill"><span class="dot"></span>每日自动刷新</span>
@@ -221,9 +225,10 @@
     <h1>
       <span class="intl">国际</span> · 
       <span class="cn">国内</span> · 
-      <span class="ai">AI</span> 三维信息看板
+      <span class="ai">AI</span> · 
+      <span class="dip">使领馆</span> 四维信息看板
     </h1>
-    <p>一站式追踪国际政经、国内政治与AI产业三大动态。聚焦监管政策、科技博弈、元首高层、模型产品发布——三个维度，一个入口。</p>
+    <p>一站式追踪国际政经、国内政治、AI产业与使领馆外交四大动态。聚焦监管政策、科技博弈、元首高层、外交人事——四个维度，一个入口。</p>
   </section>
 
   <!-- ================ 看板入口（移到这里，在日报上方） ================ -->
@@ -272,6 +277,21 @@
         <span class="board-go">进入看板 <span class="arrow">→</span></span>
       </div>
     </a>
+
+    <a class="board dip" href="diplomatic-affairs.html">
+      <div class="board-emoji">🏛</div>
+      <h2>使领馆事务看板</h2>
+      <p class="board-desc">驻华大使人事 · 驻沪穗总领事 · 高级官员访华 · 中美官员互动</p>
+      <div class="board-tags">
+        <span class="tag hot">🌐 大使人事</span>
+        <span class="tag">高级访华</span>
+        <span class="tag">中美互动</span>
+      </div>
+      <div class="board-foot">
+        <div class="board-meta">本期收录<b id="meta-dip-today">--</b></div>
+        <span class="board-go">进入看板 <span class="arrow">→</span></span>
+      </div>
+    </a>
   </section>
 
   <!-- ================ 今日日报（重新设计：标签切换 · 不再多列并排） ================ -->
@@ -298,15 +318,15 @@
   <section class="info-grid">
     <div class="info-card">
       <h3>📡 数据来源</h3>
-      <p>国际：路透/美联社/BBC/南华早报等11大信源+美国6大官方信源<br>国内：中国政府网/央视/人民日报/外交部+部委官网+微信公众号<br>AI：AI HOT 精选资讯 · 15+中外AI公司监管博弈关键词全文检索</p>
+      <p>国际：路透/美联社/BBC/南华早报等11大信源+美国6大官方信源<br>国内：中国政府网/央视/人民日报/外交部+部委官网+微信公众号<br>AI：AI HOT 精选资讯 · 15+中外AI公司监管博弈关键词全文检索<br>使领馆：外交部·中国政府网·新华社·驻华使馆官方页面·权威外媒交叉验证</p>
     </div>
     <div class="info-card">
       <h3>🔄 更新机制</h3>
-      <p>每日 <b>09:30</b> 自动刷新数据快照并推送 GitHub Pages · 滚动 <b>7 天</b> 窗口 · 时效、准确、可追溯</p>
+      <p>国际/国内/AI 每日 <b>09:30</b> 自动刷新 · 使领馆事务每日 <b>08:00</b> 自动采集<br>滚动 <b>7 天</b> 窗口 · 时效、准确、可追溯</p>
     </div>
     <div class="info-card">
       <h3>🔗 快速访问</h3>
-      <p><code>/international-news.html</code> 国际 · <code>/china-news.html</code> 国内 · <code>/ai-news.html</code> AI动向</p>
+      <p><code>/international-news.html</code> 国际 · <code>/china-news.html</code> 国内 · <code>/ai-news.html</code> AI动向 · <code>/diplomatic-affairs.html</code> 使领馆</p>
     </div>
   </section>
 
@@ -318,7 +338,7 @@
 </div>
 <script>
 var PLACEHOLDERS = {
-  intlToday: "47", cnToday: "5", aiToday: "62", latest: "2026-08-11 11:54"
+  intlToday: "47", cnToday: "5", aiToday: "62", dipToday: "7", latest: "2026-08-11 11:54"
 };
 function fill(id, key) {
   var el = document.getElementById(id);
@@ -327,6 +347,7 @@ function fill(id, key) {
 fill("meta-intl-today", "intlToday");
 fill("meta-cn-today", "cnToday");
 fill("meta-ai-today", "aiToday");
+fill("meta-dip-today", "dipToday");
 document.getElementById("top-update").textContent = "🕐 " + PLACEHOLDERS.latest;
 
 // 日报标签切换
