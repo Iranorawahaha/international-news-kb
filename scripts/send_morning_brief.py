@@ -45,21 +45,26 @@ INTL_MIN_SCORE = 88
 DOM_MIN_SCORE = 80
 
 
-def load_articles():
-    """加载国际高优 + 国内≥80分"""
-    intl, dom = [], []
+def load_articles(intl_exclude=None, dom_exclude=None):
+    """加载国际高优 + 国内≥80分
+    intl_exclude / dom_exclude: 排除的位置索引集合（从1开始）
+    """
+    intl_exclude = intl_exclude or set()
+    dom_exclude = dom_exclude or set()
 
     with open(INTL_DATA) as f:
         nd = json.load(f)
     a10 = nd['archive'].get(TODAY, nd['archive'].get(max(nd['archive'].keys(), key=lambda k: k), []))
-    intl = [a for a in a10 if a.get('priority_score', 0) >= INTL_MIN_SCORE]
+    intl_full = [a for a in a10 if a.get('priority_score', 0) >= INTL_MIN_SCORE]
+    intl = [a for i, a in enumerate(intl_full) if (i + 1) not in intl_exclude]
     intl_total = sum(len(v) for v in nd['archive'].values())
     intl_today = len(nd['archive'].get(TODAY, []))
 
     with open(CHINA_DATA) as f:
         cd = json.load(f)
     c10 = cd['archive'].get(TODAY, cd['archive'].get(max(cd['archive'].keys(), key=lambda k: k), []))
-    dom = [a for a in c10 if a.get('priority_score', 0) >= DOM_MIN_SCORE]
+    dom_full = [a for a in c10 if a.get('priority_score', 0) >= DOM_MIN_SCORE]
+    dom = [a for i, a in enumerate(dom_full) if (i + 1) not in dom_exclude]
     dom_total = len(c10)
 
     return intl, dom, intl_today, intl_total, dom_total
@@ -181,17 +186,39 @@ def save_log(intl_count, dom_count, sent):
         json.dump(log, f, ensure_ascii=False, indent=2)
 
 
+def parse_exclude(arg):
+    """解析 --exclude-intl/--exclude-dom 参数，如 '1,2,4' → {1,2,4}"""
+    if not arg:
+        return set()
+    return set(int(x.strip()) for x in arg.split(',') if x.strip())
+
+
 def main():
     preview = '--preview' in sys.argv
     do_send = '--send' in sys.argv
 
+    # 解析 --exclude-intl/--exclude-dom
+    intl_exclude = set()
+    dom_exclude = set()
+    for i, arg in enumerate(sys.argv):
+        if arg == '--exclude-intl' and i + 1 < len(sys.argv):
+            intl_exclude = parse_exclude(sys.argv[i+1])
+        if arg == '--exclude-dom' and i + 1 < len(sys.argv):
+            dom_exclude = parse_exclude(sys.argv[i+1])
+
     if not preview and not do_send:
         print('用法: --preview (预览) / --send (发送) / --preview --send (预览+发送)')
+        print('      --exclude-intl 1,2,4   (排除国际第N条)')
+        print('      --exclude-dom 1,2,6    (排除国内第N条)')
         return 1
 
     print(f'📰 Ira 早报生成中... {TODAY}')
+    if intl_exclude:
+        print(f'   ⛔ 国际排除位置: {sorted(intl_exclude)}')
+    if dom_exclude:
+        print(f'   ⛔ 国内排除位置: {sorted(dom_exclude)}')
 
-    intl, dom, intl_today, intl_total, dom_total = load_articles()
+    intl, dom, intl_today, intl_total, dom_total = load_articles(intl_exclude, dom_exclude)
     print(f'   🌍 国际: {len(intl)} 篇高优 (今日新增 {intl_today} / 总 {intl_total})')
     print(f'   🇨🇳 国内: {len(dom)} 篇 ≥{DOM_MIN_SCORE}分 (今日 {dom_total})')
 
