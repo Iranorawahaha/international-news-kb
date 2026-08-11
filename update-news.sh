@@ -664,6 +664,39 @@ try:
     if _rc_v25_reassigned or _rc_v25_fixed_date:
         print(f"  📅 V2.5 终极重归类: {_rc_v25_reassigned} 条归位, {_rc_v25_fixed_date} 条修正date字段")
 
+    # V2.6 日期护栏：任何 collectedAt 标记为今天的文章，必须归到今天的 archive 组
+    #   防止 force-upgrade 按原始 date 分组的文章滞留在昨天
+    _today = datetime.now(TZ).strftime('%Y-%m-%d')
+    _v26_moved = 0
+    for _v26_dt in list(data['archive'].keys()):
+        if _v26_dt == _today: continue
+        _v26_keep = []
+        for _a in data['archive'][_v26_dt]:
+            _c = (_a.get('collectedAt') or '')[:10]
+            if _c == _today:
+                _a['date'] = _today
+                if _today not in data['archive']: data['archive'][_today] = []
+                data['archive'][_today].append(_a)
+                _v26_moved += 1
+            else:
+                _v26_keep.append(_a)
+        data['archive'][_v26_dt] = _v26_keep
+    # 删空组
+    for _v26_dt in list(data['archive'].keys()):
+        if not data['archive'][_v26_dt]: del data['archive'][_v26_dt]
+    if _v26_moved:
+        print(f"  🛡️ V2.6 日期护栏: {_v26_moved} 条 dated yesterday→today")
+        # 重排序
+        _v26_all = []
+        for _v26_dt in sorted(data['archive'].keys()):
+            _v26_all += data['archive'][_v26_dt]
+        _d_db = {a.get('url',''): a for a in _v26_all}
+        data['stats']['totalArticles'] = len(_d_db)
+        data['dates'] = sorted(data['archive'].keys(), reverse=True)
+        data['stats']['dateCount'] = len(data['dates'])
+        data['stats']['latestDate'] = max(data['archive'].keys())
+        data['today'] = _today
+
     save_data(data)
     if _ff_added or _ff_upgraded:
         print(f"  🛡️ 官方源字段升级: 新增 {_ff_added} 条, 升级 {_ff_upgraded} 条")

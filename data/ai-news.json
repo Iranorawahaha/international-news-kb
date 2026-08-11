@@ -5258,26 +5258,9 @@
         "priority_score": 50,
         "importance": "low"
       }
-    ],
-    "2026-08-10": [
-      {
-        "title_zh": "马斯克旗下xAI起诉明尼苏达州首部禁止\"脱衣\"AI技术法律",
-        "title_en": "Elon Musk's xAI sues Minnesota over its first-in-the-nation law banning 'nudification' technology",
-        "summary_zh": null,
-        "summary_en": "xAI起诉明尼苏达州全美首部禁止\"脱衣\"AI技术的法律，围绕AI生成内容的监管边界与言论自由展开法律战。",
-        "url": "https://apnews.com/article/minnesota-artificial-intelligence-nudification-x-elon-musk-deepfake-131184be939d540de093b567b12c9e16",
-        "source": "美联社",
-        "date": "2026-08-10",
-        "priority_score": 70,
-        "importance": "中",
-        "company_tags": [
-          "AI"
-        ]
-      }
     ]
   },
   "dates": [
-    "2026-08-10",
     "2026-08-09",
     "2026-08-08",
     "2026-08-07",
@@ -5287,7 +5270,7 @@
     "2026-08-03"
   ],
   "stats": {
-    "totalArticles": 288,
+    "totalArticles": 287,
     "dateCount": 7,
     "highCount": 24,
     "mediumCount": 148,
@@ -5312,7 +5295,7 @@
       "腾讯"
     ]
   },
-  "lastUpdated": "2026-08-10 17:35",
-  "today": "2026-08-10",
+  "lastUpdated": "2026-08-10 17:44",
+  "today": "2026-08-09",
   "todayCount": 3
 }

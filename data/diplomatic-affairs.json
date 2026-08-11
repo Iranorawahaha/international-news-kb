@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generated": "2026-08-10T19:00:00+08:00",
+    "window_start": "2026-08-03",
+    "window_end": "2026-08-10",
+    "collection_method": "手动核验 + 自动化搜索",
+    "candidate_count": 8
+  },
+  "modules": {
+    "personnel": {
+      "title": "外交代表人事变化",
+      "items": [
+        {
+          "id": "evt-personnel-001",
+          "country": "多哥",
+          "event_type": "递交国书副本",
+          "current_status": "已递交国书副本",
+          "event_date": "2026-08-07",
+          "person_name": "阿菲宁杜（Afèignindou GNASSINGBE）",
+          "description": "8月7日，外交部部长助理兼礼宾司司长洪磊接受多哥新任驻华大使阿菲宁杜递交国书副本。阿菲宁杜大使于8月1日抵华。",
+          "sources": [
+            {"title": "外交部官网", "url": "https://www.fmprc.gov.cn/web/wjbxw_new/202608/t20260807_12000481.shtml"}
+          ],
+          "confirmed": true
+        },
+        {
+          "id": "evt-personnel-002",
+          "country": "几内亚",
+          "event_type": "即将赴华履新",
+          "current_status": "已任命、待赴华",
+          "event_date": "2026-08-05",
+          "person_name": "孔戴",
+          "description": "8月5日，驻几内亚大使孙勇会见几新任驻华大使孔戴，双方就中几双边关系、两国务实合作深入交换意见。孙大使祝贺孔戴即将赴华履新。",
+          "sources": [
+            {"title": "外交部官网", "url": "https://www.mfa.gov.cn/web/zwbd_673032/202608/t20260810_12001181.shtml"}
+          ],
+          "confirmed": true
+        },
+        {
+          "id": "evt-personnel-003",
+          "country": "智利",
+          "event_type": "递交国书副本",
+          "current_status": "已递交国书副本",
+          "event_date": "2026-07-07",
+          "person_name": "席尔瓦",
+          "description": "7月7日，外交部部长助理兼礼宾司司长洪磊接受智利新任驻华大使席尔瓦递交国书副本。席尔瓦大使于7月2日抵华。",
+          "sources": [
+            {"title": "外交部官网（via 网易转载）", "url": "https://www.163.com/dy/article/L18RJGGK0534A4SC.html"}
+          ],
+          "confirmed": true
+        }
+      ]
+    },
+    "consuls": {
+      "title": "驻上海、驻广州总领事人事",
+      "items": [
+        {
+          "id": "evt-consul-001",
+          "country": "保加利亚",
+          "post": "上海",
+          "event_type": "离任",
+          "current_status": "已离任",
+          "event_date": "2026-07-24",
+          "person_name": "斯帕索夫",
+          "description": "7月24日，保加利亚驻上海总领事斯帕索夫拜会上海市人民政府外事办公室副主任方晓，举行离任辞别会见。斯帕索夫于2021年4月至2026年7月在任。",
+          "sources": [
+            {"title": "保加利亚外交部官网", "url": "https://mfa.bg/zh/embassies/chinagc/news/48714"}
+          ],
+          "confirmed": true
+        }
+      ]
+    },
+    "visits": {
+      "title": "外国重要高级官员访华",
+      "items": [
+        {
+          "id": "evt-visit-001",
+          "country": "国际组织",
+          "person_name": "格罗西",
+          "position": "国际原子能机构总干事",
+          "event_date": "2026-08-01",
+          "description": "中共中央政治局委员、外交部长王毅在北京会见国际原子能机构总干事格罗西。王毅强调中国坚定恪守多边主义，维护联合国宪章权威；格罗西表示国际原子能机构坚持一个中国政策。",
+          "ambassador_participation": "不适用",
+          "outcomes": "双方同意在解决热点问题、推动和平利用核能方面深化沟通协作，共同维护国际核不扩散体系。",
+          "sources": [
+            {"title": "央视新闻", "url": "https://wx.laserfair.com/FCGI/22136/"}
+          ],
+          "confirmed": true
+        },
+        {
+          "id": "evt-visit-002",
+          "country": "白俄罗斯",
+          "person_name": "卢卡申科",
+          "position": "总统",
+          "event_date": "2026-08-09",
+          "person_name_en": "",
+          "description": "习近平主席在北京会见白俄罗斯总统卢卡申科。双方就深化中白全天候全面战略伙伴关系交换意见。",
+          "ambassador_participation": "待核实",
+          "outcomes": "官方未公布具体成果。",
+          "sources": [
+            {"title": "外交部官网", "url": "https://www.mfa.gov.cn"}
+          ],
+          "confirmed": false
+        }
+      ]
+    },
+    "us_china": {
+      "title": "中美高级官员互动",
+      "items": [
+        {
+          "id": "evt-uscn-001",
+          "country": "美国",
+          "cn_person": "王毅（中共中央政治局委员、外交部长）",
+          "us_person": "鲁比奥（美国国务卿）",
+          "interaction_type": "线下会见",
+          "event_date": "2026-07-22",
+          "description": "王毅在马尼拉出席东盟外长会期间会见美国国务卿鲁比奥。双方就中美关系及国际地区热点问题交换意见，会晤持续约90分钟。",
+          "mutual_confirmed": true,
+          "cn_emphasis": "今年是中美关系「大年」，两国元首北京会晤确立了建设性战略稳定关系定位；要求美方尊重中国核心利益、恪守一个中国原则、管控矛盾分歧。",
+          "us_emphasis": "鲁比奥表示需为习近平主席9月访美奠定基础，确认讨论了台湾问题和中美贸易委员会，认为中美必须保持关系。",
+          "outcomes": "双方同意共同落实两国元首共识，发挥政治外交渠道作用，筹备下阶段高层交往，推动中美建设性战略稳定关系取得实质进展。",
+          "sources": [
+            {"title": "央视新闻", "url": "https://www.toutiao.com/article/7668991112157217280"},
+            {"title": "Reuters", "url": "https://www.163.com/game/article/DK3UFFO400318PFH_mobile.html"}
+          ],
+          "confirmed": true
+        }
+      ]
+    }
+  },
+  "highlights": [
+    "多哥新任驻华大使阿菲宁杜递交国书副本（8月7日）",
+    "王毅在马尼拉会见美国国务卿鲁比奥，为习近平主席9月访美铺路（7月22日）",
+    "国际原子能机构总干事格罗西访华，王毅会见并强调多边主义（8月1日）"
+  ],
+  "data_summary": {
+    "外交代表人事变化": "3项",
+    "驻沪穗总领事人事": "1项",
+    "高级官员访华": "2项",
+    "中美互动": "1项"
+  },
+  "supplementary_notes": [
+    "白俄罗斯总统卢卡申科访华事件仅见外交部首页摘要，待官方详细报道确认后补充完整信息。",
+    "智利大使事件发生在7月7日，数据窗口外但在7天首次运行回看范围内，作为参考收录。"
+  ]
+}
