@@ -213,15 +213,6 @@
 </style>
 </head>
 <body>
-<!-- ===== IRA-NAV-V4: Ira 信息看板 统一导航（自动注入，勿删） ===== -->
-<div class="ira-nav-v4" style="max-width:1400px;margin:8px auto 0;padding:7px 16px;background:#fff;border:1px solid #e4e7ee;border-radius:12px;box-shadow:0 1px 6px rgba(28,36,52,.05);display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;">
-  <a href="./" style="font-weight:700;color:#4b5563;text-decoration:none;padding:0 6px 0 0;border-right:1px solid #e5e7eb;margin-right:2px;">🏠 Ira 信息看板</a>
-  <a href="international-news.html" style="color:#2563eb;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#eff6ff;border:1px solid #bfdbfe;">🌍 国际</a>
-  <a href="china-news.html" style="color:#c41230;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fff5f5;border:1px solid #fecaca;">🇨🇳 国内</a>
-  <a href="ai-news.html" style="color:#d97706;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fffbeb;border:1px solid #fde68a;">🤖 AI动向</a>
-  <span style="color:#9ca3af;margin-left:auto;font-size:11.5px;">每日 09:30 刷新 · 滚动 7 天</span>
-</div>
-<!-- ===== /IRA-NAV-V4 ===== -->
 <div class="wrap">
   <header class="hero">
     <div class="hero-back">
@@ -236,7 +227,7 @@
     <h1>国内重大新闻看板</h1>
     <div class="hero-meta">
       <span>📅 时间窗：2026-08-05 ~ 2026-08-11（近 7 天）</span>
-      <span>🎯 要闻总数：52 条（去重）</span>
+      <span>🎯 要闻总数：50 条（去重）</span>
       <span>🆕 今日新增：32 条</span>
       <span>⭐ 元首级：7 条</span>
     </div>
@@ -244,14 +235,14 @@
 
   <div class="refresh-strip">
     <span class="rs-dot"></span>
-    <b>最近刷新：</b>2026-08-11 10:09 北京时间（每日自动刷新） ·
+    <b>最近刷新：</b>2026-08-11 11:23 北京时间（每日自动刷新） ·
     <b>今日新增 32 条</b> · 滚动 7 天窗口 ·
     透视表：点日期/合计可看当天全部，点分类单元格可看（日期×类别）筛选
   </div>
 
   <div class="kpi-grid">
     <div class="kpi-card" style="border-left:4px solid #dc2626; background:linear-gradient(180deg,#fef2f2,#fff);"><div class="kpi-num" style="color:#dc2626;">32</div><div class="kpi-label">🆕 今日新增</div></div>
-    <div class="kpi-card kpi-main"><div class="kpi-num">52</div><div class="kpi-label">要闻总数（去重后）</div></div>
+    <div class="kpi-card kpi-main"><div class="kpi-num">50</div><div class="kpi-label">要闻总数（去重后）</div></div>
     <div class="kpi-card" style="border-left:4px solid #f59e0b; background:linear-gradient(180deg,#fffbeb,#fff);"><div class="kpi-num" style="color:#f59e0b;">7</div><div class="kpi-label">⭐ 元首级要闻</div></div>
     <div class="kpi-card"><div class="kpi-num">6</div><div class="kpi-label">覆盖天数</div></div>
   </div>
@@ -260,7 +251,7 @@
   <div class="pivot-wrapper">
       <table class="pivot-table">
         <thead><tr><th class="pv-th pv-date-hd">日期</th><th class="pv-th pv-cat-hd">👑 元首</th><th class="pv-th pv-cat-hd">🧭 高层</th><th class="pv-th pv-cat-hd">🏛 重要</th><th class="pv-th pv-cat-hd">📋 人事</th><th class="pv-th pv-cat-hd">🏢 部委</th><th class="pv-th pv-cat-hd">📜 政策</th><th class="pv-th pv-cat-hd">💹 经贸</th><th class="pv-th pv-total-hd">合计</th></tr></thead>
-        <tbody><tr class="pv-row today"><td class="pv-cell pv-date-cell" data-date="2026-08-11"><span class="pv-date">8月11日</span><span class="pv-wd">周二</span><span class="pv-today-dot"></span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="高层动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="重要会议"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="人事任免"><span class="pv-num">3</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="部委动态"><span class="pv-num">9</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="政策发布"><span class="pv-num">3</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="经贸动向"><span class="pv-num">12</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-11"><span class="pv-total-num">32</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-09"><span class="pv-date">8月9日</span><span class="pv-wd">周日</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-09" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-09" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-total-cell" data-date="2026-08-09"><span class="pv-total-num">2</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-08"><span class="pv-date">8月8日</span><span class="pv-wd">周六</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-08" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-08" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-08"><span class="pv-total-num">2</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-07"><span class="pv-date">8月7日</span><span class="pv-wd">周五</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="元首动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="人事任免"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="政策发布"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-07"><span class="pv-total-num">6</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-06"><span class="pv-date">8月6日</span><span class="pv-wd">周四</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-06" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-06" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-06" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-06"><span class="pv-total-num">3</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-05"><span class="pv-date">8月5日</span><span class="pv-wd">周三</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-05" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-05" data-cat="部委动态"><span class="pv-num">4</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-05" data-cat="经贸动向"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-05"><span class="pv-total-num">7</span></td></tr></tbody>
+        <tbody><tr class="pv-row today"><td class="pv-cell pv-date-cell" data-date="2026-08-11"><span class="pv-date">8月11日</span><span class="pv-wd">周二</span><span class="pv-today-dot"></span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="高层动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="重要会议"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="人事任免"><span class="pv-num">3</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="部委动态"><span class="pv-num">9</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="政策发布"><span class="pv-num">3</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="经贸动向"><span class="pv-num">12</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-11"><span class="pv-total-num">30</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-09"><span class="pv-date">8月9日</span><span class="pv-wd">周日</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-09" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-09" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-total-cell" data-date="2026-08-09"><span class="pv-total-num">2</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-08"><span class="pv-date">8月8日</span><span class="pv-wd">周六</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-08" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-08" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-08"><span class="pv-total-num">2</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-07"><span class="pv-date">8月7日</span><span class="pv-wd">周五</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="元首动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="人事任免"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="政策发布"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-07" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-07"><span class="pv-total-num">6</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-06"><span class="pv-date">8月6日</span><span class="pv-wd">周四</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-06" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-06" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-06" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-06"><span class="pv-total-num">3</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-05"><span class="pv-date">8月5日</span><span class="pv-wd">周三</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-05" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-05" data-cat="部委动态"><span class="pv-num">4</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-05" data-cat="经贸动向"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-05"><span class="pv-total-num">7</span></td></tr></tbody>
       </table>
     </div>
 
@@ -277,10 +268,10 @@
   <div class="layout">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-title">🗂️ 栏目导航</div>
-      <button class="col-item active" data-cat="all"><span class="ic">📋</span>全部<span class="cnt">新增32</span></button><button class="col-item" data-cat="元首动态"><span class="ic">👑</span>元首动态<span class="cnt">新增1</span></button><button class="col-item" data-cat="高层动态"><span class="ic">🧭</span>高层动态<span class="cnt">新增2</span></button><button class="col-item" data-cat="重要会议"><span class="ic">🏛</span>重要会议<span class="cnt">新增2</span></button><button class="col-item" data-cat="人事任免"><span class="ic">📋</span>人事任免<span class="cnt">新增3</span></button><button class="col-item" data-cat="部委动态"><span class="ic">🏢</span>部委动态<span class="cnt">新增9</span></button><button class="col-item" data-cat="政策发布"><span class="ic">📜</span>政策发布<span class="cnt">新增3</span></button><button class="col-item" data-cat="经贸动向"><span class="ic">💹</span>经贸动向<span class="cnt">新增12</span></button>
+      <button class="col-item active" data-cat="all"><span class="ic">📋</span>全部<span class="cnt">新增30</span></button><button class="col-item" data-cat="元首动态"><span class="ic">👑</span>元首动态<span class="cnt">新增1</span></button><button class="col-item" data-cat="高层动态"><span class="ic">🧭</span>高层动态<span class="cnt">新增1</span></button><button class="col-item" data-cat="重要会议"><span class="ic">🏛</span>重要会议<span class="cnt">新增1</span></button><button class="col-item" data-cat="人事任免"><span class="ic">📋</span>人事任免<span class="cnt">新增3</span></button><button class="col-item" data-cat="部委动态"><span class="ic">🏢</span>部委动态<span class="cnt">新增9</span></button><button class="col-item" data-cat="政策发布"><span class="ic">📜</span>政策发布<span class="cnt">新增3</span></button><button class="col-item" data-cat="经贸动向"><span class="ic">💹</span>经贸动向<span class="cnt">新增12</span></button>
     </aside>
     <main class="main-content">
-      <div class="cat-panel active" id="cat-panel-all"><div class="date-group-header today" data-date="2026-08-11">📅 🆕 今天 <span class="date-count">32 条</span></div><div class="card imp-summit" data-cat="高层动态" data-date="2026-08-11">
+      <div class="cat-panel active" id="cat-panel-all"><div class="date-group-header today" data-date="2026-08-11">📅 🆕 今天 <span class="date-count">30 条</span></div><div class="card imp-summit" data-cat="高层动态" data-date="2026-08-11">
           <div class="card-idx">1</div>
           <div class="card-body">
             <div class="card-title-row">
@@ -297,25 +288,8 @@
               <span class="meta-imp">权重 95</span>
             </div>
           </div>
-        </div><div class="card imp-high" data-cat="重要会议" data-date="2026-08-11">
-          <div class="card-idx">2</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">“每日读画”三百期座谈会在京举办<span class="tag-today">🆕 今日</span></h3>
-              <div class="card-meta-right">
-                <span class="date-badge today">📅 2026-08-11</span>
-                <a class="card-link" href="http://paper.people.com.cn/rmrb/pc/content/202608/11/content_30174306.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">本报北京8月10日电&amp;nbsp;&amp;nbsp;（记者马苏薇）为进一步深入学习贯彻习近平文化思想，加强和改进人民日报文艺宣传报道，深化主流媒体系统性变革，近日，“每日读画”300期座谈会在人民日报社举办。…</p>
-            <div class="card-meta">
-              <span class="meta-cat">🏛 重要会议</span>
-              <span class="meta-src">📰 人民日报</span>
-              <span class="meta-imp">权重 88</span>
-            </div>
-          </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">3</div>
+          <div class="card-idx">2</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">中国对美碧根果征反倾销保证金<span class="tag-today">🆕 今日</span></h3>
@@ -324,7 +298,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9499821" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">中国决定对从美国和墨西哥进口的碧根果征收反倾销保证金（美国54.3%、墨西哥17.8%-51.6%），自8月11日起实施临时反倾销措施，给中美贸易关系增添新摩擦。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 联合早报</span>
@@ -332,7 +306,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-11">
-          <div class="card-idx">4</div>
+          <div class="card-idx">3</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">中国外交部：逾百名菲公民涉非法就业和居留被查处<span class="tag-today">🆕 今日</span></h3>
@@ -341,7 +315,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9500295" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">外交部发言人郭嘉昆回应称，全国移民管理机构持续深化在华&quot;三非&quot;外国人治理专项行动，百余名菲律宾公民因非法就业、非法居留被依法处理，过程中保障了涉案外籍人员权益。</p>
             <div class="card-meta">
               <span class="meta-cat">📋 人事任免</span>
               <span class="meta-src">📰 联合早报</span>
@@ -349,7 +323,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">5</div>
+          <div class="card-idx">4</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">中国外交部：印度公布“标准名称”改变不了藏南属中国事实<span class="tag-today">🆕 今日</span></h3>
@@ -358,7 +332,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9499842" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">针对印度公布阿鲁纳恰尔邦27处地点“标准名称”，外交部发言人郭嘉昆回应称，印方做法非法无效，中方从不承认印度非法设立的所谓“阿鲁纳恰尔邦”，改变不了藏南地区属于中国的事实。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 联合早报</span>
@@ -366,7 +340,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">6</div>
+          <div class="card-idx">5</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">伊朗外交部发言人：美国对制裁“病态依赖”<span class="tag-today">🆕 今日</span></h3>
@@ -383,7 +357,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-11">
-          <div class="card-idx">7</div>
+          <div class="card-idx">6</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">《中国人民银行“十五五”改革发展规划》印发<span class="tag-today">🆕 今日</span></h3>
@@ -400,7 +374,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-11">
-          <div class="card-idx">8</div>
+          <div class="card-idx">7</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">从1.45万亿斤看粮食安全如何保障（经济新方位·解码“十五五”专项规划）<span class="tag-today">🆕 今日</span></h3>
@@ -417,7 +391,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">9</div>
+          <div class="card-idx">8</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">上半年完成交通固定资产投资1.5万亿元<span class="tag-today">🆕 今日</span></h3>
@@ -434,7 +408,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">10</div>
+          <div class="card-idx">9</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">中国经济看速度更看“稳劲”<span class="tag-today">🆕 今日</span></h3>
@@ -451,7 +425,7 @@
             </div>
           </div>
         </div><div class="card imp-summit" data-cat="元首动态" data-date="2026-08-11">
-          <div class="card-idx">11</div>
+          <div class="card-idx">10</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">⭐总书记治国理政故事｜“我是人民的勤务员”<span class="tag-today">🆕 今日</span></h3>
@@ -467,25 +441,8 @@
               <span class="meta-imp">权重 100</span>
             </div>
           </div>
-        </div><div class="card imp-summit" data-cat="高层动态" data-date="2026-08-11">
-          <div class="card-idx">12</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">潮起渤海湾 奋楫“十五五”——党中央国务院邀请优秀专家人才代表北戴河休假侧记<span class="tag-today">🆕 今日</span></h3>
-              <div class="card-meta-right">
-                <span class="date-badge today">📅 2026-08-11</span>
-                <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202608/content_7077772.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">夏日的北戴河，海天寥廓，碧波万顷。</p>
-            <div class="card-meta">
-              <span class="meta-cat">🧭 高层动态</span>
-              <span class="meta-src">📰 中国政府网·要闻</span>
-              <span class="meta-imp">权重 95</span>
-            </div>
-          </div>
         </div><div class="card imp-high" data-cat="重要会议" data-date="2026-08-11">
-          <div class="card-idx">13</div>
+          <div class="card-idx">11</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">2026年深圳APEC峰会进入倒计时100天！<span class="tag-today">🆕 今日</span></h3>
@@ -502,7 +459,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">14</div>
+          <div class="card-idx">12</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">商务部新闻发言人就对原产于墨西哥和美国的进口碧根果反倾销调查初裁答记者问<span class="tag-today">🆕 今日</span></h3>
@@ -511,7 +468,7 @@
                 <a class="card-link" href="https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_c3d812a75499429ab0acc4e6b000bf0d.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">商务部就对美墨碧根果反倾销初裁答记者问：经调查初步证据表明存在倾销，认定墨方公司倾销幅度17.8%-51.6%，因美方无人应诉裁定美国公司倾销幅度为54.3%，8月10日实施临时反倾销措施。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 商务部</span>
@@ -519,7 +476,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-11">
-          <div class="card-idx">15</div>
+          <div class="card-idx">13</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">国务院任免国家工作人员（2026年8月10日）<span class="tag-today">🆕 今日</span></h3>
@@ -536,7 +493,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-11">
-          <div class="card-idx">16</div>
+          <div class="card-idx">14</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">新疆生产建设兵团生态环境局原局长吴彬被查<span class="tag-today">🆕 今日</span></h3>
@@ -545,7 +502,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260810-9498173" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">新疆生产建设兵团生态环境局原党组书记、局长吴彬涉嫌严重违纪违法，正接受兵团纪委监委纪律审查和监察调查。吴彬现年56岁，曾任新疆天业集团董事长，2017年当选中共十九大代表。</p>
             <div class="card-meta">
               <span class="meta-cat">📋 人事任免</span>
               <span class="meta-src">📰 联合早报</span>
@@ -553,7 +510,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">17</div>
+          <div class="card-idx">15</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">2026年8月10日外交部发言人郭嘉昆答记者问（2026-08-10）<span class="tag-today">🆕 今日</span></h3>
@@ -570,7 +527,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">18</div>
+          <div class="card-idx">16</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">7月先行指标折射经济稳中向优态势明显<span class="tag-today">🆕 今日</span></h3>
@@ -587,7 +544,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">19</div>
+          <div class="card-idx">17</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">上半年生成式人工智能领域新设企业增长28.0%<span class="tag-today">🆕 今日</span></h3>
@@ -604,7 +561,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">20</div>
+          <div class="card-idx">18</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">两部门发文提出到2030年我国现代煤炭产业体系基本建成<span class="tag-today">🆕 今日</span></h3>
@@ -621,7 +578,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">21</div>
+          <div class="card-idx">19</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">商务部：初步认定原产于墨西哥和美国的进口碧根果存在倾销<span class="tag-today">🆕 今日</span></h3>
@@ -638,7 +595,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">22</div>
+          <div class="card-idx">20</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部：奉劝美方尽早解除对古巴的制裁封锁 不要一再向他人“泼脏水”<span class="tag-today">🆕 今日</span></h3>
@@ -655,7 +612,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">23</div>
+          <div class="card-idx">21</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部：百余名菲律宾公民因非法就业、非法居留被依法处理<span class="tag-today">🆕 今日</span></h3>
@@ -672,7 +629,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">24</div>
+          <div class="card-idx">22</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部：藏南地区是中国领土 印方公布所谓“标准名称”非法无效<span class="tag-today">🆕 今日</span></h3>
@@ -689,7 +646,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-11">
-          <div class="card-idx">25</div>
+          <div class="card-idx">23</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">关于印发《煤炭工业发展“十五五”规划》的通知<span class="tag-today">🆕 今日</span></h3>
@@ -698,7 +655,7 @@
                 <a class="card-link" href="https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">国家发展改革委、国家能源局印发《煤炭工业发展“十五五”规划》（发改能源〔2026〕979号），明确加快推进煤炭高质量发展，发挥煤炭在能源供应体系中的基础保障和系统调节作用。</p>
             <div class="card-meta">
               <span class="meta-cat">📜 政策发布</span>
               <span class="meta-src">📰 国家发改委</span>
@@ -706,7 +663,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">26</div>
+          <div class="card-idx">24</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">AI硬件需求强劲 台积电7月营业额同比大增45%<span class="tag-today">🆕 今日</span></h3>
@@ -723,7 +680,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">27</div>
+          <div class="card-idx">25</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">一批重要国家标准发布 涉及高新技术领域、传统产业、安全生产等<span class="tag-today">🆕 今日</span></h3>
@@ -740,7 +697,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">28</div>
+          <div class="card-idx">26</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">从“不敢接单”到“产线全开” 数字技改助推企业突破产业空间瓶颈发展“加速跑”<span class="tag-today">🆕 今日</span></h3>
@@ -757,7 +714,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">29</div>
+          <div class="card-idx">27</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">共享智造助力河北激活产业集群新活力<span class="tag-today">🆕 今日</span></h3>
@@ -774,7 +731,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">30</div>
+          <div class="card-idx">28</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">受贿近6800万人民币 中国一重集团原副总经理陆文俊一审获刑15年<span class="tag-today">🆕 今日</span></h3>
@@ -791,7 +748,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">31</div>
+          <div class="card-idx">29</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">澳洲加强审查涉华稀土项目投资者<span class="tag-today">🆕 今日</span></h3>
@@ -808,7 +765,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">32</div>
+          <div class="card-idx">30</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">电影产业观察 | “电影大餐”全球共享 从内容输出迈向技术、制版服务、标准体系协同出海<span class="tag-today">🆕 今日</span></h3>
@@ -1181,25 +1138,8 @@
               <span class="meta-imp">权重 95</span>
             </div>
           </div>
-        </div><div class="card imp-high" data-cat="重要会议" data-date="2026-08-11">
-          <div class="card-idx">2</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">“每日读画”三百期座谈会在京举办<span class="tag-today">🆕 今日</span></h3>
-              <div class="card-meta-right">
-                <span class="date-badge today">📅 2026-08-11</span>
-                <a class="card-link" href="http://paper.people.com.cn/rmrb/pc/content/202608/11/content_30174306.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">本报北京8月10日电&amp;nbsp;&amp;nbsp;（记者马苏薇）为进一步深入学习贯彻习近平文化思想，加强和改进人民日报文艺宣传报道，深化主流媒体系统性变革，近日，“每日读画”300期座谈会在人民日报社举办。…</p>
-            <div class="card-meta">
-              <span class="meta-cat">🏛 重要会议</span>
-              <span class="meta-src">📰 人民日报</span>
-              <span class="meta-imp">权重 88</span>
-            </div>
-          </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">3</div>
+          <div class="card-idx">2</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">中国对美碧根果征反倾销保证金<span class="tag-today">🆕 今日</span></h3>
@@ -1208,7 +1148,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9499821" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">中国决定对从美国和墨西哥进口的碧根果征收反倾销保证金（美国54.3%、墨西哥17.8%-51.6%），自8月11日起实施临时反倾销措施，给中美贸易关系增添新摩擦。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 联合早报</span>
@@ -1216,7 +1156,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-11">
-          <div class="card-idx">4</div>
+          <div class="card-idx">3</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">中国外交部：逾百名菲公民涉非法就业和居留被查处<span class="tag-today">🆕 今日</span></h3>
@@ -1225,7 +1165,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9500295" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">外交部发言人郭嘉昆回应称，全国移民管理机构持续深化在华&quot;三非&quot;外国人治理专项行动，百余名菲律宾公民因非法就业、非法居留被依法处理，过程中保障了涉案外籍人员权益。</p>
             <div class="card-meta">
               <span class="meta-cat">📋 人事任免</span>
               <span class="meta-src">📰 联合早报</span>
@@ -1233,7 +1173,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">5</div>
+          <div class="card-idx">4</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">中国外交部：印度公布“标准名称”改变不了藏南属中国事实<span class="tag-today">🆕 今日</span></h3>
@@ -1242,7 +1182,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9499842" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">针对印度公布阿鲁纳恰尔邦27处地点“标准名称”，外交部发言人郭嘉昆回应称，印方做法非法无效，中方从不承认印度非法设立的所谓“阿鲁纳恰尔邦”，改变不了藏南地区属于中国的事实。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 联合早报</span>
@@ -1250,7 +1190,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">6</div>
+          <div class="card-idx">5</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">伊朗外交部发言人：美国对制裁“病态依赖”<span class="tag-today">🆕 今日</span></h3>
@@ -1267,7 +1207,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-11">
-          <div class="card-idx">7</div>
+          <div class="card-idx">6</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">《中国人民银行“十五五”改革发展规划》印发<span class="tag-today">🆕 今日</span></h3>
@@ -1284,7 +1224,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-11">
-          <div class="card-idx">8</div>
+          <div class="card-idx">7</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">从1.45万亿斤看粮食安全如何保障（经济新方位·解码“十五五”专项规划）<span class="tag-today">🆕 今日</span></h3>
@@ -1301,7 +1241,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">9</div>
+          <div class="card-idx">8</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">上半年完成交通固定资产投资1.5万亿元<span class="tag-today">🆕 今日</span></h3>
@@ -1318,7 +1258,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">10</div>
+          <div class="card-idx">9</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">中国经济看速度更看“稳劲”<span class="tag-today">🆕 今日</span></h3>
@@ -1335,7 +1275,7 @@
             </div>
           </div>
         </div><div class="card imp-summit" data-cat="元首动态" data-date="2026-08-11">
-          <div class="card-idx">11</div>
+          <div class="card-idx">10</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">⭐总书记治国理政故事｜“我是人民的勤务员”<span class="tag-today">🆕 今日</span></h3>
@@ -1351,25 +1291,8 @@
               <span class="meta-imp">权重 100</span>
             </div>
           </div>
-        </div><div class="card imp-summit" data-cat="高层动态" data-date="2026-08-11">
-          <div class="card-idx">12</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">潮起渤海湾 奋楫“十五五”——党中央国务院邀请优秀专家人才代表北戴河休假侧记<span class="tag-today">🆕 今日</span></h3>
-              <div class="card-meta-right">
-                <span class="date-badge today">📅 2026-08-11</span>
-                <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202608/content_7077772.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">夏日的北戴河，海天寥廓，碧波万顷。</p>
-            <div class="card-meta">
-              <span class="meta-cat">🧭 高层动态</span>
-              <span class="meta-src">📰 中国政府网·要闻</span>
-              <span class="meta-imp">权重 95</span>
-            </div>
-          </div>
         </div><div class="card imp-high" data-cat="重要会议" data-date="2026-08-11">
-          <div class="card-idx">13</div>
+          <div class="card-idx">11</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">2026年深圳APEC峰会进入倒计时100天！<span class="tag-today">🆕 今日</span></h3>
@@ -1386,7 +1309,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">14</div>
+          <div class="card-idx">12</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">商务部新闻发言人就对原产于墨西哥和美国的进口碧根果反倾销调查初裁答记者问<span class="tag-today">🆕 今日</span></h3>
@@ -1395,7 +1318,7 @@
                 <a class="card-link" href="https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_c3d812a75499429ab0acc4e6b000bf0d.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">商务部就对美墨碧根果反倾销初裁答记者问：经调查初步证据表明存在倾销，认定墨方公司倾销幅度17.8%-51.6%，因美方无人应诉裁定美国公司倾销幅度为54.3%，8月10日实施临时反倾销措施。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 商务部</span>
@@ -1403,7 +1326,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-11">
-          <div class="card-idx">15</div>
+          <div class="card-idx">13</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">国务院任免国家工作人员（2026年8月10日）<span class="tag-today">🆕 今日</span></h3>
@@ -1420,7 +1343,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-11">
-          <div class="card-idx">16</div>
+          <div class="card-idx">14</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">新疆生产建设兵团生态环境局原局长吴彬被查<span class="tag-today">🆕 今日</span></h3>
@@ -1429,7 +1352,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260810-9498173" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">新疆生产建设兵团生态环境局原党组书记、局长吴彬涉嫌严重违纪违法，正接受兵团纪委监委纪律审查和监察调查。吴彬现年56岁，曾任新疆天业集团董事长，2017年当选中共十九大代表。</p>
             <div class="card-meta">
               <span class="meta-cat">📋 人事任免</span>
               <span class="meta-src">📰 联合早报</span>
@@ -1437,7 +1360,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">17</div>
+          <div class="card-idx">15</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">2026年8月10日外交部发言人郭嘉昆答记者问（2026-08-10）<span class="tag-today">🆕 今日</span></h3>
@@ -1454,7 +1377,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">18</div>
+          <div class="card-idx">16</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">7月先行指标折射经济稳中向优态势明显<span class="tag-today">🆕 今日</span></h3>
@@ -1471,7 +1394,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">19</div>
+          <div class="card-idx">17</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">上半年生成式人工智能领域新设企业增长28.0%<span class="tag-today">🆕 今日</span></h3>
@@ -1488,7 +1411,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">20</div>
+          <div class="card-idx">18</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">两部门发文提出到2030年我国现代煤炭产业体系基本建成<span class="tag-today">🆕 今日</span></h3>
@@ -1505,7 +1428,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">21</div>
+          <div class="card-idx">19</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">商务部：初步认定原产于墨西哥和美国的进口碧根果存在倾销<span class="tag-today">🆕 今日</span></h3>
@@ -1522,7 +1445,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">22</div>
+          <div class="card-idx">20</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部：奉劝美方尽早解除对古巴的制裁封锁 不要一再向他人“泼脏水”<span class="tag-today">🆕 今日</span></h3>
@@ -1539,7 +1462,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">23</div>
+          <div class="card-idx">21</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部：百余名菲律宾公民因非法就业、非法居留被依法处理<span class="tag-today">🆕 今日</span></h3>
@@ -1556,7 +1479,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-11">
-          <div class="card-idx">24</div>
+          <div class="card-idx">22</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部：藏南地区是中国领土 印方公布所谓“标准名称”非法无效<span class="tag-today">🆕 今日</span></h3>
@@ -1573,7 +1496,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-11">
-          <div class="card-idx">25</div>
+          <div class="card-idx">23</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">关于印发《煤炭工业发展“十五五”规划》的通知<span class="tag-today">🆕 今日</span></h3>
@@ -1582,7 +1505,7 @@
                 <a class="card-link" href="https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">国家发展改革委、国家能源局印发《煤炭工业发展“十五五”规划》（发改能源〔2026〕979号），明确加快推进煤炭高质量发展，发挥煤炭在能源供应体系中的基础保障和系统调节作用。</p>
             <div class="card-meta">
               <span class="meta-cat">📜 政策发布</span>
               <span class="meta-src">📰 国家发改委</span>
@@ -1590,7 +1513,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">26</div>
+          <div class="card-idx">24</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">AI硬件需求强劲 台积电7月营业额同比大增45%<span class="tag-today">🆕 今日</span></h3>
@@ -1607,7 +1530,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">27</div>
+          <div class="card-idx">25</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">一批重要国家标准发布 涉及高新技术领域、传统产业、安全生产等<span class="tag-today">🆕 今日</span></h3>
@@ -1624,7 +1547,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">28</div>
+          <div class="card-idx">26</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">从“不敢接单”到“产线全开” 数字技改助推企业突破产业空间瓶颈发展“加速跑”<span class="tag-today">🆕 今日</span></h3>
@@ -1641,7 +1564,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">29</div>
+          <div class="card-idx">27</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">共享智造助力河北激活产业集群新活力<span class="tag-today">🆕 今日</span></h3>
@@ -1658,7 +1581,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">30</div>
+          <div class="card-idx">28</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">受贿近6800万人民币 中国一重集团原副总经理陆文俊一审获刑15年<span class="tag-today">🆕 今日</span></h3>
@@ -1675,7 +1598,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">31</div>
+          <div class="card-idx">29</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">澳洲加强审查涉华稀土项目投资者<span class="tag-today">🆕 今日</span></h3>
@@ -1692,7 +1615,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-11">
-          <div class="card-idx">32</div>
+          <div class="card-idx">30</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">电影产业观察 | “电影大餐”全球共享 从内容输出迈向技术、制版服务、标准体系协同出海<span class="tag-today">🆕 今日</span></h3>
@@ -2082,42 +2005,8 @@
               <span class="meta-imp">权重 95</span>
             </div>
           </div>
-        </div><div class="card imp-summit" data-cat="高层动态" data-date="2026-08-11">
-          <div class="card-idx">2</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">潮起渤海湾 奋楫“十五五”——党中央国务院邀请优秀专家人才代表北戴河休假侧记<span class="tag-today">🆕 今日</span></h3>
-              <div class="card-meta-right">
-                <span class="date-badge today">📅 2026-08-11</span>
-                <a class="card-link" href="https://www.gov.cn/yaowen/liebiao/202608/content_7077772.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">夏日的北戴河，海天寥廓，碧波万顷。</p>
-            <div class="card-meta">
-              <span class="meta-cat">🧭 高层动态</span>
-              <span class="meta-src">📰 中国政府网·要闻</span>
-              <span class="meta-imp">权重 95</span>
-            </div>
-          </div>
         </div></div><div class="cat-panel" id="cat-panel-2026-08-11-重要会议"><div class="card imp-high" data-cat="重要会议" data-date="2026-08-11">
           <div class="card-idx">1</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">“每日读画”三百期座谈会在京举办<span class="tag-today">🆕 今日</span></h3>
-              <div class="card-meta-right">
-                <span class="date-badge today">📅 2026-08-11</span>
-                <a class="card-link" href="http://paper.people.com.cn/rmrb/pc/content/202608/11/content_30174306.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">本报北京8月10日电&amp;nbsp;&amp;nbsp;（记者马苏薇）为进一步深入学习贯彻习近平文化思想，加强和改进人民日报文艺宣传报道，深化主流媒体系统性变革，近日，“每日读画”300期座谈会在人民日报社举办。…</p>
-            <div class="card-meta">
-              <span class="meta-cat">🏛 重要会议</span>
-              <span class="meta-src">📰 人民日报</span>
-              <span class="meta-imp">权重 88</span>
-            </div>
-          </div>
-        </div><div class="card imp-high" data-cat="重要会议" data-date="2026-08-11">
-          <div class="card-idx">2</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">2026年深圳APEC峰会进入倒计时100天！<span class="tag-today">🆕 今日</span></h3>
@@ -2143,7 +2032,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9500295" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">外交部发言人郭嘉昆回应称，全国移民管理机构持续深化在华&quot;三非&quot;外国人治理专项行动，百余名菲律宾公民因非法就业、非法居留被依法处理，过程中保障了涉案外籍人员权益。</p>
             <div class="card-meta">
               <span class="meta-cat">📋 人事任免</span>
               <span class="meta-src">📰 联合早报</span>
@@ -2177,7 +2066,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260810-9498173" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">新疆生产建设兵团生态环境局原党组书记、局长吴彬涉嫌严重违纪违法，正接受兵团纪委监委纪律审查和监察调查。吴彬现年56岁，曾任新疆天业集团董事长，2017年当选中共十九大代表。</p>
             <div class="card-meta">
               <span class="meta-cat">📋 人事任免</span>
               <span class="meta-src">📰 联合早报</span>
@@ -2194,7 +2083,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9499821" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">中国决定对从美国和墨西哥进口的碧根果征收反倾销保证金（美国54.3%、墨西哥17.8%-51.6%），自8月11日起实施临时反倾销措施，给中美贸易关系增添新摩擦。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 联合早报</span>
@@ -2211,7 +2100,7 @@
                 <a class="card-link" href="https://www.zaobao.com/news/china/story20260811-9499842" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">针对印度公布阿鲁纳恰尔邦27处地点“标准名称”，外交部发言人郭嘉昆回应称，印方做法非法无效，中方从不承认印度非法设立的所谓“阿鲁纳恰尔邦”，改变不了藏南地区属于中国的事实。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 联合早报</span>
@@ -2245,7 +2134,7 @@
                 <a class="card-link" href="https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_c3d812a75499429ab0acc4e6b000bf0d.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">商务部就对美墨碧根果反倾销初裁答记者问：经调查初步证据表明存在倾销，认定墨方公司倾销幅度17.8%-51.6%，因美方无人应诉裁定美国公司倾销幅度为54.3%，8月10日实施临时反倾销措施。</p>
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 商务部</span>
@@ -2381,7 +2270,7 @@
                 <a class="card-link" href="https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html" target="_blank" rel="noopener noreferrer">原文 ↗</a>
               </div>
             </div>
-            
+            <p class="card-summary">国家发展改革委、国家能源局印发《煤炭工业发展“十五五”规划》（发改能源〔2026〕979号），明确加快推进煤炭高质量发展，发挥煤炭在能源供应体系中的基础保障和系统调节作用。</p>
             <div class="card-meta">
               <span class="meta-cat">📜 政策发布</span>
               <span class="meta-src">📰 国家发改委</span>
