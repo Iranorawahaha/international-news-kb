@@ -41,6 +41,22 @@ NC='\033[0m'
 PROJECT_DIR="/Users/xiaoxiao/WorkBuddy/2026-07-29-17-06-50"
 GH_PAGES_DIR="$PROJECT_DIR/gh-pages"
 
+# ⭐ 并发防护 (V1.3.1 2026-08-11): pid 锁
+# 防止自动化系统重试与手动执行并发运行时互相覆盖数据（曾因并发丢失 webfetch 数据）
+LOCK_FILE="$PROJECT_DIR/.update-news.lock"
+if [ -f "$LOCK_FILE" ]; then
+    _lock_pid=$(cat "$LOCK_FILE" 2>/dev/null || echo "")
+    if [ -n "$_lock_pid" ] && kill -0 "$_lock_pid" 2>/dev/null; then
+        echo -e "${RED}❌ 检测到另一个 update-news.sh 正在运行 (PID $_lock_pid)。"
+        echo -e "${RED}   为避免并发覆盖数据，本次执行退出。请等待其完成后重试。${NC}"
+        exit 1
+    fi
+    echo -e "${YELLOW}⚠️ 清理残留锁文件（PID $_lock_pid 已不存在）${NC}"
+    rm -f "$LOCK_FILE"
+fi
+echo $$ > "$LOCK_FILE"
+trap 'rm -f "$LOCK_FILE"' EXIT INT TERM
+
 echo -e "${CYAN}╔══════════════════════════════════════════════════╗${NC}"
 echo -e "${CYAN}║   🌍 国际新闻看板 - 一键更新系统 V1.3           ${NC}"
 if [ "$AUTO_MODE" = "1" ]; then

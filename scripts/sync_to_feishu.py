@@ -214,55 +214,95 @@ def get_existing_unique_keys():
     获取飞书中已有的 (title[:30], source) 唯一键集合
     用于去重判断，避免重复同步相同新闻
 
+    V1.2.2 修复 (2026-08-11):
+      lark-cli 1.0.82 不再支持 --format csv（validation error）
+      → 改用 --format json + 分页(offset) 解析 data.data 二维数组
+      → 列名动态映射（中文标题/来源），兼容字段顺序变化
+      → 网络抖动自动重试（3次）
+
     Returns:
         set: 已存在的唯一键集合 {(title, source), ...}
     """
     import subprocess
     import re
+    import time
 
     print("  📋 正在查询飞书表已有记录（用于去重）...")
 
-    cmd = [
-        'lark-cli', 'base', '+record-list',
-        '--base-token', FEISHU_BASE_TOKEN,
-        '--table-id', FEISHU_TABLE_ID,
-        '--page-size', '100',
-        '--format', 'csv'  # 使用CSV格式便于解析
-    ]
+    def _extract_cell(v):
+        """解析 lark-cli json 单元格值（dict/list/标量）"""
+        if isinstance(v, dict):
+            return v.get('text') or v.get('value') or ''
+        if isinstance(v, list):
+            return ' '.join(str(x.get('text', '') if isinstance(x, dict) else x) for x in v)
+        return '' if v is None else str(v)
 
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+    existing_keys = set()
+    total_rows = 0
 
-        if result.returncode != 0:
-            print(f"  ⚠️ 查询失败，跳过去重检查: {result.stderr[:100]}")
-            return set()
+    for attempt in range(1, 4):  # 网络抖动重试 3 次
+        offset = 0
+        try:
+            while True:
+                cmd = [
+                    'lark-cli', 'base', '+record-list',
+                    '--base-token', FEISHU_BASE_TOKEN,
+                    '--table-id', FEISHU_TABLE_ID,
+                    '--as', 'user',
+                    '--limit', '200',
+                    '--offset', str(offset),
+                    '--format', 'json'
+                ]
+                result = subprocess.run(cmd, capture_output=True, text=True, timeout=90)
 
-        # 解析CSV输出，提取中文标题(第10列)和来源(第13列)
-        existing_keys = set()
-        lines = result.stdout.strip().split('\n')
+                if result.returncode != 0:
+                    print(f"  ⚠️ 查询失败(rc={result.returncode})，跳过去重检查: {result.stderr[:120]}")
+                    return set()
 
-        for line in lines[2:]:  # 跳过前2行header
-            if not line.strip() or '| recv' not in line:
-                continue
+                try:
+                    payload = json.loads(result.stdout)
+                except json.JSONDecodeError:
+                    print(f"  ⚠️ 输出 JSON 解析失败（第 {attempt} 次重试）")
+                    break  # 跳出 while，进入外层重试
 
-            parts = [p.strip() for p in line.split('|')[1:-1]]
-            if len(parts) >= 13:
-                title_zh = parts[9]          # 中文标题（第10列）
-                source_raw = parts[12]       # 来源（第13列）
+                if not payload.get('ok'):
+                    print(f"  ⚠️ API错误: {payload.get('error', {}).get('message', '')[:120]}，跳过去重检查")
+                    return set()
 
-                # 清理字段值
-                title_clean = title_zh[:30].strip() if title_zh else ''
-                source_clean = re.sub(r'[\[\]"\'\"]', '', source_raw).strip() if source_raw else ''
+                data_node = payload.get('data', {})
+                fields = data_node.get('fields', [])
+                rows = data_node.get('data', [])
 
-                if title_clean and source_clean:
-                    existing_keys.add((title_clean, source_clean))
+                # 动态定位列索引（不硬编码，兼容字段顺序变化）
+                try:
+                    idx_title = fields.index('中文标题')
+                    idx_source = fields.index('来源')
+                except ValueError:
+                    print("  ⚠️ 未找到字段列（中文标题/来源），跳过去重检查")
+                    return set()
 
-        print(f"  ✅ 查询完成，飞书表已有 {len(existing_keys)} 条唯一记录")
-        return existing_keys
+                for row in rows:
+                    if len(row) <= max(idx_title, idx_source):
+                        continue
+                    title_clean = _extract_cell(row[idx_title])[:30].strip()
+                    source_clean = re.sub(r'[\[\]"\'\"]', '', _extract_cell(row[idx_source])).strip()
+                    if title_clean and source_clean:
+                        existing_keys.add((title_clean, source_clean))
+                        total_rows += 1
 
-    except Exception as e:
-        print(f"  ⚠️ 查询异常，跳过去重检查: {e}")
-        return set()
+                if not data_node.get('has_more') or not rows:
+                    break
+                offset += len(rows)
+
+            print(f"  ✅ 查询完成，飞书表已有 {total_rows} 条记录（{len(existing_keys)} 组唯一键）")
+            return existing_keys
+
+        except Exception as e:
+            print(f"  ⚠️ 查询异常（{e}），第 {attempt} 次重试...")
+            time.sleep(2)
+
+    print("  ⚠️ 重试3次仍失败，跳过去重检查")
+    return set()
 
 
 def deduplicate_articles(articles, existing_keys):

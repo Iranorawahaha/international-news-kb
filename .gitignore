@@ -4,3 +4,4 @@ node_modules/
 *.backup.*
 data/.feishu_config
 data/config.json
+.update-news.lock
