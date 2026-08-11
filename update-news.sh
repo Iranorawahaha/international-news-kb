@@ -699,7 +699,7 @@ try:
         data['stats']['latestDate'] = max(data['archive'].keys())
         data['today'] = _today
 
-    # V2.7 美伊冲突降维：每日期组内 ≥4篇纯美伊（无涉华）→ 仅留 top 3 高优，其余降中
+    # V2.7 美伊冲突降维：每日期组内 ≥3篇纯美伊（无涉华）→ 仅留 top 2 高优，其余降中
     _iran_kw = ['iran', '伊朗', '德黑兰', '霍尔木兹', 'strait of hormuz']
     _china_kw = ['china', '中国', '北京', 'beijing', 'scmp', '中方', '华春莹', '毛宁', '林剑']
     _v27_dedup = 0
@@ -712,15 +712,15 @@ try:
                 _iran_only.append(_a)
             else:
                 _rest.append(_a)
-        if len(_iran_only) >= 4:
+        if len(_iran_only) >= 3:
             _iran_only.sort(key=lambda a: -a.get('priority_score', 0))
-            for _a in _iran_only[3:]:
+            for _a in _iran_only[2:]:
                 _a['priority_score'] = min(_a['priority_score'], 65)
                 _a['importance'] = 'medium'
                 _v27_dedup += 1
     if _v27_dedup:
         data['stats']['totalArticles'] = sum(len(v) for v in data['archive'].values())
-        print(f"  🛡️ V2.7 美伊降维: {_v27_dedup} 篇→中优")
+        print(f"  🛡️ V2.7 美伊降维: {_v27_dedup} 篇→中优（top 2）")
 
     save_data(data)
     if _ff_added or _ff_upgraded:
