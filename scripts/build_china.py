@@ -45,6 +45,10 @@ def build():
     # 7 类分类体系（v5）
     cat_order = ["元首动态", "高层动态", "重要会议", "人事任免", "部委动态", "政策发布", "经贸动向"]
 
+    # V5.4 安全网：确保每组内按 priority_score 降序排列
+    for d in archive:
+        archive[d].sort(key=lambda x: (-x["priority_score"], x["title"]))
+
     # 分类计数
     per_cat = {}
     for d in dates:
