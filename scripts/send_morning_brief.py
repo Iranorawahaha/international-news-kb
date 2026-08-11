@@ -306,11 +306,53 @@ def build_email_html(intl, dom, intl_today, dom_total):
       </td>
     </tr>
 
+    <!-- 看板入口 -->
+    <tr><td style="height:20px;"></td></tr>
+    <tr>
+      <td style="padding:0 20px;">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr>
+            <td width="33%" style="padding-right:8px; vertical-align:top;">
+              <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html" target="_blank" style="text-decoration:none;">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr><td style="padding:14px 10px; background:#ffffff; border:1px solid #e5e7eb; border-left:3px solid #1e3a8a; text-align:center;">
+                    <p style="margin:0 0 4px 0; font-size:22px;">&#127758;</p>
+                    <p style="margin:0; font-size:12px; font-weight:700; color:#1e3a8a;">国际看板</p>
+                  </td></tr>
+                </table>
+              </a>
+            </td>
+            <td width="33%" style="padding-right:8px; vertical-align:top;">
+              <a href="https://iranorawahaha.github.io/international-news-kb/china-news.html" target="_blank" style="text-decoration:none;">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr><td style="padding:14px 10px; background:#ffffff; border:1px solid #e5e7eb; border-left:3px solid #dc2626; text-align:center;">
+                    <p style="margin:0 0 4px 0; font-size:22px;">&#127464;&#127475;</p>
+                    <p style="margin:0; font-size:12px; font-weight:700; color:#dc2626;">国内看板</p>
+                  </td></tr>
+                </table>
+              </a>
+            </td>
+            <td width="33%" style="vertical-align:top;">
+              <a href="https://iranorawahaha.github.io/international-news-kb/ai-news.html" target="_blank" style="text-decoration:none;">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr><td style="padding:14px 10px; background:#ffffff; border:1px solid #e5e7eb; border-left:3px solid #7c3aed; text-align:center;">
+                    <p style="margin:0 0 4px 0; font-size:22px;">&#129302;</p>
+                    <p style="margin:0; font-size:12px; font-weight:700; color:#7c3aed;">AI 看板</p>
+                  </td></tr>
+                </table>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
     <!-- 底部 -->
     <tr><td style="height:20px;"></td></tr>
     <tr>
       <td align="center" style="padding:20px; background:#1a1a2e; font-size:11px; color:#9ca3af; line-height:1.8;">
         <p style="margin:0 0 6px 0;" dir="ltr">&#128238; Ira 信息看板 &middot; 每日自动生成 &middot; 仅供参考交流</p>
+        <p style="margin:0;" dir="ltr"><a href="https://iranorawahaha.github.io/international-news-kb/" target="_blank" style="color:#9ca3af;">irano...haha.github.io/international-news-kb</a></p>
       </td>
     </tr>
   </table>
