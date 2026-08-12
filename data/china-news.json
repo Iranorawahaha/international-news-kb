@@ -1,8 +1,364 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-08-11 11:53",
+  "lastUpdated": "2026-08-12 09:20",
   "retentionDays": 7,
   "archive": {
+    "2026-08-12": [
+      {
+        "title": "看图学习丨抓好经济工作 总书记强调统筹好这几对重要关系",
+        "url": "https://news.cctv.com/2026/08/12/ARTIZKb09pUDKFG271EuzOjF260812.shtml",
+        "date": "2026-08-12",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "党的十八大以来，以习近平同志为核心的党中央不断深化对经济工作的规律性认识，提出一系列新理念新思想新战略，形成习近平经济思想，引领我国经济社会发展取得历史性成就、发生历史性变革。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "市场监管总局批准发布338项重要国家标准",
+        "url": "https://www.gov.cn/lianbo/202608/content_7077923.htm",
+        "date": "2026-08-12",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "近日，市场监管总局（国家标准委）批准发布338项重要国家标准。其中，强制性国家标准15项，推荐性国家标准323项。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "美国批试射导弹前未给予充分通知 中国：始终安全规范开展试射",
+        "url": "https://www.zaobao.com/news/china/story20260812-9505344",
+        "date": "2026-08-12",
+        "source": "联合早报",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "中国经济向新向优向好的内在逻辑",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/12/content_30174425.html",
+        "date": "2026-08-12",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "7月30日，习近平总书记主持中共中央政治局会议。会议指出：“增强发展动力、激发社会活力，推动经济持续向新向优向好发展，努力实现‘十五五’良好开局。”",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "为智能充电桩设计“大脑”（新质生产力创造就业新空间）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/12/content_30174371.html",
+        "date": "2026-08-12",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "近年来，新能源汽车产业加速发展，截至今年上半年，全国新能源汽车保有量达4897万辆，与之配套的智能充电桩成为“刚需”。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "推动计量支撑产业新质生产力发展",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/12/content_30174375.html",
+        "date": "2026-08-12",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "本报北京8月11日电&nbsp;&nbsp;（记者林丽鹂）市场监管总局、工业和信息化部近日联合印发通知，公开征集2026年度计量支撑产业新质生产力发展项目。此举旨在深入贯彻落实《计量支撑产业新质生产力…",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "透过数据感知中国经济发展活力",
+        "url": "https://news.cctv.com/2026/08/12/ARTI2JYF7Ov4T7A3k3STWgr8260812.shtml",
+        "date": "2026-08-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "我们通过一组最新发布的数据，来感受中国经济发展的活力。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "习近平就哥伦比亚发生强烈地震向哥伦比亚总统德拉埃斯普列亚致慰问电",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077895.htm",
+        "date": "2026-08-12",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京8月11日电 8月11日，国家主席习近平就哥伦比亚发生强烈地震向哥伦比亚总统德拉埃斯普列亚致慰问电。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "习近平就哥伦比亚发生强烈地震向哥伦比亚总统致慰问电",
+        "url": "https://tv.cctv.com/2026/08/11/VIDEO2g6bRMoszRKBRrhYA2u260811.shtml",
+        "date": "2026-08-12",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平就哥伦比亚发生强烈地震向哥伦比亚总统致慰问电。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "哥伦比亚7.4级地震已致132死 习近平致慰问电表示深切哀悼",
+        "url": "https://www.zaobao.com/news/china/story20260811-9503519",
+        "date": "2026-08-12",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "拾光纪·实现高质量发展，总书记多次强调因地制宜",
+        "url": "https://news.cctv.com/2026/08/11/ARTIhVVL7s1XQegqhhrHDIye260811.shtml",
+        "date": "2026-08-12",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "“因地制宜，本质是实事求是。”放眼“十五五”时期，我国发展环境面临深刻复杂变化，许多矛盾问题的破解没有先例可循。面对新情况、遇到新问题，如何实现高质量发展？习近平总书记多次强调因地制宜的工作方法。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "国务院办公厅关于重点林区“十五五”期间森林年采伐限额的复函",
+        "url": "https://www.gov.cn/zhengce/content/202608/content_7077887.htm",
+        "date": "2026-08-12",
+        "source": "中国政府网·要闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "000014349/2026-00062",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "台北市发言人请辞隔日 涉台中市府泄密案被查获准交保",
+        "url": "https://www.zaobao.com/news/china/story20260811-9503084",
+        "date": "2026-08-12",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "2026年8月11日外交部发言人郭嘉昆答记者问（2026-08-11）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260811_12002214.shtml",
+        "date": "2026-08-12",
+        "source": "外交部",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "多部门联合印发《生态保护“十五五”规划》",
+        "url": "https://www.gov.cn/lianbo/202608/content_7077905.htm",
+        "date": "2026-08-12",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "新华社北京8月11日电（记者 高敬）生态环境部、自然资源部等部门日前联合印发的《生态保护“十五五”规划》提出，到2030年，生态空间格局持续优化，生态质量稳步改善，生物多样性丧失趋势得到有效缓解，优质…",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "AI从展台上“概念热词”变街头巷尾“消费日常” “AI+消费”加速驶入“快车道”",
+        "url": "https://news.cctv.com/2026/08/11/ARTIexTKiScE8FZyIUbROhQJ260811.shtml",
+        "date": "2026-08-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "消费是推动经济增长和经济发展的基础性力量。《扩大消费“十五五”规划》提出，将“培育打造消费新业态新模式新场景”作为贯穿各领域的主线，并明确提出深入推进“人工智能+消费”。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "三伏天里“反季订单”火爆 传统产业凭借“智”造升级抢占全球市场",
+        "url": "https://news.cctv.com/2026/08/11/ARTIOT4fo2h4Ic303T80jxkR260811.shtml",
+        "date": "2026-08-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "眼下，三伏未过，暑气正浓，当不少消费者还在采购避暑用品的时候，一些生产冬季用品的主产地则早已开启了热火朝天的“反季赶单模式”。作为“中国手套名城”，山东济宁嘉祥的滑雪手套在国内市场占有率超60%，出口…",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "分析师：人民币兑美元下月或重新走强",
+        "url": "https://www.zaobao.com/news/china/story20260811-9503020",
+        "date": "2026-08-12",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "受贿2.6亿余人民币 南京市人大常委会原主任龙翔被判死缓",
+        "url": "https://www.zaobao.com/news/china/story20260811-9503455",
+        "date": "2026-08-12",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "我国将加快打造现代煤炭产业体系",
+        "url": "https://news.cctv.com/2026/08/11/ARTINBKqtkv9TgJ6xXL93cPG260811.shtml",
+        "date": "2026-08-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "“十五五”时期，我国将进一步优化煤炭开发布局，持续推进煤炭供应保障基地建设，完善煤炭跨区调运格局。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "金融监管总局：保险业对近期重大自然灾害累计已赔付76亿元",
+        "url": "https://news.cctv.com/2026/08/11/ARTI6uR5Nt0icBFE5BuHEqms260811.shtml",
+        "date": "2026-08-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者今天（11日）从金融监管总局了解到，今年第13号台风“白海豚”在浙江登陆后，金融监管总局指导浙江等金融监管局，组织保险业开通绿色通道，开展预警救援和保险理赔等服务工作。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "长征七号发射失败后朱雀三号推迟 分析：投资者情绪放大关联性",
+        "url": "https://www.zaobao.com/news/china/story20260811-9503807",
+        "date": "2026-08-12",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      }
+    ],
+    "2026-08-10": [
+      {
+        "title": "总书记治国理政故事｜“我是人民的勤务员”",
+        "url": "https://news.cctv.com/2026/08/10/ARTIJqMfijICLqu6pC8tig3b260810.shtml",
+        "date": "2026-08-10",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "2013年11月，湘西十八洞村。习近平总书记走进黑黢黢的木屋，握住苗族大姐石拔三的手，脱口而出的“自我介绍”让人心头一热。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "潮起渤海湾 奋楫“十五五”——党中央国务院邀请优秀专家人才代表北戴河休假侧记",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077772.htm",
+        "date": "2026-08-10",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "夏日的北戴河，海天寥廓，碧波万顷。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "商务部新闻发言人就对原产于墨西哥和美国的进口碧根果反倾销调查初裁答记者问",
+        "url": "https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_c3d812a75499429ab0acc4e6b000bf0d.html",
+        "date": "2026-08-10",
+        "source": "商务部",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "国务院任免国家工作人员（2026年8月10日）",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077797.htm",
+        "date": "2026-08-10",
+        "source": "中国政府网·要闻",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "任命孙硕鹏为民政部副部长；任命蒋玮（女）为中国老龄协会会长。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "2026年8月10日外交部发言人郭嘉昆答记者问（2026-08-10）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260810_12001512.shtml",
+        "date": "2026-08-10",
+        "source": "外交部",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "7月先行指标折射经济稳中向优态势明显",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077851.htm",
+        "date": "2026-08-10",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "国家发展改革委国家信息中心最新数据显示，7月份多领域先行指标平稳向好，经济稳中向优态势明显。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "上半年生成式人工智能领域新设企业增长28.0%",
+        "url": "https://www.gov.cn/lianbo/202608/content_7077773.htm",
+        "date": "2026-08-10",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "市场监管总局公布的数据显示：上半年，全国新设“8大新兴产业+9大未来产业”相关企业56.1万户，保持稳定增长态势，为推动新质生产力发展注入源头活水。其中，生成式人工智能领域新设企业5.5万户，同比增长…",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "两部门发文提出到2030年我国现代煤炭产业体系基本建成",
+        "url": "https://www.gov.cn/lianbo/202608/content_7077803.htm",
+        "date": "2026-08-10",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "新华社北京8月10日电（记者 王悦阳）记者8月10日从国家能源局获悉，国家发展改革委、国家能源局日前印发的《煤炭工业发展“十五五”规划》提出，到2030年基本建成现代煤炭产业体系等主要目标。",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "关于印发《煤炭工业发展“十五五”规划》的通知",
+        "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html",
+        "date": "2026-08-10",
+        "source": "国家发改委",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-12 09:20:30"
+      },
+      {
+        "title": "共享智造助力河北激活产业集群新活力",
+        "url": "https://news.cctv.com/2026/08/10/ARTIs4qUY5QXhDnLGdn1Jzes260810.shtml",
+        "date": "2026-08-10",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "“十五五”规划纲要提出因地制宜建设各具特色、优势互补的战略性新兴产业集群。",
+        "collectedAt": "2026-08-12 09:20:30"
+      }
+    ],
     "2026-08-09": [
       {
         "title": "一诺千金 笃行致远——中国元首外交的世界情怀与大国气派",
@@ -13,7 +369,7 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "“我在北京APEC会议上向全世界宣布的‘APEC蓝’没有食言，实现了。”2025年举行的中央城市工作会议上，习近平主席这样说。",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       },
       {
         "title": "我国加快推进算力网建设",
@@ -24,7 +380,7 @@
         "priority_score": 88,
         "is_summit_level": false,
         "summary": "今年以来，全国一体化算力网加快建设，算力底座进一步夯实，更好赋能产业创新发展。",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       }
     ],
     "2026-08-08": [
@@ -37,7 +393,7 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "“世界上最宽阔的是海洋，比海洋更宽阔的是天空，比天空更宽阔的是人的胸怀。对待不同文明，我们需要比天空更宽阔的胸怀”。",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       },
       {
         "title": "前7月我国货物贸易进出口同比增长17.3%",
@@ -48,7 +404,7 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "从贸易伙伴看，前7月，我国与东盟贸易总值为5.14万亿元，同比增长20%；我国与欧盟贸易总值为3.67万亿元，同比增长9.5%。同期，我国对共建“一带一路”国家合计进出口15.36万亿元，同比增长15…",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       }
     ],
     "2026-08-07": [
@@ -61,7 +417,7 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "“友谊可是件大事，一个友谊的世界才可能是和平的世界。”",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       },
       {
         "title": "最是真情暖人心——中国元首外交的世界情怀与大国气派",
@@ -72,18 +428,7 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "“国之交在于民相亲，民相亲在于心相通。”“交往多了，感情深了，心与心才能贴得更近。”",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "中国官方首度披露再有六名军方将领涉严重违纪违法",
-        "url": "https://www.zaobao.com/news/china/story20260807-9484317",
-        "date": "2026-08-07",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       },
       {
         "title": "2026年8月7日外交部发言人林剑答记者问（2026-08-07）",
@@ -94,7 +439,7 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       },
       {
         "title": "图表：我国外贸进出口规模连续5个月超过4万亿元",
@@ -105,7 +450,7 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "主办单位：国务院办公厅 运行维护单位：中国政府网运行中心",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       },
       {
         "title": "《民用航空发展“十五五”规划》发布",
@@ -116,7 +461,7 @@
         "priority_score": 80,
         "is_summit_level": false,
         "summary": "新华社北京8月7日电（记者 王聿昊）中国民航局7日对外发布《民用航空发展“十五五”规划》，明确到2030年，民航行业安全水平、服务能力、基础设施率先迈向国际一流，技术创新、绿色低碳、治理能力实现重大突…",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       }
     ],
     "2026-08-06": [
@@ -129,7 +474,7 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "2026年，世界瞩望亚太经合组织（APEC）历史上又一个“中国时刻”。",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       },
       {
         "title": "2026年8月6日外交部发言人林剑答记者问（2026-08-06）",
@@ -140,7 +485,7 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       },
       {
         "title": "我国吸引外资结构进一步向新向好",
@@ -151,435 +496,24 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "今年以来，我国吸收外资回稳向好，特别是高技术产业吸引外资持续快速增长，外资企业加大对中国新产业、新赛道的投资力度，推动引资结构进一步向新向好。",
-        "collectedAt": "2026-08-11 11:53:55"
-      }
-    ],
-    "2026-08-05": [
-      {
-        "title": "“以天下之利为利”——中国元首外交的世界情怀与大国气派",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077550.htm",
-        "date": "2026-08-05",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "“各国共同发展才是真发展。世界繁荣稳定不可能建立在贫者愈贫、富者愈富的基础之上。每个国家都想过上好日子，现代化不是哪个国家的特权。”",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "中国气象局联合发改委印发《国家综合气象观测系统建设“十五五”规划》",
-        "url": "https://www.gov.cn/lianbo/202608/content_7077552.htm",
-        "date": "2026-08-05",
-        "source": "中国政府网·要闻",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "近日，经国务院批准，中国气象局与国家发展和改革委员会联合印发《国家综合气象观测系统建设“十五五”规划》（以下简称《规划》），对未来五年国家综合气象观测系统建设作出部署。《规划》着眼气象防灾减灾和经济社…",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "商务部新闻发言人就对相关进口打印复印办公设备发起对外贸易国家安全调查答记者问",
-        "url": "https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_fbfc500fbaa2459495caafae0c0f9b17.html",
-        "date": "2026-08-05",
-        "source": "商务部",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "商务部新闻发言人就对美国联邦通信委员会、美国土安全部系列涉华消极措施实施反制答记者问",
-        "url": "https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_e247be3a58d7425e9cfd0813ae7c2695.html",
-        "date": "2026-08-05",
-        "source": "商务部",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "2026年8月5日外交部发言人林剑答记者问（2026-08-05）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260805_11999004.shtml",
-        "date": "2026-08-05",
-        "source": "外交部",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "上半年产业创新活力进一步激发",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077565.htm",
-        "date": "2026-08-05",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "国家税务总局发布的税收数据显示，今年上半年，全国支持科技创新和制造业发展政策减税降费及退税超1.9万亿元，政策红利持续释放，传统产业转型提速，新兴产业增势强劲，创新发展活力进一步激发。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "上半年我国服务进出口总额实现较快增长",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077568.htm",
-        "date": "2026-08-05",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "商务部发布的数据显示，今年上半年，我国服务进出口总额37797.5亿元，同比增长8.3%。其中，服务出口同比增长了17.6%，进口同比增长2.9%。来自中国的优质服务正在加快走向全球。",
-        "collectedAt": "2026-08-11 11:53:55"
-      }
-    ],
-    "2026-08-11": [
-      {
-        "title": "总书记治国理政故事｜“我是人民的勤务员”",
-        "url": "https://news.cctv.com/2026/08/10/ARTIJqMfijICLqu6pC8tig3b260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "2013年11月，湘西十八洞村。习近平总书记走进黑黢黢的木屋，握住苗族大姐石拔三的手，脱口而出的“自我介绍”让人心头一热。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "清华副教授袁洋是今年北戴河最年轻受邀专家",
-        "url": "https://www.zaobao.com/news/china/story20260811-9500018",
-        "date": "2026-08-11",
-        "source": "联合早报",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "2026年深圳APEC峰会进入倒计时100天！",
-        "url": "https://news.cctv.com/2026/08/10/ARTIdB4u4bj4y9EWkW5pOhnS260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "重要会议",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "今天，亚太经合组织（APEC）第三十三次领导人非正式会议进入倒计时100天。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "中国对美碧根果征反倾销保证金",
-        "url": "https://www.zaobao.com/news/china/story20260811-9499821",
-        "date": "2026-08-11",
-        "source": "联合早报",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "商务部新闻发言人就对原产于墨西哥和美国的进口碧根果反倾销调查初裁答记者问",
-        "url": "https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_c3d812a75499429ab0acc4e6b000bf0d.html",
-        "date": "2026-08-11",
-        "source": "商务部",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "中国外交部：逾百名菲公民涉非法就业和居留被查处",
-        "url": "https://www.zaobao.com/news/china/story20260811-9500295",
-        "date": "2026-08-11",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "国务院任免国家工作人员（2026年8月10日）",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077797.htm",
-        "date": "2026-08-11",
-        "source": "中国政府网·要闻",
-        "category": "人事任免",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "summary": "任命孙硕鹏为民政部副部长；任命蒋玮（女）为中国老龄协会会长。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "新疆生产建设兵团生态环境局原局长吴彬被查",
-        "url": "https://www.zaobao.com/news/china/story20260810-9498173",
-        "date": "2026-08-11",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "2026年8月10日外交部发言人郭嘉昆答记者问（2026-08-10）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260810_12001512.shtml",
-        "date": "2026-08-11",
-        "source": "外交部",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "7月先行指标折射经济稳中向优态势明显",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077851.htm",
-        "date": "2026-08-11",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "国家发展改革委国家信息中心最新数据显示，7月份多领域先行指标平稳向好，经济稳中向优态势明显。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "上半年生成式人工智能领域新设企业增长28.0%",
-        "url": "https://www.gov.cn/lianbo/202608/content_7077773.htm",
-        "date": "2026-08-11",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "市场监管总局公布的数据显示：上半年，全国新设“8大新兴产业+9大未来产业”相关企业56.1万户，保持稳定增长态势，为推动新质生产力发展注入源头活水。其中，生成式人工智能领域新设企业5.5万户，同比增长…",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "两部门发文提出到2030年我国现代煤炭产业体系基本建成",
-        "url": "https://www.gov.cn/lianbo/202608/content_7077803.htm",
-        "date": "2026-08-11",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "新华社北京8月10日电（记者 王悦阳）记者8月10日从国家能源局获悉，国家发展改革委、国家能源局日前印发的《煤炭工业发展“十五五”规划》提出，到2030年基本建成现代煤炭产业体系等主要目标。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "中国外交部：印度公布“标准名称”改变不了藏南属中国事实",
-        "url": "https://www.zaobao.com/news/china/story20260811-9499842",
-        "date": "2026-08-11",
-        "source": "联合早报",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "伊朗外交部发言人：美国对制裁“病态依赖”",
-        "url": "https://news.cctv.com/2026/08/11/ARTIStcq1NGCDtjV5tHZaySI260811.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "伊朗外交部发言人巴加埃10日在社交媒体发文说，美国财政部长贝森特鼓吹通过经济制裁“扼杀”伊朗，凸显了美国对制裁的“病态依赖”。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "商务部：初步认定原产于墨西哥和美国的进口碧根果存在倾销",
-        "url": "https://news.cctv.com/2026/08/10/ARTIovArxpIn2xHRuwe6OZZx260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "根据《中华人民共和国反倾销条例》（以下简称《反倾销条例》）的规定，2025年9月25日，商务部（以下称调查机关）发布2025年第52号公告，决定对原产于墨西哥和美国的进口碧根果（以下称被调查产品）进行…",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "外交部：奉劝美方尽早解除对古巴的制裁封锁 不要一再向他人“泼脏水”",
-        "url": "https://news.cctv.com/2026/08/10/ARTIUfRmI0lLsYxgOVsV5bkn260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "8月10日外交部发言人郭嘉昆答记者问。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "外交部：百余名菲律宾公民因非法就业、非法居留被依法处理",
-        "url": "https://news.cctv.com/2026/08/10/ARTIvk3UDQZhf1LTvIfUmJlr260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "郭嘉昆表示，全国移民管理机构持续深化在华“三非”外国人治理，依法开展专项行动。百余名菲律宾公民因非法就业、非法居留被依法处理。在专项行动过程中，移民管理工作人员规范文明执法，保障了涉案外籍人员的权益。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "外交部：藏南地区是中国领土 印方公布所谓“标准名称”非法无效",
-        "url": "https://news.cctv.com/2026/08/10/ARTImI5UUUFlij6bBxLPVb8x260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "8月10日外交部发言人郭嘉昆答记者问。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "《中国人民银行“十五五”改革发展规划》印发",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/11/content_30174215.html",
-        "date": "2026-08-11",
-        "source": "人民日报",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "本报北京8月10日电&nbsp;&nbsp;（记者吴秋余）中国人民银行近日印发《中国人民银行“十五五”改革发展规划》，并配套制定出台了9份相关细分领域的行动方案，规划就“十五五”时期中国人民银行改革发…",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "从1.45万亿斤看粮食安全如何保障（经济新方位·解码“十五五”专项规划）",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/11/content_30174212.html",
-        "date": "2026-08-11",
-        "source": "人民日报",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "日前发布的《加快农业农村现代化“十五五”规划》，将粮食综合生产能力确定为约束性指标，明确提出粮食综合生产能力从2025年的1.39万亿斤，提升到2030年的1.45万亿斤左右。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "关于印发《煤炭工业发展“十五五”规划》的通知",
-        "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260810_1406954.html",
-        "date": "2026-08-11",
-        "source": "国家发改委",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "AI硬件需求强劲 台积电7月营业额同比大增45%",
-        "url": "https://www.zaobao.com/news/china/story20260810-9498085",
-        "date": "2026-08-11",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "一批重要国家标准发布 涉及高新技术领域、传统产业、安全生产等",
-        "url": "https://news.cctv.com/2026/08/10/ARTIC5qDKT62wvCYoz0FjImW260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "近日，市场监管总局（国家标准委）批准发布338项重要国家标准。其中，强制性国家标准15项，推荐性国家标准323项，涉及高新技术领域、传统产业、安全生产、百姓生活等方面。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "上半年完成交通固定资产投资1.5万亿元",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/11/content_30174303.html",
-        "date": "2026-08-11",
-        "source": "人民日报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "本报北京8月10日电&nbsp;&nbsp;（记者韩鑫）记者从交通运输部获悉：今年以来，在一系列重大工程带动下，我国交通固定资产投资保持高位运行，上半年，完成投资1.5万亿元，其中公路、水运分别完成投…",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "中国经济看速度更看“稳劲”",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/11/content_30174301.html",
-        "date": "2026-08-11",
-        "source": "人民日报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "稳中求进工作总基调是我们党治国理政的重要原则，也是做好经济工作的方法论。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "从“不敢接单”到“产线全开” 数字技改助推企业突破产业空间瓶颈发展“加速跑”",
-        "url": "https://news.cctv.com/2026/08/10/ARTIuyrioYeeszhgIsGR2R0B260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "拱北海关数据显示，2026年上半年，广东中山外贸进出口超1620亿元，同比增长13.1%，连续6个月保持双位数增长。亮眼数据的背后，是中山抢抓制造业数字化、智能化技术改造，为经济实现高质量发展找到了关…",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "共享智造助力河北激活产业集群新活力",
-        "url": "https://news.cctv.com/2026/08/10/ARTIs4qUY5QXhDnLGdn1Jzes260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "“十五五”规划纲要提出因地制宜建设各具特色、优势互补的战略性新兴产业集群。",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "受贿近6800万人民币 中国一重集团原副总经理陆文俊一审获刑15年",
-        "url": "https://www.zaobao.com/news/china/story20260810-9498855",
-        "date": "2026-08-11",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "澳洲加强审查涉华稀土项目投资者",
-        "url": "https://www.zaobao.com/news/china/story20260810-9498114",
-        "date": "2026-08-11",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-11 11:53:55"
-      },
-      {
-        "title": "电影产业观察 | “电影大餐”全球共享 从内容输出迈向技术、制版服务、标准体系协同出海",
-        "url": "https://news.cctv.com/2026/08/10/ARTIBzizvLrkTEt6PXETv54a260810.shtml",
-        "date": "2026-08-11",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "银幕内外，越来越多的新技术和新业态也为电影产业发展带来新空间与新方向。从“看得到”向“看得好”，观众观影需求也在加速升级，高格式、特色化影厅成为越来越多消费者的首选。",
-        "collectedAt": "2026-08-11 11:53:55"
+        "collectedAt": "2026-08-12 09:20:30"
       }
     ]
   },
   "dates": [
-    "2026-08-11",
+    "2026-08-12",
+    "2026-08-10",
     "2026-08-09",
     "2026-08-08",
     "2026-08-07",
-    "2026-08-06",
-    "2026-08-05"
+    "2026-08-06"
   ],
-  "today": "2026-08-11",
-  "todayCount": 30,
+  "today": "2026-08-12",
+  "todayCount": 22,
   "stats": {
-    "totalArticles": 50,
+    "totalArticles": 44,
     "dateCount": 6,
-    "latestDate": "2026-08-11",
-    "summitCount": 7
+    "latestDate": "2026-08-12",
+    "summitCount": 11
   }
 }
