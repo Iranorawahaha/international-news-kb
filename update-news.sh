@@ -415,6 +415,7 @@ today = datetime.now().strftime('%Y-%m-%d')
 # 尝试从基础采集输出读取新数据
 new_articles = []
 # V1.5.2: 接入美国官方信源（白宫/国务院/USTR/财政部/商务部/国防部）
+_BLOCKED = ['cnnbc.com', 'cnnbc.cn']  # V2.8 黑名单
 temp_files = ['data/news-basic.json', 'data/news-webfetch.json', 'data/us-official.json']
 
 # 官方信源导航残留过滤词（只过滤非新闻公告标题）
@@ -437,8 +438,16 @@ for temp_file in temp_files:
             print(f"  📥 从 {temp_file} 读取 {len(temp_data['articles'])} 条新闻")
         # 关键词 schema 标准化：WebFetch 返回的 keywords 是字符串（如 "k1,k2,k3"），
         # 统一转为数组，避免前端 renderTable 抛 "keywords.map is not a function" 错误
+        # V2.8: 黑名单域名拦截（cnnbc.com 等仿冒源永久丢弃）
+        new_count_before = len(new_articles)
         for art in new_articles[-len(temp_data) if isinstance(temp_data, list) else len(temp_data.get("articles", [])):]:
             if not isinstance(art, dict):
+                continue
+            _art_url = (art.get('url','') or '').lower()
+            _art_src = (art.get('source','') or '').lower()
+            if any(b in _art_url or b in _art_src for b in _BLOCKED):
+                new_articles.remove(art)
+                print(f"    🛑 V2.8 黑名单拦截: [{art.get('source','')}] {(art.get('title') or art.get('title_en',''))[:40]} | {(art.get('url',''))[:60]}")
                 continue
             kw = art.get("keywords")
             if isinstance(kw, str):
