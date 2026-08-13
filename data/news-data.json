@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-13 16:51",
+  "lastUpdated": "2026-08-13 17:02",
   "retentionDays": 7,
   "archive": {
     "2026-08-12": [
@@ -9397,33 +9397,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-13_14673",
-        "date": "2026-08-13",
-        "title": "Trump Extends US-China Tariff Truce for 90 Days 特朗普将美中关税休战延长90天至11月10日",
-        "title_en": "Trump Extends US-China Tariff Truce for 90 Days",
-        "title_zh": "特朗普将美中关税休战延长90天至11月10日",
-        "summary": "特朗普总统签署行政令，将暂停加征的对华关税（24%对等关税）再延长90天，截止日推至11月10日。此举维持美对华关税30%、中方对美10%的现状，避免税率升至54%以上。中方宣布对等延长暂停措施。此前7月双方在斯德哥尔摩谈判达成初步共识，美财政部长贝森特与中国副总理何立峰牵头磋商。",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "华尔街日报",
-        "category": "经贸制裁",
-        "keywords": [
-          "中美",
-          "关税",
-          "贸易休战",
-          "特朗普"
-        ],
-        "url": "https://cnnbc.com/trump-extends-us-china-tariff-truce-for-90-days",
-        "priority_score": 95,
-        "is_summit_level": true,
-        "importance": "中",
-        "collectedAt": "2026-08-13 16:51:36",
-        "collection_method": "legacy",
-        "column": "美国",
-        "is_official": null,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-08-13_63206",
         "date": "2026-08-13",
         "title": "US-China 'Board of Investment' stalls before expected Trump-Xi meeting 中美投资委员会在特朗普-习近平会面前停滞不前",
@@ -10673,7 +10646,7 @@
     "2026-08-06"
   ],
   "stats": {
-    "totalArticles": 397,
+    "totalArticles": 396,
     "dateCount": 8,
     "latestDate": "2026-08-13",
     "oldestDate": "2026-08-06"
