@@ -374,6 +374,27 @@ print("=" * 60)
 
 data = load_data()
 
+# V2.8 黑名单域名拦截：data['archive'] 中任何 URL/source 命中 BLOCKED_DOMAINS 的直接丢弃
+_BLOCKED = ['cnnbc.com', 'cnnbc.cn']
+_blk_removed = 0
+for _bdt in list(data.get('archive', {}).keys()):
+    _bkeep = []
+    for _ba in data['archive'][_bdt]:
+        _bu = (_ba.get('url','') or '').lower()
+        _bs = (_ba.get('source','') or '').lower()
+        if any(b in _bu or b in _bs for b in _BLOCKED):
+            _blk_removed += 1
+        else:
+            _bkeep.append(_ba)
+    data['archive'][_bdt] = _bkeep
+for _bdt in list(data['archive'].keys()):
+    if not data['archive'][_bdt]:
+        del data['archive'][_bdt]
+if _blk_removed:
+    data['dates'] = sorted(data['archive'].keys(), reverse=True)
+    data['stats']['totalArticles'] = sum(len(v) for v in data['archive'].values())
+    print(f"  🛑 V2.8 黑名单拦截: {_blk_removed} 条 cnnbc 来源已移除")
+
 if isinstance(data, list):
     print("  📝 检测到V1.1格式，正在转换为V1.2...")
     old_archive = convert_v11_to_v12(data)
@@ -1008,7 +1029,7 @@ git commit -m "📰 V1.2 新闻更新 - $TODAY $TIME (${FINAL_COUNT}条)
 
 echo ""
 echo "🚀 正在推送到GitHub..."
-git push origin main 2>&1
+git -c http.proxy= -c https.proxy= push origin main 2>&1
 
 if [ $? -eq 0 ]; then
     echo ""

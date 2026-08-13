@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-send_morning_brief.py — Ira 信息看板 · 每日早报发送器
+send_morning_brief.py — 信息日报 · 每日早报发送器
 
 流程：
   1) 读取国际 + 国内数据
@@ -235,7 +235,7 @@ def build_email_html(intl, dom, intl_today, dom_total):
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
-<title>Ira 信息看板 · 每日早报</title>
+<title>信息日报 · 每日早报</title>
 </head>
 <body style="margin:0; padding:0; background:#f5f4f0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
   <!--[if mso]><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="660" align="center"><tr><td><![endif]-->
@@ -246,8 +246,8 @@ def build_email_html(intl, dom, intl_today, dom_total):
       <td style="padding:24px 20px 20px; background:#1a1a2e;">
         <table cellpadding="0" cellspacing="0" border="0" width="100%">
           <tr>
-            <td style="font-family:Georgia,'Times New Roman','Noto Serif SC',serif; font-size:22px; font-weight:700; color:#ffffff;">
-              Ira <span style="font-weight:500; font-family:'PingFang SC','Microsoft YaHei','SimHei',sans-serif;">信息看板</span>
+            <td style="font-family:'PingFang SC','Microsoft YaHei','SimHei','Noto Serif SC',serif; font-size:21px; font-weight:700; color:#ffffff; letter-spacing:2px;">
+              信息日报
             </td>
             <td align="right" style="font-family:Georgia,serif; font-style:italic; font-size:12px; color:#9ca3af;">{vol_str}</td>
           </tr>
@@ -351,7 +351,7 @@ def build_email_html(intl, dom, intl_today, dom_total):
     <tr><td style="height:20px;"></td></tr>
     <tr>
       <td align="center" style="padding:20px; background:#1a1a2e; font-size:11px; color:#9ca3af; line-height:1.8;">
-        <p style="margin:0 0 6px 0;" dir="ltr">&#128238; Ira 信息看板 &middot; 每日自动生成 &middot; 仅供参考交流</p>
+        <p style="margin:0 0 6px 0;" dir="ltr">&#128238; 信息日报 &middot; 每日自动生成 &middot; 仅供参考交流</p>
         <p style="margin:0;" dir="ltr"><a href="https://iranorawahaha.github.io/international-news-kb/" target="_blank" style="color:#9ca3af;">irano...haha.github.io/international-news-kb</a></p>
       </td>
     </tr>
@@ -365,16 +365,17 @@ def build_email_html(intl, dom, intl_today, dom_total):
 def send_email(html_body, intl_count, dom_count, to_email=None):
     """通过 QQ SMTP 发送邮件"""
     from email.header import Header
+    from email.utils import formataddr
 
     if to_email is None:
         to_email = TO_EMAIL
 
     total = intl_count + dom_count
-    subject = Header(f'Ira 早报 · {TODAY} · {total}条精选', 'utf-8')
+    subject = Header(f'信息日报-{TODAY}', 'utf-8')
 
     msg = MIMEMultipart('alternative')
     msg['Subject'] = subject
-    msg['From'] = f'Ira Daily Brief <{SMTP_USER}>'
+    msg['From'] = formataddr((str(Header('信息日报', 'utf-8')), SMTP_USER))
     msg['To'] = to_email
 
     msg.attach(MIMEText(html_body, 'html', 'utf-8'))
@@ -438,7 +439,7 @@ def main():
         print('      --to user@example.com  (自定义收件人)')
         return 1
 
-    print(f'📰 Ira 早报生成中... {TODAY}')
+    print(f'📰 信息日报生成中... {TODAY}')
     if to_email:
         print(f'   📬 收件人: {to_email}')
     if intl_exclude:

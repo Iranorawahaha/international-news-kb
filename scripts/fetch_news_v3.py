@@ -120,6 +120,14 @@ HEADERS = {
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
 }
 
+# 🛑 黑名单域名：V2.7 永久封禁（2026-08-13 cnnbc.com 误标注 WSJ 事件）
+# 任何 URL 含这些域名的文章一律丢弃，source 重写为 'BLOCKED'
+BLOCKED_DOMAINS = [
+    'cnnbc.com',
+    'cnnbc.cn',
+    # 后续发现其他仿冒域名追加此处
+]
+
 # 高价值英文信源（用于WebFetch补充）- V1.2.2扩展版
 # 🔴 全部11个英文信源均为必选 (V1.2.3)
 # 路透社/BBC/南华早报/卫报/CNN/纽约时报/华尔街日报/半岛电视台/Politico/华盛顿邮报/美联社
@@ -843,6 +851,16 @@ class EnhancedNewsFetcher:
             source = article.get('source', '') or ''
             score = article.get('priority_score', 0)
             url = article.get('url', '') or ''
+
+            # 规则0: 黑名单域名（最高优先级，先于一切规则）
+            url_lower = url.lower()
+            source_lower = (source or '').lower()
+            blocked_hit = any(b in url_lower or b in source_lower for b in BLOCKED_DOMAINS)
+            if blocked_hit:
+                removed_count += 1
+                removal_reasons['黑名单域名'] = removal_reasons.get('黑名单域名', 0) + 1
+                print(f"   🛑 黑名单拦截: [{source}] {title[:40]} | {url[:60]}")
+                continue
 
             # 规则1: 标题过短
             if len(title.strip()) < 5 and len(title_en.strip()) < 5:
