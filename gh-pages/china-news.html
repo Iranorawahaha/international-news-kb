@@ -213,16 +213,6 @@
 </style>
 </head>
 <body>
-<!-- ===== IRA-NAV-V5: Ira 信息看板 统一导航（自动注入，勿删） ===== -->
-<div class="ira-nav-v4" style="max-width:1400px;margin:8px auto 0;padding:7px 16px;background:#fff;border:1px solid #e4e7ee;border-radius:12px;box-shadow:0 1px 6px rgba(28,36,52,.05);display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;">
-  <a href="./" style="font-weight:700;color:#4b5563;text-decoration:none;padding:0 6px 0 0;border-right:1px solid #e5e7eb;margin-right:2px;">🏠 Ira 信息看板</a>
-  <a href="international-news.html" style="color:#2563eb;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#eff6ff;border:1px solid #bfdbfe;">🌍 国际</a>
-  <a href="china-news.html" style="color:#c41230;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fff5f5;border:1px solid #fecaca;">🇨🇳 国内</a>
-  <a href="ai-news.html" style="color:#d97706;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fffbeb;border:1px solid #fde68a;">🤖 AI动向</a>
-  <a href="diplomatic-affairs.html" style="color:#059669;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#f0fdf4;border:1px solid #bbf7d0;">🏛️ 使领馆</a>
-  <span style="color:#9ca3af;margin-left:auto;font-size:11.5px;">每日 09:30 刷新 · 滚动 7 天</span>
-</div>
-<!-- ===== /IRA-NAV-V5 ===== -->
 <div class="wrap">
   <header class="hero">
     <div class="hero-back">
@@ -237,7 +227,7 @@
     <h1>国内重大新闻看板</h1>
     <div class="hero-meta">
       <span>📅 时间窗：2026-08-08 ~ 2026-08-14（近 7 天）</span>
-      <span>🎯 要闻总数：52 条（去重）</span>
+      <span>🎯 要闻总数：50 条（去重）</span>
       <span>🆕 今日新增：21 条</span>
       <span>⭐ 元首级：5 条</span>
     </div>
@@ -245,14 +235,14 @@
 
   <div class="refresh-strip">
     <span class="rs-dot"></span>
-    <b>最近刷新：</b>2026-08-14 15:27 北京时间（每日自动刷新） ·
+    <b>最近刷新：</b>2026-08-14 15:57 北京时间（每日自动刷新） ·
     <b>今日新增 21 条</b> · 滚动 7 天窗口 ·
     透视表：点日期/合计可看当天全部，点分类单元格可看（日期×类别）筛选
   </div>
 
   <div class="kpi-grid">
     <div class="kpi-card" style="border-left:4px solid #dc2626; background:linear-gradient(180deg,#fef2f2,#fff);"><div class="kpi-num" style="color:#dc2626;">21</div><div class="kpi-label">🆕 今日新增</div></div>
-    <div class="kpi-card kpi-main"><div class="kpi-num">52</div><div class="kpi-label">要闻总数（去重后）</div></div>
+    <div class="kpi-card kpi-main"><div class="kpi-num">50</div><div class="kpi-label">要闻总数（去重后）</div></div>
     <div class="kpi-card" style="border-left:4px solid #f59e0b; background:linear-gradient(180deg,#fffbeb,#fff);"><div class="kpi-num" style="color:#f59e0b;">5</div><div class="kpi-label">⭐ 元首级要闻</div></div>
     <div class="kpi-card"><div class="kpi-num">7</div><div class="kpi-label">覆盖天数</div></div>
   </div>
@@ -261,7 +251,7 @@
   <div class="pivot-wrapper">
       <table class="pivot-table">
         <thead><tr><th class="pv-th pv-date-hd">日期</th><th class="pv-th pv-cat-hd">👑 元首</th><th class="pv-th pv-cat-hd">🧭 高层</th><th class="pv-th pv-cat-hd">🏛 重要</th><th class="pv-th pv-cat-hd">📋 人事</th><th class="pv-th pv-cat-hd">🏢 部委</th><th class="pv-th pv-cat-hd">📜 政策</th><th class="pv-th pv-cat-hd">💹 经贸</th><th class="pv-th pv-total-hd">合计</th></tr></thead>
-        <tbody><tr class="pv-row today"><td class="pv-cell pv-date-cell" data-date="2026-08-14"><span class="pv-date">8月14日</span><span class="pv-wd">周五</span><span class="pv-today-dot"></span></td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="人事任免"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="部委动态"><span class="pv-num">5</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="政策发布"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="经贸动向"><span class="pv-num">11</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-14"><span class="pv-total-num">21</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-13"><span class="pv-date">8月13日</span><span class="pv-wd">周四</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="高层动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="人事任免"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="部委动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="政策发布"><span class="pv-num">3</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="经贸动向"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-13"><span class="pv-total-num">10</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-12"><span class="pv-date">8月12日</span><span class="pv-wd">周三</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-12" data-cat="高层动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-12" data-cat="人事任免"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-12" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-12" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-12"><span class="pv-total-num">4</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-11"><span class="pv-date">8月11日</span><span class="pv-wd">周二</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="元首动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="部委动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="政策发布"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-total-cell" data-date="2026-08-11"><span class="pv-total-num">5</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-10"><span class="pv-date">8月10日</span><span class="pv-wd">周一</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="高层动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="人事任免"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="部委动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="政策发布"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="经贸动向"><span class="pv-num">3</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-10"><span class="pv-total-num">8</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-09"><span class="pv-date">8月9日</span><span class="pv-wd">周日</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-09" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-09" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-total-cell" data-date="2026-08-09"><span class="pv-total-num">2</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-08"><span class="pv-date">8月8日</span><span class="pv-wd">周六</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-08" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-08" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-08"><span class="pv-total-num">2</span></td></tr></tbody>
+        <tbody><tr class="pv-row today"><td class="pv-cell pv-date-cell" data-date="2026-08-14"><span class="pv-date">8月14日</span><span class="pv-wd">周五</span><span class="pv-today-dot"></span></td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="人事任免"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="部委动态"><span class="pv-num">4</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="政策发布"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-14" data-cat="经贸动向"><span class="pv-num">11</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-14"><span class="pv-total-num">19</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-13"><span class="pv-date">8月13日</span><span class="pv-wd">周四</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="高层动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="人事任免"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="部委动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="政策发布"><span class="pv-num">3</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-13" data-cat="经贸动向"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-13"><span class="pv-total-num">10</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-12"><span class="pv-date">8月12日</span><span class="pv-wd">周三</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-12" data-cat="高层动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-12" data-cat="人事任免"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-12" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-12" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-12"><span class="pv-total-num">4</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-11"><span class="pv-date">8月11日</span><span class="pv-wd">周二</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="元首动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="部委动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-11" data-cat="政策发布"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-total-cell" data-date="2026-08-11"><span class="pv-total-num">5</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-10"><span class="pv-date">8月10日</span><span class="pv-wd">周一</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="高层动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="人事任免"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="部委动态"><span class="pv-num">2</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="政策发布"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-10" data-cat="经贸动向"><span class="pv-num">3</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-10"><span class="pv-total-num">8</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-09"><span class="pv-date">8月9日</span><span class="pv-wd">周日</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-09" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-09" data-cat="部委动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-total-cell" data-date="2026-08-09"><span class="pv-total-num">2</span></td></tr><tr class="pv-row"><td class="pv-cell pv-date-cell" data-date="2026-08-08"><span class="pv-date">8月8日</span><span class="pv-wd">周六</span></td><td class="pv-cell pv-num-cell" data-date="2026-08-08" data-cat="元首动态"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-zero-cell">—</td><td class="pv-cell pv-num-cell" data-date="2026-08-08" data-cat="经贸动向"><span class="pv-num">1</span><span class="pv-label">条</span></td><td class="pv-cell pv-total-cell" data-date="2026-08-08"><span class="pv-total-num">2</span></td></tr></tbody>
       </table>
     </div>
 
@@ -278,10 +268,10 @@
   <div class="layout">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-title">🗂️ 栏目导航</div>
-      <button class="col-item active" data-cat="all"><span class="ic">📋</span>全部<span class="cnt">新增21</span></button><button class="col-item" data-cat="元首动态"><span class="ic">👑</span>元首动态<span class="cnt">新增1</span></button><button class="col-item" data-cat="高层动态"><span class="ic">🧭</span>高层动态<span class="cnt">新增0</span></button><button class="col-item" data-cat="重要会议"><span class="ic">🏛</span>重要会议<span class="cnt">新增0</span></button><button class="col-item" data-cat="人事任免"><span class="ic">📋</span>人事任免<span class="cnt">新增2</span></button><button class="col-item" data-cat="部委动态"><span class="ic">🏢</span>部委动态<span class="cnt">新增5</span></button><button class="col-item" data-cat="政策发布"><span class="ic">📜</span>政策发布<span class="cnt">新增2</span></button><button class="col-item" data-cat="经贸动向"><span class="ic">💹</span>经贸动向<span class="cnt">新增11</span></button>
+      <button class="col-item active" data-cat="all"><span class="ic">📋</span>全部<span class="cnt">新增19</span></button><button class="col-item" data-cat="元首动态"><span class="ic">👑</span>元首动态<span class="cnt">新增1</span></button><button class="col-item" data-cat="高层动态"><span class="ic">🧭</span>高层动态<span class="cnt">新增0</span></button><button class="col-item" data-cat="重要会议"><span class="ic">🏛</span>重要会议<span class="cnt">新增0</span></button><button class="col-item" data-cat="人事任免"><span class="ic">📋</span>人事任免<span class="cnt">新增1</span></button><button class="col-item" data-cat="部委动态"><span class="ic">🏢</span>部委动态<span class="cnt">新增4</span></button><button class="col-item" data-cat="政策发布"><span class="ic">📜</span>政策发布<span class="cnt">新增2</span></button><button class="col-item" data-cat="经贸动向"><span class="ic">💹</span>经贸动向<span class="cnt">新增11</span></button>
     </aside>
     <main class="main-content">
-      <div class="cat-panel active" id="cat-panel-all"><div class="date-group-header today" data-date="2026-08-14">📅 🆕 今天 <span class="date-count">21 条</span></div><div class="card imp-summit" data-cat="元首动态" data-date="2026-08-14">
+      <div class="cat-panel active" id="cat-panel-all"><div class="date-group-header today" data-date="2026-08-14">📅 🆕 今天 <span class="date-count">19 条</span></div><div class="card imp-summit" data-cat="元首动态" data-date="2026-08-14">
           <div class="card-idx">1</div>
           <div class="card-body">
             <div class="card-title-row">
@@ -298,25 +288,8 @@
               <span class="meta-imp">权重 100</span>
             </div>
           </div>
-        </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-07">
-          <div class="card-idx">2</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">中国官方首度披露再有六名军方将领涉严重违纪违法</h3>
-              <div class="card-meta-right">
-                <span class="date-badge">📅 2026-08-07</span>
-                <a class="card-link" href="https://www.zaobao.com/news/china/story20260807-9484317" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            
-            <div class="card-meta">
-              <span class="meta-cat">📋 人事任免</span>
-              <span class="meta-src">📰 联合早报</span>
-              <span class="meta-imp">权重 87</span>
-            </div>
-          </div>
         </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-14">
-          <div class="card-idx">3</div>
+          <div class="card-idx">2</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">衡阳中院代理院长王雨田被查 曾为湖南引进的高学历法学人才<span class="tag-today">🆕 今日</span></h3>
@@ -333,7 +306,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">4</div>
+          <div class="card-idx">3</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">7月末民营企业再贷款余额约8000亿元 金融服务实体经济质效不断提升<span class="tag-today">🆕 今日</span></h3>
@@ -350,7 +323,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-14">
-          <div class="card-idx">5</div>
+          <div class="card-idx">4</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">“舍不得买可直接休学退学”？校方通报<span class="tag-today">🆕 今日</span></h3>
@@ -367,7 +340,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-14">
-          <div class="card-idx">6</div>
+          <div class="card-idx">5</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部发言人就厄瓜多尔总统诺沃亚将访华答记者问<span class="tag-today">🆕 今日</span></h3>
@@ -384,7 +357,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-14">
-          <div class="card-idx">7</div>
+          <div class="card-idx">6</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部：中方敦促有关国家停止滥用多边军控机制<span class="tag-today">🆕 今日</span></h3>
@@ -401,7 +374,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-14">
-          <div class="card-idx">8</div>
+          <div class="card-idx">7</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">新能源汽车两个“首次”突破，意味着什么（子夜走笔）<span class="tag-today">🆕 今日</span></h3>
@@ -417,25 +390,8 @@
               <span class="meta-imp">权重 85</span>
             </div>
           </div>
-        </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-03">
-          <div class="card-idx">9</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">集成电路布图设计保护条例</h3>
-              <div class="card-meta-right">
-                <span class="date-badge">📅 2026-08-03</span>
-                <a class="card-link" href="https://www.gov.cn/zhengce/content/202608/content_7077398.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">000014349/2026-00061</p>
-            <div class="card-meta">
-              <span class="meta-cat">🏢 部委动态</span>
-              <span class="meta-src">📰 中国政府网·最新政策</span>
-              <span class="meta-imp">权重 85</span>
-            </div>
-          </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-14">
-          <div class="card-idx">10</div>
+          <div class="card-idx">8</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">《安全应急装备产业发展“十五五”规划》印发<span class="tag-today">🆕 今日</span></h3>
@@ -452,7 +408,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-14">
-          <div class="card-idx">11</div>
+          <div class="card-idx">9</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">新一轮空气质量持续改善行动方案正抓紧制定<span class="tag-today">🆕 今日</span></h3>
@@ -469,7 +425,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">12</div>
+          <div class="card-idx">10</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">“算力金属”身价飙升 揭秘AI背后“硬通货”<span class="tag-today">🆕 今日</span></h3>
@@ -486,7 +442,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">13</div>
+          <div class="card-idx">11</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">“老家底”长出新产业（活力中国调研行）<span class="tag-today">🆕 今日</span></h3>
@@ -503,7 +459,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">14</div>
+          <div class="card-idx">12</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">“设计”变“实景” 借助重大工程拼图感知经济发展“硬核”澎湃动力<span class="tag-today">🆕 今日</span></h3>
@@ -520,7 +476,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">15</div>
+          <div class="card-idx">13</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">今年前7个月上海外贸进出口3万亿元，同比增长17.7%<span class="tag-today">🆕 今日</span></h3>
@@ -537,7 +493,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">16</div>
+          <div class="card-idx">14</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">口岸之“智”赋能外贸之“质”开辟新空间 全球“好物”更快“飞”入寻常百姓家<span class="tag-today">🆕 今日</span></h3>
@@ -554,7 +510,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">17</div>
+          <div class="card-idx">15</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">宁波以科技创新塑造先进制造业新优势（“十五五”开好局起好步）<span class="tag-today">🆕 今日</span></h3>
@@ -571,7 +527,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">18</div>
+          <div class="card-idx">16</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">更多海外机构在华发人民币债券 “熊猫债”发行规模创新高<span class="tag-today">🆕 今日</span></h3>
@@ -588,7 +544,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">19</div>
+          <div class="card-idx">17</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">用场景汇集项目、用验证催化产业 接棒“陪跑”让“科研成果”加速变身“产业成果”<span class="tag-today">🆕 今日</span></h3>
@@ -605,7 +561,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">20</div>
+          <div class="card-idx">18</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">经济放缓影响消费信心 中国人下半年出境游料低于预期<span class="tag-today">🆕 今日</span></h3>
@@ -622,7 +578,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">21</div>
+          <div class="card-idx">19</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">蔬菜产业园加紧建设<span class="tag-today">🆕 今日</span></h3>
@@ -1182,25 +1138,8 @@
               <span class="meta-imp">权重 100</span>
             </div>
           </div>
-        </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-07">
-          <div class="card-idx">2</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">中国官方首度披露再有六名军方将领涉严重违纪违法</h3>
-              <div class="card-meta-right">
-                <span class="date-badge">📅 2026-08-07</span>
-                <a class="card-link" href="https://www.zaobao.com/news/china/story20260807-9484317" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            
-            <div class="card-meta">
-              <span class="meta-cat">📋 人事任免</span>
-              <span class="meta-src">📰 联合早报</span>
-              <span class="meta-imp">权重 87</span>
-            </div>
-          </div>
         </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-14">
-          <div class="card-idx">3</div>
+          <div class="card-idx">2</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">衡阳中院代理院长王雨田被查 曾为湖南引进的高学历法学人才<span class="tag-today">🆕 今日</span></h3>
@@ -1217,7 +1156,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">4</div>
+          <div class="card-idx">3</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">7月末民营企业再贷款余额约8000亿元 金融服务实体经济质效不断提升<span class="tag-today">🆕 今日</span></h3>
@@ -1234,7 +1173,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-14">
-          <div class="card-idx">5</div>
+          <div class="card-idx">4</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">“舍不得买可直接休学退学”？校方通报<span class="tag-today">🆕 今日</span></h3>
@@ -1251,7 +1190,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-14">
-          <div class="card-idx">6</div>
+          <div class="card-idx">5</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部发言人就厄瓜多尔总统诺沃亚将访华答记者问<span class="tag-today">🆕 今日</span></h3>
@@ -1268,7 +1207,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-14">
-          <div class="card-idx">7</div>
+          <div class="card-idx">6</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">外交部：中方敦促有关国家停止滥用多边军控机制<span class="tag-today">🆕 今日</span></h3>
@@ -1285,7 +1224,7 @@
             </div>
           </div>
         </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-14">
-          <div class="card-idx">8</div>
+          <div class="card-idx">7</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">新能源汽车两个“首次”突破，意味着什么（子夜走笔）<span class="tag-today">🆕 今日</span></h3>
@@ -1301,25 +1240,8 @@
               <span class="meta-imp">权重 85</span>
             </div>
           </div>
-        </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-03">
-          <div class="card-idx">9</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">集成电路布图设计保护条例</h3>
-              <div class="card-meta-right">
-                <span class="date-badge">📅 2026-08-03</span>
-                <a class="card-link" href="https://www.gov.cn/zhengce/content/202608/content_7077398.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">000014349/2026-00061</p>
-            <div class="card-meta">
-              <span class="meta-cat">🏢 部委动态</span>
-              <span class="meta-src">📰 中国政府网·最新政策</span>
-              <span class="meta-imp">权重 85</span>
-            </div>
-          </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-14">
-          <div class="card-idx">10</div>
+          <div class="card-idx">8</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">《安全应急装备产业发展“十五五”规划》印发<span class="tag-today">🆕 今日</span></h3>
@@ -1336,7 +1258,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="政策发布" data-date="2026-08-14">
-          <div class="card-idx">11</div>
+          <div class="card-idx">9</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">新一轮空气质量持续改善行动方案正抓紧制定<span class="tag-today">🆕 今日</span></h3>
@@ -1353,7 +1275,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">12</div>
+          <div class="card-idx">10</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">“算力金属”身价飙升 揭秘AI背后“硬通货”<span class="tag-today">🆕 今日</span></h3>
@@ -1370,7 +1292,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">13</div>
+          <div class="card-idx">11</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">“老家底”长出新产业（活力中国调研行）<span class="tag-today">🆕 今日</span></h3>
@@ -1387,7 +1309,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">14</div>
+          <div class="card-idx">12</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">“设计”变“实景” 借助重大工程拼图感知经济发展“硬核”澎湃动力<span class="tag-today">🆕 今日</span></h3>
@@ -1404,7 +1326,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">15</div>
+          <div class="card-idx">13</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">今年前7个月上海外贸进出口3万亿元，同比增长17.7%<span class="tag-today">🆕 今日</span></h3>
@@ -1421,7 +1343,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">16</div>
+          <div class="card-idx">14</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">口岸之“智”赋能外贸之“质”开辟新空间 全球“好物”更快“飞”入寻常百姓家<span class="tag-today">🆕 今日</span></h3>
@@ -1438,7 +1360,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">17</div>
+          <div class="card-idx">15</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">宁波以科技创新塑造先进制造业新优势（“十五五”开好局起好步）<span class="tag-today">🆕 今日</span></h3>
@@ -1455,7 +1377,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">18</div>
+          <div class="card-idx">16</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">更多海外机构在华发人民币债券 “熊猫债”发行规模创新高<span class="tag-today">🆕 今日</span></h3>
@@ -1472,7 +1394,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">19</div>
+          <div class="card-idx">17</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">用场景汇集项目、用验证催化产业 接棒“陪跑”让“科研成果”加速变身“产业成果”<span class="tag-today">🆕 今日</span></h3>
@@ -1489,7 +1411,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">20</div>
+          <div class="card-idx">18</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">经济放缓影响消费信心 中国人下半年出境游料低于预期<span class="tag-today">🆕 今日</span></h3>
@@ -1506,7 +1428,7 @@
             </div>
           </div>
         </div><div class="card " data-cat="经贸动向" data-date="2026-08-14">
-          <div class="card-idx">21</div>
+          <div class="card-idx">19</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">蔬菜产业园加紧建设<span class="tag-today">🆕 今日</span></h3>
@@ -2066,25 +1988,8 @@
               <span class="meta-imp">权重 100</span>
             </div>
           </div>
-        </div></div><div class="cat-panel" id="cat-panel-2026-08-14-高层动态"><div class="empty-panel">暂无高层动态类新闻</div></div><div class="cat-panel" id="cat-panel-2026-08-14-重要会议"><div class="empty-panel">暂无重要会议类新闻</div></div><div class="cat-panel" id="cat-panel-2026-08-14-人事任免"><div class="card imp-high" data-cat="人事任免" data-date="2026-08-07">
+        </div></div><div class="cat-panel" id="cat-panel-2026-08-14-高层动态"><div class="empty-panel">暂无高层动态类新闻</div></div><div class="cat-panel" id="cat-panel-2026-08-14-重要会议"><div class="empty-panel">暂无重要会议类新闻</div></div><div class="cat-panel" id="cat-panel-2026-08-14-人事任免"><div class="card imp-high" data-cat="人事任免" data-date="2026-08-14">
           <div class="card-idx">1</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">中国官方首度披露再有六名军方将领涉严重违纪违法</h3>
-              <div class="card-meta-right">
-                <span class="date-badge">📅 2026-08-07</span>
-                <a class="card-link" href="https://www.zaobao.com/news/china/story20260807-9484317" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            
-            <div class="card-meta">
-              <span class="meta-cat">📋 人事任免</span>
-              <span class="meta-src">📰 联合早报</span>
-              <span class="meta-imp">权重 87</span>
-            </div>
-          </div>
-        </div><div class="card imp-high" data-cat="人事任免" data-date="2026-08-14">
-          <div class="card-idx">2</div>
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">衡阳中院代理院长王雨田被查 曾为湖南引进的高学历法学人才<span class="tag-today">🆕 今日</span></h3>
@@ -2165,23 +2070,6 @@
             <div class="card-meta">
               <span class="meta-cat">🏢 部委动态</span>
               <span class="meta-src">📰 人民日报</span>
-              <span class="meta-imp">权重 85</span>
-            </div>
-          </div>
-        </div><div class="card imp-high" data-cat="部委动态" data-date="2026-08-03">
-          <div class="card-idx">5</div>
-          <div class="card-body">
-            <div class="card-title-row">
-              <h3 class="card-title">集成电路布图设计保护条例</h3>
-              <div class="card-meta-right">
-                <span class="date-badge">📅 2026-08-03</span>
-                <a class="card-link" href="https://www.gov.cn/zhengce/content/202608/content_7077398.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
-              </div>
-            </div>
-            <p class="card-summary">000014349/2026-00061</p>
-            <div class="card-meta">
-              <span class="meta-cat">🏢 部委动态</span>
-              <span class="meta-src">📰 中国政府网·最新政策</span>
               <span class="meta-imp">权重 85</span>
             </div>
           </div>

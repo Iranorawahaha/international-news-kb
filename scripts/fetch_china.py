@@ -813,11 +813,19 @@ def main():
 
     _new_count = 0
     _dup_skip = 0
+    _old_skip = 0
+    _yesterday_v211 = (NOW - timedelta(days=1)).strftime("%Y-%m-%d")
     for it in unique:
         _u = (it.get("url") or "").strip().rstrip("/").lower()
         _c = (it.get("collectedAt") or "")[:10]
         # 非今日抓取 → 不进今日版面
         if _c != _today_v29:
+            continue
+        # V2.11.3 窗口检查：date 必须 ∈ {昨天, 今天}（防列表页旧公告冒充今日新抓）
+        # date 无时分，用"date < 昨天"判定为旧内容 → 不进今日版面
+        _d211 = (it.get("date") or "")[:10]
+        if _d211 and _d211 < _yesterday_v211:
+            _old_skip += 1
             continue
         # 已在历史版面 → 跳过（增量去重）
         if _u and _u in _prev_urls:
@@ -828,11 +836,13 @@ def main():
         if _u:
             _prev_urls.add(_u)
     if _new_count:
-        print(f"  🆕 今日版面({_today_v29}): {_new_count} 条新内容（collectedAt=今日）")
+        print(f"  🆕 今日版面({_today_v29}): {_new_count} 条新内容（collectedAt=今日, date∈{{{_yesterday_v211},{_today_v29}}}）")
         if _dup_skip:
             print(f"  ⏭️ {_dup_skip} 条已在历史版面，跳过")
     else:
         print(f"  ℹ️ 今日无新内容（缓存中非今日抓取或全部已在历史版面）")
+    if _old_skip:
+        print(f"  🕐 {_old_skip} 条 date<昨天的旧内容不进今日版面")
     for d in archive:
         archive[d].sort(key=lambda x: (-x["priority_score"], x["title"]))
 
