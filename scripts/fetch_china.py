@@ -788,13 +788,41 @@ def main():
         seen[norm] = it
         unique.append(it)
 
-    # V2.9 归档规则：X日版面 = 抓取时间决定归档（今天抓的 → 今天版面）
-    # 页面真实发布日期保留在 date 字段仅用于显示（X日版面下可以出现X-1日内容）
+    # V2.9.1 增量归档：今日版面 = 今天新抓到且此前未入库的内容
+    # 已在历史版面的内容保持原位（昨日版面定稿后不再增加，也不重复进今日）
     archive = {}
     _today_v29 = NOW.strftime("%Y-%m-%d")
+    # 读取历史 archive 作为基线（防止全量重抓把 7 天窗口老内容塞进今日）
+    _prev_urls = set()
+    if os.path.exists(DATA_FILE):
+        try:
+            with open(DATA_FILE, "r", encoding="utf-8") as _pf:
+                _prev_data = json.load(_pf)
+            for _pd, _parts in _prev_data.get("archive", {}).items():
+                if _pd == _today_v29:
+                    continue  # 今日版面今天重建
+                archive[_pd] = _parts
+                for _pa in _parts:
+                    _u = (_pa.get("url") or "").strip().rstrip("/").lower()
+                    if _u:
+                        _prev_urls.add(_u)
+        except Exception as _pe:
+            print(f"  ⚠️ 读取历史失败（重建）: {_pe}")
+
+    _new_count = 0
     for it in unique:
-        _c = (it.get("collectedAt", "") or "")[:10] or _today_v29
-        archive.setdefault(_c, []).append(it)
+        _u = (it.get("url") or "").strip().rstrip("/").lower()
+        # 已在历史版面 → 跳过，不再进今日（防老新闻堆积）
+        if _u and _u in _prev_urls:
+            continue
+        archive.setdefault(_today_v29, []).append(it)
+        _new_count += 1
+        if _u:
+            _prev_urls.add(_u)
+    if _new_count:
+        print(f"  🆕 增量归档: {_new_count} 条新内容 → 今日版面（{_today_v29}）")
+    else:
+        print(f"  ℹ️ 今日无新内容（全部已在历史版面）")
     for d in archive:
         archive[d].sort(key=lambda x: (-x["priority_score"], x["title"]))
 
