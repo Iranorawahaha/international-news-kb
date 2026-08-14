@@ -87,35 +87,45 @@ def build():
             if c in pivot[d]:
                 pivot[d][c] += 1
 
-    # 构建顶部日期×分类统计表 HTML
+    # 构建顶部日期×分类统计表 HTML（V3 简洁版 · flex 行式布局）
     weekday_cn = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
-    pivot_headers = '<th>日期</th>' + ''.join(f'<th>{cat_icon.get(c, "📌")} {esc(c)}</th>' for c in cat_order) + '<th>合计</th>'
     pivot_rows = []
     for d in sorted(dates, reverse=True):
-        cells = []
+        is_today = (d == today)
+        cells_html = []
         for c in cat_order:
             cnt = pivot[d].get(c, 0)
-            cells.append(f'<td>{cnt if cnt else "—"}</td>')
+            icon = cat_icon.get(c, "📌")
+            if cnt:
+                cells_html.append(
+                    f'<span class="pivot-cell">'
+                    f'<span class="ic">{icon}</span>{esc(c)} <b>{cnt}</b>'
+                    f'</span>'
+                )
+            else:
+                cells_html.append(
+                    f'<span class="pivot-cell empty">'
+                    f'<span class="ic">{icon}</span>{esc(c)} —</span>'
+                )
         total_row = sum(pivot[d].values())
-        is_today = (d == today)
-        today_dot = '<span class="today-dot"></span>' if is_today else ''
         try:
             from datetime import datetime as _dt
             wd = weekday_cn[_dt.strptime(d, "%Y-%m-%d").weekday()]
         except Exception:
             wd = ""
+        today_dot = '<span class="today-dot"></span>' if is_today else ''
+        row_cls = "pivot-row today" if is_today else "pivot-row"
         pivot_rows.append(
-            f'<tr><td class="date-cell">{d} {esc(wd)} {today_dot}</td>'
-            + ''.join(cells)
-            + f'<td class="count-cell">{total_row}</td></tr>'
+            f'<div class="{row_cls}">'
+            f'<div class="pivot-date"><b>{d}</b><span class="weekday">{wd}</span>{today_dot}</div>'
+            f'<div class="pivot-cells">{"".join(cells_html)}</div>'
+            f'<div class="pivot-total">{total_row}</div>'
+            f'</div>'
         )
     stats_top = f'''<div class="pivot-wrapper">
-        <div class="pivot-title">📅 各日按分类分布（国内 · 红版）</div>
-        <div class="pivot-subtitle">行=日期，列=分类；点击表格行可在下方表格中按日期筛选</div>
-        <table class="pivot-table">
-            <thead><tr>{pivot_headers}</tr></thead>
-            <tbody>{"".join(pivot_rows)}</tbody>
-        </table>
+        <div class="pivot-title">📅 国内 · 各日按分类分布</div>
+        <div class="pivot-subtitle">点击表格行可在下方表格中按日期筛选</div>
+        <div class="pivot-rows">{"".join(pivot_rows)}</div>
     </div>'''
 
     # 左侧栏目侧边栏

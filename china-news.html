@@ -164,52 +164,64 @@
         }
         .stat-card.high-priority .stat-label { color: #ea580c; font-weight: 600; }
 
-        /* ===== 顶部日期×分类统计表（国内版专属） ===== */
+        /* ===== 顶部日期×分类统计表（简洁版 · flex 行式布局） ===== */
         .pivot-wrapper {
-            background: white;
-            border: 1px solid var(--border-soft);
+            background: linear-gradient(180deg, var(--theme-primary-bg), #fff);
+            border: 1px solid var(--theme-primary-bg-2);
             border-radius: 12px;
-            padding: 14px 18px;
+            padding: 14px 18px 6px;
             margin-bottom: 16px;
             box-shadow: var(--shadow-sm);
-            overflow-x: auto;
         }
         .pivot-wrapper .pivot-title {
             font-size: 13px; font-weight: 700; color: var(--theme-primary);
-            margin-bottom: 10px;
+            margin-bottom: 4px;
             display: flex; align-items: center; gap: 8px;
         }
         .pivot-wrapper .pivot-subtitle {
-            font-size: 11px; color: var(--text-faint); margin-bottom: 10px;
+            font-size: 11px; color: var(--text-faint); margin-bottom: 8px;
         }
-        table.pivot-table {
-            width: 100%; border-collapse: collapse; font-size: 12.5px;
-        }
-        table.pivot-table th {
-            padding: 8px 10px; text-align: center;
-            background: var(--theme-primary-bg);
-            color: var(--theme-primary);
-            font-weight: 700; font-size: 11.5px;
+        .pivot-rows { display: flex; flex-direction: column; gap: 6px; padding-bottom: 8px; }
+        .pivot-row {
+            display: flex; align-items: center;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: white;
             border: 1px solid var(--border-soft);
-            white-space: nowrap;
+            gap: 10px;
+            transition: background 0.1s;
         }
-        table.pivot-table td {
-            padding: 8px 10px; text-align: center;
-            border: 1px solid var(--border-soft);
-            color: var(--text-dim);
-            font-family: var(--mono); font-size: 12px;
+        .pivot-row:hover { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
+        .pivot-row.today { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
+        .pivot-row .pivot-date {
+            flex: 0 0 150px;
+            font-size: 12.5px; color: var(--text);
+            display: flex; align-items: center; gap: 6px;
         }
-        table.pivot-table td.date-cell {
-            text-align: left; font-weight: 600; color: var(--text);
-            font-family: inherit;
-        }
-        table.pivot-table td.date-cell .today-dot {
+        .pivot-row.today .pivot-date { color: var(--theme-primary); font-weight: 700; }
+        .pivot-row .pivot-date .weekday { font-size: 11px; color: var(--text-faint); font-weight: 500; }
+        .pivot-row .today-dot {
             display: inline-block; width: 6px; height: 6px;
             border-radius: 50%; background: var(--red);
-            margin-left: 6px; vertical-align: middle;
         }
-        table.pivot-table td.count-cell { font-weight: 600; color: var(--theme-primary); }
-        table.pivot-table tr:hover td { background: var(--theme-primary-bg); }
+        .pivot-row .pivot-cells {
+            flex: 1; display: flex; flex-wrap: wrap; gap: 6px;
+        }
+        .pivot-row .pivot-cell {
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 3px 9px; border-radius: 99px;
+            font-size: 11.5px; font-weight: 500;
+            background: var(--panel-2); color: var(--text-dim);
+            border: 1px solid var(--border-soft);
+            font-family: var(--mono);
+        }
+        .pivot-row .pivot-cell.empty { opacity: 0.45; background: transparent; }
+        .pivot-row .pivot-cell .ic { font-size: 12px; }
+        .pivot-row .pivot-total {
+            flex: 0 0 80px; text-align: right;
+            font-size: 16px; font-weight: 800; color: var(--theme-primary);
+            font-family: var(--mono);
+        }
 
         /* ===== 主区域：左栏目栏 + 右内容区 ===== */
         .main-grid {
@@ -522,6 +534,30 @@
             color: var(--text-dim);
         }
 
+        /* ===== 分类彩色标签（用于表格 + 侧栏 + 分布表） ===== */
+        .cat-tag {
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 3px 10px; border-radius: 99px;
+            font-size: 11.5px; font-weight: 600;
+            white-space: nowrap;
+            border: 1px solid transparent;
+        }
+        .cat-tag .ic { font-size: 12px; line-height: 1; }
+        /* 通用默认（无配色映射时） */
+        .cat-tag-default { background: var(--panel-2); color: var(--text-dim); border-color: var(--border-soft); }
+        /* 国内 7 分类 */
+        .cat-tag-元首动态   { background: #fef3c7; color: #b45309; border-color: #fde68a; }
+        .cat-tag-高层动态   { background: #dbeafe; color: #1e40af; border-color: #bfdbfe; }
+        .cat-tag-重要会议   { background: #ede9fe; color: #6d28d9; border-color: #ddd6fe; }
+        .cat-tag-人事任免   { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
+        .cat-tag-部委动态   { background: #ffedd5; color: #c2410c; border-color: #fdba74; }
+        .cat-tag-政策发布   { background: #dcfce7; color: #15803d; border-color: #bbf7d0; }
+        .cat-tag-经贸动向   { background: #cffafe; color: #0e7490; border-color: #a5f3fc; }
+        /* AI 3 分类 */
+        .cat-tag-industry   { background: #dbeafe; color: #1e40af; border-color: #bfdbfe; }
+        .cat-tag-ai-models  { background: #ede9fe; color: #6d28d9; border-color: #ddd6fe; }
+        .cat-tag-tip        { background: #ffedd5; color: #c2410c; border-color: #fdba74; }
+
         /* 原文链接 */
         .link-btn {
             display: inline-block; padding: 5px 10px;
@@ -596,7 +632,7 @@
     <!-- 绿色最近更新条 -->
     <div class="update-bar">
         <span class="dot"></span>
-        <strong>最近更新：</strong>2026-08-14 16:22 北京时间（每日自动刷新） · 共 <strong>50</strong> 条新闻 · 数据快照，滚动 7 天窗口
+        <strong>最近更新：</strong>2026-08-14 17:17 北京时间（每日自动刷新） · 共 <strong>50</strong> 条新闻 · 数据快照，滚动 7 天窗口
     </div>
 
     <!-- 数据源说明 -->
@@ -626,12 +662,9 @@
 
     <!-- 国内版顶部统计表（日期×分类） -->
     <div class="pivot-wrapper">
-        <div class="pivot-title">📅 各日按分类分布（国内 · 红版）</div>
-        <div class="pivot-subtitle">行=日期，列=分类；点击表格行可在下方表格中按日期筛选</div>
-        <table class="pivot-table">
-            <thead><tr><th>日期</th><th>👑 元首动态</th><th>🧭 高层动态</th><th>🏛 重要会议</th><th>📋 人事任免</th><th>🏢 部委动态</th><th>📜 政策发布</th><th>💹 经贸动向</th><th>合计</th></tr></thead>
-            <tbody><tr><td class="date-cell">2026-08-14 周五 <span class="today-dot"></span></td><td>1</td><td>—</td><td>—</td><td>1</td><td>4</td><td>2</td><td>11</td><td class="count-cell">19</td></tr><tr><td class="date-cell">2026-08-13 周四 </td><td>—</td><td>1</td><td>—</td><td>2</td><td>2</td><td>3</td><td>2</td><td class="count-cell">10</td></tr><tr><td class="date-cell">2026-08-12 周三 </td><td>—</td><td>1</td><td>—</td><td>1</td><td>1</td><td>—</td><td>1</td><td class="count-cell">4</td></tr><tr><td class="date-cell">2026-08-11 周二 </td><td>2</td><td>—</td><td>—</td><td>—</td><td>2</td><td>1</td><td>—</td><td class="count-cell">5</td></tr><tr><td class="date-cell">2026-08-10 周一 </td><td>—</td><td>1</td><td>—</td><td>1</td><td>2</td><td>1</td><td>3</td><td class="count-cell">8</td></tr><tr><td class="date-cell">2026-08-09 周日 </td><td>1</td><td>—</td><td>—</td><td>—</td><td>1</td><td>—</td><td>—</td><td class="count-cell">2</td></tr><tr><td class="date-cell">2026-08-08 周六 </td><td>1</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>1</td><td class="count-cell">2</td></tr></tbody>
-        </table>
+        <div class="pivot-title">📅 国内 · 各日按分类分布</div>
+        <div class="pivot-subtitle">点击表格行可在下方表格中按日期筛选</div>
+        <div class="pivot-rows"><div class="pivot-row today"><div class="pivot-date"><b>2026-08-14</b><span class="weekday">周五</span><span class="today-dot"></span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">👑</span>元首动态 <b>1</b></span><span class="pivot-cell empty"><span class="ic">🧭</span>高层动态 —</span><span class="pivot-cell empty"><span class="ic">🏛</span>重要会议 —</span><span class="pivot-cell"><span class="ic">📋</span>人事任免 <b>1</b></span><span class="pivot-cell"><span class="ic">🏢</span>部委动态 <b>4</b></span><span class="pivot-cell"><span class="ic">📜</span>政策发布 <b>2</b></span><span class="pivot-cell"><span class="ic">💹</span>经贸动向 <b>11</b></span></div><div class="pivot-total">19</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-13</b><span class="weekday">周四</span></div><div class="pivot-cells"><span class="pivot-cell empty"><span class="ic">👑</span>元首动态 —</span><span class="pivot-cell"><span class="ic">🧭</span>高层动态 <b>1</b></span><span class="pivot-cell empty"><span class="ic">🏛</span>重要会议 —</span><span class="pivot-cell"><span class="ic">📋</span>人事任免 <b>2</b></span><span class="pivot-cell"><span class="ic">🏢</span>部委动态 <b>2</b></span><span class="pivot-cell"><span class="ic">📜</span>政策发布 <b>3</b></span><span class="pivot-cell"><span class="ic">💹</span>经贸动向 <b>2</b></span></div><div class="pivot-total">10</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-12</b><span class="weekday">周三</span></div><div class="pivot-cells"><span class="pivot-cell empty"><span class="ic">👑</span>元首动态 —</span><span class="pivot-cell"><span class="ic">🧭</span>高层动态 <b>1</b></span><span class="pivot-cell empty"><span class="ic">🏛</span>重要会议 —</span><span class="pivot-cell"><span class="ic">📋</span>人事任免 <b>1</b></span><span class="pivot-cell"><span class="ic">🏢</span>部委动态 <b>1</b></span><span class="pivot-cell empty"><span class="ic">📜</span>政策发布 —</span><span class="pivot-cell"><span class="ic">💹</span>经贸动向 <b>1</b></span></div><div class="pivot-total">4</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-11</b><span class="weekday">周二</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">👑</span>元首动态 <b>2</b></span><span class="pivot-cell empty"><span class="ic">🧭</span>高层动态 —</span><span class="pivot-cell empty"><span class="ic">🏛</span>重要会议 —</span><span class="pivot-cell empty"><span class="ic">📋</span>人事任免 —</span><span class="pivot-cell"><span class="ic">🏢</span>部委动态 <b>2</b></span><span class="pivot-cell"><span class="ic">📜</span>政策发布 <b>1</b></span><span class="pivot-cell empty"><span class="ic">💹</span>经贸动向 —</span></div><div class="pivot-total">5</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-10</b><span class="weekday">周一</span></div><div class="pivot-cells"><span class="pivot-cell empty"><span class="ic">👑</span>元首动态 —</span><span class="pivot-cell"><span class="ic">🧭</span>高层动态 <b>1</b></span><span class="pivot-cell empty"><span class="ic">🏛</span>重要会议 —</span><span class="pivot-cell"><span class="ic">📋</span>人事任免 <b>1</b></span><span class="pivot-cell"><span class="ic">🏢</span>部委动态 <b>2</b></span><span class="pivot-cell"><span class="ic">📜</span>政策发布 <b>1</b></span><span class="pivot-cell"><span class="ic">💹</span>经贸动向 <b>3</b></span></div><div class="pivot-total">8</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-09</b><span class="weekday">周日</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">👑</span>元首动态 <b>1</b></span><span class="pivot-cell empty"><span class="ic">🧭</span>高层动态 —</span><span class="pivot-cell empty"><span class="ic">🏛</span>重要会议 —</span><span class="pivot-cell empty"><span class="ic">📋</span>人事任免 —</span><span class="pivot-cell"><span class="ic">🏢</span>部委动态 <b>1</b></span><span class="pivot-cell empty"><span class="ic">📜</span>政策发布 —</span><span class="pivot-cell empty"><span class="ic">💹</span>经贸动向 —</span></div><div class="pivot-total">2</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-08</b><span class="weekday">周六</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">👑</span>元首动态 <b>1</b></span><span class="pivot-cell empty"><span class="ic">🧭</span>高层动态 —</span><span class="pivot-cell empty"><span class="ic">🏛</span>重要会议 —</span><span class="pivot-cell empty"><span class="ic">📋</span>人事任免 —</span><span class="pivot-cell empty"><span class="ic">🏢</span>部委动态 —</span><span class="pivot-cell empty"><span class="ic">📜</span>政策发布 —</span><span class="pivot-cell"><span class="ic">💹</span>经贸动向 <b>1</b></span></div><div class="pivot-total">2</div></div></div>
     </div>
 
     <!-- 主区域：左栏目栏 + 右内容区 -->
@@ -696,7 +729,6 @@
                             <th>来源</th>
                             <th>分类</th>
                             <th>重要性</th>
-                            <th>关键词</th>
                             <th>原文</th>
                         </tr>
                     </thead>
@@ -708,7 +740,7 @@
 
     <!-- 页脚 -->
     <div class="footer">
-        🇨🇳 国内新闻看板 V2.11 · 表格化统一 UI · 数据更新于 2026-08-14 16:22 · 7天存档 · Powered by Ira 信息看板体系
+        🇨🇳 国内新闻看板 V2.11 · 表格化统一 UI · 数据更新于 2026-08-14 17:17 · 7天存档 · Powered by Ira 信息看板体系
     </div>
 </div>
 
@@ -827,7 +859,7 @@ function renderTable(articles) {
     const tbody = document.getElementById('newsTableBody');
     tbody.innerHTML = '';
     if (!articles.length) {
-        tbody.innerHTML = '<tr><td colspan="9"><div class="empty-state">📭 当前筛选条件下无新闻</div></td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8"><div class="empty-state">📭 当前筛选条件下无新闻</div></td></tr>';
         return;
     }
 
@@ -841,7 +873,7 @@ function renderTable(articles) {
         const isToday = dateStr === TODAY_DATE;
         const todayCls = isToday ? ' today' : '';
         const weekdayLabel = weekday + (isToday ? ' · 今日' : '');
-        return `<td colspan="9" style="padding:0 !important; border:none !important; background:transparent !important;">
+        return `<td colspan="8" style="padding:0 !important; border:none !important; background:transparent !important;">
             <div class="date-group-divider${todayCls}">
                 <span class="date-icon">📅</span>
                 <span class="date-main">${md}</span>
@@ -854,15 +886,14 @@ function renderTable(articles) {
     function escapeHTML(s) {
         return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
     }
-    function renderKw(kw) {
-        if (Array.isArray(kw) && kw.length) {
-            return kw.slice(0, 6).map(k => `<span class="keyword-tag">${escapeHTML(k)}</span>`).join('');
-        }
-        return '<span style="color:var(--text-faint)">—</span>';
+    function renderCatTag(cat) {
+        if (!cat) return '<span style="color:var(--text-faint)">—</span>';
+        // 直接用 cat 字符串拼接 class（CSS 中已为每个分类名准备了样式）
+        return `<span class="cat-tag cat-tag-${escapeHTML(cat)}">${escapeHTML(cat)}</span>`;
     }
     for (const item of articles) {
         if (item._isDateSeparator) {
-            tbody.insertAdjacentHTML('beforeend', `<tr><td colspan="9" style="padding:0;border:0;background:transparent;">${fmtDateHeader(item._date, item._count)}</td></tr>`);
+            tbody.insertAdjacentHTML('beforeend', `<tr><td colspan="8" style="padding:0;border:0;background:transparent;">${fmtDateHeader(item._date, item._count)}</td></tr>`);
             continue;
         }
         globalIndex += 1;
@@ -872,9 +903,8 @@ function renderTable(articles) {
         const titleZh = `<div class="title-zh"><a href="${escapeHTML(item.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.title || item.title_zh || '')}</a></div>`;
         const summary = `<div class="summary-text">${escapeHTML(item.summary || item.summary_zh || '') || '<span style="color:var(--text-faint)">（无摘要）</span>'}</div>`;
         const source = escapeHTML(item.source || '');
-        const category = escapeHTML(item.category || '');
+        const catTag = renderCatTag(item.category || '');
         const imp = item._imp;
-        const keywords = renderKw(item.keywords);
         const linkBtn = item.url ? `<a class="link-btn" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">原文 ↗</a>` : '<span style="color:var(--text-faint)">—</span>';
         tbody.insertAdjacentHTML('beforeend', `
             <tr>
@@ -883,9 +913,8 @@ function renderTable(articles) {
                 <td>${titleEn}${titleZh}</td>
                 <td>${summary}</td>
                 <td>${source}</td>
-                <td>${category}</td>
+                <td>${catTag}</td>
                 <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
-                <td>${keywords}</td>
                 <td>${linkBtn}</td>
             </tr>
         `);
