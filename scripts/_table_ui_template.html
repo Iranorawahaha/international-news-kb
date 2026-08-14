@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__TITLE__</title>
+    <style>
+        /* 主题色变量（各版面不同，由构建脚本注入） */
+        :root {
+            --bg: #f5f7fb;
+            --panel: #ffffff;
+            --panel-2: #f8fafc;
+            --border: #e2e8f0;
+            --border-soft: #eef1f7;
+            --text: #1e293b;
+            --text-dim: #64748b;
+            --text-faint: #94a3b8;
+            --theme-primary: __THEME_PRIMARY__;
+            --theme-primary-2: __THEME_PRIMARY_2__;
+            --theme-primary-light: __THEME_PRIMARY_LIGHT__;
+            --theme-primary-bg: __THEME_PRIMARY_BG__;
+            --theme-primary-bg-2: __THEME_PRIMARY_BG_2__;
+            --theme-grad-1: __THEME_GRAD_1__;
+            --theme-grad-2: __THEME_GRAD_2__;
+            --theme-grad-3: __THEME_GRAD_3__;
+            --theme-shadow-primary: __THEME_SHADOW_PRIMARY__;
+            --theme-row-hover: __THEME_ROW_HOVER__;
+            --gold: #f59e0b;
+            --gold-bg: #fffbeb;
+            --green: #10b981;
+            --green-bg: #ecfdf5;
+            --red: #ef4444;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "SF Mono", monospace;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 16px 20px 32px;
+        }
+        .container { max-width: 1440px; margin: 0 auto; }
+
+        /* ===== 顶部彩色大块 ===== */
+        .header {
+            background: linear-gradient(135deg, var(--theme-grad-1) 0%, var(--theme-grad-2) 50%, var(--theme-grad-3) 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 24px 32px 22px;
+            margin-bottom: 16px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--theme-shadow-primary);
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+            pointer-events: none;
+        }
+        .nav {
+            display: flex; gap: 8px; flex-wrap: wrap;
+            margin-bottom: 14px;
+            position: relative;
+        }
+        .nav a {
+            padding: 5px 14px; border-radius: 99px;
+            background: rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.85);
+            text-decoration: none; font-size: 13px; font-weight: 500;
+            transition: all 0.15s;
+        }
+        .nav a:hover { background: rgba(255,255,255,0.22); color: white; }
+        .nav a.active {
+            background: white; color: var(--theme-primary);
+            font-weight: 700;
+        }
+        .header h1 {
+            font-size: 28px; font-weight: 800; letter-spacing: -0.5px;
+            margin-bottom: 8px; position: relative;
+        }
+        .header .subtitle {
+            font-size: 13px; color: rgba(255,255,255,0.85);
+            line-height: 1.6; max-width: 920px;
+            margin-bottom: 16px; position: relative;
+        }
+        .stats-strip {
+            display: flex; gap: 12px; flex-wrap: wrap;
+            position: relative;
+        }
+        .stats-strip .pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 14px; border-radius: 99px;
+            background: rgba(255,255,255,0.15);
+            font-size: 13px; font-weight: 500;
+        }
+        .stats-strip .pill .v { font-weight: 700; }
+        .stats-strip .pill.gold { background: rgba(245,158,11,0.18); }
+        .stats-strip .pill.green { background: rgba(16,185,129,0.18); }
+
+        /* ===== 绿色最近更新条 ===== */
+        .update-bar {
+            background: var(--green-bg);
+            border: 1px solid #a7f3d0;
+            border-radius: 12px;
+            padding: 12px 18px;
+            margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px;
+            font-size: 13px; color: #065f46;
+        }
+        .update-bar .dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
+        }
+        .update-bar strong { color: #047857; }
+
+        /* ===== 数据源说明 ===== */
+        .source-note {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-left: 4px solid var(--theme-primary-light);
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            font-size: 13px; color: var(--text-dim);
+            line-height: 1.7;
+        }
+        .source-note .tag {
+            display: inline-block;
+            padding: 1px 8px; border-radius: 4px;
+            background: var(--gold-bg); color: var(--gold);
+            font-size: 11px; font-weight: 600; margin-right: 3px;
+        }
+
+        /* ===== 顶部统计卡片 ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px; margin-bottom: 16px;
+        }
+        .stat-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 18px 20px;
+            box-shadow: var(--shadow-sm);
+        }
+        .stat-card .stat-number {
+            font-family: var(--mono);
+            font-size: 32px; font-weight: 800; line-height: 1.1;
+            color: var(--theme-primary);
+        }
+        .stat-card.high-priority .stat-number { color: #ea580c; }
+        .stat-card .stat-label {
+            color: var(--text-dim); font-size: 13px;
+            margin-top: 6px; font-weight: 500;
+        }
+        .stat-card.high-priority .stat-label { color: #ea580c; font-weight: 600; }
+
+        /* ===== 顶部日期×分类统计表（国内版专属） ===== */
+        .pivot-wrapper {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            overflow-x: auto;
+        }
+        .pivot-wrapper .pivot-title {
+            font-size: 13px; font-weight: 700; color: var(--theme-primary);
+            margin-bottom: 10px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .pivot-wrapper .pivot-subtitle {
+            font-size: 11px; color: var(--text-faint); margin-bottom: 10px;
+        }
+        table.pivot-table {
+            width: 100%; border-collapse: collapse; font-size: 12.5px;
+        }
+        table.pivot-table th {
+            padding: 8px 10px; text-align: center;
+            background: var(--theme-primary-bg);
+            color: var(--theme-primary);
+            font-weight: 700; font-size: 11.5px;
+            border: 1px solid var(--border-soft);
+            white-space: nowrap;
+        }
+        table.pivot-table td {
+            padding: 8px 10px; text-align: center;
+            border: 1px solid var(--border-soft);
+            color: var(--text-dim);
+            font-family: var(--mono); font-size: 12px;
+        }
+        table.pivot-table td.date-cell {
+            text-align: left; font-weight: 600; color: var(--text);
+            font-family: inherit;
+        }
+        table.pivot-table td.date-cell .today-dot {
+            display: inline-block; width: 6px; height: 6px;
+            border-radius: 50%; background: var(--red);
+            margin-left: 6px; vertical-align: middle;
+        }
+        table.pivot-table td.count-cell { font-weight: 600; color: var(--theme-primary); }
+        table.pivot-table tr:hover td { background: var(--theme-primary-bg); }
+
+        /* ===== 主区域：左栏目栏 + 右内容区 ===== */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 900px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static !important; }
+        }
+
+        /* ===== 左侧栏目栏（sticky） ===== */
+        .sidebar {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 16px;
+            align-self: start;
+        }
+        .sidebar-header {
+            font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+            color: var(--text-faint); text-transform: uppercase;
+            padding: 6px 10px 10px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .col-item {
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 12px; border-radius: 8px;
+            width: 100%;
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-dim);
+            font-size: 14px; font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease-out;
+            margin-bottom: 2px;
+            text-align: left;
+            font-family: inherit;
+        }
+        .col-item:hover {
+            background: var(--theme-primary-bg);
+            color: var(--theme-primary);
+            transform: translateX(2px);
+        }
+        .col-item:active { transform: translateX(0); }
+        .col-item.active {
+            background: var(--theme-primary);
+            color: white;
+            font-weight: 600;
+            box-shadow: var(--theme-shadow-primary);
+        }
+        .col-item .ic { font-size: 16px; line-height: 1; }
+        .col-item .nm { flex: 1; }
+        .col-item .cnt {
+            font-family: var(--mono); font-size: 11px;
+            background: rgba(0,0,0,0.06);
+            padding: 2px 8px;
+            border-radius: 99px;
+            color: var(--text-dim);
+            font-weight: 600;
+        }
+        .col-item.active .cnt {
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+        .col-item:focus-visible {
+            outline: 2px solid var(--theme-primary-light);
+            outline-offset: 1px;
+        }
+
+        /* ===== 右侧内容区 ===== */
+        .content-area { display: flex; flex-direction: column; gap: 14px; }
+
+        /* ===== 日期表头按钮（横向） ===== */
+        .date-header {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 12px 16px;
+            box-shadow: var(--shadow-sm);
+            display: flex; align-items: center; gap: 10px;
+            flex-wrap: wrap;
+        }
+        .date-header .label {
+            font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+            color: var(--text-faint); text-transform: uppercase;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .date-btn {
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: white;
+            color: var(--text-dim);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease-out;
+            font-family: inherit;
+        }
+        .date-btn:hover {
+            border-color: var(--theme-primary-light);
+            color: var(--theme-primary);
+            background: var(--theme-primary-bg);
+        }
+        .date-btn.active {
+            background: var(--theme-primary);
+            color: white;
+            border-color: var(--theme-primary);
+            font-weight: 600;
+            box-shadow: var(--theme-shadow-primary);
+        }
+        .date-btn:focus-visible {
+            outline: 2px solid var(--theme-primary-light); outline-offset: 1px;
+        }
+
+        /* ===== 筛选条 ===== */
+        .toolbar {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 10px 14px;
+            box-shadow: var(--shadow-sm);
+            display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+        }
+        .toolbar .label {
+            font-size: 11px; font-weight: 700; letter-spacing: 1px;
+            color: var(--text-faint); text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .search-box {
+            flex: 1; min-width: 200px;
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: white;
+            color: var(--text); font-size: 13px;
+            outline: none;
+            transition: all 0.15s;
+        }
+        .search-box::placeholder { color: var(--text-faint); }
+        .search-box:focus {
+            border-color: var(--theme-primary-light);
+            box-shadow: 0 0 0 3px var(--theme-row-hover);
+        }
+        select.filter-select {
+            padding: 8px 28px 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: white
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
+                no-repeat right 10px center;
+            color: var(--text); font-size: 13px;
+            cursor: pointer; appearance: none; -webkit-appearance: none;
+            transition: border-color 0.15s;
+        }
+        select.filter-select:hover { border-color: var(--theme-primary-light); }
+        select.filter-select:focus-visible {
+            outline: 2px solid var(--theme-primary-light); outline-offset: 1px;
+        }
+
+        /* ===== 表格 ===== */
+        .table-container {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        table { width: 100%; border-collapse: collapse; }
+        thead {
+            background: linear-gradient(180deg, #f8fafc, #f1f5f9);
+        }
+        th {
+            padding: 12px 10px; text-align: left;
+            font-weight: 700; font-size: 11px;
+            letter-spacing: 1px; text-transform: uppercase;
+            color: var(--text-dim);
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid var(--border-soft);
+            font-size: 13px; vertical-align: top;
+            color: var(--text-dim);
+        }
+        tbody tr { transition: background 0.1s; }
+        tbody tr:hover { background: var(--theme-primary-bg); }
+
+        th:nth-child(1), td:nth-child(1) { width: 40px; min-width: 40px; text-align: center; color: var(--text-faint); font-family: var(--mono); }
+        th:nth-child(2), td:nth-child(2) { width: 88px; min-width: 88px; font-family: var(--mono); font-size: 12px; }
+        th:nth-child(3), td:nth-child(3) { width: 240px; min-width: 200px; max-width: 280px; word-break: break-word; }
+        th:nth-child(4), td:nth-child(4) { min-width: 180px; word-break: break-word; overflow-wrap: break-word; }
+        th:nth-child(5), td:nth-child(5) { width: 80px; min-width: 70px; }
+        th:nth-child(6), td:nth-child(6) { width: 80px; min-width: 70px; }
+        th:nth-child(7), td:nth-child(7) { width: 80px; min-width: 70px; }
+        th:nth-child(8), td:nth-child(8) { width: 120px; min-width: 100px; }
+        th:nth-child(9), td:nth-child(9) { width: 120px; min-width: 100px; }
+
+        /* 日期分组表头 */
+        .date-group-divider {
+            background: linear-gradient(90deg, var(--theme-primary-bg) 0%, var(--theme-primary-bg) 70%, transparent 100%);
+            border-left: 5px solid var(--theme-primary);
+            border-bottom: 1px solid var(--theme-primary-bg-2);
+            border-radius: 0 10px 10px 0;
+            padding: 12px 20px;
+            margin: 18px 0 12px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--theme-primary);
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: var(--shadow-sm);
+        }
+        .date-group-divider:first-child { margin-top: 0; }
+        .date-group-divider.today {
+            background: linear-gradient(90deg, #ecfdf5 0%, #ecfdf5 70%, transparent 100%);
+            border-left-color: #16a34a;
+            color: #047857;
+        }
+        .date-group-divider .date-icon {
+            font-size: 18px;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,.08));
+        }
+        .date-group-divider .date-main {
+            font-family: ui-monospace, monospace;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .date-group-divider .date-weekday {
+            font-size: 12px;
+            color: var(--text-dim);
+            font-weight: 500;
+            background: white;
+            padding: 3px 10px;
+            border-radius: 99px;
+            border: 1px solid var(--border);
+        }
+        .date-group-divider.today .date-weekday {
+            background: #16a34a;
+            color: white;
+            border-color: #16a34a;
+        }
+        .date-group-divider .date-count {
+            font-family: ui-monospace, monospace;
+            font-size: 12px;
+            background: var(--theme-primary);
+            color: white;
+            padding: 3px 12px;
+            border-radius: 99px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        .date-group-divider .date-iso {
+            font-family: ui-monospace, monospace;
+            font-size: 11px;
+            color: var(--text-faint);
+            font-weight: 500;
+        }
+
+        /* 标题 */
+        .title-en {
+            color: var(--theme-primary-light);
+            font-style: italic;
+            font-size: 11px;
+            margin-bottom: 3px;
+            line-height: 1.4;
+            font-weight: 500;
+            opacity: 0.85;
+        }
+        .title-zh {
+            color: var(--text);
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .title-zh a { color: var(--text); text-decoration: none; }
+        .title-zh a:hover { color: var(--theme-primary); text-decoration: underline; }
+        mark { background: var(--gold-bg); color: var(--gold); padding: 0 2px; border-radius: 2px; font-weight: 600; }
+
+        /* 摘要 */
+        .summary-text {
+            color: var(--text-dim); font-size: 13px; line-height: 1.66;
+            white-space: normal; word-break: break-word;
+        }
+
+        /* 重要性徽章 */
+        .importance-badge {
+            display: inline-block; padding: 3px 10px;
+            border-radius: 99px; font-size: 11px; font-weight: 600;
+            white-space: nowrap;
+        }
+        .badge-high     { background: #ffedd5; color: #c2410c; border: 1px solid #fdba74; }
+        .badge-medium   { background: var(--theme-primary-bg); color: var(--theme-primary); border: 1px solid var(--theme-primary-bg-2); }
+        .badge-low      { background: var(--panel-2); color: var(--text-faint); border: 1px solid var(--border); }
+
+        /* 关键词 */
+        .keyword-tag {
+            display: inline-block; padding: 2px 8px; margin: 2px 2px 0 0;
+            background: var(--panel-2); border: 1px solid var(--border);
+            border-radius: 6px; font-size: 11px;
+            color: var(--text-dim);
+        }
+
+        /* 原文链接 */
+        .link-btn {
+            display: inline-block; padding: 5px 10px;
+            background: var(--theme-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 11px; font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.15s;
+        }
+        .link-btn:hover { background: var(--theme-primary-2); box-shadow: var(--theme-shadow-primary); }
+
+        /* 空状态 */
+        .empty-state { padding: 48px 20px; text-align: center; color: var(--text-faint); font-size: 14px; }
+
+        /* ===== 页脚 ===== */
+        .footer {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 14px 20px;
+            text-align: center;
+            color: var(--text-faint);
+            font-size: 12px;
+            font-family: var(--mono);
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 12px 10px 30px; }
+            .header { padding: 18px 16px; }
+            .header h1 { font-size: 22px; }
+            th, td { padding: 9px 7px; }
+            .toolbar .search-box { min-width: 100%; }
+            td:nth-child(4) { display: none; }
+            th:nth-child(4) { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 顶部彩色大块 -->
+    <div class="header">
+        <nav class="nav">
+            <a href="./">🏠 Ira 信息看板</a>
+            <a href="international-news.html">🌍 国际新闻看板</a>
+            <a href="china-news.html" class="__NAVBAR_INTL_ACTIVE__">🇨🇳 国内新闻看板</a>
+            <a href="ai-news.html" class="__NAVBAR_AI_ACTIVE__">🤖 AI 动向看板</a>
+            <a href="diplomatic-affairs.html">🏛️ 使领馆看板</a>
+        </nav>
+        <h1>__HEADER_H1__</h1>
+        <div class="subtitle">__SUBTITLE__</div>
+        <div class="stats-strip">
+            <span class="pill">📅 时间窗：__NOW_STR__ （近 7 天）</span>
+            <span class="pill">📊 要闻总数：<span class="v">__TOTAL_COUNT__</span> 条</span>
+            <span class="pill green">📰 今日新增：<span class="v">__TODAY_COUNT__</span> 条</span>
+            <span class="pill gold">🔴 高优先级：<span class="v">__HIGH_COUNT__</span> 条</span>
+        </div>
+    </div>
+
+    <!-- 绿色最近更新条 -->
+    <div class="update-bar">
+        <span class="dot"></span>
+        <strong>最近更新：</strong>__NOW_FULL__ 北京时间（每日自动刷新） · 共 <strong>__TOTAL_COUNT__</strong> 条新闻 · 数据快照，滚动 7 天窗口
+    </div>
+
+    <!-- 数据源说明 -->
+    <div class="source-note">
+        💡 <span class="tag">数据源说明</span>__SOURCE_NOTE__
+    </div>
+
+    <!-- 顶部统计卡片 -->
+    <div class="stats-grid">
+        <div class="stat-card" style="border-left: 4px solid #22a35e; background: linear-gradient(180deg, #f0fdf4, #fff);">
+            <div class="stat-number" style="color: #16a34a;">__TODAY_COUNT__</div>
+            <div class="stat-label">🆕 今日新增</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">__TOTAL_COUNT__</div>
+            <div class="stat-label">要闻总数（去重后）</div>
+        </div>
+        <div class="stat-card high-priority">
+            <div class="stat-number">__HIGH_COUNT__</div>
+            <div class="stat-label">🔴 高优先级要闻</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">__DATE_COUNT__</div>
+            <div class="stat-label">覆盖天数</div>
+        </div>
+    </div>
+
+    <!-- 国内版顶部统计表（日期×分类） -->
+    __STATS_TOP__
+
+    <!-- 主区域：左栏目栏 + 右内容区 -->
+    <div class="main-grid">
+        <!-- 左侧栏目侧边栏 -->
+        <nav class="sidebar" id="columnSidebar">
+            <div class="sidebar-header">__SIDEBAR_HEADER__</div>
+            __COLUMN_SIDEBAR__
+        </nav>
+
+        <!-- 右侧内容区 -->
+        <div class="content-area">
+            <!-- 日期表头按钮 -->
+            <div class="date-header" id="dateHeader">
+                <span class="label">📅 日期</span>
+                __DATE_HEAD_BUTTONS__
+            </div>
+
+            <!-- 筛选条 -->
+            <div class="toolbar">
+                <input type="text" class="search-box" id="searchBox" placeholder="🔍 搜索标题、关键词、摘要…" oninput="filterNews()">
+                <span class="label">来源</span>
+                <select class="filter-select" id="sourceFilter" onchange="filterNews()">
+                    <option value="">全部</option>
+                </select>
+                <span class="label">分类</span>
+                <select class="filter-select" id="categoryFilter" onchange="filterNews()">
+                    <option value="">全部</option>
+                </select>
+                <span class="label">重要性</span>
+                <select class="filter-select" id="importanceFilter" onchange="filterNews()">
+                    <option value="">全部</option>
+                    <option value="high">🔴高</option>
+                    <option value="medium">🟡中</option>
+                    <option value="low">⚪低</option>
+                </select>
+            </div>
+
+            <!-- 表格 -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>日期</th>
+                            <th>标题</th>
+                            <th>摘要</th>
+                            <th>来源</th>
+                            <th>分类</th>
+                            <th>重要性</th>
+                            <th>关键词</th>
+                            <th>原文</th>
+                        </tr>
+                    </thead>
+                    <tbody id="newsTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        __FOOTER__
+    </div>
+</div>
+
+<script>
+const NEWS_DATA = __NEWS_DATA_JSON__;
+let selectedDate = 'all';
+let selectedColumn = 'all';
+
+function initFilters() {
+    const sourceSet = new Set();
+    const categorySet = new Set();
+    Object.values(NEWS_DATA.archive).forEach(articles => {
+        articles.forEach(art => {
+            if (art.source) sourceSet.add(art.source);
+            if (art.category) categorySet.add(art.category);
+        });
+    });
+    const sourceFilter = document.getElementById('sourceFilter');
+    [...sourceSet].sort().forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s; opt.textContent = s;
+        sourceFilter.appendChild(opt);
+    });
+    const categoryFilter = document.getElementById('categoryFilter');
+    [...categorySet].sort().forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c; opt.textContent = c;
+        categoryFilter.appendChild(opt);
+    });
+}
+
+// V3.0 重要性判定（统一标准）
+function getImportance(score) {
+    if (typeof score === 'number' && score >= 88) {
+        return { level:'high', rank:2, label:'🔴高', cls:'badge-high' };
+    }
+    if (typeof score === 'number' && score >= 65) {
+        return { level:'medium', rank:1, label:'🟡中', cls:'badge-medium' };
+    }
+    if (typeof score === 'number' && score > 0) {
+        return { level:'low', rank:0, label:'⚪低', cls:'badge-low' };
+    }
+    return { level:'low', rank:0, label:'⚪低', cls:'badge-low' };
+}
+
+// 左侧栏目栏点击
+document.getElementById('columnSidebar').addEventListener('click', function(e) {
+    const btn = e.target.closest('.col-item');
+    if (!btn) return;
+    document.querySelectorAll('.col-item').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedColumn = btn.dataset.column;
+    document.getElementById('searchBox').value = '';
+    document.getElementById('sourceFilter').value = '';
+    document.getElementById('categoryFilter').value = '';
+    document.getElementById('importanceFilter').value = '';
+    filterNews();
+});
+
+// 顶部日期表头按钮点击
+document.getElementById('dateHeader').addEventListener('click', function(e) {
+    const btn = e.target.closest('.date-btn');
+    if (!btn) return;
+    document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedDate = btn.dataset.date;
+    filterNews();
+});
+
+function filterNews() {
+    const searchText = document.getElementById('searchBox').value.toLowerCase();
+    const sourceFilter = document.getElementById('sourceFilter').value;
+    const categoryFilter = document.getElementById('categoryFilter').value;
+    const importanceFilter = document.getElementById('importanceFilter').value;
+
+    let filteredArticles = [];
+    if (selectedDate === 'all') {
+        const sortedDates = Object.keys(NEWS_DATA.archive).sort().reverse();
+        sortedDates.forEach(dateStr => {
+            const articles = NEWS_DATA.archive[dateStr] || [];
+            filteredArticles.push({ _isDateSeparator: true, _date: dateStr, _count: articles.length });
+            filteredArticles.push(...articles.map(a => ({...a, _date: dateStr })));
+        });
+    } else {
+        filteredArticles = (NEWS_DATA.archive[selectedDate] || []).map(a => ({...a, _date: selectedDate }));
+    }
+
+    filteredArticles = filteredArticles.filter(item => {
+        if (item._isDateSeparator) return true;
+        if (selectedColumn !== 'all' && item.category !== selectedColumn && item.column !== selectedColumn) return false;
+        if (sourceFilter && item.source !== sourceFilter) return false;
+        if (categoryFilter && item.category !== categoryFilter) return false;
+        item._imp = getImportance(item.priority_score || 0);
+        if (importanceFilter && item._imp.level !== importanceFilter) return false;
+        if (searchText) {
+            const searchIn = [(item.title || ''), (item.title_en || ''), (item.summary || ''), (item.keywords || []).join(' ')].join(' ').toLowerCase();
+            if (!searchIn.includes(searchText)) return false;
+        }
+        return true;
+    });
+
+    filteredArticles = filteredArticles.sort((a, b) => {
+        if (a._isDateSeparator || b._isDateSeparator) return 0;
+        const da = a._date || '', db = b._date || '';
+        if (da !== db) return db.localeCompare(da);
+        const ar = (a._imp && a._imp.rank) || 0;
+        const br = (b._imp && b._imp.rank) || 0;
+        if (ar !== br) return br - ar;
+        return (b.priority_score || 0) - (a.priority_score || 0);
+    });
+
+    renderTable(filteredArticles);
+}
+
+function renderTable(articles) {
+    const tbody = document.getElementById('newsTableBody');
+    tbody.innerHTML = '';
+    if (!articles.length) {
+        tbody.innerHTML = '<tr><td colspan="9"><div class="empty-state">📭 当前筛选条件下无新闻</div></td></tr>';
+        return;
+    }
+
+    let globalIndex = 0;
+    const TODAY_DATE = new Date().toISOString().slice(0, 10);
+    const WEEKDAY_MAP = {0:'周日',1:'周一',2:'周二',3:'周三',4:'周四',5:'周五',6:'周六'};
+    function fmtDateHeader(dateStr, count) {
+        const d = new Date(dateStr + 'T00:00:00');
+        const weekday = WEEKDAY_MAP[d.getDay()] || '';
+        const md = (d.getMonth()+1) + '月' + d.getDate() + '日';
+        const isToday = dateStr === TODAY_DATE;
+        const todayCls = isToday ? ' today' : '';
+        const weekdayLabel = weekday + (isToday ? ' · 今日' : '');
+        return `<td colspan="9" style="padding:0 !important; border:none !important; background:transparent !important;">
+            <div class="date-group-divider${todayCls}">
+                <span class="date-icon">📅</span>
+                <span class="date-main">${md}</span>
+                <span class="date-weekday">${weekdayLabel}</span>
+                <span class="date-iso">${dateStr}</span>
+                <span class="date-count">${count} 条</span>
+            </div>
+        </td>`;
+    }
+    function escapeHTML(s) {
+        return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+    }
+    function renderKw(kw) {
+        if (Array.isArray(kw) && kw.length) {
+            return kw.slice(0, 6).map(k => `<span class="keyword-tag">${escapeHTML(k)}</span>`).join('');
+        }
+        return '<span style="color:var(--text-faint)">—</span>';
+    }
+    for (const item of articles) {
+        if (item._isDateSeparator) {
+            tbody.insertAdjacentHTML('beforeend', `<tr><td colspan="9" style="padding:0;border:0;background:transparent;">${fmtDateHeader(item._date, item._count)}</td></tr>`);
+            continue;
+        }
+        globalIndex += 1;
+        const idx = globalIndex;
+        const dateStr = escapeHTML(item._date || '');
+        const titleEn = item.title_en ? `<div class="title-en">${escapeHTML(item.title_en)}</div>` : '';
+        const titleZh = `<div class="title-zh"><a href="${escapeHTML(item.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.title || item.title_zh || '')}</a></div>`;
+        const summary = `<div class="summary-text">${escapeHTML(item.summary || item.summary_zh || '') || '<span style="color:var(--text-faint)">（无摘要）</span>'}</div>`;
+        const source = escapeHTML(item.source || '');
+        const category = escapeHTML(item.category || '');
+        const imp = item._imp;
+        const keywords = renderKw(item.keywords);
+        const linkBtn = item.url ? `<a class="link-btn" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">原文 ↗</a>` : '<span style="color:var(--text-faint)">—</span>';
+        tbody.insertAdjacentHTML('beforeend', `
+            <tr>
+                <td>${idx}</td>
+                <td>${dateStr}</td>
+                <td>${titleEn}${titleZh}</td>
+                <td>${summary}</td>
+                <td>${source}</td>
+                <td>${category}</td>
+                <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
+                <td>${keywords}</td>
+                <td>${linkBtn}</td>
+            </tr>
+        `);
+    }
+}
+
+// 初始化
+initFilters();
+filterNews();
+</script>
+</body>
+</html>
