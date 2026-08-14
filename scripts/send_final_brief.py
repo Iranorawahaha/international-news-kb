@@ -83,23 +83,63 @@ IRA_RUNS_FILE = os.path.expanduser("~/.workbuddy/ira_runs.json")
 # 使领馆看板数据文件（日报「使领馆动态」板块来源，有则展示、无则省略）
 DIPLO_DATA = os.path.join(BASE, "data", "diplomatic-affairs.json")
 
+# 当天手动调整配置（可选）：调整国际条目顺序 + 额外纳入低分条目
+BRIEF_OVERRIDE = os.path.join(BASE, "data", "brief-override.json")
+
+
+def _norm_url(u):
+    return (u or '').strip().rstrip('/').lower()
+
+
+def load_override():
+    """读取当天手动调整配置（可选）。仅当 date == 今日 时生效。"""
+    if not os.path.exists(BRIEF_OVERRIDE):
+        return None
+    try:
+        with open(BRIEF_OVERRIDE) as f:
+            ov = json.load(f)
+    except Exception:
+        return None
+    if ov.get('date') != TODAY:
+        return None
+    return ov
+
 
 def esc(text):
     return (text or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
 def load_articles():
+    override = load_override()
+    intl_order = (override or {}).get('intl_order') or []
+    intl_include = (override or {}).get('intl_include') or []
+
     with open(INTL_DATA) as f:
         nd = json.load(f)
     a10 = nd['archive'].get(TODAY, nd['archive'].get(max(nd['archive'].keys()), []))
     intl_full = [a for a in a10 if a.get('priority_score', 0) >= INTL_MIN_SCORE]
+
+    # 额外纳入的低分条目（用户手动指定，即使 score < 88）
+    if intl_include:
+        include_urls = {_norm_url(u) for u in intl_include}
+        for a in a10:
+            if _norm_url(a.get('url')) in include_urls and a not in intl_full:
+                intl_full.append(a)
+
+    # 排除 + 按 override 指定顺序重排
     intl = [a for i, a in enumerate(intl_full) if (i + 1) not in INTL_EXCLUDE]
+    if intl_order:
+        order_map = {_norm_url(u): idx for idx, u in enumerate(intl_order)}
+        indexed = [(a, i) for i, a in enumerate(intl)]
+        indexed.sort(key=lambda ai: (0, order_map[_norm_url(ai[0].get('url'))]) if _norm_url(ai[0].get('url')) in order_map else (1, ai[1]))
+        intl = [a for a, _ in indexed]
 
     with open(CHINA_DATA) as f:
         cd = json.load(f)
     c10 = cd['archive'].get(TODAY, cd['archive'].get(max(cd['archive'].keys()), []))
     dom_full = [a for a in c10 if a.get('priority_score', 0) >= DOM_MIN_SCORE]
-    dom = [a for i, a in enumerate(dom_full) if (i + 1) not in DOM_EXCLUDE]
+    dom_exclude = set(DOM_EXCLUDE) | set((override or {}).get('dom_exclude') or [])
+    dom = [a for i, a in enumerate(dom_full) if (i + 1) not in dom_exclude]
     return intl, dom
 
 

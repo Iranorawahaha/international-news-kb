@@ -1,0 +1,14 @@
+{
+  "date": "2026-08-14",
+  "intl_order": [
+    "https://www.whitehouse.gov/releases/2026/08/the-great-transshipment-scam/",
+    "https://www.whitehouse.gov/presidential-actions/2026/08/adjusting-imports-of-unmanned-aircraft-systems-and-unmanned-aircraft-systems-components-into-the-united-states/",
+    "https://www.reuters.com/world/americas/brazil-opens-reciprocity-process-against-us-over-tariffs-2026-08-13/",
+    "https://www.scmp.com/news/china/science/article/3363782/nearly-200-country-study-shows-chinas-belt-and-road-initiative-cuts-debt-and-corruption"
+  ],
+  "intl_include": [
+    "https://www.reuters.com/world/americas/brazil-opens-reciprocity-process-against-us-over-tariffs-2026-08-13/",
+    "https://www.scmp.com/news/china/science/article/3363782/nearly-200-country-study-shows-chinas-belt-and-road-initiative-cuts-debt-and-corruption"
+  ],
+  "dom_exclude": [1, 2, 8, 9]
+}

@@ -504,20 +504,10 @@ if new_articles:
             print(f"       • {reason}: {count} 条")
     print(f"     ✅ 清洗后剩余: {len(cleaned_new)} 条")
 
-    # V2.5 日期归类：X日版面覆盖 X-1日 9:30 ~ X日 9:30
-    # 新抓到"昨天发表"的文章 → 归入今天版（用户不会倒回去查昨天版面）
-    # 更早日期的文章保持原日期不变（已是历史存档）
-    from datetime import datetime as _dt_v25, timedelta as _td_v25
-    _yesterday = (_dt_v25.now() - _td_v25(days=1)).strftime('%Y-%m-%d')
-    _reassigned = 0
-    for _a in cleaned_new:
-        _ad = _a.get('date', '')
-        # 仅重归类昨天的——昨天 9:30 后发表、今天才抓到的，实际属于今天的资讯窗口
-        if _ad and _ad == _yesterday:
-            _a['date'] = today
-            _reassigned += 1
-    if _reassigned:
-        print(f"  🔄 日期重归类: {_reassigned} 条（昨天发表→归入今天版面）")
+    # V2.9 归档规则：X日版面 = X-1日更新时间 ~ X日更新时间 内抓取的全部内容
+    # 新抓到的一切内容一律归入今天版面（cleaned_new 全部进 data['archive'][today]）
+    # 页面真实发布日期保留在 date 字段仅用于显示，不回填历史版面
+    _v29_note = f"✅ V2.9 归档规则：{len(cleaned_new)} 条新抓内容 → 今日版面（{today}）"
 else:
     cleaned_new = []
     print(f"\n  ℹ️ 无新数据需要处理")
@@ -546,27 +536,10 @@ if all_today_articles:
     _high_priority = sum(1 for a in sorted_articles if (a.get('is_official') or a.get('is_summit_level') or (a.get('priority_score') or 0) >= 88))
     print(f"     ✅ 排序完成: {len(sorted_articles)} 条 (高优先级 {_high_priority} 条)")
 
-    # 真实报道日期重分配：URL 含更早日期（如 reuters/washingtonpost/news.cn）且该日期
-    # 在保留窗口内 → 移到真实报道日期，避免 8/3 版面混入 7/31 已报道的旧闻
-    import re as _re_url
-    def _url_real_date(u):
-        if not u: return None
-        m = _re_url.search(r'(20\d{2})[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12]\d|3[01])', u)
-        if m: return f'{m.group(1)}-{m.group(2)}-{m.group(3)}'
-        m2 = _re_url.search(r'/(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])/', u)
-        if m2: return f'{m2.group(1)}-{m2.group(2)}-{m2.group(3)}'
-        return None
-
-    _min_date = min(data['archive'].keys()) if data['archive'] else today
-    _reassigned = 0
-    for _art in list(data['archive'].get(today, [])):
-        _real = _url_real_date(_art.get('url'))
-        if _real and _real < today and _real >= _min_date:
-            data['archive'].setdefault(_real, []).append(_art)
-            data['archive'][today].remove(_art)
-            _reassigned += 1
-    if _reassigned > 0:
-        print(f"     🔁 真实报道日期重分配: {_reassigned} 条移到 {_min_date}~{today} 对应日期")
+    # V2.9: 版面归档规则 = 抓取时间（今天抓的 → 今天版面）
+    # 页面真实发布日期仅存于 date 字段用于显示，不再回填到历史版面
+    # （删除旧版 URL 真实日期回填逻辑，昨日版面定稿后不再增加）
+    _v29_noop = True
 
 # 清理超过7天的旧数据
 print(f"\n  🗑️ 清理超过{RETENTION_DAYS}天的旧数据...")
@@ -631,8 +604,9 @@ try:
     for _f_src in _us:
         _furl = _ff_norm(_f_src.get('url'))
         if not _furl: continue
-        # V2.5.1: 用发表日 date 归档（collectedAt 在周末断档时不可靠，V2.5 final reclassify 会处理正常 1 天位移）
-        _ftarget = _f_src.get('date', '')
+        # V2.9: 版面归档 = 抓取时间（今天抓的 → 今天版面）
+        # 页面真实发布日期保留在 date 字段用于显示，不回填历史版面
+        _ftarget = (_f_src.get('collectedAt', '') or '')[:10] or today
         if not _ftarget: continue
         # V1.5.7: 终极防线也严格按 7 天窗口过滤（防止 5-18 等超期数据被加回）
         if _ftarget < _cutoff_str: continue

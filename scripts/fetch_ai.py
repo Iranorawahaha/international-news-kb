@@ -374,12 +374,12 @@ def main():
 
     print(f'\n📊 分类: 🔴{high_count} 🟡{med_count} ⚪{low_count} → 共 {len(articles)} 条\n')
 
-    # 4. 按 collectedAt 归档
+    # V2.9 归档规则：X日版面 = 抓取时间决定归档（今天抓的 → 今天版面）
+    # 页面真实发布日期保留在 date 字段仅用于显示（X日版面下可含X-1日内容）
     archive = defaultdict(list)
     for a in articles:
-        col_date = (a.get('collectedAt') or a.get('date') or TODAY)[:10]
+        col_date = (a.get('collectedAt') or TODAY)[:10]
         if col_date:
-            a['date'] = col_date
             archive[col_date].append(a)
 
     # 每组内按重要性排序
