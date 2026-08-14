@@ -545,9 +545,15 @@ else:
 all_today_articles = []
 if today in data['archive']:
     # 丢弃今日版面中非今日抓取的遗留内容（V2.10 旧逻辑误入）
+    # V2.11.3: 同时丢弃 date 早于昨天的（今日抓到的旧公告不得留在今日版面）
+    _yest_arch = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
     for _ta in data['archive'][today]:
-        if (_ta.get('collectedAt') or '')[:10] == today:
+        _tad = (_ta.get('date') or '')[:10]
+        if (_ta.get('collectedAt') or '')[:10] == today and _tad >= _yest_arch:
             all_today_articles.append(_ta)
+        elif _tad and _tad < _yest_arch:
+            # 旧公告（date<昨天）→ 移回对应 date 版面
+            data['archive'].setdefault(_tad, []).append(_ta)
 all_today_articles.extend(cleaned_new)
 
 # V2.11.1 最终防线：今日版面中 URL 与历史版面重复的 → 移回原版面（防朱镕基类重复）
@@ -667,6 +673,18 @@ try:
         _fcol = (_f_src.get('collectedAt', '') or '')[:10]
         if _fcol != today:
             continue  # 非今日抓取的官方源不处理（历史已在 archive，无需升级挪动）
+        # V2.11.2: 官方源也需窗口过滤——今日抓的旧公告（date<昨天）不得进今日版面
+        _fdate_ok = True
+        _fd2 = (_f_src.get('date') or '')[:10]
+        if _fd2:
+            try:
+                from datetime import datetime as _dt_f, timedelta as _td_f
+                if _dt_f.strptime(_fd2, '%Y-%m-%d') < _dt_f.strptime(today, '%Y-%m-%d') - _td_f(days=1):
+                    _fdate_ok = False
+            except Exception:
+                pass
+        if not _fdate_ok:
+            continue
         _ftarget = today
         # V1.5.7: 终极防线也严格按 7 天窗口过滤（防止 5-18 等超期数据被加回）
         if _ftarget < _cutoff_str: continue
@@ -706,11 +724,12 @@ try:
     if _rc_v25_reassigned or _rc_v25_fixed_date:
         print(f"  📅 V2.5 终极重归类: {_rc_v25_reassigned} 条归位, {_rc_v25_fixed_date} 条修正date字段")
 
-    # V2.6 日期护栏（V2.11.1 修正）：仅当"该 URL 不在今日版面"时，collectedAt=today 的历史条目才移入今日
-    #   防止 normalize_schema 污染的历史内容被重复拉回今日（朱镕基类问题）
+    # V2.6 日期护栏（V2.11.2 修正）：仅当"该 URL 不在今日版面"且"date 属于窗口(昨天~今天)"时，
+    #   collectedAt=today 的历史条目才移入今日（防 normalize 污染 + 旧公告重复拉回）
     from datetime import datetime as _dt_v26, timezone as _tz_v26, timedelta as _td_v26
     _TZ_V26 = _tz_v26(_td_v26(hours=8))
     _today = _dt_v26.now(_TZ_V26).strftime('%Y-%m-%d')
+    _yest26 = (_dt_v26.now(_TZ_V26) - _td_v26(days=1)).strftime('%Y-%m-%d')
     _today_urls_v26 = set()
     for _ta26 in data['archive'].get(_today, []):
         _tu26 = (_ta26.get('url') or '').strip().rstrip('/').lower()
@@ -722,8 +741,10 @@ try:
         _v26_keep = []
         for _a in data['archive'][_v26_dt]:
             _c = (_a.get('collectedAt') or '')[:10]
+            _d26 = (_a.get('date') or '')[:10]
             _au26 = (_a.get('url') or '').strip().rstrip('/').lower()
-            if _c == _today and _au26 not in _today_urls_v26:
+            # 仅当：今日抓取 + date 在窗口内 + URL 未在今日版面 → 移入今日
+            if _c == _today and _d26 in (_today, _yest26) and _au26 not in _today_urls_v26:
                 if _today not in data['archive']: data['archive'][_today] = []
                 data['archive'][_today].append(_a)
                 _today_urls_v26.add(_au26)
