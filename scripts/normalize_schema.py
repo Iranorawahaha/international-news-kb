@@ -44,7 +44,9 @@ def normalize_article(art, default_date):
             elif k == "date":
                 v = default_date
             elif k == "collectedAt":
-                v = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                # V2.11: 缺失 collectedAt 时用 date（真实发布日）兜底，禁止补"当前时间"
+                #   否则历史缓存内容会被误判为"今日抓取"拉进今日版面
+                v = (out.get("date") or default_date) + " 09:00:00"
             elif k == "collection_method":
                 v = "legacy"
             elif k == "importance":
