@@ -705,7 +705,9 @@ class EnhancedNewsFetcher:
             if 'id' not in article:
                 article['id'] = f"basic_{i}_{int(time.time()) % 10000}"
             if 'collectedAt' not in article:
-                article['collectedAt'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                # V2.11: 缺失 collectedAt 时用 date 兜底（禁止补当前时间，避免历史内容被误判今日抓取）
+                _d = (article.get('date') or datetime.now().strftime('%Y-%m-%d'))[:10]
+                article['collectedAt'] = _d + " 09:00:00"
             if 'collection_method' not in article:
                 article['collection_method'] = 'basic'
 

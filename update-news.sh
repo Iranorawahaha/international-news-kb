@@ -550,6 +550,32 @@ if today in data['archive']:
             all_today_articles.append(_ta)
 all_today_articles.extend(cleaned_new)
 
+# V2.11.1 最终防线：今日版面中 URL 与历史版面重复的 → 移回原版面（防朱镕基类重复）
+_hist_url_map = {}
+for _hdt, _harts in data.get('archive', {}).items():
+    if _hdt == today:
+        continue
+    for _ha in _harts:
+        _hu = (_ha.get('url') or '').strip().rstrip('/').lower()
+        if _hu:
+            _hist_url_map.setdefault(_hu, _hdt)
+_today_deduped = []
+_today_moved_back = 0
+for _ta in all_today_articles:
+    _tu = (_ta.get('url') or '').strip().rstrip('/').lower()
+    if _tu and _tu in _hist_url_map:
+        _orig_dt = _hist_url_map[_tu]
+        data['archive'].setdefault(_orig_dt, []).append(_ta)
+        _today_moved_back += 1
+    else:
+        _today_deduped.append(_ta)
+all_today_articles = _today_deduped
+if _today_moved_back:
+    print(f"  🔁 V2.11.1 跨版面去重: {_today_moved_back} 条重复移回历史版面")
+    for _hdt in list(data['archive'].keys()):
+        if not data['archive'][_hdt]:
+            del data['archive'][_hdt]
+
 if all_today_articles:
     print(f"\n  🔍 去重处理 (共 {len(all_today_articles)} 条)...")
     # V1.3 修复：跨日期去重的"历史"应排除今天自身（否则今天已有数据被误判为历史重复清空）
@@ -680,20 +706,27 @@ try:
     if _rc_v25_reassigned or _rc_v25_fixed_date:
         print(f"  📅 V2.5 终极重归类: {_rc_v25_reassigned} 条归位, {_rc_v25_fixed_date} 条修正date字段")
 
-    # V2.6 日期护栏（V2.11 修正）：archive 组 ≠ 今日 但 collectedAt=today 的 → 移入今日
-    #   归档依据 = 抓取时间（V2.11），date 字段保留真实发布日仅显示
+    # V2.6 日期护栏（V2.11.1 修正）：仅当"该 URL 不在今日版面"时，collectedAt=today 的历史条目才移入今日
+    #   防止 normalize_schema 污染的历史内容被重复拉回今日（朱镕基类问题）
     from datetime import datetime as _dt_v26, timezone as _tz_v26, timedelta as _td_v26
     _TZ_V26 = _tz_v26(_td_v26(hours=8))
     _today = _dt_v26.now(_TZ_V26).strftime('%Y-%m-%d')
+    _today_urls_v26 = set()
+    for _ta26 in data['archive'].get(_today, []):
+        _tu26 = (_ta26.get('url') or '').strip().rstrip('/').lower()
+        if _tu26:
+            _today_urls_v26.add(_tu26)
     _v26_moved = 0
     for _v26_dt in list(data['archive'].keys()):
         if _v26_dt == _today: continue
         _v26_keep = []
         for _a in data['archive'][_v26_dt]:
             _c = (_a.get('collectedAt') or '')[:10]
-            if _c == _today:
+            _au26 = (_a.get('url') or '').strip().rstrip('/').lower()
+            if _c == _today and _au26 not in _today_urls_v26:
                 if _today not in data['archive']: data['archive'][_today] = []
                 data['archive'][_today].append(_a)
+                _today_urls_v26.add(_au26)
                 _v26_moved += 1
             else:
                 _v26_keep.append(_a)
