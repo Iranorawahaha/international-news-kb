@@ -788,10 +788,12 @@ def main():
         seen[norm] = it
         unique.append(it)
 
-    # V2.9.1 增量归档：今日版面 = 今天新抓到且此前未入库的内容
-    # 已在历史版面的内容保持原位（昨日版面定稿后不再增加，也不重复进今日）
+    # V2.10 归档规则（用户确认）：归档依据 = 真实发布日期 date（非抓取时间）
+    # X日版面 = 真实发布时间 ∈ [X-1 9:30, X 9:30) ≈ date ∈ {X-1, X}
+    # 昨日版面定稿后不再增加；今日抓到更早日期(≤X-2)的不进今日，归对应 date 版面
     archive = {}
     _today_v29 = NOW.strftime("%Y-%m-%d")
+    _yesterday_v29 = (NOW - timedelta(days=1)).strftime("%Y-%m-%d")
     # 读取历史 archive 作为基线（防止全量重抓把 7 天窗口老内容塞进今日）
     _prev_urls = set()
     if os.path.exists(DATA_FILE):
@@ -810,18 +812,30 @@ def main():
             print(f"  ⚠️ 读取历史失败（重建）: {_pe}")
 
     _new_count = 0
+    _old_back = 0
     for it in unique:
         _u = (it.get("url") or "").strip().rstrip("/").lower()
-        # 已在历史版面 → 跳过，不再进今日（防老新闻堆积）
+        _d = (it.get("date") or "")[:10]
+        # 已在历史版面 → 跳过（防重复）
         if _u and _u in _prev_urls:
             continue
-        archive.setdefault(_today_v29, []).append(it)
-        _new_count += 1
+        # 今日版面 = date ∈ {昨天, 今天}（真实发布时间窗口）
+        if _d in (_today_v29, _yesterday_v29):
+            archive.setdefault(_today_v29, []).append(it)
+            _new_count += 1
+        else:
+            # 更早的（≤X-2）：不进今日，归对应 date 版面（真实发布时间决定）
+            if _d and _d >= (NOW - timedelta(days=6)).strftime("%Y-%m-%d"):
+                archive.setdefault(_d, []).append(it)
+                _old_back += 1
+            # 超期直接丢弃
         if _u:
             _prev_urls.add(_u)
     if _new_count:
-        print(f"  🆕 增量归档: {_new_count} 条新内容 → 今日版面（{_today_v29}）")
-    else:
+        print(f"  🆕 今日版面({_today_v29}): {_new_count} 条新内容（date∈{{{_yesterday_v29},{_today_v29}}}）")
+    if _old_back:
+        print(f"  ↩️ {_old_back} 条更早内容归回对应 date 版面（不进今日）")
+    if not _new_count and not _old_back:
         print(f"  ℹ️ 今日无新内容（全部已在历史版面）")
     for d in archive:
         archive[d].sort(key=lambda x: (-x["priority_score"], x["title"]))

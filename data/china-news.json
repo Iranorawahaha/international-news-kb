@@ -369,17 +369,6 @@
         "collectedAt": "2026-08-14 14:39:53"
       },
       {
-        "title": "中国官方首度披露再有六名军方将领涉严重违纪违法",
-        "url": "https://www.zaobao.com/news/china/story20260807-9484317",
-        "date": "2026-08-07",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-14 14:39:53"
-      },
-      {
         "title": "衡阳中院代理院长王雨田被查 曾为湖南引进的高学历法学人才",
         "url": "https://www.zaobao.com/news/china/story20260814-9517121",
         "date": "2026-08-14",
@@ -443,17 +432,6 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "7月，新能源汽车月度新车销量占比首次突破60%、累计占比首次突破50%……中国汽车工业协会发布的最新数据中，两个“首次”备受关注。",
-        "collectedAt": "2026-08-14 14:39:53"
-      },
-      {
-        "title": "集成电路布图设计保护条例",
-        "url": "https://www.gov.cn/zhengce/content/202608/content_7077398.htm",
-        "date": "2026-08-03",
-        "source": "中国政府网·最新政策",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "000014349/2026-00061",
         "collectedAt": "2026-08-14 14:39:53"
       },
       {
@@ -602,7 +580,7 @@
   "today": "2026-08-14",
   "todayCount": 21,
   "stats": {
-    "totalArticles": 52,
+    "totalArticles": 50,
     "dateCount": 7,
     "latestDate": "2026-08-14",
     "summitCount": 5
