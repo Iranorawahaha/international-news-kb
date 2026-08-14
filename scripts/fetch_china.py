@@ -788,11 +788,13 @@ def main():
         seen[norm] = it
         unique.append(it)
 
-    # 按日期归档
+    # V2.9 归档规则：X日版面 = 抓取时间决定归档（今天抓的 → 今天版面）
+    # 页面真实发布日期保留在 date 字段仅用于显示（X日版面下可以出现X-1日内容）
     archive = {}
+    _today_v29 = NOW.strftime("%Y-%m-%d")
     for it in unique:
-        d = it["date"] or NOW.strftime("%Y-%m-%d")
-        archive.setdefault(d, []).append(it)
+        _c = (it.get("collectedAt", "") or "")[:10] or _today_v29
+        archive.setdefault(_c, []).append(it)
     for d in archive:
         archive[d].sort(key=lambda x: (-x["priority_score"], x["title"]))
 
@@ -800,31 +802,8 @@ def main():
     cutoff = (NOW - timedelta(days=6)).strftime("%Y-%m-%d")
     archive = {d: v for d, v in archive.items() if d >= cutoff}
 
-    # V2.6 日期护栏：仅当 collectedAt=今天 且 date=yesterday → 移到今天（更早的不动，防重抓干扰）
-    _v26_moved = 0
-    _today_v26 = NOW.strftime("%Y-%m-%d")
-    _yesterday_v26 = (NOW - timedelta(days=1)).strftime("%Y-%m-%d")
-    for _v26_dt in list(archive.keys()):
-        if _v26_dt == _today_v26:
-            continue
-        _keep = []
-        for _a in archive[_v26_dt]:
-            _c = (_a.get("collectedAt", "") or "")[:10]
-            _d = _a.get("date", "")
-            if _c == _today_v26 and _d == _yesterday_v26:
-                _a["date"] = _today_v26
-                archive.setdefault(_today_v26, []).append(_a)
-                _v26_moved += 1
-            else:
-                _keep.append(_a)
-        if _keep:
-            archive[_v26_dt] = _keep
-        else:
-            del archive[_v26_dt]
-    if _v26_moved:
-        print(f"  🛡️ V2.6 日期护栏: {_v26_moved} 条移到今天")
     # 重新排序
-    today = _today_v26
+    today = _today_v29
     dates = sorted(archive.keys(), reverse=True)
 
     total = sum(len(v) for v in archive.values())
