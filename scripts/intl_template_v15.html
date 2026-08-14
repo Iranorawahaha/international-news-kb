@@ -624,7 +624,6 @@
                             <th>来源</th>
                             <th>分类</th>
                             <th>重要性</th>
-                            <th>关键词</th>
                             <th>原文</th>
                         </tr>
                     </thead>
@@ -788,7 +787,7 @@ function renderTable(articles) {
     const tbody = document.getElementById('newsTableBody');
     tbody.innerHTML = '';
     if (!articles.length) {
-        tbody.innerHTML = '<tr><td colspan="9"><div class="empty-state">📭 当前筛选条件下无新闻</div></td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8"><div class="empty-state">📭 当前筛选条件下无新闻</div></td></tr>';
         return;
     }
 
@@ -804,7 +803,7 @@ function renderTable(articles) {
         const isToday = dateStr === TODAY_DATE;
         const todayCls = isToday ? ' today' : '';
         const weekdayLabel = weekday + (isToday ? ' · 今日' : '');
-        return `<td colspan="9" style="padding:0 !important; border:none !important; background:transparent !important;">
+        return `<td colspan="8" style="padding:0 !important; border:none !important; background:transparent !important;">
             <div class="date-group-divider${todayCls}">
                 <span class="date-icon">📅</span>
                 <span class="date-main">${md}</span>
@@ -822,10 +821,6 @@ function renderTable(articles) {
         } else {
             globalIndex++;
             const imp = item._imp || getImportance(item.priority_score || 0, item.is_summit_level, ((item.title_zh || '') + ' ' + (item.title_en || '')));
-            let kws = item.keywords;
-            if (typeof kws === 'string') kws = kws.replace(/，/g, ',').split(',').map(s => s.trim()).filter(Boolean);
-            if (!Array.isArray(kws)) kws = [];
-            const keywords = kws.slice(0, 3);
             tr.innerHTML = `
                 <td>${globalIndex}</td>
                 <td style="white-space:nowrap">${item.date || item._date || ''}</td>
@@ -836,7 +831,6 @@ function renderTable(articles) {
                 <td style="white-space:nowrap">${item.source || ''}</td>
                 <td style="white-space:nowrap">${item.category || ''}</td>
                 <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
-                <td>${keywords.map(k => `<span class="keyword-tag">${k}</span>`).join('')}</td>
                 <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文↗</a>` : '-'}</td>
             `;
         }
