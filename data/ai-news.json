@@ -1,101 +1,5 @@
 {
   "archive": {
-    "2026-08-14": [
-      {
-        "id": "cmss7a4if02bhroibl2rgit88",
-        "date": "2026-08-13",
-        "title": "Anthropic 计划 10 月以 2 万亿美元估值 IPO，有望超 SpaceX 成史上最大",
-        "title_en": "",
-        "summary": "Anthropic 计划 2026 年 10 月以 2 万亿美元估值 IPO，规模有望超过 SpaceX 成为史上最大 IPO。SpaceX 于 6 月 12 日上市，市值约 1.77 万亿美元。Anthropic 已于 6 月秘密提交 IPO 文件，5 月公布年化营收突破 470 亿美元。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmss7a4if02bhroibl2rgit88",
-        "original_url": "https://www.ithome.com/0/989/505.htm",
-        "collectedAt": "2026-08-14T00:19:55",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "Anthropic"
-        ],
-        "priority_score": 92,
-        "importance": "high"
-      },
-      {
-        "id": "cmss6qe7k027oroibwlblw6mk",
-        "date": "2026-08-13",
-        "title": "DeepSeek Harness 智能体，GPT-5.6 Sol 压缩推理等待，多智能体实验暴露协作失灵",
-        "title_en": "",
-        "summary": "DeepSeek Harness v0.1 以 MIT 协议开源，将模型、工具、沙箱等能力拆为可替换插件，并支持仅追加会话日志回放。Cerebras 与 OpenAI 推出 GPT-5.6 Sol Ultrafast 限量预览，输出速度最高 750 token/秒，HLE 测试较 Claude Fable 5 快近 7 倍。",
-        "summary_en": "",
-        "source": "X：洪明 (@hongming731)",
-        "url": "https://aihot.virxact.com/items/cmss6qe7k027oroibwlblw6mk",
-        "original_url": "https://x.com/hongming731/status/2088052976082698709",
-        "collectedAt": "2026-08-14T00:04:36",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI",
-          "DeepSeek"
-        ],
-        "priority_score": 65,
-        "importance": "medium"
-      },
-      {
-        "id": "cmss9helt0027rodsbtzmot1h",
-        "date": "2026-08-14",
-        "title": "Mac 版 ChatGPT 新增 Computer History 功能，不再依赖截图记录活动",
-        "title_en": "",
-        "summary": "OpenAI 以可选方式推出 Computer History 功能，取代 Chronicle 研究预览，为 Mac 版 ChatGPT 提供活动记忆与时间线。该功能改用 macOS 辅助功能记录点击、输入等互动事件，供 ChatGPT 与 Codex 使用。隐私方面，互动事件本地暂存最多 48 小时，纯文字记忆保留至用户手动清除。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmss9helt0027rodsbtzmot1h",
-        "original_url": "https://www.ithome.com/0/989/518.htm",
-        "collectedAt": "2026-08-14T01:21:32",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "OpenAI"
-        ],
-        "priority_score": 65,
-        "importance": "medium"
-      },
-      {
-        "id": "cmss6lsb701tsroib0kxz9q8q",
-        "date": "2026-08-13",
-        "title": "从0到1带你速通DeepSeek Harness。",
-        "title_en": "",
-        "summary": "",
-        "summary_en": "",
-        "source": "公众号：数字生命卡兹克",
-        "url": "https://aihot.virxact.com/items/cmss6lsb701tsroib0kxz9q8q",
-        "original_url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685238&idx=1&sn=c3159dba0dd5a141f8dd726fd474e6e2",
-        "collectedAt": "2026-08-14T00:01:01",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [
-          "DeepSeek"
-        ],
-        "priority_score": 65,
-        "importance": "medium"
-      },
-      {
-        "id": "cmss7a4if02bnroibyuf4jl92",
-        "date": "2026-08-13",
-        "title": "谷歌推出 Gemini 3.7 Flash 模型，首发优惠价为原 3.6 Flash 的一半",
-        "title_en": "",
-        "summary": "谷歌推出专为编程与 Agents 场景打造的 Gemini 3.7 Flash 模型，距 3.6 Flash 发布仅约三周，在软件工程、知识工作及网页开发工作流方面大幅提升。",
-        "summary_en": "",
-        "source": "IT之家（RSS）",
-        "url": "https://aihot.virxact.com/items/cmss7a4if02bnroibyuf4jl92",
-        "original_url": "https://www.ithome.com/0/989/497.htm",
-        "collectedAt": "2026-08-14T00:19:55",
-        "origin": "aihot",
-        "keywords": [],
-        "company_tags": [],
-        "priority_score": 50,
-        "importance": "low"
-      }
-    ],
     "2026-08-13": [
       {
         "id": "cmsrhf46k12mzroz2cave7h0e",
@@ -5911,6 +5815,102 @@
         "priority_score": 50,
         "importance": "low"
       }
+    ],
+    "2026-08-14": [
+      {
+        "id": "cmss7a4if02bhroibl2rgit88",
+        "date": "2026-08-13",
+        "title": "Anthropic 计划 10 月以 2 万亿美元估值 IPO，有望超 SpaceX 成史上最大",
+        "title_en": "",
+        "summary": "Anthropic 计划 2026 年 10 月以 2 万亿美元估值 IPO，规模有望超过 SpaceX 成为史上最大 IPO。SpaceX 于 6 月 12 日上市，市值约 1.77 万亿美元。Anthropic 已于 6 月秘密提交 IPO 文件，5 月公布年化营收突破 470 亿美元。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmss7a4if02bhroibl2rgit88",
+        "original_url": "https://www.ithome.com/0/989/505.htm",
+        "collectedAt": "2026-08-14T00:19:55",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "Anthropic"
+        ],
+        "priority_score": 92,
+        "importance": "high"
+      },
+      {
+        "id": "cmss6qe7k027oroibwlblw6mk",
+        "date": "2026-08-13",
+        "title": "DeepSeek Harness 智能体，GPT-5.6 Sol 压缩推理等待，多智能体实验暴露协作失灵",
+        "title_en": "",
+        "summary": "DeepSeek Harness v0.1 以 MIT 协议开源，将模型、工具、沙箱等能力拆为可替换插件，并支持仅追加会话日志回放。Cerebras 与 OpenAI 推出 GPT-5.6 Sol Ultrafast 限量预览，输出速度最高 750 token/秒，HLE 测试较 Claude Fable 5 快近 7 倍。",
+        "summary_en": "",
+        "source": "X：洪明 (@hongming731)",
+        "url": "https://aihot.virxact.com/items/cmss6qe7k027oroibwlblw6mk",
+        "original_url": "https://x.com/hongming731/status/2088052976082698709",
+        "collectedAt": "2026-08-14T00:04:36",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI",
+          "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmss9helt0027rodsbtzmot1h",
+        "date": "2026-08-14",
+        "title": "Mac 版 ChatGPT 新增 Computer History 功能，不再依赖截图记录活动",
+        "title_en": "",
+        "summary": "OpenAI 以可选方式推出 Computer History 功能，取代 Chronicle 研究预览，为 Mac 版 ChatGPT 提供活动记忆与时间线。该功能改用 macOS 辅助功能记录点击、输入等互动事件，供 ChatGPT 与 Codex 使用。隐私方面，互动事件本地暂存最多 48 小时，纯文字记忆保留至用户手动清除。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmss9helt0027rodsbtzmot1h",
+        "original_url": "https://www.ithome.com/0/989/518.htm",
+        "collectedAt": "2026-08-14T01:21:32",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "OpenAI"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmss6lsb701tsroib0kxz9q8q",
+        "date": "2026-08-13",
+        "title": "从0到1带你速通DeepSeek Harness。",
+        "title_en": "",
+        "summary": "",
+        "summary_en": "",
+        "source": "公众号：数字生命卡兹克",
+        "url": "https://aihot.virxact.com/items/cmss6lsb701tsroib0kxz9q8q",
+        "original_url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685238&idx=1&sn=c3159dba0dd5a141f8dd726fd474e6e2",
+        "collectedAt": "2026-08-14T00:01:01",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [
+          "DeepSeek"
+        ],
+        "priority_score": 65,
+        "importance": "medium"
+      },
+      {
+        "id": "cmss7a4if02bnroibyuf4jl92",
+        "date": "2026-08-13",
+        "title": "谷歌推出 Gemini 3.7 Flash 模型，首发优惠价为原 3.6 Flash 的一半",
+        "title_en": "",
+        "summary": "谷歌推出专为编程与 Agents 场景打造的 Gemini 3.7 Flash 模型，距 3.6 Flash 发布仅约三周，在软件工程、知识工作及网页开发工作流方面大幅提升。",
+        "summary_en": "",
+        "source": "IT之家（RSS）",
+        "url": "https://aihot.virxact.com/items/cmss7a4if02bnroibyuf4jl92",
+        "original_url": "https://www.ithome.com/0/989/497.htm",
+        "collectedAt": "2026-08-14T00:19:55",
+        "origin": "aihot",
+        "keywords": [],
+        "company_tags": [],
+        "priority_score": 50,
+        "importance": "low"
+      }
     ]
   },
   "dates": [
@@ -5928,7 +5928,7 @@
     "dateCount": 8,
     "highCount": 24,
     "mediumCount": 195,
-    "lowCount": 100,
+    "lowCount": 98,
     "sourceCount": 85,
     "keyCompanies": [
       "NVIDIA",
@@ -5949,7 +5949,7 @@
       "腾讯"
     ]
   },
-  "lastUpdated": "2026-08-14 14:27",
+  "lastUpdated": "2026-08-14 15:07",
   "today": "2026-08-14",
   "todayCount": 5
 }

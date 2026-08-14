@@ -504,23 +504,50 @@ if new_articles:
             print(f"       • {reason}: {count} 条")
     print(f"     ✅ 清洗后剩余: {len(cleaned_new)} 条")
 
-    # V2.9 归档规则：X日版面 = X-1日更新时间 ~ X日更新时间 内抓取的全部内容
-    # 关键：仅 collectedAt=今天 的才算"今日新抓"（缓存文件累积多日，历史内容不得再进今日版面）
-    # 页面真实发布日期保留在 date 字段仅用于显示，不回填历史版面
-    _today_new = [a for a in cleaned_new if (a.get('collectedAt') or a.get('date') or '')[:10] == today]
+    # V2.11 归档规则（用户确认）：X日版面 = 本次更新新出现的内容
+    # ① 仅 collectedAt=today 的算"本次新抓"（缓存累积的历史内容自动排除）
+    # ② URL 已在历史版面的跳过（增量去重，防老内容重复进今日）
+    # ③ date 字段保留真实发布日仅用于显示
+    from datetime import datetime as _dt_v211, timedelta as _td_v211
+    _hist_urls_v211 = set()
+    for _hdt, _harts in data.get('archive', {}).items():
+        if _hdt == today:
+            continue
+        for _ha in _harts:
+            _hu = (_ha.get('url') or '').strip().rstrip('/').lower()
+            if _hu:
+                _hist_urls_v211.add(_hu)
+    _today_new = []
+    _dup_skipped = 0
+    for a in cleaned_new:
+        _au = (a.get('url') or '').strip().rstrip('/').lower()
+        _ac = (a.get('collectedAt') or '')[:10]
+        if _ac != today:
+            continue  # 非今日抓取，不进今日版面
+        if _au and _au in _hist_urls_v211:
+            _dup_skipped += 1
+            continue  # 已在历史版面，跳过
+        _today_new.append(a)
+        if _au:
+            _hist_urls_v211.add(_au)
     if _today_new:
-        _v29_note = f"✅ V2.9 归档规则：{len(_today_new)} 条今日新抓 → 今日版面（{today}）"
+        _v29_note = f"✅ V2.11 归档规则：{len(_today_new)} 条今日新抓 → 今日版面（{today}）"
+        if _dup_skipped:
+            _v29_note += f"（{_dup_skipped} 条已在历史版面，跳过）"
     else:
-        _v29_note = f"ℹ️ V2.9：缓存中无今日新抓内容，今日版面不变"
+        _v29_note = f"ℹ️ V2.11：今日无新内容（缓存中非今日抓取或全部已在历史版面）"
     cleaned_new = _today_new
 else:
     cleaned_new = []
     print(f"\n  ℹ️ 无新数据需要处理")
 
-# 去重处理
+# 去重处理（V2.11：今日版面 = 仅 collectedAt=today 的既有内容 + 本次新抓）
 all_today_articles = []
 if today in data['archive']:
-    all_today_articles.extend(data['archive'][today])
+    # 丢弃今日版面中非今日抓取的遗留内容（V2.10 旧逻辑误入）
+    for _ta in data['archive'][today]:
+        if (_ta.get('collectedAt') or '')[:10] == today:
+            all_today_articles.append(_ta)
 all_today_articles.extend(cleaned_new)
 
 if all_today_articles:
@@ -609,10 +636,12 @@ try:
     for _f_src in _us:
         _furl = _ff_norm(_f_src.get('url'))
         if not _furl: continue
-        # V2.9: 版面归档 = 抓取时间（今天抓的 → 今天版面）
-        # 页面真实发布日期保留在 date 字段用于显示，不回填历史版面
-        _ftarget = (_f_src.get('collectedAt', '') or '')[:10] or today
-        if not _ftarget: continue
+        # V2.11: 归档依据 = 抓取时间（本次更新新抓 → 今日版面）
+        #   date 字段保留真实发布日仅显示
+        _fcol = (_f_src.get('collectedAt', '') or '')[:10]
+        if _fcol != today:
+            continue  # 非今日抓取的官方源不处理（历史已在 archive，无需升级挪动）
+        _ftarget = today
         # V1.5.7: 终极防线也严格按 7 天窗口过滤（防止 5-18 等超期数据被加回）
         if _ftarget < _cutoff_str: continue
         if _ftarget not in data['archive']:
@@ -626,47 +655,24 @@ try:
                 # V2.9.1: 历史版面不移动（昨日定稿后不再增加）——仅升级字段
                 _ff_upgraded += 1
         else:
-            # V2.9.1 增量：仅当天抓取的新条目才追加；历史老条目（collectedAt≠今天）
-            # 若不在 archive 中则跳过，防止 us-official.json 全量重写把老官方源重新塞进版面
-            if _ftarget == today:
-                data['archive'][_ftarget].append(_f_src)
-                _ff_added += 1
+            # V2.11 增量：仅今日新抓且 URL 未入库的追加到今日版面
+            data['archive'][_ftarget].append(_f_src)
+            _ff_added += 1
     for _fdt in list(data['archive'].keys()):
         if not data['archive'][_fdt]:
             del data['archive'][_fdt]
 
-    # V2.5 终极重归类：按 collectedAt 归档 + 确保 date 字段 = archive key
+    # V2.10 归档：归档依据 = 真实发布日期 date（非 collectedAt）
+    # 归档已在前面 cleaned_new 过滤 + force-upgrade 完成；此处仅兜底修复缺失 date
     from collections import defaultdict as _dd_rc
     _rc_v25_reassigned = 0
     _rc_v25_fixed_date = 0
-    _rc_v25_by_target = _dd_rc(list)
     for _rc_dt in list(data['archive'].keys()):
         for _rc_a in list(data['archive'][_rc_dt]):
-            _rc_col = (_rc_a.get('collectedAt') or '')[:10]
-            # 情况1：collectedAt 与当前组不同，且日期差 ≤1 天（正常日更）→ 移到目标组
-            #   ⚠️ 周末断档包：采集日 - 发表日 ≥ 2 天 → 保持原日期分组（不挤到今天）
-            if _rc_col and _rc_col != _rc_dt:
-                from datetime import datetime as _dt
-                try:
-                    d1 = _dt.strptime(_rc_col, '%Y-%m-%d')
-                    d2 = _dt.strptime(_rc_dt, '%Y-%m-%d')
-                    gap = abs((d1 - d2).days)
-                except:
-                    gap = 0
-                if gap <= 1:
-                    _rc_a['date'] = _rc_col
-                    _rc_v25_by_target[_rc_col].append(_rc_a)
-                    data['archive'][_rc_dt].remove(_rc_a)
-                    _rc_v25_reassigned += 1
-            # 情况2：date 字段缺失 → 兜底为归档组（V2.9：date=真实发布日，已有则不改）
-            elif not _rc_a.get('date'):
+            # date 字段缺失 → 兜底为归档组（V2.9：date=真实发布日，已有则不改）
+            if not _rc_a.get('date'):
                 _rc_a['date'] = _rc_dt
                 _rc_v25_fixed_date += 1
-    # 把移动出去的加到目标组
-    for _rc_target, _rc_arts in _rc_v25_by_target.items():
-        if _rc_target not in data['archive']:
-            data['archive'][_rc_target] = []
-        data['archive'][_rc_target].extend(_rc_arts)
     # 删除空组
     for _rc_dt in list(data['archive'].keys()):
         if not data['archive'][_rc_dt]:
@@ -674,9 +680,8 @@ try:
     if _rc_v25_reassigned or _rc_v25_fixed_date:
         print(f"  📅 V2.5 终极重归类: {_rc_v25_reassigned} 条归位, {_rc_v25_fixed_date} 条修正date字段")
 
-    # V2.6 日期护栏：任何 collectedAt 标记为今天的文章，必须归到今天的 archive 组
-    #   防止 force-upgrade 按原始 date 分组的文章滞留在昨天
-    #   V2.9：date 字段保留真实发布日，不做覆盖（仅归档组移动）
+    # V2.6 日期护栏（V2.11 修正）：archive 组 ≠ 今日 但 collectedAt=today 的 → 移入今日
+    #   归档依据 = 抓取时间（V2.11），date 字段保留真实发布日仅显示
     from datetime import datetime as _dt_v26, timezone as _tz_v26, timedelta as _td_v26
     _TZ_V26 = _tz_v26(_td_v26(hours=8))
     _today = _dt_v26.now(_TZ_V26).strftime('%Y-%m-%d')
@@ -687,7 +692,6 @@ try:
         for _a in data['archive'][_v26_dt]:
             _c = (_a.get('collectedAt') or '')[:10]
             if _c == _today:
-                # date 保留真实发布日（V2.9）
                 if _today not in data['archive']: data['archive'][_today] = []
                 data['archive'][_today].append(_a)
                 _v26_moved += 1

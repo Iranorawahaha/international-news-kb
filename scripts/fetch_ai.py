@@ -374,13 +374,51 @@ def main():
 
     print(f'\n📊 分类: 🔴{high_count} 🟡{med_count} ⚪{low_count} → 共 {len(articles)} 条\n')
 
-    # V2.9 归档规则：X日版面 = 抓取时间决定归档（今天抓的 → 今天版面）
-    # 页面真实发布日期保留在 date 字段仅用于显示（X日版面下可含X-1日内容）
+    # V2.11 归档规则（用户确认）：X日版面 = 本次更新新出现的内容
+    # ① 仅 collectedAt=today 的算"本次新抓"
+    # ② URL 已在历史版面的跳过（增量去重）
+    # ③ date 字段保留真实发布日仅用于显示
     archive = defaultdict(list)
+    _cutoff_ai = (datetime.now(TZ) - timedelta(days=7)).strftime('%Y-%m-%d')
+
+    # 1. 读入历史版面（今日覆盖，历史保留）
+    _prev_urls = set()
+    if os.path.exists(output_path):
+        try:
+            with open(output_path, 'r', encoding='utf-8') as _pf:
+                _prev = json.load(_pf)
+            for _pd, _parts in _prev.get('archive', {}).items():
+                if _pd == TODAY:
+                    continue  # 今日版面今天重建
+                if _pd < _cutoff_ai:
+                    continue  # 超期
+                archive[_pd] = _parts
+                for _pa in _parts:
+                    _u = (_pa.get('url') or '').strip().rstrip('/').lower()
+                    if _u:
+                        _prev_urls.add(_u)
+        except Exception:
+            pass
+
+    # 2. 今日新内容（collectedAt=今日 且 URL 未入库）
+    _ai_new = 0
+    _ai_dup = 0
     for a in articles:
-        col_date = (a.get('collectedAt') or TODAY)[:10]
-        if col_date:
-            archive[col_date].append(a)
+        _u = (a.get('url') or '').strip().rstrip('/').lower()
+        _c = (a.get('collectedAt') or '')[:10]
+        if _c != TODAY:
+            continue  # 非今日抓取
+        if _u and _u in _prev_urls:
+            _ai_dup += 1
+            continue  # 已在历史版面
+        archive[TODAY].append(a)
+        _ai_new += 1
+        if _u:
+            _prev_urls.add(_u)
+    if _ai_new:
+        print(f'  🆕 今日版面({TODAY}): {_ai_new} 条新内容（collectedAt=今日）')
+        if _ai_dup:
+            print(f'  ⏭️ {_ai_dup} 条已在历史版面，跳过')
 
     # 每组内按重要性排序
     for d in archive:

@@ -286,6 +286,15 @@ def main():
                     pass
                 url_dt = url_real_date(u)
                 final_date = page_date or url_dt or NOW.strftime("%Y-%m-%d")
+                # V2.11 抓取层过滤：只保留"上次更新~本次更新"窗口内的新公告
+                # 列表页常混入历史公告（如 8/11~8/12 旧稿），丢弃 date 早于前天的
+                try:
+                    _fd = datetime.strptime(final_date, "%Y-%m-%d").date()
+                    _cutoff_d = (NOW - timedelta(days=2)).date()  # 前天（宽容周末断档）
+                    if _fd < _cutoff_d:
+                        continue
+                except Exception:
+                    pass  # 日期解析失败则保留（宁滥勿缺）
                 valid.append(make_item(t, u, final_date, cfg["name"], cfg["category"], page_summary))
             all_items.extend(valid[:20])
             succeeded.append({"site": cfg["name"], "url": cfg["url"], "status": "✅ 成功", "count": len(valid[:20])})
