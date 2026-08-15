@@ -1,8 +1,8 @@
 #!/bin/bash
 # ============================================================
-# 国内新闻看板 · 一键刷新 + 自动部署脚本（Ira 信息看板体系）
-# 1) 抓取中国政府网·要闻 + 最新政策（国家级权威信源）
-# 2) 生成 china-news.html（单文件，深红政务风）
+# 国内重大新闻看板 · 一键刷新 + 自动部署脚本（Ira 信息看板体系 v5）
+# 1) 抓取中国政府网/央视/人民日报/外交部/部委官网/联合早报等权威信源
+# 2) 生成 china-news.html（单文件，蓝色专业风 + 透视表式交互）
 # 3) 部署到 GitHub Pages（国际新闻看板仓库内嵌页面）
 # 4) 更新门户统计（国内新闻今新增 + 日报要点）
 # 默认 9:30 自动刷新（自动化任务）
@@ -21,7 +21,7 @@ export PY
 mkdir -p "/tmp/aihot_scan"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
-echo "== [1/3] 抓取中国政府网权威信源 =="
+echo "== [1/3] 抓取国内重大新闻权威信源 =="
 "$PY" "$OUT_DIR/scripts/fetch_china.py"
 
 echo ""
@@ -71,9 +71,9 @@ git add china-news.html gh-pages/china-news.html index.html gh-pages/index.html 
 if git diff --cached --quiet; then
     echo "ℹ️  内容无变化，跳过提交"
 else
-    git commit -m "🇨🇳 国内新闻看板自动刷新 - $(date '+%Y-%m-%d %H:%M')
+    git commit -m "🇨🇳 国内重大新闻看板自动刷新 v5 - $(date '+%Y-%m-%d %H:%M')
 
-📊 数据快照更新（gov.cn 要闻 + 最新政策 近 7 天）"
+📊 数据快照更新（7大权威信源 近 7 天）"
     if git push origin main 2>&1; then
         echo "✅ 已推送 GitHub Pages"
     else
