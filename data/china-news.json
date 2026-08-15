@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-08-14 15:06",
+  "lastUpdated": "2026-08-15 23:20",
   "retentionDays": 7,
   "archive": {
     "2026-08-09": [
@@ -82,30 +82,6 @@
         "is_summit_level": false,
         "summary": "新华社北京8月11日电（记者 高敬）生态环境部、自然资源部等部门日前联合印发的《生态保护“十五五”规划》提出，到2030年，生态空间格局持续优化，生态质量稳步改善，生物多样性丧失趋势得到有效缓解，优质…",
         "collectedAt": "2026-08-11 14:34:12"
-      }
-    ],
-    "2026-08-08": [
-      {
-        "title": "各美其美，美美与共——中国元首外交的世界情怀与大国气派",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077737.htm",
-        "date": "2026-08-08",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "“世界上最宽阔的是海洋，比海洋更宽阔的是天空，比天空更宽阔的是人的胸怀。对待不同文明，我们需要比天空更宽阔的胸怀”。",
-        "collectedAt": "2026-08-08 14:34:12"
-      },
-      {
-        "title": "前7月我国货物贸易进出口同比增长17.3%",
-        "url": "https://www.gov.cn/lianbo/202608/content_7077717.htm",
-        "date": "2026-08-08",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "从贸易伙伴看，前7月，我国与东盟贸易总值为5.14万亿元，同比增长20%；我国与欧盟贸易总值为3.67万亿元，同比增长9.5%。同期，我国对共建“一带一路”国家合计进出口15.36万亿元，同比增长15…",
-        "collectedAt": "2026-08-08 14:34:12"
       }
     ],
     "2026-08-12": [
@@ -566,23 +542,410 @@
         "summary": "8月12日，甘肃张掖市民乐县永固镇有机蔬菜产业园二期项目建设现场，工人正在加紧施工。项目建成投用后，将增强当地的蔬菜仓储保鲜能力，提升蔬菜错峰销售效果，带动产业发展和群众增收。",
         "collectedAt": "2026-08-14 15:06:42"
       }
+    ],
+    "2026-08-15": [
+      {
+        "title": "习近平将出席纪念江泽民诞辰100周年大会并讲话",
+        "url": "https://www.zaobao.com/news/china/story20260815-9524927",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "习近平致电李在明祝贺韩国政府成立78周年",
+        "url": "https://www.zaobao.com/news/china/story20260815-9523625",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "习近平：推动灾害治理向事前预防转型",
+        "url": "https://www.zaobao.com/news/china/story20260815-9524182",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "习近平：提高防灾减灾救灾能力",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078121.htm",
+        "date": "2026-08-15",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "今天进行二十届中央政治局第二十五次集体学习，内容是提高防灾减灾救灾能力，主要是总结新时代防灾减灾救灾工作成效和经验，分析面临的形势和问题，对进一步做好这项工作进行思考。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "应习近平邀请 厄瓜多尔总统将访华",
+        "url": "https://tv.cctv.com/2026/08/14/VIDETRNMz3Jr2sy4LcWzkVEF260814.shtml",
+        "date": "2026-08-14",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "应习近平邀请，厄瓜多尔总统将访华。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "港媒：习近平访美前数周 美政府筹备混乱令北京不安",
+        "url": "https://www.zaobao.com/news/china/story20260815-9524346",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "纪念江泽民同志诞辰100周年大会17日上午在京隆重举行 习近平将出席大会并发表重要讲话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078133.htm",
+        "date": "2026-08-15",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京8月15日电 纪念江泽民同志诞辰100周年大会将于8月17日上午10时在人民大会堂隆重举行。中共中央总书记、国家主席、中央军委主席习近平将出席大会并发表重要讲话。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "新闻人间：赖清德成“北戴河听床师”？",
+        "url": "https://www.zaobao.com/news/china/story20260815-9521644",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "中国官方召开江泽民国防和军队建设思想研讨会",
+        "url": "https://www.zaobao.com/news/china/story20260815-9523057",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "中国驻巴基斯坦大使馆举办“中国共产党105周年光辉历程的深刻启示”主题座谈会",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/15/content_30175045.html",
+        "date": "2026-08-15",
+        "source": "人民日报",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "本报伊斯兰堡8月14日电&nbsp;&nbsp;（记者赵益普）8月13日，中国驻巴基斯坦大使馆举办“中国共产党105周年光辉历程的深刻启示”主题座谈会。中国驻巴基斯坦大使姜再冬和中联部专家组深入阐释中…",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "中共保定原市委书记党晓龙调任高校 曾是雄安新区筹建班子成员",
+        "url": "https://www.zaobao.com/news/china/story20260815-9525094",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 86,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "2026年8月14日外交部发言人郭嘉昆答记者问（2026-08-14）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260814_12004509.shtml",
+        "date": "2026-08-14",
+        "source": "外交部",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "中国驻摩洛哥使馆通报中国留学生在摩案件进展",
+        "url": "https://news.cctv.com/2026/08/15/ARTIRAlbRGlP7WobVC1c7wrt260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "14日晚，摩警方向我馆报称，涉案的摩洛哥籍犯罪嫌疑人已被警方逮捕，案件正在进一步审理中。目前，相关留学生身体情况稳定。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "前7个月金融总量合理增长 社会融资环境保持宽松",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078088.htm",
+        "date": "2026-08-14",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "中国人民银行今天（8月14日）发布的数据显示，2026年7月末，广义货币（M2）余额355.51万亿元，同比增长7.7%；社会融资规模存量463.27万亿元，同比增长7.4%。两项指标增速均高于名义G…",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "国防部新闻发言人蒋斌就日本政要参拜靖国神社答记者问",
+        "url": "https://news.cctv.com/2026/08/15/ARTIA399Z3DUWt1RIn4aBvJJ260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "国防部新闻发言人蒋斌就日本政要参拜靖国神社答记者问。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "外交部介绍亚太经合组织第三次高官会筹备情况",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/15/content_30175041.html",
+        "date": "2026-08-15",
+        "source": "人民日报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "新华社北京8月14日电&nbsp;&nbsp;作为2026年亚太经合组织（APEC）东道主，中方将于8月17日至28日在辽宁省大连市举办APEC第三次高官会及相关会议。外交部发言人郭嘉昆14日应询介绍…",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "外交部发言人就厄瓜多尔总统诺沃亚将访华答记者问",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/15/content_30175042.html",
+        "date": "2026-08-15",
+        "source": "人民日报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "本报北京8月14日电&nbsp;&nbsp;应国家主席习近平邀请，厄瓜多尔共和国总统丹尼尔·罗伊—希尔克里斯特·诺沃亚·阿辛将于8月16日至23日对中国进行国事访问。外交部发言人14日就诺沃亚总统访华…",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "外交部发言人就日本政要参拜供奉甲级战犯的靖国神社答记者问",
+        "url": "https://news.cctv.com/2026/08/15/ARTIVd6RhELaANhESDwWr9Fk260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "外交部发言人就日本政要参拜供奉甲级战犯的靖国神社答记者问。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "外交部发言人驳斥菲律宾国防部长言论",
+        "url": "https://news.cctv.com/2026/08/14/ARTIGnN1a9AvJhUdQCAjzcTH260814.shtml",
+        "date": "2026-08-14",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "在华外国公民应当遵守中国法律法规。中国移民管理机构依法履职并保障涉案人员合法权益，不针对特定国家。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "政策发力激活入境消费 多地离境退税显著增长",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078090.htm",
+        "date": "2026-08-14",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "今年7月1日起，随着退税无纸化办理、小额抽检等多项离境退税2.0版服务举措落地实施，境外旅客入境后仅需录入一次信息，即可生成离境退税服务码，实现“一码通刷”，办理时间大幅缩短；在开通“即买即退”服务的…",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "新能源汽车开出“中国速度” 动力来自哪里？",
+        "url": "https://news.cctv.com/2026/08/15/ARTICERghF02ydwAmnKCK1Vp260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "近期，“中国速度”成为全球汽车行业热议话题。美国汽车研究中心新发布的报告提出一个核心结论，美国汽车行业必须跟上“中国速度”。如今中国汽车产业持续快速迭代，凭借高效研发、快速落地的发展模式，不断重塑全球…",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "中央宣传部等部门联合印发通知 要求开展生态环境法典学习宣传工作",
+        "url": "https://news.cctv.com/2026/08/14/ARTITIyJArmdncRiGgl31fuy260814.shtml",
+        "date": "2026-08-14",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "中央宣传部等19家部门和单位近日联合印发通知，部署开展《中华人民共和国生态环境法典》学习宣传工作。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "“越来越需要中国市场” 多家外资龙头企业中国业务交出亮眼业绩",
+        "url": "https://news.cctv.com/2026/08/15/ARTIRPO2jlAP2WTcWXVS3YVs260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "最近，多家外资消费龙头企业相继发布最新财报，他们的中国业务交出了亮眼答卷，成为业绩增长的重要支撑。这背后的支撑因素都是什么？",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "“鲜”经济热力十足 “第一网鲜”送得更远 鲜味直达消费者餐桌",
+        "url": "https://news.cctv.com/2026/08/15/ARTI7PwLMztMWH33z1l14rGf260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "在江苏盐城射阳县各码头，出海作业的渔船这两天也陆续归港，一船船梭子蟹批量上市，发往各地。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "万里边疆行 | 边境稳、人心定、产业旺 绘就山河安澜、百姓安康幸福画卷",
+        "url": "https://news.cctv.com/2026/08/15/ARTIFMU7HCE5nbrHm2mmWEH4260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "宽甸满族自治县长甸镇河口村，是经典歌曲《在那桃花盛开的地方》的原创地。这座边境小村正借助“一条路、一颗桃”走出一条交通赋能、三产联动的致富之路。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "中国7月信贷增长超预期 人民币新增贷款罕见转负",
+        "url": "https://www.zaobao.com/news/china/story20260815-9524469",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "企业融资选择更丰富 金融“活水”加速流向扩大内需、科技创新、中小微企业",
+        "url": "https://news.cctv.com/2026/08/15/ARTIrjPAXZzHA2MXNZpQmk1t260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国人民银行8月14日发布7月份金融统计数据及社会融资规模报告。金融总量继续保持合理增长，金融支持实体经济已由更加注重规模扩张转向更加注重质量和效率，融资渠道更加丰富。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "全力打通AI赋能堵点 江苏推进制造业智能化发展再提速",
+        "url": "https://news.cctv.com/2026/08/14/ARTIsHtZBhhTqCVH8EZPx7cD260814.shtml",
+        "date": "2026-08-14",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "“十五五”开局之年，制造业大省江苏着力为企业打通智慧化赋能堵点，加快人工智能赋能新兴产业，推动高质量发展。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "多个经济数据发布",
+        "url": "https://news.cctv.com/2026/08/15/ARTILsJit5KIyhyV8TK4KV6j260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "一组最新发布的经济数据显示，我国经济发展韧性十足",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "快递业加速从“末端配送”向“前端供应链”延伸 以数智物流赋能特色产业发展",
+        "url": "https://news.cctv.com/2026/08/15/ARTIUXKZHLblS9pY9b397YG6260815.shtml",
+        "date": "2026-08-15",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者从国家邮政局了解到，2026年1至7月，邮政行业寄递业务量和业务收入保持双增长态势。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "推动经济持续向新向优向好发展",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/15/content_30175027.html",
+        "date": "2026-08-15",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "今年上半年，国内生产总值同比增长4.7%，符合全年经济增长预期目标，我国经济顶压前行、向新向优，展现出强大韧性和活力。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "知情者：苹果在阿里支持下为中国市场训练自身AI模型",
+        "url": "https://www.zaobao.com/news/china/story20260815-9524422",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "精打细算，像管钱一样管水（经济新方位）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/15/content_30175032.html",
+        "date": "2026-08-15",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "宁夏回族自治区吴忠市青铜峡市大坝镇沙庙村，村民赵升新家的十来亩玉米长势正旺。“让老吴多搞点水，玉米会不会长得更好？”他找到村里的管水员吴宁海。",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "美将台列为大陆货洗产地风险首级 台经济部：并非有违规行为",
+        "url": "https://www.zaobao.com/news/china/story20260815-9523353",
+        "date": "2026-08-15",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      },
+      {
+        "title": "陈光炎：美中AI双雄争霸 “数字铁幕”或将落下",
+        "url": "https://www.zaobao.com/news/china/story20260814-9516430",
+        "date": "2026-08-14",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-15 23:20:11"
+      }
     ]
   },
   "dates": [
+    "2026-08-15",
     "2026-08-14",
     "2026-08-13",
     "2026-08-12",
     "2026-08-11",
     "2026-08-10",
-    "2026-08-09",
-    "2026-08-08"
+    "2026-08-09"
   ],
-  "today": "2026-08-14",
-  "todayCount": 21,
+  "today": "2026-08-15",
+  "todayCount": 35,
   "stats": {
-    "totalArticles": 50,
+    "totalArticles": 83,
     "dateCount": 7,
-    "latestDate": "2026-08-14",
-    "summitCount": 5
+    "latestDate": "2026-08-15",
+    "summitCount": 11
   }
 }
