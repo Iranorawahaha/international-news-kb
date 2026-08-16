@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-15 23:20",
+  "timestamp": "2026-08-16 10:01",
   "sites": [
     {
       "site": "白宫",
       "url": "https://www.whitehouse.gov/news/",
       "status": "✅ 成功",
-      "count": 3
+      "count": 0
     },
     {
       "site": "美国国务院",
       "url": "https://www.state.gov/press-releases/",
       "status": "✅ 成功",
-      "count": 6
+      "count": 2
     },
     {
       "site": "美国财政部",
@@ -40,5 +40,5 @@
       "note": "美国贸易代表办公室(USTR) 有 WAF/反爬（curl 不可达），需用 WebFetch 工具抓取每个公告页（含中文翻译、真实日期、摘要）后写入 us-official-webfetch.json"
     }
   ],
-  "total": 35
+  "total": 28
 }
