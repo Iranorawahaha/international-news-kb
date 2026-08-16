@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-16 10:53",
+  "lastUpdated": "2026-08-16 11:20",
   "retentionDays": 7,
   "archive": {
     "2026-08-12": [
@@ -10815,6 +10815,33 @@
         "body_en": null
       },
       {
+        "id": "auto_2026-08-15_92614",
+        "date": "2026-08-15",
+        "title": "Colombia asks Trump to suspend tariffs as country reels from earthquake",
+        "title_en": "Colombia asks Trump to suspend tariffs as country reels from earthquake",
+        "title_zh": "哥伦比亚因地震请求特朗普暂停关税",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "在遭受强震重创后，哥伦比亚新政府请求特朗普暂停对其征收关税，凸显拉美国家在自然灾害与美方关税压力下的双重困境。",
+        "source": "半岛电视台",
+        "category": "经贸制裁",
+        "keywords": [
+          "哥伦比亚",
+          "关税",
+          "地震",
+          "美拉关系"
+        ],
+        "url": "https://www.aljazeera.com/news/2026/8/15/colombia-asks-trump-to-suspend-tariffs-as-country-reels-from-earthquake",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-16 10:41:43",
+        "collection_method": "webfetch",
+        "column": "美国",
+        "is_official": null,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-08-16_41290",
         "date": "2026-08-16",
         "title": null,
@@ -10865,6 +10892,86 @@
         "collectedAt": "2026-08-16 10:41:43",
         "collection_method": "webfetch",
         "column": "美国",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-15_94192",
+        "date": "2026-08-15",
+        "title": "Erdogan says Egypt could join Turkiye-Saudi-Pakistan defence pact",
+        "title_en": "Erdogan says Egypt could join Turkiye-Saudi-Pakistan defence pact",
+        "title_zh": "埃尔多安：埃及或加入土沙巴防务协定",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "土耳其总统埃尔多安独家表示，埃及可能加入土耳其-沙特-巴基斯坦三方防务协定，并承诺继续提供支持，中东安全格局或再添变数。",
+        "source": "半岛电视台",
+        "category": "地缘政治",
+        "keywords": [
+          "埃尔多安",
+          "埃及",
+          "防务协定",
+          "中东安全"
+        ],
+        "url": "https://www.aljazeera.com/news/2026/8/15/erdogan-says-egypt-could-join-turkiye-saudi-pakistan-defence-pact",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-16 10:41:43",
+        "collection_method": "webfetch",
+        "column": "地区热点",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-16_45831",
+        "date": "2026-08-16",
+        "title": "Russian missile attack on Kyiv sparks fires, injures one, Ukraine officials say",
+        "title_en": "Russian missile attack on Kyiv sparks fires, injures one, Ukraine officials say",
+        "title_zh": "俄罗斯导弹袭击基辅引发火灾致一人受伤",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "乌克兰官员称，俄军导弹袭击基辅引发火灾，造成一人受伤。这是俄乌冲突持续背景下的最新袭击。",
+        "source": "路透社",
+        "category": "俄乌冲突",
+        "keywords": [
+          "基辅",
+          "导弹袭击",
+          "俄乌冲突"
+        ],
+        "url": "https://www.reuters.com/world/europe/russian-missile-attack-kyiv-sparks-fires-injures-one-ukraine-officials-say-2026-08-16/",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-16 10:41:43",
+        "collection_method": "webfetch",
+        "column": "地区热点",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-15_31600",
+        "date": "2026-08-15",
+        "title": "Yemen's government says Houthi strikes hit residential areas in Marib",
+        "title_en": "Yemen's government says Houthi strikes hit residential areas in Marib",
+        "title_zh": "也门政府称胡塞武装袭击马里卜居民区",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "也门政府表示，胡塞武装的袭击击中马里卜省居民区，红海航运与也门局势持续紧张。",
+        "source": "半岛电视台",
+        "category": "中东",
+        "keywords": [
+          "也门",
+          "胡塞武装",
+          "马里卜",
+          "红海"
+        ],
+        "url": "https://www.aljazeera.com/news/2026/8/15/yemens-government-says-houthi-strikes-hit-residential-areas-in-marib",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-16 10:41:43",
+        "collection_method": "webfetch",
+        "column": "地区热点",
         "is_official": null,
         "body_en": null
       },
@@ -10937,6 +11044,84 @@
         "column": "美国",
         "is_official": true,
         "body_en": null
+      },
+      {
+        "id": "auto_2026-08-15_7475",
+        "date": "2026-08-15",
+        "title": "Taliban mark five years in power as aid groups warn of crisis",
+        "title_en": "Taliban mark five years in power as aid groups warn of crisis",
+        "title_zh": "塔利班掌权五周年 援助组织警告危机加剧",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "塔利班在喀布尔举行活动纪念重掌政权五周年，援助组织警告阿富汗正面临严重人道主义危机，失业率约 26%，大量发展项目进展有限。",
+        "source": "路透社",
+        "category": "地区热点",
+        "keywords": [
+          "塔利班",
+          "阿富汗",
+          "人道主义危机"
+        ],
+        "url": "https://www.reuters.com/world/china/taliban-mark-five-years-power-aid-groups-warn-crisis-2026-08-15/",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-16 10:41:43",
+        "collection_method": "webfetch",
+        "column": "地区热点",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-15_50932",
+        "date": "2026-08-15",
+        "title": "At least 47 dead in eastern Indonesia after magnitude 7.7 quake",
+        "title_en": "At least 47 dead in eastern Indonesia after magnitude 7.7 quake",
+        "title_zh": "印尼东部 7.7 级强震致至少 47 人死亡",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "印尼东努沙登加拉省弗洛勒斯岛附近发生 7.7 级地震，已致至少 47 人死亡，数百栋建筑损毁，数千人因海啸预警前往高地避险。",
+        "source": "路透社",
+        "category": "地区热点",
+        "keywords": [
+          "印尼地震",
+          "海啸预警",
+          "人道主义"
+        ],
+        "url": "https://www.reuters.com/business/environment/magnitude-69-earthquake-strikes-off-coast-indonesia-emsc-says-2026-08-14/",
+        "priority_score": 75,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-16 10:41:43",
+        "collection_method": "webfetch",
+        "column": "地区热点",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-15_82333",
+        "date": "2026-08-15",
+        "title": "Liechtenstein changes succession rule to allow women to ascend the throne",
+        "title_en": "Liechtenstein changes succession rule to allow women to ascend the throne",
+        "title_zh": "列支敦士登修改继承法 允许女性继承王位",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "列支敦士登修改王室继承规则，首次允许女性继承王位，结束数百年来男性优先的继承传统。",
+        "source": "BBC",
+        "category": "欧洲",
+        "keywords": [
+          "列支敦士登",
+          "王室继承",
+          "性别平等"
+        ],
+        "url": "https://www.bbc.com/news/articles/cn9nnxrxg4qo",
+        "priority_score": 70,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-16 10:41:43",
+        "collection_method": "webfetch",
+        "column": "其他",
+        "is_official": null,
+        "body_en": null
       }
     ]
   },
@@ -10951,7 +11136,7 @@
     "2026-08-09"
   ],
   "stats": {
-    "totalArticles": 407,
+    "totalArticles": 414,
     "dateCount": 8,
     "latestDate": "2026-08-16",
     "oldestDate": "2026-08-09"
