@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-08-16 09:52",
+  "lastUpdated": "2026-08-16 10:24",
   "retentionDays": 7,
   "archive": {
     "2026-08-11": [
@@ -908,28 +908,6 @@
     ],
     "2026-08-16": [
       {
-        "title": "习言道｜习近平种下的三棵杉树",
-        "url": "https://news.cctv.com/2026/08/16/ARTIRob5bDXShnHUogQgJ4WI260816.shtml",
-        "date": "2026-08-16",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "2020年，习近平总书记再赴余村考察，看到余村人把生态资源优势转化为经济发展优势，实实在在地从中获益，他对大家说“生态本身就是经济，保护生态，生态就会回馈你。”",
-        "collectedAt": "2026-08-16 09:52:08"
-      },
-      {
-        "title": "国防部新闻发言人就日本政要参拜靖国神社答记者问",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/16/content_30175134.html",
-        "date": "2026-08-16",
-        "source": "人民日报",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "新华社北京8月15日电&nbsp;&nbsp;（记者王春涛）国防部新闻发言人蒋斌15日就日本政要参拜靖国神社答记者问。",
-        "collectedAt": "2026-08-16 09:52:08"
-      },
-      {
         "title": "中国特稿：中国缩小与美国前沿差距引恐慌 华盛顿祭出防堵大招 硅谷AI罕见降价应战",
         "url": "https://www.zaobao.com/news/china/story20260816-9514193",
         "date": "2026-08-16",
@@ -937,7 +915,7 @@
         "category": "经贸动向",
         "priority_score": 72,
         "is_summit_level": false,
-        "summary": "",
+        "summary": "美国加州洛杉矶的华人创业者李嘉年，把中国AI企业智谱开放下载的GLM-5.2部署到本地服务器，取代AI编程软件Claude Code的部分任务。他说，对七成左右的日常工作，智谱的完成度与Claude“已不相上下，不须要全部都用最贵的模型”。",
         "collectedAt": "2026-08-16 09:52:08"
       },
       {
@@ -959,8 +937,63 @@
         "category": "经贸动向",
         "priority_score": 72,
         "is_summit_level": false,
-        "summary": "",
+        "summary": "过去六个月，中国科技巨头阿里巴巴旗下开放权重模型的全球累计下载量超过30亿次，超越美国科技巨头Meta和Alphabet以及中国同行，成为全球下载量最高的AI模型。",
         "collectedAt": "2026-08-16 09:52:08"
+      },
+      {
+        "title": "厄瓜多尔总统诺沃亚抵达北京开始访华",
+        "url": "https://world.people.com.cn/n1/2026/0816/c1002-40780230.html",
+        "date": "2026-08-16",
+        "source": "人民网",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京8月16日电 应国家主席习近平邀请，厄瓜多尔总统诺沃亚8月16日清晨抵达北京，开始对中国进行为期8天的国事访问。厄瓜多尔是拉美重要国家，今年是中厄建立全面战略伙伴关系十周年。此访是诺沃亚总统首次对中国进行国事访问。",
+        "collectedAt": "2026-08-16 10:24:04"
+      },
+      {
+        "title": "河南周口贾鲁河堤坝溃口顺利合龙",
+        "url": "https://society.people.com.cn/n1/2026/0816/c1008-40780285.html",
+        "date": "2026-08-16",
+        "source": "人民网",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "8月13日23时许，河南省周口市川汇区新北环附近贾鲁河堤坝出现溃口，最长时约117米。现场采取溃口两端双向进占、平堵立堵相结合的方式开展封堵。8月15日20时29分，溃口成功实现封堵合龙。国家防总办公室、应急管理部派出工作组赴现场指导，调派中国安能工程救援队伍和大型机械装备执行封堵任务，累计安全转移群众781人。",
+        "collectedAt": "2026-08-16 10:24:04"
+      },
+      {
+        "title": "内蒙古自治区人大财政经济委员会主任委员冯玉臻被查",
+        "url": "https://www.chinanews.com/gn/2026/08-15/10678264.shtml",
+        "date": "2026-08-15",
+        "source": "中新网",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "中央纪委国家监委网站8月15日通报，据内蒙古自治区纪委监委消息，内蒙古自治区人大财政经济委员会主任委员冯玉臻涉嫌严重违纪违法，目前正接受内蒙古自治区纪委监委纪律审查和监察调查。冯玉臻曾任通辽市委书记、呼和浩特市委副书记、市长。",
+        "collectedAt": "2026-08-16 10:24:04"
+      },
+      {
+        "title": "全国首例适用生态环境法典审理的案件在浙江衢州宣判",
+        "url": "https://cpc.people.com.cn/n1/2026/0816/c64387-40780310.html",
+        "date": "2026-08-16",
+        "source": "人民网",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "8月15日，我国第二部法典《中华人民共和国生态环境法典》正式施行。当日，全国首例适用生态环境法典审理的噪声污染责任纠纷案在浙江省衢州市衢江区人民法院开庭并当庭宣判，法院判决被告限期降噪减振整改、赔偿原告医疗费和精神损害抚慰金。",
+        "collectedAt": "2026-08-16 10:24:04"
+      },
+      {
+        "title": "我国多措并举加快绿色低碳发展",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078141.htm",
+        "date": "2026-08-15",
+        "source": "中国政府网·要闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "今天（8月15日），2026年全国生态日主场活动在内蒙古自治区呼伦贝尔市举办，主题为“厚植中国式现代化的绿色底色”。国家发展改革委等多部门发布生态文明建设重要成果：2012年以来，我国以年均3.4%的能耗增速，支撑了年均6.1%的经济增长，成为全球能耗强度、碳排放强度下降最快的国家之一。",
+        "collectedAt": "2026-08-16 10:24:04"
       }
     ]
   },
@@ -974,9 +1007,9 @@
     "2026-08-10"
   ],
   "today": "2026-08-16",
-  "todayCount": 5,
+  "todayCount": 8,
   "stats": {
-    "totalArticles": 86,
+    "totalArticles": 89,
     "dateCount": 7,
     "latestDate": "2026-08-16",
     "summitCount": 11
