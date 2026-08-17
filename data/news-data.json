@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-17 09:41",
+  "lastUpdated": "2026-08-17 09:46",
   "retentionDays": 7,
   "archive": {
     "2026-08-12": [
@@ -11118,7 +11118,7 @@
         "summary": "特朗普女婿、中东特使库什纳在埃及与哈马斯领导人举行罕见会面，推动加沙和平计划，随后将与以色列总理内塔尼亚胡会晤，讨论以方所需采取的'对等措施'。",
         "summary_en": null,
         "summary_zh": null,
-        "source": "英国广播公司(BBC)",
+        "source": "BBC",
         "category": "中东",
         "keywords": [
           "加沙",
@@ -11172,7 +11172,7 @@
         "summary": "俄方称乌克兰发动2026年以来最大规模袭击，至少7人死亡；莫斯科也对乌克兰发动夜间致命打击，基辅多地起火。俄乌冲突烈度持续升级。",
         "summary_en": null,
         "summary_zh": null,
-        "source": "英国广播公司(BBC)",
+        "source": "BBC",
         "category": "俄乌冲突",
         "keywords": [
           "俄乌冲突",
@@ -11184,33 +11184,6 @@
         "priority_score": 80,
         "is_summit_level": false,
         "importance": "中",
-        "collectedAt": "2026-08-17 09:22:00",
-        "collection_method": "legacy",
-        "column": "地区热点",
-        "is_official": null,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-16_31003",
-        "date": "2026-08-16",
-        "title": "Shipping slows through Strait of Hormuz after tanker attacks, data shows",
-        "title_en": "Shipping slows through Strait of Hormuz after tanker attacks, data shows",
-        "title_zh": "油轮遇袭后霍尔木兹海峡航运明显放缓",
-        "summary": "航运数据显示，阿联酋ADNOC油轮在霍尔木兹海峡遇袭后，该海峡船舶通行明显放缓，全球能源运输通道风险加剧，布伦特原油一度升至每桶88美元上方。",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "路透社",
-        "category": "中东",
-        "keywords": [
-          "霍尔木兹海峡",
-          "油轮遇袭",
-          "油价",
-          "美伊冲突"
-        ],
-        "url": "https://www.reuters.com/world/middle-east/shipping-via-hormuz-strait-slows-after-tanker-attacks-data-shows-2026-08-16/",
-        "priority_score": 65,
-        "is_summit_level": false,
-        "importance": "medium",
         "collectedAt": "2026-08-17 09:22:00",
         "collection_method": "legacy",
         "column": "地区热点",
@@ -11298,33 +11271,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-16_55534",
-        "date": "2026-08-16",
-        "title": "Iran disputes Qatar, Kuwait accounts of captured Iranian personnel",
-        "title_en": "Iran disputes Qatar, Kuwait accounts of captured Iranian personnel",
-        "title_zh": "伊朗驳斥卡塔尔科威特关于被俘伊朗人员说法",
-        "summary": "伊朗称其飞行员自3月2日战机被击落后一直被卡塔尔方面扣押，卡塔尔与科威特否认相关说法，海湾地区围绕被俘人员的外交纠纷持续发酵。",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "路透社",
-        "category": "中东",
-        "keywords": [
-          "伊朗",
-          "卡塔尔",
-          "飞行员",
-          "美伊冲突"
-        ],
-        "url": "https://www.reuters.com/world/middle-east/iran-says-qatar-delaying-probe-into-fate-iranian-pilots-tasnim-news-agency-2026-08-16/",
-        "priority_score": 65,
-        "is_summit_level": false,
-        "importance": "medium",
-        "collectedAt": "2026-08-17 09:22:00",
-        "collection_method": "legacy",
-        "column": "地区热点",
-        "is_official": null,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-08-16_53886",
         "date": "2026-08-16",
         "title": "U.S. commander calls mental health a priority after he visits USS Lincoln",
@@ -11401,6 +11347,60 @@
         "collectedAt": "2026-08-17 09:22:00",
         "collection_method": "legacy",
         "column": "中国",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-16_31003",
+        "date": "2026-08-16",
+        "title": "Shipping slows through Strait of Hormuz after tanker attacks, data shows",
+        "title_en": "Shipping slows through Strait of Hormuz after tanker attacks, data shows",
+        "title_zh": "油轮遇袭后霍尔木兹海峡航运明显放缓",
+        "summary": "航运数据显示，阿联酋ADNOC油轮在霍尔木兹海峡遇袭后，该海峡船舶通行明显放缓，全球能源运输通道风险加剧，布伦特原油一度升至每桶88美元上方。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "路透社",
+        "category": "中东",
+        "keywords": [
+          "霍尔木兹海峡",
+          "油轮遇袭",
+          "油价",
+          "美伊冲突"
+        ],
+        "url": "https://www.reuters.com/world/middle-east/shipping-via-hormuz-strait-slows-after-tanker-attacks-data-shows-2026-08-16/",
+        "priority_score": 65,
+        "is_summit_level": false,
+        "importance": "medium",
+        "collectedAt": "2026-08-17 09:22:00",
+        "collection_method": "legacy",
+        "column": "地区热点",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-16_55534",
+        "date": "2026-08-16",
+        "title": "Iran disputes Qatar, Kuwait accounts of captured Iranian personnel",
+        "title_en": "Iran disputes Qatar, Kuwait accounts of captured Iranian personnel",
+        "title_zh": "伊朗驳斥卡塔尔科威特关于被俘伊朗人员说法",
+        "summary": "伊朗称其飞行员自3月2日战机被击落后一直被卡塔尔方面扣押，卡塔尔与科威特否认相关说法，海湾地区围绕被俘人员的外交纠纷持续发酵。",
+        "summary_en": null,
+        "summary_zh": null,
+        "source": "路透社",
+        "category": "中东",
+        "keywords": [
+          "伊朗",
+          "卡塔尔",
+          "飞行员",
+          "美伊冲突"
+        ],
+        "url": "https://www.reuters.com/world/middle-east/iran-says-qatar-delaying-probe-into-fate-iranian-pilots-tasnim-news-agency-2026-08-16/",
+        "priority_score": 65,
+        "is_summit_level": false,
+        "importance": "medium",
+        "collectedAt": "2026-08-17 09:22:00",
+        "collection_method": "legacy",
+        "column": "地区热点",
         "is_official": null,
         "body_en": null
       }
