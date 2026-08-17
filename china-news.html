@@ -164,12 +164,12 @@
         }
         .stat-card.high-priority .stat-label { color: #ea580c; font-weight: 600; }
 
-        /* ===== 顶部日期×分类统计表（简洁版 · flex 行式布局） ===== */
+        /* ===== 顶部日期×分类透视表（V5 · 日期在左、分类在上、中间仅数字） ===== */
         .pivot-wrapper {
             background: linear-gradient(180deg, var(--theme-primary-bg), #fff);
             border: 1px solid var(--theme-primary-bg-2);
             border-radius: 12px;
-            padding: 14px 18px 6px;
+            padding: 14px 18px 10px;
             margin-bottom: 16px;
             box-shadow: var(--shadow-sm);
         }
@@ -181,69 +181,76 @@
         .pivot-wrapper .pivot-subtitle {
             font-size: 11px; color: var(--text-faint); margin-bottom: 8px;
         }
-        .pivot-rows { display: flex; flex-direction: column; gap: 4px; padding-bottom: 6px; }
-        .pivot-row {
-            display: flex; align-items: center;
-            padding: 6px 12px;
-            border-radius: 8px;
-            background: white;
-            border: 1px solid var(--border-soft);
-            gap: 10px;
-            transition: background 0.1s, border-color 0.1s, transform 0.1s;
+        .pivot-table {
+            width: 100%; border-collapse: collapse;
+            table-layout: fixed;
+        }
+        .pivot-table .pivot-th {
+            font-size: 11.5px; font-weight: 600;
+            color: var(--theme-primary);
+            text-align: center;
+            padding: 5px 4px;
+            border-bottom: 1px solid var(--theme-primary-bg-2);
+            background: rgba(255,255,255,0.6);
+        }
+        .pivot-table .pivot-th.first { text-align: left; padding-left: 2px; width: 92px; }
+        .pivot-table .pivot-th.total { text-align: right; width: 48px; color: var(--text); }
+        .pivot-table tbody .pivot-row {
             cursor: pointer;
+            transition: background 0.1s;
         }
-        .pivot-row:hover { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
-        .pivot-row:active { transform: scale(0.997); }
-        .pivot-row.today { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
-        .pivot-row .pivot-date {
-            flex: 0 0 130px;
-            font-size: 12.5px; color: var(--text);
-            display: flex; align-items: center; gap: 6px;
-            pointer-events: none;  /* 让点击穿透到 row */
-        }
-        .pivot-row.today .pivot-date { color: var(--theme-primary); font-weight: 700; }
-        .pivot-row .pivot-date .weekday { font-size: 11px; color: var(--text-faint); font-weight: 500; }
-        .pivot-row .today-dot {
-            display: inline-block; width: 6px; height: 6px;
-            border-radius: 50%; background: var(--red);
-        }
-        .pivot-row .pivot-cells {
-            flex: 1; display: flex; flex-wrap: wrap; gap: 4px;
-        }
-        .pivot-row .pivot-cell {
-            display: inline-flex; align-items: center; gap: 4px;
-            padding: 2px 8px 2px 6px; border-radius: 99px;
-            font-size: 11.5px; font-weight: 500;
-            background: var(--theme-primary-bg-2); color: var(--text-dim);
-            border: 1px solid transparent;
+        .pivot-table tbody .pivot-row:hover { background: var(--theme-primary-bg); }
+        .pivot-table tbody .pivot-row.today { background: var(--theme-primary-bg); }
+        .pivot-table .pivot-td {
+            text-align: center;
+            padding: 4px 3px;
+            border-bottom: 0.5px solid var(--border-soft);
             font-family: var(--mono);
+        }
+        .pivot-table .pivot-td.date {
+            text-align: left; padding-left: 2px;
+            font-size: 12px; color: var(--text);
+            white-space: nowrap;
+        }
+        .pivot-table .pivot-row.today .pivot-td.date { color: var(--theme-primary); font-weight: 700; }
+        .pivot-table .pivot-td.date .weekday { font-size: 10.5px; color: var(--text-faint); font-weight: 500; margin-left: 4px; }
+        .pivot-table .today-dot {
+            display: inline-block; width: 5px; height: 5px;
+            border-radius: 50%; background: var(--red);
+            margin-left: 4px; vertical-align: middle;
+        }
+        .pivot-table .pivot-td.zero { color: var(--text-faint); opacity: 0.55; }
+        .pivot-table .pivot-cell {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 24px; padding: 1px 6px;
+            border-radius: 7px;
+            font-size: 12px; font-weight: 600;
+            color: var(--text);
+            background: var(--panel-2);
+            border: 1px solid transparent;
             cursor: pointer;
             transition: background 0.1s, color 0.1s, border-color 0.1s, transform 0.1s;
         }
-        .pivot-row .pivot-cell .nm { font-weight: 500; }
-        .pivot-row .pivot-cell b {
-            color: var(--theme-primary);
-            font-weight: 700;
-            font-size: 12.5px;
-        }
-        .pivot-row .pivot-cell:hover {
+        .pivot-table .pivot-cell:hover {
             background: var(--theme-primary);
+            color: #fff;
             border-color: var(--theme-primary);
             transform: translateY(-1px);
         }
-        .pivot-row .pivot-cell:hover .nm,
-        .pivot-row .pivot-cell:hover b { color: white; }
-        .pivot-row .pivot-cell:active { transform: translateY(0); }
-        .pivot-row .pivot-cell .ic { font-size: 12px; }
-        .pivot-row .pivot-total {
-            flex: 0 0 64px; text-align: right;
-            font-size: 17px; font-weight: 800; color: var(--theme-primary);
-            font-family: var(--mono);
+        .pivot-table .pivot-cell:active { transform: translateY(0); }
+        .pivot-table .pivot-td.total { text-align: right; }
+        .pivot-table .pivot-total {
+            display: inline-block;
+            font-size: 13.5px; font-weight: 800; color: var(--theme-primary);
+            padding: 1px 6px; border-radius: 6px;
             cursor: pointer;
-            padding: 2px 8px; border-radius: 6px;
-            transition: background 0.1s;
+            transition: background 0.1s, color 0.1s;
         }
-        .pivot-row .pivot-total:hover { background: var(--theme-primary); color: white; }
+        .pivot-table .pivot-total:hover { background: var(--theme-primary); color: #fff; }
+        @media (max-width: 640px) {
+            .pivot-table .pivot-th.first { width: 74px; }
+            .pivot-table .pivot-td.date .weekday { display: none; }
+        }
 
         /* ===== 主区域：左栏目栏 + 右内容区 ===== */
         .main-grid {
@@ -672,16 +679,6 @@
     </style>
 </head>
 <body>
-<!-- ===== IRA-NAV-V5: Ira 信息看板 统一导航（自动注入，勿删） ===== -->
-<div class="ira-nav-v4" style="max-width:1400px;margin:8px auto 0;padding:7px 16px;background:#fff;border:1px solid #e4e7ee;border-radius:12px;box-shadow:0 1px 6px rgba(28,36,52,.05);display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;">
-  <a href="./" style="font-weight:700;color:#4b5563;text-decoration:none;padding:0 6px 0 0;border-right:1px solid #e5e7eb;margin-right:2px;">🏠 Ira 信息看板</a>
-  <a href="international-news.html" style="color:#2563eb;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#eff6ff;border:1px solid #bfdbfe;">🌍 国际</a>
-  <a href="china-news.html" style="color:#c41230;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fff5f5;border:1px solid #fecaca;">🇨🇳 国内</a>
-  <a href="ai-news.html" style="color:#d97706;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#fffbeb;border:1px solid #fde68a;">🤖 AI动向</a>
-  <a href="diplomatic-affairs.html" style="color:#059669;text-decoration:none;font-weight:600;padding:5px 14px;border-radius:8px;background:#f0fdf4;border:1px solid #bbf7d0;">🏛️ 使领馆</a>
-  <span style="color:#9ca3af;margin-left:auto;font-size:11.5px;">每日 09:30 刷新 · 滚动 7 天</span>
-</div>
-<!-- ===== /IRA-NAV-V5 ===== -->
 <div class="container">
     <!-- 顶部彩色大块 -->
     <div class="header">
@@ -705,7 +702,7 @@
     <!-- 绿色最近更新条 -->
     <div class="update-bar">
         <span class="dot"></span>
-        <strong>最近更新：</strong>2026-08-17 17:56 北京时间（每日自动刷新） · 共 <strong>99</strong> 条新闻 · 数据快照，滚动 7 天窗口
+        <strong>最近更新：</strong>2026-08-17 18:16 北京时间（每日自动刷新） · 共 <strong>99</strong> 条新闻 · 数据快照，滚动 7 天窗口
     </div>
 
     <!-- 数据源说明 -->
@@ -735,9 +732,12 @@
 
     <!-- 国内版顶部统计表（日期×分类） -->
     <div class="pivot-wrapper">
-        <div class="pivot-title">📅 国内 · 各日按分类分布</div>
-        <div class="pivot-subtitle">点击分类胶囊跳转当日该类新闻；点击行或总计跳转当日全部新闻</div>
-        <div class="pivot-rows"><div class="pivot-row today" data-date="2026-08-17" title="点击查看 2026-08-17 全部新闻（18 条）"><div class="pivot-date"><b>2026-08-17</b><span class="weekday">周一</span><span class="today-dot"></span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-17" data-cat="元首动态" title="点击查看 2026-08-17 · 元首动态（3 条）"><span class="ic">👑</span><span class="nm">元首</span><b>3</b></span><span class="pivot-cell" data-date="2026-08-17" data-cat="部委动态" title="点击查看 2026-08-17 · 部委动态（4 条）"><span class="ic">🏢</span><span class="nm">部委</span><b>4</b></span><span class="pivot-cell" data-date="2026-08-17" data-cat="政策发布" title="点击查看 2026-08-17 · 政策发布（4 条）"><span class="ic">📜</span><span class="nm">政策</span><b>4</b></span><span class="pivot-cell" data-date="2026-08-17" data-cat="经贸动向" title="点击查看 2026-08-17 · 经贸动向（7 条）"><span class="ic">💹</span><span class="nm">经贸</span><b>7</b></span></div><div class="pivot-total" data-date="2026-08-17" title="点击查看 2026-08-17 全部新闻">18</div></div><div class="pivot-row" data-date="2026-08-16" title="点击查看 2026-08-16 全部新闻（8 条）"><div class="pivot-date"><b>2026-08-16</b><span class="weekday">周日</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-16" data-cat="元首动态" title="点击查看 2026-08-16 · 元首动态（1 条）"><span class="ic">👑</span><span class="nm">元首</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-16" data-cat="人事任免" title="点击查看 2026-08-16 · 人事任免（1 条）"><span class="ic">📋</span><span class="nm">人事</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-16" data-cat="部委动态" title="点击查看 2026-08-16 · 部委动态（2 条）"><span class="ic">🏢</span><span class="nm">部委</span><b>2</b></span><span class="pivot-cell" data-date="2026-08-16" data-cat="政策发布" title="点击查看 2026-08-16 · 政策发布（1 条）"><span class="ic">📜</span><span class="nm">政策</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-16" data-cat="经贸动向" title="点击查看 2026-08-16 · 经贸动向（3 条）"><span class="ic">💹</span><span class="nm">经贸</span><b>3</b></span></div><div class="pivot-total" data-date="2026-08-16" title="点击查看 2026-08-16 全部新闻">8</div></div><div class="pivot-row" data-date="2026-08-15" title="点击查看 2026-08-15 全部新闻（35 条）"><div class="pivot-date"><b>2026-08-15</b><span class="weekday">周六</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-15" data-cat="元首动态" title="点击查看 2026-08-15 · 元首动态（7 条）"><span class="ic">👑</span><span class="nm">元首</span><b>7</b></span><span class="pivot-cell" data-date="2026-08-15" data-cat="高层动态" title="点击查看 2026-08-15 · 高层动态（1 条）"><span class="ic">🧭</span><span class="nm">高层</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-15" data-cat="重要会议" title="点击查看 2026-08-15 · 重要会议（2 条）"><span class="ic">🏛</span><span class="nm">会议</span><b>2</b></span><span class="pivot-cell" data-date="2026-08-15" data-cat="人事任免" title="点击查看 2026-08-15 · 人事任免（1 条）"><span class="ic">📋</span><span class="nm">人事</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-15" data-cat="部委动态" title="点击查看 2026-08-15 · 部委动态（8 条）"><span class="ic">🏢</span><span class="nm">部委</span><b>8</b></span><span class="pivot-cell" data-date="2026-08-15" data-cat="政策发布" title="点击查看 2026-08-15 · 政策发布（1 条）"><span class="ic">📜</span><span class="nm">政策</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-15" data-cat="经贸动向" title="点击查看 2026-08-15 · 经贸动向（15 条）"><span class="ic">💹</span><span class="nm">经贸</span><b>15</b></span></div><div class="pivot-total" data-date="2026-08-15" title="点击查看 2026-08-15 全部新闻">35</div></div><div class="pivot-row" data-date="2026-08-14" title="点击查看 2026-08-14 全部新闻（19 条）"><div class="pivot-date"><b>2026-08-14</b><span class="weekday">周五</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-14" data-cat="元首动态" title="点击查看 2026-08-14 · 元首动态（1 条）"><span class="ic">👑</span><span class="nm">元首</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-14" data-cat="人事任免" title="点击查看 2026-08-14 · 人事任免（1 条）"><span class="ic">📋</span><span class="nm">人事</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-14" data-cat="部委动态" title="点击查看 2026-08-14 · 部委动态（4 条）"><span class="ic">🏢</span><span class="nm">部委</span><b>4</b></span><span class="pivot-cell" data-date="2026-08-14" data-cat="政策发布" title="点击查看 2026-08-14 · 政策发布（2 条）"><span class="ic">📜</span><span class="nm">政策</span><b>2</b></span><span class="pivot-cell" data-date="2026-08-14" data-cat="经贸动向" title="点击查看 2026-08-14 · 经贸动向（11 条）"><span class="ic">💹</span><span class="nm">经贸</span><b>11</b></span></div><div class="pivot-total" data-date="2026-08-14" title="点击查看 2026-08-14 全部新闻">19</div></div><div class="pivot-row" data-date="2026-08-13" title="点击查看 2026-08-13 全部新闻（10 条）"><div class="pivot-date"><b>2026-08-13</b><span class="weekday">周四</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-13" data-cat="高层动态" title="点击查看 2026-08-13 · 高层动态（1 条）"><span class="ic">🧭</span><span class="nm">高层</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-13" data-cat="人事任免" title="点击查看 2026-08-13 · 人事任免（2 条）"><span class="ic">📋</span><span class="nm">人事</span><b>2</b></span><span class="pivot-cell" data-date="2026-08-13" data-cat="部委动态" title="点击查看 2026-08-13 · 部委动态（2 条）"><span class="ic">🏢</span><span class="nm">部委</span><b>2</b></span><span class="pivot-cell" data-date="2026-08-13" data-cat="政策发布" title="点击查看 2026-08-13 · 政策发布（3 条）"><span class="ic">📜</span><span class="nm">政策</span><b>3</b></span><span class="pivot-cell" data-date="2026-08-13" data-cat="经贸动向" title="点击查看 2026-08-13 · 经贸动向（2 条）"><span class="ic">💹</span><span class="nm">经贸</span><b>2</b></span></div><div class="pivot-total" data-date="2026-08-13" title="点击查看 2026-08-13 全部新闻">10</div></div><div class="pivot-row" data-date="2026-08-12" title="点击查看 2026-08-12 全部新闻（4 条）"><div class="pivot-date"><b>2026-08-12</b><span class="weekday">周三</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-12" data-cat="高层动态" title="点击查看 2026-08-12 · 高层动态（1 条）"><span class="ic">🧭</span><span class="nm">高层</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-12" data-cat="人事任免" title="点击查看 2026-08-12 · 人事任免（1 条）"><span class="ic">📋</span><span class="nm">人事</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-12" data-cat="部委动态" title="点击查看 2026-08-12 · 部委动态（1 条）"><span class="ic">🏢</span><span class="nm">部委</span><b>1</b></span><span class="pivot-cell" data-date="2026-08-12" data-cat="经贸动向" title="点击查看 2026-08-12 · 经贸动向（1 条）"><span class="ic">💹</span><span class="nm">经贸</span><b>1</b></span></div><div class="pivot-total" data-date="2026-08-12" title="点击查看 2026-08-12 全部新闻">4</div></div><div class="pivot-row" data-date="2026-08-11" title="点击查看 2026-08-11 全部新闻（5 条）"><div class="pivot-date"><b>2026-08-11</b><span class="weekday">周二</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-11" data-cat="元首动态" title="点击查看 2026-08-11 · 元首动态（2 条）"><span class="ic">👑</span><span class="nm">元首</span><b>2</b></span><span class="pivot-cell" data-date="2026-08-11" data-cat="部委动态" title="点击查看 2026-08-11 · 部委动态（2 条）"><span class="ic">🏢</span><span class="nm">部委</span><b>2</b></span><span class="pivot-cell" data-date="2026-08-11" data-cat="政策发布" title="点击查看 2026-08-11 · 政策发布（1 条）"><span class="ic">📜</span><span class="nm">政策</span><b>1</b></span></div><div class="pivot-total" data-date="2026-08-11" title="点击查看 2026-08-11 全部新闻">5</div></div></div>
+        <div class="pivot-title">📅 国内 · 各日分类分布</div>
+        <div class="pivot-subtitle">点击数字跳转当日该类新闻 · 点击合计跳转当日全部</div>
+        <table class="pivot-table">
+            <thead><tr><th class="pivot-th first">日期</th><th class="pivot-th" title="元首动态">元首</th><th class="pivot-th" title="高层动态">高层</th><th class="pivot-th" title="重要会议">会议</th><th class="pivot-th" title="人事任免">人事</th><th class="pivot-th" title="部委动态">部委</th><th class="pivot-th" title="政策发布">政策</th><th class="pivot-th" title="经贸动向">经贸</th><th class="pivot-th total">合计</th></tr></thead>
+            <tbody><tr class="pivot-row today" data-date="2026-08-17" title="点击查看 2026-08-17 全部新闻（18 条）"><td class="pivot-td date"><b>08-17</b><span class="weekday">周一</span><span class="today-dot"></span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-17" data-cat="元首动态" title="点击查看 2026-08-17 · 元首动态（3 条）">3</span></td><td class="pivot-td zero">–</td><td class="pivot-td zero">–</td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-17" data-cat="部委动态" title="点击查看 2026-08-17 · 部委动态（4 条）">4</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-17" data-cat="政策发布" title="点击查看 2026-08-17 · 政策发布（4 条）">4</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-17" data-cat="经贸动向" title="点击查看 2026-08-17 · 经贸动向（7 条）">7</span></td><td class="pivot-td total"><span class="pivot-total" data-date="2026-08-17" title="点击查看 2026-08-17 全部新闻（18 条）">18</span></td></tr><tr class="pivot-row" data-date="2026-08-16" title="点击查看 2026-08-16 全部新闻（8 条）"><td class="pivot-td date"><b>08-16</b><span class="weekday">周日</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-16" data-cat="元首动态" title="点击查看 2026-08-16 · 元首动态（1 条）">1</span></td><td class="pivot-td zero">–</td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-16" data-cat="人事任免" title="点击查看 2026-08-16 · 人事任免（1 条）">1</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-16" data-cat="部委动态" title="点击查看 2026-08-16 · 部委动态（2 条）">2</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-16" data-cat="政策发布" title="点击查看 2026-08-16 · 政策发布（1 条）">1</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-16" data-cat="经贸动向" title="点击查看 2026-08-16 · 经贸动向（3 条）">3</span></td><td class="pivot-td total"><span class="pivot-total" data-date="2026-08-16" title="点击查看 2026-08-16 全部新闻（8 条）">8</span></td></tr><tr class="pivot-row" data-date="2026-08-15" title="点击查看 2026-08-15 全部新闻（35 条）"><td class="pivot-td date"><b>08-15</b><span class="weekday">周六</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-15" data-cat="元首动态" title="点击查看 2026-08-15 · 元首动态（7 条）">7</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-15" data-cat="高层动态" title="点击查看 2026-08-15 · 高层动态（1 条）">1</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-15" data-cat="重要会议" title="点击查看 2026-08-15 · 重要会议（2 条）">2</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-15" data-cat="人事任免" title="点击查看 2026-08-15 · 人事任免（1 条）">1</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-15" data-cat="部委动态" title="点击查看 2026-08-15 · 部委动态（8 条）">8</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-15" data-cat="政策发布" title="点击查看 2026-08-15 · 政策发布（1 条）">1</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-15" data-cat="经贸动向" title="点击查看 2026-08-15 · 经贸动向（15 条）">15</span></td><td class="pivot-td total"><span class="pivot-total" data-date="2026-08-15" title="点击查看 2026-08-15 全部新闻（35 条）">35</span></td></tr><tr class="pivot-row" data-date="2026-08-14" title="点击查看 2026-08-14 全部新闻（19 条）"><td class="pivot-td date"><b>08-14</b><span class="weekday">周五</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-14" data-cat="元首动态" title="点击查看 2026-08-14 · 元首动态（1 条）">1</span></td><td class="pivot-td zero">–</td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-14" data-cat="人事任免" title="点击查看 2026-08-14 · 人事任免（1 条）">1</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-14" data-cat="部委动态" title="点击查看 2026-08-14 · 部委动态（4 条）">4</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-14" data-cat="政策发布" title="点击查看 2026-08-14 · 政策发布（2 条）">2</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-14" data-cat="经贸动向" title="点击查看 2026-08-14 · 经贸动向（11 条）">11</span></td><td class="pivot-td total"><span class="pivot-total" data-date="2026-08-14" title="点击查看 2026-08-14 全部新闻（19 条）">19</span></td></tr><tr class="pivot-row" data-date="2026-08-13" title="点击查看 2026-08-13 全部新闻（10 条）"><td class="pivot-td date"><b>08-13</b><span class="weekday">周四</span></td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-13" data-cat="高层动态" title="点击查看 2026-08-13 · 高层动态（1 条）">1</span></td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-13" data-cat="人事任免" title="点击查看 2026-08-13 · 人事任免（2 条）">2</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-13" data-cat="部委动态" title="点击查看 2026-08-13 · 部委动态（2 条）">2</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-13" data-cat="政策发布" title="点击查看 2026-08-13 · 政策发布（3 条）">3</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-13" data-cat="经贸动向" title="点击查看 2026-08-13 · 经贸动向（2 条）">2</span></td><td class="pivot-td total"><span class="pivot-total" data-date="2026-08-13" title="点击查看 2026-08-13 全部新闻（10 条）">10</span></td></tr><tr class="pivot-row" data-date="2026-08-12" title="点击查看 2026-08-12 全部新闻（4 条）"><td class="pivot-td date"><b>08-12</b><span class="weekday">周三</span></td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-12" data-cat="高层动态" title="点击查看 2026-08-12 · 高层动态（1 条）">1</span></td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-12" data-cat="人事任免" title="点击查看 2026-08-12 · 人事任免（1 条）">1</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-12" data-cat="部委动态" title="点击查看 2026-08-12 · 部委动态（1 条）">1</span></td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-12" data-cat="经贸动向" title="点击查看 2026-08-12 · 经贸动向（1 条）">1</span></td><td class="pivot-td total"><span class="pivot-total" data-date="2026-08-12" title="点击查看 2026-08-12 全部新闻（4 条）">4</span></td></tr><tr class="pivot-row" data-date="2026-08-11" title="点击查看 2026-08-11 全部新闻（5 条）"><td class="pivot-td date"><b>08-11</b><span class="weekday">周二</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-11" data-cat="元首动态" title="点击查看 2026-08-11 · 元首动态（2 条）">2</span></td><td class="pivot-td zero">–</td><td class="pivot-td zero">–</td><td class="pivot-td zero">–</td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-11" data-cat="部委动态" title="点击查看 2026-08-11 · 部委动态（2 条）">2</span></td><td class="pivot-td"><span class="pivot-cell" data-date="2026-08-11" data-cat="政策发布" title="点击查看 2026-08-11 · 政策发布（1 条）">1</span></td><td class="pivot-td zero">–</td><td class="pivot-td total"><span class="pivot-total" data-date="2026-08-11" title="点击查看 2026-08-11 全部新闻（5 条）">5</span></td></tr></tbody>
+        </table>
     </div>
 
     <!-- 主区域：左栏目栏 + 右内容区 -->
@@ -809,7 +809,7 @@
 
     <!-- 页脚 -->
     <div class="footer">
-        🇨🇳 国内新闻看板 V2.11 · 表格化统一 UI · 数据更新于 2026-08-17 17:56 · 7天存档 · Powered by Ira 信息看板体系
+        🇨🇳 国内新闻看板 V2.11 · 表格化统一 UI · 数据更新于 2026-08-17 18:16 · 7天存档 · Powered by Ira 信息看板体系
     </div>
 </div>
 
@@ -879,9 +879,9 @@ document.getElementById('dateHeader').addEventListener('click', function(e) {
     filterNews();
 });
 
-// 顶部透视表点击跳转（V4）
-document.querySelector('.pivot-rows').addEventListener('click', function(e) {
-    // 1) 点击分类胶囊 → 按日期 + 分类筛选
+// 顶部透视表点击跳转（V5）
+document.querySelector('.pivot-table').addEventListener('click', function(e) {
+    // 1) 点击分类数字 → 按日期 + 分类筛选
     const cell = e.target.closest('.pivot-cell');
     if (cell) {
         e.stopPropagation();
@@ -890,7 +890,7 @@ document.querySelector('.pivot-rows').addEventListener('click', function(e) {
         applyPivotFilter(targetDate, targetCat);
         return;
     }
-    // 2) 点击总计数字 → 按日期筛选
+    // 2) 点击合计数字 → 按日期筛选
     const total = e.target.closest('.pivot-total');
     if (total) {
         e.stopPropagation();

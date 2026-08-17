@@ -164,12 +164,12 @@
         }
         .stat-card.high-priority .stat-label { color: #ea580c; font-weight: 600; }
 
-        /* ===== 顶部日期×分类统计表（简洁版 · flex 行式布局） ===== */
+        /* ===== 顶部日期×分类透视表（V5 · 日期在左、分类在上、中间仅数字） ===== */
         .pivot-wrapper {
             background: linear-gradient(180deg, var(--theme-primary-bg), #fff);
             border: 1px solid var(--theme-primary-bg-2);
             border-radius: 12px;
-            padding: 14px 18px 6px;
+            padding: 14px 18px 10px;
             margin-bottom: 16px;
             box-shadow: var(--shadow-sm);
         }
@@ -181,69 +181,76 @@
         .pivot-wrapper .pivot-subtitle {
             font-size: 11px; color: var(--text-faint); margin-bottom: 8px;
         }
-        .pivot-rows { display: flex; flex-direction: column; gap: 4px; padding-bottom: 6px; }
-        .pivot-row {
-            display: flex; align-items: center;
-            padding: 6px 12px;
-            border-radius: 8px;
-            background: white;
-            border: 1px solid var(--border-soft);
-            gap: 10px;
-            transition: background 0.1s, border-color 0.1s, transform 0.1s;
+        .pivot-table {
+            width: 100%; border-collapse: collapse;
+            table-layout: fixed;
+        }
+        .pivot-table .pivot-th {
+            font-size: 11.5px; font-weight: 600;
+            color: var(--theme-primary);
+            text-align: center;
+            padding: 5px 4px;
+            border-bottom: 1px solid var(--theme-primary-bg-2);
+            background: rgba(255,255,255,0.6);
+        }
+        .pivot-table .pivot-th.first { text-align: left; padding-left: 2px; width: 92px; }
+        .pivot-table .pivot-th.total { text-align: right; width: 48px; color: var(--text); }
+        .pivot-table tbody .pivot-row {
             cursor: pointer;
+            transition: background 0.1s;
         }
-        .pivot-row:hover { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
-        .pivot-row:active { transform: scale(0.997); }
-        .pivot-row.today { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
-        .pivot-row .pivot-date {
-            flex: 0 0 130px;
-            font-size: 12.5px; color: var(--text);
-            display: flex; align-items: center; gap: 6px;
-            pointer-events: none;  /* 让点击穿透到 row */
-        }
-        .pivot-row.today .pivot-date { color: var(--theme-primary); font-weight: 700; }
-        .pivot-row .pivot-date .weekday { font-size: 11px; color: var(--text-faint); font-weight: 500; }
-        .pivot-row .today-dot {
-            display: inline-block; width: 6px; height: 6px;
-            border-radius: 50%; background: var(--red);
-        }
-        .pivot-row .pivot-cells {
-            flex: 1; display: flex; flex-wrap: wrap; gap: 4px;
-        }
-        .pivot-row .pivot-cell {
-            display: inline-flex; align-items: center; gap: 4px;
-            padding: 2px 8px 2px 6px; border-radius: 99px;
-            font-size: 11.5px; font-weight: 500;
-            background: var(--theme-primary-bg-2); color: var(--text-dim);
-            border: 1px solid transparent;
+        .pivot-table tbody .pivot-row:hover { background: var(--theme-primary-bg); }
+        .pivot-table tbody .pivot-row.today { background: var(--theme-primary-bg); }
+        .pivot-table .pivot-td {
+            text-align: center;
+            padding: 4px 3px;
+            border-bottom: 0.5px solid var(--border-soft);
             font-family: var(--mono);
+        }
+        .pivot-table .pivot-td.date {
+            text-align: left; padding-left: 2px;
+            font-size: 12px; color: var(--text);
+            white-space: nowrap;
+        }
+        .pivot-table .pivot-row.today .pivot-td.date { color: var(--theme-primary); font-weight: 700; }
+        .pivot-table .pivot-td.date .weekday { font-size: 10.5px; color: var(--text-faint); font-weight: 500; margin-left: 4px; }
+        .pivot-table .today-dot {
+            display: inline-block; width: 5px; height: 5px;
+            border-radius: 50%; background: var(--red);
+            margin-left: 4px; vertical-align: middle;
+        }
+        .pivot-table .pivot-td.zero { color: var(--text-faint); opacity: 0.55; }
+        .pivot-table .pivot-cell {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 24px; padding: 1px 6px;
+            border-radius: 7px;
+            font-size: 12px; font-weight: 600;
+            color: var(--text);
+            background: var(--panel-2);
+            border: 1px solid transparent;
             cursor: pointer;
             transition: background 0.1s, color 0.1s, border-color 0.1s, transform 0.1s;
         }
-        .pivot-row .pivot-cell .nm { font-weight: 500; }
-        .pivot-row .pivot-cell b {
-            color: var(--theme-primary);
-            font-weight: 700;
-            font-size: 12.5px;
-        }
-        .pivot-row .pivot-cell:hover {
+        .pivot-table .pivot-cell:hover {
             background: var(--theme-primary);
+            color: #fff;
             border-color: var(--theme-primary);
             transform: translateY(-1px);
         }
-        .pivot-row .pivot-cell:hover .nm,
-        .pivot-row .pivot-cell:hover b { color: white; }
-        .pivot-row .pivot-cell:active { transform: translateY(0); }
-        .pivot-row .pivot-cell .ic { font-size: 12px; }
-        .pivot-row .pivot-total {
-            flex: 0 0 64px; text-align: right;
-            font-size: 17px; font-weight: 800; color: var(--theme-primary);
-            font-family: var(--mono);
+        .pivot-table .pivot-cell:active { transform: translateY(0); }
+        .pivot-table .pivot-td.total { text-align: right; }
+        .pivot-table .pivot-total {
+            display: inline-block;
+            font-size: 13.5px; font-weight: 800; color: var(--theme-primary);
+            padding: 1px 6px; border-radius: 6px;
             cursor: pointer;
-            padding: 2px 8px; border-radius: 6px;
-            transition: background 0.1s;
+            transition: background 0.1s, color 0.1s;
         }
-        .pivot-row .pivot-total:hover { background: var(--theme-primary); color: white; }
+        .pivot-table .pivot-total:hover { background: var(--theme-primary); color: #fff; }
+        @media (max-width: 640px) {
+            .pivot-table .pivot-th.first { width: 74px; }
+            .pivot-table .pivot-td.date .weekday { display: none; }
+        }
 
         /* ===== 主区域：左栏目栏 + 右内容区 ===== */
         .main-grid {
@@ -851,9 +858,9 @@ document.getElementById('dateHeader').addEventListener('click', function(e) {
     filterNews();
 });
 
-// 顶部透视表点击跳转（V4）
-document.querySelector('.pivot-rows').addEventListener('click', function(e) {
-    // 1) 点击分类胶囊 → 按日期 + 分类筛选
+// 顶部透视表点击跳转（V5）
+document.querySelector('.pivot-table').addEventListener('click', function(e) {
+    // 1) 点击分类数字 → 按日期 + 分类筛选
     const cell = e.target.closest('.pivot-cell');
     if (cell) {
         e.stopPropagation();
@@ -862,7 +869,7 @@ document.querySelector('.pivot-rows').addEventListener('click', function(e) {
         applyPivotFilter(targetDate, targetCat);
         return;
     }
-    // 2) 点击总计数字 → 按日期筛选
+    // 2) 点击合计数字 → 按日期筛选
     const total = e.target.closest('.pivot-total');
     if (total) {
         e.stopPropagation();

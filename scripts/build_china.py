@@ -87,47 +87,57 @@ def build():
             if c in pivot[d]:
                 pivot[d][c] += 1
 
-    # 构建顶部日期×分类统计表 HTML（V4 简洁版 · 0 值隐藏 + 可点击跳转）
+    # 构建顶部日期×分类统计表 HTML（V5 透视表 · 日期在左、分类在上、中间仅数字）
     weekday_cn = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
-    # 分类短名（更紧凑的展示）
     cat_short = {"元首动态": "元首", "高层动态": "高层", "重要会议": "会议",
                  "人事任免": "人事", "部委动态": "部委", "政策发布": "政策", "经贸动向": "经贸"}
+    thead_cells = ['<th class="pivot-th first">日期</th>']
+    for c in cat_order:
+        thead_cells.append(
+            f'<th class="pivot-th" title="{esc(c)}">{esc(cat_short.get(c, c))}</th>'
+        )
+    thead_cells.append('<th class="pivot-th total">合计</th>')
     pivot_rows = []
     for d in sorted(dates, reverse=True):
         is_today = (d == today)
-        cells_html = []
-        for c in cat_order:
-            cnt = pivot[d].get(c, 0)
-            if not cnt:
-                continue  # 0 值不展示，简化视觉
-            icon = cat_icon.get(c, "📌")
-            short = cat_short.get(c, c)
-            cells_html.append(
-                f'<span class="pivot-cell" '
-                f'data-date="{esc(d)}" data-cat="{esc(c)}" '
-                f'title="点击查看 {d} · {esc(c)}（{cnt} 条）">'
-                f'<span class="ic">{icon}</span><span class="nm">{esc(short)}</span><b>{cnt}</b>'
-                f'</span>'
-            )
         total_row = sum(pivot[d].values())
         try:
             from datetime import datetime as _dt
             wd = weekday_cn[_dt.strptime(d, "%Y-%m-%d").weekday()]
         except Exception:
             wd = ""
+        date_label = d[5:]
         today_dot = '<span class="today-dot"></span>' if is_today else ''
+        cells_html = []
+        for c in cat_order:
+            cnt = pivot[d].get(c, 0)
+            if cnt:
+                cells_html.append(
+                    f'<td class="pivot-td">'
+                    f'<span class="pivot-cell" '
+                    f'data-date="{esc(d)}" data-cat="{esc(c)}" '
+                    f'title="点击查看 {d} · {esc(c)}（{cnt} 条）">{cnt}</span>'
+                    f'</td>'
+                )
+            else:
+                cells_html.append(f'<td class="pivot-td zero">–</td>')
         row_cls = "pivot-row today" if is_today else "pivot-row"
         pivot_rows.append(
-            f'<div class="{row_cls}" data-date="{esc(d)}" title="点击查看 {d} 全部新闻（{total_row} 条）">'
-            f'<div class="pivot-date"><b>{d}</b><span class="weekday">{wd}</span>{today_dot}</div>'
-            f'<div class="pivot-cells">{"".join(cells_html)}</div>'
-            f'<div class="pivot-total" data-date="{esc(d)}" title="点击查看 {d} 全部新闻">{total_row}</div>'
-            f'</div>'
+            f'<tr class="{row_cls}" data-date="{esc(d)}" '
+            f'title="点击查看 {d} 全部新闻（{total_row} 条）">'
+            f'<td class="pivot-td date"><b>{date_label}</b><span class="weekday">{wd}</span>{today_dot}</td>'
+            f'{"".join(cells_html)}'
+            f'<td class="pivot-td total"><span class="pivot-total" data-date="{esc(d)}" '
+            f'title="点击查看 {d} 全部新闻（{total_row} 条）">{total_row}</span></td>'
+            f'</tr>'
         )
     stats_top = f'''<div class="pivot-wrapper">
-        <div class="pivot-title">📅 国内 · 各日按分类分布</div>
-        <div class="pivot-subtitle">点击分类胶囊跳转当日该类新闻；点击行或总计跳转当日全部新闻</div>
-        <div class="pivot-rows">{"".join(pivot_rows)}</div>
+        <div class="pivot-title">📅 国内 · 各日分类分布</div>
+        <div class="pivot-subtitle">点击数字跳转当日该类新闻 · 点击合计跳转当日全部</div>
+        <table class="pivot-table">
+            <thead><tr>{"".join(thead_cells)}</tr></thead>
+            <tbody>{"".join(pivot_rows)}</tbody>
+        </table>
     </div>'''
 
     # 左侧栏目侧边栏
