@@ -181,22 +181,25 @@
         .pivot-wrapper .pivot-subtitle {
             font-size: 11px; color: var(--text-faint); margin-bottom: 8px;
         }
-        .pivot-rows { display: flex; flex-direction: column; gap: 6px; padding-bottom: 8px; }
+        .pivot-rows { display: flex; flex-direction: column; gap: 4px; padding-bottom: 6px; }
         .pivot-row {
             display: flex; align-items: center;
-            padding: 8px 12px;
+            padding: 6px 12px;
             border-radius: 8px;
             background: white;
             border: 1px solid var(--border-soft);
             gap: 10px;
-            transition: background 0.1s;
+            transition: background 0.1s, border-color 0.1s, transform 0.1s;
+            cursor: pointer;
         }
         .pivot-row:hover { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
+        .pivot-row:active { transform: scale(0.997); }
         .pivot-row.today { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
         .pivot-row .pivot-date {
-            flex: 0 0 150px;
+            flex: 0 0 130px;
             font-size: 12.5px; color: var(--text);
             display: flex; align-items: center; gap: 6px;
+            pointer-events: none;  /* 让点击穿透到 row */
         }
         .pivot-row.today .pivot-date { color: var(--theme-primary); font-weight: 700; }
         .pivot-row .pivot-date .weekday { font-size: 11px; color: var(--text-faint); font-weight: 500; }
@@ -205,23 +208,42 @@
             border-radius: 50%; background: var(--red);
         }
         .pivot-row .pivot-cells {
-            flex: 1; display: flex; flex-wrap: wrap; gap: 6px;
+            flex: 1; display: flex; flex-wrap: wrap; gap: 4px;
         }
         .pivot-row .pivot-cell {
             display: inline-flex; align-items: center; gap: 4px;
-            padding: 3px 9px; border-radius: 99px;
+            padding: 2px 8px 2px 6px; border-radius: 99px;
             font-size: 11.5px; font-weight: 500;
-            background: var(--panel-2); color: var(--text-dim);
-            border: 1px solid var(--border-soft);
+            background: var(--theme-primary-bg-2); color: var(--text-dim);
+            border: 1px solid transparent;
             font-family: var(--mono);
+            cursor: pointer;
+            transition: background 0.1s, color 0.1s, border-color 0.1s, transform 0.1s;
         }
-        .pivot-row .pivot-cell.empty { opacity: 0.45; background: transparent; }
+        .pivot-row .pivot-cell .nm { font-weight: 500; }
+        .pivot-row .pivot-cell b {
+            color: var(--theme-primary);
+            font-weight: 700;
+            font-size: 12.5px;
+        }
+        .pivot-row .pivot-cell:hover {
+            background: var(--theme-primary);
+            border-color: var(--theme-primary);
+            transform: translateY(-1px);
+        }
+        .pivot-row .pivot-cell:hover .nm,
+        .pivot-row .pivot-cell:hover b { color: white; }
+        .pivot-row .pivot-cell:active { transform: translateY(0); }
         .pivot-row .pivot-cell .ic { font-size: 12px; }
         .pivot-row .pivot-total {
-            flex: 0 0 80px; text-align: right;
-            font-size: 16px; font-weight: 800; color: var(--theme-primary);
+            flex: 0 0 64px; text-align: right;
+            font-size: 17px; font-weight: 800; color: var(--theme-primary);
             font-family: var(--mono);
+            cursor: pointer;
+            padding: 2px 8px; border-radius: 6px;
+            transition: background 0.1s;
         }
+        .pivot-row .pivot-total:hover { background: var(--theme-primary); color: white; }
 
         /* ===== 主区域：左栏目栏 + 右内容区 ===== */
         .main-grid {
@@ -828,6 +850,57 @@ document.getElementById('dateHeader').addEventListener('click', function(e) {
     selectedDate = btn.dataset.date;
     filterNews();
 });
+
+// 顶部透视表点击跳转（V4）
+document.querySelector('.pivot-rows').addEventListener('click', function(e) {
+    // 1) 点击分类胶囊 → 按日期 + 分类筛选
+    const cell = e.target.closest('.pivot-cell');
+    if (cell) {
+        e.stopPropagation();
+        const targetDate = cell.dataset.date;
+        const targetCat = cell.dataset.cat;
+        applyPivotFilter(targetDate, targetCat);
+        return;
+    }
+    // 2) 点击总计数字 → 按日期筛选
+    const total = e.target.closest('.pivot-total');
+    if (total) {
+        e.stopPropagation();
+        applyPivotFilter(total.dataset.date, 'all');
+        return;
+    }
+    // 3) 点击行（空白处）→ 按日期筛选
+    const row = e.target.closest('.pivot-row');
+    if (row) {
+        applyPivotFilter(row.dataset.date, 'all');
+    }
+});
+
+function applyPivotFilter(date, column) {
+    // 同步顶部日期表头
+    document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
+    const targetBtn = document.querySelector(`.date-btn[data-date="${date}"]`);
+    if (targetBtn) targetBtn.classList.add('active');
+    selectedDate = date;
+    // 同步左侧栏目
+    document.querySelectorAll('.col-item').forEach(b => b.classList.remove('active'));
+    const targetCol = document.querySelector(`.col-item[data-column="${column}"]`);
+    if (targetCol) targetCol.classList.add('active');
+    selectedColumn = column;
+    // 清空搜索和筛选条，避免冲突
+    const searchBox = document.getElementById('searchBox');
+    if (searchBox) searchBox.value = '';
+    const sourceFilter = document.getElementById('sourceFilter');
+    if (sourceFilter) sourceFilter.value = '';
+    const categoryFilter = document.getElementById('categoryFilter');
+    if (categoryFilter) categoryFilter.value = '';
+    const importanceFilter = document.getElementById('importanceFilter');
+    if (importanceFilter) importanceFilter.value = '';
+    // 触发筛选 + 滚动到表格
+    filterNews();
+    const table = document.querySelector('.table-container');
+    if (table) table.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 function filterNews() {
     const searchText = document.getElementById('searchBox').value.toLowerCase();

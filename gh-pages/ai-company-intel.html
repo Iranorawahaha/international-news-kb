@@ -181,22 +181,25 @@
         .pivot-wrapper .pivot-subtitle {
             font-size: 11px; color: var(--text-faint); margin-bottom: 8px;
         }
-        .pivot-rows { display: flex; flex-direction: column; gap: 6px; padding-bottom: 8px; }
+        .pivot-rows { display: flex; flex-direction: column; gap: 4px; padding-bottom: 6px; }
         .pivot-row {
             display: flex; align-items: center;
-            padding: 8px 12px;
+            padding: 6px 12px;
             border-radius: 8px;
             background: white;
             border: 1px solid var(--border-soft);
             gap: 10px;
-            transition: background 0.1s;
+            transition: background 0.1s, border-color 0.1s, transform 0.1s;
+            cursor: pointer;
         }
         .pivot-row:hover { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
+        .pivot-row:active { transform: scale(0.997); }
         .pivot-row.today { background: var(--theme-primary-bg); border-color: var(--theme-primary-bg-2); }
         .pivot-row .pivot-date {
-            flex: 0 0 150px;
+            flex: 0 0 130px;
             font-size: 12.5px; color: var(--text);
             display: flex; align-items: center; gap: 6px;
+            pointer-events: none;  /* 让点击穿透到 row */
         }
         .pivot-row.today .pivot-date { color: var(--theme-primary); font-weight: 700; }
         .pivot-row .pivot-date .weekday { font-size: 11px; color: var(--text-faint); font-weight: 500; }
@@ -205,23 +208,42 @@
             border-radius: 50%; background: var(--red);
         }
         .pivot-row .pivot-cells {
-            flex: 1; display: flex; flex-wrap: wrap; gap: 6px;
+            flex: 1; display: flex; flex-wrap: wrap; gap: 4px;
         }
         .pivot-row .pivot-cell {
             display: inline-flex; align-items: center; gap: 4px;
-            padding: 3px 9px; border-radius: 99px;
+            padding: 2px 8px 2px 6px; border-radius: 99px;
             font-size: 11.5px; font-weight: 500;
-            background: var(--panel-2); color: var(--text-dim);
-            border: 1px solid var(--border-soft);
+            background: var(--theme-primary-bg-2); color: var(--text-dim);
+            border: 1px solid transparent;
             font-family: var(--mono);
+            cursor: pointer;
+            transition: background 0.1s, color 0.1s, border-color 0.1s, transform 0.1s;
         }
-        .pivot-row .pivot-cell.empty { opacity: 0.45; background: transparent; }
+        .pivot-row .pivot-cell .nm { font-weight: 500; }
+        .pivot-row .pivot-cell b {
+            color: var(--theme-primary);
+            font-weight: 700;
+            font-size: 12.5px;
+        }
+        .pivot-row .pivot-cell:hover {
+            background: var(--theme-primary);
+            border-color: var(--theme-primary);
+            transform: translateY(-1px);
+        }
+        .pivot-row .pivot-cell:hover .nm,
+        .pivot-row .pivot-cell:hover b { color: white; }
+        .pivot-row .pivot-cell:active { transform: translateY(0); }
         .pivot-row .pivot-cell .ic { font-size: 12px; }
         .pivot-row .pivot-total {
-            flex: 0 0 80px; text-align: right;
-            font-size: 16px; font-weight: 800; color: var(--theme-primary);
+            flex: 0 0 64px; text-align: right;
+            font-size: 17px; font-weight: 800; color: var(--theme-primary);
             font-family: var(--mono);
+            cursor: pointer;
+            padding: 2px 8px; border-radius: 6px;
+            transition: background 0.1s;
         }
+        .pivot-row .pivot-total:hover { background: var(--theme-primary); color: white; }
 
         /* ===== 主区域：左栏目栏 + 右内容区 ===== */
         .main-grid {
@@ -673,7 +695,7 @@
     <!-- 绿色最近更新条 -->
     <div class="update-bar">
         <span class="dot"></span>
-        <strong>最近更新：</strong>2026-08-17 16:36 北京时间（每日自动刷新） · 共 <strong>392</strong> 条新闻 · 数据快照，滚动 7 天窗口
+        <strong>最近更新：</strong>2026-08-17 17:38 北京时间（每日自动刷新） · 共 <strong>392</strong> 条新闻 · 数据快照，滚动 7 天窗口
     </div>
 
     <!-- 数据源说明 -->
@@ -704,8 +726,8 @@
     <!-- 国内版顶部统计表（日期×分类） -->
     <div class="pivot-wrapper">
         <div class="pivot-title">📅 AI · 各日按分类分布</div>
-        <div class="pivot-subtitle">点击表格行可在下方表格中按日期筛选</div>
-        <div class="pivot-rows"><div class="pivot-row today"><div class="pivot-date"><b>2026-08-17</b><span class="weekday">周一</span><span class="today-dot"></span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">⚖️</span>industry <b>17</b></span><span class="pivot-cell"><span class="ic">🏗️</span>ai-models <b>6</b></span><span class="pivot-cell"><span class="ic">💡</span>tip <b>28</b></span></div><div class="pivot-total">51</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-16</b><span class="weekday">周日</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">⚖️</span>industry <b>17</b></span><span class="pivot-cell"><span class="ic">🏗️</span>ai-models <b>12</b></span><span class="pivot-cell"><span class="ic">💡</span>tip <b>30</b></span></div><div class="pivot-total">59</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-15</b><span class="weekday">周六</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">⚖️</span>industry <b>28</b></span><span class="pivot-cell"><span class="ic">🏗️</span>ai-models <b>29</b></span><span class="pivot-cell"><span class="ic">💡</span>tip <b>23</b></span></div><div class="pivot-total">80</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-14</b><span class="weekday">周五</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">⚖️</span>industry <b>28</b></span><span class="pivot-cell"><span class="ic">🏗️</span>ai-models <b>38</b></span><span class="pivot-cell"><span class="ic">💡</span>tip <b>16</b></span></div><div class="pivot-total">82</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-13</b><span class="weekday">周四</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">⚖️</span>industry <b>21</b></span><span class="pivot-cell"><span class="ic">🏗️</span>ai-models <b>16</b></span><span class="pivot-cell"><span class="ic">💡</span>tip <b>16</b></span></div><div class="pivot-total">53</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-12</b><span class="weekday">周三</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">⚖️</span>industry <b>14</b></span><span class="pivot-cell"><span class="ic">🏗️</span>ai-models <b>9</b></span><span class="pivot-cell"><span class="ic">💡</span>tip <b>5</b></span></div><div class="pivot-total">28</div></div><div class="pivot-row"><div class="pivot-date"><b>2026-08-11</b><span class="weekday">周二</span></div><div class="pivot-cells"><span class="pivot-cell"><span class="ic">⚖️</span>industry <b>11</b></span><span class="pivot-cell"><span class="ic">🏗️</span>ai-models <b>13</b></span><span class="pivot-cell"><span class="ic">💡</span>tip <b>6</b></span></div><div class="pivot-total">30</div></div></div>
+        <div class="pivot-subtitle">点击分类胶囊跳转当日该类新闻；点击行或总计跳转当日全部新闻</div>
+        <div class="pivot-rows"><div class="pivot-row today" data-date="2026-08-17" title="点击查看 2026-08-17 全部新闻（51 条）"><div class="pivot-date"><b>2026-08-17</b><span class="weekday">周一</span><span class="today-dot"></span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-17" data-cat="industry" title="点击查看 2026-08-17 · industry（17 条）"><span class="ic">⚖️</span><span class="nm">产业</span><b>17</b></span><span class="pivot-cell" data-date="2026-08-17" data-cat="ai-models" title="点击查看 2026-08-17 · ai-models（6 条）"><span class="ic">🏗️</span><span class="nm">模型</span><b>6</b></span><span class="pivot-cell" data-date="2026-08-17" data-cat="tip" title="点击查看 2026-08-17 · tip（28 条）"><span class="ic">💡</span><span class="nm">技巧</span><b>28</b></span></div><div class="pivot-total" data-date="2026-08-17" title="点击查看 2026-08-17 全部新闻">51</div></div><div class="pivot-row" data-date="2026-08-16" title="点击查看 2026-08-16 全部新闻（59 条）"><div class="pivot-date"><b>2026-08-16</b><span class="weekday">周日</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-16" data-cat="industry" title="点击查看 2026-08-16 · industry（17 条）"><span class="ic">⚖️</span><span class="nm">产业</span><b>17</b></span><span class="pivot-cell" data-date="2026-08-16" data-cat="ai-models" title="点击查看 2026-08-16 · ai-models（12 条）"><span class="ic">🏗️</span><span class="nm">模型</span><b>12</b></span><span class="pivot-cell" data-date="2026-08-16" data-cat="tip" title="点击查看 2026-08-16 · tip（30 条）"><span class="ic">💡</span><span class="nm">技巧</span><b>30</b></span></div><div class="pivot-total" data-date="2026-08-16" title="点击查看 2026-08-16 全部新闻">59</div></div><div class="pivot-row" data-date="2026-08-15" title="点击查看 2026-08-15 全部新闻（80 条）"><div class="pivot-date"><b>2026-08-15</b><span class="weekday">周六</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-15" data-cat="industry" title="点击查看 2026-08-15 · industry（28 条）"><span class="ic">⚖️</span><span class="nm">产业</span><b>28</b></span><span class="pivot-cell" data-date="2026-08-15" data-cat="ai-models" title="点击查看 2026-08-15 · ai-models（29 条）"><span class="ic">🏗️</span><span class="nm">模型</span><b>29</b></span><span class="pivot-cell" data-date="2026-08-15" data-cat="tip" title="点击查看 2026-08-15 · tip（23 条）"><span class="ic">💡</span><span class="nm">技巧</span><b>23</b></span></div><div class="pivot-total" data-date="2026-08-15" title="点击查看 2026-08-15 全部新闻">80</div></div><div class="pivot-row" data-date="2026-08-14" title="点击查看 2026-08-14 全部新闻（82 条）"><div class="pivot-date"><b>2026-08-14</b><span class="weekday">周五</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-14" data-cat="industry" title="点击查看 2026-08-14 · industry（28 条）"><span class="ic">⚖️</span><span class="nm">产业</span><b>28</b></span><span class="pivot-cell" data-date="2026-08-14" data-cat="ai-models" title="点击查看 2026-08-14 · ai-models（38 条）"><span class="ic">🏗️</span><span class="nm">模型</span><b>38</b></span><span class="pivot-cell" data-date="2026-08-14" data-cat="tip" title="点击查看 2026-08-14 · tip（16 条）"><span class="ic">💡</span><span class="nm">技巧</span><b>16</b></span></div><div class="pivot-total" data-date="2026-08-14" title="点击查看 2026-08-14 全部新闻">82</div></div><div class="pivot-row" data-date="2026-08-13" title="点击查看 2026-08-13 全部新闻（53 条）"><div class="pivot-date"><b>2026-08-13</b><span class="weekday">周四</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-13" data-cat="industry" title="点击查看 2026-08-13 · industry（21 条）"><span class="ic">⚖️</span><span class="nm">产业</span><b>21</b></span><span class="pivot-cell" data-date="2026-08-13" data-cat="ai-models" title="点击查看 2026-08-13 · ai-models（16 条）"><span class="ic">🏗️</span><span class="nm">模型</span><b>16</b></span><span class="pivot-cell" data-date="2026-08-13" data-cat="tip" title="点击查看 2026-08-13 · tip（16 条）"><span class="ic">💡</span><span class="nm">技巧</span><b>16</b></span></div><div class="pivot-total" data-date="2026-08-13" title="点击查看 2026-08-13 全部新闻">53</div></div><div class="pivot-row" data-date="2026-08-12" title="点击查看 2026-08-12 全部新闻（28 条）"><div class="pivot-date"><b>2026-08-12</b><span class="weekday">周三</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-12" data-cat="industry" title="点击查看 2026-08-12 · industry（14 条）"><span class="ic">⚖️</span><span class="nm">产业</span><b>14</b></span><span class="pivot-cell" data-date="2026-08-12" data-cat="ai-models" title="点击查看 2026-08-12 · ai-models（9 条）"><span class="ic">🏗️</span><span class="nm">模型</span><b>9</b></span><span class="pivot-cell" data-date="2026-08-12" data-cat="tip" title="点击查看 2026-08-12 · tip（5 条）"><span class="ic">💡</span><span class="nm">技巧</span><b>5</b></span></div><div class="pivot-total" data-date="2026-08-12" title="点击查看 2026-08-12 全部新闻">28</div></div><div class="pivot-row" data-date="2026-08-11" title="点击查看 2026-08-11 全部新闻（30 条）"><div class="pivot-date"><b>2026-08-11</b><span class="weekday">周二</span></div><div class="pivot-cells"><span class="pivot-cell" data-date="2026-08-11" data-cat="industry" title="点击查看 2026-08-11 · industry（11 条）"><span class="ic">⚖️</span><span class="nm">产业</span><b>11</b></span><span class="pivot-cell" data-date="2026-08-11" data-cat="ai-models" title="点击查看 2026-08-11 · ai-models（13 条）"><span class="ic">🏗️</span><span class="nm">模型</span><b>13</b></span><span class="pivot-cell" data-date="2026-08-11" data-cat="tip" title="点击查看 2026-08-11 · tip（6 条）"><span class="ic">💡</span><span class="nm">技巧</span><b>6</b></span></div><div class="pivot-total" data-date="2026-08-11" title="点击查看 2026-08-11 全部新闻">30</div></div></div>
     </div>
 
     <!-- 主区域：左栏目栏 + 右内容区 -->
@@ -773,7 +795,7 @@
 
     <!-- 页脚 -->
     <div class="footer">
-        🤖 AI 动向看板 V2.11 · 表格化统一 UI · 数据更新于 2026-08-17 16:36 · 7天窗口 · Powered by Ira 信息看板体系
+        🤖 AI 动向看板 V2.11 · 表格化统一 UI · 数据更新于 2026-08-17 17:38 · 7天窗口 · Powered by Ira 信息看板体系
     </div>
 </div>
 
@@ -842,6 +864,57 @@ document.getElementById('dateHeader').addEventListener('click', function(e) {
     selectedDate = btn.dataset.date;
     filterNews();
 });
+
+// 顶部透视表点击跳转（V4）
+document.querySelector('.pivot-rows').addEventListener('click', function(e) {
+    // 1) 点击分类胶囊 → 按日期 + 分类筛选
+    const cell = e.target.closest('.pivot-cell');
+    if (cell) {
+        e.stopPropagation();
+        const targetDate = cell.dataset.date;
+        const targetCat = cell.dataset.cat;
+        applyPivotFilter(targetDate, targetCat);
+        return;
+    }
+    // 2) 点击总计数字 → 按日期筛选
+    const total = e.target.closest('.pivot-total');
+    if (total) {
+        e.stopPropagation();
+        applyPivotFilter(total.dataset.date, 'all');
+        return;
+    }
+    // 3) 点击行（空白处）→ 按日期筛选
+    const row = e.target.closest('.pivot-row');
+    if (row) {
+        applyPivotFilter(row.dataset.date, 'all');
+    }
+});
+
+function applyPivotFilter(date, column) {
+    // 同步顶部日期表头
+    document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
+    const targetBtn = document.querySelector(`.date-btn[data-date="${date}"]`);
+    if (targetBtn) targetBtn.classList.add('active');
+    selectedDate = date;
+    // 同步左侧栏目
+    document.querySelectorAll('.col-item').forEach(b => b.classList.remove('active'));
+    const targetCol = document.querySelector(`.col-item[data-column="${column}"]`);
+    if (targetCol) targetCol.classList.add('active');
+    selectedColumn = column;
+    // 清空搜索和筛选条，避免冲突
+    const searchBox = document.getElementById('searchBox');
+    if (searchBox) searchBox.value = '';
+    const sourceFilter = document.getElementById('sourceFilter');
+    if (sourceFilter) sourceFilter.value = '';
+    const categoryFilter = document.getElementById('categoryFilter');
+    if (categoryFilter) categoryFilter.value = '';
+    const importanceFilter = document.getElementById('importanceFilter');
+    if (importanceFilter) importanceFilter.value = '';
+    // 触发筛选 + 滚动到表格
+    filterNews();
+    const table = document.querySelector('.table-container');
+    if (table) table.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 function filterNews() {
     const searchText = document.getElementById('searchBox').value.toLowerCase();

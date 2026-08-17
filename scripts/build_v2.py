@@ -277,8 +277,9 @@ def build():
     dates = sorted(archive.keys(), reverse=True)
     date_count = len(dates)
 
-    # 顶部统计表（AI 用 日期×分类 透视）
+    # 顶部统计表（AI 用 日期×分类 透视 · V4 简洁版 · 0 值隐藏 + 可点击跳转）
     cat_icon = {"industry": "⚖️", "ai-models": "🏗️", "tip": "💡"}
+    cat_short = {"industry": "产业", "ai-models": "模型", "tip": "技巧"}
     cat_keys = ["industry", "ai-models", "tip"]
     pivot = {d: {c: 0 for c in cat_keys} for d in dates}
     for d in dates:
@@ -293,18 +294,17 @@ def build():
         cells_html = []
         for c in cat_keys:
             cnt = pivot[d].get(c, 0)
+            if not cnt:
+                continue  # 0 值不展示
             icon = cat_icon.get(c, "📌")
-            if cnt:
-                cells_html.append(
-                    f'<span class="pivot-cell">'
-                    f'<span class="ic">{icon}</span>{c} <b>{cnt}</b>'
-                    f'</span>'
-                )
-            else:
-                cells_html.append(
-                    f'<span class="pivot-cell empty">'
-                    f'<span class="ic">{icon}</span>{c} —</span>'
-                )
+            short = cat_short.get(c, c)
+            cells_html.append(
+                f'<span class="pivot-cell" '
+                f'data-date="{html.escape(d)}" data-cat="{html.escape(c)}" '
+                f'title="点击查看 {d} · {c}（{cnt} 条）">'
+                f'<span class="ic">{icon}</span><span class="nm">{html.escape(short)}</span><b>{cnt}</b>'
+                f'</span>'
+            )
         total_row = sum(pivot[d].values())
         today_dot = '<span class="today-dot"></span>' if is_today else ''
         try:
@@ -314,15 +314,15 @@ def build():
             wd = ""
         row_cls = "pivot-row today" if is_today else "pivot-row"
         pivot_rows.append(
-            f'<div class="{row_cls}">'
+            f'<div class="{row_cls}" data-date="{html.escape(d)}" title="点击查看 {d} 全部新闻（{total_row} 条）">'
             f'<div class="pivot-date"><b>{d}</b><span class="weekday">{wd}</span>{today_dot}</div>'
             f'<div class="pivot-cells">{"".join(cells_html)}</div>'
-            f'<div class="pivot-total">{total_row}</div>'
+            f'<div class="pivot-total" data-date="{html.escape(d)}" title="点击查看 {d} 全部新闻">{total_row}</div>'
             f'</div>'
         )
     stats_top = f'''<div class="pivot-wrapper">
         <div class="pivot-title">📅 AI · 各日按分类分布</div>
-        <div class="pivot-subtitle">点击表格行可在下方表格中按日期筛选</div>
+        <div class="pivot-subtitle">点击分类胶囊跳转当日该类新闻；点击行或总计跳转当日全部新闻</div>
         <div class="pivot-rows">{"".join(pivot_rows)}</div>
     </div>'''
 
