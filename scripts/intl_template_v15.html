@@ -416,7 +416,13 @@
         th:nth-child(7), td:nth-child(7) { width: 80px; min-width: 70px; }
         th:nth-child(8), td:nth-child(8) { width: 120px; min-width: 100px; }
 
-        /* 日期分组表头 — V2.4: 从表格行改为表格前的独立 sticky 区块，避免 table-layout 截断 + colspan 塌缩 */
+        /* 日期分组表头 — V2.4 嵌回 tbody（display:block 解决塌缩） */
+        .date-separator td {
+            display: block;
+            padding: 0 !important;
+            border: none !important;
+            background: transparent !important;
+        }
         .date-group-divider {
             background: linear-gradient(90deg, var(--primary-bg) 0%, var(--primary-bg) 100%);
             border-left: 5px solid var(--primary);
@@ -708,7 +714,6 @@
 
             <!-- 表格 -->
             <div class="table-container">
-                <div id="dateHeaderZone"></div>
                 <table>
                     <thead>
                         <tr>
