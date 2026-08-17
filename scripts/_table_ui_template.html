@@ -442,9 +442,15 @@
             word-break: break-word;
         }
 
-        /* 日期分组表头 — V2.4: 从表格行改为表格前的独立 sticky 区块，避免 table-layout 截断 + colspan 塌缩 */
+        /* 日期分组表头 — V2.4 嵌回 tbody（display:block 解决塌缩）*/
+        .date-separator-row td {
+            display: block;
+            padding: 0 !important;
+            border: none !important;
+            background: transparent !important;
+        }
         .date-group-divider {
-            background: linear-gradient(90deg, var(--theme-primary-bg) 0%, var(--theme-primary-bg) 70%, transparent 100%);
+            background: linear-gradient(90deg, var(--theme-primary-bg) 0%, var(--theme-primary-bg) 100%);
             border-left: 5px solid var(--theme-primary);
             border-bottom: 1px solid var(--theme-primary-bg-2);
             border-radius: 0 10px 10px 0;
@@ -736,7 +742,6 @@
 
             <!-- 表格 -->
             <div class="table-container">
-                <div id="dateHeaderZone"></div>
                 <table>
                     <thead>
                         <tr>
@@ -871,11 +876,9 @@ function filterNews() {
 
 function renderTable(articles) {
     const tbody = document.getElementById('newsTableBody');
-    const dateZone = document.getElementById('dateHeaderZone');
     tbody.innerHTML = '';
-    if (dateZone) dateZone.innerHTML = '';
     if (!articles.length) {
-        tbody.innerHTML = '<tr><td colspan="8"><div class="empty-state">📭 当前筛选条件下无新闻</div></td></tr>';
+        tbody.innerHTML = '<tr><td colspan="4"><div class="empty-state">📭 当前筛选条件下无新闻</div></td></tr>';
         return;
     }
 
@@ -889,14 +892,14 @@ function renderTable(articles) {
         const isToday = dateStr === TODAY_DATE;
         const todayCls = isToday ? ' today' : '';
         const weekdayLabel = weekday + (isToday ? ' · 今日' : '');
-        // 日期分组表头移到 table 外的 div（彻底避免 td colspan 塌缩）
-        return `<div class="date-group-divider${todayCls}">
+        // 嵌回 tbody 第一行（display:block 解决塌缩，div 仍 width:100%）
+        return `<td colspan="4"><div class="date-group-divider${todayCls}">
             <span class="date-icon">📅</span>
             <span class="date-main">${md}</span>
             <span class="date-weekday">${weekdayLabel}</span>
             <span class="date-iso">${dateStr}</span>
             <span class="date-count">${count} 条</span>
-        </div>`;
+        </div></td>`;
     }
     function escapeHTML(s) {
         return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
@@ -930,8 +933,8 @@ function renderTable(articles) {
     }
     for (const item of articles) {
         if (item._isDateSeparator) {
-            // 日期分隔符渲染到 table 外的 div 容器
-            if (dateZone) dateZone.insertAdjacentHTML('beforeend', fmtDateHeader(item._date, item._count));
+            // 日期分隔符嵌回 tbody 第一行（display:block 解决塌缩，div 撑满整行）
+            tbody.insertAdjacentHTML('beforeend', `<tr class="date-separator-row">${fmtDateHeader(item._date, item._count)}</tr>`);
             continue;
         }
         globalIndex += 1;
