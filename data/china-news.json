@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-08-17 09:22",
+  "lastUpdated": "2026-08-17 15:31",
   "retentionDays": 7,
   "archive": {
     "2026-08-11": [
@@ -916,7 +916,7 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "国内生产总值同比增长4.7%、规模以上工业企业实现利润总额同比增长18.7%、新动能对经济增长贡献率超过四成……走过“十五五”首个半年，我国经济动能向新、结构向优的发展态势，离不开亿万企业的奋勇争先、…",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "《求是》杂志发表习近平总书记重要文章《提高防灾减灾救灾能力》",
@@ -927,18 +927,117 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "《求是》杂志发表习近平总书记重要文章《提高防灾减灾救灾能力》。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
-        "title": "习言道｜习近平种下的三棵杉树",
-        "url": "https://news.cctv.com/2026/08/16/ARTIRob5bDXShnHUogQgJ4WI260816.shtml",
-        "date": "2026-08-16",
+        "title": "习近平形容江泽民是中国特色社会主义伟大事业杰出领导者",
+        "url": "https://www.zaobao.com/news/china/story20260817-9529416",
+        "date": "2026-08-17",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "习近平牵挂的那片林海",
+        "url": "https://news.cctv.com/2026/08/17/ARTI55h2k39RHVwTpUW82MCG260817.shtml",
+        "date": "2026-08-17",
         "source": "央视新闻",
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "summary": "2020年，习近平总书记再赴余村考察，看到余村人把生态资源优势转化为经济发展优势，实实在在地从中获益，他对大家说“生态本身就是经济，保护生态，生态就会回馈你。”",
-        "collectedAt": "2026-08-17 09:22:04"
+        "summary": "今年是“两山”理念提出21周年。在过去的六十多年里，北京以北约460公里的塞罕坝，完成了从“黄沙遮天日，飞鸟无栖树”的荒原，到百万亩林海葱郁叠翠、松涛绵延千里的华丽蜕变。",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "习近平称中国愿同印尼增进战略互信",
+        "url": "https://www.zaobao.com/news/china/story20260817-9530165",
+        "date": "2026-08-17",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "习近平高度评价江泽民政治遗产 突出党建与改革延续",
+        "url": "https://www.zaobao.com/news/china/story20260817-9530208",
+        "date": "2026-08-17",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "习近平：在纪念江泽民同志诞辰100周年大会上的讲话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078250.htm",
+        "date": "2026-08-17",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "今天，我们隆重集会，纪念江泽民同志诞辰一百周年，深切缅怀他的丰功伟绩，深入学习他的崇高风范，激励全党全国各族人民把中国特色社会主义事业不断推向前进。",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "习近平：江泽民推动政治体制等各方面改革",
+        "url": "https://www.zaobao.com/news/china/story20260817-9529621",
+        "date": "2026-08-17",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "习近平：江泽民领导中国妥善处置危及政治大局稳定重大隐患",
+        "url": "https://www.zaobao.com/news/china/story20260817-9529678",
+        "date": "2026-08-17",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "习近平：面对80年代末严重政治风波 江泽民毫不动摇坚持经济建设和四项基本原则",
+        "url": "https://www.zaobao.com/news/china/story20260817-9529496",
+        "date": "2026-08-17",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "快讯：纪念江泽民同志诞辰100周年大会在京隆重举行 习近平出席大会并发表重要讲话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078223.htm",
+        "date": "2026-08-17",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社快讯：纪念江泽民同志诞辰100周年大会17日上午在京隆重举行。中共中央总书记、国家主席、中央军委主席习近平出席大会并发表重要讲话。",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "独家视频丨习近平等党和国家领导人出席纪念江泽民同志诞辰100周年大会",
+        "url": "https://news.cctv.com/2026/08/17/ARTIDBBVQ1gFMgYcCMoTQn3F260817.shtml",
+        "date": "2026-08-17",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "8月17日上午，纪念江泽民同志诞辰100周年大会在人民大会堂隆重举行。习近平等党和国家领导人步入会场。",
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "纪念江泽民同志诞辰100周年大会17日上午在京隆重举行 习近平将出席大会并发表重要讲话",
@@ -949,18 +1048,51 @@
         "priority_score": 100,
         "is_summit_level": true,
         "summary": "纪念江泽民同志诞辰100周年大会17日上午在京隆重举行，习近平将出席大会并发表重要讲话。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
-        "title": "中国调整7月经济数据发布时间及新闻发布会安排",
-        "url": "https://www.zaobao.com/news/china/story20260816-9526531",
-        "date": "2026-08-16",
+        "title": "纪念江泽民同志诞辰100周年大会在京隆重举行 习近平出席大会并发表重要讲话",
+        "url": "https://news.cctv.com/2026/08/17/ARTIFG37xLkuu1isfdZjaKYc260817.shtml",
+        "date": "2026-08-17",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "纪念江泽民同志诞辰100周年大会17日上午在京隆重举行。中共中央总书记、国家主席、中央军委主席习近平出席大会并发表重要讲话。",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "纪念江泽民同志诞辰100周年大会在京隆重举行 习近平发表重要讲话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078248.htm",
+        "date": "2026-08-17",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京8月17日电 中共中央、全国人大常委会、国务院、全国政协、中央军委17日上午在人民大会堂隆重举行大会，纪念伟大的马克思主义者，伟大的无产阶级革命家、政治家、军事家、外交家，中国特色社会主义伟…",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "陈希等卸任中共政治局委员出席江泽民百年诞辰纪念大会",
+        "url": "https://www.zaobao.com/news/china/story20260817-9529998",
+        "date": "2026-08-17",
         "source": "联合早报",
-        "category": "重要会议",
-        "priority_score": 88,
+        "category": "高层动态",
+        "priority_score": 95,
         "is_summit_level": false,
         "summary": "",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "中国警方通报破获三起影视领域舆情敲诈案24人被抓",
+        "url": "https://www.zaobao.com/news/china/story20260817-9530045",
+        "date": "2026-08-17",
+        "source": "联合早报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "以源头创新激发产业发展新动能",
@@ -971,7 +1103,18 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "当前，全国重点实验室纷纷瞄准产业链关键环节，集中攻坚关键核心技术，一系列原创性成果正加速应用到具体产业链中。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "事关国际单位制及应用标准 市场监管总局公开征求意见",
+        "url": "https://news.cctv.com/2026/08/17/ARTI3GYroEIYssGe3pL63pp8260817.shtml",
+        "date": "2026-08-17",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "记者今天了解到，市场监管总局发布公告，就强制性国家标准《国际单位制及其应用（征求意见稿）》面向社会公开征求意见，意见反馈截止时间为9月13日。",
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "针对工业园区污水污染等问题，八部门联合印发通知",
@@ -982,18 +1125,29 @@
         "priority_score": 80,
         "is_summit_level": false,
         "summary": "近日，生态环境部联合工业和信息化部、公安部、自然资源部、水利部、农业农村部、最高人民法院、最高人民检察院印发《关于进一步加强工业等污水污染风险防范 保障农业灌溉用水安全的通知》。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
-        "title": "AI时代 纸质书该何去何从",
-        "url": "https://news.cctv.com/2026/08/16/ARTIo8BTJWjArFwG1DEsPhXL260816.shtml",
-        "date": "2026-08-16",
+        "title": "1至7月全国铁路完成固定资产投资4406亿元 为高质量发展注入强劲动能",
+        "url": "https://news.cctv.com/2026/08/17/ARTIyg679dmD1cJdRccvK4z7260817.shtml",
+        "date": "2026-08-17",
         "source": "央视新闻",
         "category": "经贸动向",
         "priority_score": 72,
         "is_summit_level": false,
-        "summary": "近年来，各大书展结合流行趋势，开发出各类新潮活动，迎来爆棚人气。今年的北京书市吸引了30余万人次走进朝阳公园、首钢园、圆明园、南苑森林湿地公园四大展场，淘书、买书、看书。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "summary": "记者8月17日从国铁集团获悉，今年1至7月，全国铁路完成固定资产投资4406亿元，同比增长1.8%。",
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "1至7月全国铁路完成固定资产投资4406亿元，同比增长1.8%",
+        "url": "https://news.cctv.com/2026/08/17/ARTIKfyzdWXgUQe6FIRNdJM8260817.shtml",
+        "date": "2026-08-17",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "今年以来，铁路建设优质高效推进，1至7月全国铁路完成固定资产投资4406亿元，同比增长1.8%，现代化铁路基础设施体系加快构建，铁路建设投资拉动效应显著，为区域经济社会发展注入了强劲动能。",
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "“十五五”时期扎实开展碳达峰行动 多项新举措支持循环经济",
@@ -1004,7 +1158,7 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "8月15日，2026年全国生态日主场活动在内蒙古自治区呼伦贝尔市举办。国家发展改革委相关负责人在活动上表示，要扎实开展碳达峰行动。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "中国经济半年报｜冷链消费稳步扩大 绿色转型提速增效",
@@ -1015,7 +1169,7 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "在宏观经济回升向好、物流运行韧性增长的背景下，上半年冷链物流保持稳步发展态势，冷链消费需求温和回升，绿色低碳转型加速推进。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "人脸照片经AI处理可通过刷脸验证？起底新型黑灰产业链",
@@ -1026,7 +1180,7 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "近日，湖南省长沙市雨花区人民法院审理了一起“不法者利用AI技术生成的人脸伪造视频盗刷银行卡”案件。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "制造业“产品+服务”成为发展新趋势 “服务增量”为产业转型提供新优势",
@@ -1037,7 +1191,7 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "今年以来，我国服务业持续扩能提质。上半年，服务业增加值同比增长5.2%，对经济增长的贡献率超六成。其中，生产性服务加快嵌入研发、生产、运维等环节，为制造业转型升级提供支撑。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "前7月人民币贷款增加10.38万亿元",
@@ -1048,7 +1202,7 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "在贷款规模保持合理增长的同时，信贷结构持续优化。7月末，我国普惠小微贷款余额38.19万亿元，同比增长9.0%，不含房地产业的服务业中长期贷款余额61.94万亿元，同比增长9.3%，以上贷款增速均高于…",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "前7月长三角外贸进出口值达11.41万亿元",
@@ -1059,7 +1213,18 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "本报北京8月16日电&nbsp;&nbsp;（记者欧阳洁）记者从南京海关获悉：今年1—7月，长三角4省市外贸进出口值达11.41万亿元，规模创历史同期新高，同比增长18.9%，占全国进出口总值的37.…",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
+      },
+      {
+        "title": "我国汽车芯片五项认证认可行业标准发布",
+        "url": "https://news.cctv.com/2026/08/17/ARTIOh7JPHav9DMhmXOIYSVK260817.shtml",
+        "date": "2026-08-17",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者今天了解到，市场监管总局（国家认监委）近日批准立项的《汽车芯片机构认证审查 通用评价要求》等五项认证认可行业标准发布。长期以来，由于缺乏统一的评价体系，国产芯片在上车应用过程中面临准入壁垒高、市场…",
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "技术经理人，深度参与企业成长（经济新方位·从“0”到“1”，把“1”拉长）",
@@ -1070,29 +1235,18 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "习近平总书记强调：“原创性技术要从‘0’到‘1’，从实验实现转化，而不是停留在论文阶段。以后还要把‘1’拉长、推进。”",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
-        "title": "民进党：北京利用AI技术增强介选能力",
-        "url": "https://www.zaobao.com/news/china/story20260816-9526971",
-        "date": "2026-08-16",
-        "source": "联合早报",
+        "title": "透过亮眼数据看上半年冷链物流运行态势 “冷”需求拉动“热”经济",
+        "url": "https://news.cctv.com/2026/08/17/ARTIO73efO5s4BREDcFRRZnn260817.shtml",
+        "date": "2026-08-17",
+        "source": "央视新闻",
         "category": "经贸动向",
         "priority_score": 72,
         "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-17 09:22:04"
-      },
-      {
-        "title": "港财政司长对下半年香港经济增长审慎乐观",
-        "url": "https://www.zaobao.com/news/china/story20260816-9526882",
-        "date": "2026-08-16",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-17 09:22:04"
+        "summary": "中国物流与采购联合会8月16日发布上半年冷链物流运行数据。在宏观经济回升向好、物流运行韧性增长的背景下，上半年冷链物流保持稳步发展态势，冷链消费需求温和回升，绿色低碳转型加速推进。",
+        "collectedAt": "2026-08-17 15:31:04"
       },
       {
         "title": "重庆加快推动科技创新和产业创新深度融合",
@@ -1103,7 +1257,7 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "“十五五”开局之年，重庆瞄准产业链创新升级堵点难点，构建产学研协同转化全链条生态，让“产业出题、科技答题”落在实处，加速建设具有全国影响力的科技创新中心。",
-        "collectedAt": "2026-08-17 09:22:04"
+        "collectedAt": "2026-08-17 15:31:04"
       }
     ]
   },
@@ -1117,11 +1271,11 @@
     "2026-08-11"
   ],
   "today": "2026-08-17",
-  "todayCount": 18,
+  "todayCount": 32,
   "stats": {
-    "totalArticles": 99,
+    "totalArticles": 113,
     "dateCount": 7,
     "latestDate": "2026-08-17",
-    "summitCount": 15
+    "summitCount": 26
   }
 }
