@@ -417,14 +417,30 @@
         tbody tr { transition: background 0.1s; }
         tbody tr:hover { background: var(--theme-primary-bg); }
 
+        /* 4 列两行卡片式 — # / 分类 / 内容(标题行+摘要行) / 操作 */
         th:nth-child(1), td:nth-child(1) { width: 40px; min-width: 40px; text-align: center; color: var(--text-faint); font-family: var(--mono); }
-        th:nth-child(2), td:nth-child(2) { width: 88px; min-width: 88px; font-family: var(--mono); font-size: 12px; }
-        th:nth-child(3), td:nth-child(3) { width: 240px; min-width: 200px; max-width: 280px; word-break: break-word; }
-        th:nth-child(4), td:nth-child(4) { min-width: 180px; word-break: break-word; overflow-wrap: break-word; }
-        th:nth-child(5), td:nth-child(5) { width: 80px; min-width: 70px; }
-        th:nth-child(6), td:nth-child(6) { width: 80px; min-width: 70px; }
-        th:nth-child(7), td:nth-child(7) { width: 80px; min-width: 70px; }
-        th:nth-child(8), td:nth-child(8) { width: 120px; min-width: 100px; }
+        th:nth-child(2), td:nth-child(2) { width: 118px; min-width: 104px; }
+        th:nth-child(3), td:nth-child(3) { min-width: 320px; word-break: break-word; }
+        th:nth-child(4), td:nth-child(4) { width: 112px; min-width: 96px; text-align: right; }
+
+        /* 行内两行卡片式 */
+        .cell-body { display: flex; flex-direction: column; gap: 6px; }
+        .row-title {
+            display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+        }
+        .row-title .title-zh { font-size: 14px; font-weight: 600; line-height: 1.5; flex: 1; min-width: 0; }
+        .row-title .title-zh a { color: var(--text); text-decoration: none; }
+        .row-title .title-zh a:hover { color: var(--theme-primary); text-decoration: underline; }
+        .row-title .meta-pill {
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 2px 9px; border-radius: 6px;
+            font-size: 11px; font-weight: 600; white-space: nowrap;
+        }
+        .row-title .imp-pill { border-radius: 999px; padding: 2px 9px; }
+        .row-summary {
+            font-size: 12.5px; color: var(--text-dim); line-height: 1.7;
+            word-break: break-word;
+        }
 
         /* 日期分组表头 — V2.4: 从表格行改为表格前的独立 sticky 区块，避免 table-layout 截断 + colspan 塌缩 */
         .date-group-divider {
@@ -561,6 +577,31 @@
         .cat-tag-ai-models  { background: #ede9fe; color: #6d28d9; border-color: #ddd6fe; }
         .cat-tag-tip        { background: #ffedd5; color: #c2410c; border-color: #fdba74; }
 
+        /* ===== 来源品牌色标签（媒体来源底色区分） ===== */
+        .src-tag {
+            display: inline-block; padding: 2px 9px; margin: 1px 0;
+            border-radius: 6px;
+            font-size: 11px; font-weight: 600;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+            border: 1px solid transparent;
+        }
+        .src-reuters   { background: #fdeeea; color: #b3261e; border-color: #f6c9c0; }
+        .src-bbc       { background: #ffe6e6; color: #b80000; border-color: #f5c2c2; }
+        .src-scmp      { background: #fde8ea; color: #a6192e; border-color: #f3c2c8; }
+        .src-ap        { background: #e8eef8; color: #1a3a66; border-color: #c5d3e8; }
+        .src-guardian  { background: #e9eef9; color: #0f1d40; border-color: #c8d2ec; }
+        .src-cnn       { background: #fdeaea; color: #cc0000; border-color: #f3c4c4; }
+        .src-nyt       { background: #f0f0f0; color: #111111; border-color: #d4d4d4; }
+        .src-wsj       { background: #f7ecd4; color: #7a4d00; border-color: #ead9ac; }
+        .src-politico  { background: #fde9ea; color: #c2302e; border-color: #f0c4c3; }
+        .src-wapo      { background: #ebebeb; color: #111111; border-color: #cfcfcf; }
+        .src-aj        { background: #fde6e8; color: #b02a30; border-color: #f0bfc3; }
+        .src-wh        { background: #e8f0fe; color: #1d4ed8; border-color: #c3d8f8; }
+        .src-state     { background: #e9eef8; color: #1e3a8a; border-color: #c9d4ec; }
+        .src-gov       { background: #eef1f7; color: #374151; border-color: #d4dae6; }
+        .src-default   { background: #eef1f7; color: #5b6b85; border-color: #d8dee9; }
+
         /* 原文链接 */
         .link-btn {
             display: inline-block; padding: 5px 10px;
@@ -596,8 +637,9 @@
             .header h1 { font-size: 22px; }
             th, td { padding: 9px 7px; }
             .toolbar .search-box { min-width: 100%; }
-            td:nth-child(4) { display: none; }
-            th:nth-child(4) { display: none; }
+            td:nth-child(1), th:nth-child(1) { display: none; }
+            th:nth-child(2), td:nth-child(2) { width: 96px; min-width: 88px; }
+            th:nth-child(4), td:nth-child(4) { width: 92px; min-width: 84px; }
         }
     </style>
 </head>
@@ -699,13 +741,9 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>日期</th>
-                            <th>标题</th>
-                            <th>摘要</th>
-                            <th>来源</th>
                             <th>分类</th>
-                            <th>重要性</th>
-                            <th>原文</th>
+                            <th>新闻内容</th>
+                            <th>操作</th>
                         </tr>
                     </thead>
                     <tbody id="newsTableBody"></tbody>
@@ -868,6 +906,28 @@ function renderTable(articles) {
         // 直接用 cat 字符串拼接 class（CSS 中已为每个分类名准备了样式）
         return `<span class="cat-tag cat-tag-${escapeHTML(cat)}">${escapeHTML(cat)}</span>`;
     }
+    // 来源品牌色映射（V3）
+    function srcCls(src) {
+        const s = (src || '').toLowerCase();
+        if (s.includes('reuters')) return 'src-reuters';
+        if (s.includes('bbc')) return 'src-bbc';
+        if (s.includes('scmp') || s.includes('south china')) return 'src-scmp';
+        if (s.includes('ap') && (s.includes('ap news') || s.includes('associated'))) return 'src-ap';
+        if (s.includes('guardian')) return 'src-guardian';
+        if (s.includes('cnn')) return 'src-cnn';
+        if (s.includes('new york times') || s.includes('nytimes')) return 'src-nyt';
+        if (s.includes('wall street') || s.includes('wsj')) return 'src-wsj';
+        if (s.includes('politico')) return 'src-politico';
+        if (s.includes('washington post') || s.includes('washingtonpost')) return 'src-wapo';
+        if (s.includes('al jazeera')) return 'src-aj';
+        if (s.includes('white house') || s.includes('白宫')) return 'src-wh';
+        if (s.includes('state department') || s.includes('国务院') || s.includes('美国务院')) return 'src-state';
+        if (s.includes('treasury') || s.includes('财政部') || s.includes('ustr') || s.includes('商务部') || s.includes('国防部')) return 'src-gov';
+        return 'src-default';
+    }
+    function srcTag(src) {
+        return `<span class="src-tag ${srcCls(src)}">${escapeHTML(src || '')}</span>`;
+    }
     for (const item of articles) {
         if (item._isDateSeparator) {
             // 日期分隔符渲染到 table 外的 div 容器
@@ -876,23 +936,25 @@ function renderTable(articles) {
         }
         globalIndex += 1;
         const idx = globalIndex;
-        const dateStr = escapeHTML(item._date || '');
         const titleEn = item.title_en ? `<div class="title-en">${escapeHTML(item.title_en)}</div>` : '';
         const titleZh = `<div class="title-zh"><a href="${escapeHTML(item.url || '#')}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.title || item.title_zh || '')}</a></div>`;
-        const summary = `<div class="summary-text">${escapeHTML(item.summary || item.summary_zh || '') || '<span style="color:var(--text-faint)">（无摘要）</span>'}</div>`;
-        const source = escapeHTML(item.source || '');
+        const summary = escapeHTML(item.summary || item.summary_zh || '');
+        const summaryHtml = summary ? `<div class="row-summary">${summary}</div>` : '<div class="row-summary" style="color:var(--text-faint)">（无摘要）</div>';
         const catTag = renderCatTag(item.category || '');
         const imp = item._imp;
+        const impPill = `<span class="importance-badge ${imp.cls} imp-pill">${imp.label}</span>`;
+        const srcHtml = srcTag(item.source);
         const linkBtn = item.url ? `<a class="link-btn" href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">原文 ↗</a>` : '<span style="color:var(--text-faint)">—</span>';
         tbody.insertAdjacentHTML('beforeend', `
             <tr>
                 <td>${idx}</td>
-                <td>${dateStr}</td>
-                <td>${titleEn}${titleZh}</td>
-                <td>${summary}</td>
-                <td>${source}</td>
                 <td>${catTag}</td>
-                <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
+                <td>
+                    <div class="cell-body">
+                        <div class="row-title">${titleEn}${titleZh}${srcHtml}${impPill}</div>
+                        ${summaryHtml}
+                    </div>
+                </td>
                 <td>${linkBtn}</td>
             </tr>
         `);
