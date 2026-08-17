@@ -353,16 +353,15 @@
         tbody tr { transition: background 0.1s; }
         tbody tr:hover { background: var(--primary-bg); }
 
-        /* 9 列列宽 — V2.4: 移除 table-layout:fixed（破坏日期分组 colspan），改用 overflow 控制防 zoom 变形 */
+        /* 8 列列宽 — 来源列在日期与标题之间（V3 调整） */
         th:nth-child(1), td:nth-child(1) { width: 40px; min-width: 40px; text-align: center; color: var(--text-faint); font-family: var(--mono); }
         th:nth-child(2), td:nth-child(2) { width: 88px; min-width: 88px; font-family: var(--mono); font-size: 12px; }
-        th:nth-child(3), td:nth-child(3) { width: 240px; min-width: 200px; max-width: 280px; word-break: break-word; }
-        th:nth-child(4), td:nth-child(4) { min-width: 180px; word-break: break-word; overflow-wrap: break-word; }
-        th:nth-child(5), td:nth-child(5) { width: 80px; min-width: 70px; }
+        th:nth-child(3), td:nth-child(3) { width: 90px; min-width: 80px; }
+        th:nth-child(4), td:nth-child(4) { width: 240px; min-width: 200px; max-width: 280px; word-break: break-word; }
+        th:nth-child(5), td:nth-child(5) { min-width: 180px; word-break: break-word; overflow-wrap: break-word; }
         th:nth-child(6), td:nth-child(6) { width: 80px; min-width: 70px; }
         th:nth-child(7), td:nth-child(7) { width: 80px; min-width: 70px; }
         th:nth-child(8), td:nth-child(8) { width: 120px; min-width: 100px; }
-        th:nth-child(9), td:nth-child(9) { width: 120px; min-width: 100px; }
 
         /* 日期分组表头 — V2.4: 从表格行改为表格前的独立 sticky 区块，避免 table-layout 截断 + colspan 塌缩 */
         .date-group-divider {
@@ -524,8 +523,8 @@
             .header h1 { font-size: 22px; }
             th, td { padding: 9px 7px; }
             .toolbar .search-box { min-width: 100%; }
-            td:nth-child(4) { display: none; }
-            th:nth-child(4) { display: none; }
+            td:nth-child(5) { display: none; }
+            th:nth-child(5) { display: none; }
         }
     </style>
 </head>
@@ -624,9 +623,9 @@
                         <tr>
                             <th>#</th>
                             <th>日期</th>
+                            <th>来源</th>
                             <th>标题</th>
                             <th>摘要</th>
-                            <th>来源</th>
                             <th>分类</th>
                             <th>重要性</th>
                             <th>原文</th>
@@ -829,11 +828,11 @@ function renderTable(articles) {
             tr.innerHTML = `
                 <td>${globalIndex}</td>
                 <td style="white-space:nowrap">${item.date || item._date || ''}</td>
+                <td style="white-space:nowrap">${item.source || ''}</td>
                 <td>
                     ${(item.title_en && item.title_zh && item.title_en.trim() === item.title_zh.trim()) ? "<div class=\"title-zh\">" + (item.title_zh || '') + "</div>" : "<div class=\"title-en\">" + (item.title_en || '') + "</div><div class=\"title-zh\">" + (item.title_zh || item.title || '') + "</div>"}
                 </td>
                 <td><div class="summary-text">${item.summary_zh || item.summary || '-'}</div></td>
-                <td style="white-space:nowrap">${item.source || ''}</td>
                 <td style="white-space:nowrap">${item.category || ''}</td>
                 <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
                 <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文↗</a>` : '-'}</td>
