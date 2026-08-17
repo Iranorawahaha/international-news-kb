@@ -3290,5 +3290,347 @@
     "collectedAt": "2026-08-16 10:41:43",
     "collection_method": "webfetch",
     "title": "US pulls last aircraft carrier in Asia as Trump focuses on Iran and the Western Hemisphere"
+  },
+  {
+    "title": "Trump instructs Pentagon to reduce military exercises with South Korea",
+    "title_zh": "特朗普指示五角大楼大幅缩减与韩国联合军演",
+    "title_en": "Trump instructs Pentagon to reduce military exercises with South Korea",
+    "summary": "特朗普在社交媒体发文，指示五角大楼大幅缩减与韩国的联合军事演习，并提及韩国拒绝参与对伊行动。此前美国军方官员警告，乌克兰战争正在提升朝鲜的实战经验，缩减演习或加剧地区安全风险。",
+    "source": "路透社",
+    "category": "地缘政治",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "keywords": [
+      "美韩同盟",
+      "军演",
+      "朝鲜",
+      "特朗普"
+    ],
+    "url": "https://www.reuters.com/world/china/trump-instructs-pentagon-reduce-military-exercises-with-south-korea-2026-08-16/",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "EU plans most far-reaching sanctions package against Russia in autumn, foreign chief says",
+    "title_zh": "欧盟外长称计划秋季推出史上最广泛对俄制裁方案",
+    "title_en": "EU plans most far-reaching sanctions package against Russia in autumn, foreign chief says",
+    "summary": "欧盟外交与安全政策高级代表表示，欧盟计划于秋季推出迄今最广泛的俄罗斯制裁方案，进一步加大对俄经济与能源领域的施压，为新一轮对俄行动定调。",
+    "source": "路透社",
+    "category": "欧洲",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "keywords": [
+      "欧盟",
+      "俄罗斯",
+      "制裁",
+      "俄乌冲突"
+    ],
+    "url": "https://www.reuters.com/world/europe/eu-plans-most-far-reaching-sanctions-package-against-russia-autumn-foreign-chief-2026-08-17/",
+    "date": "2026-08-17",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Trump wants more economic pressure on Iran. What are his options?",
+    "title_zh": "特朗普想加大对伊朗经济施压 有哪些选项？",
+    "title_en": "Trump wants more economic pressure on Iran. What are his options?",
+    "summary": "分析指出，特朗普政府正酝酿对伊朗实施更严厉的经济施压，部分选项涉及中国——包括动员伊朗邻国配合陆路封锁等，但实施难度与连锁影响较大，伊朗方面表示海峡开关由伊方掌控。",
+    "source": "路透社",
+    "category": "地缘政治",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "keywords": [
+      "美伊关系",
+      "经济制裁",
+      "中国",
+      "霍尔木兹"
+    ],
+    "url": "https://www.reuters.com/world/china/trump-wants-more-economic-pressure-iran-what-are-his-options-2026-08-16/",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Shipping slows through Strait of Hormuz after tanker attacks, data shows",
+    "title_zh": "油轮遇袭后霍尔木兹海峡航运明显放缓",
+    "title_en": "Shipping slows through Strait of Hormuz after tanker attacks, data shows",
+    "summary": "航运数据显示，阿联酋ADNOC油轮在霍尔木兹海峡遇袭后，该海峡船舶通行明显放缓，全球能源运输通道风险加剧，布伦特原油一度升至每桶88美元上方。",
+    "source": "路透社",
+    "category": "中东",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "keywords": [
+      "霍尔木兹海峡",
+      "油轮遇袭",
+      "油价",
+      "美伊冲突"
+    ],
+    "url": "https://www.reuters.com/world/middle-east/shipping-via-hormuz-strait-slows-after-tanker-attacks-data-shows-2026-08-16/",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Thousands evacuate after Indonesia quake kills 53",
+    "title_zh": "印尼强震致53人死亡 数千人撤离",
+    "title_en": "Thousands evacuate after Indonesia quake kills 53",
+    "summary": "印度尼西亚弗洛勒斯岛附近海域发生强震，已致至少53人死亡，数千人被迫撤离，道路中断影响救援，人道主义危机持续扩大。",
+    "source": "路透社",
+    "category": "地区热点",
+    "priority_score": 68,
+    "is_summit_level": false,
+    "keywords": [
+      "印尼地震",
+      "自然灾害",
+      "人道救援"
+    ],
+    "url": "https://www.reuters.com/business/environment/thousands-evacuate-after-indonesia-quake-kills-51-cuts-roads-2026-08-16/",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Iran disputes Qatar, Kuwait accounts of captured Iranian personnel",
+    "title_zh": "伊朗驳斥卡塔尔科威特关于被俘伊朗人员说法",
+    "title_en": "Iran disputes Qatar, Kuwait accounts of captured Iranian personnel",
+    "summary": "伊朗称其飞行员自3月2日战机被击落后一直被卡塔尔方面扣押，卡塔尔与科威特否认相关说法，海湾地区围绕被俘人员的外交纠纷持续发酵。",
+    "source": "路透社",
+    "category": "中东",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "keywords": [
+      "伊朗",
+      "卡塔尔",
+      "飞行员",
+      "美伊冲突"
+    ],
+    "url": "https://www.reuters.com/world/middle-east/iran-says-qatar-delaying-probe-into-fate-iranian-pilots-tasnim-news-agency-2026-08-16/",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Russia says at least seven killed in largest Ukrainian attack of 2026",
+    "title_zh": "俄罗斯称遭2026年最大规模乌克兰袭击 至少7人死亡",
+    "title_en": "Russia says at least seven killed in largest Ukrainian attack of 2026",
+    "summary": "俄方称乌克兰发动2026年以来最大规模袭击，至少7人死亡；莫斯科也对乌克兰发动夜间致命打击，基辅多地起火。俄乌冲突烈度持续升级。",
+    "source": "BBC",
+    "category": "俄乌冲突",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "keywords": [
+      "俄乌冲突",
+      "无人机袭击",
+      "基辅",
+      "莫斯科"
+    ],
+    "url": "https://www.bbc.com/news/articles/c1411pgje8xo",
+    "date": "2026-08-17",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Trump envoy Kushner meets Hamas leader to push Gaza peace plan",
+    "title_zh": "特朗普特使库什纳罕见会见哈马斯领导人 推动加沙和平计划",
+    "title_en": "Trump envoy Kushner meets Hamas leader to push Gaza peace plan",
+    "summary": "特朗普女婿、中东特使库什纳在埃及与哈马斯领导人举行罕见会面，推动加沙和平计划，随后将与以色列总理内塔尼亚胡会晤，讨论以方所需采取的'对等措施'。",
+    "source": "BBC",
+    "category": "中东",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "keywords": [
+      "加沙",
+      "库什纳",
+      "哈马斯",
+      "美以关系"
+    ],
+    "url": "https://www.bbc.com/news/articles/c77gg5vn44yo",
+    "date": "2026-08-17",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "From cargo to combat: China urged to prepare civilian ships for wartime use",
+    "title_zh": "中国防务学者呼吁借鉴马岛战争经验 做好民船战时征用准备",
+    "title_en": "From cargo to combat: China urged to prepare civilian ships for wartime use",
+    "summary": "中国顶级防务研究机构学者呼吁借鉴马岛战争经验，做好战时征用民用商船的准备工作；5万吨级'振华33号'被视为军民两用标准的典型样本，反映中国在海上后勤保障能力方面的战略考量。",
+    "source": "南华早报",
+    "category": "中国",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "keywords": [
+      "中国军事",
+      "民船征用",
+      "马岛战争",
+      "海上后勤"
+    ],
+    "url": "https://www.scmp.com/news/china/military/article/3364193/cargo-combat-china-urged-prepare-civilian-ships-wartime-use",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "China's 'electric eel' sensor lets robots feel an object without touching it",
+    "title_zh": "中国团队研发'电鳗'仿生传感器 机器人可隔空感知物体",
+    "title_en": "China's 'electric eel' sensor lets robots feel an object without touching it",
+    "summary": "中国科研团队研发出仿电鳗原理的传感器，使机器人无需接触即可'感知'物体，氟聚合物涂层可检测金属、塑料、玻璃、木材等不同材质，为机器人触觉技术开辟新方向。",
+    "source": "南华早报",
+    "category": "科技",
+    "priority_score": 68,
+    "is_summit_level": false,
+    "keywords": [
+      "中国科技",
+      "仿生传感器",
+      "机器人",
+      "触觉技术"
+    ],
+    "url": "https://www.scmp.com/news/china/science/article/3364015/chinas-electric-eel-sensor-allows-robots-feel-object-without-touching-it",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "After Hormuz, China looks to the promise – and peril – of the Arctic's 'ice silk road'",
+    "title_zh": "霍尔木兹危机后 中国把目光投向北极'冰上丝绸之路'的机遇与风险",
+    "title_en": "After Hormuz, China looks to the promise – and peril – of the Arctic's 'ice silk road'",
+    "summary": "在霍尔木兹海峡局势紧张之际，中国正探索北极航线'冰上丝绸之路'以缩短航程、降低对传统海峡的依赖，但面临极端环境、地缘政治博弈与航行安全等巨大挑战。",
+    "source": "卫报",
+    "category": "中国",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "keywords": [
+      "冰上丝绸之路",
+      "北极航线",
+      "中国航运",
+      "霍尔木兹替代"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/17/strait-hormuz-alternative-china-ships-north-sea-route-arctic-ice-silk-road",
+    "date": "2026-08-17",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "As Iran War Turns Into Economic Battle, a New U.S. Strategy Recalls Old Ones",
+    "title_zh": "美伊战争转向经济战 美国新战略重拾旧招",
+    "title_en": "As Iran War Turns Into Economic Battle, a New U.S. Strategy Recalls Old Ones",
+    "summary": "美国与伊朗即将越过双方设定的和平与核计划谈判期限，特朗普政府转向以'前所未见'的经济手段施压伊朗，财长称将动用'从未见过'的经济措施；分析认为该策略与历史上多轮对伊制裁战高度相似。",
+    "source": "纽约时报",
+    "category": "中东",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "keywords": [
+      "美伊冲突",
+      "经济战",
+      "制裁",
+      "核谈判"
+    ],
+    "url": "https://www.nytimes.com/2026/08/16/world/middleeast/iran-war-us-trump.html",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "No Way Out: The U.S. Is Building an Archipelago of Overseas Detention Sites",
+    "title_zh": "调查：美国在海外构建'拘留群岛' 被驱逐者或被无限期关押",
+    "title_en": "No Way Out: The U.S. Is Building an Archipelago of Overseas Detention Sites",
+    "summary": "《纽约时报》调查报道显示，美国正构建横跨多国的海外拘留设施网络，被驱逐者常在没有指控的情况下被无限期关押，引发对其移民执法政策的人权关切。",
+    "source": "纽约时报",
+    "category": "美国",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "keywords": [
+      "美国移民",
+      "海外拘留",
+      "驱逐",
+      "人权"
+    ],
+    "url": "https://www.nytimes.com/2026/08/16/world/deportations-eswatini-italy-heist.html",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Trump's Other Hold on the Americas: The Visa",
+    "title_zh": "特朗普在西半球的另一抓手：签证",
+    "title_en": "Trump's Other Hold on the Americas: The Visa",
+    "summary": "作为美国对西半球扩张主义政策的一部分，特朗普政府正通过签证工具重新确立主导地位，签证的发放与撤销成为向拉美国家施压的重要杠杆。",
+    "source": "纽约时报",
+    "category": "美国",
+    "priority_score": 72,
+    "is_summit_level": false,
+    "keywords": [
+      "美国签证",
+      "西半球",
+      "移民政策",
+      "拉美"
+    ],
+    "url": "https://www.nytimes.com/2026/08/16/world/americas/trump-americas-visas.html",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center",
+    "title_zh": "英伟达缩减对OpenAI数据中心2500亿美元担保至1200亿以内",
+    "title_en": "Nvidia Downsizes Plans for $250 Billion Guarantee of OpenAI Data Center",
+    "summary": "据《华尔街日报》报道，英伟达与OpenAI就俄亥俄州10吉瓦超大型数据中心园区融资方案作出重大调整，担保规模由2500亿美元降至1200亿美元以内，仅为一期5吉瓦建设提供担保，以缓释投资者对英伟达资产负债表风险的担忧；协议最快本周末签署。",
+    "source": "华尔街日报",
+    "category": "科技",
+    "priority_score": 95,
+    "is_summit_level": false,
+    "keywords": [
+      "英伟达",
+      "OpenAI",
+      "AI算力",
+      "数据中心",
+      "融资"
+    ],
+    "url": "https://www.wsj.com/tech/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-b56c38d3",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Can Trump really make Strait of Hormuz a US territory?",
+    "title_zh": "特朗普真的能把霍尔木兹海峡变成美国领土吗？",
+    "title_en": "Can Trump really make Strait of Hormuz a US territory?",
+    "summary": "特朗普宣称'很快'将把霍尔木兹海峡宣布为美国领土，并称美军封锁意味着该海峡'本质上已是'美国领土；伊朗副外长强硬回应称海峡'过去、现在、将来都是伊朗的'，正与阿曼就通行管理谈判。全球约五分之一的石油天然气经此通道运输。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "keywords": [
+      "霍尔木兹海峡",
+      "美伊冲突",
+      "特朗普",
+      "伊朗"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/16/trump-threatens-to-make-the-strait-of-hormuz-a-us-territory-can-he",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "Inside Keating's private push to steer Albanese on China and Trump",
+    "title_zh": "基廷私下推动阿尔巴尼斯调整对华与对特朗普政策",
+    "title_en": "Inside Keating's private push to steer Albanese on China and Trump",
+    "summary": "深度报道揭示澳大利亚前总理基廷私下向现任总理阿尔巴尼斯提供对华政策建议，推动其在美中之间保持平衡，反映美中博弈下澳方微妙的外交立场；POLITICO同日宣布正式进入澳大利亚市场。",
+    "source": "Politico",
+    "category": "地缘政治",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "keywords": [
+      "澳大利亚",
+      "基廷",
+      "阿尔巴尼斯",
+      "美中关系"
+    ],
+    "url": "https://www.politico.com/news/2026/08/16/anthony-albanese-paul-keating-china-trump-01038854",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
+  },
+  {
+    "title": "U.S. commander calls mental health a priority after he visits USS Lincoln",
+    "title_zh": "美军指挥官视察林肯号航母后强调心理健康优先",
+    "title_en": "U.S. commander calls mental health a priority after he visits USS Lincoln",
+    "summary": "在林肯号航母官兵疲劳与恶劣条件报道发酵后，美军指挥官布拉德·库珀上将在视察后承认长期海上部署具有挑战性，但称部分关切系'旧闻'，并承诺将心理健康列为优先事项。",
+    "source": "华盛顿邮报",
+    "category": "美国",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "keywords": [
+      "美军",
+      "林肯号航母",
+      "心理健康",
+      "中东部署"
+    ],
+    "url": "https://www.washingtonpost.com/world/2026/08/16/us-commander-calls-mental-health-priority-after-he-visits-uss-lincoln/",
+    "date": "2026-08-16",
+    "collectedAt": "2026-08-17 09:22:00"
   }
 ]
