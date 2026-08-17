@@ -33,7 +33,6 @@
             --radius: 14px;
             --radius-sm: 9px;
             --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-            --font-display: "Georgia", "Noto Serif SC", "Songti SC", "SimSun", serif;
             --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "SF Mono", monospace;
             --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -102,8 +101,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.15);
         }
         .header h1 {
-            font-family: var(--font-display);
-            font-size: 27px; font-weight: 700; letter-spacing: 0.2px;
+            font-size: 27px; font-weight: 800; letter-spacing: -0.3px;
             margin-bottom: 9px; position: relative;
             display: flex; align-items: baseline; gap: 12px;
         }
@@ -532,6 +530,31 @@
             color: var(--text-dim);
         }
 
+        /* ===== 来源品牌色标签（媒体来源底色区分） ===== */
+        .src-tag {
+            display: inline-block; padding: 3px 10px; margin: 1px 0;
+            border-radius: 6px;
+            font-size: 11px; font-weight: 600;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+            border: 1px solid transparent;
+        }
+        .src-reuters   { background: #fdeeea; color: #b3261e; border-color: #f6c9c0; }
+        .src-bbc       { background: #ffe6e6; color: #b80000; border-color: #f5c2c2; }
+        .src-scmp      { background: #fde8ea; color: #a6192e; border-color: #f3c2c8; }
+        .src-ap        { background: #e8eef8; color: #1a3a66; border-color: #c5d3e8; }
+        .src-guardian  { background: #e9eef9; color: #0f1d40; border-color: #c8d2ec; }
+        .src-cnn       { background: #fdeaea; color: #cc0000; border-color: #f3c4c4; }
+        .src-nyt       { background: #f0f0f0; color: #111111; border-color: #d4d4d4; }
+        .src-wsj       { background: #f7ecd4; color: #7a4d00; border-color: #ead9ac; }
+        .src-politico  { background: #fde9ea; color: #c2302e; border-color: #f0c4c3; }
+        .src-wapo      { background: #ebebeb; color: #111111; border-color: #cfcfcf; }
+        .src-aj        { background: #fde6e8; color: #b02a30; border-color: #f0bfc3; }
+        .src-wh        { background: #e8f0fe; color: #1d4ed8; border-color: #c3d8f8; }
+        .src-state     { background: #e9eef8; color: #1e3a8a; border-color: #c9d4ec; }
+        .src-gov       { background: #eef1f7; color: #374151; border-color: #d4dae6; }
+        .src-default   { background: #eef1f7; color: #5b6b85; border-color: #d8dee9; }
+
         /* 原文链接 */
         .link-btn {
             display: inline-block; padding: 5px 12px;
@@ -549,8 +572,6 @@
             box-shadow: 0 4px 12px rgba(30,58,138,0.3);
         }
         .link-btn:active { transform: translateY(0); }
-
-        /* 双语截图按钮 */
         .screenshot-btn {
             display: inline-block; padding: 5px 10px;
             background: #16a34a;
@@ -887,6 +908,28 @@ function renderTable(articles) {
             </div>
         </td>`;
     }
+    // 来源品牌色映射（V3）
+    function srcCls(src) {
+        const s = (src || '').toLowerCase();
+        if (s.includes('reuters')) return 'src-reuters';
+        if (s.includes('bbc')) return 'src-bbc';
+        if (s.includes('scmp') || s.includes('south china')) return 'src-scmp';
+        if (s.includes('ap') && (s.includes('ap news') || s.includes('associated'))) return 'src-ap';
+        if (s.includes('guardian')) return 'src-guardian';
+        if (s.includes('cnn')) return 'src-cnn';
+        if (s.includes('new york times') || s.includes('nytimes')) return 'src-nyt';
+        if (s.includes('wall street') || s.includes('wsj')) return 'src-wsj';
+        if (s.includes('politico')) return 'src-politico';
+        if (s.includes('washington post') || s.includes('washingtonpost')) return 'src-wapo';
+        if (s.includes('al jazeera')) return 'src-aj';
+        if (s.includes('white house') || s.includes('白宫')) return 'src-wh';
+        if (s.includes('state department') || s.includes('国务院') || s.includes('美国务院')) return 'src-state';
+        if (s.includes('treasury') || s.includes('财政部') || s.includes('ustr') || s.includes('商务部') || s.includes('国防部')) return 'src-gov';
+        return 'src-default';
+    }
+    function srcTag(src) {
+        return `<span class="src-tag ${srcCls(src)}">${src || ''}</span>`;
+    }
     articles.forEach((item) => {
         const tr = document.createElement('tr');
         if (item._isDateSeparator) {
@@ -898,7 +941,7 @@ function renderTable(articles) {
             tr.innerHTML = `
                 <td>${globalIndex}</td>
                 <td style="white-space:nowrap">${item.date || item._date || ''}</td>
-                <td style="white-space:nowrap">${item.source || ''}</td>
+                <td style="white-space:nowrap">${srcTag(item.source)}</td>
                 <td>
                     ${(item.title_en && item.title_zh && item.title_en.trim() === item.title_zh.trim()) ? "<div class=\"title-zh\">" + (item.title_zh || '') + "</div>" : "<div class=\"title-en\">" + (item.title_en || '') + "</div><div class=\"title-zh\">" + (item.title_zh || item.title || '') + "</div>"}
                 </td>
