@@ -14,12 +14,21 @@
 - WSJ 反爬：WebSearch 拿真实 URL（绝不编造）；重大新闻可用第三方转载真实 URL（finwire.io），source 仍标华尔街日报
 
 ## 看板3 AI 动向（V5，每日 9:30 自动化 automation-1785566963833）
-- 入口 ai-news.html；脚本 `./update-ai.sh`（fetch_ai.py → build_ai.py）；数据 data/ai-news.json
-- 模板 **ai_template.html**（独立黄色 hero 主题，**不是** _table_ui_template.html）
+- **⚠️ 生产路径**（2026-08-18 锁定，禁止改用其他脚本）：
+  `bash /Users/xiaoxiao/WorkBuddy/2026-08-01-14-08-40/refresh_board.sh` → 该目录 `build_v2.py` → ai-company-intel-board.html → 部署到 `KB_DIR/ai-news.html` + `ai-company-intel.html`（双写）→ inject_nav → 门户统计 → git push
+- 模板：`_table_ui_template.html`（KB_DIR/scripts/，与国内共用）
+- 渲染自检：refresh_board.sh 内嵌 `check_render.js`（jsdom 真实渲染），检查 pivot-cell 带 data-date/data-cat 等 5 项，**失败自动中止部署**
+- 顶部透视表 V5（2026-08-18 锁定）：日期在左 / 行业·模型·技巧 / 中间仅数字 / 0 值 `–` / 今日行高亮 / 点击跳转到对应日期区块（scrollIntoView + flash 高亮）
 - 15 家重点公司（NVIDIA/AMD/Intel/Apple/Amazon/MS/Google/Meta/OpenAI/Anthropic/xAI/DeepSeek/华为/字节/阿里/腾讯）
-- 重要：fetch_ai.py **不生成 category 字段**（历史 bug），build_ai.py 加 `infer_category()` 按 company_tags + 关键词推断 industry/ai-models/tip
-- 顶部透视表 V5（2026-08-18 改造，参照国内版）：日期在左 / 产业·模型·技巧 / 中间仅数字 / 0 值 `–` / 今日行高亮 / 点击跳转到对应日期区块（AI 看板无分类筛选，故简化为 scrollIntoView + flash 高亮）
-- 关键坑：`build_v2.py` 是**边缘脚本**（写死到 2026-08-01 旧目录），**生产路径是 build_ai.py + ai_template.html**——改 AI 看板要走 build_ai.py，不要改 build_v2.py（被 V4/V5 改造误改过，浪费 1 轮）
+- 数据来源：AI HOT 33 组关键词 selected+all 双流（数据量 380+，比废弃链路 fetch_ai.py 的 270 多）
+
+## ⚠️ AI 看板防回退铁律（2026-08-18 踩坑 3 次换来的）
+- ✅ **唯一正式链路**：`refresh_board.sh`（2026-08-01-14-08-40 目录）→ `build_v2.py`（同目录）→ ai-news.html
+- ❌ **禁止**跑 `update-ai.sh` / `fetch_ai.py` / `build_ai.py` / KB_DIR `scripts/build_v2.py`（旧链路数据量小会覆盖正式版；改这些脚本无效）
+- ❌ **build_ai.py + ai_template.html 是废弃边缘链路**（数据 274 条 vs 生产 382 条；模板未与生产 CSS 同步）—— 别再改这个
+- ❌ **严禁回退 V4 胶囊式透视表**（图标+英文+数字横排）—— 曾因 emoji（⚖️🏗️💡）在 macOS 渲染成豆腐块 + 英文 industry/ai-models/tip 被用户投诉
+- ✅ **V5 透视表已锁定**为唯一版本：日期在左、分类在上（行业/模型/技巧 2 字短名）、中间仅数字、0 值 `–`、今日行高亮
+- ✅ **改动前必读**：自动化 prompt `automation-1785566963833` 已锁定 V5 设计规范 + 自查项；改动后跑 `bash refresh_board.sh` 端到端验证 jsdom 自检通过
 
 ## 看板2 国内新闻（V5.5，每日 9:30 自动化 automation-1785577010192）
 - 入口 china-news.html；脚本 `./refresh_china_news.sh`；数据 data/china-news.json
@@ -75,6 +84,7 @@
   - 信源门槛：仅官方渠道（外交部/中国政府网/新华社/央视/人民日报）+ 权威媒体（路透/共同社等）；自媒体传闻、无出处小道消息仍不收录
   - 访华职级门槛：部长级及以上（预告同门槛）
 - 构建链：fetch_diplomatic.py → build_diplomatic.py（重写 HTML 会去掉导航）→ inject_nav.py 补注导航 → 同步 gh-pages 副本 → git push
+- **日报标题用「动态」而非「国名」**（2026-08-18 用户要求）：data/diplomatic-affairs.json 的 visit 条目加 `headline` 字段（如「厄瓜多尔总统诺沃亚对华国事访问（8.16-23）」），send_final_brief.py 的 diplo_row 主标题优先读 headline，fallback `{country} · {event_type}`。⚠️ headline 目前人工写入，fetch_diplomatic.py merge 可能丢失，后续应在 fetch/build 自动生成
 
 ## 用户偏好
 - 关注：中美关系 > 经贸制裁 > AI竞争 > 外交资讯
