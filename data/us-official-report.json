@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-17 17:44",
+  "timestamp": "2026-08-18 09:21",
   "sites": [
     {
       "site": "白宫",
       "url": "https://www.whitehouse.gov/news/",
       "status": "✅ 成功",
-      "count": 0
+      "count": 2
     },
     {
       "site": "美国国务院",
       "url": "https://www.state.gov/press-releases/",
       "status": "✅ 成功",
-      "count": 2
+      "count": 0
     },
     {
       "site": "美国财政部",
