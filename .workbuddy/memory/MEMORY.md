@@ -13,6 +13,14 @@
 - 官方源（白宫/国务院/USTR/财政部/商务部/国防部）必须 agent 翻译补 title_zh/summary_zh，日期用页面真实发布日
 - WSJ 反爬：WebSearch 拿真实 URL（绝不编造）；重大新闻可用第三方转载真实 URL（finwire.io），source 仍标华尔街日报
 
+## 看板3 AI 动向（V5，每日 9:30 自动化 automation-1785566963833）
+- 入口 ai-news.html；脚本 `./update-ai.sh`（fetch_ai.py → build_ai.py）；数据 data/ai-news.json
+- 模板 **ai_template.html**（独立黄色 hero 主题，**不是** _table_ui_template.html）
+- 15 家重点公司（NVIDIA/AMD/Intel/Apple/Amazon/MS/Google/Meta/OpenAI/Anthropic/xAI/DeepSeek/华为/字节/阿里/腾讯）
+- 重要：fetch_ai.py **不生成 category 字段**（历史 bug），build_ai.py 加 `infer_category()` 按 company_tags + 关键词推断 industry/ai-models/tip
+- 顶部透视表 V5（2026-08-18 改造，参照国内版）：日期在左 / 产业·模型·技巧 / 中间仅数字 / 0 值 `–` / 今日行高亮 / 点击跳转到对应日期区块（AI 看板无分类筛选，故简化为 scrollIntoView + flash 高亮）
+- 关键坑：`build_v2.py` 是**边缘脚本**（写死到 2026-08-01 旧目录），**生产路径是 build_ai.py + ai_template.html**——改 AI 看板要走 build_ai.py，不要改 build_v2.py（被 V4/V5 改造误改过，浪费 1 轮）
+
 ## 看板2 国内新闻（V5.5，每日 9:30 自动化 automation-1785577010192）
 - 入口 china-news.html；脚本 `./refresh_china_news.sh`；数据 data/china-news.json
 - 7 分类：元首100/高层95/会议88/人事87(反贪腐)/部委88(重大执法)/政策80/经贸85(高层信号)/一般72
@@ -58,9 +66,15 @@
 - **发送机制已固化**（scripts/send_final_brief.py）：默认 24 人名单 `DEFAULT_RECIPIENTS`（PACD 团队）；`SEND_DELAY=6s` 逐封发送 + 失败自动重试（`RETRY_DELAY=70s` × `MAX_RETRIES=3`）；无 `--to` 时默认发给 24 人
 - **QQ 群发风控**：连续发约 10 封后 SMTP 被拒（Connection unexpectedly closed），约 10 分钟自动恢复；务必 6s+ 间隔
 
-## 使领馆看板 V1.0（每日 8:00 automation-1786431384487）
+## 使领馆看板 V1.0（每日 9:30 automation-1786431384487）
 - 入口 diplomatic-affairs.html；青绿主题；"有则展示、无则省略"
-- 关键规则：任命≠到任、副本≠国书、抵华≠履职、预告≠实际访华、单方发布≠双方确认
+- 关键规则：任命≠到任、副本≠国书、抵华≠履职、单方发布≠双方确认
+- **预告即收录**（2026-08-18 规则变更，用户明确要求）：官方/权威信源发布的外交预告（访华/任命）一经公布立即填入看板，按预告时间填写，用 `phase` 字段标注三态，绝不等到发生后补录
+  - `upcoming`=📅预告 / `ongoing`=🟢进行中 / `completed`=✅已发生（build_diplomatic.py 三态徽标，渲染于人事+访华模块）
+  - 状态流转：每次刷新据实更新——预告成行→ongoing，访问结束→completed，会谈成果落地→回填 outcomes
+  - 信源门槛：仅官方渠道（外交部/中国政府网/新华社/央视/人民日报）+ 权威媒体（路透/共同社等）；自媒体传闻、无出处小道消息仍不收录
+  - 访华职级门槛：部长级及以上（预告同门槛）
+- 构建链：fetch_diplomatic.py → build_diplomatic.py（重写 HTML 会去掉导航）→ inject_nav.py 补注导航 → 同步 gh-pages 副本 → git push
 
 ## 用户偏好
 - 关注：中美关系 > 经贸制裁 > AI竞争 > 外交资讯
