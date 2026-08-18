@@ -859,7 +859,10 @@ document.getElementById('dateHeader').addEventListener('click', function(e) {
 });
 
 // 顶部透视表点击跳转（V5）
-document.querySelector('.pivot-table').addEventListener('click', function(e) {
+// V2.11.5 修复（2026-08-18）：事件委托挂 .pivot-wrapper（所有看板均有该外层容器），
+// 不再依赖 .pivot-table —— AI 看板为 div 布局无 table.pivot-table，会导致 querySelector 返回 null
+// 使整个脚本崩溃（主表格空白）。国际/国内为 <table class="pivot-table"> 亦被 .pivot-wrapper 包裹，兼容。
+document.querySelector('.pivot-wrapper').addEventListener('click', function(e) {
     // 1) 点击分类数字 → 按日期 + 分类筛选
     const cell = e.target.closest('.pivot-cell');
     if (cell) {
