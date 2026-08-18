@@ -29,7 +29,8 @@
               "url": "https://www.sohu.com/a/1060875443_121107000"
             }
           ],
-          "confirmed": true
+          "confirmed": true,
+          "phase": "completed"
         },
         {
           "id": "evt-personnel-002",
@@ -45,7 +46,8 @@
               "url": "https://www.mfa.gov.cn/web/zwbd_673032/202608/t20260810_12001181.shtml"
             }
           ],
-          "confirmed": true
+          "confirmed": true,
+          "phase": "upcoming"
         },
         {
           "id": "evt-personnel-003",
@@ -61,7 +63,25 @@
               "url": "https://www.163.com/dy/article/L18RJGGK0534A4SC.html"
             }
           ],
-          "confirmed": true
+          "confirmed": true,
+          "phase": "completed"
+        },
+        {
+          "id": "evt-personnel-004",
+          "country": "韩国",
+          "event_type": "新任驻华大使提名",
+          "current_status": "已提名、尚未到任",
+          "event_date": "2026-08-11",
+          "person_name": "卢载宪",
+          "description": "据韩国《亚洲日报》《中央日报》、韩联社等8月11日报道，韩国政府将提名已故前总统卢泰愚之子、东亚文化中心理事长卢载宪担任驻华大使，提名流程已基本完成。韩驻华使馆官网8月15日光复节活动已称其「卢载宪大使」，但截至8月18日尚无中方官方确认、递交国书及到任记录。",
+          "sources": [
+            {
+              "title": "环球时报（转韩媒）",
+              "url": "http://gzylhyzx.com/detail.html?newsId=5433462"
+            }
+          ],
+          "confirmed": true,
+          "phase": "upcoming"
         }
       ]
     },
@@ -105,7 +125,8 @@
               "url": "https://wx.laserfair.com/FCGI/22136/"
             }
           ],
-          "confirmed": true
+          "confirmed": true,
+          "phase": "completed"
         },
         {
           "id": "evt-visit-002",
@@ -130,7 +151,74 @@
               "url": "https://world.people.com.cn/n1/2026/0816/c1002-40780244.html"
             }
           ],
-          "confirmed": true
+          "confirmed": true,
+          "phase": "ongoing"
+        },
+        {
+          "id": "evt-visit-003",
+          "country": "约旦",
+          "person_name": "阿卜杜拉二世·本·侯赛因（Abdullah II ibn Al Hussein）",
+          "position": "约旦哈希姆王国国王",
+          "event_date": "2026-08-18",
+          "description": "应国家主席习近平邀请，约旦国王阿卜杜拉二世于8月18日至24日对中国进行国事访问。此访系阿卜杜拉二世国王登基以来第九次访华。访问期间，习近平主席将同他举行会谈，李强总理、赵乐际委员长将分别会见，国王还将赴上海、深圳参访。",
+          "ambassador_participation": "不适用（元首访问）",
+          "outcomes": "官方宣布：访问期间将就双边关系和共同关心的国际地区问题交换意见，推动中约战略伙伴关系迈上新台阶。",
+          "sources": [
+            {
+              "title": "外交部官网（发言人答记者问）",
+              "url": "https://www.mfa.gov.cn/fyrbt_673021/202608/t20260817_12005240.shtml"
+            },
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/lianbo/202608/content_7078346.htm"
+            }
+          ],
+          "confirmed": true,
+          "phase": "upcoming"
+        },
+        {
+          "id": "evt-visit-004",
+          "country": "智利",
+          "person_name": "弗朗西斯科·佩雷斯·马肯纳（Francisco Pérez Mackenna）",
+          "position": "智利外长",
+          "event_date": "2026-08-18",
+          "description": "应中共中央政治局委员、外交部长王毅邀请，智利外长佩雷斯将于8月18日至22日对中国进行正式访问（外交部发言人8月17日宣布）。今年是中智建立全面战略伙伴关系10周年。",
+          "ambassador_participation": "待确认",
+          "outcomes": "官方宣布：双方将就双边关系以及共同关心的国际和地区问题深入交换意见，推动中智关系再上新台阶。",
+          "sources": [
+            {
+              "title": "外交部官网",
+              "url": "https://www.mfa.gov.cn/web/wjdt_674879/wsrc_674883/202608/t20260817_12004989.shtml"
+            },
+            {
+              "title": "CGTN",
+              "url": "https://news.cgtn.com/news/2026-08-17/Chilean-FM-to-visit-China-from-August-18-to-22-1PGjA26uMs8/p.html"
+            }
+          ],
+          "confirmed": true,
+          "phase": "upcoming"
+        },
+        {
+          "id": "evt-visit-005",
+          "country": "萨尔瓦多",
+          "person_name": "埃内斯托·卡斯特罗（Ernesto Castro）",
+          "position": "萨尔瓦多立法大会主席",
+          "event_date": "2026-08-17",
+          "description": "应全国人大常委会委员长赵乐际邀请，萨尔瓦多立法大会主席卡斯特罗于8月17日至22日率团访华（新华社8月15日发布预告）。",
+          "ambassador_participation": "待确认",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "人民网-人民日报",
+              "url": "https://world.people.com.cn/n1/2026/0816/c1002-40780245.html"
+            },
+            {
+              "title": "新华社（China Diplomacy）",
+              "url": "https://en.chinadiplomacy.org.cn/2026-08/17/content_118650291.shtml"
+            }
+          ],
+          "confirmed": true,
+          "phase": "upcoming"
         }
       ]
     },
@@ -165,12 +253,13 @@
     }
   },
   "highlights": [
-    "厄瓜多尔总统诺沃亚8月16日抵达北京，开启首次对华国事访问（8月16-23日）",
-    "多哥新任驻华大使阿菲宁杜递交国书副本（8月7日）",
-    "王毅在马尼拉会见美国国务卿鲁比奥，为习近平主席9月访美铺路（7月22日）"
+    "约旦国王阿卜杜拉二世8月18-24日对华国事访问（官方已宣布，预告）",
+    "厄瓜多尔总统诺沃亚8月16日抵京开启首次对华国事访问（进行中）",
+    "智利外长佩雷斯8月18-22日对中国进行正式访问（官方已宣布，预告）"
   ],
   "data_summary": {},
   "supplementary_notes": [
+    "2026-08-18 09:45 规则变更（预告即收录）：官方/权威信源发布的外交预告（访华、任命等）一经公布立即填入看板，按预告时间填写并明确标注状态（phase：📅预告 / 🟢进行中 / ✅已发生），不再等事件发生后补录。本次已补录：约旦国王（8/18-24）、智利外长佩雷斯（8/18-22）、萨尔瓦多卡斯特罗（8/17-22）访华预告，及韩国卢载宪驻华大使提名；诺沃亚标记为「进行中」。",
     "2026-08-18 09:20 AI补强核验：9轮 WebSearch 交叉验证，过去72小时（8/15-8/18晨）无新增已发生符合条件事件，保持 7 项不变（人事3 + 领事1 + 访华2 + 中美1）。",
     "2026-08-18 访华模块待办（今日开始、尚未有官方抵华报道，暂不收录）：约旦国王阿卜杜拉二世 8/18-24 国事访问（8/17外交部宣布，8/18今日开始，仅第三方 intellinews 称「8/18抵达」，无新华社/央视官方抵华报道）；智利外长佩雷斯 8/18-22 正式访问（8/17宣布，8/18今日开始，尚未抵华）；萨尔瓦多立法大会主席卡斯特罗 8/17-22（8/15预告，无抵华/线下活动报道）。均系预告或尚未实际进入中国，成行后补录。",
     "2026-08-18 人事模块：韩国卢载宪仍处「将被提名驻华大使」阶段（提名流程，任命≠到任），无递交国书/到任官方确认，暂不收录；窗口内无新增递交国书/国书副本事件。",

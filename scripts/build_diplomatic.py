@@ -30,6 +30,19 @@ def esc(s):
     return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
+# 事件时间阶段：区分「预告 / 进行中 / 已发生」，避免预告与已发生混淆
+PHASE_MAP = {
+    "upcoming": ("📅 预告", "upcoming"),
+    "ongoing": ("🟢 进行中", "ongoing"),
+    "completed": ("✅ 已发生", "completed"),
+}
+
+
+def phase_badge(phase):
+    label, cls = PHASE_MAP.get(phase, ("✅ 已发生", "completed"))
+    return f'<span class="ev-badge {cls}">{label}</span>'
+
+
 # ============== 模块渲染 ==============
 
 def render_personnel(items, module_title="外交代表人事变化"):
@@ -46,8 +59,10 @@ def render_personnel(items, module_title="外交代表人事变化"):
         desc = esc(it.get("description", ""))
         sources = it.get("sources", [])
         confirmed = it.get("confirmed", True)
+        phase = it.get("phase", "completed")
         
         confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 待核实</span>'
+        phase_html = phase_badge(phase)
         person_line = f'<span class="ev-person">{person}</span>' if person else ""
         
         src_html = ""
@@ -64,6 +79,7 @@ def render_personnel(items, module_title="外交代表人事变化"):
             <span class="ev-country">{country}</span>
             <span class="ev-divider">｜</span>
             <span class="ev-type">{event_type}</span>
+            {phase_html}
             {confirm_badge}
           </div>
           <div class="ev-status">当前状态：<b>{status}</b> · 日期：{date}</div>
@@ -141,8 +157,10 @@ def render_visits(items, module_title="外国重要高级官员访华"):
         outcomes = esc(it.get("outcomes", "") or "")
         sources = it.get("sources", [])
         confirmed = it.get("confirmed", True)
+        phase = it.get("phase", "completed")
         
         confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 待核实</span>'
+        phase_html = phase_badge(phase)
         
         ambassador_html = ""
         if ambassador:
@@ -167,6 +185,7 @@ def render_visits(items, module_title="外国重要高级官员访华"):
             <span class="ev-country">{country}</span>
             <span class="ev-divider">｜</span>
             <span class="ev-person-title">{person} · {position}</span>
+            {phase_html}
             {confirm_badge}
           </div>
           <div class="ev-status">日期：{visit_date}</div>
@@ -565,6 +584,15 @@ def build():
   }}
   .ev-badge.unilateral {{
     background: #fffbeb; color: #d97706; border: 1px solid #fde68a;
+  }}
+  .ev-badge.upcoming {{
+    background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa;
+  }}
+  .ev-badge.ongoing {{
+    background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;
+  }}
+  .ev-badge.completed {{
+    background: #f0fdfa; color: #0f766e; border: 1px solid #99f6e4;
   }}
 
   .ev-status {{
