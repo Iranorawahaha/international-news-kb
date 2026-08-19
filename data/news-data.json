@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-19 09:32",
+  "lastUpdated": "2026-08-19 09:37",
   "retentionDays": 7,
   "archive": {
     "2026-08-12": [
@@ -7038,6 +7038,33 @@
         "column": "美国",
         "is_official": null,
         "body_en": null
+      },
+      {
+        "id": "auto_2026-08-17_42556",
+        "date": "2026-08-17",
+        "title": "Houthis Claim Strike on Saudi Vessel as Red Sea Violence Escalates",
+        "title_en": "Houthis Claim Strike on Saudi Vessel as Red Sea Violence Escalates",
+        "title_zh": "胡塞武装声称袭击沙特船只 红海暴力持续升级",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "也门胡塞武装声称对红海关键海上贸易航线附近的一艘沙特船只发动导弹袭击。这一冲突未见平息迹象，红海地区暴力局势持续升级，威胁国际航运安全与全球供应链。",
+        "source": "纽约时报",
+        "category": "中东",
+        "keywords": [
+          "胡塞武装",
+          "红海",
+          "沙特",
+          "航运安全"
+        ],
+        "url": "https://www.nytimes.com/2026/08/17/world/middleeast/houthis-saudi-strike.html",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-08-19 09:30:00",
+        "collection_method": "webfetch",
+        "column": "地区热点",
+        "is_official": null,
+        "body_en": null
       }
     ],
     "2026-08-18": [
@@ -8188,33 +8215,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-17_42556",
-        "date": "2026-08-17",
-        "title": "Houthis Claim Strike on Saudi Vessel as Red Sea Violence Escalates",
-        "title_en": "Houthis Claim Strike on Saudi Vessel as Red Sea Violence Escalates",
-        "title_zh": "胡塞武装声称袭击沙特船只 红海暴力持续升级",
-        "summary": null,
-        "summary_en": null,
-        "summary_zh": "也门胡塞武装声称对红海关键海上贸易航线附近的一艘沙特船只发动导弹袭击。这一冲突未见平息迹象，红海地区暴力局势持续升级，威胁国际航运安全与全球供应链。",
-        "source": "纽约时报",
-        "category": "中东",
-        "keywords": [
-          "胡塞武装",
-          "红海",
-          "沙特",
-          "航运安全"
-        ],
-        "url": "https://www.nytimes.com/2026/08/17/world/middleeast/houthis-saudi-strike.html",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-08-19 09:30:00",
-        "collection_method": "webfetch",
-        "column": "地区热点",
-        "is_official": null,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-08-18_43381",
         "date": "2026-08-18",
         "title": "Democrats call for USS Lincoln probe, question US Navy's readiness",
@@ -8408,33 +8408,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-18_86536",
-        "date": "2026-08-18",
-        "title": "France to expel two Iranian diplomats in coming days, foreign minister says",
-        "title_en": "France to expel two Iranian diplomats in coming days, foreign minister says",
-        "title_zh": "法国外长：将在未来几天驱逐两名伊朗外交官",
-        "summary": null,
-        "summary_en": null,
-        "summary_zh": "法国外长表示，法国将在未来几天驱逐两名伊朗外交官，以回应7月发生的涉及法国驻德黑兰大使馆两名工作人员的事件。这是欧洲国家在美伊紧张对峙背景下对伊朗采取的最新外交反制。",
-        "source": "路透社",
-        "category": "欧洲",
-        "keywords": [
-          "法国",
-          "伊朗",
-          "外交",
-          "驱逐外交官"
-        ],
-        "url": "https://www.reuters.com/world/france-expel-two-iranian-diplomats-coming-days-foreign-minister-says-2026-08-18/",
-        "priority_score": 65,
-        "is_summit_level": false,
-        "importance": "medium",
-        "collectedAt": "2026-08-19 09:30:00",
-        "collection_method": "webfetch",
-        "column": "地区热点",
-        "is_official": null,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-08-18_87462",
         "date": "2026-08-18",
         "title": "UK 'supports Ukraine 100%', Burnham says, after Russia's drone warning",
@@ -8460,28 +8433,6 @@
         "collection_method": "webfetch",
         "column": "地区热点",
         "is_official": null,
-        "body_en": null
-      },
-      {
-        "id": "auto_2026-08-18_70892",
-        "date": "2026-08-18",
-        "title": "Secretary Rubio&#8217;s Call with UAE National Security Advisor Sheikh Tahnoon bin Zayed Al Nahyan",
-        "title_en": "Secretary Rubio&#8217;s Call with UAE National Security Advisor Sheikh Tahnoon bin Zayed Al Nahyan",
-        "title_zh": "鲁比奥国务卿与阿联酋国家安全顾问塔赫农通话 讨论黎巴嫩局势与追责伊朗",
-        "summary": "The below is attributable to Principal Deputy Spokesperson Tommy Pigott: Secretary of State Marco Rubio spoke today with UAE National Security Advisor Sheikh Tahnoon bin Zayed Al Nahyan. The two discussed a number of regional security issues, including Lebanon, as well as continued U.S.-UAE coordination to hold Iran and its terrorist proxies accountable for ongoing [&hellip;]",
-        "summary_en": "The below is attributable to Principal Deputy Spokesperson Tommy Pigott: Secretary of State Marco Rubio spoke today with UAE National Security Advisor Sheikh Tahnoon bin Zayed Al Nahyan. The two discussed a number of regional security issues, including Lebanon, as well as continued U.S.-UAE coordination to hold Iran and its terrorist proxies accountable for ongoing [&hellip;]",
-        "summary_zh": "据美国务院代理首席副发言人汤米·皮戈特声明，鲁比奥国务卿与阿联酋国家安全顾问谢赫·塔赫农·本·扎耶德·阿勒纳哈扬通话，讨论多项地区安全问题，包括黎巴嫩局势，以及美阿联酋继续协调追责伊朗及其恐怖代理人的持续袭击。鲁比奥强调了霍尔木兹海峡航行自由的重要性。",
-        "source": "美国国务院",
-        "category": "美国",
-        "keywords": [],
-        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/secretary-rubios-call-with-uae-national-security-advisor-sheikh-tahnoon-bin-zayed-al-nahyan/",
-        "priority_score": 65,
-        "is_summit_level": false,
-        "importance": "medium",
-        "collectedAt": "2026-08-19 09:21:01",
-        "collection_method": "us_official",
-        "column": "美国",
-        "is_official": true,
         "body_en": null
       },
       {
@@ -8558,6 +8509,55 @@
         "collection_method": "webfetch",
         "column": "美国",
         "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-18_86536",
+        "date": "2026-08-18",
+        "title": "France to expel two Iranian diplomats in coming days, foreign minister says",
+        "title_en": "France to expel two Iranian diplomats in coming days, foreign minister says",
+        "title_zh": "法国外长：将在未来几天驱逐两名伊朗外交官",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "法国外长表示，法国将在未来几天驱逐两名伊朗外交官，以回应7月发生的涉及法国驻德黑兰大使馆两名工作人员的事件。这是欧洲国家在美伊紧张对峙背景下对伊朗采取的最新外交反制。",
+        "source": "路透社",
+        "category": "欧洲",
+        "keywords": [
+          "法国",
+          "伊朗",
+          "外交",
+          "驱逐外交官"
+        ],
+        "url": "https://www.reuters.com/world/france-expel-two-iranian-diplomats-coming-days-foreign-minister-says-2026-08-18/",
+        "priority_score": 65,
+        "is_summit_level": false,
+        "importance": "medium",
+        "collectedAt": "2026-08-19 09:30:00",
+        "collection_method": "webfetch",
+        "column": "地区热点",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-08-18_70892",
+        "date": "2026-08-18",
+        "title": "Secretary Rubio&#8217;s Call with UAE National Security Advisor Sheikh Tahnoon bin Zayed Al Nahyan",
+        "title_en": "Secretary Rubio&#8217;s Call with UAE National Security Advisor Sheikh Tahnoon bin Zayed Al Nahyan",
+        "title_zh": "鲁比奥国务卿与阿联酋国家安全顾问塔赫农通话 讨论黎巴嫩局势与追责伊朗",
+        "summary": "The below is attributable to Principal Deputy Spokesperson Tommy Pigott: Secretary of State Marco Rubio spoke today with UAE National Security Advisor Sheikh Tahnoon bin Zayed Al Nahyan. The two discussed a number of regional security issues, including Lebanon, as well as continued U.S.-UAE coordination to hold Iran and its terrorist proxies accountable for ongoing [&hellip;]",
+        "summary_en": "The below is attributable to Principal Deputy Spokesperson Tommy Pigott: Secretary of State Marco Rubio spoke today with UAE National Security Advisor Sheikh Tahnoon bin Zayed Al Nahyan. The two discussed a number of regional security issues, including Lebanon, as well as continued U.S.-UAE coordination to hold Iran and its terrorist proxies accountable for ongoing [&hellip;]",
+        "summary_zh": "据美国务院代理首席副发言人汤米·皮戈特声明，鲁比奥国务卿与阿联酋国家安全顾问谢赫·塔赫农·本·扎耶德·阿勒纳哈扬通话，讨论多项地区安全问题，包括黎巴嫩局势，以及美阿联酋继续协调追责伊朗及其恐怖代理人的持续袭击。鲁比奥强调了霍尔木兹海峡航行自由的重要性。",
+        "source": "美国国务院",
+        "category": "美国",
+        "keywords": [],
+        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/secretary-rubios-call-with-uae-national-security-advisor-sheikh-tahnoon-bin-zayed-al-nahyan/",
+        "priority_score": 65,
+        "is_summit_level": false,
+        "importance": "medium",
+        "collectedAt": "2026-08-19 09:21:01",
+        "collection_method": "us_official",
+        "column": "美国",
+        "is_official": true,
         "body_en": null
       }
     ]
