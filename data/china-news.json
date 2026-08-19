@@ -1,54 +1,8 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-08-18 09:20",
+  "lastUpdated": "2026-08-19 09:20",
   "retentionDays": 7,
   "archive": {
-    "2026-08-12": [
-      {
-        "title": "中共中央 全国人大常委会 国务院 全国政协讣告 朱镕基同志逝世",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7077937.htm",
-        "date": "2026-08-12",
-        "source": "中国政府网·要闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "新华社北京8月12日电 中国共产党中央委员会、中华人民共和国全国人民代表大会常务委员会、中华人民共和国国务院、中国人民政治协商会议全国委员会沉痛宣告：中国共产党的优秀党员，久经考验的忠诚的共产主义战士…",
-        "collectedAt": "2026-08-12 14:34:12"
-      },
-      {
-        "title": "曾被开除党籍20年 “铁血宰相”朱镕基的一生",
-        "url": "https://www.zaobao.com/news/china/story20260812-9509339",
-        "date": "2026-08-12",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-12 14:34:12"
-      },
-      {
-        "title": "2026年8月12日外交部发言人郭嘉昆答记者问（2026-08-12）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260812_12002993.shtml",
-        "date": "2026-08-12",
-        "source": "外交部",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-08-12 14:34:12"
-      },
-      {
-        "title": "市场监管总局批准发布338项重要国家标准",
-        "url": "https://www.gov.cn/lianbo/202608/content_7077923.htm",
-        "date": "2026-08-12",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "近日，市场监管总局（国家标准委）批准发布338项重要国家标准。其中，强制性国家标准15项，推荐性国家标准323项。",
-        "collectedAt": "2026-08-12 14:34:12"
-      }
-    ],
     "2026-08-13": [
       {
         "title": "李强签署国务院令 公布《国务院关于修改和废止部分行政法规的决定》",
@@ -1062,6 +1016,17 @@
         "collectedAt": "2026-08-18 09:20:51"
       },
       {
+        "title": "朱镕基同志遗体在京火化 天安门等地下半旗志哀",
+        "url": "https://www.chinanews.com.cn/gn/shipin/cns-d/2026/08-18/news1065704.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "8月18日，为悼念朱镕基同志，首都天安门、新华门、人民大会堂、外交部及各省（区、市）党委和政府所在地、各边境口岸、驻外使领馆等下半旗志哀。朱镕基同志遗体当日在京火化。",
+        "collectedAt": "2026-08-18 09:30:00"
+      },
+      {
         "title": "李强主持召开国务院第十二次全体会议强调 深入贯彻落实党中央决策部署 努力完成全年经济社会发展目标任务",
         "url": "https://www.mofcom.gov.cn/xwfb/ldrhd/art/2026/art_1637204143bc4f58a6461739fc1f0519.html",
         "date": "2026-08-18",
@@ -1095,6 +1060,17 @@
         "collectedAt": "2026-08-18 09:20:51"
       },
       {
+        "title": "国家发展改革委部署加快2026年新型政策性金融工具投放工作 加大对民间投资项目支持力度",
+        "url": "https://www.ndrc.gov.cn/fzggw/wld/yxh/zyhd/202608/t20260817_1407053.html",
+        "date": "2026-08-17",
+        "source": "国家发改委",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "8月14日，国家发展改革委副主任岳修虎主持召开工作会议，部署加快推进2026年新型政策性金融工具投放工作，加大对民间投资项目支持力度。2026年新型政策性金融工具总规模8000亿元，较上年增加3000亿元，主要用于补充项目资本金、撬动社会投资。",
+        "collectedAt": "2026-08-18 09:30:00"
+      },
+      {
         "title": "外交部发言人林剑主持例行记者会",
         "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260817_12005240.shtml",
         "date": "2026-08-17",
@@ -1117,28 +1093,6 @@
         "collectedAt": "2026-08-18 09:20:51"
       },
       {
-        "title": "朱镕基同志遗体在京火化 天安门等地下半旗志哀",
-        "url": "https://www.chinanews.com.cn/gn/shipin/cns-d/2026/08-18/news1065704.shtml",
-        "date": "2026-08-18",
-        "source": "央视新闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "8月18日，为悼念朱镕基同志，首都天安门、新华门、人民大会堂、外交部及各省（区、市）党委和政府所在地、各边境口岸、驻外使领馆等下半旗志哀。朱镕基同志遗体当日在京火化。",
-        "collectedAt": "2026-08-18 09:30:00"
-      },
-      {
-        "title": "国家发展改革委部署加快2026年新型政策性金融工具投放工作 加大对民间投资项目支持力度",
-        "url": "https://www.ndrc.gov.cn/fzggw/wld/yxh/zyhd/202608/t20260817_1407053.html",
-        "date": "2026-08-17",
-        "source": "国家发改委",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "8月14日，国家发展改革委副主任岳修虎主持召开工作会议，部署加快推进2026年新型政策性金融工具投放工作，加大对民间投资项目支持力度。2026年新型政策性金融工具总规模8000亿元，较上年增加3000亿元，主要用于补充项目资本金、撬动社会投资。",
-        "collectedAt": "2026-08-18 09:30:00"
-      },
-      {
         "title": "商务部等9部门印发《关于进一步激发下沉市场活力 活跃县域消费的意见》",
         "url": "https://www.mofcom.gov.cn/zwgk/gztz/art/2026/art_456096407104439ca42d249858c2a6df.html",
         "date": "2026-08-18",
@@ -1149,25 +1103,432 @@
         "summary": "8月18日对外发布。商务部会同国家发展改革委、财政部、农业农村部、文化和旅游部等9部门联合印发，系统部署激发下沉市场活力重点工作，围绕支持县域消费渠道升级、推动县域商业业态创新和品牌打造、优化县域商品和服务供给、提升县域流通现代化水平等提出18条举措。",
         "collectedAt": "2026-08-18 09:30:00"
       }
+    ],
+    "2026-08-19": [
+      {
+        "title": "习近平举行仪式欢迎厄瓜多尔总统访华",
+        "url": "https://tv.cctv.com/2026/08/18/VIDEEVuZ6LRnO4RIZv50dUGI260818.shtml",
+        "date": "2026-08-18",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平举行仪式欢迎厄瓜多尔总统访华。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "习近平同厄瓜多尔总统会谈",
+        "url": "https://tv.cctv.com/2026/08/18/VIDEuhfUlilmnBkBGhPeHy2n260818.shtml",
+        "date": "2026-08-18",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平指出，今年是中厄两国建立全面战略伙伴关系10周年。无论国际形势如何变化，中方始终从战略高度和长远角度看待中厄关系，愿同厄方一道努力，推动双边关系不断迈上新台阶，更好造福两国人民。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "习近平同厄瓜多尔总统诺沃亚会谈",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078490.htm",
+        "date": "2026-08-18",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京8月18日电（记者 曹嘉玥）8月18日下午，国家主席习近平在北京人民大会堂同来华进行国事访问的厄瓜多尔总统诺沃亚举行会谈。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "习近平：拉美国家自主选择合作伙伴权利不应被干涉",
+        "url": "https://www.zaobao.com/news/china/story20260818-9538609",
+        "date": "2026-08-18",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "朱镕基同志遗体在京火化 习近平等到八宝山革命公墓送别",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078460.htm",
+        "date": "2026-08-18",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京8月18日电 中国共产党的优秀党员，久经考验的忠诚的共产主义战士，杰出的无产阶级革命家、政治家，党和国家的卓越领导人，中国共产党第十四届、十五届中央政治局常委，国务院原总理朱镕基同志的遗体，…",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "独家视频丨习近平：中方始终从战略高度和长远角度看待中厄关系",
+        "url": "https://news.cctv.com/2026/08/18/ARTIyhAciQjaraAhsvkpmoUN260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "8月18日下午，国家主席习近平在北京人民大会堂同来华进行国事访问的厄瓜多尔总统诺沃亚举行会谈。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "李强签署国务院令 公布《国务院关于修改〈住房公积金管理条例〉的决定》",
+        "url": "https://tv.cctv.com/2026/08/18/VIDEfrQuzChPUyu1P2mTw6M8260818.shtml",
+        "date": "2026-08-18",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "李强签署国务院令，公布《国务院关于修改〈住房公积金管理条例〉的决定》。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "王毅将访问韩国、印尼（2026-08-19）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260819_12006397.shtml",
+        "date": "2026-08-19",
+        "source": "外交部",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "赵乐际主持召开十四届全国人大常委会第七十一次委员长会议",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/19/content_30175769.html",
+        "date": "2026-08-19",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "云南通报低价团调查结果：涉事旅行社导游被查",
+        "url": "https://news.cctv.com/2026/08/18/ARTIjKHY14cbC3E9Wp05ppuj260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "在云南省文化和旅游厅统筹督导下，昆明、大理、丽江、西双版纳等4个州市文化和旅游部门依法依规对央视财经报道云南“低价团”相关问题涉事旅行社和导游立案调查。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "2026年8月18日外交部发言人林剑主持例行记者会（2026-08-18）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260818_12006053.shtml",
+        "date": "2026-08-18",
+        "source": "外交部",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "“十五五”我国将加快建设现代油气产业体系",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078517.htm",
+        "date": "2026-08-18",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "国家发展改革委、国家能源局联合发布的《石油天然气发展“十五五”规划》提出，“十五五”时期，我国将守住能源安全底线，稳步推进绿色转型，加大油气勘探开发，持续加大鄂尔多斯、渤海湾等重点含油气盆地常规资源勘…",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "司法部、住房城乡建设部负责人就《国务院关于修改〈住房公积金管理条例〉的决定》答记者问",
+        "url": "https://news.cctv.com/2026/08/18/ARTIBjeUUg1W9b1iJkW2J7Yq260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "国务院公布《国务院关于修改〈住房公积金管理条例〉的决定》（以下简称《决定》），自2026年9月20日起施行。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "商务部等部门联合印发《关于进一步激发下沉市场活力 活跃县域消费的意见》",
+        "url": "https://news.cctv.com/2026/08/18/ARTIIIUqwmqwaFNYQKxcaRGO260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "为贯彻落实党中央、国务院决策部署，指导各地因地制宜激发下沉市场活力，近日，商务部会同国家发展改革委、财政部、人力资源社会保障部、自然资源部、农业农村部、文化和旅游部、市场监管总局、金融监管总局等部门，…",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "商务部：县乡消费已成为扩消费最重要的潜力来源",
+        "url": "https://news.cctv.com/2026/08/18/ARTInd0T4JuVdbl8FLrg0gbf260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "商务部部长助理袁晓明表示，县乡消费占社会消费品零售额的比重稳步提升，已成为扩消费最重要的潜力来源。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "国务院安委办通报近期道路交通典型事故 部署进一步加强道路交通安全工作",
+        "url": "https://news.cctv.com/2026/08/18/ARTIf4NqwXnBMnCoV4lds4FL260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "近日，国务院安委会办公室通报近期重点地区道路交通典型事故，部署进一步加强道路交通安全工作，督促指导各地区、各有关单位采取针对性措施有效防控风险，坚决扭转事故多发态势。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "外交部：帕方关于中方试射活动言论毫无根据 用心险恶",
+        "url": "https://news.cctv.com/2026/08/18/ARTIh54GPY1X55t5zLZ7792k260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "林剑表示，中方已就试射活动阐明立场，帕方言论毫无根据，用心险恶，不值一评。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "外交部：美菲有关合作不应针对第三方或损害第三方利益",
+        "url": "https://news.cctv.com/2026/08/18/ARTI4S32hD9k3K24pSm3lvkg260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "中方一贯认为，国与国之间开展交流合作，应当有助于增进地区国家间的相互理解与信任，有利于促进地区的和平稳定。我们不反对美菲开展正常合作，但有关合作不应针对第三方或损害第三方的利益。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "杭州官方通报“地产陪酒局” 分析：地方政商关系和权力结构未改变",
+        "url": "https://www.zaobao.com/news/china/story20260818-9538279",
+        "date": "2026-08-18",
+        "source": "联合早报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "长三角外贸规模创新高 “新动能”引领高质量发展",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078518.htm",
+        "date": "2026-08-18",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "海关数据显示，今年前7个月，长三角地区货物贸易进出口规模创历史同期新高，连续17个月保持增长。在总量攀升的同时，以高新技术、绿色智能为代表的“新动能”加速聚集，区域外贸结构持续向新向优。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "《石油天然气发展“十五五”规划》印发",
+        "url": "https://www.gov.cn/lianbo/202608/content_7078379.htm",
+        "date": "2026-08-18",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "近日，国家发展改革委、国家能源局印发《石油天然气发展“十五五”规划》，提出到2030年，国内油气供应量达4.4亿吨油当量，新增油气长输管道2万公里，全国油气长输管网规模达22万公里，天然气储备规模持续…",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "中国修改条例 个体工商户可自愿缴存住房公积金",
+        "url": "https://www.zaobao.com/news/china/story20260818-9537661",
+        "date": "2026-08-18",
+        "source": "联合早报",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "事关可可及焙炒咖啡产品生产 市场监管总局公开征求意见",
+        "url": "https://news.cctv.com/2026/08/18/ARTIKKzuqOsnk1TZ5Aq0DzFa260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "市场监管总局近日组织修订形成《可可及焙炒咖啡产品生产许可审查细则（征求意见稿）》，8月18日开始向社会公开征求意见。《可可及焙炒咖啡产品生产许可审查细则（征求意见稿）》主要修订了4个方面内容。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "澳门发布新一份五年规划",
+        "url": "https://news.cctv.com/2026/08/18/ARTIxXskwp0cP09eIlKMv0Pv260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "8月18日，澳门特区政府正式公布《澳门特别行政区经济和社会发展第三个五年规划（2026-2030年）》。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "澳门特区“三五”规划正式公布",
+        "url": "https://news.cctv.com/2026/08/18/ARTIuNFu5sB72dafiwOa1gsn260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "澳门特区政府18日正式公布《澳门特别行政区经济和社会发展第三个五年规划（2026-2030年）》。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "澳门特区政府正式公布第三个五年规划",
+        "url": "https://news.cctv.com/2026/08/18/ARTIN4BAPgpH7ivH1Sud4jIZ260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "澳门特别行政区政府8月18日正式公布《澳门特别行政区经济和社会发展第三个五年规划（2026-2030年）》，明确澳门特区下一阶段经济和社会发展方向和目标。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "50.9%、24.7%、3.5%，向新向优！“数”说经济含“新”含“智”含“绿”量提升",
+        "url": "https://news.cctv.com/2026/08/18/ARTI8C97eKkQuIM7KDbl2C5z260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "8月17日下午，国务院新闻办公室举行发布会，国家统计局新闻发言人介绍7月份国民经济运行情况。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "“十五五”开局之年推进未来产业发展一线观察",
+        "url": "https://news.cctv.com/2026/08/18/ARTILUUWwpETV84kRCiPc3EO260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "工业和信息化部总工程师王卫明介绍，工信部已指导地方因地制宜布局超85个省级未来产业先导区，积极开展未来产业适配环境探索。作为创新主体，企业身处市场前沿，在未来产业这条充满不确定性的赛道上，可以把“技术…",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "《经济日报》：客观看待新房交易规模缩量",
+        "url": "https://www.zaobao.com/news/china/story20260819-9540091",
+        "date": "2026-08-19",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "中国AI深度赋能制造业 形成实打实生产力",
+        "url": "https://news.cctv.com/2026/08/19/ARTIlMbeaSXrkyK0zu13ckJO260819.shtml",
+        "date": "2026-08-19",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "从大模型迭代到应用出海，再到深度赋能实体经济，中国AI的全球化路径正越走越宽。当前，人工智能正加速渗透制造业，在海外生产基地和国内中小工厂中，将技术创新转化为实打实的生产力。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "中国汽车从“造好车”走向“定义汽车” 外资车企以“中国速度”实现战略转型升级",
+        "url": "https://news.cctv.com/2026/08/18/ARTIj2MUXnXBH7j6qxpd1iZo260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "日前，中国汽车工业协会发布的一组数据引发广泛关注。2026年7月，我国新能源汽车月度新车销量占比首次突破60%，前7个月累计销量占比首次突破50%。这两个“首次”具有怎样的意义？",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "全球大模型进入“月更”期 中美AI企业卷入“无限游戏”",
+        "url": "https://www.zaobao.com/news/china/story20260818-9538228",
+        "date": "2026-08-18",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "墨西哥考虑收紧对华贸易措施",
+        "url": "https://www.zaobao.com/news/china/story20260819-9540072",
+        "date": "2026-08-19",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "江苏南通：菱角迎丰收 “水上经济”助增收",
+        "url": "https://photo.cctv.com/2026/08/18/PHOA5uI8rqDOVjFvYeh49V3E260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "2026年8月17日，江苏省南通市通州区东社镇新桥村，农户们划着木盆在家门口河道采摘菱角。眼下，江苏省南通市通州区东社镇新桥村的菱角进入成熟采收季，农户穿梭于菱叶之间，抢抓农时采摘鲜菱。",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "英报告：中国绿色产业发展助力全球低碳转型",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/19/content_30175785.html",
+        "date": "2026-08-19",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "让家政服务方便找放心用（经济聚焦）",
+        "url": "https://news.cctv.com/2026/08/18/ARTI0soqR7DaWqHMOnAgBhR2260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "近期，商务部会同多部门印发《关于促进家政服务业高质量发展的若干政策措施》，围绕加大对家政企业支持力度等5个方面提出19项具体举措。增加优质家政服务供给有哪些实招？如何更好发挥家政服务信用信息平台作用？",
+        "collectedAt": "2026-08-19 09:20:56"
+      },
+      {
+        "title": "防作弊管控将融入电子计价秤生产全流程 市场监管总局最新部署",
+        "url": "https://news.cctv.com/2026/08/18/ARTIVDMobPI1IrF2vWkUF0CC260818.shtml",
+        "date": "2026-08-18",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者今天了解到，为保障消费者合法权益，遏制作弊秤违法违规行为，市场监管总局近日在浙江省永康市召开电子计价秤生产企业和经销商行政指导会。",
+        "collectedAt": "2026-08-19 09:20:56"
+      }
     ]
   },
   "dates": [
+    "2026-08-19",
     "2026-08-18",
     "2026-08-17",
     "2026-08-16",
     "2026-08-15",
     "2026-08-14",
-    "2026-08-13",
-    "2026-08-12"
+    "2026-08-13"
   ],
-  "today": "2026-08-18",
-  "todayCount": 9,
+  "today": "2026-08-19",
+  "todayCount": 37,
   "stats": {
-    "totalArticles": 103,
+    "totalArticles": 136,
     "dateCount": 7,
-    "latestDate": "2026-08-18",
-    "summitCount": 13,
-    "total": 103,
-    "today": 9
+    "latestDate": "2026-08-19",
+    "summitCount": 19
   }
 }
