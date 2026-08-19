@@ -4981,26 +4981,6 @@
     "collection_method": "webfetch"
   },
   {
-    "title": "Houthis Claim Strike on Saudi Vessel as Red Sea Violence Escalates",
-    "title_en": "Houthis Claim Strike on Saudi Vessel as Red Sea Violence Escalates",
-    "title_zh": "胡塞武装声称袭击沙特船只 红海暴力持续升级",
-    "summary_zh": "也门胡塞武装声称对红海关键海上贸易航线附近的一艘沙特船只发动导弹袭击。这一冲突未见平息迹象，红海地区暴力局势持续升级，威胁国际航运安全与全球供应链。",
-    "source": "纽约时报",
-    "category": "中东",
-    "keywords": [
-      "胡塞武装",
-      "红海",
-      "沙特",
-      "航运安全"
-    ],
-    "url": "https://www.nytimes.com/2026/08/17/world/middleeast/houthis-saudi-strike.html",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-08-17",
-    "collectedAt": "2026-08-19 09:30:00",
-    "collection_method": "webfetch"
-  },
-  {
     "title": "Deadly Israeli Strike on Gaza Cafe Raises Doubts About Progress on Peace Plan",
     "title_en": "Deadly Israeli Strike on Gaza Cafe Raises Doubts About Progress on Peace Plan",
     "title_zh": "以色列对加沙咖啡馆发动致命袭击 和平计划前景蒙阴影",
