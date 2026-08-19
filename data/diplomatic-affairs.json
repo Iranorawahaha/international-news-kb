@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-08-18T09:21:04.916673+08:00",
-    "window_start": "2026-08-15",
-    "window_end": "2026-08-18",
+    "generated": "2026-08-19T09:20:44.735545+08:00",
+    "window_start": "2026-08-16",
+    "window_end": "2026-08-19",
     "collection_method": "auto + agent",
     "candidate_count": 0
   },
@@ -152,7 +152,8 @@
             }
           ],
           "confirmed": true,
-          "phase": "ongoing"
+          "phase": "ongoing",
+          "headline": "厄瓜多尔总统诺沃亚对华国事访问（8.16-23）"
         },
         {
           "id": "evt-visit-003",
@@ -174,7 +175,8 @@
             }
           ],
           "confirmed": true,
-          "phase": "upcoming"
+          "phase": "upcoming",
+          "headline": "约旦国王阿卜杜拉二世对华国事访问（8.18-24）"
         },
         {
           "id": "evt-visit-004",
@@ -196,7 +198,8 @@
             }
           ],
           "confirmed": true,
-          "phase": "upcoming"
+          "phase": "upcoming",
+          "headline": "智利外长佩雷斯对华正式访问（8.18-22）"
         },
         {
           "id": "evt-visit-005",
@@ -218,7 +221,8 @@
             }
           ],
           "confirmed": true,
-          "phase": "upcoming"
+          "phase": "upcoming",
+          "headline": "萨尔瓦多立法大会主席卡斯特罗率团访华（8.17-22）"
         }
       ]
     },
