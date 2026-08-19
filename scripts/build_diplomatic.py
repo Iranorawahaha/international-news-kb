@@ -30,6 +30,17 @@ def esc(s):
     return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
+def sort_items_by_date(items):
+    """每个小版面（模块）内按 event_date 降序排列（新→旧）；缺失日期的条目排最后。
+
+    event_date 为 ISO 格式 YYYY-MM-DD，字符串降序排序即时间降序。
+    """
+    def key(it):
+        ed = (it.get("event_date") or "").strip()
+        return (ed == "", ed)  # 无日期 → (True,...) 排后；有日期 → (False, 日期) 按字符串降序
+    return sorted(items, key=key, reverse=True)
+
+
 # 事件时间阶段：区分「预告 / 进行中 / 已发生」，避免预告与已发生混淆
 PHASE_MAP = {
     "upcoming": ("📅 预告", "upcoming"),
@@ -331,11 +342,11 @@ def build():
     else:
         date_label = f"日期：{window_end}"
 
-    # 渲染各模块
-    mod_personnel = render_personnel(modules.get("personnel", {}).get("items", []))
-    mod_consuls = render_consuls(modules.get("consuls", {}).get("items", []))
-    mod_visits = render_visits(modules.get("visits", {}).get("items", []))
-    mod_uscn = render_us_china(modules.get("us_china", {}).get("items", []))
+    # 渲染各模块（每个小版面内按 event_date 降序：日期近的排前面）
+    mod_personnel = render_personnel(sort_items_by_date(modules.get("personnel", {}).get("items", [])))
+    mod_consuls = render_consuls(sort_items_by_date(modules.get("consuls", {}).get("items", [])))
+    mod_visits = render_visits(sort_items_by_date(modules.get("visits", {}).get("items", [])))
+    mod_uscn = render_us_china(sort_items_by_date(modules.get("us_china", {}).get("items", [])))
     
     # 计算是否有任何模块有内容
     all_modules_html = mod_personnel + mod_consuls + mod_visits + mod_uscn
