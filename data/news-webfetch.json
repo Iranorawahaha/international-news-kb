@@ -5121,5 +5121,669 @@
     "date": "2026-08-18",
     "collectedAt": "2026-08-19 09:30:00",
     "collection_method": "webfetch"
+  },
+  {
+    "title": "New Ukrainian defence minister takes office as ousted predecessor calls for wartime elections",
+    "title_en": "New Ukrainian defence minister takes office as ousted predecessor calls for wartime elections",
+    "title_zh": "乌克兰新防长就职 被解职前任呼吁举行战时选举",
+    "summary_zh": "乌克兰新国防部长正式就职，而被泽连斯基解职的前任防长费多罗夫呼吁在战时状态下举行总统选举，称不应由俄罗斯决定乌克兰人何时选择下一届政府，标志着与泽连斯基的公开决裂。",
+    "source": "路透社",
+    "category": "俄乌冲突",
+    "keywords": [
+      "乌克兰",
+      "防长",
+      "选举",
+      "泽连斯基"
+    ],
+    "url": "https://www.reuters.com/world/europe/ukraine-anti-graft-agencies-investigate-group-involving-presidential-officials-2026-08-19/",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "EXCLUSIVE: Mossad chief, Syrian foreign minister discussed Turkish military deployments before strikes",
+    "title_en": "EXCLUSIVE: Mossad chief, Syrian foreign minister discussed Turkish military deployments before strikes",
+    "title_zh": "独家：摩萨德局长与叙利亚外长在空袭前讨论土耳其军事部署",
+    "summary_zh": "据消息人士透露，以色列摩萨德局长与叙利亚外长在以色列对叙空袭前进行了沟通，讨论了土耳其在该地区的军事部署情况。此前美国特使警告以色列的空袭可能引发与土耳其军队的直接对抗。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "以色列",
+      "叙利亚",
+      "土耳其",
+      "摩萨德",
+      "军事部署"
+    ],
+    "url": "https://www.reuters.com/world/middle-east/mossad-director-syria-foreign-minister-discussed-turkish-military-deployments-2026-08-19/",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Russian ballistic missiles kill at least three in Ukraine's Kyiv, mayor says",
+    "title_en": "Russian ballistic missiles kill at least three in Ukraine's Kyiv, mayor says",
+    "title_zh": "俄弹道导弹袭击基辅至少致3人死亡",
+    "summary_zh": "乌克兰基辅市长称，俄罗斯弹道导弹袭击乌克兰首都基辅，造成至少3人死亡。这是俄乌冲突持续升级背景下的新一轮城市袭击。",
+    "source": "路透社",
+    "category": "俄乌冲突",
+    "keywords": [
+      "俄罗斯",
+      "乌克兰",
+      "基辅",
+      "导弹袭击"
+    ],
+    "url": "https://www.reuters.com/world/ukrainian-capital-kyiv-under-attack-by-russian-ballistic-missiles-mayor-says-2026-08-19/",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "US provides $206 million for Gaza force despite deadlocked peace plan",
+    "title_en": "US provides $206 million for Gaza force despite deadlocked peace plan",
+    "title_zh": "美为加沙维和部队提供2.06亿美元 和平计划仍陷僵局",
+    "summary_zh": "特朗普政府已通知国会，将为拟议中的加沙维和部队提供超过2.06亿美元资金，这是陷入停滞的美国重建加沙计划的首笔重大资金支持。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "美国",
+      "加沙",
+      "维和部队",
+      "和平计划"
+    ],
+    "url": "https://www.reuters.com/world/middle-east/us-provide-206-million-gaza-peacekeeping-force-letters-show-2026-08-19/",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Trump put thousands of soldiers on Washington's streets. They seldom stop crime",
+    "title_en": "Trump put thousands of soldiers on Washington's streets. They seldom stop crime",
+    "title_zh": "特朗普派数千士兵进驻华盛顿街头 却很少阻止犯罪",
+    "summary_zh": "调查性报道指出，特朗普将数千名士兵部署到华盛顿街头执行治安任务，但数据显示这些士兵很少真正阻止犯罪，引发关于军事化治安效果的质疑。",
+    "source": "路透社",
+    "category": "美国",
+    "keywords": [
+      "特朗普",
+      "华盛顿",
+      "士兵",
+      "治安"
+    ],
+    "url": "https://www.reuters.com/world/us/trump-put-thousands-soldiers-washingtons-streets-they-seldom-stop-crime-2026-08-19/",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Chinese robotics giant Unitree soars in stock market debut",
+    "title_en": "Chinese robotics giant Unitree soars in stock market debut",
+    "title_zh": "中国人形机器人巨头宇树科技上市首日股价大涨",
+    "summary_zh": "全球最大人形机器人制造商宇树科技周三在上海科创板挂牌交易，股价首日大涨（收盘涨幅约460%）。宇树因机器人在春晚表演而家喻户晓，成功上市预计将为更多中国机器人企业IPO铺平道路。中国去年将具身智能视为经济与国家安全的关键领域。",
+    "source": "BBC",
+    "category": "科技",
+    "keywords": [
+      "宇树科技",
+      "人形机器人",
+      "IPO",
+      "科创板",
+      "具身智能"
+    ],
+    "url": "https://www.bbc.com/news/articles/c0qv4w9492zo",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Australia 'outraged' after Israeli decision not to prosecute over killing of aid worker in Gaza",
+    "title_en": "Australia 'outraged' after Israeli decision not to prosecute over killing of aid worker in Gaza",
+    "title_zh": "澳大利亚怒斥以色列不追究加沙援助人员被杀案",
+    "summary_zh": "澳大利亚外长表示将召见以色列大使，对以色列决定不就援助人员佐米·弗兰克科姆在加沙被杀一事提起诉讼表示愤怒，称该决定“侮辱性”。",
+    "source": "BBC",
+    "category": "中东",
+    "keywords": [
+      "澳大利亚",
+      "以色列",
+      "加沙",
+      "援助人员"
+    ],
+    "url": "https://www.bbc.com/news/articles/cp87g29r718o",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Israel opens up bids for highly-sensitive West Bank settlement project",
+    "title_en": "Israel opens up bids for highly-sensitive West Bank settlement project",
+    "title_zh": "以色列为高度敏感的约旦河西岸定居点项目招标",
+    "summary_zh": "以色列为约旦河西岸的一个高度敏感定居点项目开放招标，英国外交大臣谴责此举是“不可接受且具有破坏性的行为”。",
+    "source": "BBC",
+    "category": "中东",
+    "keywords": [
+      "以色列",
+      "约旦河西岸",
+      "定居点",
+      "英国"
+    ],
+    "url": "https://www.bbc.com/news/articles/cly50gn1e54o",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Canada and US say they are finalising a trade deal, but details remain murky",
+    "title_en": "Canada and US say they are finalising a trade deal, but details remain murky",
+    "title_zh": "美加称即将敲定贸易协议 细节仍不明朗",
+    "summary_zh": "加拿大总理卡尼对贸易谈判取得“重大进展”表示欢迎，两国正努力在周末新的关税期限前敲定最终细节。此前特朗普宣布将针对加拿大商品的50%关税推迟三天生效。",
+    "source": "BBC",
+    "category": "经贸制裁",
+    "keywords": [
+      "美国",
+      "加拿大",
+      "贸易协议",
+      "关税"
+    ],
+    "url": "https://www.bbc.com/news/articles/c3ekl74jnk5o",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Chinese national charged with voter fraud during 2024 US presidential election",
+    "title_en": "Chinese national charged with voter fraud during 2024 US presidential election",
+    "title_zh": "中国公民被控在2024年美国大选中犯选民欺诈罪",
+    "summary_zh": "一名名叫孙玉鹏（Yupeng Sun）的中国公民因涉嫌冒充他人提交欺诈性选民登记和选票而被捕并被起诉。此案发生在美国大选背景之下，可能对美中关系产生影响。",
+    "source": "南华早报",
+    "category": "中美关系",
+    "keywords": [
+      "中国公民",
+      "选民欺诈",
+      "美国大选",
+      "司法"
+    ],
+    "url": "https://www.scmp.com/news/us/diplomacy/article/3364618/chinese-national-charged-voter-fraud-during-2024-us-presidential-election",
+    "priority_score": 92,
+    "is_summit_level": false,
+    "date": "2026-08-20",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Xi's US visit approaches, basic details of planned AI talks remain uncertain",
+    "title_en": "Xi's US visit approaches, basic details of planned AI talks remain uncertain",
+    "title_zh": "习近平访美在即 计划中的人工智能会谈基本细节仍不确定",
+    "summary_zh": "随着中国国家主席习近平访美日期临近，关于双方计划中的人工智能会谈仍存在诸多不确定性：尚不清楚将由美国哪些机构牵头、私营企业是否会参与以及议程将包含哪些内容。",
+    "source": "南华早报",
+    "category": "中美关系",
+    "keywords": [
+      "习近平",
+      "访美",
+      "人工智能",
+      "AI会谈"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3364549/xis-us-visit-approaches-basic-details-planned-ai-talks-remain-uncertain",
+    "priority_score": 95,
+    "is_summit_level": true,
+    "date": "2026-08-20",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "China's J-36 fighter jet designers report danger of military AI hallucinations",
+    "title_en": "China's J-36 fighter jet designers report danger of military AI hallucinations",
+    "title_zh": "中国J-36战斗机设计团队报告军事AI幻觉风险",
+    "summary_zh": "中国的J-36战斗机设计团队警告称，人工智能模型生成的内容可能“违背基本物理原理、设计原则或作战约束”，存在军事AI幻觉的危险，提醒在战机设计等关键军事领域需谨慎使用AI。",
+    "source": "南华早报",
+    "category": "军事安全",
+    "keywords": [
+      "J-36",
+      "战斗机",
+      "军事AI",
+      "幻觉"
+    ],
+    "url": "https://www.scmp.com/news/china/science/article/3364546/chinas-j-36-fighter-jet-designers-report-danger-military-ai-hallucinations",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "China blocks firms aiding EU's JD.com probe, regulatory clash deepens",
+    "title_en": "China blocks firms aiding EU's JD.com probe, regulatory clash deepens",
+    "title_zh": "中国阻止企业协助欧盟调查京东 监管冲突加剧",
+    "summary_zh": "中国司法部和商务部联合声明，禁止国内企业协助欧盟对京东（JD.com）的调查，并谴责欧盟的“不当域外管辖权措施”。此举标志着中欧之间的监管冲突进一步加深。",
+    "source": "南华早报",
+    "category": "经贸制裁",
+    "keywords": [
+      "中国",
+      "欧盟",
+      "京东",
+      "外国补贴调查",
+      "监管冲突"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3364599/china-blocks-firms-aiding-eus-jdcom-probe-regulatory-clash-deepens",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "China to build environmental monitoring station near disputed Scarborough Shoal",
+    "title_en": "China to build environmental monitoring station near disputed Scarborough Shoal",
+    "title_zh": "中国将在有争议的黄岩岛附近建造环境监测站",
+    "summary_zh": "中国计划在南中国海争议焦点黄岩岛（Scarborough Shoal）附近建造一个环境监测站。文章指出，北京围绕该地区的生态举措一直是其与马尼拉和华盛顿之间紧张关系日益增长的来源。",
+    "source": "南华早报",
+    "category": "中美关系",
+    "keywords": [
+      "黄岩岛",
+      "南海",
+      "环境监测站",
+      "中菲关系"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3364581/china-build-environmental-monitoring-station-near-disputed-scarborough-shoal",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Taiwan-made satellite launcher fails first test, triggers missile panic",
+    "title_en": "Taiwan-made satellite launcher fails first test, triggers missile panic",
+    "title_zh": "台湾自制卫星运载火箭首测失败 引发导弹恐慌",
+    "summary_zh": "台湾自行研发的卫星运载火箭在首次测试中偏离轨道并坠毁在偏远地区，一度引发当地居民的导弹恐慌。屏东县政府已要求作出解释。",
+    "source": "南华早报",
+    "category": "台海",
+    "keywords": [
+      "台湾",
+      "运载火箭",
+      "测试失败",
+      "导弹"
+    ],
+    "url": "https://www.scmp.com/news/china/military/article/3364561/taiwan-made-satellite-launcher-fails-first-test-triggers-missile-panic",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Is the US actually too chicken to take on China for trade?",
+    "title_en": "Is the US actually too chicken to take on China for trade?",
+    "title_zh": "美国真的敢与中国正面进行贸易交锋吗？",
+    "summary_zh": "分析文章探讨美国在贸易问题上是否真的敢于与中国正面交锋，并分析了人民币汇率走弱背景下的美中贸易博弈态势，质疑美国贸易鹰派姿态的实际成效。",
+    "source": "卫报",
+    "category": "中美关系",
+    "keywords": [
+      "中美贸易",
+      "人民币汇率",
+      "贸易战"
+    ],
+    "url": "https://www.theguardian.com/us-news/2026/aug/19/china-trump-trade-weak-yuan",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Kim Jong-un's sister casts doubt on Trump's claims of secret US-North Korea talks",
+    "title_en": "Kim Jong-un's sister casts doubt on Trump's claims of secret US-North Korea talks",
+    "title_zh": "金正恩胞妹质疑特朗普关于美朝秘密会谈的说法",
+    "summary_zh": "金正恩的妹妹金与正对特朗普声称的美朝秘密会谈表示质疑，称对华盛顿方面宣称的沟通“不知情”，削弱了特朗普关于两国间进行非公开外交接触说法的可信度，凸显美朝关系的不确定性。",
+    "source": "卫报",
+    "category": "地缘政治",
+    "keywords": [
+      "金与正",
+      "美朝关系",
+      "特朗普",
+      "金正恩",
+      "秘密会谈"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/19/kim-jong-un-sister-doubt-trump-claims-secret-us-north-korea-talks",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Trump pauses Canada tariffs threat, and hints at revival of Keystone XL pipeline",
+    "title_en": "Trump pauses Canada tariffs threat, and hints at revival of Keystone XL pipeline",
+    "title_zh": "特朗普暂缓对加拿大关税威胁 暗示重启Keystone XL输油管道",
+    "summary_zh": "特朗普暂缓了对加拿大加征关税的威胁（50%关税推迟三天），并暗示可能重启此前被拜登政府取消的Keystone XL输油管道项目，显示美加贸易关系出现缓和迹象。",
+    "source": "卫报",
+    "category": "经贸制裁",
+    "keywords": [
+      "特朗普",
+      "加拿大",
+      "关税",
+      "Keystone XL",
+      "输油管道"
+    ],
+    "url": "https://www.theguardian.com/us-news/2026/aug/19/trump-delay-canada-tariffs-keystone-xl-oil-pipeline",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Jaecoo owner Chery takes 'next step' in UK push with R&D centre",
+    "title_en": "Jaecoo owner Chery takes 'next step' in UK push with R&D centre",
+    "title_zh": "奇瑞在英国设立研发中心 推进Jaecoo品牌进军英国市场",
+    "summary_zh": "中国汽车制造商奇瑞宣布在英国设立研发中心，进一步推进其旗下品牌Jaecoo进入英国市场的计划，是其国际化战略的又一关键步骤，也是中国车企加速布局欧洲市场的信号。",
+    "source": "卫报",
+    "category": "中国",
+    "keywords": [
+      "奇瑞",
+      "Jaecoo",
+      "英国",
+      "研发中心",
+      "汽车"
+    ],
+    "url": "https://www.theguardian.com/business/2026/aug/19/chinese-carmaker-chery-to-set-up-uk-research-centre",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Trump wants South Korea to defend itself. His overtures to Kim Jong Un could delay that",
+    "title_en": "Trump wants South Korea to defend itself. His overtures to Kim Jong Un could delay that",
+    "title_zh": "特朗普要求韩国自卫 但其对金正恩的示好或适得其反",
+    "summary_zh": "文章分析特朗普希望韩国加强自卫能力，但其对金正恩的示好姿态、削减美韩联合军演的做法，可能反而推迟韩国实现防务自主的目标，动摇美韩同盟的可信度。",
+    "source": "CNN",
+    "category": "地缘政治",
+    "keywords": [
+      "特朗普",
+      "韩国",
+      "金正恩",
+      "美韩同盟",
+      "自卫"
+    ],
+    "url": "https://edition.cnn.com/2026/08/19/asia/trump-south-korea-alliance-intl-hnk-ml",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Iran's latest warning to the US signals the hardliners are just getting started",
+    "title_en": "Iran's latest warning to the US signals the hardliners are just getting started",
+    "title_zh": "伊朗对美最新警告显示强硬派才刚刚开始",
+    "summary_zh": "伊朗向美国发出最新警告，表明其国内强硬派势力正在进一步加强影响力，美伊围绕核问题与霍尔木兹海峡的对峙局势可能进一步升级。",
+    "source": "CNN",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国",
+      "强硬派",
+      "警告"
+    ],
+    "url": "https://edition.cnn.com/2026/08/19/middleeast/iran-hardliners-just-getting-started-intl",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "U.A.E. Announces Halt to Trade With Iran Amid Trump's Push To Isolate Tehran",
+    "title_en": "U.A.E. Announces Halt to Trade With Iran Amid Trump's Push To Isolate Tehran",
+    "title_zh": "阿联酋宣布暂停与伊朗贸易 特朗普施压孤立德黑兰",
+    "summary_zh": "阿联酋在指控伊朗发射弹道导弹后宣布暂停与伊朗的贸易、商业及金融交易。阿联酋长期以来是伊朗的主要贸易枢纽，分析人士称其一直是伊朗规避国际制裁的关键，阿联酋官员否认这一说法。",
+    "source": "纽约时报",
+    "category": "中东",
+    "keywords": [
+      "阿联酋",
+      "伊朗",
+      "贸易制裁",
+      "弹道导弹",
+      "孤立"
+    ],
+    "url": "https://www.nytimes.com/2026/08/19/world/middleeast/uae-cuts-trade-ties-iran-missiles.html",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Chinese Start-Up Lands Reusable Rocket for the First Time",
+    "title_en": "Chinese Start-Up Lands Reusable Rocket for the First Time",
+    "title_zh": "中国民营公司首次实现可回收火箭陆地回收",
+    "summary_zh": "中国民营航天公司蓝箭航天成功完成朱雀三号运载火箭一子级着陆腿陆地回收，这是中国首次实现可回收火箭回收，标志性里程碑可能使中国更接近在低成本航天领域挑战SpaceX的主导地位。",
+    "source": "纽约时报",
+    "category": "科技",
+    "keywords": [
+      "蓝箭航天",
+      "朱雀三号",
+      "可回收火箭",
+      "SpaceX",
+      "航天"
+    ],
+    "url": "https://www.nytimes.com/2026/08/19/world/asia/china-rocket-first-stage-recovery-land.html",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "With Limited Options, Trump Tries Economic Pressure on Iran — Again",
+    "title_en": "With Limited Options, Trump Tries Economic Pressure on Iran — Again",
+    "title_zh": "选项有限 特朗普再次对伊朗施加经济压力",
+    "summary_zh": "分析文章指出，伊朗已在数十年制裁中幸存，面对更多制裁很可能选择升级而非屈服。特朗普在军事选项受限的情况下再次尝试以经济压力迫使伊朗让步。",
+    "source": "纽约时报",
+    "category": "中东",
+    "keywords": [
+      "特朗普",
+      "伊朗",
+      "经济制裁",
+      "经济压力"
+    ],
+    "url": "https://www.nytimes.com/2026/08/19/world/europe/iran-trump-economic-sanctions-leverage.html",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "OpenAI's Second-Quarter Revenue Disappoints Some Investors",
+    "title_en": "OpenAI's Second-Quarter Revenue Disappoints Some Investors",
+    "title_zh": "OpenAI二季度收入令部分投资者失望 Anthropic首次反超",
+    "summary_zh": "据《华尔街日报》独家报道，OpenAI向投资者透露二季度营收环比增长18%至67亿美元（一季度为57亿美元），但运营亏损从93亿扩大至123亿美元，在备受期待的IPO前距离盈利越来越远。与此同时，竞争对手Anthropic同期收入超过115亿美元，首次在季度营收上超越OpenAI并实现小幅运营盈利，AI竞争格局发生巨变。",
+    "source": "华尔街日报",
+    "category": "科技",
+    "keywords": [
+      "OpenAI",
+      "Anthropic",
+      "营收",
+      "IPO",
+      "AI竞争"
+    ],
+    "url": "https://www.wsj.com/podcasts/tech-news-briefing/tnb-tech-minute-openais-second-quarter-revenue-disappoints-some-investors/49FE6C70-11FE-49F4-844D-01AC15CCEAD4",
+    "priority_score": 92,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Trump says he will meet North Korea's Kim Jong Un later this year, eyeing APEC in Shenzhen",
+    "title_en": "Trump says he will meet North Korea's Kim Jong Un later this year, eyeing APEC in Shenzhen",
+    "title_zh": "特朗普预计今年晚些时候会晤金正恩 或在深圳APEC期间会面",
+    "summary_zh": "特朗普8月19日在白宫表示，预计今年晚些时候将会见朝鲜领导人金正恩，这将是他第二任期内与金正恩的首次会晤。据《华尔街日报》报道，特朗普私下讨论过在中国深圳举行的亚太经合组织（APEC）峰会（11月18-19日）期间与金正恩面对面会谈。特朗普罕见地评估朝鲜拥有57枚“非常强大”的核武器。",
+    "source": "华尔街日报",
+    "category": "地缘政治",
+    "keywords": [
+      "特朗普",
+      "金正恩",
+      "会晤",
+      "APEC",
+      "深圳",
+      "朝鲜"
+    ],
+    "url": "https://www.channelnewsasia.com/world/trump-kim-jong-un-meeting-north-korea-us-6329366",
+    "priority_score": 92,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Trump announces 'most crushing economic operation ever' against Iran",
+    "title_en": "Trump announces 'most crushing economic operation ever' against Iran",
+    "title_zh": "特朗普宣布对伊朗发动“史上最严厉经济行动”",
+    "summary_zh": "美国总统特朗普宣布对伊朗发动其所称的“史上最严厉经济行动”，并表示任何与伊朗贸易的国家都将“面临巨大的经济后果”。此举标志着美伊对抗在近六个月战争后进一步升级。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "特朗普",
+      "伊朗",
+      "经济制裁",
+      "经济行动"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/19/trump-announces-most-crushing-economic-operation-ever-against-iran",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "US national debt passes record $40 trillion",
+    "title_en": "US national debt passes record $40 trillion",
+    "title_zh": "美国国债史上首次突破40万亿美元",
+    "summary_zh": "美国联邦政府债务史上首次突破40万亿美元，十年间增长逾一倍。在美伊战争推高油价与通胀、利率高企的背景下，国债规模创新高引发对财政可持续性的担忧。",
+    "source": "半岛电视台",
+    "category": "美国",
+    "keywords": [
+      "美国国债",
+      "40万亿",
+      "财政",
+      "债务"
+    ],
+    "url": "https://www.aljazeera.com/economy/2026/8/19/us-national-debt-passes-record-40-trillion",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Pentagon quizzes NATO allies on political loyalty, documents reveal",
+    "title_en": "Pentagon quizzes NATO allies on political loyalty, documents reveal",
+    "title_zh": "文件显示五角大楼问卷调查北约盟友政治忠诚度",
+    "summary_zh": "半岛电视台独家获得的五角大楼问卷显示，美方在问卷中调查北约盟友对美国政策的忠诚度，询问其是否支持美国立场。此举引发盟友对美方强推阵营忠诚的担忧。",
+    "source": "半岛电视台",
+    "category": "地缘政治",
+    "keywords": [
+      "五角大楼",
+      "北约",
+      "忠诚度",
+      "问卷",
+      "独家"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/19/pentagon-quizzes-nato-allies-on-political-loyalty-documents-reveal",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Publisher of US military newspaper resigns over differences with government",
+    "title_en": "Publisher of US military newspaper resigns over differences with government",
+    "title_zh": "美军报纸《星条旗报》出版商因与政府分歧辞职",
+    "summary_zh": "长期担任《星条旗报》出版商的负责人辞职，正值特朗普政府推动对该报实施编辑控制之际。该报是美国军方独立报纸，其独立性面临政府施压。",
+    "source": "半岛电视台",
+    "category": "美国",
+    "keywords": [
+      "星条旗报",
+      "美军",
+      "出版商",
+      "媒体控制",
+      "辞职"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/20/publisher-of-us-military-newspaper-resigns-over-differences-with-government",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "date": "2026-08-20",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "Trump's spat with Seoul has allies rethinking US defense ties",
+    "title_en": "Trump's spat with Seoul has allies rethinking US defense ties",
+    "title_zh": "特朗普与韩国摩擦令美国盟友重新评估对美防务关系",
+    "summary_zh": "特朗普与韩国的摩擦正促使美国盟友重新评估与华盛顿的防务关系。文章指出，韩国在贸易和安全议题上承受的双重压力，可能动摇区域内其他国家对美国安全承诺的信心。",
+    "source": "Politico",
+    "category": "地缘政治",
+    "keywords": [
+      "特朗普",
+      "韩国",
+      "盟友",
+      "防务关系",
+      "安全承诺"
+    ],
+    "url": "https://www.politico.com/news/2026/08/19/trump-south-korea-snub-region-scrambling-01042987",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "South Korea admits Trump blindsided Seoul by cutting military drills",
+    "title_en": "South Korea admits Trump blindsided Seoul by cutting military drills",
+    "title_zh": "韩国承认特朗普削减联合军演令首尔措手不及",
+    "summary_zh": "韩国官员承认，特朗普政府单方面削减美韩联合军演规模的决定令首尔措手不及，引发对美韩安全同盟可靠性的担忧。原计划持续至27日的“乙支自由之盾”演习提前结束，第二阶段反击演练被取消。",
+    "source": "Politico",
+    "category": "地缘政治",
+    "keywords": [
+      "韩国",
+      "美韩军演",
+      "特朗普",
+      "措手不及",
+      "同盟"
+    ],
+    "url": "https://www.politico.eu/article/south-korea-says-donald-trump-blindsided-seoul-military-drill-cuts/",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "World shares mostly decline, hit by heavy selling of AI-related shares",
+    "title_en": "World shares mostly decline, hit by heavy selling of AI-related shares",
+    "title_zh": "全球股市普遍下跌 AI概念股遭重挫",
+    "summary_zh": "受AI相关股票遭大规模抛售影响，全球股市周三普遍下跌：韩国KOSPI大跌5.8%，三星电子跌7.8%、SK海力士跌9.8%；日经指数跌3.2%；沪指跌2.4%。中国人形机器人制造商宇树科技上市首日一度暴涨近630%，收盘涨460%。市场担忧AI股估值过高，同时油价高企拖累市场情绪。",
+    "source": "美联社",
+    "category": "科技",
+    "keywords": [
+      "全球股市",
+      "AI股",
+      "抛售",
+      "三星",
+      "SK海力士",
+      "宇树"
+    ],
+    "url": "https://www.bnnbloomberg.ca/business/international/2026/08/19/shares-fall-in-asia-with-kospi-down-57-while-oil-prices-jump",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
+  },
+  {
+    "title": "US stocks halt their slide after the Treasury Department moves to ease pressure from the bond market",
+    "title_en": "US stocks halt their slide after the Treasury Department moves to ease pressure from the bond market",
+    "title_zh": "美财政部缓解债市压力 美股止住跌势",
+    "summary_zh": "在财政部宣布扩大长期国债回购规模以缓解债市压力后，美国股市止住连续下跌势头。此前30年期美债收益率一度升至2007年以来最高水平，债市压力令投资者担忧。",
+    "source": "美联社",
+    "category": "美国",
+    "keywords": [
+      "美股",
+      "财政部",
+      "国债回购",
+      "债市",
+      "收益率"
+    ],
+    "url": "https://apnews.com/article/stocks-futures-bonds-oil-inflation-trump-ai-9e355be634e4a21059fc1d1f20a1239e",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "date": "2026-08-19",
+    "collectedAt": "2026-08-20 09:30:00"
   }
 ]

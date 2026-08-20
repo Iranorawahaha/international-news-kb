@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-08-19 09:21",
+  "timestamp": "2026-08-20 09:11",
   "sites": [
     {
       "site": "白宫",
       "url": "https://www.whitehouse.gov/news/",
       "status": "✅ 成功",
-      "count": 1
-    },
-    {
-      "site": "美国国务院",
-      "url": "https://www.state.gov/press-releases/",
-      "status": "✅ 成功",
-      "count": 3
+      "count": 2
     },
     {
       "site": "美国财政部",
       "url": "https://home.treasury.gov/news/press-releases",
       "status": "✅ 成功",
       "count": 0
+    },
+    {
+      "site": "美国国务院",
+      "url": "https://www.state.gov/press-releases/",
+      "status": "❌ 失败",
+      "error": "HTTP Error 407: "
     }
   ],
   "webfetch_required": [
@@ -40,5 +40,5 @@
       "note": "美国贸易代表办公室(USTR) 有 WAF/反爬（curl 不可达），需用 WebFetch 工具抓取每个公告页（含中文翻译、真实日期、摘要）后写入 us-official-webfetch.json"
     }
   ],
-  "total": 32
+  "total": 30
 }
