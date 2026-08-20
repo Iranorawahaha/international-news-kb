@@ -1,6 +1,6 @@
 {
  "version": "5.0",
- "lastUpdated": "2026-08-20 09:25",
+ "lastUpdated": "2026-08-20 09:30",
  "retentionDays": 7,
  "archive": {
   "2026-08-14": [
@@ -1342,7 +1342,7 @@
     "date": "2026-08-20",
     "source": "人民日报",
     "category": "人事任免",
-    "priority_score": 86,
+    "priority_score": 88,
     "is_summit_level": false,
     "summary": "本报重庆8月19日电&nbsp;&nbsp;（记者李增辉、刘新吾）重庆市第六届人民代表大会第五次会议8月19日选举陈新武为重庆市人民政府市长。",
     "collectedAt": "2026-08-20 09:11:24"
@@ -1386,7 +1386,7 @@
     "date": "2026-08-19",
     "source": "央视新闻",
     "category": "部委动态",
-    "priority_score": 85,
+    "priority_score": 88,
     "is_summit_level": false,
     "summary": "司法部就欧盟外国补贴调查相关做法答记者问，指出欧盟相关做法构成不当域外管辖，损害中欧经贸合作与市场公平竞争，中方将依法维护企业合法权益。",
     "collectedAt": "2026-08-20 09:11:24"
@@ -1522,6 +1522,17 @@
     "is_summit_level": false,
     "summary": "市场监管总局、国家发展改革委、生态环境部联合印发《碳排放计量能力建设指导目录（2026版）》，关键测量参数由39个增至58个、检测标准方法由82种扩展至169种，进一步健全完善全国碳排放计量技术体系，为全国碳市场发展提供明确计量指南。",
     "collectedAt": "2026-08-20 09:25:00"
+   },
+   {
+    "title": "司法部发布关于欧盟外国补贴调查相关做法构成不当域外管辖的公告",
+    "url": "https://news.cctv.com/2026/08/19/ARTIFeHnyoa7Lgcdpzrl2Utc260819.shtml",
+    "date": "2026-08-19",
+    "source": "央视新闻",
+    "category": "部委动态",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "summary": "8月19日，司法部发布公告，认定欧盟外国补贴调查相关做法构成不当域外管辖，损害中欧经贸合作与市场公平竞争，中方将依法采取必要措施维护企业合法权益。",
+    "collectedAt": "2026-08-20 09:30:00"
    }
   ]
  },
@@ -1535,9 +1546,9 @@
   "2026-08-14"
  ],
  "today": "2026-08-20",
- "todayCount": 25,
+ "todayCount": 26,
  "stats": {
-  "totalArticles": 137,
+  "totalArticles": 138,
   "dateCount": 7,
   "latestDate": "2026-08-20",
   "summitCount": 16
