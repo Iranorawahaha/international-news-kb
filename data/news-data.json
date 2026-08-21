@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-08-21 10:08",
+  "lastUpdated": "2026-08-21 10:11",
   "retentionDays": 7,
   "archive": {
     "2026-08-14": [
@@ -7067,7 +7067,7 @@
         "summary_en": "The Department of War's Office of Strategic Capital (OSC) announced the formal Notice of Funding Opportunity (NOFO) for its National Security Fund Finance (NSFF) program, which aims to provide capital support to credit funds addressing shortages and vulnerabilities in critical minerals vital to U.S. national security. The NSFF program will provide loans to qualified investment fund managers, who will combine OSC loans with private capital to invest in portfolio companies addressing U.S. national security shortages in critical minerals and materials. Proposals due November 1, 2026.",
         "summary_zh": "美国国防部战略资本办公室（OSC）宣布正式发布“国家安全基金”（NSFF）融资计划的资金机会公告（NOFO）。该计划旨在为应对美国关键矿产短缺与脆弱性的信贷基金提供资本支持，将向合格投资基金管理人提供贷款，由其结合私人资本投资于解决美国关键矿产与材料安全缺口的组合公司。申请截止2026年11月1日。该计划资金来自特朗普签署的《一个大而美丽的法案》。",
         "source": "美国国防部(war.gov)",
-        "category": null,
+        "category": "军事安全",
         "keywords": [],
         "url": "https://www.war.gov/News/Releases/Release/Article/4579297/office-of-strategic-capital-posts-application-for-national-security-fund-financ/",
         "priority_score": 75,
@@ -7242,7 +7242,7 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-20_74197",
+        "id": "auto_2026-08-20_16743",
         "date": "2026-08-20",
         "title": null,
         "title_en": "U.S. – Jamaica Joint Statement on Status of Forces Agreement",
@@ -7251,7 +7251,7 @@
         "summary_en": "The Governments of the United States and Jamaica have signed a Status of Forces Agreement (SOFA), building on the bilateral security partnership discussed by Secretary of War Pete Hegseth and Jamaican Deputy Prime Minister Dr. Horace Chang during their meeting at the Americas Counter Cartels Coalition Forum in Panama on August 12, 2026. Jamaica joins more than 120 partner nations with similar agreements with the United States. The SOFA is a message to criminal organizations in the region that U.S. and Jamaica Defence Force are committed to deepening cooperation against narco-terrorists.",
         "summary_zh": "美国与牙买加签署《部队地位协定》（SOFA），基于2026年8月12日美国防长赫格塞斯与牙买加副总理兼国安部长张贺斯在巴拿马美洲反卡特尔联盟论坛期间的会晤。该协定规范双方武装力量在对方领土临时驻留的条件，牙买加成为与美签有类似协定的120多个伙伴国之一。美方称这是向区域犯罪组织发出的信号：美军与牙买加国防军将深化合作打击贩毒与走私。",
         "source": "美国国防部(war.gov)",
-        "category": null,
+        "category": "地缘政治",
         "keywords": [],
         "url": "https://www.war.gov/News/Releases/Release/Article/4578742/us-jamaica-joint-statement-on-status-of-forces-agreement/",
         "priority_score": 0,
