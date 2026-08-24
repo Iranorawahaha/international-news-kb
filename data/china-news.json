@@ -1,298 +1,8 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-08-22 11:30",
+  "lastUpdated": "2026-08-24 09:16",
   "retentionDays": 7,
   "archive": {
-    "2026-08-16": [
-      {
-        "title": "厄瓜多尔总统诺沃亚抵达北京开始访华",
-        "url": "https://world.people.com.cn/n1/2026/0816/c1002-40780230.html",
-        "date": "2026-08-16",
-        "source": "人民网",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "新华社北京8月16日电 应国家主席习近平邀请，厄瓜多尔总统诺沃亚8月16日清晨抵达北京，开始对中国进行为期8天的国事访问。厄瓜多尔是拉美重要国家，今年是中厄建立全面战略伙伴关系十周年。此访是诺沃亚总统首次对中国进行国事访问。",
-        "collectedAt": "2026-08-16 10:24:04"
-      },
-      {
-        "title": "我国多措并举加快绿色低碳发展",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078141.htm",
-        "date": "2026-08-15",
-        "source": "中国政府网·要闻",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "今天（8月15日），2026年全国生态日主场活动在内蒙古自治区呼伦贝尔市举办，主题为“厚植中国式现代化的绿色底色”。国家发展改革委等多部门发布生态文明建设重要成果：2012年以来，我国以年均3.4%的能耗增速，支撑了年均6.1%的经济增长，成为全球能耗强度、碳排放强度下降最快的国家之一。",
-        "collectedAt": "2026-08-16 10:24:04"
-      },
-      {
-        "title": "河南周口贾鲁河堤坝溃口顺利合龙",
-        "url": "https://society.people.com.cn/n1/2026/0816/c1008-40780285.html",
-        "date": "2026-08-16",
-        "source": "人民网",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "8月13日23时许，河南省周口市川汇区新北环附近贾鲁河堤坝出现溃口，最长时约117米。现场采取溃口两端双向进占、平堵立堵相结合的方式开展封堵。8月15日20时29分，溃口成功实现封堵合龙。国家防总办公室、应急管理部派出工作组赴现场指导，调派中国安能工程救援队伍和大型机械装备执行封堵任务，累计安全转移群众781人。",
-        "collectedAt": "2026-08-16 10:24:04"
-      },
-      {
-        "title": "内蒙古自治区人大财政经济委员会主任委员冯玉臻被查",
-        "url": "https://www.chinanews.com/gn/2026/08-15/10678264.shtml",
-        "date": "2026-08-15",
-        "source": "中新网",
-        "category": "人事任免",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "summary": "中央纪委国家监委网站8月15日通报，据内蒙古自治区纪委监委消息，内蒙古自治区人大财政经济委员会主任委员冯玉臻涉嫌严重违纪违法，目前正接受内蒙古自治区纪委监委纪律审查和监察调查。冯玉臻曾任通辽市委书记、呼和浩特市委副书记、市长。",
-        "collectedAt": "2026-08-16 10:24:04"
-      },
-      {
-        "title": "全国首例适用生态环境法典审理的案件在浙江衢州宣判",
-        "url": "https://cpc.people.com.cn/n1/2026/0816/c64387-40780310.html",
-        "date": "2026-08-16",
-        "source": "人民网",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "8月15日，我国第二部法典《中华人民共和国生态环境法典》正式施行。当日，全国首例适用生态环境法典审理的噪声污染责任纠纷案在浙江省衢州市衢江区人民法院开庭并当庭宣判，法院判决被告限期降噪减振整改、赔偿原告医疗费和精神损害抚慰金。",
-        "collectedAt": "2026-08-16 10:24:04"
-      },
-      {
-        "title": "中国特稿：中国缩小与美国前沿差距引恐慌 华盛顿祭出防堵大招 硅谷AI罕见降价应战",
-        "url": "https://www.zaobao.com/news/china/story20260816-9514193",
-        "date": "2026-08-16",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "美国加州洛杉矶的华人创业者李嘉年，把中国AI企业智谱开放下载的GLM-5.2部署到本地服务器，取代AI编程软件Claude Code的部分任务。他说，对七成左右的日常工作，智谱的完成度与Claude“已不相上下，不须要全部都用最贵的模型”。",
-        "collectedAt": "2026-08-16 09:52:08"
-      },
-      {
-        "title": "西部陆海新通道：1至7月沿线省区市经通道进出口超6000亿元",
-        "url": "https://news.cctv.com/2026/08/16/ARTIaGZW53EJfHIvqUHt8zhe260816.shtml",
-        "date": "2026-08-16",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "今年1-7月，西部陆海新通道沿线省区市经通道进出口历史同期首次超6000亿元，达到6036.3亿元，同比增长10.9%，延续两位数增长态势。",
-        "collectedAt": "2026-08-16 09:52:08"
-      },
-      {
-        "title": "阿里巴巴AI模型下载量突破30亿次 超越Meta和谷歌",
-        "url": "https://www.zaobao.com/news/china/story20260816-9525821",
-        "date": "2026-08-16",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "过去六个月，中国科技巨头阿里巴巴旗下开放权重模型的全球累计下载量超过30亿次，超越美国科技巨头Meta和Alphabet以及中国同行，成为全球下载量最高的AI模型。",
-        "collectedAt": "2026-08-16 09:52:08"
-      }
-    ],
-    "2026-08-17": [
-      {
-        "title": "《求是》杂志发表习近平总书记重要文章《提高防灾减灾救灾能力》",
-        "url": "https://tv.cctv.com/2026/08/16/VIDEdZxu2YI46CcbP0tker32260816.shtml",
-        "date": "2026-08-16",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "《求是》杂志发表习近平总书记重要文章《提高防灾减灾救灾能力》。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "习近平：在纪念江泽民同志诞辰100周年大会上的讲话",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078250.htm",
-        "date": "2026-08-17",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "今天，我们隆重集会，纪念江泽民同志诞辰一百周年，深切缅怀他的丰功伟绩，深入学习他的崇高风范，激励全党全国各族人民把中国特色社会主义事业不断推向前进。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "纪念江泽民同志诞辰100周年大会在京隆重举行 习近平发表重要讲话",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078248.htm",
-        "date": "2026-08-17",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "新华社北京8月17日电 中共中央、全国人大常委会、国务院、全国政协、中央军委17日上午在人民大会堂隆重举行大会，纪念伟大的马克思主义者，伟大的无产阶级革命家、政治家、军事家、外交家，中国特色社会主义伟…",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "中央安全生产考核巡查组明查暗访上海 揪出危险货物运输乱象",
-        "url": "https://news.china.com/socialgd/10000169/20260817/49680353.html",
-        "date": "2026-08-16",
-        "source": "中国应急管理报",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "中央安全生产考核巡查组第六组近日在上海开展明查暗访，查处危险货物运输领域乱象：企业撕除危化品安全标签、伪报品名，无资质货车违规承运易燃危货，物流场站查验机制失灵、成为危货“隐身地”。巡查组要求压实企业安全生产主体责任、完善跨部门协同监管体系，推动上海危货运输“打非治违”专项行动走深走实。",
-        "collectedAt": "2026-08-17 17:55:18"
-      },
-      {
-        "title": "公安机关网安部门破获3起影视行业舆情敲诈案 24人落网",
-        "url": "https://news.china.com/socialgd/10000169/20260817/49680418.html",
-        "date": "2026-08-17",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "公安部网安局8月17日通报，公安机关网安部门接连破获3起针对影视行业的网络舆情敲诈案，累计抓获犯罪嫌疑人24名：浙江杭州团伙操控百万级粉丝自媒体账号捏造影视剧负面信息倒逼购买“护剧”服务，抓获10人；福建福州2人炮制不实内容收钱删帖；广东河源团伙利用AI工具操控大V账号制造负面舆论实施敲诈，抓获12人。",
-        "collectedAt": "2026-08-17 17:55:18"
-      },
-      {
-        "title": "1—7月份国民经济保持总体平稳、向新向优发展态势",
-        "url": "https://www.gov.cn/lianbo/202608/content_7078273.htm",
-        "date": "2026-08-17",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "1—7月份，在以习近平同志为核心的党中央坚强领导下，各地区各部门认真贯彻落实党中央、国务院决策部署，坚持稳中求进工作总基调，有效应对各种外部冲击和内部困难，着力实施更加积极有为的宏观政策，扎实推动高质…",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "中国人民银行新增8家数字人民币业务运营机构",
-        "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081714114337358/index.html",
-        "date": "2026-08-17",
-        "source": "中国人民银行",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "中国人民银行8月17日宣布，新增平安银行、恒丰银行、渤海银行、上海银行、杭州银行、徽商银行、长沙银行、广西北部湾银行成为银行类数字人民币业务运营机构，并接入央行端数字人民币系统。目前数字人民币业务运营机构已扩容至30家，下一步将按市场化、法治化原则有序推进扩容。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "前7月人民币贷款增加10.38万亿元",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/17/content_30175281.html",
-        "date": "2026-08-17",
-        "source": "人民日报",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "在贷款规模保持合理增长的同时，信贷结构持续优化。7月末，我国普惠小微贷款余额38.19万亿元，同比增长9.0%，不含房地产业的服务业中长期贷款余额61.94万亿元，同比增长9.3%，以上贷款增速均高于…",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "外交部介绍约旦国王阿卜杜拉二世访华相关安排",
-        "url": "https://news.cctv.com/2026/08/17/ARTIWEDZUyAzVi3aeJoIlX6o260817.shtml",
-        "date": "2026-08-17",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "8月17日，外交部发言人林剑主持例行记者会。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "我国汽车芯片五项认证认可行业标准发布",
-        "url": "https://news.cctv.com/2026/08/17/ARTIOh7JPHav9DMhmXOIYSVK260817.shtml",
-        "date": "2026-08-17",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "记者今天了解到，市场监管总局（国家认监委）近日批准立项的《汽车芯片机构认证审查 通用评价要求》等五项认证认可行业标准发布。长期以来，由于缺乏统一的评价体系，国产芯片在上车应用过程中面临准入壁垒高、市场…",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "事关国际单位制及应用标准 市场监管总局公开征求意见",
-        "url": "https://news.cctv.com/2026/08/17/ARTI3GYroEIYssGe3pL63pp8260817.shtml",
-        "date": "2026-08-17",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "记者今天了解到，市场监管总局发布公告，就强制性国家标准《国际单位制及其应用（征求意见稿）》面向社会公开征求意见，意见反馈截止时间为9月13日。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "关于印发《石油天然气发展“十五五”规划》的通知",
-        "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260817_1407042.html",
-        "date": "2026-08-17",
-        "source": "国家发改委",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "国家发展改革委、国家能源局联合印发《石油天然气发展“十五五”规划》，锚定保障能源安全和绿色低碳发展两大任务，部署油气勘探开发、储运设施建设、绿色低碳转型等重点任务，明确到2030年油气行业发展目标。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "国务院关于《特殊教育发展提升“十五五”行动计划》的批复",
-        "url": "https://www.gov.cn/zhengce/content/202608/content_7078320.htm",
-        "date": "2026-08-17",
-        "source": "中国政府网·要闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "000014349/2026-00064",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "针对工业园区污水污染等问题，八部门联合印发通知",
-        "url": "https://news.cctv.com/2026/08/17/ARTII4PYaNef73HLatR40noJ260817.shtml",
-        "date": "2026-08-17",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "近日，生态环境部联合工业和信息化部、公安部、自然资源部、水利部、农业农村部、最高人民法院、最高人民检察院印发《关于进一步加强工业等污水污染风险防范 保障农业灌溉用水安全的通知》。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "1至7月全国铁路完成固定资产投资4406亿元，同比增长1.8%",
-        "url": "https://news.cctv.com/2026/08/17/ARTIKfyzdWXgUQe6FIRNdJM8260817.shtml",
-        "date": "2026-08-17",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "今年以来，铁路建设优质高效推进，1至7月全国铁路完成固定资产投资4406亿元，同比增长1.8%，现代化铁路基础设施体系加快构建，铁路建设投资拉动效应显著，为区域经济社会发展注入了强劲动能。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "“政府补贴+金融让利+企业优惠”叠加发力 汽车家电“焕新”集市惠民生",
-        "url": "https://news.cctv.com/2026/08/17/ARTIQsxDMyKwOk74ILbRnkUY260817.shtml",
-        "date": "2026-08-17",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "近日，宁夏银川开启今年首场汽车家电下乡主题展销活动，把流动车展、家电展和适老化服务打包送进乡镇集市，让乡亲们赶着大集，就能把实惠产品带回家。",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "前7月长三角外贸进出口值达11.41万亿元",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/17/content_30175283.html",
-        "date": "2026-08-17",
-        "source": "人民日报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "本报北京8月16日电&nbsp;&nbsp;（记者欧阳洁）记者从南京海关获悉：今年1—7月，长三角4省市外贸进出口值达11.41万亿元，规模创历史同期新高，同比增长18.9%，占全国进出口总值的37.…",
-        "collectedAt": "2026-08-17 17:46:26"
-      },
-      {
-        "title": "阿里巴巴或以15亿美元出售游戏业务 加速向人工智能转型",
-        "url": "https://www.zaobao.com/news/china/story20260817-9531271",
-        "date": "2026-08-17",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "阿里巴巴8月17日确认，将旗下游戏业务灵犀互娱出售给中信资本旗下信宸资本，交易价格超过15亿美元（约合人民币101亿元），系今年国内游戏市场规模最大的股权并购案。阿里将回笼资金集中投向AI与云计算、电商主业，加速向人工智能转型。",
-        "collectedAt": "2026-08-17 17:46:26"
-      }
-    ],
     "2026-08-18": [
       {
         "title": "习近平就印度尼西亚发生强烈地震向印尼总统普拉博沃致慰问电",
@@ -1710,23 +1420,200 @@
         "summary": "国家统计局21日发布的数据显示，2026年，全国早稻产量连续6年稳定在560亿斤以上，为全年粮食丰收奠定了良好基础。在强降雨、台风等极端天气影响下，早稻生产仍旧保持了稳定。",
         "collectedAt": "2026-08-22 11:30:08"
       }
+    ],
+    "2026-08-24": [
+      {
+        "title": "王毅会见约旦副首相兼外交大臣萨法迪",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078934.htm",
+        "date": "2026-08-23",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京8月23日电 中共中央政治局委员、外交部长王毅23日在北京会见陪同阿卜杜拉二世国王访华的约旦副首相兼外交大臣萨法迪。",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "王毅：希望并相信印尼会提供中企良好营商环境",
+        "url": "https://www.zaobao.com/news/china/story20260823-9561253",
+        "date": "2026-08-23",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "王毅：赞赏约旦坚定奉行对华友好政策 恪守“一中”原则",
+        "url": "https://www.zaobao.com/news/china/story20260824-9564385",
+        "date": "2026-08-24",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "70后覃卫国出任合肥市委书记",
+        "url": "https://www.zaobao.com/news/china/story20260823-9562628",
+        "date": "2026-08-23",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 86,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "国务院食安办、农业农村部、市场监管总局指导地方快速处置“白菜收购环节蘸取甲醛溶液”问题",
+        "url": "https://news.cctv.com/2026/08/23/ARTIihEKdiFtABZWAP2FHjFC260823.shtml",
+        "date": "2026-08-23",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "针对舆论关注的河北省张家口市康保县“白菜收购环节蘸取甲醛溶液”问题，国务院食安办、农业农村部、市场监管总局高度重视，第一时间指导属地调查核实，依法从严从快处置，对涉事白菜流向进行追查，严防问题产品流入…",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "国家卫健委通报：7位项目评审专家被处理 存在严重不良行为",
+        "url": "https://news.cctv.com/2026/08/23/ARTIyqwnVigZLtS5HjmXS9vo260823.shtml",
+        "date": "2026-08-23",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "国家卫生健康委医药卫生科技发展研究中心近日发布通报，7位存在严重不良行为的项目评审专家被处理。",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "奔走在城乡间的农货选品师（解码“十五五”专项规划）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/24/content_30176628.html",
+        "date": "2026-08-24",
+        "source": "人民日报",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "广袤大地上，有一群人奔走在城乡两头，一头连农户、一头连商户，是我国农产品流通体系的重要主体。",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "上半年经济增长4.7%说明了什么？",
+        "url": "https://news.cctv.com/2026/08/24/ARTINYs6R8mb6zCHU3euD2G1260824.shtml",
+        "date": "2026-08-24",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "上半年，我国经济顶压前行，延续总体平稳、向新向优的发展态势，国内生产总值（GDP）同比增长4.7%。",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "专家解读：人民币买卖新规 监管要求有何考量？",
+        "url": "https://news.cctv.com/2026/08/24/ARTIex1bNW9pLNp1C3JaM7q5260823.shtml",
+        "date": "2026-08-24",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国人民银行、市场监管总局近日发布公告，明确了人民币可以买卖和不得买卖的具体情形，细化相关监管要求。",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "人工智能蓬勃发展，会提供哪些就业机会（读者点题·共同关注）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/24/content_30176624.html",
+        "date": "2026-08-24",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "现在的人工智能越来越能干，正在深度融入我们的生产生活。人工智能不断发展，会提供哪些就业机会？普通人该怎么抓住新的机遇？",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "哈尔滨推动产业集群高质量发展（“十五五”开好局起好步）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/24/content_30176623.html",
+        "date": "2026-08-24",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "黑龙江哈尔滨市产业一线，一派热火朝天的繁忙景象：平房区低空经济产业园机声隆隆，一架架无人机产品从生产线上鱼贯而出；香坊区高端电气装备智能制造基地启用在即，许多企业紧锣密鼓开展入驻前的设备调试……",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "港财政司长：中国大陆AI迅速发展对香港经济金融发挥显著助力",
+        "url": "https://www.zaobao.com/news/china/story20260823-9561068",
+        "date": "2026-08-23",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "老品种焕发新活力！一只鸭子串起五十亿全产业链",
+        "url": "https://news.cctv.com/2026/08/23/ARTIJzwgKP3lsWZ5fVVNwpUi260823.shtml",
+        "date": "2026-08-23",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "在浙江省丽水市缙云县，当地的麻鸭是著名的高产蛋鸭品种。很长一段时间以来，麻鸭产业仅停留在卖鸭蛋、卖鸭肉的初级阶段。但是现在，鸭农们不再局限于传统耕地产出，还能依托最新的麻鸭羽毛深加工技术，生产高品质羽…",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "蔚来创始人李斌：中国汽车产业正进入最残酷决赛阶段",
+        "url": "https://www.zaobao.com/news/china/story20260823-9560980",
+        "date": "2026-08-23",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "让工厂“跑”在数字世界（新质生产力创造就业新空间）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/24/content_30176630.html",
+        "date": "2026-08-24",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "走进湖北武汉光谷华工科技产业园，一块大屏上，虚拟车间与真实产线同步显示：机械臂的每次挥舞、自动导引车的每次穿梭、传送带上每件产品的流转，都在数字世界中被复刻。这份“虚实联动”，源自一个被称为“数字孪生…",
+        "collectedAt": "2026-08-24 09:16:45"
+      },
+      {
+        "title": "阿里巴巴拟配售800亿港元新股 资金全投AI",
+        "url": "https://www.zaobao.com/news/china/story20260823-9560754",
+        "date": "2026-08-23",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-24 09:16:45"
+      }
     ]
   },
   "dates": [
+    "2026-08-24",
     "2026-08-22",
     "2026-08-21",
     "2026-08-20",
     "2026-08-19",
-    "2026-08-18",
-    "2026-08-17",
-    "2026-08-16"
+    "2026-08-18"
   ],
-  "today": "2026-08-22",
-  "todayCount": 39,
+  "today": "2026-08-24",
+  "todayCount": 16,
   "stats": {
-    "totalArticles": 154,
-    "dateCount": 7,
-    "latestDate": "2026-08-22",
-    "summitCount": 10
+    "totalArticles": 144,
+    "dateCount": 6,
+    "latestDate": "2026-08-24",
+    "summitCount": 6
   }
 }
