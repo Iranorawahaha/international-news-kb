@@ -6529,5 +6529,1175 @@
     "is_summit_level": false,
     "date": "2026-08-20",
     "collectedAt": "2026-08-21 09:55:00"
+  },
+  {
+    "title": "US vows 'economic D-Day' as Iran threatens to halt all oil exports 美国誓言实施\"经济D日\"制裁，伊朗威胁停止全部石油出口",
+    "title_zh": "美国誓言实施\"经济D日\"制裁，伊朗威胁停止全部石油出口",
+    "title_en": "US vows 'economic D-Day' as Iran threatens to halt all oil exports",
+    "summary": "美国威胁对伊朗实施其所谓\"有史以来规模最大的金融攻势\"，并准备于周一推出针对伊朗贸易伙伴的经济制裁。此前伊朗宣称发现75万亿立方英尺天然气田。伊朗方面回应称美国\"绝望\"的新制裁将会失败。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "美国",
+      "伊朗",
+      "制裁",
+      "经济战"
+    ],
+    "url": "https://www.reuters.com/business/energy/iran-says-it-discovered-over-75-trillion-cubic-feet-gas-2026-08-23/",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Peace through strength, Taiwan president says on China battle anniversary 台湾地区领导人赖清德在金门战役纪念日称\"以实力求得和平\"",
+    "title_zh": "台湾地区领导人赖清德在金门战役纪念日称\"以实力求得和平\"",
+    "title_en": "Peace through strength, Taiwan president says on China battle anniversary",
+    "summary": "台湾地区领导人赖清德周日访问敏感的前线岛屿，纪念约七十年前与大陆军队的关键战役时表示，和平只能通过实力来保障，一寸土地都不能牺牲。",
+    "source": "路透社",
+    "category": "两岸关系",
+    "keywords": [
+      "中国台湾",
+      "两岸",
+      "军事"
+    ],
+    "url": "https://www.reuters.com/world/china/peace-through-strength-taiwan-president-says-china-battle-anniversary-2026-08-23/",
+    "priority_score": 90,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran says new sanctions threatened by 'desperate' US will fail 伊朗称美国\"绝望\"威胁的新制裁将会失败",
+    "title_zh": "伊朗称美国\"绝望\"威胁的新制裁将会失败",
+    "title_en": "Iran says new sanctions threatened by 'desperate' US will fail",
+    "summary": "伊朗方面回应称，美国\"绝望地\"威胁实施的新制裁将会失败。伊朗此前宣布发现75万亿立方英尺天然气田，美国则准备对伊朗贸易伙伴实施制裁。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国",
+      "制裁"
+    ],
+    "url": "https://www.reuters.com/world/asia-pacific/iran-says-new-sanctions-threatened-by-desperate-us-will-fail-2026-08-23/",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Wartime election would 'destroy' Ukraine, Zelenskiy says 泽连斯基称战时选举将\"摧毁\"乌克兰",
+    "title_zh": "泽连斯基称战时选举将\"摧毁\"乌克兰",
+    "title_en": "Wartime election would 'destroy' Ukraine, Zelenskiy says",
+    "summary": "乌克兰总统泽连斯基表示，在战时举行选举将\"摧毁\"乌克兰。他强调了在俄罗斯入侵期间维持国家稳定和团结的重要性，反对在战争状态下进行选举。",
+    "source": "路透社",
+    "category": "俄乌",
+    "keywords": [
+      "乌克兰",
+      "泽连斯基",
+      "选举"
+    ],
+    "url": "https://www.reuters.com/world/europe/wartime-election-would-destroy-ukraine-zelenskiy-says-2026-08-23/",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Syria, Israel hold US-mediated talks to ease tensions, Syria news agency says 叙利亚国家通讯社称，叙以在美国斡旋下举行会谈以缓解紧张局势",
+    "title_zh": "叙利亚国家通讯社称，叙以在美国斡旋下举行会谈以缓解紧张局势",
+    "title_en": "Syria, Israel hold US-mediated talks to ease tensions, Syria news agency says",
+    "summary": "据叙利亚国家通讯社报道，叙利亚与以色列在美国斡旋下举行了会谈，旨在缓解两国之间的紧张关系。此前以色列对叙利亚南部发动空袭，叙利亚外交部谴责该行为严重侵犯其领土主权。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "叙利亚",
+      "以色列",
+      "美国"
+    ],
+    "url": "https://www.reuters.com/world/middle-east/syria-israel-hold-us-mediated-talks-ease-tensions-syria-news-agency-says-2026-08-23/",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "UK's Burnham to visit Ukraine with plan to support long-range missile production 英国伯纳姆将携支持远程导弹生产计划访问乌克兰",
+    "title_zh": "英国伯纳姆将携支持远程导弹生产计划访问乌克兰",
+    "title_en": "UK's Burnham to visit Ukraine with plan to support long-range missile production",
+    "summary": "英国官员伯纳姆将访问乌克兰，并带去一项支持乌克兰远程导弹生产的计划。此举旨在加强乌克兰的国防工业能力，以应对俄罗斯的持续军事行动。",
+    "source": "路透社",
+    "category": "俄乌",
+    "keywords": [
+      "英国",
+      "乌克兰",
+      "导弹"
+    ],
+    "url": "https://www.reuters.com/world/uk/uks-burnham-visit-ukraine-with-plan-support-long-range-missile-production-2026-08-23/",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Israeli airstrikes in Gaza kill two people, including 4-year-old boy 以色列空袭加沙致两人死亡，含一名4岁男童",
+    "title_zh": "以色列空袭加沙致两人死亡，含一名4岁男童",
+    "title_en": "Israeli airstrikes in Gaza kill two people, including 4-year-old boy",
+    "summary": "据医务人员称，以色列在加沙的空袭造成两人死亡，其中包括一名4岁男童。这是以色列与哈马斯冲突持续中的最新一起造成平民伤亡的事件。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "以色列",
+      "加沙"
+    ],
+    "url": "https://www.reuters.com/world/asia-pacific/israeli-airstrikes-gaza-kill-two-people-including-4-year-old-boy-medics-say-2026-08-23/",
+    "priority_score": 72,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Drone attack kills two children, burns logistics hub in Russia's Krasnodar 无人机袭击致俄罗斯克拉斯诺达尔两名儿童死亡并烧毁物流枢纽",
+    "title_zh": "无人机袭击致俄罗斯克拉斯诺达尔两名儿童死亡并烧毁物流枢纽",
+    "title_en": "Drone attack kills two children, burns logistics hub in Russia's Krasnodar",
+    "summary": "俄罗斯克拉斯诺达尔地区遭遇无人机袭击，造成两名儿童死亡，一处物流枢纽被烧毁。这是乌克兰冲突中跨境袭击的最新事件。",
+    "source": "路透社",
+    "category": "俄乌",
+    "keywords": [
+      "俄罗斯",
+      "乌克兰",
+      "无人机"
+    ],
+    "url": "https://www.reuters.com/world/europe/drone-attack-kills-two-children-burns-logistics-hub-russias-krasnodar-2026-08-24/",
+    "priority_score": 74,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-24",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Russian attack kills three near Ukraine's Kharkiv, governor says 乌克兰哈尔科夫州长称俄军袭击致3人死亡",
+    "title_zh": "乌克兰哈尔科夫州长称俄军袭击致3人死亡",
+    "title_en": "Russian attack kills three near Ukraine's Kharkiv, governor says",
+    "summary": "乌克兰东北部哈尔科夫郊区遭俄军袭击，地区州长周日晚间在Telegram上表示，袭击造成3人死亡。",
+    "source": "路透社",
+    "category": "俄乌",
+    "keywords": [
+      "乌克兰",
+      "俄罗斯"
+    ],
+    "url": "https://www.reuters.com/world/europe/russian-attack-kills-three-near-ukraines-kharkiv-governor-says-2026-08-23/",
+    "priority_score": 72,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Offices, schools closed in southern Taiwan due to torrential rain 台湾南部因暴雨导致办公室和学校关闭",
+    "title_zh": "台湾南部因暴雨导致办公室和学校关闭",
+    "title_en": "Offices, schools closed in southern Taiwan due to torrential rain",
+    "summary": "台湾南部地区因遭遇暴雨，多个城市的办公室和学校宣布关闭。此次暴雨对当地交通和居民生活造成了严重影响。",
+    "source": "路透社",
+    "category": "两岸关系",
+    "keywords": [
+      "中国台湾",
+      "暴雨"
+    ],
+    "url": "https://www.reuters.com/business/environment/offices-schools-closed-southern-taiwan-due-torrential-rain-2026-08-24/",
+    "priority_score": 60,
+    "is_summit_level": false,
+    "importance": "低",
+    "date": "2026-08-24",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran says Pakistan's army chief to visit Tehran on Monday 伊朗称巴基斯坦陆军参谋长将于周一访问德黑兰",
+    "title_zh": "伊朗称巴基斯坦陆军参谋长将于周一访问德黑兰",
+    "title_en": "Iran says Pakistan's army chief to visit Tehran on Monday",
+    "summary": "伊朗方面表示，巴基斯坦陆军参谋长将于周一访问德黑兰。消息人士称，会谈将涉及美国总统特朗普对伊朗实施更严厉制裁的威胁。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "巴基斯坦"
+    ],
+    "url": "https://www.reuters.com/world/asia-pacific/iran-says-pakistans-army-chief-visit-tehran-monday-2026-08-23/",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Trump says Canada wants 'benefits' of being US state after trade talks collapse 特朗普称贸易谈判破裂后加拿大想要\"成为美国一个州的好处\"",
+    "title_zh": "特朗普称贸易谈判破裂后加拿大想要\"成为美国一个州的好处\"",
+    "title_en": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
+    "summary": "美加贸易谈判破裂后，特朗普称加拿大想要\"成为美国一个州的好处\"。加拿大总理表示\"不情愿地\"宣布报复性关税，并指责美国发动贸易战。这一事件标志着美加经贸关系的重大恶化。",
+    "source": "BBC",
+    "category": "经贸制裁",
+    "keywords": [
+      "美国",
+      "加拿大",
+      "贸易战"
+    ],
+    "url": "https://www.bbc.com/news/articles/cx272np7vgyo",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Carney faces crucial test after walking away from Trump's deal 卡尼在退出特朗普的协议后面临关键考验",
+    "title_zh": "卡尼在退出特朗普的协议后面临关键考验",
+    "title_en": "Carney faces crucial test after walking away from Trump's deal",
+    "summary": "加拿大总理卡尼在与白宫谈判中退出后，必须向公众证明这一赌注值得承担后果。文章分析了他将面临的国内政治压力和国际经贸挑战，这是对其领导力的关键考验。",
+    "source": "BBC",
+    "category": "经贸制裁",
+    "keywords": [
+      "加拿大",
+      "美国"
+    ],
+    "url": "https://www.bbc.com/news/articles/c3040pn8lmmo",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Burnham to visit Kyiv on first foreign trip and reaffirm UK support for Ukraine 伯纳姆将首次出访基辅，重申英国对乌克兰的支持",
+    "title_zh": "伯纳姆将首次出访基辅，重申英国对乌克兰的支持",
+    "title_en": "Burnham to visit Kyiv on first foreign trip and reaffirm UK support for Ukraine",
+    "summary": "英国大曼彻斯特市长伯纳姆将访问基辅，这是其首次外访，旨在重申英国对乌克兰的支持。此前莫斯科就乌克兰据称使用英国无人机发出\"后果\"警告，使此行备受关注。",
+    "source": "BBC",
+    "category": "俄乌",
+    "keywords": [
+      "英国",
+      "乌克兰",
+      "俄罗斯"
+    ],
+    "url": "https://www.bbc.com/news/articles/clyqypkrzq5o",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Zelensky should be asked what he knew about government corruption, sacked minister tells BBC 被解职部长告诉BBC：应该追问泽连斯基对政府腐败知情多少",
+    "title_zh": "被解职部长告诉BBC：应该追问泽连斯基对政府腐败知情多少",
+    "title_en": "Zelensky should be asked what he knew about government corruption, sacked minister tells BBC",
+    "summary": "乌克兰被解职的部长米哈伊洛·费多罗夫在接受BBC采访时表示，应该追问泽连斯基对政府腐败知情多少，并呼吁在战时举行选举。这一表态引发对乌克兰政府内部稳定性的关注。",
+    "source": "BBC",
+    "category": "俄乌",
+    "keywords": [
+      "乌克兰",
+      "腐败"
+    ],
+    "url": "https://www.bbc.com/news/articles/cwy4ypzvd7po",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "DR Congo and M23 rebels agree roadmap for peace talks 刚果（金）与M23叛军就和平谈判路线图达成一致",
+    "title_zh": "刚果（金）与M23叛军就和平谈判路线图达成一致",
+    "title_en": "DR Congo and M23 rebels agree roadmap for peace talks",
+    "summary": "刚果民主共和国与M23反叛武装代表在瑞士会面，就解决冲突的下一步步骤达成和平谈判路线图。这被视为该地区长期冲突可能取得进展的积极信号。",
+    "source": "BBC",
+    "category": "非洲",
+    "keywords": [
+      "刚果金",
+      "M23"
+    ],
+    "url": "https://www.bbc.com/news/articles/cre4e1q3wewo",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Dozens of co-ordinated arson attacks hit southern Thailand 泰国南部发生数十起协同纵火袭击",
+    "title_zh": "泰国南部发生数十起协同纵火袭击",
+    "title_en": "Dozens of co-ordinated arson attacks hit southern Thailand",
+    "summary": "泰国南部发生数十起协同纵火袭击事件，尚无组织宣称负责。军方表示这些袭击\"旨在制造动荡\"。事件引发对泰国南部安全局势的担忧。",
+    "source": "BBC",
+    "category": "亚太",
+    "keywords": [
+      "泰国"
+    ],
+    "url": "https://www.bbc.com/news/articles/c8enegx4xy3o",
+    "priority_score": 65,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Frustration builds in Indiana town struggling without power for 12 days 印第安纳州小镇断电12天，居民沮丧情绪加剧",
+    "title_zh": "印第安纳州小镇断电12天，居民沮丧情绪加剧",
+    "title_en": "Frustration builds in Indiana town struggling without power for 12 days",
+    "summary": "美国印第安纳州加里市已断电12天，该市三分之一居民生活在贫困中。居民表示他们一直处于\"生存模式\"。这一事件凸显美国基础设施脆弱性和应急响应能力不足。",
+    "source": "BBC",
+    "category": "美国",
+    "keywords": [
+      "美国",
+      "基础设施"
+    ],
+    "url": "https://www.bbc.com/news/articles/clyly8vdpdwo",
+    "priority_score": 65,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "US pushes 'America First' agenda in Apec talks ahead of Chinese leader's visit 中国领导人访前，美国在APEC会谈中推动\"美国优先\"议程",
+    "title_zh": "中国领导人访前，美国在APEC会谈中推动\"美国优先\"议程",
+    "title_en": "US pushes 'America First' agenda in Apec talks ahead of Chinese leader's visit",
+    "summary": "美国在APEC会谈中推动\"美国优先\"议程，称希望为其企业\"打破壁垒\"。此次会谈在中国国家主席习近平下月访问之前举行，涉及中美经贸关系和区域经济合作，凸显两国在亚太地区经济影响力上的博弈。",
+    "source": "南华早报",
+    "category": "中美关系",
+    "keywords": [
+      "美国",
+      "中国",
+      "APEC"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3364959/washington-pushes-america-first-agenda-apec-talks-ahead-chinese-leaders-visit",
+    "priority_score": 95,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "US efforts to secure AI supply chains doomed to fail: Chinese academic 中国学者：美国确保AI供应链的努力注定失败",
+    "title_zh": "中国学者：美国确保AI供应链的努力注定失败",
+    "title_en": "US efforts to secure AI supply chains doomed to fail: Chinese academic",
+    "summary": "中国学者在周末会议上表示，美国通过针对第三方来确保AI供应链的努力（如Pax Silica倡议）不会成功。这是中美科技竞争的最新交锋，反映双方在AI领域主导权争夺的持续升级。",
+    "source": "南华早报",
+    "category": "AI科技",
+    "keywords": [
+      "美国",
+      "中国",
+      "AI供应链"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3364973/us-efforts-secure-ai-supply-chains-are-doomed-fail-says-chinese-academic",
+    "priority_score": 92,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "African businesses keep options open as Chinese AI gains ground 中国AI崛起，非洲企业保持开放选择",
+    "title_zh": "中国AI崛起，非洲企业保持开放选择",
+    "title_en": "African businesses keep options open as Chinese AI gains ground",
+    "summary": "中国AI模型（包括DeepSeek、阿里巴巴通义千问和月之暗面Kimi）凭借更低成本、可下载模型和更强语言灵活性，在非洲大陆获得越来越大的市场份额。在中美科技竞争加剧背景下，非洲企业同时保持与双方的接触，以最大化自身利益。",
+    "source": "南华早报",
+    "category": "AI科技",
+    "keywords": [
+      "中国",
+      "非洲",
+      "AI"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3364966/african-firms-adopting-chinese-ai-us-china-rivalry-intensifies",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "China puts off Chang'e-7 mission to drill for ice near lunar south pole 中国推迟嫦娥七号月球南极钻冰任务",
+    "title_zh": "中国推迟嫦娥七号月球南极钻冰任务",
+    "title_en": "China puts off Chang'e-7 mission to drill for ice near lunar south pole",
+    "summary": "中国宣布嫦娥七号任务\"不满足发射条件，无法在今年预定发射窗口内实施\"。该任务原计划在月球南极附近钻探水冰，延期显示中国探月工程面临技术挑战，也影响其月球科研站建设时间表。",
+    "source": "南华早报",
+    "category": "AI科技",
+    "keywords": [
+      "中国",
+      "航天"
+    ],
+    "url": "https://www.scmp.com/news/china/science/article/3364982/china-puts-change-7-mission-lunar-south-pole",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Your backyard could hold a rare earth fortune and this orange lichen is the clue 后院可能藏稀土财富，橙色地衣是线索",
+    "title_zh": "后院可能藏稀土财富，橙色地衣是线索",
+    "title_en": "Your backyard could hold a rare earth fortune and this orange lichen is the clue",
+    "summary": "中国科学家发现橙色地衣可作为稀土矿藏的指示物，这一发现可能帮助勘探者更高效地发现稀土资源。在中美稀土供应链竞争加剧的背景下，该研究具有重要战略意义。",
+    "source": "南华早报",
+    "category": "经贸制裁",
+    "keywords": [
+      "中国",
+      "稀土"
+    ],
+    "url": "https://www.scmp.com/news/china/science/article/3364796/your-backyard-could-hold-rare-earth-fortune-and-orange-lichen-clue",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "China builds world's first custom plant immunity system for epidemic response 中国建成全球首个定制化植物免疫系统应对疫情",
+    "title_zh": "中国建成全球首个定制化植物免疫系统应对疫情",
+    "title_en": "China builds world's first custom plant immunity system for epidemic response",
+    "summary": "中国研究人员表示，其可编程合成免疫受体可导入植物，帮助其识别特定细菌、病毒和真菌产生的蛋白质并触发免疫反应。这一定制化生物工具可使作物快速获得对新型病害的免疫力，对粮食安全意义重大。",
+    "source": "南华早报",
+    "category": "AI科技",
+    "keywords": [
+      "中国",
+      "生物技术"
+    ],
+    "url": "https://www.scmp.com/news/china/science/article/3364933/china-builds-worlds-first-custom-plant-immunity-system-epidemic-response",
+    "priority_score": 72,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "India rescues 2 Chinese nationals from sunken cargo ship, searches for others 印度从沉没货船救出2名中国公民，继续搜寻其他人员",
+    "title_zh": "印度从沉没货船救出2名中国公民，继续搜寻其他人员",
+    "title_en": "India rescues 2 Chinese nationals from sunken cargo ship, searches for others",
+    "summary": "一艘悬挂巴拿马国旗的货船在印度东海岸沉没，船上24名船员中有20名中国公民。印度海岸警卫队已救出2名中国公民，并继续搜寻其他人员。事件牵涉中国、印度及巴拿马三方。",
+    "source": "南华早报",
+    "category": "亚太",
+    "keywords": [
+      "中国",
+      "印度"
+    ],
+    "url": "https://www.scmp.com/news/asia/south-asia/article/3364946/india-launches-rescue-mission-panama-flagged-cargo-ship-sinks-east-coast",
+    "priority_score": 68,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Chinese archaeologists head to Peru for joint project to explore ancient sites 中国考古学家赴秘鲁开展联合项目探索古城遗址",
+    "title_zh": "中国考古学家赴秘鲁开展联合项目探索古城遗址",
+    "title_en": "Chinese archaeologists head to Peru for joint project to explore ancient sites",
+    "summary": "中国考古学家将首次与秘鲁开展联合考古项目，探索拥有5000年历史的卡拉尔文明相关遗址。该项目是中方扩大文化联系、深化与拉美国家合作的一部分，体现中国软实力外交的推进。",
+    "source": "南华早报",
+    "category": "中国外交",
+    "keywords": [
+      "中国",
+      "秘鲁"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3364961/chinese-archaeologists-heading-peru-first-joint-project-explore-ancient-sites",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "'No more!!!': Trump lashes out at Mark Carney after US-Canada talks devolve into trade war 特朗普怒斥加拿大总理：美加贸易谈判破裂升级为贸易战",
+    "title_zh": "特朗普怒斥加拿大总理：美加贸易谈判破裂升级为贸易战",
+    "title_en": "'No more!!!': Trump lashes out at Mark Carney after US-Canada talks devolve into trade war",
+    "summary": "美国与加拿大贸易谈判破裂，特朗普发文怒斥加拿大总理卡尼，称'不再容忍'。关税已对曲棍球棒、压舌板等商品生效，卡尼表示'我们受到了攻击'。两国关系急剧恶化，贸易战正式爆发。",
+    "source": "卫报",
+    "category": "经贸制裁",
+    "keywords": [
+      "美国",
+      "加拿大",
+      "贸易战"
+    ],
+    "url": "https://www.theguardian.com/us-news/2026/aug/23/donald-trump-lashes-out-after-us-canada-talks-devolve-into-trade-war",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "The lesson from Canada's collapsed trade talks with the US: negotiation may be futile 美加贸易谈判破裂的教训：谈判或许徒劳无功",
+    "title_zh": "美加贸易谈判破裂的教训：谈判或许徒劳无功",
+    "title_en": "The lesson from Canada's collapsed trade talks with the US: negotiation may be futile",
+    "summary": "分析文章指出，美加贸易谈判的彻底破裂表明，在特朗普政府的强硬关税政策下，传统谈判手段可能已失效。加拿大试图通过外交渠道缓和矛盾的努力遭遇挫折，为其他国家与美贸易谈判提供了警示。",
+    "source": "卫报",
+    "category": "经贸制裁",
+    "keywords": [
+      "美国",
+      "加拿大"
+    ],
+    "url": "https://www.theguardian.com/us-news/2026/aug/23/canada-us-collapsed-trade-talks-negotiation-breakdown-analysis",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Russia withdraws ambassador to UK as Kremlin raises pressure over Ukraine support 俄罗斯撤回驻英大使，克里姆林宫加大对乌克兰支持施压",
+    "title_zh": "俄罗斯撤回驻英大使，克里姆林宫加大对乌克兰支持施压",
+    "title_en": "Russia withdraws ambassador to UK as Kremlin raises pressure over Ukraine support",
+    "summary": "俄罗斯宣布撤回驻英国大使，作为对英国持续支持乌克兰的回应。此举标志着俄英外交关系进一步恶化，克里姆林宫试图通过外交施压改变英国在乌克兰问题上的立场。",
+    "source": "卫报",
+    "category": "俄乌",
+    "keywords": [
+      "俄罗斯",
+      "英国",
+      "乌克兰"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/23/russia-withdraws-ambassador-uk-kremlin-pressure-ukraine-andrey-kelin",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran-linked hackers blamed for cyber-attack that shut down UK power plant 英国发电厂遭网络攻击停运，伊朗关联黑客被指为幕后黑手",
+    "title_zh": "英国发电厂遭网络攻击停运，伊朗关联黑客被指为幕后黑手",
+    "title_en": "Iran-linked hackers blamed for cyber-attack that shut down UK power plant",
+    "summary": "英国一座发电厂因网络攻击被迫停运，调查人员将攻击归因于与伊朗有关的黑客组织。此次事件凸显关键基础设施面临的网络威胁日益严峻，英国国家安全机构已介入调查并加强防护。",
+    "source": "卫报",
+    "category": "欧洲",
+    "keywords": [
+      "英国",
+      "伊朗",
+      "网络安全"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/23/iran-linked-hackers-blamed-cyber-attack-british-power-plant",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Holding election in wartime would risk destroying Ukraine, says Zelenskyy 泽连斯基：战时举行选举将危及乌克兰存亡",
+    "title_zh": "泽连斯基：战时举行选举将危及乌克兰存亡",
+    "title_en": "Holding election in wartime would risk destroying Ukraine, says Zelenskyy",
+    "summary": "乌克兰总统泽连斯基表示，在战时举行选举可能破坏国家稳定并危及乌克兰生存。他强调当前首要任务是抵御俄罗斯入侵，任何选举都需等待战事结束后才能安全进行。",
+    "source": "卫报",
+    "category": "俄乌",
+    "keywords": [
+      "乌克兰",
+      "俄罗斯"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/23/ukraine-election-wartime-risk-russia-zelenskyy",
+    "priority_score": 76,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Jumpy bond markets make it clear: Trump risks driving US into debt crisis 债券市场动荡表明：特朗普或将美国拖入债务危机",
+    "title_zh": "债券市场动荡表明：特朗普或将美国拖入债务危机",
+    "title_en": "Jumpy bond markets make it clear: Trump risks driving US into debt crisis",
+    "summary": "评论指出，美国财政部长贝森特试图安抚债券市场的举动恰恰暴露了政府的弱点。特朗普政府的财政政策正加剧市场对美国债务可持续性的担忧，美国面临陷入债务危机的风险。",
+    "source": "卫报",
+    "category": "美国",
+    "keywords": [
+      "美国",
+      "债务"
+    ],
+    "url": "https://www.theguardian.com/business/2026/aug/23/jumpy-bond-markets-make-it-clear-trump-risks-driving-us-into-debt-crisis",
+    "priority_score": 77,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "'We are hitting a different chapter': OpenAI leader warns of threat of 'persistent' AI cyber-attacks OpenAI高管警告：'持续性'AI网络攻击威胁进入新阶段",
+    "title_zh": "OpenAI高管警告：'持续性'AI网络攻击威胁进入新阶段",
+    "title_en": "'We are hitting a different chapter': OpenAI leader warns of threat of 'persistent' AI cyber-attacks",
+    "summary": "OpenAI高层警告称，AI驱动的'持续性'网络攻击正在成为现实威胁，攻击者利用人工智能技术实现自动化、大规模的网络入侵。呼吁国际社会加强AI安全合作，防范新型网络战风险。",
+    "source": "卫报",
+    "category": "AI科技",
+    "keywords": [
+      "OpenAI",
+      "AI安全"
+    ],
+    "url": "https://www.theguardian.com/technology/2026/aug/23/openai-cyber-attacks-threat-chris-lehane",
+    "priority_score": 74,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Is there a pending AI 'debt bomb' crisis? No. This isn't Enron 2.0 AI'债务炸弹'危机要来了吗？不，这不是安然2.0",
+    "title_zh": "AI'债务炸弹'危机要来了吗？不，这不是安然2.0",
+    "title_en": "Is there a pending AI 'debt bomb' crisis? No. This isn't Enron 2.0",
+    "summary": "评论文章反驳了AI数据中心建设可能引发债务危机的担忧，认为当前AI投资风险与过去不同且可恢复。文章称市场对AI基础设施债务的恐慌被夸大，行业基本面仍然健康。",
+    "source": "卫报",
+    "category": "AI科技",
+    "keywords": [
+      "AI",
+      "债务"
+    ],
+    "url": "https://www.theguardian.com/technology/2026/aug/23/ai-debt-bomb-crisis",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran's foreign minister calls threat of new US economic sanctions 'desperate' 伊朗外长称美国新经济制裁威胁'绝望之举'",
+    "title_zh": "伊朗外长称美国新经济制裁威胁'绝望之举'",
+    "title_en": "Iran's foreign minister calls threat of new US economic sanctions 'desperate'",
+    "summary": "伊朗新任外交部长回应美国威胁实施新一轮经济制裁，称其为'绝望之举'。伊朗方面表示将继续抵抗美国的经济压力，并强调不会在制裁威胁下改变自身立场。",
+    "source": "卫报",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/23/iran-new-security-chief-trump-economic-war-enemies-mohsen-rezaei",
+    "priority_score": 72,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Trump's continued distrust in election integrity has experts eyeing his next move 特朗普持续质疑选举公正性，专家密切关注其下一步动向",
+    "title_zh": "特朗普持续质疑选举公正性，专家密切关注其下一步动向",
+    "title_en": "Trump's continued distrust in election integrity has experts eyeing his next move",
+    "summary": "特朗普在演讲中继续散布对选举公正性的质疑，并推动文件解密、强化非公民投票指控。专家担忧此举将加剧美国政治分裂，为2026年中期选举带来不稳定因素。",
+    "source": "卫报",
+    "category": "美国",
+    "keywords": [
+      "美国",
+      "选举"
+    ],
+    "url": "https://www.theguardian.com/us-news/2026/aug/23/trump-sowing-election-distrust",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "US supplies most of the world's plasma. No country depends on it more than China 美国供应全球大部分血浆，中国对美依赖程度全球最高",
+    "title_zh": "美国供应全球大部分血浆，中国对美依赖程度全球最高",
+    "title_en": "US supplies most of the world's plasma. No country depends on it more than China",
+    "summary": "文章指出美国是全球血浆主要供应国，而中国是最大依赖方。在中美关系紧张的背景下，血浆及人血白蛋白供应链的脆弱性成为两国经贸依赖与潜在博弈的重要议题，凸显医疗物资领域的地缘政治风险。",
+    "source": "CNN",
+    "category": "中美关系",
+    "keywords": [
+      "美国",
+      "中国",
+      "供应链"
+    ],
+    "url": "https://edition.cnn.com/2026/08/23/china/china-us-human-albumin-plasma-intl-hnk",
+    "priority_score": 92,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "On GPS: How China has kept up with the US on AI GPS节目：中国如何在人工智能领域追赶美国",
+    "title_zh": "GPS节目：中国如何在人工智能领域追赶美国",
+    "title_en": "On GPS: How China has kept up with the US on AI",
+    "summary": "CNN的Fareed Zakaria在节目中邀请《纽约客》记者Evan Osnos探讨中国人工智能产业。节目分析中国AI行业正在迅速追赶并可与硅谷相抗衡的现状，涉及中美科技竞争的核心议题。",
+    "source": "CNN",
+    "category": "AI科技",
+    "keywords": [
+      "美国",
+      "中国",
+      "AI"
+    ],
+    "url": "https://edition.cnn.com/2026/08/23/world/video/gps-0823-china-us-ai-race",
+    "priority_score": 91,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Russia likely to mobilize at least 300,000 more troops to Ukraine war, Zelensky warns 泽连斯基警告：俄罗斯可能再动员至少30万人投入乌克兰战争",
+    "title_zh": "泽连斯基警告：俄罗斯可能再动员至少30万人投入乌克兰战争",
+    "title_en": "Russia likely to mobilize at least 300,000 more troops to Ukraine war, Zelensky warns",
+    "summary": "乌克兰总统泽连斯基警告称，俄罗斯很可能将至少再动员30万名士兵投入对乌克兰的战争。该警告发布于俄乌冲突持续升级之际，欧洲安全局势持续恶化。",
+    "source": "CNN",
+    "category": "俄乌",
+    "keywords": [
+      "俄罗斯",
+      "乌克兰"
+    ],
+    "url": "https://edition.cnn.com/2026/08/23/europe/zelensky-ukraine-russia-mobilization-intl",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Live Updates: Bessant promises 'economic D-Day' ahead of expected Iran sanctions, offers little detail on strategy 贝森特承诺对伊制裁迎来\"经济诺曼底登陆\"，但未详述战略",
+    "title_zh": "贝森特承诺对伊制裁迎来\"经济诺曼底登陆\"，但未详述战略",
+    "title_en": "Live Updates: Bessant promises 'economic D-Day' ahead of expected Iran sanctions, offers little detail on strategy",
+    "summary": "美国财政部长贝森特表示，即将对伊朗实施的制裁将是\"经济上的诺曼底登陆日\"，但未提供具体战略细节。美伊冲突持续升级，伊朗军方领导人誓言\"不会屈服\"，海湾地区局势高度紧张。",
+    "source": "CNN",
+    "category": "中东",
+    "keywords": [
+      "美国",
+      "伊朗"
+    ],
+    "url": "https://edition.cnn.com/2026/08/23/world/live-news/iran-war-trump",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "It's 'Black August' in Russia, but Putin is sweeping this summer's crisis under the rug 俄罗斯遭遇\"黑色八月\"，但普京正将今夏危机掩盖起来",
+    "title_zh": "俄罗斯遭遇\"黑色八月\"，但普京正将今夏危机掩盖起来",
+    "title_en": "It's 'Black August' in Russia, but Putin is sweeping this summer's crisis under the rug",
+    "summary": "分析文章指出俄罗斯正经历\"黑色八月\"——乌克兰战场失利、国内安全危机等多重困境叠加。但普京选择回避和淡化这些危机，其执政基础正面临俄乌冲突以来最严峻的考验。",
+    "source": "CNN",
+    "category": "俄乌",
+    "keywords": [
+      "俄罗斯",
+      "乌克兰"
+    ],
+    "url": "https://edition.cnn.com/2026/08/23/europe/putin-russia-black-august-analysis-intl",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran Warns Gulf States Against Joining Trump's Economic War, or Else 伊朗警告海湾国家勿加入特朗普经济战，否则后果自负",
+    "title_zh": "伊朗警告海湾国家勿加入特朗普经济战，否则后果自负",
+    "title_en": "Iran Warns Gulf States Against Joining Trump's Economic War, or Else",
+    "summary": "伊朗新任强硬派国家安全顾问Mohsen Rezaei誓言阻止\"一滴石油\"离开该地区。尽管敌对行动基本停止，但美国与伊朗陷入经济对峙。伊朗警告海湾国家不要加入美国的经济战争，否则将面临后果。",
+    "source": "纽约时报",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国",
+      "海湾国家"
+    ],
+    "url": "https://www.nytimes.com/2026/08/23/world/europe/iran-economy-war-united-states.html",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Canada-U.S. Trade War: What to Know 加拿大-美国贸易战：你需要知道的",
+    "title_zh": "加拿大-美国贸易战：你需要知道的",
+    "title_en": "Canada-U.S. Trade War: What to Know",
+    "summary": "加拿大暂停贸易谈判，引发特朗普对一系列加拿大商品征收50%关税。加拿大总理Mark Carney表示将\"对等\"报复。他在演讲中称加拿大受到特朗普关税\"攻击\"，正处于\"战争\"状态。",
+    "source": "纽约时报",
+    "category": "经贸制裁",
+    "keywords": [
+      "加拿大",
+      "美国"
+    ],
+    "url": "https://www.nytimes.com/2026/08/23/world/canada/canada-us-trade-war-trump-carney.html",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "What Canadian Goods Will Take Trump's 50% Tariffs? Some Pretty Strange Items. 哪些加拿大商品将面临特朗普50%关税？一些相当奇怪的物品",
+    "title_zh": "哪些加拿大商品将面临特朗普50%关税？一些相当奇怪的物品",
+    "title_en": "What Canadian Goods Will Take Trump's 50% Tariffs? Some Pretty Strange Items.",
+    "summary": "来自加拿大的浮标、狗嘴套、斗篷、国旗和\"贱金属雕像\"等商品现在对美国消费者来说更加昂贵。这是美国对加拿大商品征收50%关税的后果，涉及一系列看似不寻常的商品。",
+    "source": "纽约时报",
+    "category": "经贸制裁",
+    "keywords": [
+      "加拿大",
+      "美国"
+    ],
+    "url": "https://www.nytimes.com/2026/08/23/world/canada/canadian-goods-trump-tariffs-items-list.html",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "The World's Breadbaskets Are Getting Pounded by War, Weather and Trade Spats 全球粮仓正遭受战争、天气和贸易争端的三重打击",
+    "title_zh": "全球粮仓正遭受战争、天气和贸易争端的三重打击",
+    "title_en": "The World's Breadbaskets Are Getting Pounded by War, Weather and Trade Spats",
+    "summary": "歉收和对贸易通道的攻击威胁推高食品价格。全球主要产粮区正受到战争、气候冲击和贸易争端的严重打击，全球粮食体系进入危险地带。",
+    "source": "纽约时报",
+    "category": "地缘政治",
+    "keywords": [
+      "全球",
+      "粮食"
+    ],
+    "url": "https://www.nytimes.com/2026/08/23/climate/wheat-harvests-bread-prices-war-heat.html",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "China and Russia won't participate in new US sanctions on Iran 中国和俄罗斯不会参与美国对伊朗的新制裁",
+    "title_zh": "中国和俄罗斯不会参与美国对伊朗的新制裁",
+    "title_en": "China and Russia won't participate in new US sanctions on Iran",
+    "summary": "中国和俄罗斯明确表示不会参与美国对伊朗实施的新一轮制裁。这一表态显示中美俄在伊朗问题上的立场分歧加剧，也意味着美国对伊朗的经济施压难以获得主要大国的全面支持。",
+    "source": "半岛电视台",
+    "category": "中美关系",
+    "keywords": [
+      "中国",
+      "俄罗斯",
+      "美国",
+      "伊朗"
+    ],
+    "url": "https://www.aljazeera.com/news/liveblog/2026/8/24/iran-war-live-iranian-assembly-advances-plans-for-hormuz-service-fees?update=4879087",
+    "priority_score": 90,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-24",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran's parliament advances plans for charging Hormuz service fees 伊朗议会推进霍尔木兹海峡服务费收费计划",
+    "title_zh": "伊朗议会推进霍尔木兹海峡服务费收费计划",
+    "title_en": "Iran's parliament advances plans for charging Hormuz service fees",
+    "summary": "伊朗议会推进了在霍尔木兹海峡收取服务费的计划，此举可能影响全球石油运输。同时报道了油价因投资者等待美国对伊朗制裁公告而下跌，以及中国和俄罗斯表示不会参与美国对伊朗的新制裁。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "霍尔木兹海峡"
+    ],
+    "url": "https://www.aljazeera.com/news/liveblog/2026/8/24/iran-war-live-iranian-assembly-advances-plans-for-hormuz-service-fees",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-24",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Can Iran retaliate against countries that join US 'economic war'? 伊朗能否对加入美国\"经济战\"的国家进行报复？",
+    "title_zh": "伊朗能否对加入美国\"经济战\"的国家进行报复？",
+    "title_en": "Can Iran retaliate against countries that join US 'economic war'?",
+    "summary": "伊朗警告称，支持美国经济制裁的国家将被视为德黑兰的敌人。该解释性报道分析了伊朗面对美国经济战可能采取的报复选项，包括对霍尔木兹海峡通行费的影响，以及对加入制裁国家的潜在反制措施。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/23/can-iran-retaliate-against-countries-that-join-us-economic-war",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran updates: Iranian parliament advances plans for Hormuz service fees 德黑兰警告邻国不要加入美国对伊朗的\"经济战\"",
+    "title_zh": "德黑兰警告邻国不要加入美国对伊朗的\"经济战\"",
+    "title_en": "Iran updates: Iranian parliament advances plans for Hormuz service fees",
+    "summary": "德黑兰警告邻国不要加入美国对伊朗的\"经济战\"。伊朗议会推进霍尔木兹海峡服务费计划，此举可能影响全球能源运输。同时报道了以色列对加沙的袭击造成伤亡的持续消息。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国"
+    ],
+    "url": "https://www.aljazeera.com/news/liveblog/2026/8/23/iran-war-live-tehran-warns-neighbours-against-joining-us-economic-war",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran's government signals fuel price hike on eve of new US sanctions 美国新制裁前夕，伊朗政府释放燃油涨价信号",
+    "title_zh": "美国新制裁前夕，伊朗政府释放燃油涨价信号",
+    "title_en": "Iran's government signals fuel price hike on eve of new US sanctions",
+    "summary": "在美国即将实施新一轮制裁之际，伊朗政府释放出燃油价格上涨的信号。此举可能加剧伊朗国内经济压力，同时也反映出制裁对伊朗经济的实质性影响。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国"
+    ],
+    "url": "https://www.aljazeera.com/economy/2026/8/23/iran-government-signals-fuel-price-hike-on-eve-of-new-us-sanctions",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Canada, US and tit-for-tat tariffs: How will they impact their economies? 加拿大、美国与针锋相对的关税：将如何影响两国经济？",
+    "title_zh": "加拿大、美国与针锋相对的关税：将如何影响两国经济？",
+    "title_en": "Canada, US and tit-for-tat tariffs: How will they impact their economies?",
+    "summary": "报道分析了加拿大与美国之间针锋相对的关税措施对两国经济的影响。文章探讨了贸易摩擦如何影响双边贸易、供应链和相关产业，并评估了关税政策对消费者价格和经济增长的潜在后果。",
+    "source": "半岛电视台",
+    "category": "经贸制裁",
+    "keywords": [
+      "加拿大",
+      "美国"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/23/canada-us-and-tit-for-tat-tariffs-how-will-it-impact-their-economies",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "US envoy Tom Barrack retracts comment that Syria's Golan is occupied 美国特使汤姆·巴拉克收回关于叙利亚戈兰高地被占领的言论",
+    "title_zh": "美国特使汤姆·巴拉克收回关于叙利亚戈兰高地被占领的言论",
+    "title_en": "US envoy Tom Barrack retracts comment that Syria's Golan is occupied",
+    "summary": "美国特使汤姆·巴拉克收回了此前关于叙利亚戈兰高地是被占领领土的言论。这一表态变化引发关注，涉及美国在中东问题上的立场调整，以及戈兰高地归属问题在地缘政治中的敏感性。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "美国",
+      "叙利亚",
+      "以色列"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/23/us-envoy-tom-barrack-retracts-comment-that-syrias-golan-is-occupied",
+    "priority_score": 65,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Trump has 'run out of options' in Iran war: Stephen Walt 斯蒂芬·沃尔特：特朗普在伊朗战争中\"已无选择\"",
+    "title_zh": "斯蒂芬·沃尔特：特朗普在伊朗战争中\"已无选择\"",
+    "title_en": "Trump has 'run out of options' in Iran war: Stephen Walt",
+    "summary": "哈佛大学教授斯蒂芬·沃尔特在半岛电视台节目中表示，特朗普政府在伊朗战争中\"已无选择\"。他分析了美国对伊朗政策的困境，以及当前局势下美国战略选项的局限性。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "美国",
+      "伊朗"
+    ],
+    "url": "https://www.aljazeera.com/video/the-bottom-line/2026/8/23/trump-has-run-out-of-options-in-iran-war-stephen-walt",
+    "priority_score": 70,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "China abruptly postpones ambitious lunar mission 中国突然推迟雄心勃勃的月球任务",
+    "title_zh": "中国突然推迟雄心勃勃的月球任务",
+    "title_en": "China abruptly postpones ambitious lunar mission",
+    "summary": "中国突然宣布推迟一项备受瞩目的月球探测任务，但未说明具体原因。这一决定引发外界对于中国航天计划进度、技术挑战或潜在国际政治因素的猜测，也牵动中美在太空领域竞争态势的观察。",
+    "source": "Politico",
+    "category": "AI科技",
+    "keywords": [
+      "中国",
+      "航天"
+    ],
+    "url": "https://www.politico.com/news/2026/08/23/china-postpones-lunar-launch-01046900",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran official says support for new sanctions would be an 'act of war' 伊朗官员称支持新制裁将构成\"战争行为\"",
+    "title_zh": "伊朗官员称支持新制裁将构成\"战争行为\"",
+    "title_en": "Iran official says support for new sanctions would be an 'act of war'",
+    "summary": "伊朗官方发出严厉警告，称任何支持对伊实施新制裁的行为都将被视为\"战争行为\"。这一表态正值美国及其盟友考虑对伊朗采取进一步经济施压之际，中东地缘政治紧张局势再度升温。",
+    "source": "Politico",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国"
+    ],
+    "url": "https://www.politico.com/news/2026/08/23/iran-official-says-support-for-new-sanctions-would-be-an-act-of-war-01046916",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Zelenskyy asked for more Patriot missiles, Pence says 彭斯称泽连斯基请求更多爱国者导弹",
+    "title_zh": "彭斯称泽连斯基请求更多爱国者导弹",
+    "title_en": "Zelenskyy asked for more Patriot missiles, Pence says",
+    "summary": "据美国前副总统彭斯透露，乌克兰总统泽连斯基在近期接触中请求美国提供更多爱国者导弹防御系统。这一消息反映了乌克兰在持续冲突中对防空能力的迫切需求。",
+    "source": "Politico",
+    "category": "俄乌",
+    "keywords": [
+      "乌克兰",
+      "美国"
+    ],
+    "url": "https://www.politico.com/news/2026/08/23/zelenskyy-ukraine-pence-patriot-missiles-01046842",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Zelenskyy: Elections would 'tear Ukraine apart' 泽连斯基：举行选举将\"撕裂乌克兰\"",
+    "title_zh": "泽连斯基：举行选举将\"撕裂乌克兰\"",
+    "title_en": "Zelenskyy: Elections would 'tear Ukraine apart'",
+    "summary": "乌克兰总统泽连斯基表示，在战争期间举行总统选举将\"撕裂乌克兰\"，强调国家团结和战时稳定的重要性。此言论回应了国内外关于乌克兰是否应如期举行选举的争论。",
+    "source": "Politico",
+    "category": "俄乌",
+    "keywords": [
+      "乌克兰"
+    ],
+    "url": "https://www.politico.com/www.politico.eu/article/volodymyr-zelenskyy-elections-would-tear-ukraine-apart/",
+    "priority_score": 76,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "U.S. and Canada Slide Toward a Trade War",
+    "title_zh": "美加滑向贸易战：50%关税生效，双方互相指责",
+    "title_en": "U.S. and Canada Slide Toward a Trade War",
+    "summary": "华尔街日报深度报道美加贸易谈判破裂全过程：美国依据1930年《斯穆特-霍利关税法》第338条款对约200亿美元加拿大商品加征50%关税，于8月22日凌晨生效。谈判破裂核心是最后关头美方在卡车关税豁免、铝下游产品关税、钢铁配额等议题上提出新要求，商务部长卢特尼克在内部分歧中扮演关键角色。加拿大总理卡尼称“我们遭到了袭击”，宣布9月8日起对美实施等额反制关税，涵盖钢铁、乳制品、家电等。这场争端动摇美墨加协定前景，特朗普被指试图让加拿大“沦为美国第51个州”。",
+    "source": "华尔街日报",
+    "category": "美国",
+    "keywords": [
+      "美加贸易战",
+      "关税",
+      "338条款",
+      "卡尼",
+      "特朗普",
+      "美墨加协定"
+    ],
+    "url": "https://www.163.com/dy/article/L50U4MPU0556DYJW.html",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "U.S.-Canada breakdown shows limits of Trump's aggressive trade strategy",
+    "title_zh": "美加谈判破裂暴露特朗普强硬贸易策略的极限",
+    "title_en": "U.S.-Canada breakdown shows limits of Trump's aggressive trade strategy",
+    "summary": "华盛顿邮报分析认为，美加贸易谈判破裂是特朗普“推土机式”重塑贸易关系策略触碰极限的最新迹象：特朗普试图用未经检验的法律权力迫使加拿大吞下贸易让步，但加拿大总理卡尼选择退出谈判而非接受不断加码的美方要求，成为罕见对外国领导人说“够了”的例证。同日特朗普又撤回牛肉进口关税，显示其关税政策进退失据。前美国贸易谈判代表卡特勒指出，其他国家正密切关注此局，美方已与马来西亚、柬埔寨、阿根廷等10国签订互惠贸易协定，其他伙伴或要求重新谈判。",
+    "source": "华盛顿邮报",
+    "category": "美国",
+    "keywords": [
+      "美加贸易战",
+      "特朗普",
+      "贸易策略",
+      "关税",
+      "卡尼"
+    ],
+    "url": "https://finance.yahoo.com/economy/policy/articles/us-canada-breakdown-shows-limits-of-trumps-aggressive-trade-strategy-100001862.html",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Carney warned about economic coercion. Now Trump is testing the Canadian prime minister",
+    "title_zh": "卡尼曾警告经济胁迫，如今特朗普正考验这位加拿大总理",
+    "title_en": "Carney warned about economic coercion. Now Trump is testing the Canadian prime minister",
+    "summary": "美联社报道聚焦美加贸易战中的个人对决：加拿大总理卡尼此前多次警告美国正试图通过经济胁迫击垮加拿大，如今特朗普以50%关税兑现了这一担忧。谈判破裂后卡尼宣布9月8日起“一美元对一美元”等额反制，覆盖钢铁、乳制品、家电等六大行业。卡尼称“遭到攻击就意味着身处战争”，特朗普则称加拿大想要州级福利却不愿成为美国一州。这场争端考验两位领导人的政治筹码与两国近9000亿美元年贸易额的关系。",
+    "source": "美联社",
+    "category": "美国",
+    "keywords": [
+      "美加贸易战",
+      "卡尼",
+      "特朗普",
+      "关税",
+      "经济胁迫"
+    ],
+    "url": "https://apnews.com/article/canada-carney-trump-tariffs-economic-coercion-trade-a180ac85a70bbfb512ea59c224cb6c31",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-23",
+    "collectedAt": "2026-08-24 09:30:00",
+    "collection_method": "webfetch"
   }
 ]
