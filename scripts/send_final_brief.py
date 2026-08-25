@@ -26,6 +26,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INTL_DATA = os.path.join(BASE, "data", "news-data.json")
 CHINA_DATA = os.path.join(BASE, "data", "china-news.json")
 OUT_HTML = os.path.join(BASE, "morning-brief-final.html")
+PDF_DIR = os.path.join(BASE, "日报PDF")
 
 SMTP_HOST = "smtp.qq.com"
 SMTP_PORT = 465
@@ -33,32 +34,11 @@ SMTP_USER = "2027674540@qq.com"
 SMTP_PASS = "rsdsoaxfejsjbcjc"
 TO_EMAIL = "2027674540@qq.com"
 
-# 默认收件人名单（PACD 团队 + 相关同事，24 人）
+# 默认收件人（2026-08-21 规则变更）：仅发送 QQ 邮箱一个地址
+# 原因：华为企业邮箱网关拦截 QQ SMTP 发出的富 HTML 邮件（文本版可到、HTML 版被丢弃），
+# 群发 24 人名单无法可靠送达 → 改为仅发 2027674540@qq.com，由用户人工确认后自行分发。
 DEFAULT_RECIPIENTS = [
-    "cuikai.cui@huawei.com",        # Cuikai (Jason Cui)
-    "sunlanxi@huawei.com",          # sunlanxi
-    "Ira.xiaoyi@huawei.com",        # xiaoyi (O)
-    "sunaonan2@huawei.com",         # sunaonan (A)
-    "zhangqidi@huawei.com",         # Zhangqidi (Eddie)
-    "sherry.xieli@huawei.com",      # Xieli (Sherry)
-    "dongpan@huawei.com",           # Dongpan
-    "michelle.yandong@huawei.com",  # Yandong (Michelle)
-    "hui.wong@huawei.com",          # Wanghui (PACD)
-    "wangzineng@huawei.com",        # wangzineng
-    "robinson.hu@huawei.com",       # Hubin (Robinson)
-    "chenheng@huawei.com",          # Chenheng (Helena, PACD)
-    "daiyanpeng1@huawei.com",       # Daiyanpeng
-    "gaoyang.gaoyang@huawei.com",   # Gaoyang (Beijing Office)
-    "liuchao133@huawei.com",        # Liuchao (Andy, PACD)
-    "shilina@huawei.com",           # Shilina (Emily, Beijing Rep. Office, PACD)
-    "tengyi@huawei.com",            # Tengyi
-    "wubiqiang@huawei.com",         # Wubiqiang
-    "luohaijun@huawei.com",         # Luohaijun (Freddy)
-    "shixiaohui@huawei.com",        # Shixiaohui
-    "vincent.xutao@huawei.com",     # Xutao (Vincent)
-    "lee.chenlibin@huawei.com",     # Chenlibin (Lee)
-    "bowen.zhang@huawei.com",       # Zhangbowen (Bowen)
-    "wangshuang6@huawei.com",       # Wangshuang (PACD)
+    "2027674540@qq.com",
 ]
 
 # 发送机制参数（QQ SMTP 群发风控经验值）
@@ -113,6 +93,7 @@ def load_articles():
     override = load_override()
     intl_order = (override or {}).get('intl_order') or []
     intl_include = (override or {}).get('intl_include') or []
+    intl_exclude = (override or {}).get('intl_exclude') or []
 
     with open(INTL_DATA) as f:
         nd = json.load(f)
@@ -127,7 +108,8 @@ def load_articles():
                 intl_full.append(a)
 
     # 排除 + 按 override 指定顺序重排
-    intl = [a for i, a in enumerate(intl_full) if (i + 1) not in INTL_EXCLUDE]
+    intl_exclude_set = set(INTL_EXCLUDE) | set(intl_exclude)
+    intl = [a for i, a in enumerate(intl_full) if (i + 1) not in intl_exclude_set]
     if intl_order:
         order_map = {_norm_url(u): idx for idx, u in enumerate(intl_order)}
         indexed = [(a, i) for i, a in enumerate(intl)]
@@ -163,6 +145,7 @@ def load_diplo_updates(lookback_days=2):
                     'country': item.get('country', ''),
                     'event_type': item.get('event_type') or item.get('interaction_type') or '',
                     'person': item.get('person_name') or item.get('cn_person') or '',
+                    'headline': item.get('headline', ''),
                     'date': ed,
                     'description': item.get('description', ''),
                 })
@@ -240,6 +223,7 @@ def intl_row(i, a):
     if not summary:
         summary = "暂无摘要"
     num = f"{n:02d}"
+    # 标题纯文本（不再点击跳转），原文链接列明（PDF 中可点击）
     return f'''<tr>
   <td style="padding:20px 22px; border-bottom:1px solid #ecebe6; border-left:4px solid #1e3a8a; background:#ffffff;">
     <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
@@ -250,11 +234,12 @@ def intl_row(i, a):
       </td>
       <td style="padding-left:14px;">
         <p style="margin:0 0 5px 0; font-family:Georgia,'Times New Roman',serif; font-size:11.5px; font-style:italic; color:#9aa0ac; line-height:1.45;">{te}</p>
-        <p style="margin:0 0 7px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5;">
-          <a href="{url}" target="_blank" style="color:#1a1a2e; text-decoration:none;">{tz}</a>
+        <p style="margin:0 0 7px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5; color:#1a1a2e;">
+          {tz}
         </p>
         <p style="margin:0 0 9px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; color:#8a8f9a; letter-spacing:0.3px;">{src}</p>
-        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{summary}</p>
+        <p style="margin:0 0 6px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{summary}</p>
+        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; line-height:1.5; word-break:break-all;">🔗 原文链接：<a href="{url}" style="color:#1e3a8a; text-decoration:underline;">{url}</a></p>
       </td>
     </tr></table>
   </td>
@@ -278,11 +263,12 @@ def dom_row(i, a):
         </tr></table>
       </td>
       <td style="padding-left:14px;">
-        <p style="margin:0 0 7px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5;">
-          <a href="{url}" target="_blank" style="color:#1a1a2e; text-decoration:none;">{t}</a>
+        <p style="margin:0 0 7px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5; color:#1a1a2e;">
+          {t}
         </p>
         <p style="margin:0 0 9px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; color:#8a8f9a; letter-spacing:0.3px;">{cat} <span style="color:#d5d4cf; padding:0 6px;">|</span> {src}</p>
-        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{summary}</p>
+        <p style="margin:0 0 6px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{summary}</p>
+        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; line-height:1.5; word-break:break-all;">🔗 原文链接：<a href="{url}" style="color:#c8102e; text-decoration:underline;">{url}</a></p>
       </td>
     </tr></table>
   </td>
@@ -293,11 +279,13 @@ def diplo_row(i, d):
     n = i + 1
     country = esc(d.get('country', ''))
     etype = esc(d.get('event_type', ''))
+    headline = esc(d.get('headline', ''))
     mod = esc(d.get('module', ''))
     person = esc(d.get('person', ''))
     date = esc(d.get('date', ''))
     desc = esc(d.get('description', ''))
     num = f"{n:02d}"
+    title = headline or (f'{country} · {etype}' if (country or etype) else person)
     return f'''<tr>
   <td style="padding:20px 22px; border-bottom:1px solid #ecebe6; border-left:4px solid #0d9488; background:#ffffff;">
     <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
@@ -307,7 +295,7 @@ def diplo_row(i, d):
         </tr></table>
       </td>
       <td style="padding-left:14px;">
-        <p style="margin:0 0 7px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5;">{country} · {etype}</p>
+        <p style="margin:0 0 7px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5;">{title}</p>
         <p style="margin:0 0 9px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; color:#8a8f9a; letter-spacing:0.3px;">{mod} <span style="color:#d5d4cf; padding:0 6px;">|</span> {person} <span style="color:#d5d4cf; padding:0 6px;">|</span> {date}</p>
         <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{desc}</p>
       </td>
@@ -490,14 +478,63 @@ def send_email(html_body, total, to_email=None):
         return False
 
 
+def generate_pdf(html_body, pdf_path):
+    """将精美版日报 HTML 渲染为 A4 PDF（保留超链接，供微信发送）"""
+    import tempfile
+
+    with tempfile.NamedTemporaryFile('w', suffix='.html', encoding='utf-8', delete=False) as f:
+        f.write(html_body)
+        tmp_html = f.name
+
+    node_script = r'''
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1280, height: 1600 } });
+  await page.goto('file://' + process.argv[1], { waitUntil: 'networkidle', timeout: 60000 });
+  await page.pdf({
+    path: process.argv[2],
+    format: 'A4',
+    printBackground: true,
+    margin: { top: '12mm', bottom: '12mm', left: '10mm', right: '10mm' },
+    displayHeaderFooter: false
+  });
+  await browser.close();
+  console.log('PDF_OK');
+})();
+'''
+    node_bin = "/Users/xiaoxiao/.workbuddy/binaries/node/versions/22.22.2/bin/node"
+    if not os.path.exists(node_bin):
+        node_bin = "node"
+    env = dict(os.environ)
+    env["NODE_PATH"] = "/Users/xiaoxiao/.workbuddy/binaries/node/workspace/node_modules"
+
+    try:
+        r = subprocess.run(
+            [node_bin, '-e', node_script, tmp_html, pdf_path],
+            capture_output=True, text=True, env=env, timeout=120,
+        )
+        os.unlink(tmp_html)
+        if 'PDF_OK' in r.stdout:
+            print(f'✅ PDF 已生成: {pdf_path}')
+            return True
+        print(f'❌ PDF 生成失败: {r.stdout} {r.stderr}')
+        return False
+    except Exception as e:
+        os.unlink(tmp_html)
+        print(f'❌ PDF 生成异常: {e}')
+        return False
+
+
 def main():
     preview = '--preview' in sys.argv
+    do_pdf = '--pdf' in sys.argv
     to_emails = []
     for i, arg in enumerate(sys.argv):
         if arg == '--to' and i + 1 < len(sys.argv):
             to_emails = [e.strip() for e in sys.argv[i + 1].split(',') if e.strip()]
 
-    # 数据就绪门禁：发送模式下先确保国际看板今日已刷新；预览模式仅提示
+    # 数据就绪门禁：发送/生成PDF 模式下先确保国际看板今日已刷新；预览模式仅提示
     if not preview:
         print('🔍 检查看板数据是否就绪...')
         ensure_data_ready()
@@ -507,7 +544,11 @@ def main():
             print(f'⚠️ 国际看板今日仅 {cnt} 条，可能尚未刷新完成；正式发送时会自动补跑/等待。')
 
     intl, dom = load_articles()
-    diplo = load_diplo_updates()
+    ov = load_override()
+    if ov and ov.get('skip_diplo'):
+        diplo = []
+    else:
+        diplo = load_diplo_updates()
     total = len(intl) + len(dom)
     print(f'📰 精美 Outlook 版生成中... {TODAY}')
     print(f'   🌍 国际: {len(intl)} 篇 | 🇨🇳 国内: {len(dom)} 篇 | 🏛 使领馆: {len(diplo)} 条动态')
@@ -516,6 +557,12 @@ def main():
     with open(OUT_HTML, 'w', encoding='utf-8') as f:
         f.write(html)
     print(f'✅ HTML 已生成: {OUT_HTML}')
+
+    if do_pdf:
+        os.makedirs(PDF_DIR, exist_ok=True)
+        pdf_path = os.path.join(PDF_DIR, f'信息日报-{TODAY}.pdf')
+        generate_pdf(html, pdf_path)
+        return 0
 
     if not preview:
         if not to_emails:

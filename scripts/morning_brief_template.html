@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* === PDF 打印（A4） === */
+  @page { size: A4; margin: 14mm 12mm; }
+  @media print {
+    body { background: #ffffff !important; padding: 0 !important; }
+    .card { break-inside: avoid; }
+  }
   /* === 基础 === */
   body {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -102,9 +108,16 @@
   .card-title-zh {
     font-family: "Noto Serif SC", serif;
     font-size: 16px; font-weight: 700; line-height: 1.45;
+    color: #1a1a2e;
   }
-  .card-title-zh a { color: #1a1a2e; text-decoration: none; }
-  .card-title-zh a:hover { color: #b91c1c; }
+  .card-link {
+    display: inline-block;
+    font-size: 11px; color: #1e3a8a; margin: 6px 0 0;
+    word-break: break-all; line-height: 1.5;
+  }
+  .card-link a { color: #1e3a8a; text-decoration: underline; }
+  .section-title.dom ~ .card .card-link { color: #b91c1c; }
+  .section-title.dom ~ .card .card-link a { color: #b91c1c; }
   .card-meta { font-size: 11px; color: #6b7280; margin: 8px 0; }
   .card-meta .sep { color: #d4d4d8; margin: 0 6px; }
   .card-summary {

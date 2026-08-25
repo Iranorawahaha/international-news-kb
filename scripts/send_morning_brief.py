@@ -31,6 +31,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INTL_DATA = os.path.join(BASE, "data", "news-data.json")
 CHINA_DATA = os.path.join(BASE, "data", "china-news.json")
 PREVIEW_HTML = os.path.join(BASE, "morning-brief-preview.html")
+PDF_DIR = os.path.join(BASE, "日报PDF")
 LOG_FILE = os.path.join(BASE, "data", "morning-brief-log.json")
 
 SMTP_HOST = "smtp.qq.com"
@@ -95,12 +96,14 @@ def build_html(intl, dom, intl_today, intl_total, dom_total):
         if not summary:
             summary = "暂无摘要"
         num = f"{n:02d}"
+        # 标题纯文本（不再点击跳转），原文链接列明（PDF 中可点击）
         return f'''<div class="card">
       <div class="card-head"><span class="card-num">{num}</span></div>
       <div class="card-title-en">{te}</div>
-      <div class="card-title-zh"><a href="{url}" target="_blank">{tz}</a></div>
+      <div class="card-title-zh">{tz}</div>
       <div class="card-meta">{src}</div>
       <div class="card-summary">{summary}</div>
+      <div class="card-link">🔗 原文链接：<a href="{url}">{url}</a></div>
     </div>'''
 
     def dom_card(i, a):
@@ -113,9 +116,10 @@ def build_html(intl, dom, intl_today, intl_total, dom_total):
         num = f"{n:02d}"
         return f'''<div class="card">
       <div class="card-head"><span class="card-num">{num}</span></div>
-      <div class="card-title-zh"><a href="{url}" target="_blank">{t}</a></div>
+      <div class="card-title-zh">{t}</div>
       <div class="card-meta">{cat} <span class="sep">|</span> {src}</div>
       <div class="card-summary">{summary}</div>
+      <div class="card-link">🔗 原文链接：<a href="{url}">{url}</a></div>
     </div>'''
 
     intl_cards = '\n'.join(intl_card(i, a) for i, a in enumerate(intl))
@@ -391,6 +395,55 @@ def send_email(html_body, intl_count, dom_count, to_email=None):
         return False
 
 
+def generate_pdf(html, out_path):
+    """将日报 HTML 渲染为 A4 PDF（保留超链接，供微信发送）"""
+    import subprocess, tempfile
+
+    with tempfile.NamedTemporaryFile('w', suffix='.html', encoding='utf-8', delete=False) as f:
+        f.write(html)
+        tmp_html = f.name
+
+    node_script = r'''
+const { chromium } = require('playwright');
+const fs = require('fs');
+(async () => {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1280, height: 1600 } });
+  await page.goto('file://' + process.argv[1], { waitUntil: 'networkidle', timeout: 60000 });
+  await page.pdf({
+    path: process.argv[2],
+    format: 'A4',
+    printBackground: true,
+    margin: { top: '12mm', bottom: '12mm', left: '10mm', right: '10mm' },
+    displayHeaderFooter: false
+  });
+  await browser.close();
+  console.log('PDF_OK');
+})();
+'''
+    node_bin = "/Users/xiaoxiao/.workbuddy/binaries/node/versions/22.22.2/bin/node"
+    if not os.path.exists(node_bin):
+        node_bin = "node"
+    env = dict(os.environ)
+    env["NODE_PATH"] = "/Users/xiaoxiao/.workbuddy/binaries/node/workspace/node_modules"
+
+    try:
+        r = subprocess.run(
+            [node_bin, '-e', node_script, tmp_html, out_path],
+            capture_output=True, text=True, env=env, timeout=120,
+        )
+        os.unlink(tmp_html)
+        if 'PDF_OK' in r.stdout:
+            print(f'✅ PDF 已生成: {out_path}')
+            return True
+        print(f'❌ PDF 生成失败: {r.stdout} {r.stderr}')
+        return False
+    except Exception as e:
+        os.unlink(tmp_html)
+        print(f'❌ PDF 生成异常: {e}')
+        return False
+
+
 def total_approx(html):
     """粗略统计卡片数"""
     return str(html.count('<div class="card">'))
@@ -419,6 +472,7 @@ def parse_exclude(arg):
 def main():
     preview = '--preview' in sys.argv
     do_send = '--send' in sys.argv
+    do_pdf = '--pdf' in sys.argv
 
     # 解析可选参数
     intl_exclude = set()
@@ -432,8 +486,8 @@ def main():
         if arg == '--to' and i + 1 < len(sys.argv):
             to_email = sys.argv[i+1]
 
-    if not preview and not do_send:
-        print('用法: --preview (预览) / --send (发送) / --preview --send (预览+发送)')
+    if not preview and not do_send and not do_pdf:
+        print('用法: --preview (预览) / --send (发送) / --pdf (生成PDF) / 可组合')
         print('      --exclude-intl 1,2,4   (排除国际第N条)')
         print('      --exclude-dom 1,2,6    (排除国内第N条)')
         print('      --to user@example.com  (自定义收件人)')
@@ -457,6 +511,12 @@ def main():
         with open(PREVIEW_HTML, 'w', encoding='utf-8') as f:
             f.write(html)
         print(f'✅ 预览已生成: {PREVIEW_HTML}')
+
+    if do_pdf:
+        html = build_html(intl, dom, intl_today, intl_total, dom_total)
+        os.makedirs(PDF_DIR, exist_ok=True)
+        pdf_path = os.path.join(PDF_DIR, f'信息日报-{TODAY}.pdf')
+        generate_pdf(html, pdf_path)
 
     sent = False
     if do_send:
