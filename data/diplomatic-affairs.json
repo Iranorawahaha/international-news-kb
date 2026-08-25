@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-08-24T09:22:17.917032+08:00",
-    "window_start": "2026-08-21",
-    "window_end": "2026-08-24",
+    "generated": "2026-08-25T16:22:05.516731+08:00",
+    "window_start": "2026-08-22",
+    "window_end": "2026-08-25",
     "collection_method": "auto + agent",
     "candidate_count": 0
   },
