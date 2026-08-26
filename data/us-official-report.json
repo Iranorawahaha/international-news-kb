@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-08-24 09:25",
+  "timestamp": "2026-08-26 09:24",
   "sites": [
     {
       "site": "白宫",
       "url": "https://www.whitehouse.gov/news/",
       "status": "✅ 成功",
-      "count": 1
-    },
-    {
-      "site": "美国国务院",
-      "url": "https://www.state.gov/press-releases/",
-      "status": "✅ 成功",
-      "count": 1
+      "count": 2
     },
     {
       "site": "美国财政部",
       "url": "https://home.treasury.gov/news/press-releases",
+      "status": "✅ 成功",
+      "count": 0
+    },
+    {
+      "site": "美国国务院",
+      "url": "https://www.state.gov/press-releases/",
       "status": "❌ 失败",
-      "error": "<urlopen error [Errno 54] Connection reset by peer>"
+      "error": "HTTP Error 407: "
     }
   ],
   "webfetch_required": [
