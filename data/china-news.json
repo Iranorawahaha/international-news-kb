@@ -1,9 +1,20 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-08-26 09:45",
+  "lastUpdated": "2026-08-27 09:21",
   "retentionDays": 7,
   "archive": {
     "2026-08-26": [
+      {
+        "title": "中印边界问题特别代表第25次会晤在北京举行",
+        "url": "https://www.mfa.gov.cn/wjbzhd/202608/t20260825_12010205.shtml",
+        "date": "2026-08-25",
+        "source": "外交部",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "8月25日，中印边界问题特别代表第25次会晤在北京举行。中方特别代表、中央外办主任王毅同印方特别代表、国家安全顾问多瓦尔就中印边界问题和双边关系等全面深入、友好坦诚沟通，重申按2005年政治指导原则寻求公平合理、双方都能接受的边界问题一揽子解决方案，商定2027年在印度举行第26次会晤。",
+        "collectedAt": "2026-08-26 09:21:53"
+      },
       {
         "title": "全国政协十四届常委会第十八次会议开幕",
         "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079094.htm",
@@ -60,17 +71,6 @@
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
-        "title": "中印边界问题特别代表第25次会晤在北京举行",
-        "url": "https://www.mfa.gov.cn/wjbzhd/202608/t20260825_12010205.shtml",
-        "date": "2026-08-25",
-        "source": "外交部",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "8月25日，中印边界问题特别代表第25次会晤在北京举行。中方特别代表、中央外办主任王毅同印方特别代表、国家安全顾问多瓦尔就中印边界问题和双边关系等全面深入、友好坦诚沟通，重申按2005年政治指导原则寻求公平合理、双方都能接受的边界问题一揽子解决方案，商定2027年在印度举行第26次会晤。",
-        "collectedAt": "2026-08-26 09:21:53"
-      },
-      {
         "title": "陈文清会见越南最高人民法院院长阮文广",
         "url": "http://paper.people.com.cn/rmrb/pc/content/202608/26/content_30177067.html",
         "date": "2026-08-26",
@@ -93,14 +93,14 @@
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
-        "title": "中共中央办公厅 国务院办公厅印发《党政领导干部生态环境损害责任追究办法》",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079095.htm",
+        "title": "中央网信办“清朗·网络娱乐团播乱象整治”累计处置违规直播间7200余个",
+        "url": "https://epaper.gmw.cn/gmrb/html/content/202608/25/content_23231.html",
         "date": "2026-08-25",
-        "source": "中国政府网·要闻",
-        "category": "政策发布",
-        "priority_score": 80,
+        "source": "光明日报",
+        "category": "部委动态",
+        "priority_score": 88,
         "is_summit_level": false,
-        "summary": "新华社北京8月25日电 近日，中共中央办公厅、国务院办公厅印发《党政领导干部生态环境损害责任追究办法》，并发出通知，要求各地区各部门认真遵照执行。",
+        "summary": "中央网信办“清朗·网络娱乐团播乱象整治”专项行动启动以来，累计处置团播违规直播间7200余个、严惩违规账号2200余个，清退处置一批问题严重的团播MCN机构，发布治理公告17期；坚持整治与规范并重，娱乐团播低俗内容大幅下降，诱导刺激打赏等违规行为得到有效遏制，团播生态明显转好。",
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
@@ -148,25 +148,14 @@
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
-        "title": "过度索取权限、窗口无法关闭 多款APP被通报",
-        "url": "https://news.cctv.com/2026/08/25/ARTIAN41xQO7iGCcDEOtxmfc260825.shtml",
+        "title": "工信部就《国家人形机器人产业标准体系建设指南（2026版）》公开征求意见",
+        "url": "http://scitech.ce.cn/sy/zx/202608/t20260825_3169016.shtml",
         "date": "2026-08-25",
-        "source": "央视新闻",
+        "source": "中国经济网",
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "8月25日，工信微报微信公号发布《关于侵害用户权益行为的APP（SDK）通报（2026年第5批，总第58批）》，全文如下。上述APP及SDK应按有关规定进行整改，整改落实不到位的，我部将依法依规组织开…",
-        "collectedAt": "2026-08-26 09:21:53"
-      },
-      {
-        "title": "受AI相关电子产品带动 香港7月出口同比增逾50%",
-        "url": "https://www.zaobao.com/news/china/story20260825-9572857",
-        "date": "2026-08-25",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "在人工智能（AI）相关电子产品需求持续强劲下，香港今年7月商品出口货值同比增长50.7%。",
+        "summary": "工信部科技司8月24日发布《国家人形机器人产业标准体系建设指南（2026版）》（征求意见稿），8月25日至9月23日公开征求意见。提出到2028年完成至少100项关键标准制定，重点突破基础共性、类脑与智算、肢体与部组件、整机与系统、应用、安全伦理等领域标准研制，开展标准宣贯和实施推广的企业超200家。",
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
@@ -181,14 +170,25 @@
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
-        "title": "香港与秘鲁自由贸易协定9月1日生效",
-        "url": "https://www.zaobao.com/news/china/story20260825-9572822",
+        "title": "过度索取权限、窗口无法关闭 多款APP被通报",
+        "url": "https://news.cctv.com/2026/08/25/ARTIAN41xQO7iGCcDEOtxmfc260825.shtml",
         "date": "2026-08-25",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
         "is_summit_level": false,
-        "summary": "香港与秘鲁签订的自由贸易协定将于9月1日生效。",
+        "summary": "8月25日，工信微报微信公号发布《关于侵害用户权益行为的APP（SDK）通报（2026年第5批，总第58批）》，全文如下。上述APP及SDK应按有关规定进行整改，整改落实不到位的，我部将依法依规组织开…",
+        "collectedAt": "2026-08-26 09:21:53"
+      },
+      {
+        "title": "中共中央办公厅 国务院办公厅印发《党政领导干部生态环境损害责任追究办法》",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079095.htm",
+        "date": "2026-08-25",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "新华社北京8月25日电 近日，中共中央办公厅、国务院办公厅印发《党政领导干部生态环境损害责任追究办法》，并发出通知，要求各地区各部门认真遵照执行。",
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
@@ -203,25 +203,25 @@
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
-        "title": "中央网信办“清朗·网络娱乐团播乱象整治”累计处置违规直播间7200余个",
-        "url": "https://epaper.gmw.cn/gmrb/html/content/202608/25/content_23231.html",
+        "title": "受AI相关电子产品带动 香港7月出口同比增逾50%",
+        "url": "https://www.zaobao.com/news/china/story20260825-9572857",
         "date": "2026-08-25",
-        "source": "光明日报",
-        "category": "部委动态",
-        "priority_score": 88,
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
         "is_summit_level": false,
-        "summary": "中央网信办“清朗·网络娱乐团播乱象整治”专项行动启动以来，累计处置团播违规直播间7200余个、严惩违规账号2200余个，清退处置一批问题严重的团播MCN机构，发布治理公告17期；坚持整治与规范并重，娱乐团播低俗内容大幅下降，诱导刺激打赏等违规行为得到有效遏制，团播生态明显转好。",
+        "summary": "在人工智能（AI）相关电子产品需求持续强劲下，香港今年7月商品出口货值同比增长50.7%。",
         "collectedAt": "2026-08-26 09:21:53"
       },
       {
-        "title": "工信部就《国家人形机器人产业标准体系建设指南（2026版）》公开征求意见",
-        "url": "http://scitech.ce.cn/sy/zx/202608/t20260825_3169016.shtml",
+        "title": "香港与秘鲁自由贸易协定9月1日生效",
+        "url": "https://www.zaobao.com/news/china/story20260825-9572822",
         "date": "2026-08-25",
-        "source": "中国经济网",
-        "category": "部委动态",
-        "priority_score": 85,
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
         "is_summit_level": false,
-        "summary": "工信部科技司8月24日发布《国家人形机器人产业标准体系建设指南（2026版）》（征求意见稿），8月25日至9月23日公开征求意见。提出到2028年完成至少100项关键标准制定，重点突破基础共性、类脑与智算、肢体与部组件、整机与系统、应用、安全伦理等领域标准研制，开展标准宣贯和实施推广的企业超200家。",
+        "summary": "香港与秘鲁签订的自由贸易协定将于9月1日生效。",
         "collectedAt": "2026-08-26 09:21:53"
       }
     ],
@@ -370,17 +370,6 @@
         "collectedAt": "2026-08-25 16:22:00"
       },
       {
-        "title": "美升级对伊制裁 中国外交部：经济战只会激化矛盾",
-        "url": "https://www.zaobao.com/news/china/story20260825-9572056",
-        "date": "2026-08-25",
-        "source": "联合早报",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "中方就美国升级对伊朗制裁表态，指出经济战只会激化矛盾，呼吁有关各方通过对话协商妥善解决分歧，维护地区和平稳定。",
-        "collectedAt": "2026-08-25 16:22:00"
-      },
-      {
         "title": "今年1—7月我国全行业对外直接投资6845.1亿元",
         "url": "https://news.cctv.com/2026/08/25/ARTIkSstAdMfWpR7Kd5g0Ekd260825.shtml",
         "date": "2026-08-25",
@@ -389,6 +378,17 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "据商务部、外汇局统计，2026年1—7月，我国全行业对外直接投资6845.1亿元人民币，同比增长2.8%（以美元计为995.3亿美元，增长7.3%）。其中，我国境内投资者共对全球148个国家和地区的7…",
+        "collectedAt": "2026-08-25 16:22:00"
+      },
+      {
+        "title": "美升级对伊制裁 中国外交部：经济战只会激化矛盾",
+        "url": "https://www.zaobao.com/news/china/story20260825-9572056",
+        "date": "2026-08-25",
+        "source": "联合早报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "中方就美国升级对伊朗制裁表态，指出经济战只会激化矛盾，呼吁有关各方通过对话协商妥善解决分歧，维护地区和平稳定。",
         "collectedAt": "2026-08-25 16:22:00"
       },
       {
@@ -1267,309 +1267,573 @@
         "collectedAt": "2026-08-21 09:22:36"
       }
     ],
-    "2026-08-20": [
+    "2026-08-27": [
       {
-        "title": "习近平致电祝贺鲍卡就任匈牙利总统",
-        "url": "https://tv.cctv.com/2026/08/19/VIDElQVe8brcFkXpX9n4SNrp260819.shtml",
-        "date": "2026-08-19",
+        "title": "习近平对西藏日喀则市吉隆县遭受泥石流灾害作出重要指示强调 千方百计搜救失联人员 加强各类风险隐患排查整治 确保人民群众生命财产安全 李强作出批示",
+        "url": "https://tv.cctv.com/2026/08/26/VIDEzlsZ9lMzGYabT0u8gx3U260826.shtml",
+        "date": "2026-08-26",
         "source": "中国政府网·要闻",
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "summary": "习近平致电祝贺鲍卡就任匈牙利总统。习近平表示，中匈是相互信赖的好朋友、好伙伴，愿同鲍卡一道努力，推动中匈新时代全天候全面战略伙伴关系不断取得新成果。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "习近平对西藏日喀则市吉隆县遭受泥石流灾害作出重要指示强调：千方百计搜救失联人员，加强各类风险隐患排查整治，确保人民群众生命财产安全；李强作出批示。",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "东帝汶总统奥尔塔会见董军",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/20/content_30176083.html",
-        "date": "2026-08-20",
+        "title": "习近平将出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问",
+        "url": "https://tv.cctv.com/2026/08/26/VIDEYhTXOpT1holOdpNbeMug260826.shtml",
+        "date": "2026-08-26",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平将出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "习近平将出席上合组织峰会并访吉尔吉斯斯坦和埃及",
+        "url": "https://www.zaobao.com/news/china/story20260826-9577795",
+        "date": "2026-08-26",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "外交部发言人介绍习近平主席出访有关安排和中方期待",
+        "url": "https://www.gov.cn/lianbo/202608/content_7079191.htm",
+        "date": "2026-08-26",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京8月26日电（记者 万倩仪、马卓言）8月30日至9月3日，国家主席习近平将出席在比什凯克举行的2026年上海合作组织峰会，并应吉尔吉斯斯坦总统扎帕罗夫、埃及总统塞西邀请对两国进行国事访问。外…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "担忧AI风险 比尔盖茨望与习近平讨论监管构想",
+        "url": "https://www.zaobao.com/news/china/story20260826-9578135",
+        "date": "2026-08-26",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "时政微观察丨这项任务，总书记强调“久久为功”",
+        "url": "https://news.cctv.com/2026/08/26/ARTI3Y6LkkrCF58XHMO1wNHR260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "近日，习近平总书记作出重要指示强调，巩固拓展树立和践行正确政绩观学习教育成果，努力创造经得起实践、人民、历史检验的实绩。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "丁薛祥在安徽合肥出席财政科学管理试点座谈会时强调 落实当家理财责任 提升财政工作水平 更好服务和保障中国式现代化建设",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079203.htm",
+        "date": "2026-08-26",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社合肥8月26日电（记者 齐中熙）8月25日至26日，中共中央政治局常委、国务院副总理丁薛祥在安徽合肥出席财政科学管理试点座谈会并调研。他强调，要深入贯彻落实习近平总书记重要指示精神和党中央决策部…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "全国政协十四届常委会第十八次会议举行全体会议",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/27/content_30177458.html",
+        "date": "2026-08-27",
         "source": "人民日报",
         "category": "高层动态",
         "priority_score": 95,
         "is_summit_level": false,
-        "summary": "8月18日，东帝汶总统奥尔塔在帝力会见到访的中国国防部长董军。奥尔塔感谢中方自东帝汶独立以来给予的长期支持和援助，希望两军深化拓展务实合作，表示东帝汶恪守一个中国政策；董军表示两国领导人达成系列重要共识，推动双边关系迈入历史最好时期，中方坚定支持东帝汶国防和军队建设发展。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "本报北京8月26日电&nbsp;&nbsp;（记者姜洁）政协第十四届全国委员会常务委员会第十八次会议26日上午举行全体会议，14位全国政协常委围绕“加大保障和改善民生力度，扎实推进全体人民共同富裕”作…",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "何立峰会见智利外长",
-        "url": "https://tv.cctv.com/2026/08/19/VIDEvoiHgQzMcFn37E6nm2lZ260819.shtml",
-        "date": "2026-08-19",
-        "source": "中国政府网·要闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "8月19日，中共中央政治局委员、国务院副总理何立峰会见智利外长佩雷斯，就深化双边经贸合作、推动中智关系发展等交换意见。",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "刘国中在天津调研时强调 建设优质高效医疗服务体系 更好满足人民群众健康需求",
-        "url": "https://tv.cctv.com/2026/08/19/VIDElQHtuhamkVT3HHpEY30k260819.shtml",
-        "date": "2026-08-19",
-        "source": "中国政府网·要闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "刘国中在天津调研时强调：建设优质高效医疗服务体系，更好满足人民群众健康需求。",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "李强会见厄瓜多尔总统",
-        "url": "https://tv.cctv.com/2026/08/19/VIDE8tn3YcgBcJVuFCZX4cJ5260819.shtml",
-        "date": "2026-08-19",
-        "source": "中国政府网·要闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "李强表示，今年适逢中厄建立全面战略伙伴关系10周年。昨天，习近平主席同总统先生举行会晤，就深化中厄关系作出进一步规划。中方愿同厄方遵循两国元首战略引领，筑牢政治互信，推进高质量共建&ldquo;一带一…",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "王毅同智利外长佩雷斯会谈",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078667.htm",
-        "date": "2026-08-19",
-        "source": "中国政府网·要闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "新华社北京8月19日电（记者 马卓言）中共中央政治局委员、外交部长王毅19日在北京同智利外长佩雷斯举行会谈。",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "王毅同韩国外长赵显会谈（2026-08-19）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260819_12006915.shtml",
-        "date": "2026-08-19",
-        "source": "外交部",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "8月19日，中共中央政治局委员、外交部长王毅在首尔同韩国外长赵显举行会谈。王毅表示中韩关系正按照两国元首指明的方向持续改善和发展，希望韩方独立自主、并行不悖发展对外关系，愿同韩方推动中韩战略合作伙伴关系迈上新台阶，加快中韩自贸协定第二阶段谈判，深化人工智能、绿色转型、数字经济等新领域合作；赵显表示韩方始终坚持一个中国政策，期待密切高层交流，深化韩中关系各领域发展。",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "赵乐际会见厄瓜多尔总统诺沃亚（2026-08-19）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260819_12006548.shtml",
-        "date": "2026-08-19",
-        "source": "外交部",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "8月19日，全国人大常委会委员长赵乐际在北京会见来华进行国事访问的厄瓜多尔总统诺沃亚，就中厄关系及两国立法机构交流合作等交换意见。",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "《网络数据安全风险评估办法》今起施行",
-        "url": "https://tv.cctv.com/2026/08/20/VIDEJYtxz3xXdNv47JPtuiaQ260820.shtml",
-        "date": "2026-08-20",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "由国家网信办、工业和信息化部、公安部联合公布的《网络数据安全风险评估办法》8月20日起正式施行，旨在规范网络数据安全风险评估活动，保障网络数据安全，促进网络数据依法合理有效利用。",
-        "collectedAt": "2026-08-20 09:25:00"
-      },
-      {
-        "title": "司法部发布关于欧盟外国补贴调查相关做法构成不当域外管辖的公告",
-        "url": "https://news.cctv.com/2026/08/19/ARTIFeHnyoa7Lgcdpzrl2Utc260819.shtml",
-        "date": "2026-08-19",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "8月19日，司法部发布公告，认定欧盟外国补贴调查相关做法构成不当域外管辖，损害中欧经贸合作与市场公平竞争，中方将依法采取必要措施维护企业合法权益。",
-        "collectedAt": "2026-08-20 09:30:00"
-      },
-      {
-        "title": "司法部就欧盟外国补贴调查相关做法构成不当域外管辖答记者问",
-        "url": "https://news.cctv.com/2026/08/19/ARTIxJv84ocSeCVoA9E2C0Xc260819.shtml",
-        "date": "2026-08-19",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "司法部就欧盟外国补贴调查相关做法答记者问，指出欧盟相关做法构成不当域外管辖，损害中欧经贸合作与市场公平竞争，中方将依法维护企业合法权益。",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "陈新武当选重庆市市长",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/20/content_30176093.html",
-        "date": "2026-08-20",
+        "title": "全国政协十四届常委会第十八次会议闭幕",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/27/content_30177447.html",
+        "date": "2026-08-27",
         "source": "人民日报",
-        "category": "人事任免",
-        "priority_score": 88,
+        "category": "高层动态",
+        "priority_score": 95,
         "is_summit_level": false,
-        "summary": "本报重庆8月19日电&nbsp;&nbsp;（记者李增辉、刘新吾）重庆市第六届人民代表大会第五次会议8月19日选举陈新武为重庆市人民政府市长。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "王沪宁表示，共同富裕是社会主义现代化的重要目标，中国式现代化，民生为大。人民政协要深入学习领会习近平总书记关于加大保障和改善民生力度、扎实推进全体人民共同富裕的重要论述，围绕中共二十届四中全会《建议》…",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "2026年8月19日外交部发言人林剑主持例行记者会（2026-08-19）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260819_12006693.shtml",
-        "date": "2026-08-19",
+        "title": "刘国中吁APEC成员共同维护粮食供应链安全稳定",
+        "url": "https://www.zaobao.com/news/china/story20260826-9578153",
+        "date": "2026-08-26",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "十四届全国人大常委会第二十四次会议举行联组会议",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079211.htm",
+        "date": "2026-08-26",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京8月26日电 十四届全国人大常委会第二十四次会议26日下午在北京人民大会堂举行联组会议，审议国务院关于持续巩固拓展脱贫攻坚成果、扎实推进乡村全面振兴工作情况的报告并开展专题询问。赵乐际委员长…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "李强在黑龙江、吉林调研时强调 多措并举稳产增产 全力夺取秋粮丰收 持续提升农业综合生产能力确保粮食安全",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079216.htm",
+        "date": "2026-08-26",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社长春8月26日电（记者 邹伟）中共中央政治局常委、国务院总理李强8月24日至26日在黑龙江、吉林调研。他强调，要深入贯彻落实习近平总书记关于“三农”工作的重要论述和保障国家粮食安全的重要指示精神…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "李强：严把食品质量安全关",
+        "url": "https://www.zaobao.com/news/china/story20260827-9580868",
+        "date": "2026-08-27",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "王毅会乌兹别克第一千金：愿推进两国能源矿产合作",
+        "url": "https://www.zaobao.com/news/china/story20260826-9578928",
+        "date": "2026-08-26",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "王毅会见乌兹别克斯坦总统办公厅主任米尔济约耶娃",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/27/content_30177455.html",
+        "date": "2026-08-27",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京8月26日电&nbsp;&nbsp;（记者邵艺博）中共中央政治局委员、外交部长王毅26日在北京会见乌兹别克斯坦总统办公厅主任米尔济约耶娃。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "赵乐际会见乌兹别克斯坦总统办公厅主任米尔济约耶娃",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/27/content_30177457.html",
+        "date": "2026-08-27",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京8月26日电&nbsp;&nbsp;全国人大常委会委员长赵乐际26日上午在北京会见乌兹别克斯坦总统办公厅主任米尔济约耶娃。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "国家发展改革委紧急安排1亿元中央预算内投资支持西藏日喀则市吉隆县泥石流灾害灾后应急恢复",
+        "url": "https://news.cctv.com/2026/08/26/ARTI0xSbHb5O9EUR3HExyqMg260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "8月26日10时30分许，因尼泊尔一侧发生泥石流灾害，造成西藏日喀则市吉隆县吉隆口岸重大人员伤亡、失联，国家防减救灾委、应急管理部启动国家二级救灾应急响应。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "2026年8月26日外交部发言人林剑主持例行记者会（2026-08-26）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260826_12010898.shtml",
+        "date": "2026-08-26",
         "source": "外交部",
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "8月19日，外交部发言人林剑主持例行记者会，就中美关系、涉AI合作机制、地区热点等中外记者提问作出回应。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "400余款App、SDK被处置处罚 网信办严打涉信息泄露等违法犯罪行为",
-        "url": "https://news.cctv.com/2026/08/19/ARTIB6PhB7Xv1ZccdZRYUQbu260819.shtml",
-        "date": "2026-08-19",
+        "title": "“十五五”时期推动信息通信业全面升级",
+        "url": "https://news.cctv.com/2026/08/27/ARTI8DU8npbdOVpPSzN4OQqM260827.shtml",
+        "date": "2026-08-27",
         "source": "央视新闻",
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "2026年个人信息保护系列专项行动开展以来，中央网信办、工业和信息化部、公安部会同相关部门，加强系统谋划部署，强化协调联动，持续开展巡查检测，加强典型问题公开通报和督促整改，各项任务取得阶段性成效。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "国新办8月26日举行“开局起步‘十五五’”系列主题新闻发布会。发布会上，工业和信息化部相关负责人表示，“十五五”时期，将锚定基础设施全面升级、行业监管敏捷高效、安全保障全域联动、融合赋能更深更广等目标…",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "三部门联合印发《碳排放计量能力建设指导目录（2026版）》",
-        "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/jls/art/2026/art_29511f725f004163b3291b7f94f40976.html",
-        "date": "2026-08-19",
-        "source": "市场监管总局",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "市场监管总局、国家发展改革委、生态环境部联合印发《碳排放计量能力建设指导目录（2026版）》，关键测量参数由39个增至58个、检测标准方法由82种扩展至169种，进一步健全完善全国碳排放计量技术体系，为全国碳市场发展提供明确计量指南。",
-        "collectedAt": "2026-08-20 09:25:00"
-      },
-      {
-        "title": "上海推进6G商用　构建国际数据加工枢纽",
-        "url": "https://www.zaobao.com/news/china/story20260820-9545340",
-        "date": "2026-08-20",
+        "title": "中国官方：未来五年加快6G核心技术攻关",
+        "url": "https://www.zaobao.com/news/china/story20260826-9578367",
+        "date": "2026-08-26",
         "source": "联合早报",
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "中国“十五五”时期，上海将推进第六代移动通信技术（6G）试验网实现智能协同并部署商用，同时构建国际数据加工枢纽。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "商务部消费促进司负责人谈2026年7月我国消费市场情况",
-        "url": "https://jingji.cctv.com/2026/08/20/ARTIIf5nJFU2v4iIEcq2jGqs260820.shtml",
-        "date": "2026-08-20",
+        "title": "中国工信部谈新能源汽车：非理性竞争问题仍较突出",
+        "url": "https://www.zaobao.com/news/china/story20260826-9577692",
+        "date": "2026-08-26",
+        "source": "联合早报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "外交部：中国政府为确保本国公民的安全发布了提醒",
+        "url": "https://news.cctv.com/2026/08/26/ARTIsq8RQqPzi2oc7E2BRagt260826.shtml",
+        "date": "2026-08-26",
         "source": "央视新闻",
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "据商务部网站消息，今年以来，我国消费市场保持向新向优发展态势，市场规模稳步扩大、发展质量不断提升。1—7月，社会消费商品和服务零售总额同比（下同）增长2.6%；社会消费品零售总额28.77万亿元，增长…",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "8月26日，外交部发言人林剑主持例行记者会。林剑表示，关于这次的安全提醒，我想强调的是鉴于当前斯威士兰的社会治安等风险极高，电诈网赌活动猖獗，中国政府为确保本国公民的安全，稳慎评估后发布了安全提醒。",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "外交部：中方坚决反对在人工智能问题上搞选边站队、阵营对抗",
-        "url": "https://world.people.com.cn/n1/2026/0819/c1002-40782650.html",
-        "date": "2026-08-19",
-        "source": "人民网",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "8月19日，外交部发言人林剑在例行记者会上回应美方拟致信《人工智能机遇伙伴关系联合声明》联署国、要求各方不得同时加入美中两国人工智能生态系统一事，表示各国有权根据自身国情和发展需要选择合作伙伴，中方坚决反对在人工智能问题上搞选边站队、阵营对抗，希望各方摒弃零和思维，携手构建公正合理的全球人工智能治理体系。",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "市场监管总局：1至7月依法办结垄断协议和滥用市场支配地位案件13件",
-        "url": "https://news.cctv.com/2026/08/19/ARTI4EaGt4rrlvjswHqmTkIU260819.shtml",
-        "date": "2026-08-19",
+        "title": "工信部：1—7月规上消费品工业增加值同比增4.5%",
+        "url": "https://news.cctv.com/2026/08/27/ARTIGXZc8BH3deR9Ptu3LXmo260827.shtml",
+        "date": "2026-08-27",
         "source": "央视新闻",
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "记者8月19日了解到，今年以来，市场监管部门依法查办一批重大案件。截至7月，依法办结垄断协议和滥用市场支配地位案件13件。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "在国务院新闻办公室今天举行的“开局起步‘十五五’”系列主题新闻发布会上，工业和信息化部相关负责人表示，“十五五”时期，将着力扩大优质消费品供给，更好满足人民群众品质化、多样化、个性化消费需求。",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "百日千万招聘专项行动推出人工智能等线上招聘专场",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/20/content_30176077.html",
-        "date": "2026-08-20",
-        "source": "人民日报",
+        "title": "工信部：加快新一代通信网、算力网规划建设，加强6G技术研发",
+        "url": "https://news.cctv.com/2026/08/26/ARTIyPF20KJA9Mw6G9GiTcvc260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "本报北京8月19日电&nbsp;&nbsp;（记者邱超奕）记者从人力资源社会保障部获悉：8月17日至23日，百日千万招聘专项行动推出人工智能、先进制造、医疗卫生、外贸行业4个线上招聘专场，由相关人力资…",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "工信部将着力推动信息通信业高质量发展，加快新一代通信网、算力网规划建设，推动5G、工业互联网在重点行业规模化普及应用。",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "经济数据速览：7组数字看1—7月份中国经济",
-        "url": "https://www.gov.cn/zhengce/jiedu/tujie/202608/content_7078594.htm",
-        "date": "2026-08-19",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "中国政府网发布图解：7组关键数字速览2026年1—7月份中国经济运行情况，涵盖工业生产、投资、消费、外贸等主要指标。",
-        "collectedAt": "2026-08-20 09:11:24"
-      },
-      {
-        "title": "全民医保“十五五”规划发布 未来5年全面建成多层次医疗保障体系",
-        "url": "https://www.gov.cn/zhengce/202608/content_7078670.htm",
-        "date": "2026-08-20",
-        "source": "中国政府网·要闻",
+        "title": "中印强调推进边界问题解决框架磋商 寻求公平合理方案",
+        "url": "https://www.zaobao.com/news/china/story20260827-9581384",
+        "date": "2026-08-27",
+        "source": "联合早报",
         "category": "政策发布",
         "priority_score": 80,
         "is_summit_level": false,
-        "summary": "国家医保局8月19日发布《全民医疗保障“十五五”规划》（以下简称《规划》）。《规划》明确，将坚持以人民健康为中心，以推动医保事业高质量发展为主题，以改革创新为动力，坚持整体谋划、系统治理，尽力而为、量…",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "关于印发第五批全国社会信用体系建设示范区名单的通知",
-        "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202608/t20260820_1407095.html",
-        "date": "2026-08-20",
+        "title": "国家医保局印发指导意见 规范长期护理保险报销管理",
+        "url": "https://news.cctv.com/2026/08/26/ARTICvMEDiSxKfIkUoBG8p39260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "近日，国家医疗保障局印发《关于做好长期护理保险支付管理工作的指导意见》，建立适配群众需求、符合长期护理保险特点与市场发展要求的支付管理机制。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "抓好规划实施  加快推进新型工业化（权威发布·开局起步“十五五”）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/27/content_30177460.html",
+        "date": "2026-08-27",
+        "source": "人民日报",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "8月26日，国务院新闻办举行“开局起步‘十五五’”系列主题新闻发布会，介绍“全力抓好‘十五五’规划实施，加快推进新型工业化”有关情况。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "长护险基金可以报销哪些费用？最新《指导意见》明确",
+        "url": "https://news.cctv.com/2026/08/27/ARTI9tXefxg0K3aBHTgVbnK3260827.shtml",
+        "date": "2026-08-27",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "国家医疗保障局近日印发《关于做好长期护理保险支付管理工作的指导意见》，明确长期护理保险支付范围、支付方式、支付标准以及基金监管和风险防范机制。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "香港9月16日公布首份五年规划",
+        "url": "https://www.zaobao.com/news/china/story20260826-9579230",
+        "date": "2026-08-26",
+        "source": "联合早报",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "AI“新”技术破解“老”问题 织密从“地面感知”到“空中天眼”智慧消防网",
+        "url": "https://news.cctv.com/2026/08/26/ARTI0uwUoeGGXxKgvqvylDjx260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "随着人工智能技术的快速发展，AI在各个领域的应用日益广泛，消防救援也不例外。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "“十五五”时期我国将加快培育“人工智能+”“机器人+”等重大应用场景",
+        "url": "https://news.cctv.com/2026/08/26/ARTIu001wXMMOb8Jb5ddnaKt260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "“十五五”时期，我国将抓好场景培育，推动新技术新产品新场景大规模应用加速成势。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "“十五五”，中国制造业这样争“先”",
+        "url": "https://news.cctv.com/2026/08/27/ARTIq23kjOP0hCrdH9JMvQAq260826.shtml",
+        "date": "2026-08-27",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "“‘十五五’期间，我们将加快发展先进制造业”“加快构建以先进制造业为骨干的现代化产业体系”“着力提升先进制造能力”……",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "中国引领人工智能全球治理的三重路径（人民要论）",
+        "url": "https://news.cctv.com/2026/08/26/ARTIb9WFbL06gfKZY4FaS2uz260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "习近平主席在2026世界人工智能大会暨人工智能全球治理高级别会议开幕式上发表的主旨讲话中提出“坚持开放共赢，驱动创新发展”“强化风险意识，确保安全可控”“鼓励包容并蓄，促进文明互鉴”“倡导和衷共济，完…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "中阿投资合作高级别委员会秘书处会议在京召开",
+        "url": "https://www.ndrc.gov.cn/xwdt/xwfb/202608/t20260826_1407203.html",
+        "date": "2026-08-26",
         "source": "国家发改委",
-        "category": "政策发布",
-        "priority_score": 80,
+        "category": "经贸动向",
+        "priority_score": 72,
         "is_summit_level": false,
-        "summary": "国家发展改革委办公厅、中国人民银行办公厅联合印发通知，确定北京市朝阳区等20个城市（区）为第五批全国社会信用体系建设示范区，要求各示范区因地制宜探索创新可复制可推广的经验做法，发挥典型示范作用。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "2026暑期档电影观影场次和人数再创新高 电影全产业链产值超4100亿元",
-        "url": "https://news.cctv.com/2026/08/19/ARTIM3sClZ24ZDxyN5rbGnAH260819.shtml",
-        "date": "2026-08-19",
+        "title": "从乒乓球“自主对打”到上演最炫“科技街舞秀” 突破背后尽显机器人产业蓬勃活力",
+        "url": "https://news.cctv.com/2026/08/26/ARTIDGgJrsri2pCBgXBnTirm260826.shtml",
+        "date": "2026-08-26",
         "source": "央视新闻",
         "category": "经贸动向",
         "priority_score": 72,
         "is_summit_level": false,
-        "summary": "2026年暑期档观影人次已经超过2.9亿，放映场次超过3450万场，双双创下历史新高。高涨的观影热情也带动文旅消费持续走高。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "8月26日，第二届世界人形机器人运动会迎来最后一个比赛日，共安排13个比赛项目。其中，包含竞技赛5个大项、12个小项、场景赛1项，将产生最后的13枚金牌。全部竞赛项目结束后，将举行本届运动会闭幕式。",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "中澳两国央行续签双边本币互换协议",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/20/content_30176084.html",
-        "date": "2026-08-20",
+        "title": "加拿大宣布对美加征等额反制关税 中方回应",
+        "url": "https://news.cctv.com/2026/08/26/ARTI79Qqqhy1VHEtDF3fdGHY260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "8月26日，外交部发言人林剑主持例行记者会。有记者就加拿大宣布对美加征等额反制关税相关问题提问。对此，林剑表示，中方一贯主张各方通过平等的对话协商来解决各自的经贸关切。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "华为投标埃及算力中心项目 据报已引起华盛顿警觉",
+        "url": "https://www.zaobao.com/news/china/story20260826-9577965",
+        "date": "2026-08-26",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "品牌整体进化，创造汽车产业新模式",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/27/content_30177449.html",
+        "date": "2026-08-27",
         "source": "人民日报",
         "category": "经贸动向",
         "priority_score": 72,
         "is_summit_level": false,
-        "summary": "新华社北京8月19日电&nbsp;&nbsp;（记者吴雨、任军）记者8月19日从中国人民银行获悉：近日中国人民银行与澳大利亚储备银行续签了双边本币互换协议，互换规模由原来的2000亿元人民币/410亿…",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "40.3%、77.4%，这分别是2013年全年和2026年7月中国品牌乘用车在国内市场的占有率。",
+        "collectedAt": "2026-08-27 09:21:53"
       },
       {
-        "title": "具身智能训练场形成规模化集群化布局 人工智能加速从实验室“走向”产业落地",
-        "url": "https://news.cctv.com/2026/08/19/ARTIArITLNsfVqodBr6QHHqF260819.shtml",
-        "date": "2026-08-19",
+        "title": "多措并举稳产增产 全力夺取秋粮丰收 持续提升农业综合生产能力确保粮食安全",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/27/content_30177445.html",
+        "date": "2026-08-27",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "新华社长春8月26日电&nbsp;&nbsp;（记者邹伟）中共中央政治局常委、国务院总理李强8月24日至26日在黑龙江、吉林调研。他强调，要深入贯彻落实习近平总书记关于“三农”工作的重要论述和保障国家…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "央行开通国库资金汇划“绿色通道”保障救灾资金拨付",
+        "url": "https://news.cctv.com/2026/08/27/ARTIuOsAs295TStqbULxyN0G260827.shtml",
+        "date": "2026-08-27",
         "source": "央视新闻",
         "category": "经贸动向",
         "priority_score": 72,
         "is_summit_level": false,
-        "summary": "中国信息通信研究院8月18日发布《具身智能训练场研究报告（2026年）》。报告显示，随着各部门密集部署人形机器人中试基地和训练场建设，我国具身智能训练场已经成为关键基础设施，形成规模化集群化布局。",
-        "collectedAt": "2026-08-20 09:11:24"
+        "summary": "记者从中国人民银行获悉，中国人民银行西藏自治区分行已开通国库资金汇划“绿色通道”，紧急拨付吉隆县吉隆口岸泥石流救灾资金，组织辖内国库全力做好救灾服务保障工作。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "好评中国·“经”彩开局｜加大逆周期调节力度 推动经济持续向好",
+        "url": "https://news.cctv.com/2026/08/26/ARTI51zjwWvwc1LtJ9jZFC5L260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "当前我国经济呈现出动能向新、结构向优的发展态势，但“供强需弱”的矛盾依然较为突出。近期召开的中共中央政治局会议在部署下半年经济工作时强调，“加大逆周期调节力度”。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "感知活力、挖掘商机！外资企业解锁发展新机遇 西部投资蓝海“磁吸力”上升",
+        "url": "https://news.cctv.com/2026/08/26/ARTIVwPhmaJYbGO2CBeAGeQ4260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国超大规模市场优势和完备的产供链体系，正在吸引越来越多的外资企业探寻投资新机遇。近日，中国贸促会组织来自12个国家的30多家外资企业以及海外商协会代表，深入青海省清洁能源以及绿色算力产业腹地考察调研…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "我国已成功研制近200项人工智能关键标准",
+        "url": "https://news.cctv.com/2026/08/26/ARTI9wPLfMiBXPHsmlXs63IH260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "从应用上看，我国人工智能已经基本贯穿研发设计、生产制造、质检运维等全链条。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "新技术、新装备集中亮相 共绘AI赋能下绿色智慧交通出行新未来",
+        "url": "https://news.cctv.com/2026/08/26/ARTIW30RKjd4y2NAEanLTHwY260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "8月26日，第十八届国际交通技术与设备展览会在北京举行。一批新技术、新装备集中亮相，描绘出AI赋能下交通出行的新未来。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "焦点访谈｜投资数千万元的数字化项目 为何陷入尴尬境地？",
+        "url": "https://news.cctv.com/2026/08/26/ARTIfwkoGZVQv76ngwjfNKaL260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "近年来随着大数据、数字化的兴起，数字政务建设在全国各地按下“加速键”。不少地方纷纷致力于建设“城市大脑”或者“智慧城市”，为政府高效运转、更好提供便民服务做出了有益尝试。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "筑牢技术底座 “人工智能+”加出新速度、新高度、新成效催生经济新增长点",
+        "url": "https://news.cctv.com/2026/08/26/ARTIfY1OuOC5pCp2Xz4FWxRP260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "国务院新闻办公室8月26日上午举行“开局起步‘十五五’”系列主题新闻发布会。工业和信息化部相关负责人表示，“十五五”时期，将组织实施传统产业焕新行动，加快提升传统产业发展质量和效益。",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "算力跟着绿电走 从“各自波动”转向“同频共振”实现降成本与促消纳双赢",
+        "url": "https://news.cctv.com/2026/08/26/ARTIHBM8jNtlkXUgBPoj8RQm260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "2026年以来，人工智能加速发展，算力需求持续攀升。7月份，全社会用电量再次突破1万亿千瓦时，其中，算力用电出现爆发式增长，互联网数据服务用电量同比增长40%。记者在用电大省江苏、广东多地走访发现，随…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "系统布局扩内需促消费",
+        "url": "https://news.cctv.com/2026/08/26/ARTIGunvAY6gDLUUlrrfhVmK260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "日前，经国务院批复同意印发的《扩大消费“十五五”规划》提出，要“坚持扩大内需这个战略基点”“更好发挥消费对经济发展的基础性作用”，这表明消费作为国民经济基础、推动经济增长重要引擎的作用更加突出，也反映…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "落实当家理财责任 提升财政工作水平 更好服务和保障中国式现代化建设",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/27/content_30177448.html",
+        "date": "2026-08-27",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "新华社合肥8月26日电&nbsp;&nbsp;（记者齐中熙）8月25日至26日，中共中央政治局常委、国务院副总理丁薛祥在安徽合肥出席财政科学管理试点座谈会并调研。他强调，要深入贯彻落实习近平总书记重要…",
+        "collectedAt": "2026-08-27 09:21:53"
+      },
+      {
+        "title": "财政部：7月份全国共销售彩票875.71亿元",
+        "url": "https://news.cctv.com/2026/08/26/ARTIO0YKdguxAYaCw8U7xpSM260826.shtml",
+        "date": "2026-08-26",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "7月份，全国共销售彩票875.71亿元，同比增加356.22亿元，增长68.6%，主要是足球世界杯期间竞猜型彩票销量增长较快。",
+        "collectedAt": "2026-08-27 09:21:53"
       }
     ]
   },
   "dates": [
+    "2026-08-27",
     "2026-08-26",
     "2026-08-25",
     "2026-08-24",
     "2026-08-22",
-    "2026-08-21",
-    "2026-08-20"
+    "2026-08-21"
   ],
-  "today": "2026-08-26",
-  "todayCount": 20,
+  "today": "2026-08-27",
+  "todayCount": 50,
   "stats": {
-    "totalArticles": 140,
+    "totalArticles": 164,
     "dateCount": 6,
-    "latestDate": "2026-08-26",
-    "summitCount": 8
+    "latestDate": "2026-08-27",
+    "summitCount": 13
   }
 }
