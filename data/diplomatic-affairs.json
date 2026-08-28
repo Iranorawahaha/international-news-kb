@@ -86,10 +86,6 @@
             {
               "title": "韩联社（悼念朱镕基）",
               "url": "https://cb.yna.co.kr/gate/big5/m-cn.yna.co.kr/view/ACK20260814000300881"
-            },
-            {
-              "title": "环球时报（转韩媒提名报道）",
-              "url": "http://gzylhyzx.com/detail.html?newsId=5433462"
             }
           ],
           "confirmed": true,
@@ -211,24 +207,6 @@
     "visits": {
       "title": "外国重要高级官员访华",
       "items": [
-        {
-          "id": "evt-visit-001",
-          "country": "国际组织",
-          "person_name": "格罗西",
-          "position": "国际原子能机构总干事",
-          "event_date": "2026-08-01",
-          "description": "中共中央政治局委员、外交部长王毅在北京会见国际原子能机构总干事格罗西。王毅强调中国坚定恪守多边主义，维护联合国宪章权威；格罗西表示国际原子能机构坚持一个中国政策。",
-          "ambassador_participation": "不适用",
-          "outcomes": "双方同意在解决热点问题、推动和平利用核能方面深化沟通协作，共同维护国际核不扩散体系。",
-          "sources": [
-            {
-              "title": "央视新闻",
-              "url": "https://wx.laserfair.com/FCGI/22136/"
-            }
-          ],
-          "confirmed": true,
-          "phase": "completed"
-        },
         {
           "id": "evt-visit-002",
           "country": "厄瓜多尔",
@@ -381,10 +359,6 @@
               "url": "https://world.people.com.cn/n1/2026/0816/c1002-40780245.html"
             },
             {
-              "title": "上观新闻（陈靖会见卡斯特罗一行）",
-              "url": "https://www.toutiao.com/article/7675363431957496362/"
-            },
-            {
               "title": "央视新闻-国际在线（赵乐际同卡斯特罗会谈）",
               "url": "https://news.cri.cn/20260820/a0dacb93-7877-219d-46d4-241efd778ba3.html"
             },
@@ -445,10 +419,6 @@
             {
               "title": "外交部官网-中印边界问题特别代表在北京举行会晤",
               "url": "https://www.mfa.gov.cn/wjbzhd/202608/t20260825_12010205.shtml"
-            },
-            {
-              "title": "央视新闻-中印边界问题特别代表第25次会晤将在北京举行",
-              "url": "https://www.toutiao.com/article/7677493216085590534/"
             },
             {
               "title": "印度驻华使馆（India in China）",
@@ -536,10 +506,6 @@
           "outcomes": "双方同意共同落实两国元首共识，发挥政治外交渠道作用，筹备下阶段高层交往，推动中美建设性战略稳定关系取得实质进展。",
           "sources": [
             {
-              "title": "央视新闻",
-              "url": "https://www.toutiao.com/article/7668991112157217280"
-            },
-            {
               "title": "Reuters",
               "url": "https://www.163.com/game/article/DK3UFFO400318PFH_mobile.html"
             }
@@ -562,14 +528,6 @@
             {
               "title": "新华社-人民日报（王毅会见美国驻华大使庞德伟）",
               "url": "https://politics.people.com.cn/BIG5/n1/2026/0827/c1001-40787289.html"
-            },
-            {
-              "title": "外交部美大司吹风会（沙利文访华背景）",
-              "url": "https://www.hongkongdaily.net/guoji/article-20589.html"
-            },
-            {
-              "title": "新华社-香港日报（王毅同沙利文举行战略沟通）",
-              "url": "https://www.hongkongdaily.net/guoji/article-20614.html"
             },
             {
               "title": "CGTN（王毅会见庞德伟）",

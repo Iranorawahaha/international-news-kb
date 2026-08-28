@@ -25,9 +25,32 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(BASE_DIR, "data", "diplomatic-affairs.json")
 OUT_HTML = os.path.join(BASE_DIR, "diplomatic-affairs.html")
 
+# ⚠️ 不可靠信源黑名单（2026-08-28 用户确认剔除）
+# hongkongdaily.net：香港新闻网，曾返回不真实新闻（如"外交部美大司吹风会沙利文访华"假报道）
+SOURCE_BLACKLIST = [
+    "hongkongdaily.net",
+    "gzylhyzx.com",          # 可疑仿冒聚合站
+    "wx.laserfair.com",      # 激光展会站转载央视（非官方）
+    "toutiao.com",           # 头条号转载（非一手）
+]
+
 
 def esc(s):
     return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
+def filter_sources(sources):
+    """剔除黑名单信源（不可靠源不放上看板）"""
+    if not sources:
+        return []
+    out = []
+    for s in sources:
+        u = (s.get("url") or "").lower()
+        if any(b in u for b in SOURCE_BLACKLIST):
+            print(f"    🗑️ 黑名单信源剔除: {s.get('title','')[:40]} | {u[:70]}")
+            continue
+        out.append(s)
+    return out
 
 
 def sort_items_by_date(items):
@@ -68,7 +91,7 @@ def render_personnel(items, module_title="外交代表人事变化"):
         date = esc(it.get("event_date", ""))
         person = esc(it.get("person_name", "") or "")
         desc = esc(it.get("description", ""))
-        sources = it.get("sources", [])
+        sources = filter_sources(it.get("sources", []))
         confirmed = it.get("confirmed", True)
         phase = it.get("phase", "completed")
         
@@ -118,7 +141,7 @@ def render_consuls(items, module_title="驻上海、驻广州总领事人事"):
         date = esc(it.get("event_date", ""))
         person = esc(it.get("person_name", "") or "")
         desc = esc(it.get("description", ""))
-        sources = it.get("sources", [])
+        sources = filter_sources(it.get("sources", []))
         confirmed = it.get("confirmed", True)
         
         confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 待核实</span>'
@@ -166,7 +189,7 @@ def render_visits(items, module_title="外国重要高级官员访华"):
         desc = esc(it.get("description", ""))
         ambassador = esc(it.get("ambassador_participation", "") or "")
         outcomes = esc(it.get("outcomes", "") or "")
-        sources = it.get("sources", [])
+        sources = filter_sources(it.get("sources", []))
         confirmed = it.get("confirmed", True)
         phase = it.get("phase", "completed")
         
@@ -227,7 +250,7 @@ def render_us_china(items, module_title="中美高级官员互动"):
         cn_emphasis = esc(it.get("cn_emphasis", "") or "")
         us_emphasis = esc(it.get("us_emphasis", "") or "")
         outcomes = esc(it.get("outcomes", "") or "")
-        sources = it.get("sources", [])
+        sources = filter_sources(it.get("sources", []))
         
         mutual_label = "双方共同确认" if mutual else "单方发布"
         mutual_class = "mutual" if mutual else "unilateral"
