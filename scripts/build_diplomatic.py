@@ -27,11 +27,15 @@ OUT_HTML = os.path.join(BASE_DIR, "diplomatic-affairs.html")
 
 # ⚠️ 不可靠信源黑名单（2026-08-28 用户确认剔除）
 # hongkongdaily.net：香港新闻网，曾返回不真实新闻（如"外交部美大司吹风会沙利文访华"假报道）
+# 转载类：toutiao/163/sohu/qq 等转载站（内容可能真实但链接指向转载站，2026-08-28 用户确认一并剔除）
 SOURCE_BLACKLIST = [
     "hongkongdaily.net",
     "gzylhyzx.com",          # 可疑仿冒聚合站
     "wx.laserfair.com",      # 激光展会站转载央视（非官方）
     "toutiao.com",           # 头条号转载（非一手）
+    "163.com",               # 网易转载
+    "sohu.com",              # 搜狐转载
+    "so.html5.qq.com",       # 腾讯转载
 ]
 
 
