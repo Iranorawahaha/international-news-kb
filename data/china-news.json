@@ -1522,17 +1522,6 @@
     "collectedAt": "2026-08-28 09:21:42"
    },
    {
-    "title": "新华鲜报丨“十五五”，中国制造业这样争“先”",
-    "url": "https://jingji.cctv.com/2026/08/27/ARTIt6TvyB47RTKY1h1Ln0br260827.shtml",
-    "date": "2026-08-27",
-    "source": "央视新闻",
-    "category": "经贸动向",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "summary": "“‘十五五’期间，我们将加快发展先进制造业”“加快构建以先进制造业为骨干的现代化产业体系”“着力提升先进制造能力”……8月26日，在国新办举行的“开局起步‘十五五’”系列主题新闻发布会上，“先进制造”…",
-    "collectedAt": "2026-08-28 09:21:42"
-   },
-   {
     "title": "台风\"沙德尔\"在浙江玉环沿海登陆 浙江提升防台风应急响应至Ⅰ级",
     "url": "https://www.chinanews.com/sh/2026/08-28/10685589.shtml",
     "date": "2026-08-28",
@@ -1554,12 +1543,12 @@
   "2026-08-22"
  ],
  "today": "2026-08-28",
- "todayCount": 27,
+ "todayCount": 26,
  "stats": {
   "totalArticles": 148,
   "dateCount": 6,
   "latestDate": "2026-08-28",
   "summitCount": 13,
-  "todayCount": 27
+  "todayCount": 26
  }
 }
