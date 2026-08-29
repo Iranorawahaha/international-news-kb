@@ -11531,5 +11531,45 @@
     "is_summit_level": false,
     "date": "2026-08-28",
     "collectedAt": "2026-08-29 09:30:00"
+  },
+  {
+    "title": "CXMT sues Pentagon over inclusion on list of companies tied to China's military",
+    "title_en": "CXMT sues Pentagon over inclusion on list of companies tied to China's military",
+    "title_zh": "长鑫存储起诉美国国防部：要求撤销1260H'中国军事企业清单'认定",
+    "summary_zh": "路透社8-28报道：中国最大DRAM存储芯片厂商长鑫存储（CXMT）在哥伦比亚特区地区法院起诉美国国防部，要求撤销其被列入'中国军事企业清单'（1260H清单）的认定。CXMT在诉状中称'与中国军方不存在关联，公司设计、生产并销售的DRAM芯片均用于民用与商业领域'。该公司6月8日被重新列入该名单（2月曾被短暂移除），此前长江存储（YMTC，2025年12月）、药明康德与阿里巴巴（2026年6月）也已采取类似诉讼。该名单虽不直接禁止私营交易，但会限制美国政府机构及国防承包商与上榜企业合作，并造成声誉损害。",
+    "source": "路透社",
+    "category": "科技",
+    "keywords": [
+      "长鑫存储",
+      "1260H清单",
+      "美国国防部",
+      "DRAM芯片",
+      "涉华芯片"
+    ],
+    "url": "https://world.newsx.com/technology/cxmt-sues-pentagon-over-inclusion-on-list-of-companies-tied-to-chinas-military-2-228942",
+    "priority_score": 95,
+    "is_summit_level": false,
+    "date": "2026-08-28",
+    "collectedAt": "2026-08-29 09:30:00"
+  },
+  {
+    "title": "Trump administration weighs new AI export rule to curb China's remote access to US AI chips",
+    "title_en": "Trump administration weighs new AI export rule to curb China's remote access to US AI chips",
+    "title_zh": "The Information：特朗普政府起草新AI出口管制规则，堵中国经第三国远程获取美芯片算力",
+    "summary_zh": "The Information 8-28报道：特朗普政府正在起草新出口管制规则，旨在堵住中国AI企业通过泰国、新加坡等第三国数据中心远程租用美国先进AI芯片算力的漏洞——现行管制只覆盖物理芯片本身、不覆盖远程访问算力。该规则由商务部工业安全局（BIS）起草，最早9月向AI企业等利益相关方征求意见，将取代拜登时代已废止的AI扩散规则（AI Diffusion Rule）。触发背景：白宫科技政策办公室主任克拉齐奥斯7月指控月之暗面（Moonshot AI）利用泰国GB300服务器蒸馏Anthropic模型训练Kimi K3；卡内基报告披露上海INF Tech等中企经印尼数据中心租用数千块Blackwell芯片，阿里、字节、腾讯亦被指通过东南亚/日本数据中心使用英伟达算力。",
+    "source": "The Information",
+    "category": "科技",
+    "keywords": [
+      "AI出口管制",
+      "远程算力",
+      "月之暗面",
+      "芯片",
+      "中美科技博弈"
+    ],
+    "url": "https://www.tomshardware.com/tech-industry/policy/new-us-export-controls-reportedly-target-chinese-access-to-remote-ai-servers-trump-admins-cut-down-ai-diffusion-rule-could-be-shared-with-industry-as-soon-as-september",
+    "priority_score": 92,
+    "is_summit_level": false,
+    "date": "2026-08-28",
+    "collectedAt": "2026-08-29 09:30:00"
   }
 ]
