@@ -578,6 +578,19 @@
             box-shadow: 0 4px 12px rgba(30,58,138,0.3);
         }
         .link-btn:active { transform: translateY(0); }
+        /* 转载标注（V2.12：官方源反爬不可达时经第三方转载，需明确标注） */
+        .repost-tag {
+            display: inline-block; padding: 4px 8px;
+            background: #fff7ed; color: #c2410c;
+            border: 1px solid #fed7aa;
+            border-radius: 6px;
+            font-size: 10px; font-weight: 600;
+            white-space: nowrap;
+            margin-left: 4px;
+            cursor: help;
+            vertical-align: middle;
+        }
+        .repost-tag:hover { background: #ffedd5; }
         .screenshot-btn {
             display: inline-block; padding: 5px 10px;
             background: #16a34a;
@@ -953,7 +966,7 @@ function renderTable(articles) {
                 <td><div class="summary-text">${item.summary_zh || item.summary || '-'}</div></td>
                 <td style="white-space:nowrap">${item.category || ''}</td>
                 <td><span class="importance-badge ${imp.cls}">${imp.label}</span></td>
-                <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文↗</a>` : '-'}</td>
+                <td>${item.url ? `<a href="${item.url}" target="_blank" class="link-btn">原文↗</a>${item.repost_from ? `<span class="repost-tag" title="⚠️ ${item.repost_from}">转载</span>` : ''}` : '-'}</td>
             `;
         }
         tbody.appendChild(tr);

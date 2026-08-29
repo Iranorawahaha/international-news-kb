@@ -10810,7 +10810,8 @@
     "priority_score": 88,
     "is_summit_level": false,
     "date": "2026-08-28",
-    "collectedAt": "2026-08-29 09:30:00"
+    "collectedAt": "2026-08-29 09:30:00",
+    "repost_from": "路透社原文（官网反爬不可达），经 Yahoo News 转载"
   },
   {
     "title": "Trump says US is taking partial control of Venezuela's vast oil reserves",
@@ -11550,7 +11551,8 @@
     "priority_score": 95,
     "is_summit_level": false,
     "date": "2026-08-28",
-    "collectedAt": "2026-08-29 09:30:00"
+    "collectedAt": "2026-08-29 09:30:00",
+    "repost_from": "路透社原文（官网反爬不可达），经 NewsX 全文转载"
   },
   {
     "title": "Trump administration weighs new AI export rule to curb China's remote access to US AI chips",
@@ -11570,6 +11572,7 @@
     "priority_score": 92,
     "is_summit_level": false,
     "date": "2026-08-28",
-    "collectedAt": "2026-08-29 09:30:00"
+    "collectedAt": "2026-08-29 09:30:00",
+    "repost_from": "The Information 原文（付费墙），经 Tom's Hardware 报道"
   }
 ]

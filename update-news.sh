@@ -693,7 +693,7 @@ try:
         if _furl in _ff_idx:
             _fodt, _foart = _ff_idx[_furl]
             if _f_src.get('is_official') or _f_src.get('title_zh') or _f_src.get('summary_zh'):
-                for _fk in ('title','title_en','title_zh','summary','summary_en','summary_zh','date','source','category','column','priority_score','is_summit_level','importance','keywords','url','is_official','collectedAt','collection_method','body_en'):
+                for _fk in ('title','title_en','title_zh','summary','summary_en','summary_zh','date','source','category','column','priority_score','is_summit_level','importance','keywords','url','is_official','collectedAt','collection_method','body_en','repost_from'):
                     if _fk in _f_src:
                         _foart[_fk] = _f_src[_fk]
                 # V2.9.1: 历史版面不移动（昨日定稿后不再增加）——仅升级字段
