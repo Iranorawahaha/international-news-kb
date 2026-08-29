@@ -3,11 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ira 信息看板 · 每日早报 2026-08-10</title>
+<title>信息日报 · 每日早报 2026-08-10</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* === PDF 打印（A4） === */
+  @page { size: A4; margin: 14mm 12mm; }
+  @media print {
+    body { background: #ffffff !important; padding: 0 !important; }
+    .card { break-inside: avoid; }
+  }
   /* === 基础 === */
   body {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -102,9 +108,16 @@
   .card-title-zh {
     font-family: "Noto Serif SC", serif;
     font-size: 16px; font-weight: 700; line-height: 1.45;
+    color: #1a1a2e;
   }
-  .card-title-zh a { color: #1a1a2e; text-decoration: none; }
-  .card-title-zh a:hover { color: #b91c1c; }
+  .card-link {
+    display: inline-block;
+    font-size: 11px; color: #1e3a8a; margin: 6px 0 0;
+    word-break: break-all; line-height: 1.5;
+  }
+  .card-link a { color: #1e3a8a; text-decoration: underline; }
+  .section-title.dom ~ .card .card-link { color: #b91c1c; }
+  .section-title.dom ~ .card .card-link a { color: #b91c1c; }
   .card-meta { font-size: 11px; color: #6b7280; margin: 8px 0; }
   .card-meta .sep { color: #d4d4d8; margin: 0 6px; }
   .card-summary {
@@ -148,204 +161,371 @@
 
 <header class="masthead">
   <div class="masthead-top">
-    <div class="brand">Ira <span class="cny">信息看板</span></div>
-    <div class="vol">Vol. 8 · No. 13</div>
+    <div class="brand"><span class="cny">信息日报</span></div>
+    <div class="vol">Vol. 8 · No. 25</div>
   </div>
   <div class="date-tag">
     <div class="day-num">10</div>
     <div class="day-meta">
-      <div class="weekday">星期四</div>
-      <div class="date-str">2026 年 8 月 13 日</div>
+      <div class="weekday">星期二</div>
+      <div class="date-str">2026 年 8 月 25 日</div>
     </div>
-    <div class="stats">23 条精选</div>
+    <div class="stats">44 条精选</div>
   </div>
 </header>
 
 <p class="intro">
-  <a href="https://iranorawahaha.github.io/international-news-kb/">Ira 信息看板</a>
+  <a href="https://iranorawahaha.github.io/international-news-kb/">信息日报</a>
   每日追踪中美关系、地缘政治、经贸制裁、AI 科技等国际国内重大动向。过去 24 小时各版面新增
-  <b>44</b> 篇国际新闻、<b>10</b> 篇国内要闻，以下为较高重要性新闻速览。
+  <b>53</b> 篇国际新闻、<b>40</b> 篇国内要闻，以下为较高重要性新闻速览。
 </p>
 
 <!-- ===== 国际 ===== -->
 <div class="section-title intl">
   <span class="ch">国际要闻</span>
   <span class="en">International</span>
-  <span class="meta">17 stories</span>
+  <span class="meta">14 stories</span>
 </div>
 <div class="card">
       <div class="card-head"><span class="card-num">01</span></div>
-      <div class="card-title-en">Zhu Rongji, who helped turn China into a trading giant, dies at 97</div>
-      <div class="card-title-zh"><a href="https://www.bbc.com/news/articles/c75g9777wwxo" target="_blank">朱镕基逝世 享年97岁：曾推动中国加入世贸组织</a></div>
-      <div class="card-meta">BBC</div>
-      <div class="card-summary">英国广播公司报道，前中国国务院总理朱镕基逝世，享年97岁。朱镕基在任期间推动中国加入世界贸易组织（WTO），主导国企改革与市场化转型，深刻改变了中国经济格局。</div>
+      <div class="card-title-en">US sanctions Chinese entities, issues global 'Economic D-Day' warning on Iran</div>
+      <div class="card-title-zh">美国制裁中国实体，并就伊朗发出全球'经济D-Day'警告</div>
+      <div class="card-meta">南华早报</div>
+      <div class="card-summary">美国宣布制裁多家中国实体，并向全球发出关于伊朗的'经济D-Day'警告。华盛顿警告与伊朗有关联的实体将被排除在美元体系之外，同时特朗普政府正施压各国领导人切断与伊朗的金融联系。此举进一步加剧中美经贸紧张关系。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.scmp.com/news/us/diplomacy/article/3365111/us-sanctions-chinese-entities-issues-global-warning-economic-d-day-against-iran">https://www.scmp.com/news/us/diplomacy/article/3365111/us-sanctions-chinese-entities-issues-global-warning-economic-d-day-against-iran</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">02</span></div>
-      <div class="card-title-en">Zhu Rongji, Former Premier Who Transformed China Into a Market Economy, Dies at 97</div>
-      <div class="card-title-zh"><a href="https://www.nytimes.com/video/world/asia/100000011088702/zhu-rongji-china-premier-dead.html" target="_blank">朱镕基逝世享年97岁：推动中国经济市场化转型的前总理</a></div>
-      <div class="card-meta">纽约时报</div>
-      <div class="card-summary">《纽约时报》报道，推动中国经济向市场经济转型的前国务院总理朱镕基于周三在北京逝世，享年97岁。他在1990年代引导中国走向市场经济，并推动加入世贸组织，使中国出口腾飞。</div>
+      <div class="card-title-en">Beyond China's humanoid robots, a quieter machine revolution is unfolding</div>
+      <div class="card-title-zh">在中国人形机器人之外，一场更低调的机器革命正在展开</div>
+      <div class="card-meta">BBC</div>
+      <div class="card-summary">文章指出中国工厂中已有超过200万台机器人在运行，且规模正在快速扩大。在人形机器人吸引全球目光的背后，中国工业机器人应用正以更低调的方式深刻改变制造业格局。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.bbc.com/news/articles/c62m4zn1q6mo">https://www.bbc.com/news/articles/c62m4zn1q6mo</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">03</span></div>
-      <div class="card-title-en">Trump Extends US-China Tariff Truce for 90 Days</div>
-      <div class="card-title-zh"><a href="https://cnnbc.com/trump-extends-us-china-tariff-truce-for-90-days" target="_blank">特朗普将美中关税休战延长90天至11月10日</a></div>
-      <div class="card-meta">华尔街日报</div>
-      <div class="card-summary">特朗普总统签署行政令，将暂停加征的对华关税（24%对等关税）再延长90天，截止日推至11月10日。此举维持美对华关税30%、中方对美10%的现状，避免税率升至54%以上。中方宣布对等延长暂停措施。此前7月双方在斯德哥尔摩谈判达成初步共识，美财政部长贝森特与中国副总理何立峰牵头磋商。</div>
+      <div class="card-title-en">America proposes new US$103,265 H-1B fee, expanding charge beyond new arrivals</div>
+      <div class="card-title-zh">美国提议新增103,265美元H-1B签证费，将收费范围扩大至新入境者以外</div>
+      <div class="card-meta">南华早报</div>
+      <div class="card-summary">美国拟将对H-1B签证的新增费用从首次入境者扩大到所有申请者，单笔费用高达103,265美元。此举将显著增加企业雇佣外国技术工人的前期成本，尤其对希望雇佣中国和印度专业人才的美国公司构成重大障碍。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.scmp.com/news/china/diplomacy/article/3365171/us-proposes-new-103265-h-1b-visa-fee-expanding-charge-beyond-new-arrivals">https://www.scmp.com/news/china/diplomacy/article/3365171/us-proposes-new-103265-h-1b-visa-fee-expanding-charge-beyond-new-arrivals</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">04</span></div>
-      <div class="card-title-en">US-China 'Board of Investment' stalls before expected Trump-Xi meeting</div>
-      <div class="card-title-zh"><a href="https://www.scmp.com/news/us/economy-trade-business/article/3363829/us-china-board-investment-stalls-expected-trump-xi-meeting" target="_blank">中美投资委员会在特朗普-习近平会面前停滞不前</a></div>
-      <div class="card-meta">南华早报</div>
-      <div class="card-summary">美中商业委员会主席表示，双方均未就双边投资委员会启动磋商程序，也尚未准备就私营部门讨论展开接触。在预期中的特朗普-习近平会面前，该机制停滞反映两国经贸关系摩擦未解。</div>
+      <div class="card-title-en">US threatens severe sanctions against countries with economic ties to Iran</div>
+      <div class="card-title-zh">美国威胁对与伊朗有经济联系的国家实施严厉制裁</div>
+      <div class="card-meta">卫报</div>
+      <div class="card-summary">美国对伊朗发动经济战，威胁对与伊朗保持经济联系的国家实施严厉制裁。华盛顿发起孤立德黑兰的运动，但目前尚不清楚是否会对伊朗石油最大买家中国采取具体措施。此举将显著影响中美经贸关系和中东地缘格局。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.theguardian.com/world/2026/aug/24/us-severe-sanctions-economic-ties-iran">https://www.theguardian.com/world/2026/aug/24/us-severe-sanctions-economic-ties-iran</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">05</span></div>
-      <div class="card-title-en">PLA holds first joint naval drill with Indonesia in waters east of Taiwan</div>
-      <div class="card-title-zh"><a href="https://www.scmp.com/news/china/military/article/3363775/pla-hold-first-joint-naval-drill-indonesia-waters-east-taiwan" target="_blank">中国与印尼首次在台湾以东水域举行联合海军演习</a></div>
+      <div class="card-title-en">Mainland China's ship activity near Taiwan hits record for third month in a row</div>
+      <div class="card-title-zh">中国大陆船只在台湾周边活动连续第三个月创纪录</div>
       <div class="card-meta">南华早报</div>
-      <div class="card-summary">中国人民解放军与印尼海军在台湾以东水域举行首次联合演习。在华盛顿及其盟友收紧地区合作之际，北京正加强与东南亚最大经济体的防务关系。</div>
+      <div class="card-summary">中国大陆在台湾周边的执法和勘测船只活动连续第三个月创下纪录。自东京和马尼拉宣布边界谈判以来，北京加大了对台湾周边的执法和勘测行动力度。这一趋势反映台海局势持续紧张。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.scmp.com/news/china/military/article/3365081/mainland-chinas-ship-activity-near-taiwan-hits-record-third-month-row">https://www.scmp.com/news/china/military/article/3365081/mainland-chinas-ship-activity-near-taiwan-hits-record-third-month-row</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">06</span></div>
-      <div class="card-title-en">Trump says White House press secretary Karoline Leavitt to leave post</div>
-      <div class="card-title-zh"><a href="https://www.bbc.com/news/articles/cvglzrvyrz3o" target="_blank">特朗普宣布白宫新闻秘书莱维特将离任</a></div>
-      <div class="card-meta">BBC</div>
-      <div class="card-summary">特朗普总统表示白宫新闻秘书卡罗琳·莱维特（Karoline Leavitt）将卸任。莱维特是特朗普第二任期最具代表性的白宫发言人之一，其离任引发对白宫人事调整的关注。</div>
+      <div class="card-title-en">US threatens countries doing business with Iran, but holds off on penalties for now</div>
+      <div class="card-title-zh">美国威胁与伊朗做生意的国家，但暂不实施处罚</div>
+      <div class="card-meta">路透社</div>
+      <div class="card-summary">美国财政部扩大对伊朗次级制裁的范围，威胁与伊朗做生意的国家，但目前暂缓实施具体处罚措施，消息人士称此举旨在施压而非立即行动。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.reuters.com/world/middle-east/us-treasury-broaden-scope-secondary-sanctions-iran-source-says-2026-08-24/">https://www.reuters.com/world/middle-east/us-treasury-broaden-scope-secondary-sanctions-iran-source-says-2026-08-24/</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">07</span></div>
-      <div class="card-title-en">Members of Trump's cabinet remained on decoy plane, after president's quiet exit</div>
-      <div class="card-title-zh"><a href="https://www.bbc.com/news/articles/c4g306eln8wo" target="_blank">特朗普秘密离境细节曝光：内阁成员留在诱饵飞机上</a></div>
-      <div class="card-meta">BBC</div>
-      <div class="card-summary">英国广播公司披露特朗普近期秘密出行的更多细节：总统悄然离场后，部分内阁成员仍留在作为诱饵的空军一号备用飞机上，以掩护其真实行程。</div>
+      <div class="card-title-en">China is the biggest buyer of Iran's oil. Could US sanctions threaten those ties?</div>
+      <div class="card-title-zh">中国是伊朗石油的最大买家，美国制裁会威胁这一关系吗？</div>
+      <div class="card-meta">卫报</div>
+      <div class="card-summary">分析文章探讨美国对伊朗制裁如何影响中国与伊朗的石油贸易关系。中国是伊朗原油最大买家，美国新一轮制裁威胁可能迫使中国在维持伊朗能源进口与避免美国次级制裁之间做出艰难选择，可能重塑全球能源市场格局。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.theguardian.com/world/2026/aug/25/trump-us-economic-sanctions-china-biggest-buyer-iran-oil">https://www.theguardian.com/world/2026/aug/25/trump-us-economic-sanctions-china-biggest-buyer-iran-oil</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">08</span></div>
-      <div class="card-title-en">US panel on China sees confidence masking economic anxiety after rare visit</div>
-      <div class="card-title-zh"><a href="https://www.scmp.com/news/us/article/3363832/china-projects-outward-confidence-amid-economic-anxiety-us-congressional-panel-says" target="_blank">美国国会顾问团访华报告：中国展现自信背后难掩经济焦虑</a></div>
-      <div class="card-meta">南华早报</div>
-      <div class="card-summary">近期访华的美国国会顾问团报告称，北京对外展现自信形象，但内部面临经济焦虑。报告指出中国对AI前景乐观，但质疑其开放度——访华期间被拒绝进入杭州科技企业。</div>
+      <div class="card-title-en">A Chinese Robot Beat Usain Bolt's 100-Meter Record. Should We Be Impressed?</div>
+      <div class="card-title-zh">中国机器人打破博尔特百米纪录，我们该感到震撼吗？</div>
+      <div class="card-meta">纽约时报</div>
+      <div class="card-summary">在北京举行的世界人形机器人运动会上，一台中国研发的人形机器人在百米短跑中打破了博尔特的纪录。但专家表示，这种超人般的运动能力能否转化为现实世界的实用价值仍是未知数。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.nytimes.com/2026/08/24/world/asia/chinese-robot-100-meter-usain-bolt.html">https://www.nytimes.com/2026/08/24/world/asia/chinese-robot-100-meter-usain-bolt.html</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">09</span></div>
-      <div class="card-title-en">Singapore and South Korea eye science opportunity as US-China ties shatter</div>
-      <div class="card-title-zh"><a href="https://www.scmp.com/news/china/diplomacy/article/3363767/singapore-and-south-korea-eye-science-opportunities-last-main-us-china-link-shatters" target="_blank">中美科技纽带断裂 新加坡韩国争抢科研合作机遇</a></div>
-      <div class="card-meta">南华早报</div>
-      <div class="card-summary">随着中美最后一个主要科研合作纽带断裂，新加坡和韩国正积极抢占科技合作机会。文章分析中美科技脱钩如何重塑地区科研伙伴格局。</div>
+      <div class="card-title-en">Iran vows to retaliate after US widens sanctions</div>
+      <div class="card-title-zh">伊朗誓言在美国扩大制裁后进行报复</div>
+      <div class="card-meta">路透社</div>
+      <div class="card-summary">伊朗承诺将对美国扩大的制裁进行报复。美方称这些制裁将切断伊朗的经济命脉，而德黑兰方面表示有信心主要贸易伙伴会抵制华盛顿的压力行动。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.reuters.com/world/china/iran-vows-retaliate-after-us-widens-sanctions-2026-08-25/">https://www.reuters.com/world/china/iran-vows-retaliate-after-us-widens-sanctions-2026-08-25/</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">10</span></div>
-      <div class="card-title-en">After China's missile test, US and allies demand 24-hour warning next time</div>
-      <div class="card-title-zh"><a href="https://www.scmp.com/news/china/military/article/3363754/after-chinas-missile-test-us-and-allies-demand-24-hour-warning-next-time" target="_blank">中国导弹试验后 美国及盟友要求下次提前24小时通报</a></div>
-      <div class="card-meta">南华早报</div>
-      <div class="card-summary">中国进行导弹试验后，美国及其盟友要求未来发射提前24小时发出预警。北京斥责该要求&quot;出于政治动机&quot;，呼吁各国&quot;停止滥用多边军控机制&quot;。</div>
+      <div class="card-title-en">Trump threatens 50% tariffs on all cars and trucks from Canada amid trade fight</div>
+      <div class="card-title-zh">特朗普在贸易战中威胁对加拿大所有汽车和卡车征收50%关税</div>
+      <div class="card-meta">路透社</div>
+      <div class="card-summary">美国总统特朗普周一威胁称，将对从加拿大进口的所有汽车、卡车和汽车零部件关税提高至50%，自2027年1月1日起生效，这使上周谈判破裂后的贸易战进一步升级。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.reuters.com/business/autos-transportation/trump-says-he-will-raise-tariffs-all-cars-trucks-50-amid-canada-trade-spat-2026-08-24/">https://www.reuters.com/business/autos-transportation/trump-says-he-will-raise-tariffs-all-cars-trucks-50-amid-canada-trade-spat-2026-08-24/</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">11</span></div>
-      <div class="card-title-en">Passenger jet billed as China's answer to Boeing and Airbus prepares to make first international flight</div>
-      <div class="card-title-zh"><a href="https://www.theguardian.com/world/2026/aug/12/comac-c919-chinese-passenger-jet-china-plane-first-international-flight" target="_blank">中国C919国产客机将执飞首条国际航线 挑战波音空客</a></div>
-      <div class="card-meta">卫报</div>
-      <div class="card-summary">被视为中国对标波音和空客的国产大飞机C919即将执飞首条国际航线。这一里程碑标志着北京在商用航空制造领域打破西方主导地位的技术自给战略迈出重要一步。</div>
+      <div class="card-title-en">US-Canada trade war escalates as Trump threatens tariff hike on vehicles</div>
+      <div class="card-title-zh">美加贸易战升级：特朗普威胁提高汽车关税</div>
+      <div class="card-meta">BBC</div>
+      <div class="card-summary">美国总统特朗普威胁对加拿大汽车加征更高关税，美加贸易战进一步升级。加拿大总理卡尼指责特朗普意图&quot;摧毁&quot;加拿大汽车产业，并表示只有美国展现&quot;正确态度&quot;才会恢复贸易谈判。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.bbc.com/news/articles/c93vpd60654o">https://www.bbc.com/news/articles/c93vpd60654o</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">12</span></div>
-      <div class="card-title-en">As Strait of Hormuz transit drops, Trump again says US has 'control'</div>
-      <div class="card-title-zh"><a href="https://www.aljazeera.com/news/2026/8/12/as-strait-of-hormuz-transit-drops-trump-again-says-us-has-control" target="_blank">霍尔木兹海峡通行量下滑 特朗普再称美国&quot;掌控&quot;海峡</a></div>
-      <div class="card-meta">半岛电视台</div>
-      <div class="card-summary">霍尔木兹海峡油轮通行量持续下降之际，特朗普再度宣称美国&quot;掌控&quot;该海峡。美伊双方围绕海峡控制权各执一词，全球能源市场持续承压。</div>
+      <div class="card-title-en">US targets China's telecoms grip in Venezuela with new sanctions carve-out</div>
+      <div class="card-title-zh">美国以新的制裁例外针对中国在委内瑞拉的电信布局</div>
+      <div class="card-meta">南华早报</div>
+      <div class="card-summary">美国出台新的制裁例外措施，针对中国在委内瑞拉的电信领域影响力。此举可能考验华为和中兴在当地长期建立的市场地位，标志着华盛顿将中美竞争从石油领域扩展到另一个战略行业。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.scmp.com/news/china/diplomacy/article/3365115/us-targets-chinas-telecoms-grip-venezuela-new-sanctions-carve-out">https://www.scmp.com/news/china/diplomacy/article/3365115/us-targets-chinas-telecoms-grip-venezuela-new-sanctions-carve-out</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">13</span></div>
-      <div class="card-title-en">Karoline Leavitt to step down as White House press secretary</div>
-      <div class="card-title-zh"><a href="https://www.aljazeera.com/news/2026/8/12/trump-reveals-karoline-leavitt-to-step-down-as-white-house-press-secretary" target="_blank">白宫新闻秘书莱维特将卸任</a></div>
-      <div class="card-meta">半岛电视台</div>
-      <div class="card-summary">特朗普透露白宫新闻秘书卡罗琳·莱维特将卸任。莱维特以犀利风格著称，其离任标志着白宫新闻团队重大人事变动。</div>
+      <div class="card-title-en">Trump announces new 50% tariff on Canadian cars, trucks and steel</div>
+      <div class="card-title-zh">特朗普宣布对加拿大汽车、卡车和钢铁加征50%新关税</div>
+      <div class="card-meta">卫报</div>
+      <div class="card-summary">特朗普政府宣布对加拿大汽车、卡车和钢铁加征50%新关税，标志着美加贸易战进一步升级。加拿大此前在贸易谈判中立场强硬，而特朗普似乎无意退让，北美经贸关系面临严重考验。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.theguardian.com/us-news/2026/aug/24/canada-tariff-increase-trump-auto">https://www.theguardian.com/us-news/2026/aug/24/canada-tariff-increase-trump-auto</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">14</span></div>
-      <div class="card-title-en">Hegseth Touts Americas Counter Cartel Coalition During Panama Visit</div>
-      <div class="card-title-zh"><a href="https://www.war.gov/News/News-Stories/Article/Article/4572481/hegseth-touts-americas-counter-cartel-coalition-during-panama-visit/" target="_blank">赫格塞斯在巴拿马向美洲反卡特尔联盟发表讲话 承诺瓦解跨国贩毒集团</a></div>
-      <div class="card-meta">美国国防部(war.gov)</div>
-      <div class="card-summary">美国战争部长赫格塞斯在巴拿马出席美洲反卡特尔联盟（A3C，又称&quot;西半球之盾&quot;）会议，向19个成员国防长表态美方致力于瓦解威胁西半球安全的跨国贩毒集团。该联盟由特朗普3月发起，旨在打击贩毒、减少非法移民并限制外部地缘干预。会议确定下一步将制定优先网络行动方案、指定牵头国家、设立工作组，计划11月前批准A3C行动方案；赫格塞斯还与巴拿马总统穆利诺会面。</div>
-    </div>
-<div class="card">
-      <div class="card-head"><span class="card-num">15</span></div>
-      <div class="card-title-en">America First Means Ohio First: President Trump, Republicans Deliver for Ohio</div>
-      <div class="card-title-zh"><a href="https://www.whitehouse.gov/releases/2026/08/america-first-means-ohio-first-president-trump-republicans-deliver-for-ohio/" target="_blank">美国优先即俄亥俄优先：特朗普出席爱国者运动会决赛</a></div>
-      <div class="card-meta">白宫</div>
-      <div class="card-summary">特朗普总统返回俄亥俄州出席爱国者运动会（Patriot Games）决赛，庆祝美国独立250周年，表彰美国传统与爱国精神。</div>
-    </div>
-<div class="card">
-      <div class="card-head"><span class="card-num">16</span></div>
-      <div class="card-title-en">Presidential Message on National Shooting Sports Month</div>
-      <div class="card-title-zh"><a href="https://www.whitehouse.gov/briefings-statements/2026/08/presidential-message-on-national-shooting-sports-month-4561/" target="_blank">特朗普发布全国射击运动月总统致词</a></div>
-      <div class="card-meta">白宫</div>
-      <div class="card-summary">值全国射击运动月之际，特朗普总统发表致词，庆祝美国射击与狩猎运动的悠久传统，捍卫第二修正案所保障的权利。</div>
-    </div>
-<div class="card">
-      <div class="card-head"><span class="card-num">17</span></div>
-      <div class="card-title-en">One Year Later, President Trump Has Delivered on Making D.C. Safe Again</div>
-      <div class="card-title-zh"><a href="https://www.whitehouse.gov/releases/2026/08/one-year-later-president-trump-has-delivered-on-making-d-c-safe-again/" target="_blank">一周年：特朗普称兑现让华盛顿特区重归安全的承诺</a></div>
-      <div class="card-meta">白宫</div>
-      <div class="card-summary">特朗普总统宣布华盛顿特区进入犯罪紧急状态一周年之际，白宫表示&quot;让特区安全美丽工作组&quot;已取得成效，特区治安显著改善。</div>
+      <div class="card-title-en">Quiet on set. How AI transformed China's microdrama scene</div>
+      <div class="card-title-zh">片场安静：AI如何变革中国微短剧行业</div>
+      <div class="card-meta">CNN</div>
+      <div class="card-summary">文章探讨人工智能技术对中国微短剧行业的深度变革。AI被用于剧本生成、角色塑造和特效制作等环节，大幅降低制作成本并提升效率，但同时也引发对创作者失业、内容同质化及版权归属等问题的担忧。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://edition.cnn.com/2026/08/22/style/short-drama-ai-china-intl-hnk">https://edition.cnn.com/2026/08/22/style/short-drama-ai-china-intl-hnk</a></div>
     </div>
 
 <!-- ===== 国内 ===== -->
 <div class="section-title dom">
   <span class="ch">国内要闻</span>
   <span class="en">China</span>
-  <span class="meta">6 stories</span>
+  <span class="meta">30 stories</span>
 </div>
 <div class="card">
       <div class="card-head"><span class="card-num">01</span></div>
-      <div class="card-title-zh"><a href="http://paper.people.com.cn/rmrb/pc/content/202608/13/content_30174615.html" target="_blank">5年10万亿元消费增量有支撑（经济新方位·解码“十五五”专项规划）</a></div>
-      <div class="card-meta">政策发布 <span class="sep">|</span> 人民日报</div>
-      <div class="card-summary">作为消费领域首份国家级专项规划，《扩大消费“十五五”规划》（以下简称《规划》）提出到2030年消费市场发展目标：消费市场总体规模持续扩大，社会消费品零售总额达到60万亿元左右。</div>
+      <div class="card-title-zh">为人民出政绩 以实干出政绩——习近平总书记重要指示激励全党树立和践行正确政绩观不断创造高质量发展新业绩</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">“树立和践行正确政绩观是一项长期任务，必须久久为功，不断巩固拓展学习教育成果，持续推动各级党组织和广大党员、干部立党为公、为民造福、科学决策、真抓实干，努力创造经得起实践、人民、历史检验的实绩。”</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.gov.cn/yaowen/liebiao/202608/content_7079082.htm">https://www.gov.cn/yaowen/liebiao/202608/content_7079082.htm</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">02</span></div>
-      <div class="card-title-zh"><a href="https://www.gov.cn/lianbo/202608/content_7077956.htm" target="_blank">《国家综合气象观测系统建设“十五五”规划》印发</a></div>
-      <div class="card-meta">政策发布 <span class="sep">|</span> 中国政府网·要闻</div>
-      <div class="card-summary">近日，中国气象局与国家发展和改革委员会联合印发《国家综合气象观测系统建设“十五五”规划》，对未来5年国家综合气象观测系统建设作出部署。</div>
+      <div class="card-title-zh">习近平为约旦国王阿卜杜拉二世举行欢迎仪式</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 央视新闻</div>
+      <div class="card-summary">8月24日，国家主席习近平在北京为来华进行国事访问的约旦国王阿卜杜拉二世举行欢迎仪式。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/24/ARTIHmYufoCxVkUdRBrL1Riy260824.shtml">https://news.cctv.com/2026/08/24/ARTIHmYufoCxVkUdRBrL1Riy260824.shtml</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">03</span></div>
-      <div class="card-title-zh"><a href="https://www.gov.cn/yaowen/liebiao/202608/content_7077937.htm" target="_blank">中共中央 全国人大常委会 国务院 全国政协讣告 朱镕基同志逝世</a></div>
-      <div class="card-meta">高层动态 <span class="sep">|</span> 中国政府网·要闻</div>
-      <div class="card-summary">新华社北京8月12日电 中国共产党中央委员会、中华人民共和国全国人民代表大会常务委员会、中华人民共和国国务院、中国人民政治协商会议全国委员会沉痛宣告：中国共产党的优秀党员，久经考验的忠诚的共产主义战士…</div>
+      <div class="card-title-zh">习近平举行仪式欢迎约旦国王访华</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">习近平举行仪式欢迎约旦国王访华。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://tv.cctv.com/2026/08/24/VIDEEeywgGIbNsB31RNcMEdl260824.shtml">https://tv.cctv.com/2026/08/24/VIDEEeywgGIbNsB31RNcMEdl260824.shtml</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">04</span></div>
-      <div class="card-title-zh"><a href="https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260812_12002993.shtml" target="_blank">2026年8月12日外交部发言人郭嘉昆答记者问（2026-08-12）</a></div>
-      <div class="card-meta">部委动态 <span class="sep">|</span> 外交部</div>
-      <div class="card-summary">外交部发言人郭嘉昆主持例行记者会，就近期中外关系及国际热点问题回答记者提问。</div>
+      <div class="card-title-zh">习近平作出重要指示强调 巩固拓展树立和践行正确政绩观学习教育成果 努力创造经得起实践人民历史检验的实绩 蔡奇主持中央党的建设工作领导小组会议并讲话 李希出席并讲话</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">习近平作出重要指示强调：巩固拓展树立和践行正确政绩观学习教育成果，努力创造经得起实践人民历史检验的实绩。蔡奇主持中央党的建设工作领导小组会议并讲话，李希出席并讲话。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://tv.cctv.com/2026/08/24/VIDEid3jRnofd2KPfP9l81cQ260824.shtml">https://tv.cctv.com/2026/08/24/VIDEid3jRnofd2KPfP9l81cQ260824.shtml</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">05</span></div>
-      <div class="card-title-zh"><a href="https://www.gov.cn/lianbo/202608/content_7077923.htm" target="_blank">市场监管总局批准发布338项重要国家标准</a></div>
-      <div class="card-meta">经贸动向 <span class="sep">|</span> 中国政府网·要闻</div>
-      <div class="card-summary">近日，市场监管总局（国家标准委）批准发布338项重要国家标准。其中，强制性国家标准15项，推荐性国家标准323项。</div>
+      <div class="card-title-zh">习近平同约旦国王会谈</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">习近平指出，中约建交以来，始终相互尊重、平等相待、互利合作，是不同社会制度、不同大小国家合作共赢、交流互鉴的生动写照。2015年，我们共同宣布建立中约战略伙伴关系，开启双边关系发展新篇章。面对变乱交织…</div>
+      <div class="card-link">🔗 原文链接：<a href="https://tv.cctv.com/2026/08/24/VIDEPOYropdKvl6x3ZgeNiM8260824.shtml">https://tv.cctv.com/2026/08/24/VIDEPOYropdKvl6x3ZgeNiM8260824.shtml</a></div>
     </div>
 <div class="card">
       <div class="card-head"><span class="card-num">06</span></div>
-      <div class="card-title-zh"><a href="https://jingji.cctv.com/2026/08/12/ARTIpIkAEZDXAqYGtnFUGtDa260812.shtml" target="_blank">新能源汽车月度新车销量占比首超60%</a></div>
+      <div class="card-title-zh">习近平同约旦国王阿卜杜拉二世会谈</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">新华社北京8月24日电（记者邵艺博）8月24日下午，国家主席习近平在北京人民大会堂同来华进行国事访问的约旦国王阿卜杜拉二世举行会谈。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.gov.cn/yaowen/liebiao/202608/content_7078996.htm">https://www.gov.cn/yaowen/liebiao/202608/content_7078996.htm</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">07</span></div>
+      <div class="card-title-zh">习近平同约旦国王阿卜杜拉二世共同出席合作文件签字仪式</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 央视新闻</div>
+      <div class="card-summary">8月24日，国家主席习近平同约旦国王阿卜杜拉二世在北京共同出席合作文件签字仪式。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/24/ARTIPofQrMv9cgDET0qelaBx260824.shtml">https://news.cctv.com/2026/08/24/ARTIPofQrMv9cgDET0qelaBx260824.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">08</span></div>
+      <div class="card-title-zh">习近平致电祝贺阿拉姆吉尔就任孟加拉国总统</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">习近平致电祝贺阿拉姆吉尔就任孟加拉国总统。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://tv.cctv.com/2026/08/24/VIDEQyfmW25XIJPcEK853ZGK260824.shtml">https://tv.cctv.com/2026/08/24/VIDEQyfmW25XIJPcEK853ZGK260824.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">09</span></div>
+      <div class="card-title-zh">创造经得起实践、人民、历史检验的实绩——习近平总书记引领全党深入开展树立和践行正确政绩观学习教育</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">新华社记者杨维汉、孙少龙、范思翔、董博婷</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.gov.cn/yaowen/liebiao/202608/content_7079025.htm">https://www.gov.cn/yaowen/liebiao/202608/content_7079025.htm</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">10</span></div>
+      <div class="card-title-zh">此行间·以文塑旅、以旅彰文，总书记为何强调文和旅的融合？</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 央视新闻</div>
+      <div class="card-summary">“让旅游成为人们感悟中华文化、增强文化自信的过程。”党的十八大以来，习近平总书记始终关心文化和旅游融合发展。一起重温总书记的殷殷嘱托。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/25/ARTIwIlddNUN6nu4e0Y3S6Mr260825.shtml">https://news.cctv.com/2026/08/25/ARTIwIlddNUN6nu4e0Y3S6Mr260825.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">11</span></div>
+      <div class="card-title-zh">消息指习近平极可能时隔七年再率团访问印度</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 联合早报</div>
+      <div class="card-summary">暂无摘要</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.zaobao.com/news/china/story20260824-9568802">https://www.zaobao.com/news/china/story20260824-9568802</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">12</span></div>
+      <div class="card-title-zh">独家视频丨习近平：建设更具内涵 更有活力的中约关系符合两国人民共同期待</div>
+      <div class="card-meta">元首动态 <span class="sep">|</span> 央视新闻</div>
+      <div class="card-summary">8月24日下午，国家主席习近平在北京人民大会堂同来华进行国事访问的约旦国王阿卜杜拉二世举行会谈。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/24/ARTIdfB9b1PjjvBzyHN75rFj260824.shtml">https://news.cctv.com/2026/08/24/ARTIdfB9b1PjjvBzyHN75rFj260824.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">13</span></div>
+      <div class="card-title-zh">中国全国政协副主席陈武病逝 享年72岁</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 联合早报</div>
+      <div class="card-summary">暂无摘要</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.zaobao.com/news/china/story20260824-9567927">https://www.zaobao.com/news/china/story20260824-9567927</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">14</span></div>
+      <div class="card-title-zh">人大常委会丨反跨境腐败法草案首次提请全国人大常委会会议审议</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 央视新闻</div>
+      <div class="card-summary">反跨境腐败法草案25日提请十四届全国人大常委会第二十四次会议首次审议。党的十八大以来，以习近平同志为核心的党中央高度重视反腐败国家立法，对加快完善反腐败涉外法律法规作出一系列重要部署。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/25/ARTImqp6CCv7fFlaXGiWbDQt260825.shtml">https://news.cctv.com/2026/08/25/ARTImqp6CCv7fFlaXGiWbDQt260825.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">15</span></div>
+      <div class="card-title-zh">李强会见约旦国王阿卜杜拉二世</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">新华社北京8月24日电 8月24日上午，国务院总理李强在北京人民大会堂会见来华进行国事访问的约旦国王阿卜杜拉二世。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.gov.cn/yaowen/liebiao/202608/content_7079031.htm">https://www.gov.cn/yaowen/liebiao/202608/content_7079031.htm</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">16</span></div>
+      <div class="card-title-zh">王毅吁中东局势当事方尽速重返对话谈判</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 联合早报</div>
+      <div class="card-summary">暂无摘要</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.zaobao.com/news/china/story20260825-9569772">https://www.zaobao.com/news/china/story20260825-9569772</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">17</span></div>
+      <div class="card-title-zh">王毅同科威特外交大臣杰拉赫会谈</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">新华社北京8月24日电 中共中央政治局委员、外交部长王毅24日在北京同科威特外交大臣杰拉赫举行会谈。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.gov.cn/yaowen/liebiao/202608/content_7079080.htm">https://www.gov.cn/yaowen/liebiao/202608/content_7079080.htm</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">18</span></div>
+      <div class="card-title-zh">王沪宁主持召开全国政协主席会议</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 人民日报</div>
+      <div class="card-summary">新华社北京8月24日电&amp;nbsp;&amp;nbsp;政协第十四届全国委员会第五十四次主席会议24日在京召开。中共中央政治局常委、全国政协主席王沪宁主持并讲话。</div>
+      <div class="card-link">🔗 原文链接：<a href="http://paper.people.com.cn/rmrb/pc/content/202608/25/content_30177031.html">http://paper.people.com.cn/rmrb/pc/content/202608/25/content_30177031.html</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">19</span></div>
+      <div class="card-title-zh">王沪宁会见第三届中美1.5轨对话美方代表</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 人民日报</div>
+      <div class="card-summary">本报北京8月24日电&amp;nbsp;&amp;nbsp;中共中央政治局常委、全国政协主席王沪宁24日在京会见出席第三届中美1.5轨对话的美方代表。</div>
+      <div class="card-link">🔗 原文链接：<a href="http://paper.people.com.cn/rmrb/pc/content/202608/25/content_30176934.html">http://paper.people.com.cn/rmrb/pc/content/202608/25/content_30176934.html</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">20</span></div>
+      <div class="card-title-zh">韩正会见印度国安顾问：中印应增进战略互信妥管分歧</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 联合早报</div>
+      <div class="card-summary">暂无摘要</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.zaobao.com/news/china/story20260825-9571074">https://www.zaobao.com/news/china/story20260825-9571074</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">21</span></div>
+      <div class="card-title-zh">韩正会见印度国家安全顾问、中印边界问题印方特别代表多瓦尔（2026-08-25）</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 外交部</div>
+      <div class="card-summary">暂无摘要</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260825_12009782.shtml">https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260825_12009782.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">22</span></div>
+      <div class="card-title-zh">韩正会见科威特外交大臣杰拉赫</div>
+      <div class="card-meta">高层动态 <span class="sep">|</span> 人民日报</div>
+      <div class="card-summary">本报北京8月24日电&amp;nbsp;&amp;nbsp;8月24日，国家副主席韩正在北京会见科威特外交大臣杰拉赫。</div>
+      <div class="card-link">🔗 原文链接：<a href="http://paper.people.com.cn/rmrb/pc/content/202608/25/content_30177032.html">http://paper.people.com.cn/rmrb/pc/content/202608/25/content_30177032.html</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">23</span></div>
+      <div class="card-title-zh">2026年8月24日外交部发言人林剑主持例行记者会（2026-08-24）</div>
+      <div class="card-meta">部委动态 <span class="sep">|</span> 外交部</div>
+      <div class="card-summary">暂无摘要</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260824_12009243.shtml">https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260824_12009243.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">24</span></div>
+      <div class="card-title-zh">上半年经济增长4.7%说明了什么？</div>
+      <div class="card-meta">经贸动向 <span class="sep">|</span> 中国政府网·要闻</div>
+      <div class="card-summary">风雨见真章，磨砺出底气。上半年，我国经济顶压前行，延续总体平稳、向新向优的发展态势，国内生产总值（GDP）同比增长4.7%。我们有力应对地缘政治冲突、经贸摩擦等外部环境变化，有效驾驭国内供强需弱、新老…</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.gov.cn/yaowen/liebiao/202608/content_7079014.htm">https://www.gov.cn/yaowen/liebiao/202608/content_7079014.htm</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">25</span></div>
+      <div class="card-title-zh">国民党立委陈雪生涉贪被约谈 获准以200万台币交保</div>
+      <div class="card-meta">部委动态 <span class="sep">|</span> 联合早报</div>
+      <div class="card-summary">暂无摘要</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.zaobao.com/news/china/story20260825-9569922">https://www.zaobao.com/news/china/story20260825-9569922</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">26</span></div>
+      <div class="card-title-zh">新能源汽车应急拉手为何被“藏”起来？极简设计或带来安全隐患</div>
       <div class="card-meta">部委动态 <span class="sep">|</span> 央视新闻</div>
-      <div class="card-summary">中国汽车工业协会12日发布数据显示，2026年7月份，新能源汽车月度新车销量占比首次超过60%、累计占比首次超过50%；月度出口量连续两个月突破100万辆，新能源汽车出口占比连续两个月超过50%。</div>
+      <div class="card-summary">日前，国家市场监督管理总局集中发布汽车召回公告。特斯拉等9家车企同步启动召回，覆盖数百万辆新能源汽车。本次召回的核心原因，是车内应急机械拉手与内饰颜色接近、辨识度不足，在极端碰撞断电场景下，可能影响驾…</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/25/ARTIBrVZuwEfOxmlZeiaPKwu260824.shtml">https://news.cctv.com/2026/08/25/ARTIBrVZuwEfOxmlZeiaPKwu260824.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">27</span></div>
+      <div class="card-title-zh">美升级对伊制裁 中国外交部：经济战只会激化矛盾</div>
+      <div class="card-meta">部委动态 <span class="sep">|</span> 联合早报</div>
+      <div class="card-summary">暂无摘要</div>
+      <div class="card-link">🔗 原文链接：<a href="https://www.zaobao.com/news/china/story20260825-9572056">https://www.zaobao.com/news/china/story20260825-9572056</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">28</span></div>
+      <div class="card-title-zh">餐饮消杀公司被曝用敌敌畏？厦门通报</div>
+      <div class="card-meta">部委动态 <span class="sep">|</span> 央视新闻</div>
+      <div class="card-summary">每天8点，央视网为您梳理24小时内发生在咱们身边的大小事儿。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/25/ARTIpWrRF1vPGs3uLLw18lV4260825.shtml">https://news.cctv.com/2026/08/25/ARTIpWrRF1vPGs3uLLw18lV4260825.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">29</span></div>
+      <div class="card-title-zh">“三五”规划为澳门锚定多元可持续未来</div>
+      <div class="card-meta">政策发布 <span class="sep">|</span> 央视新闻</div>
+      <div class="card-summary">《澳门特别行政区经济和社会发展第三个五年规划（2026—2030年）》的出台，标志着澳门迈入高质量发展新阶段的路线图和任务书正式确立。</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/24/ARTI0c54r8DPiP9kzNlRg7do260824.shtml">https://news.cctv.com/2026/08/24/ARTI0c54r8DPiP9kzNlRg7do260824.shtml</a></div>
+    </div>
+<div class="card">
+      <div class="card-head"><span class="card-num">30</span></div>
+      <div class="card-title-zh">把每一寸土地都规划好建设好</div>
+      <div class="card-meta">政策发布 <span class="sep">|</span> 央视新闻</div>
+      <div class="card-summary">树立和践行正确政绩观学习教育期间，习近平总书记再次到雄安新区深入考察，强调牢牢把握雄安新区作为北京非首都功能疏解集中承载地的首要功能定位，努力建设新时代创新高地和推动高质量发展样板。当地党员干部一体推…</div>
+      <div class="card-link">🔗 原文链接：<a href="https://news.cctv.com/2026/08/25/ARTIOFJPriYzmRV4fai4ozr9260825.shtml">https://news.cctv.com/2026/08/25/ARTIOFJPriYzmRV4fai4ozr9260825.shtml</a></div>
     </div>
 
 <div class="footer-nav">
   <a href="https://iranorawahaha.github.io/international-news-kb/international-news.html" class="nav-card nav-intl">
     <div class="nav-icon">🌍</div>
     <div class="nav-name">国际看板</div>
-    <div class="nav-desc">44 篇 · 全外媒</div>
+    <div class="nav-desc">53 篇 · 全外媒</div>
   </a>
   <a href="https://iranorawahaha.github.io/international-news-kb/china-news.html" class="nav-card nav-dom">
     <div class="nav-icon">🇨🇳</div>
     <div class="nav-name">国内看板</div>
-    <div class="nav-desc">10 篇 · 国家级权威</div>
+    <div class="nav-desc">40 篇 · 国家级权威</div>
   </a>
   <a href="https://iranorawahaha.github.io/international-news-kb/ai-news.html" class="nav-card nav-ai">
     <div class="nav-icon">🤖</div>
@@ -361,7 +541,7 @@
 </div>
 
 <div class="footer-credits">
-  📮 Ira 信息看板 · 每日自动生成 · 仅供参考交流<br>
+  📮 信息日报 · 每日自动生成 · 仅供参考交流<br>
   🌐 iranorawahaha.github.io/international-news-kb
 </div>
 

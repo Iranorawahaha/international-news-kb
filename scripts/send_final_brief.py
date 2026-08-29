@@ -482,8 +482,19 @@ def generate_pdf(html_body, pdf_path):
     """将精美版日报 HTML 渲染为 A4 PDF（保留超链接，供微信发送）"""
     import tempfile
 
+    # PDF 专用：加宽内容区至 730px 并收窄页边距，减少 A4 两侧留白（仅影响 PDF，不影响邮件版）
+    pdf_html = html_body.replace('max-width:660px', 'max-width:730px')
+    # PDF 专用：字号整体放大，提升阅读体验（仅影响 PDF，不影响邮件版）
+    pdf_html = pdf_html.replace('font-size:15.5px;', 'font-size:18px;')  # 新闻标题
+    pdf_html = pdf_html.replace('font-size:13px;', 'font-size:15px;')    # 摘要
+    pdf_html = pdf_html.replace('font-size:13.5px;', 'font-size:15px;')  # 导语
+    pdf_html = pdf_html.replace('font-size:11.5px;', 'font-size:13px;')  # 英文标题
+    pdf_html = pdf_html.replace('font-size:11px;', 'font-size:12px;')    # 来源/链接行
+    pdf_html = pdf_html.replace('font-size:19px;', 'font-size:22px;')    # 板块标题
+    pdf_html = pdf_html.replace('font-size:34px;', 'font-size:36px;')    # 报头大标题
+
     with tempfile.NamedTemporaryFile('w', suffix='.html', encoding='utf-8', delete=False) as f:
-        f.write(html_body)
+        f.write(pdf_html)
         tmp_html = f.name
 
     node_script = r'''
@@ -496,7 +507,7 @@ const { chromium } = require('playwright');
     path: process.argv[2],
     format: 'A4',
     printBackground: true,
-    margin: { top: '12mm', bottom: '12mm', left: '10mm', right: '10mm' },
+    margin: { top: '12mm', bottom: '12mm', left: '8mm', right: '8mm' },
     displayHeaderFooter: false
   });
   await browser.close();
@@ -549,6 +560,10 @@ def main():
         diplo = []
     else:
         diplo = load_diplo_updates()
+        if ov:
+            diplo_exclude = set(ov.get('diplo_exclude') or [])
+            if diplo_exclude:
+                diplo = [d for i, d in enumerate(diplo) if (i + 1) not in diplo_exclude]
     total = len(intl) + len(dom)
     print(f'📰 精美 Outlook 版生成中... {TODAY}')
     print(f'   🌍 国际: {len(intl)} 篇 | 🇨🇳 国内: {len(dom)} 篇 | 🏛 使领馆: {len(diplo)} 条动态')

@@ -1,4 +1,160 @@
+## 2026-08-28 09:23-09:45 (第二十次运行)
+
+### 执行摘要
+- ⚠️ **源组丢失坑复发（第 6 次）**：fetch_us_official.py 国务院 curl Connection reset（代理环境）→ 国务院 11 条整组被覆盖丢失、白宫 10→2、国防部 23→21 → 运行前备份 /tmp/us-official-backup-0828.json 恢复 51 条 + merge 今日白宫 2 条 → 54 条 6 源齐全 100% 中文化
+- ✅ 官方源 3 条新：**白宫 ①安大略湖改名"美国湖"（Lake America，8-27，80，美加贸易战摩擦新信号，WebFetch 拿真实正文补中文）②莱维特完成白宫新闻秘书最后一天（8-27，80，重要人事）**；**国务院 ③副国务卿兰道会见日本外务副大臣船越（8-27，78，美日同盟+霍尔木兹）**；国防部最新 8-24 稀土（超窗口）/USTR 8-18（行程类）/商务部 7-16 均无 48h 新
+- ✅ WebFetch 采集 48 条新增（11 源全覆盖）：SCMP 8/路透 7/BBC 5/卫报 5/NYT 5/CNN 4/半岛 4/WaPo 4/AP 4/WSJ 2/Politico 1；WSJ 反爬 → finwire.io（特朗普拒返 6 月伊 MoU 90）+ morningstar DJN（英伟达财报 962 亿/70% 指引 90）；Politico 用官方 URL（半导体新一轮关税 92，覆盖笔记本/游戏主机/服务器）；**超窗口剔除：WaPo 中国借美加贸易战渔利（8-25）/伊朗经济战分析（8-25）、卫报美制裁伊朗（8-24）、海地帮派（8-25）等**
+- ✅ update-news.sh --auto 一次成功：243 条/6 天，8-28 组 51 条（48 媒体 + 3 官方）→ 飞书 2 条（date=8-28）→ commit a7fbeae **push 直连成功**（脚本偶发成功，代理仍为兜底）
+- ✅ 校验全部通过：今日组 51 条（collectedAt≠今日 0 / date<昨天 0 / 跨组 URL 重复 0 / 组内重复 0）；官方源 3 条 0 缺中文 0 模板摘要；今日组 51/51 中文 0 缺摘要 0 模板摘要 0 导航残留；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（cfb90175）**；飞书核对 date=8-28 的 2 条（WSJ MoU+路透核演习）已入库
+- ✅ 数据源文件补充 commit 74075c9（代理 push 成功）
+
+### 本次关键发现
+1. **今日主题：习特会前中美博弈多线**（特朗普暗示制裁涉伊中国银行 92★/中国高管随团访美贸易休战延期"几乎确定" 92★/王毅排除障碍 90★）+ **Politico 独家半导体新一轮全面关税 92★**（覆盖笔记本/游戏主机/数据中心服务器，AI 产业冲击）+ **英伟达财报 962 亿 +70% 指引 90** + **特朗普拒返 6 月伊朗 MoU 90**（油价飙升）+ 尼泊尔西藏山洪 359 死 1400 失踪（多源 88）+ 美韩日核导弹演习（85）
+2. **同题合并正常拦截**：半岛"Hormuz 开放条件"与路透"伊朗为重开霍尔木兹设条件"标题相似度≥0.68 → 保留路透权威版（AUTHORITY_ORDER 生效），非数据丢失
+3. **源组丢失坑第 6 次确认**：运行前备份是唯一保险；fetch 失败后立即检查源分布（本次国务院整组丢失）
+4. **超窗口官方/媒体源严格剔除**：无论重要性（中国借美加贸易战渔利等 8-25 均剔除）
+5. **update-news.sh 偶发直连 push 成功**（本次成功），但 7890 代理仍为可靠兜底（数据源 commit 走代理）
+
+### 产出
+- 本地: international-news.html (243条/6天，8-28 组 51 条)，commit a7fbeae + 74075c9
+- 飞书: 2 条已入库（date=8-28）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 cfb90175 与本地一致）
+
+### 待跟进
+- [ ] fetch_us_official.py 源组丢失防护（第 6 次确认，超出"不修改脚本"范围，待用户确认）
+- [ ] war.gov/USTR 反爬官方源错过 48h 窗口即丢失（8-24 稀土已丢，建议 9:30 采集时优先 WebFetch war.gov releases 页）
+
+## 2026-08-27 09:23-09:45 (第十九次运行)
+
+### 执行摘要
+- ⚠️ **源组丢失坑复发（第 5 次）**：fetch_us_official.py 三源（白宫/国务院/财政部）curl 全 Connection refused（代理 7890 无服务）→ 白宫 7+国务院 9 整组被覆盖丢失（剩 28 条）→ 运行前备份 /tmp/us-official-backup-0827.json 恢复 46 条 6 源齐全；**无代理直连三源均 200 可用**
+- ✅ 官方源采集（无代理 curl + WebFetch 手动补 5 条新）：**白宫 Bulk-Power 电力系统国家紧急状态（IEEPA，禁外国产电力设备，90 元首级）** + 牛肉进口配额公告（78）+ Abbey Gate 五周年（75）；**国务院 鲁比奥会见墨西哥外长（78）+ 极左恐怖组织制裁（Autistici/Inventati 等，80）**；财政部 8-26 公告与国务院极左制裁同事件（合并）；国防部最新 8-24 稀土/商务部 7-16/USTR 8-18 均过窗口；us-official.json 51 条 6 源齐全 100% 中文化
+- ⚠️ **超窗口剔除（如实汇报）**：国务院 叙利亚 SST 撤销（8-24，重大）、伊朗"经济放逐"行动制裁（8-24，重大）、鲁比奥-德国通话（8-24）、白宫 Overdose/National Park Week 文告（8-24）
+- ✅ WebFetch 采集 30 条新增（SCMP 8/路透 4/BBC 3/NYT 2/WSJ 1/彭博 1/CNN 2/半岛 2/Politico 1/WaPo 2/AP 2/卫报 2）；WSJ 反爬 → TradingView 转载（Anthropic 30T TAM/2T 估值）；OpenAI Jalapeño 芯片超越 Blackwell 用 financefeeds 英文原报 URL（source 标彭博社）；Reuters/BBC/SCMP/卫报 WebFetch 间歇失败但重试成功；Politico /world 404 → WebSearch 拿真实 URL
+- ✅ update-news.sh --auto 一次成功：236 条/6天，8-27 组 35 条（30 媒体 + 5 官方）→ 飞书 5 条（date=8-27）→ commit 26d1be5 push 直接成功 → 数据源 commit 29a671d 推送成功
+- ✅ 校验全部通过：今日组 35 条（collectedAt≠今日 0 / date<昨天 0 / 跨组 URL 重复 0 / 组内重复 0）；官方源 5 条 0 缺中文 0 模板摘要；今日组 0 缺中文 0 缺摘要 0 模板摘要 0 导航残留；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（1be05cf0）**
+
+### 本次关键发现
+1. **今日主题：中美博弈多线交织**（美查封中国黑客平台 QTFY 92 / 中国誓言报复涉伊制裁 92 / 美对伊制裁放行中国 90 / 中印 8 步协议 88 / 泽连斯基促华促和 88）+ **AI 芯片格局生变**（OpenAI Jalapeño 超英伟达 Blackwell 90 / Anthropic 30T TAM IPO 88 / 英伟达财报 88 / OpenAI 代理黑客 85）+ **白宫电力紧急状态**（90，涉华电力设备风险）
+2. **源组丢失坑第 5 次确认**：备份恢复仍是唯一保险；本次代理全挂但无代理直连全通（白宫/国务院/财政部 200）
+3. **WebFetch 间歇性失败**：Reuters/BBC/SCMP/卫报首次全 fetch failed → 重试成功；WSJ 反爬、Politico /world 404 为常态 → WebSearch 兜底
+4. **8-26 超窗口官方源确认**：叙利亚撤销/伊朗经济放逐均 8-24 发布，严格按 V2.11 剔除不收录（无论重要性）
+
+### 产出
+- 本地: international-news.html (236条/6天，8-27 组 35 条)，commit 26d1be5 + 29a671d
+- 飞书: 5 条已入库（date=8-27）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 1be05cf0 与本地一致）
+
+### 待跟进
+- [ ] fetch_us_official.py 源组丢失防护（第 5 次确认，超出"不修改脚本"范围，待用户确认）
+- [ ] war.gov/USTR 反爬官方源错过 48h 窗口即丢失（8-24 稀土已丢）
+
+## 2026-08-24 09:23-09:45 (第十七次运行)
+
+### 执行摘要
+- ⚠️ **发现并发实例已先跑**：09:22 已有 update-news.sh 提交 957a7bf（240条/6天），8-24 组 73 条媒体（9源），但**缺 WSJ/AP/WaPo、无官方源、summary_zh 全空、含 17 条 date=8-22 超窗口** → 全面修复
+- ✅ 官方源采集：fetch_us_official.py 白宫1/国务院1/财政部 Connection reset → ⚠️ **源组丢失坑复发（第 3 次）**：白宫 5→1、国务院 9→1 整组被覆盖 → 用运行前备份 /tmp/us-official-backup-0824.json 恢复 44 条 6 源齐全（白宫5/国务院9/国防部23/财政部3/商务部1/USTR3），**今日官方源实际 0 全新**（2 条重抓为已收录公告）；war.gov 最新 8-21、USTR 最新 8-18，均过 48h 窗口无新
+- ✅ WebFetch 补采 3 条：WSJ 美加滑向贸易战（88，163 转载全文）+ WaPo 特朗普贸易策略极限（88，Yahoo 转载）+ AP 卡尼被特朗普考验（85，apnews 直连）；修正路透"经济D日"65→90、CNN 贝森特"经济诺曼底"65→90（涉华重大）；Politico 伊朗 act of war 与 AP 同事件 → AP 版跳过
+- ✅ update-news.sh --auto 两次：首次 243 条 → 发现 18 条超窗口 → **webfetch/news-data 双端清理 date<8-23 共 17 条（并发实例的 8-22 旧稿）→ 重跑 226 条/6天，8-24 组 59 条**（date=8-23:55 / 8-24:4）→ git push 956d792 直接成功 → 数据源 commit fed8730 推送成功
+- ✅ 校验全部通过：今日组 59 条（collectedAt≠今日 0 / date<昨天 0 / 跨组 URL 重复 0 / 组内重复 0）；官方源 20 条 0 缺中文 0 模板摘要；今日组 0 缺中文 0 缺摘要 0 模板摘要；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（5f3ed1de）**
+- ✅ 飞书：date=8-24 仅 4 条且已入库（0 新增），8-23 的 55 条不入库（sync --today 历史既定行为）
+
+### 本次关键发现
+1. **并发实例半成品识别**：8-24 组 73 条 media 数据 summary_zh 全空（中文摘要存 summary 字段）、缺 3 源、含超窗口旧稿 → 重跑前必须校验今日组 date/源覆盖/字段
+2. **源组丢失坑第 3 次确认**：fetch_us_official.py 单源 curl 失败（财政部 reset）→ 白宫/国务院整组被覆盖丢失 → 运行前备份是唯一保险，**本次备份救回 14 条**
+3. **webfetch 超窗口条目不会自动过滤**：并发实例采集的 date=8-22 旧稿（17条）经 update-news.sh 直进今日组 → 必须双端清理（webfetch + news-data）后重跑
+4. **11 源覆盖校验**：8-24 最终 11/11 源全覆盖（路透11/BBC7/SCMP8/卫报10/CNN5/NYT4/WSJ1/半岛7/Politico4/WaPo1/AP1）
+
+### 产出
+- 本地: international-news.html (226条/6天，8-24 组 59 条)，commit 956d792 + fed8730
+- 飞书: date=8-24 的 4 条已在库（并发实例已同步），0 新增
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 5f3ed1de 与本地一致）
+
+### 待跟进
+- [ ] 并发实例半成品防护：更新脚本前先校验今日组已有数据完整性（源覆盖/超窗口/字段）
+- [ ] fetch_us_official.py 源组丢失防护（第 3 次确认，超出"不修改脚本"范围，待用户确认）
 # 自动化任务执行记录：国际新闻看板每日刷新（9:30）
+
+## 2026-08-21 09:19-10:10 (第十六次运行)
+
+### 执行摘要
+- ✅ 官方源采集：国务院 7 条新（含 **Qods Force/真主党走私网络制裁 90、厄瓜多尔可卡因网络 90、古巴 3 人 9 实体制裁 90、Min Zin 错误拘押认定（涉华重大）90、鲁比奥-加拿大外长会晤**、匈牙利国庆日贺词）；**白宫 curl Connection reset 失败 → 源组丢失坑复发（白宫 3 条整组被覆盖丢失）** → 用运行前备份 /tmp/us-official-backup-0821.json 合并恢复 + 补抓白宫 → **新增白宫 NSPM-17《国家航天运输政策》85（8-20 发布，无代理 curl 直连成功）**；war.gov WebFetch 抓到 2 条 48h 新（**战略资本 NSFF 关键矿产融资计划 80 + 美牙买加 SOFA 78**）；财政部/商务部/USTR 确认 48h 无新；us-official.json 43 条，6 源齐全（白宫4/国务院9/国防部23/财政部3/商务部1/USTR3），9 条新增 100% 中文化、0 导航残留、0 模板摘要
+- ⚠️ **源组丢失坑复发（第 2 次）**：fetch_us_official.py 白宫 curl Connection reset → 白宫整组 3 条被覆盖丢失 → 合并恢复成功。**再次确认：每次运行后必检 us-official.json 6 源齐全；运行前 cp 备份是关键保险**
+- ✅ WebFetch 采集 11/11 信源：新增 31 条（SCMP 8/BBC 4/AJ 4/Reuters 2/WSJ 2/NYT 2/Guardian 2/CNN 2/WaPo 2/AP 2/Politico 1）；Reuters/WSJ 反爬 → WebSearch 兜底（**贝森特"史上最严厉制裁"92 用 al-monitor 转载、特朗普"经济D日"92 用 wsj.com 播客 URL、美加关税削减 88 用 tradingview DJN 转载**）；去重跳过 2 条（BBC Carney/AP Instagram 判决 URL 已在历史）
+- ✅ update-news.sh --auto 成功：**注意：后台启动时与前一实例并发（pid 锁拒绝重复执行，16929 主进程正常跑完）** → 264 条/8天 → HTML（8-21 组 39 条）→ **git push 直接成功 e00e8ad（连续第 2 次未清代理异常）** → 数据源 commit 778e6c3 推送成功
+- ✅ 校验全部通过：今日组 39 条（collectedAt≠今日 0 / date<昨天 0 / 跨组 URL 重复 0 / 组内重复 0）；官方源 8 条 0 缺中文 0 模板摘要；今日组 0 缺中文 0 缺摘要；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（cf08a982）**
+- ✅ 飞书核对：date=8-21 的 7 条全部入库（SCMP 3 + BBC 4，与本地完全一致）；**飞书 filter-json 匹配用纯日期失败（字段值是 datetime 格式 "2026-08-21T00:00:00.000+08:00"），改用 --sort-json 按新闻日期倒序 + 人工核对**
+
+### 本次关键发现
+1. **今日高分**：SCMP Min Zin 错误拘押 92（涉华）/ SCMP 美施压中国支持对伊经济行动 92 / Reuters 史上最严厉制裁 92 / WSJ 经济D日 92 / 国务院 Qods/厄瓜多尔/古巴制裁 90×3 / 白宫 NSPM-17 85 / SCMP 台 350 亿防务预算 88 / NYT 许家印无期 88 / AP 朝鲜导弹 88 / 王毅首尔 88
+2. **今日主题：美对伊"经济D日"多源聚焦（6 源不同角度：SCMP 涉华/Reuters 制裁/WSJ 播客/Guardian 贸易伙伴/WaPo 盟友/AP 霍尔木兹核查）+ 美三连制裁（圣城旅/厄瓜多尔/古巴）+ Min Zin 错误拘押（官方+媒体双收录）+ 美加关税谈判 + 许家印宣判 + 朝鲜导弹**
+3. **fetch_us_official.py 白宫源组丢失（第 2 次确认）**：脚本单源 curl 失败 → 该源整组被覆盖 → 运行前备份 + 合并恢复是标准动作；白宫失败时 `env -u http_proxy -u https_proxy curl` 直连 200
+4. **update-news.sh 并发防护正常**：后台启动遇到锁（16929 前实例）自动拒绝，主进程不受影响跑完；后续用 `ps -p PID` 等待
+5. **飞书日期筛选坑**：`--filter-json` 用纯日期 "2026-08-21" 匹配失败（字段存 datetime）；`--sort-json '[{"field":"新闻日期","desc":true}]'` 可倒序查最新
+
+### 产出
+- 本地: international-news.html (264条/8天)，commit e00e8ad + 778e6c3
+- 飞书: 7 条已入库（date=8-21，SCMP 3 + BBC 4）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 cf08a982 与本地一致）
+
+### 待跟进
+- [ ] **update-news.sh git push**：连续 2 次脚本直接 push 成功（未清代理），历史上 8 次失败——7890 代理仍建议作为兜底通道
+- [ ] 飞书 8-14 重复 44 条清理（历史遗留，继续待授权）
+- [ ] fetch_us_official.py 源组丢失防护：单源失败保留旧数据（超出"不修改脚本"范围，待用户确认）
+
+## 2026-08-20 09:11-09:40 (第十五次运行)
+
+### 执行摘要
+- ✅ 官方源采集：白宫 2 条新（**福特林肯车型生产回流美国、逐步淘汰中国进口 90 分涉华经贸重大** + 国民警卫队/后备役周文告 88 分，无代理 curl 直连详情页拿真实正文，agent 翻译补中文）；国务院 curl 407 → WebFetch 兜底确认 48h 内 3 条昨日已收 + 1 条副国务卿挪威会晤例行 readout 跳过；财政部 0/商务部 0（WebFetch 确认最新 7-16）/war.gov 0（最新 8-17 已收）/USTR 0（curl 直连确认最新 Iowa 行程类已跳过）；us-official.json 34 条，100% 中文化、0 导航残留、0 模板摘要
+- ⚠️ **重大坑（第 1 次发现）**：环境变量 HTTP_PROXY=127.0.0.1:7890 全局存在，本次 7890 对 state.gov 返回 407 → fetch_us_official.py 国务院失败 → **脚本合并逻辑把 us-official.json 里国务院 3 条 + 昨日白宫 1 条整个覆盖丢失**（30 条无国务院）→ 修复：`git show 0245ecc:data/us-official.json` 恢复旧版 + merge 今日新增 2 条 → 34 条。**下次运行后必检 us-official.json 是否有国务院条目**（源分布应含"美国国务院"）
+- ✅ WebFetch 采集 10/11 信源有效（WaPo 48h 无合格新条目=0 条，如实汇报）：新增 34 条（Reuters 5/BBC 4/SCMP 6/Guardian 4/CNN 2/NYT 3/WSJ 2/AJ 4/Politico 2/AP 2）；WSJ 反爬 → WebSearch 兜底（**OpenAI Q2 收入 67 亿美元仅 +18% 被 Anthropic 115 亿首次反超 92 分**，用 WSJ 官方播客页 URL；**特朗普 8-19 确认今年会晤金正恩、或在深圳 APEC 11 月 92 分**，用 CNA 转载 URL）；同事件去重：美加关税保留 BBC+Guardian 双角度、UAE 停贸选 NYT 版、金与正保留 Guardian 版、乌克兰防长保留 Reuters 版、宇树上市保留 BBC 版、美韩军演反应版全跳过
+- ✅ update-news.sh --auto 首次成功：271 条/8天（8-12 组滚出窗口）→ HTML（8-20 组 36 条）→ **git push 直接成功 b634fa1（本次未清代理异常）** → 飞书 3 条（date=8-20 的 4 条 - 1 重复"Presidential Message"）
+- ✅ 数据源文件补充 commit 5bc55c4 并推送成功（b634fa1..5bc55c4）
+- ✅ 校验全部通过：今日组 36 条（collectedAt≠今日 0 / date<昨天 0 / URL 跨组重复 0 / 组内重复 0）；官方源 35 条 0 缺中文 0 模板摘要；今日组 0 缺中文 0 缺摘要 0 导航残留 0 模板摘要；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（a8ff9c80）**
+
+### 本次关键发现
+1. **今日高分**：SCMP 习近平访美 AI 会谈细节不确定 95（元首级）/ SCMP 中国公民 2024 大选选民欺诈 92 / WSJ OpenAI 被 Anthropic 反超 92 / WSJ 特朗普会晤金正恩·深圳 APEC 92 / 白宫福特林肯回流 90 / BBC 宇树科技上市 90 / SCMP 京东欧盟调查 90 / SCMP 黄岩岛监测站 90 / Guardian 金与正质疑 90 / NYT 蓝箭可回收火箭 90 / AJ 五角大楼北约忠诚问卷 90 / AJ 特朗普对伊"最严厉经济行动"90 / AJ 美债破 40 万亿 88
+2. **环境变量代理双刃剑**：HTTP_PROXY=7890 全局存在；state.gov 走代理 407、无代理 200；白宫 WebFetch 404 但无代理 curl 200。下次 state.gov/白宫失败时先 `env -u http_proxy -u https_proxy curl` 测直连
+3. **fetch_us_official.py 合并覆盖坑升级（第 2 种形态）**：上次是"重跑覆盖同 URL 字段"，本次是"某源 curl 失败导致该源整组从结果丢失"→ 每次运行后必查源分布完整性（白宫/国务院/财政部/国防部/商务部/USTR 应齐全），缺则 git show 恢复 + merge
+4. **webfetch 手工条目字段固化**：34 条全含 title（英文原题）+ collectedAt=2026-08-20 09:30，V2.11 归档正常，36 条全进今日组
+5. **WaPo 48h 窗口空窗**：8-19 仅王室/同事件新闻，8-18 及更早超窗口 → 0 条，如实汇报不硬凑
+
+### 产出
+- 本地: international-news.html (271条/8天)，commit b634fa1 + 5bc55c4
+- 飞书: 3 条已入库（date=8-20）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 a8ff9c80 与本地一致）
+
+### 待跟进
+- [ ] **update-news.sh git push**：本次脚本 push 直接成功（未清代理），但历史上 8 次失败——仍建议改 `git -c http.proxy=http://127.0.0.1:7890 push`（待用户确认）
+- [ ] 飞书 8-14 重复 44 条清理（历史遗留，继续待授权）
+- [ ] fetch_us_official.py 源组丢失防护：建议脚本层在单源失败时保留旧数据（超出"不修改脚本"范围，待用户确认）
+
+## 2026-08-19 09:20-09:45 (第十四次运行)
+
+### 执行摘要
+- ✅ 官方源采集：白宫 1（暴力犯罪降幅 9.3%，curl 列表抓到但 URL 404 → WebSearch 拿真实内容含 9.3%/18.1% 具体数据）/国务院 3（鲁比奥与阿联酋国安顾问通话/与哥伦比亚总统通话/指定 ICC 院长赤根智子+高级审判律师塞耶制裁，WebFetch 补全截断摘要）/财政部 0；反爬站点：war.gov 无 48h 新（最新 8-17 已收录）、USTR 8-18 Iowa 行程类无政策实质不收录、商务部无新；us-official.json 32 条，4 条新条目 agent 翻译补中文（处理 &#8217; HTML 实体匹配坑）→ 100% 中文化、0 导航残留、0 模板摘要
+- ✅ WebFetch 采集 11/11 信源：新增 27 条（Reuters 8/BBC 3/SCMP 7/Guardian 1/NYT 2/Politico 1/AJ 3/WaPo 1/CNN 1）；WSJ 反爬 → WebSearch 兜底；Politico /world 404 → 主站+WebSearch 拿美加关税独家；**重大发现：中国 6 月减持美债 259 亿至 6334 亿美元创 2008 年来新低（TIC 8-17 数据，Reuters 报道用 Yahoo Finance 转载 URL 收录 90 分）**；同事件去重：美韩军演反应版全跳过、ICC 媒体版跳过（官方已收）、美加关税只收 Politico 版、30校审计 SCMP 版跳过（war.gov 已收）、驱逐舰 CNN 版 8-17 已收跳过
+- ✅ update-news.sh --auto 首次成功：322 条/8天 → HTML（8-19 组 31 条）→ 飞书 4 条（date=8-19）→ commit 5a57fba
+- ⚠️ **git push 第 8 次确认**：脚本清代理直连失败 → 手动 `git -c http.proxy=http://127.0.0.1:7890 push` 成功（5a57fba 由后续 26d54ca 一并推上，数据源 0245ecc 单独推）
+- ⚠️ **超窗口条目拦截（V2.11 生效）**：校验发现 NYT 胡塞袭击沙特船只 date=8-17 < 昨天 8-18 违规 → 从 webfetch 剔除 1 条 → 重跑 update-news.sh → 8-19 组 30 条（date 8-18:26 / 8-19:4）→ commit 86c15c4 + 53c8a5b 推送成功
+- ✅ 校验全部通过：今日组 30 条（collectedAt≠今日 0 / date<昨天 0 / URL 跨组重复 0 / 组内重复 0）；官方源 54 条 0 缺中文 0 模板摘要；今日组 0 模板摘要 0 缺中文 0 缺摘要；全量 0 导航残留；JS 语法正确；线上 HTTP 200 且 md5 与本地完全一致（9cdc86ed）
+- ✅ 飞书 4 条已入库（date=8-19，SCMP 民主党制裁/蓝箭航天/培根 + BBC 叙利亚空袭），去重正常无误插
+
+### 本次关键发现
+1. **今日高分**：SCMP 习近平见厄瓜多尔总统抨击拉美干涉 92（元首级）/ Reuters 特朗普否认伊朗谈判·霍尔木兹仍关闭 92 / Politico 美加关税豁免待批 92 / Reuters 全球债市+中国减持美债创2008来新低 90 / SCMP 民主党批评放松香港制裁 90 / SCMP 王毅访首尔 90
+2. **中国减持美债（6334 亿美元/2008 来最低）为今日经贸头号新闻**：TIC 6 月数据 8-17 发布，Reuters 报道无直连 URL → Yahoo Finance 转载 Reuters 全文 URL 收录，source 标路透社（延续第三方转载先例）
+3. **V2.11 超窗口拦截流程已固化**：今日新增 webfetch 条目 date 必须 ∈ {昨天, 今天}；校验发现违规 → webfetch 剔除 → 重跑 update-news.sh → 校验 date<昨天=0（本次拦截 NYT 胡塞 date=8-17 1 条）
+4. **git push 双保险确认（第 8 次）**：脚本清代理直连必失败；7890 代理可靠；且其他自动化任务的 commit 会连带推送国际看板更新（本次 5a57fba 由 26d54ca 推上），但数据源文件仍需单独 commit+push
+5. **USTR 8-18 Iowa 条目确认无政策实质**（Greer 参观 Titan 轮胎厂+州博览会）→ 与 8-11 判断一致不收录
+
+### 产出
+- 本地: international-news.html (322条/8天)，commit 5a57fba + 0245ecc + 86c15c4 + 53c8a5b
+- 飞书: 4 条已入库（date=8-19）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 9cdc86ed 与本地一致）
+
+### 待跟进
+- [ ] **update-news.sh git push 清代理**：第 8 次失败确认，建议改 `git -c http.proxy=http://127.0.0.1:7890 push`（超出"不修改脚本"范围，待用户确认）
+- [ ] 飞书 8-14 重复 44 条清理（历史遗留，继续待授权）
 
 ## 2026-08-18 09:20-09:55 (第十三次运行)
 
@@ -403,3 +559,52 @@
 ### 待跟进
 - [ ] **update-news.sh 1041 行 git push 清代理**：第 4 次失败确认，建议改 `git -c http.proxy=http://127.0.0.1:7890 push`（超出"不修改脚本"范围，待用户确认）
 - [ ] 飞书 8-14 重复 44 条清理（历史遗留，继续待授权）
+## 2026-08-26 09:23-09:55 (第十八次运行)
+
+### 执行摘要
+- ⚠️ **源组丢失坑复发（第 4 次）**：fetch_us_official.py 国务院 curl 407（代理）失败 → 国务院 9 条整组被覆盖丢失、白宫 5→2、国防部 23→21 → 运行前备份 /tmp/us-official-backup-0826.json 恢复 44 条 + merge 今日白宫 2 条 → 46 条 6 源齐全
+- ✅ 官方源采集：白宫 2 条新（**8-25 特朗普"终结加拿大搭便车"88 分元首级**（涉华关联：加拿大是除中国外唯一选择报复的国家，加宣布新增 276 亿对美关税）+ 多莉·帕顿降半旗 75 分）；war.gov 稀土 7.5 亿（8-24）→ **因 date=8-24 超窗口（<8-25 昨天）按 V2.11 规则剔除重跑**（8-25 采集漏收，今日补采已过窗口）；财政部/USTR/商务部 48h 无新
+- ✅ WebFetch 采集：35 条新增（路透6/BBC5/SCMP6/NYT5/卫报1/CNN2/半岛2/WaPo4/AP3/彭博1）；WSJ/Politico 反爬 0 条如实汇报；**Bloomberg 独家"美拟习特会前对华加征 7.5% 产能过剩关税"95 分元首级**（用 Yahoo Finance 转载 URL，source 标彭博社，延续第三方转载先例）
+- ✅ update-news.sh --auto 两次：首次 238 条 → 发现 war.gov 稀土超窗口 → 数据源双端剔除 → 重跑 237 条 → 8-26 组 36 条
+- ✅ 校验全部通过：今日组 36 条（collectedAt≠今日 0 / date<昨天 0 / 跨组 URL 重复 0 / 组内重复 0）；缺中文 0；官方源 2 条 0 缺中文 0 模板摘要；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（04f4bab0）**
+- ✅ 飞书：date=8-26 的 6 条已入库（首次同步 6 条新增，重跑 6 条全去重跳过）；git push 3 次全走 7890 代理（60ab4f0/2a2d736/6d4e08a/a1244cc）
+
+### 本次关键发现
+1. **源组丢失坑第 4 次确认**：备份恢复仍是唯一保险；国务院 curl 407 时先 `env -u http_proxy curl` 测直连
+2. **war.gov 8-24 稀土公告漏采教训**：8-25 采集漏收（反爬），8-26 补采时 date=8-24 超窗口 → 严格按 V2.11 剔除，**反爬站点官方源也需 48h 内及时采集，错过窗口即丢失**
+3. **今日主题：美三线经济战**（对华 7.5% 关税临近上限 / 对加 50% 关税+加拿大报复 / 对伊"经济放逐"次级制裁）+ 习特会前中美博弈（一轨半对话）+ 台湾 AI 服务器走私案 + 南海建设
+4. **今日高分**：彭博 7.5% 对华关税 95★ / SCMP 一轨半对话 90★ / BBC 中国抨击对伊制裁 90 / NYT 中国反击 90 / 卫报 AI 服务器走私 90 / 白宫加拿大搭便车 88★ / Reuters 南海建设 88 / WaPo 中国渔利 88
+
+### 产出
+- 本地: international-news.html (237条/6天，8-26 组 36 条)，commit 60ab4f0/2a2d736/6d4e08a/a1244cc
+- 飞书: 6 条已入库（date=8-26）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 04f4bab0 与本地一致）
+
+### 待跟进
+- [ ] war.gov/USTR 等反爬官方源漏采窗口问题：错过 48h 即丢失，建议后续在 9:30 采集时优先 WebFetch war.gov releases 页
+- [ ] fetch_us_official.py 源组丢失防护（第 4 次确认，超出"不修改脚本"范围，待用户确认）
+
+## 2026-08-29 09:23-09:45 (第二十一次运行)
+
+### 执行摘要
+- ⚠️ **源组丢失坑复发（第 7 次）**：fetch_us_official.py 白宫 12→2、国务院 12→3、国防部 23→21 整组被覆盖 → 运行前备份 /tmp/us-official-backup-0829.json 恢复 + merge 今日 5 条 → 59 条 6 源齐全（白宫14/国务院15/国防部23/财政部3/商务部1/USTR3）100% 中文化 0 导航残留
+- ✅ 官方源新增 5 条：**白宫 ①美军中央司令部确认美控制霍尔木兹海峡非伊朗（8-28，88★，约1500艘商船7.5亿桶原油/伊朗石油出口为零）②设立美国航天学院总统委员会行政令（8-28，75）**；**国务院 ③制裁伊朗国家银行迪拜分行经理+香港公司（8-28，90★，经济放逐行动延续，E.O.13224/13902）④撤销伊拉克裔国民签证（获拜登"国际勇气女性奖"、FBI恐怖观察名单，8-28，75）⑤鲁比奥祝贺摩尔多瓦国庆日（8-29，75）**；国防部/USTR/商务部/财政部 48h 无新
+- ✅ WebFetch 采集 41 条新增（11 源全覆盖尝试）：路透 10/SCMP 7/NYT 6/半岛 5/BBC 4/WaPo 3/AP 3/卫报 2/CNN 1；**WSJ 0（Nvidia 暂停收入分成 8-27、AI 热潮支撑经济 8-27 均超窗口剔除，如实汇报）+ Politico 0（Cloudflare 拦截，8-28 半导体关税已收录）**；Reuters 中国黑客收回说法用 Yahoo 转载 URL（88★）；同事件多源去重：委内瑞拉石油保留 Reuters 版（BBC/AP/卫报跳过）、冰岛公投保留 Reuters 版、尼泊尔洪水保留 AP 版
+- ✅ update-news.sh --auto 一次成功：279 条/6 天，8-29 组 45 条（35 媒体 date=8-28 + 10 条 date=8-29）→ 飞书 10 条（date=8-29，0 重复）→ commit 9e4179e **push 直连成功** → 数据源 commit d7428a5（代理推送）
+- ✅ 校验全部通过：今日组 45 条（collectedAt≠今日 0 / date<昨天 0 / 跨组 URL 重复 0 / 组内重复 0）；官方源 15 条 0 缺中文 0 模板摘要 0 摘要过短；今日组 45/45 中文 0 缺摘要 0 模板摘要 0 导航残留；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（2985b1c7）**
+
+### 本次关键发现
+1. **今日主题：美伊战争六个月多线聚焦**（美军确认控制霍尔木兹 88★ + 国务院制裁伊朗金融生命线 90★ + 美财政部制裁香港公司 Kameng Trading 92★ + 埃及银行制裁 85 + IRGC 宣称管控海峡 88）+ **中美关系**（美收回"中国黑客攻击"说法 88★ + 习特峰会筹备 92★ + 乌兹别克斯坦 AI 阵营试探 88★）+ **AI 科技**（Anthropic 五角大楼胜诉 90★ + 阿联酋 AI 强国 88★ + Meta/Instagram 成瘾判决 82）+ 委内瑞拉石油协议 90★
+2. **源组丢失坑第 7 次确认**：备份恢复仍是唯一保险；本次白宫/国务院/国防部三源同时被覆盖（curl 失败整组丢失），备份合并后 59 条完好
+3. **超窗口严格剔除**：WSJ Nvidia 暂停收入分成（8-27）与 AI 热潮经济文章（8-27）虽重要但 date<8-28 按 V2.11 剔除；CNN Anthropic 版（8-27）改用 AP 版（8-28）收录
+4. **飞书 sync --today 按 date==today 筛选**：今日 45 条仅 10 条 date=8-29 入库（35 条 date=8-28 不入库，历史既定行为）
+5. **Politico 连续 Cloudflare 拦截**：/world 与主站均 Just a moment 验证页；8-28 半导体关税 92★ 已收录故今日无遗漏风险
+
+### 产出
+- 本地: international-news.html (279条/6天，8-29 组 45 条)，commit 9e4179e + d7428a5
+- 飞书: 10 条已入库（date=8-29）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 2985b1c7 与本地一致）
+
+### 待跟进
+- [ ] fetch_us_official.py 源组丢失防护（第 7 次确认，超出"不修改脚本"范围，待用户确认）
+- [ ] Politico 反爬加剧：连续 2 日 Cloudflare 拦截，WebSearch 兜底；若未来有 Politico 独家重大新闻需及时 WebSearch

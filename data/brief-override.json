@@ -1,5 +1,6 @@
 {
-  "date": "2026-08-21",
-  "intl_exclude": [1, 5, 6, 7, 14],
-  "dom_exclude": [24, 25, 26]
+  "date": "2026-08-28",
+  "intl_exclude": [5, 8, 9, 12, 13],
+  "dom_exclude": [1, 5, 8, 9, 11, 14, 17, 18, 23],
+  "diplo_exclude": [3]
 }

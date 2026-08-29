@@ -12,6 +12,8 @@
 - 更新 `./update-news.sh`；单文件 HTML 架构（CSS/JS 内联防 404）
 - 官方源（白宫/国务院/USTR/财政部/商务部/国防部）必须 agent 翻译补 title_zh/summary_zh，日期用页面真实发布日
 - WSJ 反爬：WebSearch 拿真实 URL（绝不编造）；重大新闻可用第三方转载真实 URL（finwire.io），source 仍标华尔街日报
+- ⚠️ **fetch_us_official.py 源组丢失坑（2026-08-20 第 1 次发现）**：某源 curl 失败（如 state.gov 走代理 407）时，脚本合并会把该源整组条目从 us-official.json 覆盖丢失（本次丢国务院 3 条+白宫 1 条）→ **每次运行后必检 us-official.json 源分布是否含全部 6 源**（白宫/国务院/财政部/国防部/商务部/USTR），缺失则 `git show <昨日commit>:data/us-official.json` 恢复 + merge 今日新增
+- ⚠️ **环境变量代理双刃剑（2026-08-20）**：全局 HTTP_PROXY=127.0.0.1:7890 存在；state.gov 走代理 407、无代理直连 200；白宫 WebFetch 404 但无代理 curl 200 → 官方源失败时先 `env -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY curl` 测直连
 
 ## 看板3 AI 动向（V5，每日 9:30 自动化 automation-1785566963833）
 - **⚠️ 生产路径**（2026-08-18 锁定，禁止改用其他脚本）：
@@ -56,10 +58,13 @@
 ## LLM 后处理流程（脚本后必做）
 1. 删个人叙事/评论稿/文化专栏/学习栏目/台湾地方政治/数据综述
 2. 跨信源查重：联合早报 vs 央视同事件 → 保留央视权威版；同政策 gov.cn 要闻版优先
-3. 分类修正：受贿判刑→人事任免(87)非经贸
+3. 分类修正：受贿判刑→人事任免(87)非经贸；灾情应急→部委动态(88)非重要会议；央行/财政部救灾资金→部委动态(85)
 4. 缺摘要：urllib 抓 meta description 真实摘要；页面不可达（外交部 SSL）用事实概括（禁模板）
 5. 微信搜索发现漏采部委要闻 → WebSearch 官方 URL → curl 验证 → 按真实日期补充
 6. 唯一键 (title[:30],source)；0 导航残留；标题≥8字符
+7. ⚠️ **删除定位必须精确**（2026-08-27 误删教训）：find_by_title 模糊匹配会同时命中 gov.cn 权威版与人民日报重复版（标题含相同关键词，如"多措并举稳产增产"）→ 误删权威版。删除需带 source 条件或用 URL 精确匹配；误删后用 `git show HEAD:data/china-news.json` 恢复。**（2026-08-28 引号坑）** 删除前缀勿带引号/全角字符（"先"弯引号未匹配 JSON 实际字符 → 新华鲜报残留 1 条）；用 3-6 字短前缀 + source 匹配
+8. 同一国新办发布会报道去重：保留人民日报"权威发布"版 + 央视核心议题版，删其余（今日曾 6 条发布会报道→保留 5 条）
+9. 涉台重大表态（国台办发布会"祖国必须统一"）与国安部安全提示属部委动态（85/88），脚本不抓国台办/国安部，靠热榜+微信线索补录
 
 ## 飞书同步（国际看板）
 - 补同步必须重新拉飞书全量唯一键；record-batch-create 25 条/批防超时
@@ -72,8 +77,8 @@
 - **中文发件人显示名**：QQ SMTP 拒绝未编码中文 From（550）→ 必须 `formataddr((str(Header('信息日报','utf-8')), SMTP_USER))` RFC2047 编码
 - QQ SMTP：smtp.qq.com:465 SSL；收件人任意域名；发送脚本 send_final_brief.py 支持 `--to` 指定收件人
 - 邮件产品名《信息日报》，主题格式 `信息日报-{日期}`（非「Ira 早报」）
-- **发送机制已固化**（scripts/send_final_brief.py）：默认 24 人名单 `DEFAULT_RECIPIENTS`（PACD 团队）；`SEND_DELAY=6s` 逐封发送 + 失败自动重试（`RETRY_DELAY=70s` × `MAX_RETRIES=3`）；无 `--to` 时默认发给 24 人
-- **QQ 群发风控**：连续发约 10 封后 SMTP 被拒（Connection unexpectedly closed），约 10 分钟自动恢复；务必 6s+ 间隔
+- **发送机制已固化**（scripts/send_final_brief.py）：**V2.12（2026-08-21 起）仅发送 `2027674540@qq.com` 一个邮箱**——华为企业邮箱网关拦截 QQ SMTP 富 HTML（文本版✅ HTML版❌），24 人名单群发不可靠 → `DEFAULT_RECIPIENTS` 已改为仅 QQ 邮箱，自动化调用 `--to 2027674540@qq.com`；由用户人工确认后自行转发分发，绝不群发 24 人
+- **QQ 群发风控**：连续发约 10 封后 SMTP 被拒（Connection unexpectedly closed），约 10 分钟自动恢复；务必 6s+ 间隔（群发已停用，此规则保留备用）
 
 ## 使领馆看板 V1.0（每日 9:30 automation-1786431384487）
 - 入口 diplomatic-affairs.html；青绿主题；"有则展示、无则省略"
@@ -84,6 +89,8 @@
   - 信源门槛：仅官方渠道（外交部/中国政府网/新华社/央视/人民日报）+ 权威媒体（路透/共同社等）；自媒体传闻、无出处小道消息仍不收录
   - 访华职级门槛：部长级及以上（预告同门槛）
 - 构建链：fetch_diplomatic.py → build_diplomatic.py（重写 HTML 会去掉导航）→ inject_nav.py 补注导航 → 同步 gh-pages 副本 → git push
+- ⚠️ **gh-pages 副本不会自动同步内容（2026-08-27）**：inject_nav.py 只注入导航、不复制内容，build 后必须手动 `cp diplomatic-affairs.html gh-pages/diplomatic-affairs.html`（再跑 inject_nav 双份），否则 gh-pages 停留旧版。验证：`grep -c 新条目关键词` 双份检查 + 线上 curl 带 `?t=$(date +%s)`
+- ⚠️ **push 前探测代理（2026-08-27）**：ClashX 可能未自动运行——`nc -z 127.0.0.1 7890` 不通时 `open /Applications/ClashX.app` 再等 ~8s；代理通时 plain `git push`，禁代理直连 github 会超时（75s）
 - **日报标题用「动态」而非「国名」**（2026-08-18 用户要求）：data/diplomatic-affairs.json 的 visit 条目加 `headline` 字段（如「厄瓜多尔总统诺沃亚对华国事访问（8.16-23）」），send_final_brief.py 的 diplo_row 主标题优先读 headline，fallback `{country} · {event_type}`。⚠️ headline 目前人工写入，fetch_diplomatic.py merge 可能丢失，后续应在 fetch/build 自动生成
 
 ## 用户偏好
@@ -94,3 +101,10 @@
 
 ## 待优化
 - 17:00 自动邮件日报（延后）；不可用信源修复；PWA/RSS/多语言
+
+## 国内看板 2026-08-26 新增经验
+- **8-25 版面欠账教训**：自动化若只完成脚本阶段未做 LLM 后处理，次日必须补昨日版面质检（本次清理 24 条低质/重复，8-25 版面 40→16）
+- 联合早报"消息指/据报"=未经证实传闻不收录；"下午察"专栏=评论专栏排除
+- 跨版面重复：同一事件昨日版面联合早报版+今日版面权威版 → 保留今日权威版，删昨日旧版
+- 工信部/网信办标准指南类征求意见（8-25 人形机器人/脑机接口）=部委动态 85，官方 miit.gov.cn/cac.gov.cn 验证 URL
+- 线上验证 CDN 首查可能返回旧版（199KB），二次请求命中新版（184KB）才可信
