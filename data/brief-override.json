@@ -1,6 +1,11 @@
 {
-  "date": "2026-08-28",
-  "intl_exclude": [5, 8, 9, 12, 13],
-  "dom_exclude": [1, 5, 8, 9, 11, 14, 17, 18, 23],
-  "diplo_exclude": [3]
+  "date": "2026-08-29",
+  "intl_include": [
+    "https://www.bbc.com/news/articles/cx2z415w2gpo",
+    "https://www.washingtonpost.com/world/2026/08/28/iceland-will-vote-restarting-negotiations-join-european-union/",
+    "https://www.reuters.com/world/asia-pacific/king-harald-v-norways-reform-minded-head-state-dies-89-2026-08-28/"
+  ],
+  "intl_exclude": [7, 11],
+  "dom_exclude": [2, 13, 15, 16, 18, 19, 21, 22, 25],
+  "skip_diplo": true
 }

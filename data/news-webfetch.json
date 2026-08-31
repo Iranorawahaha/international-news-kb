@@ -11573,5 +11573,1579 @@
     "date": "2026-08-28",
     "collectedAt": "2026-08-29 09:30:00",
     "repost_from": "The Information 原文（付费墙），经 Tom's Hardware 报道"
+  },
+  {
+    "title": "Rescuers race to find thousands missing after Nepal-China glacier collapse 尼泊尔-中国冰川崩塌后，救援人员争分夺秒寻找数千名失踪人员",
+    "title_zh": "尼泊尔-中国冰川崩塌后，救援人员争分夺秒寻找数千名失踪人员",
+    "title_en": "Rescuers race to find thousands missing after Nepal-China glacier collapse",
+    "summary": "尼泊尔和中国救援人员周日争分夺秒寻找喜马拉雅山冰川崩塌引发的灾难性泥石流中的数千名失踪人员，面临恶劣天气条件和水位上升的挑战。此次灾害涉及中尼两国，失踪人员中包含大量外国公民。",
+    "source": "路透社",
+    "category": "亚太",
+    "keywords": [
+      "中国",
+      "尼泊尔",
+      "灾害"
+    ],
+    "url": "https://www.reuters.com/world/china/china-identifies-countries-261-foreigners-missing-himalayan-mudslide-2026-08-30/",
+    "priority_score": 92,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Nepal resumes flood rescue, seeks technical help and billions of dollars 尼泊尔恢复洪水救援，寻求技术援助和数十亿美元资金",
+    "title_zh": "尼泊尔恢复洪水救援，寻求技术援助和数十亿美元资金",
+    "title_en": "Nepal resumes flood rescue, seeks technical help and billions of dollars",
+    "summary": "尼泊尔洪水灾害中仍有近3000人失踪，其中尼泊尔约2426人，中国西藏吉隆县554人，包括至少540名外国公民（多为来自印度的印度教朝圣者）。尼泊尔外长表示需要技术领域援助和数十亿美元资金。",
+    "source": "路透社",
+    "category": "亚太",
+    "keywords": [
+      "中国",
+      "尼泊尔",
+      "印度"
+    ],
+    "url": "https://www.reuters.com/world/china/nepal-needs-help-technical-areas-not-search-rescue-foreign-minister-says-2026-08-29/",
+    "priority_score": 90,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "War weighs on Iran's economy as US intensifies sanctions 美国加强制裁，战争拖累伊朗经济",
+    "title_zh": "美国加强制裁，战争拖累伊朗经济",
+    "title_en": "War weighs on Iran's economy as US intensifies sanctions",
+    "summary": "随着美国加大对伊朗的制裁力度，战争对伊朗经济造成沉重压力。该报道分析了持续冲突和制裁对伊朗经济的影响，属于美伊地缘政治博弈的重要动态。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "美国",
+      "伊朗"
+    ],
+    "url": "https://www.reuters.com/world/asia-pacific/war-weighs-irans-economy-us-intensifies-sanctions-2026-08-29/",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Russian strike on Kyiv-area ammunition depot triggers blast, killing 37 俄罗斯袭击基辅地区弹药库引发爆炸，造成37人死亡",
+    "title_zh": "俄罗斯袭击基辅地区弹药库引发爆炸，造成37人死亡",
+    "title_en": "Russian strike on Kyiv-area ammunition depot triggers blast, killing 37",
+    "summary": "俄罗斯对基辅地区一处弹药库发动袭击，引发剧烈爆炸，造成37人死亡。这是俄乌冲突中的重大军事事件，显示战事仍在持续升级。",
+    "source": "路透社",
+    "category": "俄乌",
+    "keywords": [
+      "俄罗斯",
+      "乌克兰"
+    ],
+    "url": "https://www.reuters.com/world/europe/russian-strike-kyiv-area-warehouse-causes-detonation-killing-27-2026-08-29/",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran's Khamenei urges Gulf rulers in written message to confront 'real enemy' 伊朗哈梅内伊致函海湾国家领导人，敦促对抗\"真正的敌人\"",
+    "title_zh": "伊朗哈梅内伊致函海湾国家领导人，敦促对抗\"真正的敌人\"",
+    "title_en": "Iran's Khamenei urges Gulf rulers in written message to confront 'real enemy'",
+    "summary": "伊朗最高领袖哈梅内伊以书面形式敦促海湾国家领导人对抗\"真正的敌人\"。此举显示伊朗试图在地区层面扩大影响力，推动海湾国家在外交和安全政策上采取更明确立场。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "海湾国家"
+    ],
+    "url": "https://www.reuters.com/world/middle-east/irans-khamenei-urges-gulf-rulers-written-message-confront-real-enemy-2026-08-30/",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Nepal-Tibet flood death toll exceeds 700 as terrain makes aid delivery 'extremely difficult' 尼泊尔—西藏洪灾死亡人数超700，地形使救援\"极其困难\"",
+    "title_zh": "尼泊尔—西藏洪灾死亡人数超700，地形使救援\"极其困难\"",
+    "title_en": "Nepal-Tibet flood death toll exceeds 700 as terrain makes aid delivery 'extremely difficult'",
+    "summary": "尼泊尔和中国当局确认更多死亡人数后，尼泊尔—西藏边境洪灾死亡总数已超过700人。救援行动已进入第五天，但复杂的地形条件使援助物资运送极为困难，数千人仍处于失踪状态。",
+    "source": "BBC",
+    "category": "亚太",
+    "keywords": [
+      "尼泊尔",
+      "中国"
+    ],
+    "url": "https://www.bbc.com/news/live/cwrk34rzx3z2t",
+    "priority_score": 90,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Trump hails 'historic' deal for US to control 65bn barrels of Venezuela's oil 特朗普称美掌控委内瑞拉650亿桶石油的协议为\"历史性\"",
+    "title_zh": "特朗普称美掌控委内瑞拉650亿桶石油的协议为\"历史性\"",
+    "title_en": "Trump hails 'historic' deal for US to control 65bn barrels of Venezuela's oil",
+    "summary": "美国总统特朗普宣布一项非同寻常的协议，美国将控制委内瑞拉650亿桶石油资源。委内瑞拉临时总统表示，该协议将有助于重振该国经济。此举可能对全球能源格局和地缘政治产生深远影响。",
+    "source": "BBC",
+    "category": "美洲",
+    "keywords": [
+      "美国",
+      "委内瑞拉"
+    ],
+    "url": "https://www.bbc.com/news/articles/cx2zlwe7qj1o",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot 基辅武器库遭袭致至少37人死亡，数百人被疏散",
+    "title_zh": "基辅武器库遭袭致至少37人死亡，数百人被疏散",
+    "title_en": "At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot",
+    "summary": "乌克兰基辅一处军事武器库遭袭，造成至少37人死亡，数百人被疏散。有关方面已开始调查乌克兰军方在居民区附近存放武器的问题。此次袭击加剧了俄乌冲突的紧张局势。",
+    "source": "BBC",
+    "category": "俄乌",
+    "keywords": [
+      "乌克兰",
+      "俄罗斯"
+    ],
+    "url": "https://www.bbc.com/news/articles/c86xwqez4npo",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Former Ecuadorian president imprisoned for corruption 厄瓜多尔前总统因腐败入狱",
+    "title_zh": "厄瓜多尔前总统因腐败入狱",
+    "title_en": "Former Ecuadorian president imprisoned for corruption",
+    "summary": "厄瓜多尔前总统莱宁·莫雷诺因腐败罪名被判处入狱。他否认收受一家中国公司贿赂以获取水电站建设合同。此案涉及中国企业在拉美地区的投资行为，引发外界关注。",
+    "source": "BBC",
+    "category": "美洲",
+    "keywords": [
+      "厄瓜多尔",
+      "中国"
+    ],
+    "url": "https://www.bbc.com/news/articles/cvgym9rz07zo",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Xi, Putin to meet in Bishkek for Power of Siberia 2 talks: Kremlin 克里姆林宫：习近平与普京将在比什凯克会晤商讨西伯利亚力量2号",
+    "title_zh": "克里姆林宫：习近平与普京将在比什凯克会晤商讨西伯利亚力量2号",
+    "title_en": "Xi, Putin to meet in Bishkek for Power of Siberia 2 talks: Kremlin",
+    "summary": "克里姆林宫宣布，习近平与普京将在吉尔吉斯斯坦比什凯克出席上合组织峰会期间举行年内第二次面对面会晤，重点讨论\"西伯利亚力量2号\"天然气管道项目。中俄领导人将与中亚各国及印度、巴基斯坦、伊朗、白俄罗斯领导人共同参加8月31日至9月1日的峰会。",
+    "source": "南华早报",
+    "category": "中国外交",
+    "keywords": [
+      "中国",
+      "俄罗斯",
+      "吉尔吉斯斯坦"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3365710/xi-putin-meet-bishkek-power-siberia-2-pipeline-talks-kremlin",
+    "priority_score": 91,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "What Japan's coming fighter jet deployment to India means for China 日本战机将部署印度对中国意味着什么",
+    "title_zh": "日本战机将部署印度对中国意味着什么",
+    "title_en": "What Japan's coming fighter jet deployment to India means for China",
+    "summary": "日本即将向印度部署战斗机，这是历史性举措。分析人士指出，此举显示东京希望加强与印太地区\"志同道合\"国家的防务关系。日印军事合作深化将对中国在印度洋及南亚地区的影响力构成挑战。",
+    "source": "南华早报",
+    "category": "国防安全",
+    "keywords": [
+      "日本",
+      "印度",
+      "中国"
+    ],
+    "url": "https://www.scmp.com/news/china/military/article/3365697/what-japans-coming-fighter-jet-deployment-india-means-china",
+    "priority_score": 90,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Opinion | US-China AI rivalry needn't preclude cooperation 评论｜中美AI竞争不必排除合作可能",
+    "title_zh": "评论｜中美AI竞争不必排除合作可能",
+    "title_en": "Opinion | US-China AI rivalry needn't preclude cooperation",
+    "summary": "评论文章指出，尽管中美在人工智能领域竞争激烈，但两国在AI安全、伦理标准及全球治理方面仍有广阔合作空间。作者认为竞争与合作可以并行，双方应建立对话机制，避免技术脱钩带来的风险。",
+    "source": "南华早报",
+    "category": "AI科技",
+    "keywords": [
+      "中国",
+      "美国",
+      "AI"
+    ],
+    "url": "https://www.scmp.com/opinion/china-opinion/article/3365101/us-china-ai-rivalry-neednt-preclude-cooperation",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "China's Middle East policy at a crossroads 6 months into US-Israeli war on Iran 美以对伊朗战争半年后，中国中东政策面临十字路口",
+    "title_zh": "美以对伊朗战争半年后，中国中东政策面临十字路口",
+    "title_en": "China's Middle East policy at a crossroads 6 months into US-Israeli war on Iran",
+    "summary": "美以对伊战争已持续半年，海湾国家在遭受攻击后重新思考自身战略。观察人士称，北京不希望在中东冲突中过度承诺。中国的中东政策正面临关键抉择：继续与伊朗保持密切关系，还是与沙特等海湾国家深化合作。",
+    "source": "南华早报",
+    "category": "中国外交",
+    "keywords": [
+      "中国",
+      "伊朗",
+      "美国"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3365708/chinas-middle-east-policy-crossroads-6-months-us-israeli-war-iran",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Lost in translation: how AI is distorting China's message abroad 翻译失真：AI如何扭曲中国对外传播的信息",
+    "title_zh": "翻译失真：AI如何扭曲中国对外传播的信息",
+    "title_en": "Lost in translation: how AI is distorting China's message abroad",
+    "summary": "李岩教授指出，AI翻译中国政策语言时缺乏对语境的理解，可能使中国的外交表述听起来更具威胁性，从而扭曲北京在海外传达的信息。他强调在对外传播中保留人类专家的专业知识至关重要。",
+    "source": "南华早报",
+    "category": "AI科技",
+    "keywords": [
+      "中国",
+      "美国",
+      "AI"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3365635/ai-can-make-chinas-political-language-sound-more-threatening-scholar-warns",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Chinese coastguard has 0.3% chance of using weapons in disputed waters: study 研究：中国海警在争议水域使用武器的概率为0.3%",
+    "title_zh": "研究：中国海警在争议水域使用武器的概率为0.3%",
+    "title_en": "Chinese coastguard has 0.3% chance of using weapons in disputed waters: study",
+    "summary": "研究人员创建AI框架，通过识别未知船只的意图为\"敌对\"或\"无害\"来评估海上风险。推演结果显示，中国海警在争议水域使用武器的概率仅为0.3%。该研究旨在通过AI辅助决策降低海上冲突风险。",
+    "source": "南华早报",
+    "category": "国防安全",
+    "keywords": [
+      "中国",
+      "菲律宾",
+      "越南"
+    ],
+    "url": "https://www.scmp.com/news/china/science/article/3365390/chinese-coastguard-has-03-chance-using-weapons-disputed-waters-war-game-suggests",
+    "priority_score": 84,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Mark Carney shows combative nature in face-off with Trump 马克·卡尼在与特朗普的交锋中展现出好斗本性",
+    "title_zh": "马克·卡尼在与特朗普的交锋中展现出好斗本性",
+    "title_en": "Mark Carney shows combative nature in face-off with Trump",
+    "summary": "加拿大总理马克·卡尼是少数敢于正面回击特朗普的西方国家领导人之一。他在面对特朗普时表现出强硬的对抗姿态，称\"受到攻击时你就在战争中\"。他的前同事表示对此并不意外。",
+    "source": "卫报",
+    "category": "经贸制裁",
+    "keywords": [
+      "加拿大",
+      "美国"
+    ],
+    "url": "https://www.theguardian.com/world/ng-interactive/2026/aug/30/youre-at-war-when-you-get-attacked-mark-carney-shows-combative-nature-in-face-off-with-trump",
+    "priority_score": 92,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Nepal-Tibet flood disaster: Death toll rises amid new flood fears and race to free group trapped in tunnel 尼泊尔—西藏洪灾：死亡人数上升，新洪水威胁与隧道被困人员救援竞赛",
+    "title_zh": "尼泊尔—西藏洪灾：死亡人数上升，新洪水威胁与隧道被困人员救援竞赛",
+    "title_en": "Nepal-Tibet flood disaster: Death toll rises amid new flood fears and race to free group trapped in tunnel",
+    "summary": "尼泊尔与西藏边境地区发生严重洪灾，综合死亡人数至少750人，超过3000人失踪。救援人员正争分夺秒搜寻幸存者，同时面临新一轮洪水威胁。",
+    "source": "卫报",
+    "category": "亚太",
+    "keywords": [
+      "尼泊尔",
+      "中国"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/30/nepal-tibet-floods-china-search-rescue-operations-looking-for-survivors",
+    "priority_score": 90,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "'If it's made in the US, I don't buy it': Canadians on boycotting Trump's America \"只要是美国制造，我就不买\"：加拿大人抵制特朗普治下的美国",
+    "title_zh": "\"只要是美国制造，我就不买\"：加拿大人抵制特朗普治下的美国",
+    "title_en": "'If it's made in the US, I don't buy it': Canadians on boycotting Trump's America",
+    "summary": "面对特朗普政府的贸易政策，许多加拿大人发起了抵制美国商品和服务的行动，涵盖科技产品、威士忌乃至航空旅行等广泛领域。报道采访了多位加拿大消费者，他们表示这种抵制已经改变了他们的生活方式。",
+    "source": "卫报",
+    "category": "经贸制裁",
+    "keywords": [
+      "加拿大",
+      "美国"
+    ],
+    "url": "https://www.theguardian.com/business/2026/aug/29/if-its-made-in-the-us-i-dont-buy-it-canadians-on-boycotting-trumps-america",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Trump's 'economic D-day' against Iran risks driving the stakes even higher 特朗普对伊朗的\"经济D日\"可能使局势进一步升级",
+    "title_zh": "特朗普对伊朗的\"经济D日\"可能使局势进一步升级",
+    "title_en": "Trump's 'economic D-day' against Iran risks driving the stakes even higher",
+    "summary": "评论文章指出，美国对伊朗采取的所谓\"经济D日\"行动，将经济施压误认为实际战略。与在霍尔木兹海峡的做法类似，美国缺乏真正的战略规划，而伊朗手中仍有可打的牌。",
+    "source": "卫报",
+    "category": "中东",
+    "keywords": [
+      "美国",
+      "伊朗"
+    ],
+    "url": "https://www.theguardian.com/commentisfree/2026/aug/30/trump-economic-d-day-iran-stakes-higher-war",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "'Their whole village has disappeared': Frantic hunt for survivors in Kathmandu hospital \"他们整个村庄都消失了\"：加德满都医院内疯狂的幸存者搜寻",
+    "title_zh": "\"他们整个村庄都消失了\"：加德满都医院内疯狂的幸存者搜寻",
+    "title_en": "'Their whole village has disappeared': Frantic hunt for survivors in Kathmandu hospital",
+    "summary": "尼泊尔洪灾中，一个村庄被完全冲毁。在加德满都的医院，家属疯狂寻找失踪亲人的下落，未确认身份的尸体被陆续送往医学院。救援工作紧张进行。",
+    "source": "卫报",
+    "category": "亚太",
+    "keywords": [
+      "尼泊尔"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/29/nepal-flood-missing-kathmandu-hospital",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Ukraine war briefing: Nuclear plant has lost power and running on generators, UN watchdog says 乌克兰战况简报：联合国监督机构称核电站断电、依靠发电机运行",
+    "title_zh": "乌克兰战况简报：联合国监督机构称核电站断电、依靠发电机运行",
+    "title_en": "Ukraine war briefing: Nuclear plant has lost power and running on generators, UN watchdog says",
+    "summary": "联合国核监督机构表示，乌克兰扎波罗热核电站已失去外部电力供应，目前依靠发电机运行。与此同时，俄罗斯无人机袭击基辅附近一座存放武器的仓库，造成至少37人死亡。",
+    "source": "卫报",
+    "category": "俄乌",
+    "keywords": [
+      "乌克兰",
+      "俄罗斯"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/30/ukraine-war-briefing-nuclear-plant-lost-power",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Chinese government ships spotted in record numbers off Taiwan in July 7月中国公务船在台湾周边海域出现数量创纪录",
+    "title_zh": "7月中国公务船在台湾周边海域出现数量创纪录",
+    "title_en": "Chinese government ships spotted in record numbers off Taiwan in July",
+    "summary": "据监测数据显示，7月份中国公务船在台湾周边海域的活动数量达到历史新高。分析人士认为，这一举动反映北京持续加强对台军事施压，台海紧张局势进一步升级。",
+    "source": "CNN",
+    "category": "两岸关系",
+    "keywords": [
+      "中国",
+      "中国台湾"
+    ],
+    "url": "https://edition.cnn.com/2026/08/28/asia/taiwan-china-ships-record-intl-hnk",
+    "priority_score": 95,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-28",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "The Himalayas are unpredictable. But countries are building there like never before 喜马拉雅山难以预测，但各国正以前所未有的规模在那里建设",
+    "title_zh": "喜马拉雅山难以预测，但各国正以前所未有的规模在那里建设",
+    "title_en": "The Himalayas are unpredictable. But countries are building there like never before",
+    "summary": "在尼泊尔和中国发生致命洪灾后，文章审视了喜马拉雅地区大规模基础设施建设的风险。该地区地质条件不稳定，但中国、尼泊尔、印度等国仍在积极推进水电站、道路等大型项目。",
+    "source": "CNN",
+    "category": "地缘政治",
+    "keywords": [
+      "中国",
+      "尼泊尔",
+      "印度"
+    ],
+    "url": "https://edition.cnn.com/2026/08/29/asia/himalayas-risk-china-nepal-india-infrastructure-intl-hnk",
+    "priority_score": 92,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "'Barrier lake' flood risk adds new danger to desperate rescue efforts following China-Nepal disaster 堰塞湖洪水风险给中尼灾害后的紧急救援增添新危险",
+    "title_zh": "堰塞湖洪水风险给中尼灾害后的紧急救援增添新危险",
+    "title_en": "'Barrier lake' flood risk adds new danger to desperate rescue efforts following China-Nepal disaster",
+    "summary": "中尼边境洪灾后，救援工作面临新的威胁——堰塞湖溃决风险。山体滑坡形成的堰塞湖可能随时决堤，进一步威胁下游村庄和救援人员安全。",
+    "source": "CNN",
+    "category": "亚太",
+    "keywords": [
+      "中国",
+      "尼泊尔"
+    ],
+    "url": "https://edition.cnn.com/2026/08/28/china/china-secondary-disaster-flood-lake-breach-intl-hnk",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-28",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "A power struggle in Iran could decide when Trump's war ends 伊朗内部权力斗争或决定特朗普战争何时结束",
+    "title_zh": "伊朗内部权力斗争或决定特朗普战争何时结束",
+    "title_en": "A power struggle in Iran could decide when Trump's war ends",
+    "summary": "文章分析伊朗内部权力斗争与美国对伊战争走向的关系。随着特朗普政府对伊朗施加军事和经济压力，伊朗领导层内部就如何回应产生分歧，这场权力博弈可能成为决定冲突何时结束的关键因素。",
+    "source": "CNN",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国"
+    ],
+    "url": "https://edition.cnn.com/2026/08/30/middleeast/iran-trump-power-struggle-war-intl",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Judge rules the Pentagon's supply chain risk label for Anthropic unlawful 法官裁定五角大楼对Anthropic的供应链风险标签违法",
+    "title_zh": "法官裁定五角大楼对Anthropic的供应链风险标签违法",
+    "title_en": "Judge rules the Pentagon's supply chain risk label for Anthropic unlawful",
+    "summary": "美国联邦法官裁定，五角大楼将AI公司Anthropic列入供应链风险名单的行为违法。Anthropic此前被标记为存在供应链风险，影响其与美国政府合作，法院判决可能对国防部采购AI技术的流程产生广泛影响。",
+    "source": "CNN",
+    "category": "AI科技",
+    "keywords": [
+      "美国",
+      "Anthropic"
+    ],
+    "url": "https://edition.cnn.com/2026/08/27/tech/anthropic-pentagon-supply-chain-risk-unlawful-hnk",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-27",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "China Says 261 Foreigners From 23 Countries Are Missing in Tibet Flood 中国称261名来自23个国家的外国人在西藏洪水中失踪",
+    "title_zh": "中国称261名来自23个国家的外国人在西藏洪水中失踪",
+    "title_en": "China Says 261 Foreigners From 23 Countries Are Missing in Tibet Flood",
+    "summary": "中国官方披露，在西藏边境一侧的洪灾中有261名来自23个国家的外国人失踪，这是迄今为止关于该灾难最清晰的画面之一。此前中方当局发布的细节极少，此次披露引发国际社会对灾情严重程度及救援进展的高度关注。",
+    "source": "纽约时报",
+    "category": "亚太",
+    "keywords": [
+      "中国",
+      "尼泊尔"
+    ],
+    "url": "https://www.nytimes.com/2026/08/30/world/asia/tibet-nepal-flood-death-toll-china.html",
+    "priority_score": 95,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Carney Has Canadians' Support on Trump. Now Comes the Hard Part. 卡尼在特朗普问题上获得加拿大人支持，接下来是艰难的部分",
+    "title_zh": "卡尼在特朗普问题上获得加拿大人支持，接下来是艰难的部分",
+    "title_en": "Carney Has Canadians' Support on Trump. Now Comes the Hard Part.",
+    "summary": "美加贸易战使加拿大民众团结在总理卡尼决定退出谈判的立场之后。然而分析指出，当谈判重启时刻到来时，卡尼将面临艰巨挑战。文章深入分析了加拿大在特朗普关税压力下的处境。",
+    "source": "纽约时报",
+    "category": "经贸制裁",
+    "keywords": [
+      "加拿大",
+      "美国"
+    ],
+    "url": "https://www.nytimes.com/2026/08/29/world/canada/carney-trump-tariffs-trade.html",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Modi Is Hedging Against Trump, One Deal at a Time 莫迪正逐一达成协议以对冲特朗普",
+    "title_zh": "莫迪正逐一达成协议以对冲特朗普",
+    "title_en": "Modi Is Hedging Against Trump, One Deal at a Time",
+    "summary": "在美国变得愈发不可靠的背景下，印度总理莫迪在过去一年中出访至少20个国家，在全球范围内达成多项协议，以多元化印度外交与经济伙伴关系。文章分析了印度如何通过积极的外交布局来降低对美国的依赖。",
+    "source": "纽约时报",
+    "category": "地缘政治",
+    "keywords": [
+      "印度",
+      "美国"
+    ],
+    "url": "https://www.nytimes.com/2026/08/29/world/asia/modi-india-deals-trump.html",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Tensions Spike Between Turkey and Israel as They Vie for Regional Influence 土耳其与以色列争夺地区影响力，紧张局势加剧",
+    "title_zh": "土耳其与以色列争夺地区影响力，紧张局势加剧",
+    "title_en": "Tensions Spike Between Turkey and Israel as They Vie for Regional Influence",
+    "summary": "以色列对叙利亚一处基地发动打击，以先发制人阻止土耳其军队可能部署，这被视为两国在中东及更广泛地区日益激烈竞争的一部分。分析人士担心，土耳其与以色列之间不断升级的竞争可能加剧中东地区的动荡局势。",
+    "source": "纽约时报",
+    "category": "中东",
+    "keywords": [
+      "土耳其",
+      "以色列",
+      "叙利亚"
+    ],
+    "url": "https://www.nytimes.com/2026/08/29/world/middleeast/turkey-israel-tensions-region.html",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "'A New Form of U.S. Colonialism': Venezuelans Bristle at U.S. Oil Takeover \"一种新型美国殖民主义\"：委内瑞拉人对美国石油接管表示不满",
+    "title_zh": "\"一种新型美国殖民主义\"：委内瑞拉人对美国石油接管表示不满",
+    "title_en": "'A New Form of U.S. Colonialism': Venezuelans Bristle at U.S. Oil Takeover",
+    "summary": "一项给予美国对委内瑞拉庞大石油储备多数控制权的协议，触动了该国的民族认同核心。委内瑞拉民众将此举视为\"一种新型美国殖民主义\"，对美国的石油接管表示强烈不满。",
+    "source": "纽约时报",
+    "category": "美洲",
+    "keywords": [
+      "委内瑞拉",
+      "美国"
+    ],
+    "url": "https://www.nytimes.com/2026/08/29/world/americas/venezuela-oil-us-takeover.html",
+    "priority_score": 81,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "US 'hopes' to avoid secondary sanctions on China over Iranian oil purchases 美国称希望避免因中国购买伊朗石油而对华实施二级制裁",
+    "title_zh": "美国称希望避免因中国购买伊朗石油而对华实施二级制裁",
+    "title_en": "US 'hopes' to avoid secondary sanctions on China over Iranian oil purchases",
+    "summary": "在伊朗战争直播博客中，报道称美国表示希望避免因中国购买伊朗石油而对中国实施二级制裁。这一表态反映了美中在伊朗制裁问题上的复杂博弈，也显示美国在对华经贸施压方面可能有所保留。",
+    "source": "半岛电视台",
+    "category": "中美关系",
+    "keywords": [
+      "美国",
+      "中国",
+      "伊朗"
+    ],
+    "url": "https://www.aljazeera.com/news/liveblog/2026/8/30/iran-war-live-iran-pledges-to-stand-firm-against-unjust-us-sanctions?update=4898319",
+    "priority_score": 95,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Khamenei calls for Muslim world to confront 'real enemy' amid US deadlock 哈梅内伊呼吁穆斯林世界对抗\"真正的敌人\"，美伊陷入僵局",
+    "title_zh": "哈梅内伊呼吁穆斯林世界对抗\"真正的敌人\"，美伊陷入僵局",
+    "title_en": "Khamenei calls for Muslim world to confront 'real enemy' amid US deadlock",
+    "summary": "伊朗最高领袖哈梅内伊发表讲话，呼吁穆斯林世界团结起来对抗\"真正的敌人\"，同时强调\"地区应属于地区\"。报道称，美伊之间就制裁问题陷入僵局，伊朗誓言坚决对抗美国的不公正制裁。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "美国"
+    ],
+    "url": "https://www.aljazeera.com/news/liveblog/2026/8/30/iran-war-live-iran-pledges-to-stand-firm-against-unjust-us-sanctions",
+    "priority_score": 92,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Mapping Iran war's strikes on Gulf energy – and what comes next for oil 绘制伊朗战争对海湾能源的打击——以及石油接下来会怎样",
+    "title_zh": "绘制伊朗战争对海湾能源的打击——以及石油接下来会怎样",
+    "title_en": "Mapping Iran war's strikes on Gulf energy – and what comes next for oil",
+    "summary": "文章分析了伊朗战争对海湾地区能源设施的打击情况，指出美国能源公司虽从油价上涨中获利数十亿美元，但其在该地区的资产仍面临风险。内容涉及霍尔木兹海峡等关键航道的安全形势。",
+    "source": "半岛电视台",
+    "category": "地缘政治",
+    "keywords": [
+      "伊朗",
+      "美国",
+      "海湾国家"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/30/mapping-the-iran-wars-strikes-on-gulf-energy-and-what-comes-next-for-oil",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Venezuela says it retains 'sovereignty' following US oil deal 委内瑞拉称与美国石油交易后仍保留\"主权\"",
+    "title_zh": "委内瑞拉称与美国石油交易后仍保留\"主权\"",
+    "title_en": "Venezuela says it retains 'sovereignty' following US oil deal",
+    "summary": "委内瑞拉政府发表声明，称尽管与美国达成了石油交易，但该国仍保留主权。此前有报道分析美国试图通过协议控制委内瑞拉石油储备。委内瑞拉的表态显示其在经济压力下寻求平衡。",
+    "source": "半岛电视台",
+    "category": "美洲",
+    "keywords": [
+      "委内瑞拉",
+      "美国"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/30/venezuela-says-it-retains-sovereignty-following-us-oil-deal",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "OpenAI, Google join dozens of tech companies to call for urgent action against AI-powered threats OpenAI、谷歌等数十家科技公司呼吁对AI驱动的威胁采取紧急行动",
+    "title_zh": "OpenAI、谷歌等数十家科技公司呼吁对AI驱动的威胁采取紧急行动",
+    "title_en": "OpenAI, Google join dozens of tech companies to call for urgent action against AI-powered threats",
+    "summary": "OpenAI、Google等数十家科技公司联合呼吁国际社会对AI驱动的威胁采取紧急行动。这一联合声明反映科技行业对AI安全问题的日益重视，以及企业界在AI治理上的立场趋同。",
+    "source": "Politico",
+    "category": "AI科技",
+    "keywords": [
+      "美国",
+      "AI"
+    ],
+    "url": "https://www.politico.com/news/2026/08/29/openai-google-ai-threats-01048000",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Data centers have a politics problem — and industry knows it 数据中心面临政治问题——行业深知这一点",
+    "title_zh": "数据中心面临政治问题——行业深知这一点",
+    "title_en": "Data centers have a politics problem — and industry knows it",
+    "summary": "POLITICO民调显示，数据中心正面临日益增长的政治清算。随着AI基建需求激增，数据中心选址、能源消耗和环境影响引发地方社区与监管层的反对，行业正面临新的政治压力。",
+    "source": "Politico",
+    "category": "AI科技",
+    "keywords": [
+      "美国",
+      "AI",
+      "数据中心"
+    ],
+    "url": "https://www.politico.com/news/2026/08/29/data-centers-politics-01047810",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Beijing expands purge of top generals 北京扩大对高级将领的清洗",
+    "title_zh": "北京扩大对高级将领的清洗",
+    "title_en": "Beijing expands purge of top generals",
+    "summary": "据分析人士称，中国国家主席习近平正将矛头对准与前被罢黜领导人有关联的军官，与此同时北京寻求在印太地区投射力量。文章聚焦中国军队高层人事变动及其地缘政治意图。",
+    "source": "华盛顿邮报",
+    "category": "国防安全",
+    "keywords": [
+      "中国"
+    ],
+    "url": "https://www.washingtonpost.com/world/2026/08/29/beijing-expands-purge-top-generals/",
+    "priority_score": 95,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-29",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "At least 540 killed in floods; search on for hundreds missing at Nepal-China border 尼泊尔-中国边境洪水已致至少540人死亡，搜寻数百名失踪者",
+    "title_zh": "尼泊尔-中国边境洪水已致至少540人死亡，搜寻数百名失踪者",
+    "title_en": "At least 540 killed in floods; search on for hundreds missing at Nepal-China border",
+    "summary": "尼泊尔与中国喜马拉雅边境地区发生洪水，已造成至少540人死亡，数百人失踪。对进一步洪水的担忧使救援工作复杂化，当局正在搜寻失踪人员。",
+    "source": "华盛顿邮报",
+    "category": "亚太",
+    "keywords": [
+      "尼泊尔",
+      "中国"
+    ],
+    "url": "https://www.washingtonpost.com/world/2026/08/28/flood-risks-hamper-efforts-search-hundreds-missing-nepal-china-border/",
+    "priority_score": 75,
+    "is_summit_level": false,
+    "importance": "中",
+    "date": "2026-08-28",
+    "collectedAt": "2026-08-30 09:00:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "US forces strike two Iranian launchers on Iran's Larak island, US official says 美军打击伊朗拉腊克岛两处导弹发射装置 系数周来首次公开军事行动",
+    "title_zh": "美军打击伊朗拉腊克岛两处导弹发射装置 系数周来首次公开军事行动",
+    "title_en": "US forces strike two Iranian launchers on Iran's Larak island, US official says",
+    "summary": "美国官员称，美军对伊朗霍尔木兹海峡拉腊克岛上的两处导弹发射装置发动打击，这是近一个月来美军首次公开披露的对伊军事行动。随后伊朗革命卫队宣称袭击了约旦境内两个美军基地，中东局势显著升级。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "美伊冲突",
+      "霍尔木兹",
+      "军事行动"
+    ],
+    "url": "https://www.reuters.com/world/middle-east/us-forces-strike-two-iranian-launchers-irans-larak-island-us-official-says-2026-08-30/",
+    "priority_score": 92,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran's IRGC says it launched attack on two US bases in Jordan 伊朗革命卫队宣称袭击约旦境内两个美军基地",
+    "title_zh": "伊朗革命卫队宣称袭击约旦境内两个美军基地",
+    "title_en": "Iran's IRGC says it launched attack on two US bases in Jordan",
+    "summary": "伊朗伊斯兰革命卫队宣布，为报复美军对拉腊克岛的打击，已对约旦境内的两个美军基地发动攻击。这是美伊军事对抗的重大升级，此前美军在霍尔木兹海峡对伊朗发射装置实施数周来首次公开打击。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "美伊冲突",
+      "约旦",
+      "IRGC"
+    ],
+    "url": "https://www.reuters.com/world/middle-east/irans-irgc-says-it-launched-attack-two-us-bases-jordan-2026-08-30/",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "G20 countries should consider more trade barriers with China to cut imbalances, Bessent says 贝森特在G20建议各国考虑对中国设置更多贸易壁垒以削减贸易失衡",
+    "title_zh": "贝森特在G20建议各国考虑对中国设置更多贸易壁垒以削减贸易失衡",
+    "title_en": "G20 countries should consider more trade barriers with China to cut imbalances, Bessent says",
+    "summary": "美国财政部长贝森特在G20会议上表示，各国应考虑对中国设置更多贸易壁垒，以削减贸易失衡。这是美国高级官员在二十国集团平台上公开鼓动对华贸易限制的最新信号，凸显中美经贸博弈在G20场合的延续。",
+    "source": "路透社",
+    "category": "中美关系",
+    "keywords": [
+      "G20",
+      "贝森特",
+      "对华关税",
+      "贸易失衡"
+    ],
+    "url": "https://www.reuters.com/world/china/g20-countries-should-consider-more-trade-barriers-with-china-cut-imbalances-2026-08-30/",
+    "priority_score": 95,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Scott Bessent faces major G20 diplomacy test 贝森特在G20面临重大外交考验 关税、伊朗战争与债市动荡叠加",
+    "title_zh": "贝森特在G20面临重大外交考验 关税、伊朗战争与债市动荡叠加",
+    "title_en": "Scott Bessent faces major G20 diplomacy test",
+    "summary": "美国财长贝森特在关税、伊朗战争和债券市场动荡的多重压力下，面临G20财长会议上的重大外交考验。文章分析贝森特如何在坚持对华贸易施压的同时争取主要经济体支持，以及美元资产波动对美经济外交的影响。",
+    "source": "路透社",
+    "category": "中美关系",
+    "keywords": [
+      "G20",
+      "贝森特",
+      "美国经济外交"
+    ],
+    "url": "https://www.reuters.com/world/china/us-treasurys-bessent-faces-g20-diplomacy-test-amid-tariffs-iran-war-bond-turmoil-2026-08-30/",
+    "priority_score": 88,
+    "is_summit_level": true,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Bessent expects new US secondary sanctions weekly, aiming to increase pressure on Iran 贝森特称美国将每周推出新的次级制裁以加大对伊朗施压",
+    "title_zh": "贝森特称美国将每周推出新的次级制裁以加大对伊朗施压",
+    "title_en": "Bessent expects new US secondary sanctions weekly, aiming to increase pressure on Iran",
+    "summary": "美国财政部长贝森特表示，预计将每周推出新的次级制裁措施，以加大对伊朗的经济施压。这延续了美国对伊\"经济放逐\"行动，也意味着涉及伊朗交易的第三方（包括可能的中资机构）面临持续扩大的制裁风险。",
+    "source": "路透社",
+    "category": "经贸制裁",
+    "keywords": [
+      "次级制裁",
+      "贝森特",
+      "伊朗"
+    ],
+    "url": "https://www.reuters.com/business/finance/bessent-expects-new-us-secondary-sanctions-weekly-aiming-increase-pressure-iran-2026-08-30/",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Oil jumps more than 1% after US attack on Iran's Larak island 美军袭击伊朗拉腊克岛后油价上涨逾1%",
+    "title_zh": "美军袭击伊朗拉腊克岛后油价上涨逾1%",
+    "title_en": "Oil jumps more than 1% after US attack on Iran's Larak island",
+    "summary": "美军对伊朗拉腊克岛发动袭击后，国际油价上涨逾1%。市场担忧霍尔木兹海峡局势升级影响原油运输通道，能源价格随之走高，进一步加大全球通胀与金融市场压力。",
+    "source": "路透社",
+    "category": "中东",
+    "keywords": [
+      "油价",
+      "霍尔木兹",
+      "美伊冲突"
+    ],
+    "url": "https://www.reuters.com/business/energy/oil-jumps-more-than-2-after-us-attack-irans-larak-island-2026-08-30/",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Venezuela's interim president says US energy deal will last 25 years 委内瑞拉临时总统称对美能源协议将持续25年",
+    "title_zh": "委内瑞拉临时总统称对美能源协议将持续25年",
+    "title_en": "Venezuela's interim president says US energy deal will last 25 years",
+    "summary": "委内瑞拉临时总统表示，与美国达成的能源协议将持续25年，涉及该国石油资源的长期开发利用。此前特朗普宣布达成\"历史性\"协议使美国掌控委内瑞拉650亿桶石油资源，引发委国内反对派强烈不满。",
+    "source": "路透社",
+    "category": "美洲",
+    "keywords": [
+      "委内瑞拉",
+      "石油",
+      "美委关系"
+    ],
+    "url": "https://www.reuters.com/business/energy/venezuelas-interim-president-says-us-energy-deal-will-last-25-years-2026-08-30/",
+    "priority_score": 84,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "US to take 35% stake in Venezuelan mogul Betancourt's oil venture, WSJ reports 据WSJ报道 美国将持有委内瑞拉大亨贝当古石油合资企业35%股份",
+    "title_zh": "据WSJ报道 美国将持有委内瑞拉大亨贝当古石油合资企业35%股份",
+    "title_en": "US to take 35% stake in Venezuelan mogul Betancourt's oil venture, WSJ reports",
+    "summary": "据《华尔街日报》报道，美国将持有委内瑞拉大亨贝当古旗下石油合资企业35%的股份。该安排是美国深化对委内瑞拉石油资源控制的最新一步，此前美国已宣布掌控该国650亿桶石油资源的协议。",
+    "source": "路透社",
+    "category": "美洲",
+    "keywords": [
+      "委内瑞拉",
+      "石油",
+      "美国投资"
+    ],
+    "url": "https://www.reuters.com/legal/legalindustry/us-take-35-stake-venezuelan-mogul-betancourts-oil-venture-wsj-reports-2026-08-30/",
+    "priority_score": 84,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Pacific forum set to open in Palau without several leaders 太平洋岛国论坛将在帕劳开幕 多位领导人缺席凸显地缘博弈",
+    "title_zh": "太平洋岛国论坛将在帕劳开幕 多位领导人缺席凸显地缘博弈",
+    "title_en": "Pacific forum set to open in Palau without several leaders",
+    "summary": "太平洋岛国论坛即将在帕劳开幕，但多位领导人确认缺席。分析认为这凸显中美在南太平洋地区影响力竞争背景下，部分岛国面临的外交平衡压力与论坛内部凝聚力挑战。",
+    "source": "路透社",
+    "category": "地缘政治",
+    "keywords": [
+      "太平洋岛国论坛",
+      "帕劳",
+      "中美竞争"
+    ],
+    "url": "https://www.reuters.com/world/asia-pacific/pacific-forum-set-open-palau-without-several-leaders-2026-08-30/",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "The US-Canada trade war in 5 charts 美加贸易战：5张图表解读",
+    "title_zh": "美加贸易战：5张图表解读",
+    "title_en": "The US-Canada trade war in 5 charts",
+    "summary": "BBC通过5张图表分析美加贸易战对两国经济的影响：关税规模、双边贸易额变化、受影响产业、消费者成本以及可能的走向。美加贸易摩擦在安大略湖改名风波与报复性关税中持续发酵。",
+    "source": "BBC",
+    "category": "经贸制裁",
+    "keywords": [
+      "美加贸易战",
+      "关税",
+      "图表分析"
+    ],
+    "url": "https://www.bbc.com/news/articles/c4g4r4lxx25o",
+    "priority_score": 86,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Canada installs large Lake Ontario sign in latest jab at US 加拿大安大略省竖立巨型\"安大略湖\"标志牌 回击特朗普改名令",
+    "title_zh": "加拿大安大略省竖立巨型\"安大略湖\"标志牌 回击特朗普改名令",
+    "title_en": "Canada installs large Lake Ontario sign in latest jab at US",
+    "summary": "加拿大安大略省省长在湖岸线揭幕巨型\"安大略湖\"标志牌，上书\"安大略湖。现在和永远\"，作为对特朗普签署行政令将安大略湖改名为\"美国湖\"的最新回应。美加因湖泊改名引发的口水战持续升级。",
+    "source": "BBC",
+    "category": "经贸制裁",
+    "keywords": [
+      "美加关系",
+      "安大略湖",
+      "改名风波"
+    ],
+    "url": "https://www.bbc.com/news/articles/cpq09594vw7o",
+    "priority_score": 84,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "'A giant leap forward': Nasa launches powerful new space telescope NASA发射新型强力太空望远镜 将研究暗能量与暗物质",
+    "title_zh": "NASA发射新型强力太空望远镜 将研究暗能量与暗物质",
+    "title_en": "'A giant leap forward': Nasa launches powerful new space telescope",
+    "summary": "NASA成功发射新的太空望远镜（罗曼望远镜），耗资约43亿美元。该望远镜将绘制宇宙新地图，研究暗能量、暗物质及系外行星，被视为探索宇宙奥秘的重大科学进展。",
+    "source": "BBC",
+    "category": "科技",
+    "keywords": [
+      "NASA",
+      "太空望远镜",
+      "暗能量"
+    ],
+    "url": "https://www.bbc.com/news/articles/ce87e55vgpjo",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Trita Parsi on why US air strikes strengthened Iran's hand 专家分析：美国空袭为何反而增强了伊朗的谈判筹码",
+    "title_zh": "专家分析：美国空袭为何反而增强了伊朗的谈判筹码",
+    "title_en": "Trita Parsi on why US air strikes strengthened Iran's hand",
+    "summary": "伊朗出生的华盛顿专家特里塔·帕西分析称，美国对伊朗的空袭反而增强了伊朗的谈判筹码，并未触发预期的内部动荡，并谈及中国的非干预策略及波斯湾联盟格局的新变化。",
+    "source": "南华早报",
+    "category": "中东",
+    "keywords": [
+      "美伊冲突",
+      "伊朗",
+      "谈判"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3365735/trita-parsi-why-us-air-strikes-strengthened-irans-hand-and-failed-trigger-revolt",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Could joint oil and gas projects ease Beijing-Manila South China Sea tensions? 分析：中菲联合油气项目能否缓解南海紧张局势",
+    "title_zh": "分析：中菲联合油气项目能否缓解南海紧张局势",
+    "title_en": "Could joint oil and gas projects ease Beijing-Manila South China Sea tensions?",
+    "summary": "分析人士认为，中国与菲律宾可通过在能源和环境等\"低敏感\"领域开展合作来建立互信，为缓解南海紧张局势提供突破口，但前提是双方在主权争议上保持克制。",
+    "source": "南华早报",
+    "category": "地缘政治",
+    "keywords": [
+      "南海",
+      "中菲关系",
+      "油气合作"
+    ],
+    "url": "https://www.scmp.com/news/china/diplomacy/article/3365709/could-joint-oil-and-gas-projects-help-ease-beijing-and-manilas-south-china-sea-tensions",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "PLA shift to systems warfare means Taiwan's defences need to change: experts 专家：解放军转向\"体系作战\" 台湾防御策略需相应调整",
+    "title_zh": "专家：解放军转向\"体系作战\" 台湾防御策略需相应调整",
+    "title_en": "PLA shift to systems warfare means Taiwan's defences need to change: experts",
+    "summary": "军事专家指出，解放军向\"体系作战\"转型后，台湾的防御策略必须做出相应调整。分析聚焦解放军联合作战能力的提升及其对台海军事平衡的影响。",
+    "source": "南华早报",
+    "category": "台海局势",
+    "keywords": [
+      "解放军",
+      "台海",
+      "体系作战"
+    ],
+    "url": "https://www.scmp.com/news/china/military/article/3365761/pla-shift-systems-warfare-means-taiwans-defences-need-change-experts",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Uzbekistan confirmed as second country to buy China's J-10CE fighter 乌兹别克斯坦确认成为歼-10CE战斗机第二个海外买家",
+    "title_zh": "乌兹别克斯坦确认成为歼-10CE战斗机第二个海外买家",
+    "title_en": "Uzbekistan confirmed as second country to buy China's J-10CE fighter",
+    "summary": "乌兹别克斯坦在其独立日发布的视频中展示了中国的4.5代歼-10CE战斗机，成为继巴基斯坦之后该机型的第二个海外买家，显示中国军贸在中亚市场取得新突破。",
+    "source": "南华早报",
+    "category": "中国",
+    "keywords": [
+      "歼-10CE",
+      "乌兹别克斯坦",
+      "军贸"
+    ],
+    "url": "https://www.scmp.com/news/china/military/article/3365756/uzbekistan-confirmed-second-country-buy-chinas-j-10ce-fighter",
+    "priority_score": 86,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Finance official moves into pole position to become Shanghai's next mayor 财政部背景官员朱忠明有望出任上海市长",
+    "title_zh": "财政部背景官员朱忠明有望出任上海市长",
+    "title_en": "Finance official moves into pole position to become Shanghai's next mayor",
+    "summary": "前财政部副部长朱忠明被任命为上海市政府领导职务，有望成为下一任上海市长。这一人事安排显示金融背景官员主政金融中心城市的用人导向。",
+    "source": "南华早报",
+    "category": "中国",
+    "keywords": [
+      "上海",
+      "市长",
+      "人事任免"
+    ],
+    "url": "https://www.scmp.com/news/china/politics/article/3365754/career-finance-official-moves-pole-position-become-shanghais-next-mayor",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iceland Votes to Steer Clear of European Union Talks 冰岛公投否决恢复欧盟入盟谈判",
+    "title_zh": "冰岛公投否决恢复欧盟入盟谈判",
+    "title_en": "Iceland Votes to Steer Clear of European Union Talks",
+    "summary": "冰岛选民在近二十年投票率最高的公投中，否决了恢复加入欧盟谈判的提案。公投结果凸显北欧国家对欧盟一体化的保留态度。美国国务院同日发表声明表示尊重冰岛人民的主权决定。",
+    "source": "纽约时报",
+    "category": "欧洲",
+    "keywords": [
+      "冰岛",
+      "公投",
+      "欧盟"
+    ],
+    "url": "https://www.nytimes.com/2026/08/30/world/europe/iceland-eu-referendum-talks.html",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Far Right Is Poised to Win in a German State, but Fight Over Power Won't End There 德国极右翼政党有望赢下萨克森-安哈尔特州 但权力博弈不会就此结束",
+    "title_zh": "德国极右翼政党有望赢下萨克森-安哈尔特州 但权力博弈不会就此结束",
+    "title_en": "Far Right Is Poised to Win in a German State, but Fight Over Power Won't End There",
+    "summary": "德国选择党（AfD）预计将在萨克森-安哈尔特州选举中表现强劲。州和联邦领导人正试图避免与其分享敏感情报，极右翼执政前景引发对德国政治格局变化的广泛关注。",
+    "source": "纽约时报",
+    "category": "欧洲",
+    "keywords": [
+      "德国",
+      "AfD",
+      "极右翼"
+    ],
+    "url": "https://www.nytimes.com/2026/08/30/world/europe/germany-afd-saxony-anhalt.html",
+    "priority_score": 86,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Long Lines for Gas in Iran Show War and U.S. Blockade Squeezing Supply 伊朗加油站排长队 战争与美国封锁挤压燃料供应",
+    "title_zh": "伊朗加油站排长队 战争与美国封锁挤压燃料供应",
+    "title_en": "Long Lines for Gas in Iran Show War and U.S. Blockade Squeezing Supply",
+    "summary": "因战争和美国封锁导致燃料供应短缺，伊朗加油站排起长队。政府担心提高油价会引发社会动荡，伊朗经济在持续制裁与军事冲突下承受日益沉重的压力。",
+    "source": "纽约时报",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "燃料短缺",
+      "封锁"
+    ],
+    "url": "https://www.nytimes.com/2026/08/30/world/middleeast/iran-fuel-supplies-blockade.html",
+    "priority_score": 84,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "U.A.E. to Review Egyptian Bank as Part of U.S. Sanctions on Iran 美国制裁伊朗背景下 阿联酋将对埃及国民银行展开审查",
+    "title_zh": "美国制裁伊朗背景下 阿联酋将对埃及国民银行展开审查",
+    "title_en": "U.A.E. to Review Egyptian Bank as Part of U.S. Sanctions on Iran",
+    "summary": "美国财政部指控埃及国民银行在阿联酋的分支帮助伊朗规避制裁，阿联酋央行已承诺对该行进行审查。这是美国对伊制裁网络延伸至中东金融机构的最新案例。",
+    "source": "纽约时报",
+    "category": "经贸制裁",
+    "keywords": [
+      "美国制裁",
+      "埃及银行",
+      "伊朗"
+    ],
+    "url": "https://www.nytimes.com/2026/08/30/world/middleeast/uae-banque-misr-treasury-iran.html",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Ferry Carrying Hundreds of Passengers Capsizes Off Coast of Cyprus 载有数百名乘客的渡轮在塞浦路斯海岸外倾覆",
+    "title_zh": "载有数百名乘客的渡轮在塞浦路斯海岸外倾覆",
+    "title_en": "Ferry Carrying Hundreds of Passengers Capsizes Off Coast of Cyprus",
+    "summary": "一艘载有约267人的双体船在离开塞浦路斯北部凯里尼亚后不久进水倾覆，造成至少8人死亡、数十人失踪，并引发大规模搜救行动。",
+    "source": "纽约时报",
+    "category": "欧洲",
+    "keywords": [
+      "塞浦路斯",
+      "渡轮",
+      "倾覆"
+    ],
+    "url": "https://www.nytimes.com/2026/08/30/world/europe/cyprus-ferry-capsizes-turkey.html",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Venezuela's Delcy Rodríguez defends 'endless' benefits of her oil deal with Trump 委内瑞拉副总统罗德里格斯为对美石油协议辩护 称其带来\"无穷无尽\"好处",
+    "title_zh": "委内瑞拉副总统罗德里格斯为对美石油协议辩护 称其带来\"无穷无尽\"好处",
+    "title_en": "Venezuela's Delcy Rodríguez defends 'endless' benefits of her oil deal with Trump",
+    "summary": "委内瑞拉副总统德尔西·罗德里格斯公开为与特朗普达成的石油协议辩护，称其带来\"无穷无尽的好处\"，反驳国内反对声音，称协议有助于重振国家经济。",
+    "source": "卫报",
+    "category": "美洲",
+    "keywords": [
+      "委内瑞拉",
+      "石油协议",
+      "罗德里格斯"
+    ],
+    "url": "https://www.theguardian.com/world/2026/aug/30/venezuela-delcy-rodriguez-says-oil-deal-with-trump-has-endless-benefits",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "These men had a hellish escape from Nepal's flooded hydro tunnels. They were the lucky ones 幸存者讲述尼泊尔洪水淹没水电隧道的惊险逃生经历",
+    "title_zh": "幸存者讲述尼泊尔洪水淹没水电隧道的惊险逃生经历",
+    "title_en": "These men had a hellish escape from Nepal's flooded hydro tunnels. They were the lucky ones",
+    "summary": "多名幸存者讲述了他们在尼泊尔被洪水淹没的水电隧道中惊险逃生的经历。他们是少数幸运者，还有数百名工人仍被困在隧道中，救援工作持续进行。",
+    "source": "CNN",
+    "category": "亚太",
+    "keywords": [
+      "尼泊尔",
+      "洪水",
+      "隧道救援"
+    ],
+    "url": "https://edition.cnn.com/2026/08/30/asia/nepal-workers-flooded-hydro-tunnel-intl",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Israeli settlers storm Palestinian village, seizing home with owner inside 以色列定居者闯入巴勒斯坦村庄 在房主在场时强行占屋",
+    "title_zh": "以色列定居者闯入巴勒斯坦村庄 在房主在场时强行占屋",
+    "title_en": "Israeli settlers storm Palestinian village, seizing home with owner inside",
+    "summary": "以色列定居者闯入约旦河西岸一个巴勒斯坦村庄，在房屋主人仍在屋内时强行占房。此类事件加剧约旦河西岸紧张局势，国际社会对定居点扩张的批评持续。",
+    "source": "CNN",
+    "category": "中东",
+    "keywords": [
+      "以色列",
+      "巴勒斯坦",
+      "定居点"
+    ],
+    "url": "https://edition.cnn.com/2026/08/30/middleeast/israeli-settler-violence-qusra-palestinian-intl",
+    "priority_score": 78,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Top officials from Turkiye, Saudi Arabia, Pakistan to meet in Istanbul 土耳其、沙特、巴基斯坦三国高层将在伊斯坦布尔举行首次会晤",
+    "title_zh": "土耳其、沙特、巴基斯坦三国高层将在伊斯坦布尔举行首次会晤",
+    "title_en": "Top officials from Turkiye, Saudi Arabia, Pakistan to meet in Istanbul",
+    "summary": "土耳其、沙特阿拉伯和巴基斯坦三国外交部长、国防部长及军方首脑将在伊斯坦布尔举行首次会晤，系三国签署麦加协议以来的首次高层聚会，涉及地区安全与防务合作。",
+    "source": "半岛电视台",
+    "category": "地缘政治",
+    "keywords": [
+      "土耳其",
+      "沙特",
+      "巴基斯坦",
+      "防务合作"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/30/top-officials-from-turkiye-saudi-arabia-pakistan-to-meet-in-istanbul",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "'Opening a new chapter': Syria reopens embassy in Libya after talks 叙利亚在会谈后宣布重开驻利比亚大使馆 开启关系新篇章",
+    "title_zh": "叙利亚在会谈后宣布重开驻利比亚大使馆 开启关系新篇章",
+    "title_en": "'Opening a new chapter': Syria reopens embassy in Libya after talks",
+    "summary": "叙利亚临时外长与利比亚民族团结政府外长在的黎波里会晤后，叙利亚宣布重开驻利比亚大使馆，被视为两国关系开启新篇章，反映中东外交格局的重新洗牌。",
+    "source": "半岛电视台",
+    "category": "中东",
+    "keywords": [
+      "叙利亚",
+      "利比亚",
+      "外交关系"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/30/opening-a-new-chapter-syria-to-reopen-embassy-in-libya-after-talks",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Dozens evacuated and about 15 missing after Grand Canyon flash flood 美国大峡谷国家公园山洪暴发 数十人被疏散约15人失踪",
+    "title_zh": "美国大峡谷国家公园山洪暴发 数十人被疏散约15人失踪",
+    "title_en": "Dozens evacuated and about 15 missing after Grand Canyon flash flood",
+    "summary": "美国大峡谷国家公园突发山洪，数十人被疏散，约15人下落不明，救援工作正在进行中。这是美国境内自然灾害的最新一起，引发对野外安全预警的讨论。",
+    "source": "半岛电视台",
+    "category": "美国",
+    "keywords": [
+      "大峡谷",
+      "山洪",
+      "失踪"
+    ],
+    "url": "https://www.aljazeera.com/news/2026/8/31/dozens-evacuated-and-about-15-missing-after-grand-canyon-flash-flood",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Military leaders warn Hegseth against extending Iran war operations 美军方领导人警告赫格塞斯勿延长伊朗战争行动",
+    "title_zh": "美军方领导人警告赫格塞斯勿延长伊朗战争行动",
+    "title_en": "Military leaders warn Hegseth against extending Iran war operations",
+    "summary": "军事领导人在机密评估中警告国防部长赫格塞斯，延长中东大规模军事行动可能削弱美国在其他地区的军事实力。军方高层与文官领导层围绕对伊战争规模的博弈浮出水面。",
+    "source": "华盛顿邮报",
+    "category": "中东",
+    "keywords": [
+      "美军",
+      "赫格塞斯",
+      "伊朗战争"
+    ],
+    "url": "https://www.washingtonpost.com/national-security/2026/08/30/military-leaders-warn-hegseth-against-extending-iran-war-operations/",
+    "priority_score": 90,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Venezuela vowed not to 'hand over' its oil. Trump aims to grab a windfall 委内瑞拉曾誓言不交出石油 特朗普现在要攫取暴利",
+    "title_zh": "委内瑞拉曾誓言不交出石油 特朗普现在要攫取暴利",
+    "title_en": "Venezuela vowed not to 'hand over' its oil. Trump aims to grab a windfall",
+    "summary": "分析指出，美国与委内瑞拉达成的协议巩固了美国对委内瑞拉石油资源的长期控制。委内瑞拉自马杜罗被美军抓捕后已成为某种意义上的\"新殖民地\"，特朗普正借机获取能源利益。",
+    "source": "华盛顿邮报",
+    "category": "美洲",
+    "keywords": [
+      "委内瑞拉",
+      "石油",
+      "特朗普"
+    ],
+    "url": "https://www.washingtonpost.com/world/2026/08/30/venezuela-vowed-not-hand-over-its-oil-trump-aims-grab-windfall/",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Ontario's premier urges thaw in U.S.-Canada trade war: 'We're best friends.' 安大略省长呼吁缓解美加贸易战：\"我们是最好的朋友\"",
+    "title_zh": "安大略省长呼吁缓解美加贸易战：\"我们是最好的朋友\"",
+    "title_en": "Ontario's premier urges thaw in U.S.-Canada trade war: 'We're best friends.'",
+    "summary": "安大略省省长在竖立巨型\"安大略湖\"标志牌的同时，呼吁缓解美加贸易战紧张局势，称两国是\"最好的朋友\"。其表态反映加拿大方面在强硬反击与缓和关系之间的平衡努力。",
+    "source": "华盛顿邮报",
+    "category": "经贸制裁",
+    "keywords": [
+      "美加贸易战",
+      "安大略省",
+      "缓和"
+    ],
+    "url": "https://www.washingtonpost.com/world/2026/08/30/ontarios-premier-urges-thaw-us-canada-trade-war-were-best-friends/",
+    "priority_score": 84,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Russian strikes on food warehouses pose threat of shortages in Ukraine 俄军打击食品仓库 乌克兰面临物资短缺威胁",
+    "title_zh": "俄军打击食品仓库 乌克兰面临物资短缺威胁",
+    "title_en": "Russian strikes on food warehouses pose threat of shortages in Ukraine",
+    "summary": "俄罗斯将打击目标转向购物中心和食品配送站，乌克兰多城市市场面临货架短缺威胁。俄乌冲突对乌克兰民用供应链的打击正在加剧人道主义压力。",
+    "source": "华盛顿邮报",
+    "category": "俄乌冲突",
+    "keywords": [
+      "俄乌冲突",
+      "食品仓库",
+      "短缺"
+    ],
+    "url": "https://www.washingtonpost.com/world/2026/08/30/russian-strikes-food-warehouses-pose-threat-shortages-ukraine/",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "An aging population in China inspires a new industry: Adult children for hire 中国老龄化催生新产业：\"租借成年子女\"提供陪伴服务",
+    "title_zh": "中国老龄化催生新产业：\"租借成年子女\"提供陪伴服务",
+    "title_en": "An aging population in China inspires a new industry: Adult children for hire",
+    "summary": "中国低生育率和快速老龄化催生\"租借成年子女\"新产业，年轻陪护人员和初创公司为孤独老人提供陪伴服务，反映中国社会结构变化带来的新兴需求。",
+    "source": "华盛顿邮报",
+    "category": "中国",
+    "keywords": [
+      "中国",
+      "老龄化",
+      "陪伴经济"
+    ],
+    "url": "https://www.washingtonpost.com/world/2026/08/30/an-aging-population-china-inspires-new-industry-adult-children-hire/",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "US plans to sanction another bank in effort to clamp down on Iran transactions, Bessent tells AP 贝森特向美联社透露：美国计划再制裁一家银行以切断伊朗交易",
+    "title_zh": "贝森特向美联社透露：美国计划再制裁一家银行以切断伊朗交易",
+    "title_en": "US plans to sanction another bank in effort to clamp down on Iran transactions, Bessent tells AP",
+    "summary": "美国财政部长贝森特接受美联社采访时透露，计划制裁另一家银行，以切断伊朗的国际交易渠道。这是美国对伊金融制裁网络持续扩展的最新信号。",
+    "source": "美联社",
+    "category": "经贸制裁",
+    "keywords": [
+      "贝森特",
+      "银行制裁",
+      "伊朗"
+    ],
+    "url": "https://apnews.com/article/bessent-interview-iran-sanctions-bank-68d1bb0817c9f83eaa34e9ec643690fa",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Investors prosper and consumers pay as the Iran war exacts an uneven economic toll 6 months in 伊朗战争满6个月 经济代价不均：投资者获利 消费者买单",
+    "title_zh": "伊朗战争满6个月 经济代价不均：投资者获利 消费者买单",
+    "title_en": "Investors prosper and consumers pay as the Iran war exacts an uneven economic toll 6 months in",
+    "summary": "分析显示，伊朗战争持续6个月，投资者从能源与国防板块获利，而消费者承受油价上涨和通胀代价。战争对不同群体的经济影响呈现出明显的分化。",
+    "source": "美联社",
+    "category": "中东",
+    "keywords": [
+      "伊朗战争",
+      "经济影响",
+      "投资者"
+    ],
+    "url": "https://apnews.com/article/iran-economy-stocks-trump-airlines-energy-oil-dd9861bbb882b04e1680f6b2847b3495",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Iran's supreme leader calls for Muslim unity against US and Israel, and other Mideast news 伊朗最高领袖呼吁穆斯林世界团结对抗美国和以色列",
+    "title_zh": "伊朗最高领袖呼吁穆斯林世界团结对抗美国和以色列",
+    "title_en": "Iran's supreme leader calls for Muslim unity against US and Israel, and other Mideast news",
+    "summary": "伊朗最高领袖哈梅内伊呼吁穆斯林世界团结对抗美国和以色列，在美军打击拉腊克岛及IRGC袭击约旦美军基地后，其表态进一步加剧中东的对抗氛围。",
+    "source": "美联社",
+    "category": "中东",
+    "keywords": [
+      "伊朗",
+      "最高领袖",
+      "美伊对抗"
+    ],
+    "url": "https://apnews.com/article/mideast-iran-israel-palestinians-august-30-2026-49cf07bcd4f9166f93f51136892d76a6",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Lake Ontario now called Lake America on Google Maps for US users after Trump ordered name change 特朗普下令改名后 Google地图对美国用户显示\"美国湖\"",
+    "title_zh": "特朗普下令改名后 Google地图对美国用户显示\"美国湖\"",
+    "title_en": "Lake Ontario now called Lake America on Google Maps for US users after Trump ordered name change",
+    "summary": "特朗普签署行政令将安大略湖改名为\"美国湖\"后，Google地图已对美国用户显示新名称。此举进一步激化美加关于湖泊命名的外交摩擦，加拿大方面以竖立标志牌等方式回应。",
+    "source": "美联社",
+    "category": "美国",
+    "keywords": [
+      "安大略湖",
+      "改名",
+      "美加关系"
+    ],
+    "url": "https://apnews.com/article/lake-trump-ontario-america-7c5c9776d72cb8e8d782e05ec6e7332b",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "USS Abraham Lincoln sails past Singapore on way home from Middle East 林肯号航母驶过新加坡 从中东返航途中",
+    "title_zh": "林肯号航母驶过新加坡 从中东返航途中",
+    "title_en": "USS Abraham Lincoln sails past Singapore on way home from Middle East",
+    "summary": "美军林肯号航空母舰在从中东返航途中驶过新加坡。该航母的部署调整反映美军在中东与亚太之间的力量再平衡，亚太方向美军部署动态值得关注。",
+    "source": "Politico",
+    "category": "军事安全",
+    "keywords": [
+      "林肯号",
+      "航母",
+      "亚太部署"
+    ],
+    "url": "https://www.politico.com/news/2026/08/30/uss-abraham-lincoln-sails-past-singapore-on-way-home-from-middle-east-01056229",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Netanyahu son evacuated from US over threat 内塔尼亚胡之子因安全威胁从美国撤离",
+    "title_zh": "内塔尼亚胡之子因安全威胁从美国撤离",
+    "title_en": "Netanyahu son evacuated from US over threat",
+    "summary": "以色列总理内塔尼亚胡之子因面临安全威胁，已从美国撤离。事件凸显中东冲突背景下以色列高层人员面临的安全风险外溢。",
+    "source": "Politico",
+    "category": "中东",
+    "keywords": [
+      "内塔尼亚胡",
+      "安全威胁",
+      "以色列"
+    ],
+    "url": "https://www.politico.com/news/2026/08/30/netanyahu-son-evacuate-israel-01056597",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "Trump calls for NBC's Kristen Welker to face 'rebuke or punishment' 特朗普要求NBC记者韦尔克面临\"谴责或惩罚\"",
+    "title_zh": "特朗普要求NBC记者韦尔克面临\"谴责或惩罚\"",
+    "title_en": "Trump calls for NBC's Kristen Welker to face 'rebuke or punishment'",
+    "summary": "特朗普公开呼吁联邦通信委员会（FCC）对NBC主持人克里斯汀·韦尔克进行\"谴责或惩罚\"，起因是韦尔克对其背书的候选人评价引发不满。特朗普持续施压主流媒体的做法再度引发关注。",
+    "source": "Politico",
+    "category": "美国政治",
+    "keywords": [
+      "特朗普",
+      "媒体",
+      "FCC"
+    ],
+    "url": "https://www.politico.com/news/2026/08/30/trump-kristen-welker-fcc-punish-01056440",
+    "priority_score": 80,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
+  },
+  {
+    "title": "The Republican Party's Midterm Nightmare Is Taking Shape 分析：共和党中期选举噩梦正在成形",
+    "title_zh": "分析：共和党中期选举噩梦正在成形",
+    "title_en": "The Republican Party's Midterm Nightmare Is Taking Shape",
+    "summary": "分析文章指出，共和党在中期选举中正面临日益严峻的政治困境，多重因素叠加使其选情承压，中期选举前景对特朗普政府未来两年的执政环境构成挑战。",
+    "source": "Politico",
+    "category": "美国政治",
+    "keywords": [
+      "美国中期选举",
+      "共和党",
+      "特朗普"
+    ],
+    "url": "https://www.politico.com/news/magazine/2026/08/30/republican-party-midterms-trump-01055934",
+    "priority_score": 82,
+    "is_summit_level": false,
+    "importance": "高",
+    "date": "2026-08-30",
+    "collectedAt": "2026-08-31 09:30:00",
+    "collection_method": "webfetch"
   }
 ]

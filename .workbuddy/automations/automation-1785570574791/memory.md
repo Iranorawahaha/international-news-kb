@@ -1,3 +1,29 @@
+## 2026-08-31 09:23-09:45 (第二十二次运行)
+
+### 执行摘要
+- ⚠️ **源组丢失坑复发（第 8 次）**：fetch_us_official.py 白宫整组 14 条被覆盖丢失（59→32 条）→ 运行前备份 /tmp/us-official-backup-0831.json 恢复 62 条 + merge 今日国务院 3 条 → 6 源齐全（白宫14/国务院18/国防部23/财政部3/商务部1/USTR3）100% 中文化 0 导航残留
+- ✅ 官方源新增 3 条：**国务院 ①冰岛8-29公投声明（8-30，80★，尊重主权决定/NATO 盟友，与 NYT 冰岛公投拒绝欧盟呼应）②马来西亚独立69周年贺词（8-30，75）③吉尔吉斯独立35周年贺词（8-31，75）**；**⚠️ 挪威国王哈拉尔五世逝世声明（8-28 逝世/8-29 发布）超窗口剔除**（严格 V2.11）；白宫 48h 无新（最新 8-28 霍尔木兹/太空学院已收录）
+- ✅ WebFetch 采集 41 条新增（11 源全覆盖尝试）：路透 10/SCMP 5/NYT 5/BBC 5/WaPo 5/AP 4/Politico 4/CNN 3/半岛 3/卫报 1；**WSJ 0（反爬 JS-BLOCKED，WebSearch 线索 Amazon/Microsoft 支持 Gain AI Act 限英伟达对华出口为 8-27 超窗口，如实汇报）**；路透 /business 补抓命中**贝森特 G20 建议对华更多贸易壁垒 95★**；同事件去重：美伊拉腊克岛/约旦基地保留路透版（BBC/卫报/半岛/AP 跳过）、委内瑞拉 650 亿桶保留 BBC 版、冰岛公投保留 NYT 版+国务院官方版双收
+- ✅ 交叉验证 3 组关键词：**无窗口内重大遗漏**——①长鑫 1260H 诉讼 8-29 已收录 ②厢式拖车双反终裁 264.48%（8-28 发布/8-31 生效）超窗口且无权威英文 8-30/31 报道 → 宁缺毋滥不收录 ③BIS 远程算力新规 8-28 已收录（今日无新进展）
+- ✅ update-news.sh --auto 一次成功：307 条/8 天，8-31 组 44 条（41 媒体 + 3 官方，date 8-30:43 + 8-31:1）→ 飞书 1 条（date=8-31 吉尔吉斯，0 重复）→ commit 2aff1b2 **脚本 push 直连失败（第 9 次）→ 手动代理 push 成功**
+- ✅ 校验全部通过：今日组 44 条（collectedAt≠今日 0 / date<昨天 0 / 跨组 URL 重复 0 / 组内重复 0）；官方源 3 条 0 缺中文 0 模板摘要；今日组 0 缺中文 0 缺摘要 0 模板摘要 0 导航残留；嵌入 JSON 解析成功；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（5b6beaee）**
+
+### 本次关键发现
+1. **今日主题：美伊军事升级多线聚焦**（美军打击拉腊克岛 92★ + IRGC 袭击约旦两基地 90★ + 贝森特每周新次级制裁 90★ + 军方警告赫格塞斯 90★ + 伊朗权力斗争分析 88★ + 伊朗燃料短缺/最高领袖呼吁团结）+ **中美经贸**（贝森特 G20 鼓动对华壁垒 95★ + G20 外交考验 88★）+ **委内瑞拉石油 650 亿桶协议多角度**（BBC 88/路透 25年 84/卫报辩护 82/WaPo 新殖民地 85）+ **冰岛公投拒绝欧盟 90★**（NYT + 国务院官方双收）+ 中尼洪灾 261 外国人失踪（路透 90★）+ 乌兹别克斯坦购歼-10CE 86 + 上海市长人选 85
+2. **源组丢失坑第 8 次确认**：本次白宫整组丢失（curl 失败），备份恢复 + merge 仍是唯一保险；运行后必检 6 源
+3. **超窗口严格剔除**：挪威国王逝世声明（8-29 发布）虽有重大性仍按 V2.11 剔除；厢式拖车双反（8-28 发布）超窗口不收录
+4. **飞书去重查询 rc=4 网络失败（历史已知）**：本次仅 1 条 date=8-31 无重复风险，核对通过；若多条目时需人工核对入库数
+5. **8-30 无自动化记录但 16:11 有实例更新**（318 条/8-30 组 38 条已定稿），今日 8-31 组正常生成 44 条
+
+### 产出
+- 本地: international-news.html (307条/8天，8-31 组 44 条)，commit 2aff1b2（代理 push 92eb2f8..2aff1b2）
+- 飞书: 1 条已入库（date=8-31，吉尔吉斯贺词，无重复）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 5b6beaee557e58c20499f723918932f9 与本地一致）
+
+### 待跟进
+- [ ] fetch_us_official.py 源组丢失防护（第 8 次确认，超出"不修改脚本"范围，待用户确认）
+- [ ] WSJ 反爬持续（8-30/31 双日 0 条），若有重大 WSJ 独家需 WebSearch + 高质量转载兜底
+
 ## 2026-08-28 09:23-09:45 (第二十次运行)
 
 ### 执行摘要
@@ -608,3 +634,55 @@
 ### 待跟进
 - [ ] fetch_us_official.py 源组丢失防护（第 7 次确认，超出"不修改脚本"范围，待用户确认）
 - [ ] Politico 反爬加剧：连续 2 日 Cloudflare 拦截，WebSearch 兜底；若未来有 Politico 独家重大新闻需及时 WebSearch
+
+## 2026-08-29 10:00-10:05 (第二十一次运行·补充修订)
+
+### 同事补充 2 条遗漏新闻（重要教训）
+- **长鑫存储起诉美国国防部（Reuters，8-28，95★）**：CXMT 在哥伦比亚特区地区法院起诉，要求撤销 1260H"中国军事企业清单"认定，称 DRAM 纯民用商业；6-8 被重新列入（2 月曾短暂移除），YMTC/药明/阿里已先例诉讼 → 用 newsx.com 转载 URL（reuters 直连不可达）
+- **The Information：特朗普政府起草新 AI 出口管制规则堵中国远程算力（8-28，92★）**：BIS 起草规则堵中国经泰国/新加坡第三国数据中心远程租用美 AI 芯片算力漏洞（现行管制只覆盖物理芯片），最早 9 月征求意见，将取代拜登 AI Diffusion Rule；触发点=月之暗面 Kimi K3 泰国 GB300 蒸馏指控 → 用 tomshardware 转载 URL（The Information 付费墙）
+- 重跑 update-news.sh：281 条/6 天，8-29 组 47 条，四项归档校验 0 违规，commit beb05d7 + f0716cf，线上 md5 三方一致（0f56d210）
+
+### ⚠️ 机制改良（防同类遗漏，2026-08-29 新增流程步骤）
+**遗漏根因**：① The Information/SemiAnalysis 不在 11 必选源（AI 独家媒体天然漏采）② Reuters /world 单次抓取只见置顶（CXMT 起诉在 business 频道）③ "AI 出口管制/远程算力"主题多次靠人工补（8-13 BIS 算力核查、8-29 新规都是 WebSearch 补录）
+**新增每日交叉验证步骤（更新脚本后必做）**：官方源+WebFetch 完成后，用 3 组固定关键词 WebSearch 兜底：
+1. `China AI chips export controls 1260H CXMT YMTC`（涉华芯片/清单）
+2. `US China tariffs sanctions announcement`（中美经贸）
+3. `AI export control remote access compute China`（AI 远程算力）
+命中 date∈{昨天,今天} 的重大新闻立即补录 webfetch（collectedAt=抓取日）→ 重跑
+**补充源**：The Information 列入"重点主题补充源"（AI 芯片/出口管制主题必查，WebSearch 转载确认）；Reuters 重大日补抓 /technology /business 频道
+
+## 2026-08-29 10:30-10:50 (第二十一次运行·转载标注机制专项)
+
+### 用户反馈：看板转载链接问题
+- 用户点进长鑫存储起诉国防部条目，发现链接指向 world.newsx.com（信源清单以外）而非 reuters.com → 要求"换高质量转载+标注"
+- **根因**：Reuters 官方 URL 反爬完全封锁（WebSearch 全被屏蔽、构造 reuters.com 链接 404、site: 搜索无果）→ 当时沿用历史"WSJ 反爬第三方转载"先例，但 newsx.com 是低质聚合站且未标注，source 标"路透社"误导用户
+- **用户决策**：换高质量转载 + 明确标注（不误导为官方原文直链）
+
+### 修复动作（V2.12 转载标注机制）
+1. **数据层**：webfetch/news-data 增加 `repost_from` 字段（标注转载来源+原因）——长鑫条(NewsX 全文转载)/Yahoo条(Yahoo News 转载)/The Information条(Tom's Hardware 报道)
+2. **模板层**：scripts/intl_template_v15.html 新增 `.repost-tag` CSS + 链接列渲染 `item.repost_from ? <span class="repost-tag" title="⚠️ 转载来源">转载</span>`
+3. **脚本层**：update-news.sh 696 行字段白名单加 `repost_from`（官方源终极防线透传）
+4. ⚠️ **发现去重坑**：deduplicate_articles 保留 archive 旧版本（无 repost_from），丢弃 webfetch 新版（有标注）→ 直接改 news-data.json + 单独跑 GENERATE_HTML_V12 段（不重跑全量 update）才生效
+5. commit d7f574d 推送成功，线上 md5 95034241 与本地一致（CDN 首查旧版、二次才命中新版，历史已知）
+
+### 转载 URL 收录纪律（V2.12 固化）
+- 官方源反爬拿不到官网 URL 时：可选转载必须为**知名平台/专业媒体**（Yahoo News/Tom's Hardware/finwire.io 等），**禁用低质聚合站**（newsx.com/esaa.org.eg 等）
+- 转载条目必须加 `repost_from` 字段 + 前端"转载"标签，source 仍标原作者
+- 拿不到合格转载 → 宁缺毋滥不收录
+
+## 2026-08-29 10:40-11:00 (第二十一次运行·官网 URL 方法论专项)
+
+### 用户关键洞察：为什么委内瑞拉条能拿到 reuters.com 官网 URL？
+- 用户发现：委内瑞拉石油条 URL https://www.reuters.com/business/energy/us-enters-into-oil-agreement-with-venezuela-trump-says-2026-08-28/ 是官网直链，但长鑫条是转载站 → 问方法能否复制
+- **方法论确认（V2.13 核心）**：
+  - ✅ **WebFetch 直接抓路透分类页（/world、/business、/technology、/legal）= 正确通道**，页面内嵌文章链接就是官网 URL（委内瑞拉条、长鑫条均如此拿到）
+  - ❌ **WebSearch = 错误通道**（反爬源在搜索中被屏蔽，只返回 newsx/esaa 等转载站）
+- 实操验证：WebFetch https://www.reuters.com/business/ → 第 1 条就是长鑫官网报道 https://www.reuters.com/world/cxmt-sues-pentagon-over-inclusion-list-companies-tied-chinas-military-2026-08-29/ → WebFetch 验证页面真实（标题 Chipmaker CXMT sues Pentagon...，作者 Che Pan/Mrinmay Dey，发布日期 8-29）
+
+### 修复动作
+- 长鑫条 URL 替换为官网原文 + 移除 repost_from 标注 + date 改 8-29 → 直接改 news-data/webfetch + 单独跑 GENERATE_HTML_V12 → commit 317eb73 推送成功，线上 md5 f88f895b 一致，旧 newsx URL 清零
+- 自动化 prompt 升级 V2.13：加入"官网 URL 获取方法论"（WebFetch 分类页为正道、WebSearch 仅作线索）+ 转载纪律中"发现官网 URL 立即替换"
+
+### 经验固化
+- **取官网 URL 的正确姿势**：WebFetch 信源官网频道页（页面链接=官网）> WebSearch（被反爬屏蔽）
+- 交叉验证的 WebSearch 只用于"发现线索"，URL 一律回官网分类页取

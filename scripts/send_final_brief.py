@@ -66,6 +66,16 @@ DIPLO_DATA = os.path.join(BASE, "data", "diplomatic-affairs.json")
 # 当天手动调整配置（可选）：调整国际条目顺序 + 额外纳入低分条目
 BRIEF_OVERRIDE = os.path.join(BASE, "data", "brief-override.json")
 
+# 对外分享标题/摘要清洗（2026-08-29 用户要求规避微信屏蔽，仅展示层生效，不动看板数据）
+# 按 URL 精确匹配，替换为中性合规表述
+SENSITIVE_TITLE_MAP = {
+    'https://www.bbc.com/news/articles/cx2z415w2gpo': '外媒关注西藏日喀则吉隆县泥石流灾情 救援持续进行（BBC）',
+    'https://www.yahoo.com/news/articles/us-officials-backpedal-claims-government-193539966.html': '美官员收回涉政府机构网络攻击指控 改称仅系"目标"（路透社）',
+}
+SENSITIVE_SUMMARY_MAP = {
+    'https://www.bbc.com/news/articles/cx2z415w2gpo': '综合外媒报道，受尼泊尔境内高位冰川崩塌引发的山洪泥石流影响，西藏日喀则市吉隆县出现灾情。中方第一时间组织抢险救援，多方力量正向救灾一线集结，受灾情况及救援进展受到国际社会关注。',
+}
+
 
 def _norm_url(u):
     return (u or '').strip().rstrip('/').lower()
@@ -122,6 +132,9 @@ def load_articles():
     dom_full = [a for a in c10 if a.get('priority_score', 0) >= DOM_MIN_SCORE]
     dom_exclude = set(DOM_EXCLUDE) | set((override or {}).get('dom_exclude') or [])
     dom = [a for i, a in enumerate(dom_full) if (i + 1) not in dom_exclude]
+    # V3.1：国内按类别排序（元首 → 高层 → 人事任免 → 重要会议 → 部委动态 → 经贸），同类保持原顺序
+    CAT_ORDER = {'元首动态': 0, '高层动态': 1, '人事任免': 2, '重要会议': 3, '部委动态': 4, '经贸': 5, '政策发布': 6}
+    dom = sorted(dom, key=lambda a: CAT_ORDER.get(a.get('category', ''), 99))
     return intl, dom
 
 
@@ -219,26 +232,45 @@ def intl_row(i, a):
     tz = esc(a.get('title_zh', '') or a.get('title', ''))
     url = esc(a.get('url', '#'))
     src = esc(a.get('source', ''))
+    cat = esc(a.get('category', '国际'))
     summary = esc(a.get('summary_zh', '') or a.get('summary_en', '') or a.get('summary', ''))
     if not summary:
         summary = "暂无摘要"
     num = f"{n:02d}"
-    # 标题纯文本（不再点击跳转），原文链接列明（PDF 中可点击）
+    # V3.2：双标签用独立 td + 中间透明间距列（10px），Outlook 100% 准确渲染间距
     return f'''<tr>
-  <td style="padding:20px 22px; border-bottom:1px solid #ecebe6; border-left:4px solid #1e3a8a; background:#ffffff;">
+  <td style="padding:18px 22px 20px; border-bottom:1px solid #f2f1ec; border-left:4px solid #1e3a8a; background:#ffffff;">
     <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
-      <td style="width:34px; vertical-align:top; padding-top:2px;">
+      <td style="padding-bottom:10px;">
         <table cellpadding="0" cellspacing="0" border="0"><tr>
-          <td align="center" style="background:#1e3a8a; color:#ffffff; font-family:Georgia,'Times New Roman',serif; font-size:12px; font-weight:700; letter-spacing:0.5px; padding:5px 7px;">{num}</td>
+          <td align="center" style="background:#1e3a8a; color:#ffffff; font-family:Georgia,'Times New Roman',serif; font-size:12px; font-weight:700; letter-spacing:0.5px; padding:4px 8px;">{num}</td>
+          <td style="padding-left:14px;">
+            <table cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background:#1e3a8a; color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:0.5px; padding:3px 9px; border-radius:3px;">{cat}</td>
+              <td style="width:10px; font-size:0; line-height:0;">&nbsp;</td>
+              <td style="background:#E3E8F0; color:#185FA5; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:0.3px; padding:3px 10px; border-radius:9px;">{src}</td>
+            </tr></table>
+          </td>
         </tr></table>
       </td>
-      <td style="padding-left:14px;">
-        <p style="margin:0 0 5px 0; font-family:Georgia,'Times New Roman',serif; font-size:11.5px; font-style:italic; color:#9aa0ac; line-height:1.45;">{te}</p>
-        <p style="margin:0 0 7px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5; color:#1a1a2e;">
-          {tz}
-        </p>
-        <p style="margin:0 0 9px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; color:#8a8f9a; letter-spacing:0.3px;">{src}</p>
-        <p style="margin:0 0 6px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{summary}</p>
+    </tr>
+    <tr>
+      <td style="padding-bottom:5px;">
+        <p style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:11.5px; font-style:italic; color:#9aa0ac; line-height:1.45;">{te}</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-bottom:8px;">
+        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5; color:#1a1a2e;">{tz}</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-bottom:6px;">
+        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{summary}</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; line-height:1.5; word-break:break-all;">🔗 原文链接：<a href="{url}" style="color:#1e3a8a; text-decoration:underline;">{url}</a></p>
       </td>
     </tr></table>
@@ -254,21 +286,36 @@ def dom_row(i, a):
     cat = esc(a.get('category', '其他'))
     summary = esc(a.get('summary', '') or '暂无摘要')
     num = f"{n:02d}"
+    # V3.2：双标签用独立 td + 中间透明间距列（10px），Outlook 100% 准确渲染间距
     return f'''<tr>
-  <td style="padding:20px 22px; border-bottom:1px solid #ecebe6; border-left:4px solid #c8102e; background:#ffffff;">
+  <td style="padding:18px 22px 20px; border-bottom:1px solid #f2f1ec; border-left:4px solid #A32D2D; background:#ffffff;">
     <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
-      <td style="width:34px; vertical-align:top; padding-top:2px;">
+      <td style="padding-bottom:10px;">
         <table cellpadding="0" cellspacing="0" border="0"><tr>
-          <td align="center" style="background:#c8102e; color:#ffffff; font-family:Georgia,'Times New Roman',serif; font-size:12px; font-weight:700; letter-spacing:0.5px; padding:5px 7px;">{num}</td>
+          <td align="center" style="background:#C25B5B; color:#ffffff; font-family:Georgia,'Times New Roman',serif; font-size:12px; font-weight:700; letter-spacing:0.5px; padding:4px 8px;">{num}</td>
+          <td style="padding-left:14px;">
+            <table cellpadding="0" cellspacing="0" border="0"><tr>
+              <td style="background:#C25B5B; color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:0.5px; padding:3px 9px; border-radius:3px;">{cat}</td>
+              <td style="width:10px; font-size:0; line-height:0;">&nbsp;</td>
+              <td style="background:#FBE3E3; color:#A32D2D; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:0.3px; padding:3px 10px; border-radius:9px;">{src}</td>
+            </tr></table>
+          </td>
         </tr></table>
       </td>
-      <td style="padding-left:14px;">
-        <p style="margin:0 0 7px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5; color:#1a1a2e;">
-          {t}
-        </p>
-        <p style="margin:0 0 9px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; color:#8a8f9a; letter-spacing:0.3px;">{cat} <span style="color:#d5d4cf; padding:0 6px;">|</span> {src}</p>
-        <p style="margin:0 0 6px 0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{summary}</p>
-        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; line-height:1.5; word-break:break-all;">🔗 原文链接：<a href="{url}" style="color:#c8102e; text-decoration:underline;">{url}</a></p>
+    </tr>
+    <tr>
+      <td style="padding-bottom:8px;">
+        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:15.5px; font-weight:700; line-height:1.5; color:#1a1a2e;">{t}</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-bottom:6px;">
+        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; font-size:13px; color:#4b5563; line-height:1.8;">{summary}</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p style="margin:0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; font-size:11px; line-height:1.5; word-break:break-all;">🔗 原文链接：<a href="{url}" style="color:#A32D2D; text-decoration:underline;">{url}</a></p>
       </td>
     </tr></table>
   </td>
@@ -343,8 +390,8 @@ def build_email_html(intl, dom, diplo=None):
 <title>信息日报 · 每日早报</title>
 </head>
 <body style="margin:0; padding:0; background:#f5f4f0; font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','SimHei',sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
-<!--[if mso]><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="660" align="center"><tr><td><![endif]-->
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:660px; margin:0 auto; background:#f5f4f0;">
+<!--[if mso]><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="700" align="center"><tr><td><![endif]-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:700px; margin:0 auto; background:#f5f4f0;">
 
   <!-- ===== 顶部 报纸刊头 masthead ===== -->
   <tr>
@@ -362,7 +409,12 @@ def build_email_html(intl, dom, diplo=None):
         <td style="height:1px; font-size:0; line-height:1px; background:#1a1a2e;">&nbsp;</td>
       </tr></table>
       <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:16px;"><tr>
-        <td align="center" style="font-family:'Songti SC','STSong','SimSun',Georgia,'Times New Roman',serif; font-size:18px; font-weight:700; color:#1a1a2e; letter-spacing:2px;">{date_str} &middot; {weekday}</td>
+        <td align="center">
+          <table cellpadding="0" cellspacing="0" border="0" align="center"><tr>
+            <td style="background:#c8102e; color:#ffffff; font-family:Georgia,'Times New Roman',serif; font-size:15px; font-weight:700; padding:2px 10px; border-radius:4px;">{day_num:02d}</td>
+            <td style="padding-left:10px; font-family:'Songti SC','STSong','SimSun',Georgia,'Times New Roman',serif; font-size:18px; font-weight:700; color:#1a1a2e; letter-spacing:2px;">{date_str} &middot; {weekday}</td>
+          </tr></table>
+        </td>
       </tr></table>
       <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:6px;"><tr>
         <td align="center" style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:11px; color:#9aa0ac; letter-spacing:1px;">{vol_str} &middot; {total} 条精选</td>
@@ -396,8 +448,8 @@ def build_email_html(intl, dom, diplo=None):
   <tr>
     <td style="padding:30px 28px 14px; background:#ffffff;">
       <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
-        <td style="border-bottom:2px solid #c8102e; padding-bottom:9px; font-size:19px; font-weight:700; color:#c8102e; letter-spacing:0.5px;">国内要闻</td>
-        <td align="right" style="border-bottom:2px solid #c8102e; padding-bottom:9px; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:12px; color:#9aa0ac; white-space:nowrap;">{len(dom)} stories</td>
+        <td style="border-bottom:2px solid #A32D2D; padding-bottom:9px; font-size:19px; font-weight:700; color:#A32D2D; letter-spacing:0.5px;">国内要闻</td>
+        <td align="right" style="border-bottom:2px solid #A32D2D; padding-bottom:9px; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:12px; color:#9aa0ac; white-space:nowrap;">{len(dom)} stories</td>
       </tr></table>
       <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:16px; border-top:1px solid #ecebe6;">
 {dom_rows}
@@ -483,7 +535,7 @@ def generate_pdf(html_body, pdf_path):
     import tempfile
 
     # PDF 专用：加宽内容区至 730px 并收窄页边距，减少 A4 两侧留白（仅影响 PDF，不影响邮件版）
-    pdf_html = html_body.replace('max-width:660px', 'max-width:730px')
+    pdf_html = html_body.replace('max-width:700px', 'max-width:730px')
     # PDF 专用：字号整体放大，提升阅读体验（仅影响 PDF，不影响邮件版）
     pdf_html = pdf_html.replace('font-size:15.5px;', 'font-size:18px;')  # 新闻标题
     pdf_html = pdf_html.replace('font-size:13px;', 'font-size:15px;')    # 摘要
@@ -507,13 +559,16 @@ const { chromium } = require('playwright');
     path: process.argv[2],
     format: 'A4',
     printBackground: true,
-    margin: { top: '12mm', bottom: '12mm', left: '8mm', right: '8mm' },
-    displayHeaderFooter: false
+    margin: { top: '16mm', bottom: '16mm', left: '8mm', right: '8mm' },
+    displayHeaderFooter: true,
+    headerTemplate: '<div style="width:100%; font-size:9px; color:#9aa0ac; font-family:\'PingFang SC\',\'Microsoft YaHei\',sans-serif; padding:0 8mm; display:flex; justify-content:space-between; align-items:center;"><span>信息日报 · 每日自动生成</span><span>__HEADER_DATE__</span></div>',
+    footerTemplate: '<div style="width:100%; font-size:9px; color:#9aa0ac; font-family:\'PingFang SC\',\'Microsoft YaHei\',sans-serif; text-align:center;">第 <span class="pageNumber"></span> 页 / 共 <span class="totalPages"></span> 页</div>'
   });
   await browser.close();
   console.log('PDF_OK');
 })();
 '''
+    node_script = node_script.replace('__HEADER_DATE__', f"{NOW.year}年{NOW.month}月{NOW.day}日")
     node_bin = "/Users/xiaoxiao/.workbuddy/binaries/node/versions/22.22.2/bin/node"
     if not os.path.exists(node_bin):
         node_bin = "node"
