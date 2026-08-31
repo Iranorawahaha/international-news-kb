@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-08-30 16:05",
+  "lastUpdated": "2026-08-31 09:21",
   "retentionDays": 7,
   "archive": {
     "2026-08-26": [
@@ -401,96 +401,6 @@
         "is_summit_level": false,
         "summary": "记者今天从国家数据局了解到，截至目前，国家公共数据资源登记平台上已登记的数据资源、产品和服务超过30万项，覆盖全部国民经济97个大类。",
         "collectedAt": "2026-08-25 16:22:00"
-      }
-    ],
-    "2026-08-24": [
-      {
-        "title": "王毅会见约旦副首相兼外交大臣萨法迪",
-        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7078934.htm",
-        "date": "2026-08-23",
-        "source": "中国政府网·要闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "新华社北京8月23日电 中共中央政治局委员、外交部长王毅23日在北京会见陪同阿卜杜拉二世国王访华的约旦副首相兼外交大臣萨法迪。",
-        "collectedAt": "2026-08-24 09:21:33"
-      },
-      {
-        "title": "王毅：希望并相信印尼会提供中企良好营商环境",
-        "url": "https://www.zaobao.com/news/china/story20260823-9561253",
-        "date": "2026-08-23",
-        "source": "联合早报",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "中国外长王毅8月22日在雅加达会见印尼国家经济委员会主席卢胡特，表示中国是印尼发展振兴中值得信赖的战略合作伙伴，希望并相信印尼政府会为中企提供安全、稳定、良好的营商环境。卢胡特表示印尼始终欢迎中企赴印尼投资，会为中企提供公平、友好的营商环境。",
-        "collectedAt": "2026-08-24 09:21:33"
-      },
-      {
-        "title": "国务院食安办、农业农村部、市场监管总局指导地方快速处置“白菜收购环节蘸取甲醛溶液”问题",
-        "url": "https://news.cctv.com/2026/08/23/ARTIihEKdiFtABZWAP2FHjFC260823.shtml",
-        "date": "2026-08-23",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "针对舆论关注的河北省张家口市康保县“白菜收购环节蘸取甲醛溶液”问题，国务院食安办、农业农村部、市场监管总局高度重视，第一时间指导属地调查核实，依法从严从快处置，对涉事白菜流向进行追查，严防问题产品流入…",
-        "collectedAt": "2026-08-24 09:21:33"
-      },
-      {
-        "title": "70后覃卫国出任合肥市委书记",
-        "url": "https://www.zaobao.com/news/china/story20260823-9562628",
-        "date": "2026-08-23",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 86,
-        "is_summit_level": false,
-        "summary": "中共安徽省委常委覃卫国出任合肥市委书记。覃卫国现年56岁，广西贵港人，2019年12月跨省调任安徽省政府副秘书长，后历任淮北市市长、淮北市委书记、安徽省副省长兼省公安厅厅长，2025年7月任安徽省委常委、省委政法委书记。",
-        "collectedAt": "2026-08-24 09:21:33"
-      },
-      {
-        "title": "国家卫健委通报：7位项目评审专家被处理 存在严重不良行为",
-        "url": "https://news.cctv.com/2026/08/23/ARTIyqwnVigZLtS5HjmXS9vo260823.shtml",
-        "date": "2026-08-23",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "国家卫生健康委医药卫生科技发展研究中心近日发布通报，7位存在严重不良行为的项目评审专家被处理。",
-        "collectedAt": "2026-08-24 09:21:33"
-      },
-      {
-        "title": "专家解读：人民币买卖新规 监管要求有何考量？",
-        "url": "https://news.cctv.com/2026/08/24/ARTIex1bNW9pLNp1C3JaM7q5260823.shtml",
-        "date": "2026-08-24",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "中国人民银行、市场监管总局近日发布公告，明确了人民币可以买卖和不得买卖的具体情形，细化相关监管要求。",
-        "collectedAt": "2026-08-24 09:21:33"
-      },
-      {
-        "title": "中央网信委印发《促进网信企业高质量发展行动计划(2026-2030年)》 7项行动21条举措",
-        "url": "https://news.cctv.com/2026/08/23/ARTINKXCQcLfQTI2NEKn9fct260822.shtml",
-        "date": "2026-08-23",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "近日，中央网络安全和信息化委员会印发《促进网信企业高质量发展行动计划(2026-2030年)》，提出到2030年我国网信企业综合实力显著增强。行动计划明确7项行动21条举措，包括企业培育服务、创新能力提升、赋能产业升级、海外市场拓展、安全有序发展、营商环境优化、发展要素保障等，并提出建立分类分级培育标准，加快培育更多瞪羚企业、独角兽企业。",
-        "collectedAt": "2026-08-24 09:21:33"
-      },
-      {
-        "title": "港财政司长：中国大陆AI迅速发展对香港经济金融发挥显著助力",
-        "url": "https://www.zaobao.com/news/china/story20260823-9561068",
-        "date": "2026-08-23",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "香港财政司司长陈茂波8月23日发表网志表示，去年12月至今年5月，香港与AI相关的新股集资额近1000亿港元，约占同期新股集资额的55%，反映中国大陆AI迅速发展对香港经济和金融市场发挥显著助力。港府\"AI效能提升组\"已促成首批30个效能提升项目，涉及13个部门。",
-        "collectedAt": "2026-08-24 09:21:33"
       }
     ],
     "2026-08-27": [
@@ -1875,23 +1785,234 @@
         "summary": "当前，大模型加速向千行百业深度落地，带动我国词元调用量快速攀升，市场需求呈现爆发式增长。2026年的数博会现场，集中呈现了一批数字技术的前沿成果和产业实践。",
         "collectedAt": "2026-08-30 16:05:14"
       }
+    ],
+    "2026-08-31": [
+      {
+        "title": "《平“语”近人——习近平喜欢的典故》（多语种版）在上合组织国家媒体播出",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079593.htm",
+        "date": "2026-08-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社比什凯克8月30日电 由中国中央广播电视总台制作的《平“语”近人——习近平喜欢的典故》（多语种版）启播活动30日在吉尔吉斯斯坦首都比什凯克举行。节目即日起在吉尔吉斯斯坦国家电视广播公司等上海合作…",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "《平“语”近人——习近平喜欢的典故》（多语种版）在上海合作组织国家主流媒体播出",
+        "url": "https://tv.cctv.com/2026/08/30/VIDEWLF78kg4klItZgOUseP6260830.shtml",
+        "date": "2026-08-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "《平“语”近人——习近平喜欢的典故》（多语种版）在上海合作组织国家主流媒体播出。",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "习近平抵比什凯克：将同吉总统就双边关系深入交换意见",
+        "url": "https://www.zaobao.com/news/china/story20260830-9598446",
+        "date": "2026-08-30",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "习近平抵达吉尔吉斯斯坦比什凯克玛纳斯国际机场发表书面讲话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079577.htm",
+        "date": "2026-08-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "很高兴应扎帕罗夫总统邀请，时隔7年再次对吉尔吉斯共和国进行国事访问并出席上海合作组织比什凯克峰会。这是我第三次到访美丽的吉尔吉斯斯坦，感到十分亲切。我谨代表中国政府和中国人民，向扎帕罗夫总统和吉尔吉斯…",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "习近平抵达比什凯克出席2026年上海合作组织峰会并对吉尔吉斯斯坦进行国事访问",
+        "url": "https://tv.cctv.com/2026/08/30/VIDEeqkhl5LlMPVFJmbBHKNK260830.shtml",
+        "date": "2026-08-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平抵达比什凯克出席2026年上海合作组织峰会并对吉尔吉斯斯坦进行国事访问。",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "习近平离京出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问",
+        "url": "https://tv.cctv.com/2026/08/30/VIDEwiO1fClFcXMYqvwWsfqX260830.shtml",
+        "date": "2026-08-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平离京出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问。",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "应时代之变 行天下大道——习近平主席引领推动构建更加公正合理的全球治理体系",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079607.htm",
+        "date": "2026-08-31",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社记者 刘品然 刘赞 席玥",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "汲取思想伟力 开启奋进新程——广大党员、干部深学细悟《习近平党建文选》第一卷、第二卷",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079585.htm",
+        "date": "2026-08-30",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "思想之旗引领新征程，理论之光照亮奋进路。",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "西藏自治区新闻办举行新闻发布会",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/31/content_30178115.html",
+        "date": "2026-08-31",
+        "source": "人民日报",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "本报吉隆8月30日电&nbsp;&nbsp;（记者徐驭尧）8月30日，西藏自治区人民政府新闻办公室举行新闻发布会，通报吉隆县泥石流灾害抢险救援工作情况。截至8月29日18时，灾害已造成16人遇难、54…",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "落马江西省长叶建春家族据报涉足稀土生意",
+        "url": "https://www.zaobao.com/news/china/story20260830-9598708",
+        "date": "2026-08-30",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "上半年全国新设外商投资企业3.5万户",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079599.htm",
+        "date": "2026-08-30",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "市场监管总局公布数据显示，上半年，全国新设外商投资企业3.5万户，同比增长7.0%。上半年，共建“一带一路”国家、阿拉伯国家、非盟国家合计在华新设企业1.1万户，分别增长19.3%、20.6%、42.…",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "中国警方通报有网民造谣泥石流灾害“几千人没命了”被罚",
+        "url": "https://www.zaobao.com/news/china/story20260831-9600096",
+        "date": "2026-08-31",
+        "source": "联合早报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "中国通报泥石流灾害原因：冰川断裂导致冰岩崩",
+        "url": "https://www.zaobao.com/news/china/story20260830-9599449",
+        "date": "2026-08-30",
+        "source": "联合早报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "我国推出新举措加快数据产业发展",
+        "url": "https://www.gov.cn/yaowen/liebiao/202608/content_7079598.htm",
+        "date": "2026-08-30",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "记者从国家数据局了解到，我国将推出一系列新举措加快数据产业发展：在32个城市启动新一批数据标注先行先试，为人工智能训练提供数据支撑；探索适配产业实际的词元商业模式，更好助力千行百业数智化转型；14家央…",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "“十五五”，如何培养更多大国工匠（解码“十五五”专项规划）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/31/content_30178102.html",
+        "date": "2026-08-31",
+        "source": "人民日报",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "技能人才是支撑中国制造、中国创造的重要力量。“十四五”以来，我国技能人才规模进一步壮大、结构持续改善、作用更加突显，全国技能人才总量超过2.2亿人，其中高技能人才超7200万人，为经济社会高质量发展提…",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "“物理联通”迈向“规则衔接”（深入实施自由贸易试验区提升战略）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/31/content_30178097.html",
+        "date": "2026-08-31",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "汽笛长鸣，一列满载货物的海铁联运班列从位于重庆自贸试验区的果园港驶出。两天后，列车抵达广西钦州港，货物装进国际货轮，发往马来西亚的港口。",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "彭博：特朗普加大对伊朗经济施压 考验上合组织能力",
+        "url": "https://www.zaobao.com/news/china/story20260831-9600323",
+        "date": "2026-08-31",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "美财长吁G20成员重新审视对华贸易条件",
+        "url": "https://www.zaobao.com/news/china/story20260831-9600192",
+        "date": "2026-08-31",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-31 09:21:26"
+      },
+      {
+        "title": "隆基绿能上半年净亏损近37亿人民币 同比扩大四成",
+        "url": "https://www.zaobao.com/news/china/story20260830-9598334",
+        "date": "2026-08-30",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-08-31 09:21:26"
+      }
     ]
   },
   "dates": [
+    "2026-08-31",
     "2026-08-30",
     "2026-08-29",
     "2026-08-28",
     "2026-08-27",
     "2026-08-26",
-    "2026-08-25",
-    "2026-08-24"
+    "2026-08-25"
   ],
-  "today": "2026-08-30",
-  "todayCount": 38,
+  "today": "2026-08-31",
+  "todayCount": 19,
   "stats": {
-    "totalArticles": 169,
+    "totalArticles": 180,
     "dateCount": 7,
-    "latestDate": "2026-08-30",
-    "summitCount": 30
+    "latestDate": "2026-08-31",
+    "summitCount": 38
   }
 }
