@@ -24,6 +24,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
@@ -279,6 +280,19 @@ def fetch(url, headers=None, timeout=12):
         return resp.read().decode("utf-8", errors="ignore")
 
 
+def fetch_retry(url, timeout=10, retries=2, delay=1.5):
+    """带重试的抓取（应对 mfa.gov.cn SSL 握手不稳 / 瞬时超时）"""
+    last = None
+    for i in range(retries + 1):
+        try:
+            return fetch(url, timeout=timeout)
+        except Exception as e:
+            last = e
+            if i < retries:
+                time.sleep(delay)
+    raise last if last else Exception("fetch failed")
+
+
 def is_comment_column(title):
     """v4: 报纸评论栏目标记（人民论坛等）→ 剔除，非真正会议/新闻"""
     t = title or ""
@@ -340,29 +354,71 @@ def is_junk(title):
     return any(kw in title for kw in JUNK_KEYWORDS)
 
 
-def extract_summary_from_url(url, max_len=100):
-    """抓取文章页正文首段作精简摘要"""
+def extract_summary_from_url(url, max_len=160):
+    """抓取文章页提取详尽摘要（多级 fallback：meta description → 正文首段 → 标题兜底）
+
+    V5.6 增强（2026-09-01 修复摘要缺失根因）：
+    - 带重试抓取（应对 mfa.gov.cn SSL 握手不稳 / 瞬时超时）
+    - meta description / og:description 作为第一 fallback（联合早报等有 meta 但正文提取可能失败）
+    - 正文段落宽松匹配（先剥标签再判长度，容忍内联 <strong>/<em>）
+    - 摘要加长至 160 字（用户要求更详尽）
+    """
+    def clean_text(t):
+        t = re.sub(r"<[^>]+>", "", t or "")
+        t = t.replace("　", " ").replace("\n", " ").strip()
+        return re.sub(r"\s+", " ", t)
+
+    def meta_desc(h):
+        # og:description / description（兼容 name= / property= / 单双引号）
+        for pat in [
+            r'<meta[^>]+property=["\']og:description["\'][^>]*content=["\']([^"\']+)["\']',
+            r'<meta[^>]+name=["\']description["\'][^>]*content=["\']([^"\']+)["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]*property=["\']og:description["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]*name=["\']description["\']',
+        ]:
+            m = re.search(pat, h, re.I)
+            if m:
+                t = clean_text(m.group(1))
+                if len(t) >= 15:
+                    return t[:max_len] + ("…" if len(t) > max_len else "")
+        return ""
+
     try:
-        h = fetch(url, timeout=8)
+        h = fetch_retry(url, timeout=10, retries=2)
         h = re.sub(r"<script.*?</script>", "", h, flags=re.S)
         h = re.sub(r"<style.*?</style>", "", h, flags=re.S)
-        # 人民日报: enpcontent 标记
+        # 1) 人民日报: enpcontent 标记
         m = re.search(r"enpcontent(.*?)enpcontent", h, re.S)
-        if m:
-            paras = re.findall(r"<p[^>]*>([^<]{15,300})</p>", m.group(1))
-        else:
-            paras = re.findall(r"<p[^>]*>([^<]{15,300})</p>", h)
+        body = m.group(1) if m else h
+        # 2) 正文段落：宽松匹配（先剥标签，容忍内联标签），首段短时拼接后续段落直到足够详尽
+        NAV_NOISE = ("跳转到其他网站", "是否继续访问", "您即将离开", "返回首页", "打印本页", "分享到", "相关推荐", "Copyright", "版权所有")
+        paras = re.findall(r"<p[^>]*>(.*?)</p>", body, re.S)
+        parts = []
         for p in paras:
-            p = re.sub(r"<[^>]+>", "", p).strip()
-            p = p.replace("　", " ").replace("\n", " ").strip()
-            # 跳过导航/占位
-            if not p or "版" in p[:12] or p.startswith("■"):
+            t = clean_text(p)
+            if not t or "版" in t[:12] or t.startswith("■"):
                 continue
-            if len(p) >= 15:
-                return p[:max_len] + ("…" if len(p) > max_len else "")
+            if any(n in t for n in NAV_NOISE):
+                continue
+            if len(t) >= 12:
+                parts.append(t)
+                if sum(len(x) for x in parts) >= max_len:
+                    break
+        if parts:
+            joined = " ".join(parts)
+            return joined[:max_len] + ("…" if len(joined) > max_len else "")
+        # 3) meta description fallback
+        md = meta_desc(h)
+        if md:
+            return md
         return ""
     except Exception:
-        return ""
+        # 4) 抓取失败 → 尝试 meta description（可能部分页面仍可达）
+        try:
+            h = fetch(url, timeout=8)
+            return meta_desc(h)
+        except Exception:
+            return ""
 
 
 def make_item(title, url, date, source, summary=None):
