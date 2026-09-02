@@ -7655,33 +7655,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-08-31_29816",
-        "date": "2026-08-31",
-        "title": "Nepal-China border flood: death toll tops 950, families wait for news 中尼边境洪灾死亡超950人",
-        "title_en": "Nepal-China border flood: More than 950 dead, thousands missing",
-        "title_zh": "中尼边境洪灾死亡人数超950人 中国工人家属苦等消息",
-        "summary": "CNN与美联社报道，尼泊尔-中国边境吉隆口岸一带山洪泥石流灾害已致两国超950人确认死亡、数千人失踪，逾900名水电项目工人失联。在尼中资项目（西藏天路公司承建的公路）中国工人家属赴拉萨寻求信息，呼吁企业加强救援与信息公开。美国、澳大利亚、加拿大等国公民亦有失踪。救援人员正争分夺秒搜救被困水电站隧道的人员，堰塞湖风险与持续降雨令灾情雪上加霜。",
-        "summary_en": null,
-        "summary_zh": null,
-        "source": "CNN",
-        "category": "地区动态",
-        "keywords": [
-          "尼泊尔",
-          "洪灾",
-          "中尼边境",
-          "救援"
-        ],
-        "url": "https://w.st/LQKAf",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "importance": "中",
-        "collectedAt": "2026-09-02 09:30:00",
-        "collection_method": "webfetch",
-        "column": "中国",
-        "is_official": null,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-09-01_13412",
         "date": "2026-09-01",
         "title": "US Congress advances new bill to give US edge in open-source AI race with China 美国国会推进开源AI竞赛法案 争夺对华主导权",
@@ -8679,7 +8652,7 @@
     "2026-08-26"
   ],
   "stats": {
-    "totalArticles": 328,
+    "totalArticles": 327,
     "dateCount": 8,
     "latestDate": "2026-09-02",
     "oldestDate": "2026-08-26"
