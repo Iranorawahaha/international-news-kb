@@ -44,9 +44,9 @@ MFA_LEADER = "https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/"     # 领�
 # V5.2: 外交部全子栏目
 MFA_WSRC   = "https://www.mfa.gov.cn/web/wjdt_674879/wsrc_674883/"        # 外事日程（高优先级）
 MFA_DSRM   = "https://www.mfa.gov.cn/web/wjdt_674879/dsrm_674893/"        # 大使任免（高优先级）
-MFA_BLDHD  = "https://www.mfa.gov.cn/web/wjdt_674879/bldhd_674885/"       # 部领导活动（高优先级）
-MFA_ZCJD   = "https://www.mfa.gov.cn/web/wjdt_674879/zcjd_674887/"        # 政策解读（高优先级）
-MFA_YWDT   = "https://www.mfa.gov.cn/web/wjdt_674879/ywdt_674891/"        # 业务动态（低优先级）
+MFA_BLDHD  = "https://www.mfa.gov.cn/web/wjdt_674879/wjbxw_674885/"      # 部领导活动（高优先级）V5.7 URL改版：bldhd→wjbxw
+MFA_ZCJD   = "https://www.mfa.gov.cn/web/wjdt_674879/zcjd/"               # 政策解读（高优先级）V5.7 URL改版：zcjd_674887→zcjd
+MFA_YWDT   = "https://www.mfa.gov.cn/web/wjdt_674879/sjxw_674887/"        # 业务动态（低优先级）V5.7 URL改版：ywdt_674891→sjxw_674887
 # V5.1: 商务部新版URL（网站已改版）
 MOFCOM_XWFB = "https://www.mofcom.gov.cn/xwfb/"                            # 商务部·新闻发布（新版）
 NDRC_NEWS = "https://www.ndrc.gov.cn/xwdt/"                                # 发改委·新闻动态
