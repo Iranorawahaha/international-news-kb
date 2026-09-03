@@ -8764,6 +8764,98 @@
     "summary_en": null,
     "summary_zh": null,
     "repost_from": "Politico 原文（官网反爬不可达），经 Livemint（Mint）转载"
+   },
+   {
+    "id": "auto_2026-09-02_73115",
+    "date": "2026-09-02",
+    "title_en": "US, China arm for space warfare: hunter satellites and orbital weapons",
+    "title_zh": "路透：中美加速太空军事化 研发'猎人'卫星与轨道武器",
+    "summary": "路透社综合文件、太空追踪数据与多名现退役军官访谈报道：中美正加速将冲突延伸至地球轨道。6月，一架神秘的中国无人太空飞机释放小卫星，在地球上方数百公里处绕另一颗中国卫星机动后返航（美太空追踪公司 LeoLabs 观测）；美军则运营类似无人太空飞机。中国军方关联科研人员正研发可追击甚至捕获他国航天器的卫星技术；美英去年9月完成首次太空联合军事行动，路径刻意贴近中国实践12-01卫星约83公里，被专家视为对北京的信号。美太空军作战部长萨尔茨曼称中方能力'实质性'、威胁'显著'。",
+    "source": "路透社",
+    "category": "中美博弈",
+    "keywords": [
+     "中美",
+     "太空军事",
+     "卫星",
+     "轨道武器"
+    ],
+    "url": "https://economictimes.indiatimes.com/news/international/world-news/us-china-arm-for-space-warfare-hunter-satellites-and-orbital-weapons/articleshow/133707092.cms",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "中",
+    "collectedAt": "2026-09-03",
+    "collection_method": "webfetch",
+    "column": "中国",
+    "repost_from": "Reuters 原文（reuters.com 官网反爬401不可达），经印度经济时报转载"
+   },
+   {
+    "id": "auto_2026-09-03_55122",
+    "date": "2026-09-03",
+    "title_en": "Tech pilgrims flock to China as global innovation race heats up",
+    "title_zh": "路透：全球科技'朝圣者'涌向中国 人形机器人/AI/电动车引外国资本考察潮",
+    "summary": "路透社北京电：人形机器人在工厂作业、AI 模型挑战全球对手、电动车厂满负荷生产，正吸引新一波外国访客涌入中国。投资者和创业者花费数千至1.5万美元报名为期五天的中国工厂考察团，寻求'中国冲击2.0'的一线观察；美国投资机构 Dimension、Capital Group、Thrive Capital 及科技主播莱克斯·弗里德曼均已到访。中国去年工业旅游收入178亿美元，预计2029年突破446亿美元；小米电动车工厂自2024年3月已接待超25万人次。上海顾问陆圣运称欧洲高管'危机感显而易见'，希望学习中国在省级大规模协调AI部署的经验。",
+    "source": "路透社",
+    "category": "AI·科技",
+    "keywords": [
+     "中国科技",
+     "人形机器人",
+     "AI",
+     "外资考察"
+    ],
+    "url": "https://finwire.io/news/economy-news/tech-pilgrims-flock-to-china-as-global-innovation-race-heats-up",
+    "priority_score": 85,
+    "is_summit_level": false,
+    "importance": "中",
+    "collectedAt": "2026-09-03",
+    "collection_method": "webfetch",
+    "column": "中国",
+    "repost_from": "Reuters 原文（reuters.com 官网反爬401不可达），经 finwire.io 转载"
+   },
+   {
+    "id": "auto_2026-09-02_90431",
+    "date": "2026-09-02",
+    "title_en": "U.S. Says It's Fed Up With China's Overcapacity—and More Countries Agree",
+    "title_zh": "华尔街日报：美国称受够了中国产能过剩 更多国家认同",
+    "summary": "华尔街日报报道：美国对中国制造业与出口'巨无霸'的担忧正走向全球。周二在北卡罗来纳州阿什维尔举行的G20财长与央行行长会议上，一份由美财政部代为发布的G20联合声明含蓄批评北京过度依赖出口拉动增长，标志着对华国际压力进入新阶段。声明未点名中国，但脚注显示唯一反对者即中国；美国财长贝森特称各国认为'无休止廉价出口不可持续'，日本财务大臣加藤胜信称'大家的情绪都已越过阈值'，连俄罗斯都未反对。中国去年贸易顺差达1.2万亿美元。分析师认为，声明措辞足够笼统，其他国家可在不与中国正面冲突的情况下签字。",
+    "source": "华尔街日报",
+    "category": "中美博弈",
+    "keywords": [
+     "G20",
+     "产能过剩",
+     "贸易顺差",
+     "对华施压"
+    ],
+    "url": "https://www.tradingview.com/news/DJN_DN20260902003926:0/",
+    "priority_score": 88,
+    "is_summit_level": false,
+    "importance": "中",
+    "collectedAt": "2026-09-03",
+    "collection_method": "webfetch",
+    "column": "中国",
+    "repost_from": "WSJ 原文（wsj.com 付费墙不可达），经 TradingView 道琼斯新闻(Dow Jones Newswires)电头转载"
+   },
+   {
+    "id": "auto_2026-09-02_62355",
+    "date": "2026-09-02",
+    "title_en": "GOP lawmakers seek answers from Trump trade chief on Canada tariffs",
+    "title_zh": "Politico：众院共和党人就加拿大关税质询贸易代表格里尔",
+    "summary": "Politico 报道：众议院共和党人周三在国会山闭门午餐会上，就与加拿大贸易战对地方经济的冲击向美国贸易代表格里尔施压。多名来自北部边境州、与加拿大贸易往来密切的议员提出'大量疑问'，密歇根州众议员约翰·詹姆斯称'密歇根不是这些贸易谈判的棋子'。加拿大计划9月8日对美实施'对等'报复性关税，瞄准在美有政治影响力的州与行业。格里尔会后淡化议员的焦虑，称议员们'完全理解总统在做什么'。此前美方对约200亿美元加拿大商品加征50%关税后谈判破裂。",
+    "source": "Politico",
+    "category": "美国内政",
+    "keywords": [
+     "美加贸易战",
+     "关税",
+     "格里尔",
+     "国会"
+    ],
+    "url": "https://www.politico.com/news/2026/09/02/gop-lawmakers-trump-trade-chief-canada-tariffs-01062544",
+    "priority_score": 84,
+    "is_summit_level": false,
+    "importance": "中",
+    "collectedAt": "2026-09-03",
+    "collection_method": "webfetch",
+    "column": "美国",
+    "repost_from": null
    }
   ]
  },
@@ -8778,11 +8870,11 @@
   "2026-08-27"
  ],
  "stats": {
-  "totalArticles": 334,
+  "totalArticles": 338,
   "dateCount": 8,
   "latestDate": "2026-09-03",
   "oldestDate": "2026-08-27"
  },
  "today": "2026-09-03",
- "todayCount": 47
+ "todayCount": 51
 }
