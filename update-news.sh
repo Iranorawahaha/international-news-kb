@@ -799,6 +799,30 @@ except FileNotFoundError:
 except Exception as _ff_e:
     print(f"  ⚠️ 官方源字段升级失败: {_ff_e}")
 
+# V2.13 国际 7 大板块 L2 归一（2026-09-02 用户拍板：仅今日版面生效，历史版面 category 不改）
+#   旧 category（13 种，关系/议题/地域三轴杂糅）→ 互斥 7 板块；板块序 = 日报/看板展示序
+#   必须在官方源字段升级与 V2.6 日期护栏之后跑（否则 category 会被官方源旧标签覆盖）
+#   放在最后且自带 save_data：官方源升级段若 FileNotFoundError 提前退出也不影响本步
+try:
+    _sec_proj = _os_rc.environ.get('PROJECT_DIR') or _os_rc.getcwd()
+    if _sys_rc.path[0] != _sec_proj:
+        _sys_rc.path.insert(0, _sec_proj)
+    from scripts.intl_sector import classify_sector as _classify_sec, SECTOR_ORDER as _SEC_ORDER
+    _sec_today = data['archive'].get(today, [])
+    _sec_changed = 0
+    for _sa in _sec_today:
+        _snew = _classify_sec(_sa)
+        if _snew and _sa.get('category') != _snew:
+            _sa['category'] = _snew
+            _sec_changed += 1
+    save_data(data)
+    if _sec_changed:
+        print(f"  🔁 V2.13 板块归一: 今日 {len(_sec_today)} 条中 {_sec_changed} 条 category 重置为 7 大板块")
+    else:
+        print(f"  ✅ V2.13 板块归一: 今日 {len(_sec_today)} 条已符合 7 大板块（{'/'.join(_SEC_ORDER)}）")
+except Exception as _sec_e:
+    print(f"  ⚠️ V2.13 板块归一失败(不影响主流程): {_sec_e}")
+
 print("\n" + "=" * 60)
 print(f"✅ V1.2.1 数据整合完成！")
 print(f"   总新闻数: {data['stats']['totalArticles']} 条")
