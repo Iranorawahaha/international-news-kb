@@ -43,10 +43,13 @@ DATA_FILE = os.path.join(BASE_DIR, "data", "diplomatic-affairs.json")
 # ============== 配置 ==============
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
-# 外交部关键页面
+# 外交部关键页面（2026-09-03 修复：fmprc.gov.cn 旧域名栏目已失效跳同页，改用 mfa.gov.cn 新栏目路径）
+# 频道 wjdt_674879（外交动态）下子栏目：
+#   wjbxw_674885 = 部领导新闻 | wsrc_674883 = 外事日程(访华预告) | fyrbt_674889 = 例行记者会
 MFA_URLS = {
-    "外交动态": "https://www.fmprc.gov.cn/wjdt/",
-    "发言人表态": "https://www.fmprc.gov.cn/fyrbt/",
+    "外交动态": "https://www.mfa.gov.cn/web/wjdt_674879/wjbxw_674885/",
+    "外事日程": "https://www.mfa.gov.cn/web/wjdt_674879/wsrc_674883/",
+    "例行记者会": "https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/",
 }
 
 # gov.cn 要闻
