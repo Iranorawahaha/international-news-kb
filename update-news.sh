@@ -456,6 +456,11 @@ for temp_file in temp_files:
                 art["keywords"] = []
             # 官方信源字段补全（score/is_summit_level/column）
             if art.get("is_official"):
+                # V2.13.1 程序性文告兜底降权：纪念月/周文告（Presidential Message/Proclamation on National XX Month|Week|Day|Year）
+                # 不得享受 ⭐元首级/88 高优先（2026-09-03 用户诊断：白宫纪念月文告水稿挤占 ≥88 名额）
+                if re.search(r"(?:Presidential Message|Proclamation)\s+on\s+National\b[^,.]*?\b(?:Month|Week|Day|Year)\b", art.get("title", "") or "", re.I):
+                    art["priority_score"] = 75
+                    art["is_summit_level"] = False
                 if art.get("priority_score") is None or art.get("priority_score") == "":
                     t = art.get("title", "")
                     cn = any(k in t for k in ["China", "Chinese", "中国", "Beijing", "Taiwan", "台湾", "TikTok", "Huawei"])

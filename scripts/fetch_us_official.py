@@ -222,8 +222,28 @@ def extract_page_meta(html, url):
     return real_date, summary
 
 
+def _is_procedural(title):
+    """V2.13.1 程序性文告识别：白宫纪念月/周/日/年文告（Presidential Message/Proclamation on National XX Month|Week|Day|Year）
+
+    无实质政策情报价值，不应享受 ⭐元首级/88 高优先。政策类（National Emergency、制裁/关税公告）不命中。
+    """
+    if not title:
+        return False
+    t = str(title)
+    # Presidential Message on National ... Month/Week/Day/Year
+    if re.search(r"(?:Presidential Message|Proclamation)\s+on\s+National\b[^,.]*?\b(?:Month|Week|Day|Year)\b", t, re.I):
+        return True
+    # President ... Proclaims/Proclaiming National ... Month/Day ...
+    if re.search(r"President\s+[^,.]{0,80}?Proclaim(?:s|ed|ing)?\s+National\b[^,.]*?\b(?:Month|Week|Day|Year)\b", t, re.I):
+        return True
+    return False
+
+
 def calc_score(title, url):
     """计算 priority_score 与 summit"""
+    if _is_procedural(title):
+        # V2.13.1: 程序性文告降权（不涉实质政策，不得占 88/⭐高优先名额）
+        return 75, False
     text = f"{title} {url}"
     cn = any(k in title for k in ["China", "Chinese", "中国", "Beijing", "Taiwan", "台湾", "TikTok", "Huawei"])
     summit = any(k in title for k in ["President", "Trump", "Xi", "习近平", "Biden", "普京", "Putin"])
@@ -295,6 +315,10 @@ def main():
                         continue
                 except Exception:
                     pass  # 日期解析失败则保留（宁滥勿缺）
+                # V2.13.1: 程序性文告（Presidential Message/Proclamation on National XX Month/Week/Day/Year）
+                # 无实质政策情报价值 → 直接不入池（2026-09-03 用户诊断：文告水稿挤占 ≥88 名额）
+                if _is_procedural(t):
+                    continue
                 valid.append(make_item(t, u, final_date, cfg["name"], cfg["category"], page_summary))
             all_items.extend(valid[:20])
             succeeded.append({"site": cfg["name"], "url": cfg["url"], "status": "✅ 成功", "count": len(valid[:20])})
