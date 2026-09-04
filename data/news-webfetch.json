@@ -15873,7 +15873,7 @@
   "title": "Beijing sends coastguard for 'law enforcement' patrol near Taiwan 中国海警在台湾以东海域开展常态化执法巡查"
  },
  {
-  "title_en": "Moonshot AI confidentially files Hong Kong IPO targeting $3 billion",
+  "title_en": "Chinese AI firm Moonshot files confidentially for Hong Kong IPO, sources say",
   "title_zh": "路透：月之暗面秘密递交港股IPO申请 拟募资30亿美元",
   "summary": "据路透社援引知情人士，中国AI独角兽月之暗面（Kimi开发商）已向港交所秘密递交IPO申请，目标募资约30亿美元，正以500亿美元估值推进Pre-IPO轮融资。公司已拆红筹架构转境内主体；高盛、中金、德意志银行参与。美方此前质疑其用受限英伟达芯片训练Kimi K3并蒸馏Anthropic模型能力，财长贝森特称可能将其列入贸易黑名单。",
   "source": "路透社",
@@ -15885,14 +15885,13 @@
    "AI",
    "中美科技竞争"
   ],
-  "url": "https://finance.yahoo.com/technology/ai/articles/moonshot-ai-confidentially-files-hong-122635290.html",
+  "url": "https://www.reuters.com/world/asia-pacific/chinese-ai-firm-moonshot-files-confidentially-hong-kong-ipo-sources-say-2026-09-03/",
   "priority_score": 94,
   "is_summit_level": true,
   "date": "2026-09-03",
   "collectedAt": "2026-09-04",
   "collection_method": "webfetch",
-  "repost_from": "路透社原文，经 Yahoo Finance(Quartz) 转载",
-  "title": "Moonshot AI confidentially files Hong Kong IPO targeting $3 billion 路透：月之暗面秘密递交港股IPO申请 拟募资30亿美元"
+  "title": "Chinese AI firm Moonshot files confidentially for Hong Kong IPO, sources say 路透：月之暗面秘密递交港股IPO申请 拟募资30亿美元"
  },
  {
   "title_en": "Automakers urge Congress to quickly pass law banning Chinese cars",
@@ -15907,13 +15906,12 @@
    "汽车产业",
    "中美经贸"
   ],
-  "url": "https://eu.detroitnews.com/story/business/autos/2026/09/03/ban-chinese-cars-from-u-s-automakers-tell-congress/91594573007",
+  "url": "https://www.reuters.com/world/automakers-urge-congress-quickly-pass-law-banning-chinese-cars-2026-09-03/",
   "priority_score": 90,
   "is_summit_level": true,
   "date": "2026-09-03",
   "collectedAt": "2026-09-04",
   "collection_method": "webfetch",
-  "repost_from": "路透社原文，经底特律新闻(Detroit News)转载",
   "title": "Automakers urge Congress to quickly pass law banning Chinese cars 路透：美车企联盟敦促国会年内立法禁止中国汽车进入美国"
  },
  {
@@ -16325,5 +16323,89 @@
   "collection_method": "webfetch",
   "repost_from": null,
   "title": "US commerce secretary erroneously said no Americans have died in Iran war, Trump claims 卫报：美商务部长卢特尼克称对伊战争无美国人死亡被指失言"
+ },
+ {
+  "date": "2026-09-03",
+  "title": "Greer says agriculture, non-tariff barrier announcements likely during Xi visit 路透：美贸易代表格里尔称习近平访美期间料宣布农业及非关税壁垒成果 不寻求庞大全面协议",
+  "title_en": "Greer says agriculture, non-tariff barrier announcements likely during Xi visit",
+  "title_zh": "路透：美贸易代表格里尔称习近平访美期间料宣布农业及非关税壁垒成果 不寻求庞大全面协议",
+  "summary": "美国贸易代表格里尔9月3日接受福克斯新闻采访时表示，习近平本月访问华盛顿期间，美中预计将就农业及涉农非关税壁垒作出更多宣布，以激励美国对华销售；数百亿美元规模的农产品协议可期，中方正履行大豆采购承诺。他强调美方“并不寻求与中国达成庞大的全面贸易协议，我们要做的是管理这段关系”，并拒绝承诺对华具体关税税率；芯片出口管制并非主要议题，中方购买英伟达H200属主权决定。",
+  "source": "路透社",
+  "category": "中美博弈",
+  "keywords": [
+   "格里尔",
+   "USTR",
+   "习特会",
+   "农产品采购",
+   "非关税壁垒"
+  ],
+  "url": "https://www.asiaone.com/world/greer-says-agriculture-non-tariff-barrier-announcements-likely-during-xi-visit",
+  "priority_score": 92,
+  "is_summit_level": true,
+  "collectedAt": "2026-09-04",
+  "collection_method": "webfetch"
+ },
+ {
+  "date": "2026-09-03",
+  "title": "Trump turns to a dual economic and military approach in latest attempt to squeeze Iran 美联社：特朗普对伊转向经济军事双轨施压 但因习特会临近不愿针对中国",
+  "title_en": "Trump turns to a dual economic and military approach in latest attempt to squeeze Iran",
+  "title_zh": "美联社：特朗普对伊转向经济军事双轨施压 但因习特会临近不愿针对中国",
+  "summary": "美联社分析指出，“经济排斥行动”(Operation Economic Outcast)启动一周收效有限，迄今仅制裁一家埃及银行阿联酋分支。专家认为制裁要真正奏效必须覆盖伊朗主要贸易伙伴——首要是包括中国在内的伙伴，以及印度、俄罗斯；但特朗普因本月底准备主持习近平访美，不愿在峰会前对中国下手。霍尔木兹海峡通行量仍远低于战前水平，美方一边维持海上封锁一边恢复打击，伊朗拒绝让步，冲突长期化风险上升。",
+  "source": "美联社",
+  "category": "地区局势",
+  "keywords": [
+   "伊朗",
+   "经济排斥行动",
+   "二级制裁",
+   "中国",
+   "习特会"
+  ],
+  "url": "https://www.local10.com/news/politics/2026/09/03/trump-turns-to-a-dual-economic-and-military-approach-in-latest-attempt-to-squeeze-iran",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "collectedAt": "2026-09-04",
+  "collection_method": "webfetch"
+ },
+ {
+  "date": "2026-09-03",
+  "title": "Vance says China 'willing to play ball' on strangling Iran's economy 华盛顿审查者报：万斯称中方愿就切断伊朗经济命脉“配合美方” 已回应部分要求",
+  "title_en": "Vance says China 'willing to play ball' on strangling Iran's economy",
+  "title_zh": "华盛顿审查者报：万斯称中方愿就切断伊朗经济命脉“配合美方” 已回应部分要求",
+  "summary": "美国副总统万斯9月3日在白宫简报会上对华盛顿审查者报表示，美方已就中国银行向伊朗提供金融服务问题与中方多次沟通，“坦率地说，我认为中方对我们提出的一些要求作出了回应”；他不确定特朗普是否已当面向习近平提出该议题。万斯称中方“愿意配合”(willing to play ball)，但并非完全按美方要求行事，并称中方在相关问题上比伊朗“负责任得多”。中国商务部同日回应将抵制美方对伊贸易制裁，重申反对未经安理会授权的单边制裁。",
+  "source": "华盛顿审查者报",
+  "category": "中美博弈",
+  "keywords": [
+   "万斯",
+   "中国银行",
+   "伊朗",
+   "金融制裁",
+   "中美沟通"
+  ],
+  "url": "https://www.washingtonexaminer.com/news/white-house/4712517/vance-china-play-ball-iran-economy/",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "collectedAt": "2026-09-04",
+  "collection_method": "webfetch"
+ },
+ {
+  "date": "2026-09-03",
+  "title": "China rejects G20 trade-imbalance claims, says no need to devalue yuan 南华早报：中国反驳G20贸易失衡批评 央行称无意以人民币贬值获取贸易优势",
+  "title_en": "China rejects G20 trade-imbalance claims, says no need to devalue yuan",
+  "title_zh": "南华早报：中国反驳G20贸易失衡批评 央行称无意以人民币贬值获取贸易优势",
+  "summary": "G20财长和央行行长会议因中方反对涉全球失衡、非市场政策等段落，未能发表联合公报。央行行长潘功胜在会上回应称，中国从不刻意追求贸易顺差，无意通过人民币贬值获取贸易优势，正着力扩大内需，主张各国通过结构性改革共同解决全球失衡；财政部副部长廖岷呼吁坚持真正的多边主义、全面客观平衡看待失衡问题。美财长贝森特则称其余19个成员均认同需处理廉价出口问题，只有中国持异议。",
+  "source": "南华早报",
+  "category": "中美博弈",
+  "keywords": [
+   "G20",
+   "潘功胜",
+   "人民币",
+   "贸易失衡",
+   "贝森特"
+  ],
+  "url": "https://www.scmp.com/economy/global-economy/article/3366213/china-rejects-g20-trade-imbalance-claims-says-no-need-devalue-yuan",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "collectedAt": "2026-09-04",
+  "collection_method": "webfetch"
  }
 ]
