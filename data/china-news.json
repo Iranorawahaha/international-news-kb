@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-09-04 09:21",
+  "lastUpdated": "2026-09-04 09:32",
   "retentionDays": 7,
   "archive": {
     "2026-08-29": [
@@ -2184,17 +2184,6 @@
     ],
     "2026-09-04": [
       {
-        "title": "中共中央政治局委员、外交部长王毅谈习近平主席出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问（2026-09-03）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202609/t20260903_12015595.shtml",
-        "date": "2026-09-03",
-        "source": "外交部",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "您访问的页面不存在或已删除",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
         "title": "习近平主席总结中埃关系70年鲜明特征",
         "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7080081.htm",
         "date": "2026-09-03",
@@ -2228,17 +2217,6 @@
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
-        "title": "携手各国发展振兴，改革完善全球治理——中共中央政治局委员、外交部长王毅谈习近平主席出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问",
-        "url": "https://news.cctv.com/2026/09/03/ARTIKxjnW3zkx6l9qJP03msz260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "2026年8月30日至9月3日，国家主席习近平应邀赴吉尔吉斯斯坦出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问。行程结束之际，中共中央政治局委员、外交部长王毅向随行记者介绍此访情况。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
         "title": "携手各国发展振兴，改革完善全球治理——习近平主席出席二〇二六年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问取得圆满成功",
         "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7080095.htm",
         "date": "2026-09-04",
@@ -2257,7 +2235,7 @@
         "category": "元首动态",
         "priority_score": 100,
         "is_summit_level": true,
-        "summary": "",
+        "summary": "美国贸易代表格里尔9月3日透露，习近平主席本月访美期间（预计9月24日访问华盛顿），美中预计将宣布农业贸易及相关非关税壁垒方面的安排，以促进美国农产品对华销售。格里尔称，美方无意与中国达成庞大而全面的贸易协议，而是希望管控好双边关系。（联合早报，据路透社）",
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
@@ -2305,6 +2283,17 @@
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
+        "title": "商务部：敦促法方立即停止实施“反超快时尚”法 否则将采取必要措施维护中企权益",
+        "url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n9y3r/index.html",
+        "date": "2026-09-03",
+        "source": "商务部",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "9月3日例行新闻发布会上，就法国“反超快时尚”法9月1日生效、对纺织产品征收环境罚款，商务部发言人黄玲表示强烈不满和坚决反对，指该法以“环保”“可持续”为名行双重标准之实，涉嫌违反世贸组织非歧视原则，已给相关中资企业造成重大经营损失；中方敦促法方立即停止实施该法，如法方一意孤行，中方将采取必要措施维护中资企业正当权益。",
+        "collectedAt": "2026-09-04 09:25"
+      },
+      {
         "title": "2026年9月3日外交部发言人郭嘉昆主持例行记者会（2026-09-03）",
         "url": "https://www.mfa.gov.cn/web/wjdt_674879/202609/t20260903_12015775.shtml",
         "date": "2026-09-03",
@@ -2312,7 +2301,7 @@
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "",
+        "summary": "9月3日外交部例行记者会上，发言人郭嘉昆宣布墨西哥外长贝拉斯科将于9月6日至7日访华；介绍习近平主席访埃成果，中埃发表深化全面战略伙伴关系联合声明；通报对尼泊尔第三批紧急援助物资已启运；正告日本右翼势力，坚决遏止日本“新型军国主义”滋长成势；会后回应韩国光州双年展涉台错误做法，表示中方已向韩方提出严正交涉，要求立即纠正。",
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
@@ -2324,28 +2313,6 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "9月3日，国家防灾减灾救灾委员会办公室、应急管理部针对近期福建暴雨洪涝灾害影响，根据灾区群众避险转移和安置救助需要，会同国家粮食和物资储备局调拨折叠床、夏凉被、家庭应急包等5000件中央救灾物资，支持…",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "中国外交部：希望韩国政府以实际行动践行一个中国原则",
-        "url": "https://www.zaobao.com/news/china/story20260903-9623160",
-        "date": "2026-09-03",
-        "source": "联合早报",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "保定卫健委通报“家长班级群自报干部身份求关照”",
-        "url": "https://news.cctv.com/2026/09/04/ARTICRWf6nH3rqh09H8D0GxG260904.shtml",
-        "date": "2026-09-04",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "每天8点，央视网为您梳理24小时内发生在咱们身边的大小事儿。",
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
@@ -2367,7 +2334,7 @@
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "",
+        "summary": "2026年1-7月我国服务进出口总额44467.1亿元，同比增长8.3%。其中出口17732.3亿元，增长17.1%；进口26734.8亿元，增长3.2%。旅行和运输服务出口对整体服务出口增长的贡献率超50%；知识密集型服务出口占比过半，个人文化和娱乐服务、知识产权使用费出口增速最快。",
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
@@ -2378,29 +2345,7 @@
         "category": "部委动态",
         "priority_score": 85,
         "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "图表：2026年前7个月我国服务进出口总额同比增长8.3%",
-        "url": "https://www.gov.cn/zhengce/jiedu/tujie/202609/content_7080122.htm",
-        "date": "2026-09-03",
-        "source": "中国政府网·要闻",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "商务部9月3日发布数据显示，今年1至7月，我国服务进出口总额44467.1亿元，同比增长8.3%。 主办单位：国务院办公厅 运行维护单位：中国政府网运行中心 网站标识码bm01000001 京ICP备05070218号 京公网安备11010202000001号 主办单位：国务院办公厅 运行维护单位：中国政府网运行中心 …",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "外交部：坚决遏制日本“新型军国主义”祸乱地区危害世界",
-        "url": "https://news.cctv.com/2026/09/03/ARTIOhWFvAWJaqAl03f31Poq260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "9月3日，外交部发言人郭嘉昆主持例行记者会。",
+        "summary": "9月2日，国家发展改革委副主任岳修虎主持召开“六张网”重大项目协调推进机制会，研究完善政银企协作机制和项目库建设：推动各牵头部门和地方加快建设“六张网”项目库、加强与金融机构信息共享实现高效“投贷联动”，同步完善价费机制和配套政策，更好发挥政府投资撬动作用。工信部、住建部、水利部、国资委、金融监管总局、国家能源局及多家金融机构、地方发改委和企业负责同志参会。",
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
@@ -2426,6 +2371,17 @@
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
+        "title": "人工智能中小企业创业支持计划启动",
+        "url": "https://news.cctv.com/2026/09/04/ARTIO8JO3dGdKdX94HNbJXk9260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "9月3日，工业和信息化部宣布，启动人工智能中小企业创业支持计划。计划通过三年时间，在行业应用、数据服务、智能算力等重点领域，培育形成一大批人工智能创业企业，新培育科技和创新型中小企业1万家以上。",
+        "collectedAt": "2026-09-04 09:21:54"
+      },
+      {
         "title": "《保险公司资产负债管理办法》发布",
         "url": "http://paper.people.com.cn/rmrb/pc/content/202609/04/content_30179058.html",
         "date": "2026-09-04",
@@ -2448,28 +2404,6 @@
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
-        "title": "关于全国网络安全标准化技术委员会换届及征集委员的通知",
-        "url": "https://www.cac.gov.cn/2026-09/03/c_1790185079976128.htm",
-        "date": "2026-09-03",
-        "source": "网信办",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "当前位置：首页&gt;正文 关于全国网络安全标准化技术委员会换届及征集委员的通知 网安字〔2026〕17号 全国网络安全标准化技术委员会（SAC/TC260）是国家标准化管理委员会批准成立的直属标委会，负责网络安全技术、机制、服务、管理、评估等领域网络安全国家标准的统一技术归口，统一组织申报、送审和报批。第三届TC26…",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "十部门印发《促进中小企业发展“十五五”规划》",
-        "url": "https://news.cctv.com/2026/09/03/ARTIPVs02UhRNv9V8LMyxikQ260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "近日，工业和信息化部等十部门发布关于印发《促进中小企业发展“十五五”规划》的通知。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
         "title": "基层病种实现“同病同付” 新方案如何让看病更实惠？",
         "url": "https://news.cctv.com/2026/09/03/ARTIlF5qyKGBaOjW07NmX1hD260903.shtml",
         "date": "2026-09-03",
@@ -2481,61 +2415,6 @@
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
-        "title": "解读·按病种付费3.0版分组方案来了→",
-        "url": "https://news.cctv.com/2026/09/03/ARTIWOQ3yyNGMID5bculBDGl260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "9月2日，国家医保局召开新闻发布会，发布按病种付费3.0版分组方案。按病组和按病种分值付费分组方案是医保按病种付费的重要技术基础，自2019年启动国家试点以来，已经更新两版。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "“激活”一条街、“燃动”一座城 体育产业跨界融合、破圈发展撬动经济新“增量”",
-        "url": "https://news.cctv.com/2026/09/03/ARTI6w9PeSyrbhDNgAW6uJiX260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "9月3日上午，国务院新闻办举行新闻发布会，介绍“十五五”时期体育强国建设有关情况。国家体育总局有关负责人介绍，到2030年，我国将力争实现人均体育场地面积达到4平方米左右。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "下午察：当AI模型算力被摆上电商货架",
-        "url": "https://www.zaobao.com/news/china/story20260903-9621129",
-        "date": "2026-09-03",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "人工智能中小企业创业支持计划启动",
-        "url": "https://news.cctv.com/2026/09/04/ARTIO8JO3dGdKdX94HNbJXk9260904.shtml",
-        "date": "2026-09-04",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "9月3日，工业和信息化部宣布，启动人工智能中小企业创业支持计划。计划通过三年时间，在行业应用、数据服务、智能算力等重点领域，培育形成一大批人工智能创业企业，新培育科技和创新型中小企业1万家以上。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "今年已发布新兴产业国家标准1400余项",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202609/04/content_30179053.html",
-        "date": "2026-09-04",
-        "source": "人民日报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "本报北京9月3日电&nbsp;&nbsp;（记者林丽鹂）今年以来，市场监管总局（国家标准委）已发布国家标准2800余项，其中新兴产业国家标准达1400余项，有力支撑了新质生产力蓬勃发展。 新一代信息技术产业和新材料产业发布国家标准均超过300项，《信息技术&nbsp;&nbsp;脑机接口&nbsp;&nbsp;多模态数…",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
         "title": "国家体育总局：力争到2030年体育产业总规模超7万亿元",
         "url": "https://news.cctv.com/2026/09/03/ARTI2a7oWvluCK1cm029ToI0260903.shtml",
         "date": "2026-09-03",
@@ -2544,83 +2423,6 @@
         "priority_score": 72,
         "is_summit_level": false,
         "summary": "国务院新闻办公室今天上午举行“开局起步‘十五五’”系列主题新闻发布会，国家体育总局局长高志丹介绍“十五五”时期体育强国建设有关情况。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "德国社民党支持欧盟对中国混动车加征关税",
-        "url": "https://www.zaobao.com/news/china/story20260904-9624154",
-        "date": "2026-09-04",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "新口味“链”动全球供应链 从一杯咖啡花样“玩法”感知消费端多元活力",
-        "url": "https://news.cctv.com/2026/09/03/ARTI7tYwc49sVEtrheG1yil0260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "在福建厦门，咖啡馆密度居全国前列，各类咖啡店超过2000家。几乎不产咖啡豆的厦门，却把咖啡喝出了一条千亿级规模的产业链。消费端的活力到底从何而来？",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "科技赋能海洋经济向“新”而行 借助第一网“鲜”感知“蓝色粮仓”澎湃新动能",
-        "url": "https://news.cctv.com/2026/09/03/ARTIyveaUhnbbKvJZHyQHzAi260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "9月1日起，我国北纬35度以北的渤海和黄海海域，正式结束为期4个月的伏季休渔期，全面开海。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "美学者：中国“什么都要” 与国际伙伴缺互信成半导体业隐忧",
-        "url": "https://www.zaobao.com/news/china/story20260903-9622763",
-        "date": "2026-09-03",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "航空货运“新”观察 | 版图加速扩容、市场活力涌动 航空物流筑牢外贸稳增长空中支撑",
-        "url": "https://news.cctv.com/2026/09/03/ARTI1EHozXK677ScxtMCxCDI260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "9月3日，中国物流与采购联合会发布最新数据，2026年前8个月，中国国际航空货运航线迎来密集扩容，115条新航线、292个新增往返航班落地运行，航线覆盖全球各大洲。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "观察 | 新赛道“长出”新职业 多层次人才供给加速匹配产业规模化落地节奏",
-        "url": "https://news.cctv.com/2026/09/03/ARTIRX1U7El8wtRwfofOH347260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "自2019年以来，人力资源社会保障部已发布了七批新职业、新工种。第八批12个新职业、22个新工种也已完成公示，即将正式发布。新产业与新职业紧密相关，一条赛道会催生出一串新职业，这些新职业又反映了产业的…",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
-        "title": "高盛：人民币料每年升值3%至5% 五年后或升至5.5兑1美元",
-        "url": "https://www.zaobao.com/news/china/story20260903-9621297",
-        "date": "2026-09-03",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "",
         "collectedAt": "2026-09-04 09:21:54"
       }
     ]
@@ -2635,11 +2437,11 @@
     "2026-08-29"
   ],
   "today": "2026-09-04",
-  "todayCount": 40,
+  "todayCount": 22,
   "stats": {
-    "totalArticles": 237,
+    "totalArticles": 219,
     "dateCount": 7,
     "latestDate": "2026-09-04",
-    "summitCount": 75
+    "summitCount": 73
   }
 }
