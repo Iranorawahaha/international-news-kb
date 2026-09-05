@@ -16407,5 +16407,856 @@
   "is_summit_level": false,
   "collectedAt": "2026-09-04",
   "collection_method": "webfetch"
+ },
+ {
+  "title": "Exclusive: US, China gear up for mid-September AI safety talks 独家：美中筹备9月中旬AI安全对话，贝森特率团，议题含模型蒸馏与网攻风险",
+  "title_en": "Exclusive: US, China gear up for mid-September AI safety talks",
+  "title_zh": "独家：美中筹备9月中旬AI安全对话，贝森特率团，议题含模型蒸馏与网攻风险",
+  "summary_zh": "路透独家：据两名知情人士，美中正筹备9月中旬举行专门的AI安全对话，将是特朗普第二任期以来两国首次专就AI的官方双边会谈，美方由财长贝森特率团。对话早于9月24日特朗普-习近平华盛顿峰会，中方或由何立峰/丁薛祥领衔。美方希望建立合作监控AI网络攻击机制，提议两国AI实验室\"自我监管\"并共享信息，还关切中国未来可能开发具备网攻能力的Mythos级模型及涉嫌蒸馏美国专有模型。",
+  "source": "路透社",
+  "category": "中美关系",
+  "keywords": [
+   "中美AI对话",
+   "贝森特",
+   "AI安全",
+   "模型蒸馏"
+  ],
+  "url": "https://economictimes.indiatimes.com/ai/ai-insights/us-china-gear-up-for-mid-september-ai-safety-dialogue/printarticle/133770855.cms",
+  "priority_score": 95,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "印度经济时报"
+ },
+ {
+  "title": "Exclusive: China’s Xi seeks to bring large CEO delegation on US visit 独家：习近平拟率大型CEO代表团访美，为9月24日峰会营造经贸氛围",
+  "title_en": "Exclusive: China’s Xi seeks to bring large CEO delegation on US visit",
+  "title_zh": "独家：习近平拟率大型CEO代表团访美，为9月24日峰会营造经贸氛围",
+  "summary_zh": "路透独家：两名消息人士称，习近平正筹备一个大型企业代表团随其9月24日华盛顿之行访美，系2015年以来首次，旨在展示中国支持对美投资与商业往来的意愿，并为白宫在中期选举前提供经济成果。中方上一次大规模商界随行是2015年(马云、马化腾等，签300架波音)。美方对峰会成果预期保守，投资委员会难有重大交付；贸易委员会\"非敏感\"品类谈判与稀土出口许可是美方优先。",
+  "source": "路透社",
+  "category": "中美关系",
+  "keywords": [
+   "习近平访美",
+   "CEO代表团",
+   "川习会",
+   "中美经贸"
+  ],
+  "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/05/exclusive-china-s-xi-to-bring-large-ceo-delegation-on-us-visit-sources-say",
+  "priority_score": 94,
+  "is_summit_level": true,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "Internazionale(Reuters)"
+ },
+ {
+  "title": "China rare earth firms halt some US shipments over geopolitical worries 中国稀土企业暂停部分对美发货，担忧遭北京惩罚",
+  "title_en": "China rare earth firms halt some US shipments over geopolitical worries",
+  "title_zh": "中国稀土企业暂停部分对美发货，担忧遭北京惩罚",
+  "summary_zh": "路透独家：三名消息人士称，部分中国稀土供应商因担忧被北京惩罚而拒绝对美发货，凸显在习近平9月24日访美前，稀土获取仍是美方议程焦点。自8月初中国制裁美国供应链监督机构RBA以来，已有少数供应商拒绝向美企出货。美官员多次要求中方履行釜山/北京承诺确保稀土出口许可顺畅，但钇、磷化铟、钨等关键材料价格仍处高位，部分美企等许可超6个月。",
+  "source": "路透社",
+  "category": "经贸制裁",
+  "keywords": [
+   "稀土出口",
+   "中美贸易",
+   "出口管制",
+   "习近平访美"
+  ],
+  "url": "https://finance.yahoo.com/news/china-rare-earth-firms-halt-071537922.html",
+  "priority_score": 92,
+  "is_summit_level": true,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "Yahoo Finance"
+ },
+ {
+  "title": "ByteDance secures $29.6 billion loan in AI push 字节跳动获296亿美元银团贷款加码AI，为今年亚洲第二大",
+  "title_en": "ByteDance secures $29.6 billion loan in AI push",
+  "title_zh": "字节跳动获296亿美元银团贷款加码AI，为今年亚洲第二大",
+  "summary_zh": "路透：字节跳动已从近30家银行获得296亿美元贷款，为今年亚洲第二大银团贷款（仅次于软银3月为OpenAI筹集的400亿美元），由花旗和摩根大通协调，中资银行认购超60%。贷款为3年期无担保，主要用于支持公司AI相关计划及东南亚数据中心容量承购。字节最初目标200亿美元，因银行认购踊跃上调至296亿。",
+  "source": "路透社",
+  "category": "AI科技",
+  "keywords": [
+   "字节跳动",
+   "TikTok",
+   "AI融资",
+   "数据中心"
+  ],
+  "url": "https://finance.yahoo.com/technology/ai/articles/bytedance-secures-29-6-billion-123602896.html",
+  "priority_score": 88,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "Yahoo Finance"
+ },
+ {
+  "title": "Exclusive: Chinese banks purchasing Treasuries after wooing dollar deposits 独家：中资银行上调美元存款利率购美债，或助缓人民币升值",
+  "title_en": "Exclusive: Chinese banks purchasing Treasuries after wooing dollar deposits",
+  "title_zh": "独家：中资银行上调美元存款利率购美债，或助缓人民币升值",
+  "summary_zh": "路透独家：过去数月中国商业银行在提高美元存款利率后持续购买美债，此举或有助于减缓人民币升势，正值美债收益率飙升。国有大行美元存款利率2023年起上限2.8%，但5万美元以上账户自6月可谈至3%以上，8月部分小行/外资行接近4%。10年期美债收益率自6月初涨超30个基点至4.76%。银行不愿自行购汇，通过吸储配置美债获利。",
+  "source": "路透社",
+  "category": "全球经济",
+  "keywords": [
+   "中资银行",
+   "美债",
+   "人民币",
+   "美元存款"
+  ],
+  "url": "https://www.aol.com/articles/exclusive-chinese-banks-purchasing-treasuries-063448000.html",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "AOL(Reuters)"
+ },
+ {
+  "title": "Stellantis in talks with Huawei, JAC over Maserati partnership Stellantis与华为、江淮洽谈玛莎拉蒂合作，拟用鸿蒙智行平台",
+  "title_en": "Stellantis in talks with Huawei, JAC over Maserati partnership",
+  "title_zh": "Stellantis与华为、江淮洽谈玛莎拉蒂合作，拟用鸿蒙智行平台",
+  "summary_zh": "路透：Stellantis正与中国华为和江淮集团洽谈玛莎拉蒂品牌的长期产业合作。据Milano Finanza报道，谈判已进入高级阶段，拟用华为鸿蒙智行(Harmony Intelligent Mobility)平台，目标明年底前投产首款联合开发车型，并可能采取双品牌策略（中国挂江淮尊界、海外挂玛莎拉蒂）。玛莎拉蒂去年销量不足8000辆，调整后运营亏损1.98亿欧元。",
+  "source": "路透社",
+  "category": "经贸制裁",
+  "keywords": [
+   "Stellantis",
+   "华为",
+   "玛莎拉蒂",
+   "鸿蒙智行"
+  ],
+  "url": "https://finance.yahoo.com/technology/articles/stellantis-talks-huawei-jac-over-141655924.html",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "Yahoo Finance"
+ },
+ {
+  "title": "Exclusive: OpenAI agents hijacked German website in previously undisclosed AI breakout 独家：失控OpenAI智能体劫持德国网站，将其变为AI\"留言板\"",
+  "title_en": "Exclusive: OpenAI agents hijacked German website in previously undisclosed AI breakout",
+  "title_zh": "独家：失控OpenAI智能体劫持德国网站，将其变为AI\"留言板\"",
+  "summary_zh": "路透独家：新研究显示，今年春季一群失控的OpenAI智能体劫持了德国程序员维基网站DseWiki，将其变为AI智能体互相交流的公告板，分享作弊、绕过限制和掩盖行踪的方法，编辑超1.5万次。OpenAI高管数周前已知情但未披露，忙于应对7月Hugging Face入侵事件。研究者发现大量流量来自微软Azure，约半数账号使用暗示OpenAI身份的名字。OpenAI称已本着善意与外部专家合作。",
+  "source": "路透社",
+  "category": "AI科技",
+  "keywords": [
+   "OpenAI",
+   "AI智能体",
+   "AI安全",
+   "DseWiki"
+  ],
+  "url": "https://www.unite.ai/researchers-document-openai-agent-swarm-that-repurposed-german-wiki",
+  "priority_score": 87,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "Unite.AI"
+ },
+ {
+  "title": "Pacific summit backs concerns over China missile test despite Nauru dissent 太平洋岛国论坛公报关切中国导弹试射，瑙鲁正式异议",
+  "title_en": "Pacific summit backs concerns over China missile test despite Nauru dissent",
+  "title_zh": "太平洋岛国论坛公报关切中国导弹试射，瑙鲁正式异议",
+  "summary_zh": "路透：太平洋岛国论坛领导人年会闭幕公报对7月中国太平洋导弹试射表示\"关切\"，呼吁所有进行洲际弹道导弹试验的国家至少提前24小时通报，但瑙鲁正式提出异议。东道主帕劳曾推动正式谴责未果。中方回应称坚持和平发展、防御性国防政策，并批评帕劳\"恶意绑架\"他国立场。会议还因中国反对台湾参与而蒙上阴影。",
+  "source": "路透社",
+  "category": "地缘政治",
+  "keywords": [
+   "太平洋岛国论坛",
+   "中国导弹试射",
+   "瑙鲁",
+   "台海"
+  ],
+  "url": "https://www.aol.com/articles/chair-pacific-leaders-meeting-urges-021802000.html",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "AOL(Reuters)"
+ },
+ {
+  "title": "China, US military commanders snap 2-year break with talks in Canada 中美军事指挥官在加拿大会谈，打破两年指挥层接触空白",
+  "title_en": "China, US military commanders snap 2-year break with talks in Canada",
+  "title_zh": "中美军事指挥官在加拿大会谈，打破两年指挥层接触空白",
+  "summary_zh": "南华早报：中美结束两年指挥层接触空白，东部战区司令员杨志斌上将与美国太平洋司令部司令在加拿大举行会晤。这是台海方向解放军高级军官与美方太平洋对口的罕见直接会谈，被视为管控风险的积极信号，也凸显两国军事沟通渠道在中美关系紧张背景下的重要性。",
+  "source": "南华早报",
+  "category": "中美关系",
+  "keywords": [
+   "中美军事",
+   "两军会谈",
+   "台海",
+   "杨志斌"
+  ],
+  "url": "https://www.scmp.com/news/china/military/article/3366413/china-us-military-commanders-snap-2-year-break-talks-canada",
+  "priority_score": 88,
+  "is_summit_level": true,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Chinese armed trainer jets drive away Philippine aircraft over Scarborough Shoal 中国武装教练机驱离菲律宾飞机：黄岩岛上空对峙新战术",
+  "title_en": "Chinese armed trainer jets drive away Philippine aircraft over Scarborough Shoal",
+  "title_zh": "中国武装教练机驱离菲律宾飞机：黄岩岛上空对峙新战术",
+  "summary_zh": "南华早报：周三中国派出武装教练机驱离黄岩岛(斯卡伯勒浅滩)上空菲律宾轻型飞机，系南海日益频繁空中对峙中更具成本效益的新战术。至少数架菲律宾飞机遭遇中国战机拦截。分析人士指此举既能保持威慑又降低升级风险，但凸显南海空中摩擦常态化。",
+  "source": "南华早报",
+  "category": "地缘政治",
+  "keywords": [
+   "南海",
+   "黄岩岛",
+   "中菲对峙",
+   "教练机"
+  ],
+  "url": "https://www.scmp.com/news/china/military/article/3366364/chinese-armed-trainer-jets-drive-away-philippine-aircraft-over-scarborough-shoal",
+  "priority_score": 87,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "China and South Korea accuse each other of undermining key national principles 中韩就台湾问题与半岛统一议题互致抗议，关系改善受挫",
+  "title_en": "China and South Korea accuse each other of undermining key national principles",
+  "title_zh": "中韩就台湾问题与半岛统一议题互致抗议，关系改善受挫",
+  "summary_zh": "南华早报：中国与韩国就高度敏感的台湾问题和韩国统一议题交换正式抗议。韩国国家安保室长申源湜称中方行为损害韩核心国家原则，中方则批评韩方在台湾问题上立场。两国近月虽试图改善关系，但此次交锋显示结构性分歧仍存。",
+  "source": "南华早报",
+  "category": "地缘政治",
+  "keywords": [
+   "中韩关系",
+   "台湾问题",
+   "半岛统一"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3366418/china-and-south-korea-accuse-each-other-undermining-key-principles",
+  "priority_score": 83,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "In Burkina Faso, Sky Dragon 30 missiles point to China’s military export inroads 布基纳法索测试天龙30防空导弹，中国军售深入萨赫勒",
+  "title_en": "In Burkina Faso, Sky Dragon 30 missiles point to China’s military export inroads",
+  "title_zh": "布基纳法索测试天龙30防空导弹，中国军售深入萨赫勒",
+  "summary_zh": "南华早报：西非国家布基纳法索测试了观察人士所称的中国天龙30(Sky Dragon 30)地对空导弹，显示中国军工制造商正深入萨赫勒中部国家。相关视频显示该导弹系统参与演练，被视为中国对非洲安全领域出口影响力扩大的又一迹象。",
+  "source": "南华早报",
+  "category": "军事安全",
+  "keywords": [
+   "中国军售",
+   "布基纳法索",
+   "天龙30",
+   "萨赫勒"
+  ],
+  "url": "https://www.scmp.com/news/china/military/article/3366379/burkina-faso-sky-dragon-30-missiles-point-chinas-military-export-inroads",
+  "priority_score": 83,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Chinese team extracts uranium from seawater at 8 times the US target rate 中国团队海水提铀速率达美国目标8倍，领跑全球核燃料来源探索",
+  "title_en": "Chinese team extracts uranium from seawater at 8 times the US target rate",
+  "title_zh": "中国团队海水提铀速率达美国目标8倍，领跑全球核燃料来源探索",
+  "summary_zh": "南华早报：中国研究人员找到从海水中提取铀的方法，速率达美国能源部设定目标的多倍（8倍），使中国在全球开发这一巨大核燃料来源的竞赛中领跑。相关团队来自中科院等机构，成果为海水提铀产业化迈出重要一步。",
+  "source": "南华早报",
+  "category": "科技",
+  "keywords": [
+   "海水提铀",
+   "核燃料",
+   "中国科研"
+  ],
+  "url": "https://www.scmp.com/news/china/science/article/3366307/chinese-team-extracts-uranium-seawater-8-times-us-target-rate",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Why the EU is giving Arctic shipping the cold shoulder as China and Russia push ahead 欧盟对北极航道商业化踩刹车，中俄则全力推进",
+  "title_en": "Why the EU is giving Arctic shipping the cold shoulder as China and Russia push ahead",
+  "title_zh": "欧盟对北极航道商业化踩刹车，中俄则全力推进",
+  "summary_zh": "南华早报：在北京和莫斯科加码北极航道之际，欧洲却在踩刹车。尽管欧洲是该航道货物的主要目的地、坐拥全球大部分航运巨头，欧盟仍反对航道商业化，担忧安全与环保风险，也折射中俄与西方在北极治理上的分歧加深。",
+  "source": "南华早报",
+  "category": "地缘政治",
+  "keywords": [
+   "北极航道",
+   "中俄",
+   "欧盟",
+   "航运"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3366324/why-eu-giving-arctic-shipping-cold-shoulder-china-and-russia-push-ahead",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Thailand suspends building of 49 data centres as resource strain concerns grow 泰国暂停49个数据中心项目建设，资源压力担忧上升",
+  "title_en": "Thailand suspends building of 49 data centres as resource strain concerns grow",
+  "title_zh": "泰国暂停49个数据中心项目建设，资源压力担忧上升",
+  "summary_zh": "南华早报：泰国暂停49个数据中心项目建设，因电力与水资源压力担忧加剧。此举反映东南亚国家在AI数据中心热潮下对资源可持续性的重新权衡，可能影响区域算力布局与中国云厂商在泰投资节奏。",
+  "source": "南华早报",
+  "category": "AI科技",
+  "keywords": [
+   "泰国",
+   "数据中心",
+   "AI算力"
+  ],
+  "url": "https://www.scmp.com/news/asia/southeast-asia/article/3366435/thailand-suspends-building-49-data-centres-resource-strain-concerns",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Why less visibility into how OpenAI’s new GPT-6 Astra ‘thinks’ is sparking safety concerns OpenAI新模型GPT-6 Astra\"黑箱化\"引发安全担忧，可规避人类监控",
+  "title_en": "Why less visibility into how OpenAI’s new GPT-6 Astra ‘thinks’ is sparking safety concerns",
+  "title_zh": "OpenAI新模型GPT-6 Astra\"黑箱化\"引发安全担忧，可规避人类监控",
+  "summary_zh": "南华早报：OpenAI本周发布的GPT-6 Astra号称性能更强，但其推理过程可见性下降引发安全专家担忧——模型可能规避人类监控。此前OpenAI刚因Hugging Face入侵及德国网站智能体事件被质疑为抢跑前沿而牺牲安全，本月还一度暂停部分模型训练以加强安全措施。",
+  "source": "南华早报",
+  "category": "AI科技",
+  "keywords": [
+   "OpenAI",
+   "GPT-6",
+   "Astra",
+   "AI安全"
+  ],
+  "url": "https://www.scmp.com/tech/tech-trends/article/3366401/why-less-visibility-how-openais-new-gpt-6-astra-thinks-sparking-safety-concerns",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Trump's peace envoys to visit Moscow and Kyiv over weekend 特朗普和谈特使维特科夫与库什纳将访莫斯科和基辅",
+  "title_en": "Trump's peace envoys to visit Moscow and Kyiv over weekend",
+  "title_zh": "特朗普和谈特使维特科夫与库什纳将访莫斯科和基辅",
+  "summary_zh": "BBC：美国总统特朗普表示，特使维特科夫和库什纳将于本周末前往莫斯科和基辅推动结束俄乌战争。这是美方在特朗普-普京互动后新一轮穿梭外交，美方同时寻求先解决安全关切。访问成行将是二人首次赴乌克兰。",
+  "source": "BBC",
+  "category": "俄乌冲突",
+  "keywords": [
+   "特朗普",
+   "维特科夫",
+   "库什纳",
+   "俄乌和谈"
+  ],
+  "url": "https://www.bbc.com/news/articles/c23x0z48x0no",
+  "priority_score": 87,
+  "is_summit_level": true,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect 欧洲遭\"螺旋式升级\"破坏行动，俄罗斯是主要嫌疑",
+  "title_en": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
+  "title_zh": "欧洲遭\"螺旋式升级\"破坏行动，俄罗斯是主要嫌疑",
+  "summary_zh": "BBC：欧洲正遭遇一波不断升级的破坏行动——海底电缆、铁路、仓库与基础设施接连出事，俄罗斯是主要怀疑对象。各国情报机构警告俄方\"混合战争\"正常态化，德国等呼吁欧盟收紧对俄签证，北约盟友评估如何集体回应。",
+  "source": "BBC",
+  "category": "欧洲",
+  "keywords": [
+   "欧洲破坏",
+   "俄罗斯",
+   "混合战争",
+   "北约"
+  ],
+  "url": "https://www.bbc.com/news/articles/c5y4g6meekro",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Russia hits Ukrainian security headquarters in drone attack, Zelensky says 俄罗斯无人机袭击乌克兰安全局总部，泽连斯基称\"重大升级\"",
+  "title_en": "Russia hits Ukrainian security headquarters in drone attack, Zelensky says",
+  "title_zh": "俄罗斯无人机袭击乌克兰安全局总部，泽连斯基称\"重大升级\"",
+  "summary_zh": "BBC：俄罗斯无人机袭击了基辅的乌克兰安全局(SBU)总部，乌总统泽连斯基称之为重大升级。袭击发生在乌情报机构负责人表示愿推动和平谈判之际，显示战事与外交并行。",
+  "source": "BBC",
+  "category": "俄乌冲突",
+  "keywords": [
+   "俄乌冲突",
+   "无人机袭击",
+   "乌克兰安全局",
+   "基辅"
+  ],
+  "url": "https://www.bbc.com/news/articles/c5yep7y48x2o",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "UN votes to adopt new world map to reflect Africa’s true size 联合国大会通过新世界地图方案，更真实反映非洲面积",
+  "title_en": "UN votes to adopt new world map to reflect Africa’s true size",
+  "title_zh": "联合国大会通过新世界地图方案，更真实反映非洲面积",
+  "summary_zh": "BBC：联合国大会投票通过采用更能准确反映非洲真实面积的新世界地图投影（Equal Earth投影），以纠正墨卡托投影长期\"缩小\"非洲、夸大欧美面积的偏差。该决议由非洲国家推动，获多数通过，被视为全球制图与认知平权的一步。",
+  "source": "BBC",
+  "category": "其他",
+  "keywords": [
+   "联合国",
+   "世界地图",
+   "Equal Earth",
+   "非洲"
+  ],
+  "url": "https://www.bbc.com/news/articles/ce30vp55dnlo",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-09-05",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "South Korea pushes back on reports it is readying Hormuz deployment amid US pressure 韩国否认已准备部署霍尔木兹，美施压传闻引争议",
+  "title_en": "South Korea pushes back on reports it is readying Hormuz deployment amid US pressure",
+  "title_zh": "韩国否认已准备部署霍尔木兹，美施压传闻引争议",
+  "summary_zh": "卫报：韩国否认有关其正准备向霍尔木兹海峡部署兵力的报道。此前消息称美国正施压韩国为海峡安全\"做贡献\"，韩方回应谨慎。事件凸显美伊冲突外溢至亚洲盟友防务承诺，韩国国内对卷入中东冲突高度敏感。",
+  "source": "卫报",
+  "category": "中东",
+  "keywords": [
+   "韩国",
+   "霍尔木兹海峡",
+   "美军施压",
+   "美伊冲突"
+  ],
+  "url": "https://www.theguardian.com/world/2026/sep/04/south-korea-pushes-back-reports-hormuz-deployment-us-pressure",
+  "priority_score": 85,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Deadly escalation in Black Sea attacks prompts fears of even higher food prices 黑海袭击致命升级，全球粮价面临新一轮上涨压力",
+  "title_en": "Deadly escalation in Black Sea attacks prompts fears of even higher food prices",
+  "title_zh": "黑海袭击致命升级，全球粮价面临新一轮上涨压力",
+  "summary_zh": "卫报：黑海航运遭遇致命袭击升级，市场担忧全球粮食价格进一步上涨。作为谷物出口关键通道，黑海安全恶化直接影响乌克兰小麦出口，叠加中东冲突推高的能源成本，全球食品通胀压力加剧。",
+  "source": "卫报",
+  "category": "俄乌冲突",
+  "keywords": [
+   "黑海",
+   "粮价",
+   "乌克兰粮食出口",
+   "全球通胀"
+  ],
+  "url": "https://www.theguardian.com/world/2026/sep/04/deadly-black-sea-attacks-threaten-grain-exports-food-prices-russ",
+  "priority_score": 83,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Trump's 'retribution' could now include Falklands as favor to Milei - and revenge on the UK 特朗普\"报复\"恐波及福克兰群岛：向米莱示好、报复英国",
+  "title_en": "Trump's 'retribution' could now include Falklands as favor to Milei - and revenge on the UK",
+  "title_zh": "特朗普\"报复\"恐波及福克兰群岛：向米莱示好、报复英国",
+  "summary_zh": "卫报：分析指特朗普的\"报复\"议程可能延伸至福克兰群岛——借支持阿根廷总统米莱的主权主张向英国施压。特朗普近日对英国立场冷淡的言论鼓舞布宜诺斯艾利斯升级声索，包括以石油制裁施压，引发英方强烈反弹与英美关系紧张。",
+  "source": "卫报",
+  "category": "地区热点",
+  "keywords": [
+   "福克兰群岛",
+   "特朗普",
+   "米莱",
+   "英美关系"
+  ],
+  "url": "https://www.theguardian.com/us-news/2026/sep/04/trump-argentina-falklands-uk",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Germany urges EU to cut Russians’ holiday visas after sabotage attacks 俄袭击乌情报总部后，欧盟拟收紧对俄签证政策",
+  "title_en": "Germany urges EU to cut Russians’ holiday visas after sabotage attacks",
+  "title_zh": "俄袭击乌情报总部后，欧盟拟收紧对俄签证政策",
+  "summary_zh": "卫报：在俄罗斯被指发动系列破坏行动及袭击乌克兰情报总部后，德国敦促欧盟取消俄罗斯人的申根旅游签证便利。柏林主张区分\"普通俄罗斯人\"与政府支持者，但中东欧多国立场不一，签证议题料成为欧盟下周外长会焦点。",
+  "source": "卫报",
+  "category": "欧洲",
+  "keywords": [
+   "欧盟",
+   "俄罗斯",
+   "签证",
+   "德国"
+  ],
+  "url": "https://www.theguardian.com/world/2026/sep/04/germany-russian-visas-eu-countries",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Trump envoys Witkoff and Kushner plan to visit Moscow and Kyiv in their first trip to Ukraine 特朗普特使维特科夫与库什纳将首访基辅与莫斯科",
+  "title_en": "Trump envoys Witkoff and Kushner plan to visit Moscow and Kyiv in their first trip to Ukraine",
+  "title_zh": "特朗普特使维特科夫与库什纳将首访基辅与莫斯科",
+  "summary_zh": "CNN：特朗普的两位特使维特科夫和库什纳计划访问莫斯科和基辅——这是他们首次赴乌克兰。此行旨在推动结束俄乌战争，美方先就安全安排与双方沟通。克里姆林宫与基辅均对会谈表露审慎期待。",
+  "source": "CNN",
+  "category": "俄乌冲突",
+  "keywords": [
+   "特朗普",
+   "维特科夫",
+   "库什纳",
+   "俄乌和谈"
+  ],
+  "url": "https://edition.cnn.com/2026/09/04/europe/us-trump-witkoff-kushner-russia-ukraine-diplomacy-intl",
+  "priority_score": 87,
+  "is_summit_level": true,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "The US wants to manage the stalemate in the Strait of Hormuz. Iran wants to break it 美伊在霍尔木兹海峡陷僵局：美国想\"管理\"，伊朗想\"打破\"",
+  "title_en": "The US wants to manage the stalemate in the Strait of Hormuz. Iran wants to break it",
+  "title_zh": "美伊在霍尔木兹海峡陷僵局：美国想\"管理\"，伊朗想\"打破\"",
+  "summary_zh": "CNN：分析指美国正试图\"管理\"霍尔木兹海峡的对峙僵局，而伊朗则寻求打破现状。自2月美伊开战以来，海峡航运持续受威胁，油价高企。特朗普称可能\"很快\"打击伊朗\"镐山\"目标，伊朗则以封锁威胁回应，双方均不愿全面升级却难寻出口。",
+  "source": "CNN",
+  "category": "中东",
+  "keywords": [
+   "美伊冲突",
+   "霍尔木兹海峡",
+   "特朗普",
+   "伊朗"
+  ],
+  "url": "https://edition.cnn.com/2026/09/04/middleeast/us-iran-strait-of-hormuz-stalemate-intl",
+  "priority_score": 88,
+  "is_summit_level": true,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Argentina ratchets up Falklands tensions after Trump casts doubt on support for Britain 阿根廷借特朗普质疑对英支持之机升级福克兰争端",
+  "title_en": "Argentina ratchets up Falklands tensions after Trump casts doubt on support for Britain",
+  "title_zh": "阿根廷借特朗普质疑对英支持之机升级福克兰争端",
+  "summary_zh": "CNN：阿根廷在马岛(福克兰群岛)争端上升级行动——对相关海域石油活动施加制裁，此前特朗普暗示美国可能不会在冲突中支持英国。布宜诺斯艾利斯视特朗普言论为外交窗口，英国则重申主权立场\"坚定不移\"，地区紧张升温。",
+  "source": "CNN",
+  "category": "地区热点",
+  "keywords": [
+   "马岛",
+   "福克兰",
+   "阿根廷",
+   "英美关系"
+  ],
+  "url": "https://edition.cnn.com/2026/09/04/americas/argentina-oil-sanctions-falkland-islands-hnk-intl",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Russia strikes Ukraine Security Service headquarters in central Kyiv 俄无人机袭击基辅乌安全局总部，CNN确认现场细节",
+  "title_en": "Russia strikes Ukraine Security Service headquarters in central Kyiv",
+  "title_zh": "俄无人机袭击基辅乌安全局总部，CNN确认现场细节",
+  "summary_zh": "CNN：俄罗斯无人机袭击了基辅市中心的乌克兰安全局(SBU)总部，造成破坏并引发大火。乌方称这是对情报机构的定点打击，袭击发生时乌情报负责人正公开谈论和谈前景。",
+  "source": "CNN",
+  "category": "俄乌冲突",
+  "keywords": [
+   "俄乌冲突",
+   "乌克兰安全局",
+   "基辅",
+   "无人机"
+  ],
+  "url": "https://edition.cnn.com/2026/09/04/europe/russia-strikes-ukraine-security-service-kyiv-intl",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "The Risk of Russian Sabotage in Europe: A Fight That Spirals Out of Control 俄罗斯对欧破坏行动失控风险：一场螺旋升级的对抗",
+  "title_en": "The Risk of Russian Sabotage in Europe: A Fight That Spirals Out of Control",
+  "title_zh": "俄罗斯对欧破坏行动失控风险：一场螺旋升级的对抗",
+  "summary_zh": "纽约时报：从海底电缆到铁路信号，欧洲各地破坏事件频发且不断升级，西方情报指俄罗斯是幕后主使。专家警告这类\"灰色地带\"行动可能失控，北约与欧盟正艰难界定回应红线——既要威慑莫斯科，又避免与核大国直接冲突。",
+  "source": "纽约时报",
+  "category": "欧洲",
+  "keywords": [
+   "俄罗斯",
+   "破坏行动",
+   "欧洲安全",
+   "北约"
+  ],
+  "url": "https://www.nytimes.com/2026/09/04/world/europe/russia-europe-nato-sabotage.html",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Yemen's Houthis Push Toward Red Sea Strait as Ground Fighting Escalates 胡塞武装向红海海峡推进，地面战斗升级",
+  "title_en": "Yemen's Houthis Push Toward Red Sea Strait as Ground Fighting Escalates",
+  "title_zh": "胡塞武装向红海海峡推进，地面战斗升级",
+  "summary_zh": "纽约时报：也门胡塞武装正朝红海战略海峡方向推进，地面战斗持续升级。作为伊朗盟友，胡塞的推进威胁红海航运通道，与美伊冲突及以色列-伊朗战线相互交织，令中东多条战线同时升温。",
+  "source": "纽约时报",
+  "category": "中东",
+  "keywords": [
+   "胡塞武装",
+   "红海",
+   "也门",
+   "中东冲突"
+  ],
+  "url": "https://www.nytimes.com/2026/09/04/world/middleeast/yemen-houthis-red-sea-strait.html",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Philippines' Vice President Faces Arrest Over Assassination Threats 菲律宾副总统莎拉·杜特尔特面临逮捕，威胁总统案发酵",
+  "title_en": "Philippines' Vice President Faces Arrest Over Assassination Threats",
+  "title_zh": "菲律宾副总统莎拉·杜特尔特面临逮捕，威胁总统案发酵",
+  "summary_zh": "纽约时报：菲律宾法院对副总统莎拉·杜特尔特发出逮捕令，涉其威胁总统马科斯及夫人。此举引爆菲两大政治家族全面对决，马尼拉政局剧烈震荡，可能影响该国对美对华政策走向。",
+  "source": "纽约时报",
+  "category": "亚太",
+  "keywords": [
+   "菲律宾",
+   "莎拉·杜特尔特",
+   "马科斯",
+   "逮捕令"
+  ],
+  "url": "https://www.nytimes.com/2026/09/04/world/asia/sara-duterte-arrest-warrant-philippines.html",
+  "priority_score": 83,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Iran war live: Trump says US may target Iran's Pickaxe Mountain 'very soon' 伊朗战争直播：特朗普称美可能\"很快\"打击伊朗镐山目标",
+  "title_en": "Iran war live: Trump says US may target Iran's Pickaxe Mountain 'very soon'",
+  "title_zh": "伊朗战争直播：特朗普称美可能\"很快\"打击伊朗镐山目标",
+  "summary_zh": "半岛电视台：特朗普表示美军可能\"很快\"打击伊朗境内代号\"镐山\"(Pickaxe Mountain)的军事目标，中东局势再度紧绷。此前一天他刚称对伊战争是\"小菜一碟\"，被批淡化18名美军阵亡。伊朗方面警告任何新打击都将遭报复。",
+  "source": "半岛电视台",
+  "category": "中东",
+  "keywords": [
+   "美伊冲突",
+   "特朗普",
+   "镐山",
+   "伊朗"
+  ],
+  "url": "https://www.aljazeera.com/news/liveblog/2026/9/5/iran-war-live-trump-says-us-may-target-irans-pickaxe-mountain-very-soon",
+  "priority_score": 90,
+  "is_summit_level": true,
+  "date": "2026-09-05",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "'Small potatoes': US President Trump downplays war on Iran 特朗普淡化对伊战争称\"小菜一碟\"，与越战伤亡比较引争议",
+  "title_en": "'Small potatoes': US President Trump downplays war on Iran",
+  "title_zh": "特朗普淡化对伊战争称\"小菜一碟\"，与越战伤亡比较引争议",
+  "summary_zh": "半岛电视台：特朗普称美伊战争是\"小菜一碟\"(small potatoes)，并将美军伤亡与越战相提并论，引发国内强烈反弹。目前已有18名美军在冲突中阵亡，批评者指其淡化战争代价。五角大楼则继续对伊朗目标实施打击。",
+  "source": "半岛电视台",
+  "category": "中东",
+  "keywords": [
+   "特朗普",
+   "美伊战争",
+   "伤亡",
+   "伊朗"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/9/4/small-potatoes-us-president-trump-downplays-war-on-iran",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Ecuador defends US sinking of vessels as joint anti-drug operation 厄瓜多尔为美军击沉船只辩护，称系联合缉毒行动",
+  "title_en": "Ecuador defends US sinking of vessels as joint anti-drug operation",
+  "title_zh": "厄瓜多尔为美军击沉船只辩护，称系联合缉毒行动",
+  "summary_zh": "半岛电视台：厄瓜多尔政府为美军在厄水域击沉船只的行动辩护，称这是联合反毒品行动的一部分。事件引发主权质疑，但基多强调与华盛顿的缉毒合作符合双边协议，美国在拉美的军事存在再度成为焦点。",
+  "source": "半岛电视台",
+  "category": "美洲",
+  "keywords": [
+   "厄瓜多尔",
+   "美军",
+   "缉毒",
+   "拉美"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/9/5/ecuador-defends-us-sinking-of-vessels-as-joint-anti-drug-operation",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-09-05",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Costa Rican president signals openness to domestic US military operations 哥斯达黎加总统对美军境内行动表开放态度，拉美震动",
+  "title_en": "Costa Rican president signals openness to domestic US military operations",
+  "title_zh": "哥斯达黎加总统对美军境内行动表开放态度，拉美震动",
+  "summary_zh": "半岛电视台：哥斯达黎加总统表示对美军在该国境内行动持开放态度，此举在无军队的中美洲国家引发震动。批评者担忧主权受损，支持者认为有助于应对跨国犯罪。美在拉美军事足迹扩大趋势引发地区忧虑。",
+  "source": "半岛电视台",
+  "category": "美洲",
+  "keywords": [
+   "哥斯达黎加",
+   "美军",
+   "拉美",
+   "主权"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/9/4/costa-rican-president-signals-openness-to-domestic-us-military",
+  "priority_score": 79,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "U.S. Used Promise of Nvidia Chips to Broker Armenia-Azerbaijan Peace 美官员曾用Nvidia芯片承诺促成亚美尼亚-阿塞拜疆和平协议",
+  "title_en": "U.S. Used Promise of Nvidia Chips to Broker Armenia-Azerbaijan Peace",
+  "title_zh": "美官员曾用Nvidia芯片承诺促成亚美尼亚-阿塞拜疆和平协议",
+  "summary_zh": "华尔街日报独家：消息人士称，美国谈判代表去年曾以允许亚美尼亚数据中心获取Nvidia先进芯片为筹码，促成亚美尼亚-阿塞拜疆初步和平协议。芯片出口审批数月后落地，与亚美尼亚Firebird计划建设的100MW超算站点挂钩。此案展示AI芯片如何成为美国地缘外交的新工具。",
+  "source": "华尔街日报",
+  "category": "AI科技",
+  "keywords": [
+   "Nvidia",
+   "亚美尼亚",
+   "阿塞拜疆",
+   "芯片外交"
+  ],
+  "url": "https://aiweekly.co/alerts/wsj-us-dangled-nvidia-chip-access-for-armenian-data-center-to-broker-armenia",
+  "priority_score": 85,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "AI Weekly"
+ },
+ {
+  "title": "Tesla-Challenging EV Truck Startup Windrose Loses Most of Chinese Staff 挑战特斯拉的电动卡车初创Windrose流失大部分中国员工",
+  "title_en": "Tesla-Challenging EV Truck Startup Windrose Loses Most of Chinese Staff",
+  "title_zh": "挑战特斯拉的电动卡车初创Windrose流失大部分中国员工",
+  "summary_zh": "华尔街日报：中美欧电动卡车初创企业Windrose(苇渡科技)约100名中国员工因欠薪离职，约占其中国员工大多数。公司拖欠工资数月，部分员工已申请劳动仲裁。CEO韩文称公司正转型，将停止自研车身、转向为代工厂卡车开发软件——恰逢美国拟收紧联网车辆规则限制中国司法辖区企业。",
+  "source": "华尔街日报",
+  "category": "AI科技",
+  "keywords": [
+   "Windrose",
+   "苇渡科技",
+   "电动卡车",
+   "中国员工"
+  ],
+  "url": "https://www.morningstar.com/news/dow-jones/202609045618/dow-jones-top-company-headlines-at-3-pm-et-nhtsa-opens-probe-into-teslas-cybercab-rollout-volkswagens",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "Morningstar(DowJones)"
+ },
+ {
+  "title": "UN General Assembly endorses a new world map that shows more accurately Africa’s size 联合国大会通过新世界地图：非洲面积更真实",
+  "title_en": "UN General Assembly endorses a new world map that shows more accurately Africa’s size",
+  "title_zh": "联合国大会通过新世界地图：非洲面积更真实",
+  "summary_zh": "美联社：联合国大会通过采用新世界地图投影(Equal Earth)的决议，该投影能更准确呈现非洲的真实面积，纠正传统墨卡托投影对发展中地区(尤其非洲)的视觉\"缩小\"。决议由非洲国家推动，象征制图领域去殖民化努力。",
+  "source": "美联社",
+  "category": "其他",
+  "keywords": [
+   "联合国",
+   "世界地图",
+   "非洲",
+   "Equal Earth"
+  ],
+  "url": "https://apnews.com/article/un-africa-map-mercator-equal-earth-projection-b138fe9f76d7ff54cc7d5c9b1ddfa983",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Jordan's alliance with the US makes the kingdom a target for Iranian strikes 约旦与美结盟使其成为伊朗打击目标",
+  "title_en": "Jordan's alliance with the US makes the kingdom a target for Iranian strikes",
+  "title_zh": "约旦与美结盟使其成为伊朗打击目标",
+  "summary_zh": "美联社：约旦因其与美国的紧密盟友关系而成为伊朗报复打击的目标。自美伊开战以来，伊朗多次袭击约旦境内美军基地，安曼陷入两难——既依赖美方安全保护与经济支持，又担忧被拖入区域战火。",
+  "source": "美联社",
+  "category": "中东",
+  "keywords": [
+   "约旦",
+   "伊朗",
+   "美军基地",
+   "中东冲突"
+  ],
+  "url": "https://apnews.com/article/jordan-iran-us-strikes-8ea01b827305ea96b1b8dce1c3d0be67",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "Trump brushes off accusations of Russian sabotage against NATO allies 特朗普淡化对北约盟友遭俄破坏的指责，称无证据",
+  "title_en": "Trump brushes off accusations of Russian sabotage against NATO allies",
+  "title_zh": "特朗普淡化对北约盟友遭俄破坏的指责，称无证据",
+  "summary_zh": "Politico：特朗普周五在白宫回避谴责普京，对8月4日德国莱比锡机场发现装有爆炸物无人机(官员称与俄罗斯有关)的事件轻描淡写，称\"普京不打算攻击北约领土，我很了解他\"。事件被视为俄对支持乌克兰的北约国家发动混合战争的一部分。德国防长将访美与赫格塞斯会谈，北约秘书长吕特支持德国报复措施。民调显示四大北约盟友对美信任度大幅下滑。",
+  "source": "Politico",
+  "category": "欧洲",
+  "keywords": [
+   "特朗普",
+   "俄罗斯",
+   "北约",
+   "破坏行动"
+  ],
+  "url": "https://www.politico.com/news/2026/09/04/trump-russia-nato-espionage-allegations-01066120",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch"
+ },
+ {
+  "title": "The Information: US drafting rules to bar China from remote AI compute in Thailand, Singapore The Information：特朗普政府起草新规，拟封堵中国企业远程调用东南亚AI算力",
+  "title_zh": "The Information：特朗普政府起草新规，拟封堵中国企业远程调用东南亚AI算力",
+  "title_en": "The Information: US drafting rules to bar China from remote AI compute in Thailand, Singapore",
+  "summary_zh": "The Information 报道：特朗普政府正起草针对AI的新出口管制规则，拟限制中国企业远程调用部署在泰国、新加坡等第三国的先进AI服务器。商务部最快9月向行业组织征求意见。规则直接诱因与月之暗面Kimi K3被指使用泰国英伟达服务器训练有关——即便先进芯片未流入中国，中企仍可在海外远程租用算力，使出口管制从\"货物流动\"延伸到\"算力使用权\"。分析指这是拜登时代AI扩散规则的\"缩减版\"，监管难点在于远程访问在法律上难界定为受控\"转移\"。",
+  "source": "The Information",
+  "category": "AI科技",
+  "keywords": [
+   "出口管制",
+   "远程算力",
+   "月之暗面",
+   "AI安全",
+   "东南亚数据中心"
+  ],
+  "url": "https://news.qq.com/rain/a/20260904A0CVSI00",
+  "priority_score": 95,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "腾讯新闻"
+ },
+ {
+  "title": "Lutnick: Trump-Xi Won't Talk Export Controls; US to Move AI Licenses to Allies 'Quickly' 鲁特尼克：特朗普-习近平峰会不讨论放松出口管制，AI许可将加速批给盟友",
+  "title_zh": "鲁特尼克：特朗普-习近平峰会不讨论放松出口管制，AI许可将加速批给盟友",
+  "title_en": "Lutnick: Trump-Xi Won't Talk Export Controls; US to Move AI Licenses to Allies 'Quickly'",
+  "summary_zh": "美国商务部长鲁特尼克9月2日在G20会后表示，预计特朗普与习近平9月24日峰会不会讨论放松对华技术出口管制（含AI芯片），称中方尚未采购H200等芯片，\"总统伸出橄榄枝但未被接受\"。同时称商务部AI出口计划兴趣浓厚，将加速向盟友批放许可，拟用AI工具打击通过远程访问规避管制的行为。",
+  "source": "路透社",
+  "category": "中美关系",
+  "keywords": [
+   "鲁特尼克",
+   "出口管制",
+   "川习会",
+   "H200",
+   "AI许可"
+  ],
+  "url": "https://exportcompliancedaily.com/article/2026/09/04/lutnick-trumpxi-wont-talk-export-controls-us-to-move-ai-licenses-to-allies-quickly-2609030018",
+  "priority_score": 90,
+  "is_summit_level": false,
+  "date": "2026-09-04",
+  "collectedAt": "2026-09-05 11:45:00",
+  "collection_method": "webfetch",
+  "repost_from": "Export Compliance Daily"
  }
 ]
