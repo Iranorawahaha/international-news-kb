@@ -1,362 +1,8 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-09-04 09:32",
+  "lastUpdated": "2026-09-05 11:48",
   "retentionDays": 7,
   "archive": {
-    "2026-08-29": [
-      {
-        "title": "中共中央政治局召开会议 研究部署西藏日喀则市吉隆县泥石流灾害抢险救援工作 中共中央总书记习近平主持会议",
-        "url": "https://news.cctv.com/2026/08/28/ARTIwp4QIUMqPA6h7iGeeeYP260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "中共中央政治局8月28日召开会议，研究部署西藏日喀则市吉隆县泥石流灾害抢险救援工作。中共中央总书记习近平主持会议。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "习近平主席特使咸辉将出席赞比亚总统就职典礼（2026-08-28）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260828_12011953.shtml",
-        "date": "2026-08-28",
-        "source": "外交部",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "外交部发言人宣布：应赞比亚方面邀请，国家主席习近平特使、全国政协副主席咸辉将于近期赴赞比亚出席赞比亚总统就职典礼。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "习近平在吉尔吉斯斯坦媒体发表署名文章",
-        "url": "https://news.cctv.com/2026/08/28/ARTIIprJYCZAU64NJQWba5UV260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "8月28日，在赴比什凯克对吉尔吉斯斯坦进行国事访问并出席2026年上海合作组织峰会前夕，国家主席习近平在《吉尔吉斯斯坦言论报》、“卡巴尔”国家通讯社发表题为《携手开创中吉关系高质量发展新局面》的署名文…",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "习近平就尼泊尔遭受泥石流灾害向尼泊尔总统鲍德尔致慰问电",
-        "url": "https://news.cctv.com/2026/08/28/ARTI1Kvi0ebG88eGhYHTjPrf260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "8月28日，国家主席习近平就尼泊尔遭受泥石流灾害向尼泊尔总统鲍德尔致慰问电。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "习近平签署国家主席令",
-        "url": "https://news.cctv.com/2026/08/28/ARTINEj6kYogW5JUAE9UXRh1260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "国家主席习近平8月28日签署第八十号、第八十一号、第八十二号、第八十三号、第八十四号、第八十五号主席令。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "国家主席习近平任免驻外大使",
-        "url": "https://news.cctv.com/2026/08/28/ARTIR61jWURNWe252FPDSUOc260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "中华人民共和国主席习近平根据全国人民代表大会常务委员会的决定任免下列驻外大使。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "陈武同志遗体在京火化 习近平等到八宝山革命公墓送别",
-        "url": "https://news.cctv.com/2026/08/28/ARTILuK4c1JL1c6spMmQ12nt260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "中国共产党的优秀党员，忠诚的共产主义战士，我国民族工作和经济建设战线的杰出领导人，中国人民政治协商会议第十四届全国委员会副主席陈武同志的遗体，28日在北京八宝山革命公墓火化",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "十四届全国人大常委会第二十四次会议在京闭幕",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/29/content_30177919.html",
-        "date": "2026-08-29",
-        "source": "人民日报",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "本报北京8月28日电&nbsp;&nbsp;（记者彭波）十四届全国人大常委会第二十四次会议28日下午在北京人民大会堂闭幕。会议经表决，通过了医疗保障法、耕地保护和质量提升法、新修订的农业法、新修订的国…",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "李强在西藏吉隆指导抢险救援和应急处置工作",
-        "url": "http://paper.people.com.cn/rmrb/pc/content/202608/29/content_30177918.html",
-        "date": "2026-08-29",
-        "source": "人民日报",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "新华社西藏吉隆8月28日电&nbsp;&nbsp;受习近平总书记委托，中共中央政治局常委、国务院总理李强8月27日赴西藏日喀则市吉隆县指导吉隆口岸泥石流灾害抢险救援和应急处置工作。他强调，习近平总书记…",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "国家发展改革委举行8月份新闻发布会",
-        "url": "https://www.ndrc.gov.cn/xwdt/xwfb/202608/t20260828_1407257.html",
-        "date": "2026-08-28",
-        "source": "国家发改委",
-        "category": "重要会议",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "国家发展改革委举行8月份新闻发布会，新闻发言人介绍宏观经济运行情况，并就集成电路产业高质量发展、具身智能实训场建设、\"六张网\"投融资、物流网建设等热点问题回答记者提问。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "国家发展改革委召开全国投资工作推进会议",
-        "url": "https://www.ndrc.gov.cn/xwdt/xwfb/202608/t20260828_1407266.html",
-        "date": "2026-08-28",
-        "source": "国家发改委",
-        "category": "重要会议",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "国家发展改革委召开全国投资工作推进会议，部署下一阶段投资工作，强调用好政策性资金、加快推进重大项目建设，发挥有效投资对稳增长的关键作用。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "工信部公开曝光2025年度新能源汽车产品生产一致性监督检查典型案例",
-        "url": "https://m.chinanews.com/wap/detail/cht/zw/10685998.shtml",
-        "date": "2026-08-28",
-        "source": "中国新闻网",
-        "category": "部委动态",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "工信部装备工业一司组织开展2025年度新能源汽车产品生产一致性监督检查，公开曝光一批典型案例：中联重科、广西汽车集团样车未配备说明书或参数与《公告》不一致；浙江豪情（吉利星愿）轴距、河北洪春整车高度超差；比亚迪秦L DM-i电量保持模式油耗超标；佛山飞驰应急窗净面积、四川南骏侧后防护不符合国家标准。工信部已责令整改、暂停或撤销相关产品《公告》并暂停合格证电子信息传送。",
-        "collectedAt": "2026-08-29T09:22:00"
-      },
-      {
-        "title": "全国人民代表大会常务委员会决定免职的名单",
-        "url": "https://news.cctv.com/2026/08/28/ARTI2G0cV8u9qVAG4LvjK2wr260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "人事任免",
-        "priority_score": 86,
-        "is_summit_level": false,
-        "summary": "全国人民代表大会常务委员会决定免职的名单",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "刘桂平任中国市场监管总局党组书记",
-        "url": "https://www.zaobao.com/news/china/story20260828-9591372",
-        "date": "2026-08-28",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 86,
-        "is_summit_level": false,
-        "summary": "自称“金融界老人”的刘桂平履新中国国家市场监督管理总局中共党组书记。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "深圳市原市长覃伟中履新广东省人大常委会领导",
-        "url": "https://www.zaobao.com/news/china/story20260828-9592603",
-        "date": "2026-08-28",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 86,
-        "is_summit_level": false,
-        "summary": "中国官方披露，本周初宣布因工作岗位变动而辞去深圳市市长的覃伟中，目前已履新广东省人大常委会领导。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "2026年8月28日外交部发言人林剑主持例行记者会（2026-08-28）",
-        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202608/t20260828_12012269.shtml",
-        "date": "2026-08-28",
-        "source": "外交部",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "外交部发言人林剑主持例行记者会，就中尼泥石流灾害救援合作、中美关系、涉台涉疆问题及国际热点回答记者提问，阐明中方原则立场。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "“全链条协同”，跃升！前7个月集成电路产业投资扩产驶上“快车道”",
-        "url": "https://news.cctv.com/2026/08/28/ARTI5PH9fRX2nigzR8As4xMl260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "记者从国家发展改革委28日举行的新闻发布会上了解到，今年前7个月，我国集成电路产业快速发展，全行业投资扩产同步提速。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "三部门就《关于完善商品住房销售制度的通知》答记者问",
-        "url": "https://jingji.cctv.com/2026/08/28/ARTIk3q5jbfT4hdzK1wWwLBP260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "通知围绕加快构建房地产发展新模式，推进商品住房销售制度改革，规定了三方面内容。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "商务部：下半年中国服贸发展迎来诸多利好",
-        "url": "https://news.cctv.com/2026/08/28/ARTIfmvQdXjmstNLm3BwyfyZ260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "今天上午，国务院新闻办公室举行新闻发布会，商务部有关负责人表示，今年上半年，中国服务贸易交出了一份“含金量”十足的成绩单，成为外贸增长的重要引擎。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "外交部：中尼专家研判此次泥石流灾害由尼境内高位冰川崩塌引发",
-        "url": "https://news.cctv.com/2026/08/28/ARTIGJpAPGnMbDcA6oJqgDmF260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "8月28日，外交部发言人林剑主持例行记者会。有记者就西藏日喀则市吉隆县遭受泥石流灾害相关问题提问。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "多方力量向西藏吉隆县救灾一线集结 最大限度争取救援主动",
-        "url": "https://www.gov.cn/lianbo/202608/content_7079342.htm",
-        "date": "2026-08-28",
-        "source": "中国政府网",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "西藏日喀则市吉隆县泥石流灾害发生后，应急管理、公安、消防、卫健等各方救援力量迅速向救灾一线集结，开展人员搜救、伤员救治和群众安置，最大限度争取救援主动。",
-        "collectedAt": "2026-08-29T09:22:00"
-      },
-      {
-        "title": "如何更好满足房地产合理信贷需求？央行就最新意见答记者问",
-        "url": "https://jingji.cctv.com/2026/08/28/ARTI9UBnt5NrEKKifxz9cBwl260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "8月28日，中国人民银行、国家金融监督管理总局联合印发《关于改革完善房地产信贷管理 推动加快构建房地产发展新模式的意见》。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "市场监管总局通报典型事故 排查整治锅炉安全隐患",
-        "url": "https://news.cctv.com/2026/08/28/ARTIgmuqdUhojQ6sjMvu6pLn260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "记者今天了解到，近年来，国内外发生多起电站锅炉事故，造成重大人员伤亡和财产损失，反映出电站锅炉使用管理中仍存在问题短板。各地市场监管部门应将电站锅炉列为重点监管对象，严厉查处未经检验使用、安全附件超期…",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "“规范转让限售股个人所得税政策”堵漏洞 给普通投资者带来实打实利好",
-        "url": "https://news.cctv.com/2026/08/29/ARTIFcwRD73OLDbYVUeE5F9W260829.shtml",
-        "date": "2026-08-29",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "8月28日，财政部、国家税务总局、中国证监会联合发布公告，进一步规范转让限售股个人所得税政策。政策调整主要影响哪些人群？会带来什么影响？跟普通投资者有直接关系吗？来看财经老王总台央视记者王雷带来的观察…",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "全国人大常委会关于修改《中华人民共和国律师法》的决定（2026年8月28日通过，9月1日起施行）",
-        "url": "http://www.npc.gov.cn/c2/c30834/202608/t20260828_457233.html",
-        "date": "2026-08-28",
-        "source": "中国人大网",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "十四届全国人大常委会第二十四次会议8月28日表决通过关于修改律师法的决定，自2026年9月1日起施行。修改明确律师工作坚持党的领导，推进刑事案件律师辩护全覆盖，保障律师执业权利、规范执业行为，鼓励参与公益法律服务，并规定粤港澳大湾区律师执业考试取得内地执业资质可在广东九市从事规定范围法律业务。",
-        "collectedAt": "2026-08-29T09:22:00"
-      },
-      {
-        "title": "多部门印发通知加快推进现房销售 实现“所见即所得”",
-        "url": "https://news.cctv.com/2026/08/28/ARTI45ZzgjZkdFUACWkFYrJ7260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "近日，住房城乡建设部、自然资源部、金融监管总局联合印发《关于完善商品住房销售制度的通知》，部署各地稳步推进商品住房销售制度改革，加快构建房地产发展新模式。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "2026数博会｜从“炫技”到“干活” 前沿成果展现数字经济新场景",
-        "url": "https://news.cctv.com/2026/08/29/ARTImSrHYoQntHcGCHWNDWAR260828.shtml",
-        "date": "2026-08-29",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "本届数博会从今天（8月28日）起向公众开放，将一直持续到30日。数博会的现场有哪些看点？来看记者的探访。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "AI技术加速迭代 让交通出行更智能更低碳",
-        "url": "https://news.cctv.com/2026/08/28/ARTInPsvsdW4NErc2bAv0UdQ260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "第十八届国际交通技术与设备展览会正在北京举行。人工智能技术加速迭代，重塑了全球交通产业的发展前景，智能化、绿色化成为行业最重要的发展方向。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "“开学经济”持续升温 各类用品热销",
-        "url": "https://photo.cctv.com/2026/08/28/PHOAmald34J5dUMVlj8nCcqr260828.shtml",
-        "date": "2026-08-28",
-        "source": "央视新闻",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "随着新学期临近，“开学经济”升温，不少家长和学生提前采购图书和学习用品，为新学期做好准备。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "中国混动汽车在欧洲销量飙升 媒体称或很快被征关税",
-        "url": "https://www.zaobao.com/news/china/story20260828-9591631",
-        "date": "2026-08-28",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "(布鲁塞尔综合讯）未被额外征税、价格亲民的中国插电式混合动力汽车在欧洲大受欢迎，市场份额飙升。不过当地媒体认为，这类车型可能很快会被征收关税。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "吉隆口岸：承担中尼六成以上贸易量 上半年出入境突破10万人次",
-        "url": "https://www.zaobao.com/news/china/story20260828-9592900",
-        "date": "2026-08-28",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "在泥石流灾害中遭受重创的吉隆口岸，是西藏最大的陆路口岸，也是中国和尼泊尔边境重要枢钮，承担60%以上的两国贸易量。截至今年6月底，口岸出入境人员突破10万人次，同比增长12.85%。",
-        "collectedAt": "2026-08-29 09:22:10"
-      },
-      {
-        "title": "欧盟征小包裹关税近两月 自华进口量减三至四成",
-        "url": "https://www.zaobao.com/news/china/story20260828-9591162",
-        "date": "2026-08-28",
-        "source": "联合早报",
-        "category": "经贸动向",
-        "priority_score": 72,
-        "is_summit_level": false,
-        "summary": "（布鲁塞尔综合讯）欧盟对低价值电商包裹征收3欧元（4.44新元）关税近两个月后，从中国进口的小包裹数量已下降30%至40%，显示新规初见成效。",
-        "collectedAt": "2026-08-29 09:22:10"
-      }
-    ],
     "2026-08-30": [
       {
         "title": "为构建中吉命运共同体注入新动力——吉尔吉斯斯坦各界期待习近平主席对吉进行国事访问",
@@ -2272,17 +1918,6 @@
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
-        "title": "纪念中国人民抗日战争暨世界反法西斯战争胜利81周年座谈会在京举行",
-        "url": "https://news.cctv.com/2026/09/03/ARTIjTTrEwbDAqquFI9sNwAt260903.shtml",
-        "date": "2026-09-03",
-        "source": "央视新闻",
-        "category": "重要会议",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "纪念中国人民抗日战争暨世界反法西斯战争胜利81周年座谈会3日在北京举行，中共中央政治局委员、中宣部部长李书磊出席。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
         "title": "商务部：敦促法方立即停止实施“反超快时尚”法 否则将采取必要措施维护中企权益",
         "url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n9y3r/index.html",
         "date": "2026-09-03",
@@ -2292,6 +1927,17 @@
         "is_summit_level": false,
         "summary": "9月3日例行新闻发布会上，就法国“反超快时尚”法9月1日生效、对纺织产品征收环境罚款，商务部发言人黄玲表示强烈不满和坚决反对，指该法以“环保”“可持续”为名行双重标准之实，涉嫌违反世贸组织非歧视原则，已给相关中资企业造成重大经营损失；中方敦促法方立即停止实施该法，如法方一意孤行，中方将采取必要措施维护中资企业正当权益。",
         "collectedAt": "2026-09-04 09:25"
+      },
+      {
+        "title": "纪念中国人民抗日战争暨世界反法西斯战争胜利81周年座谈会在京举行",
+        "url": "https://news.cctv.com/2026/09/03/ARTIjTTrEwbDAqquFI9sNwAt260903.shtml",
+        "date": "2026-09-03",
+        "source": "央视新闻",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "纪念中国人民抗日战争暨世界反法西斯战争胜利81周年座谈会3日在北京举行，中共中央政治局委员、中宣部部长李书磊出席。",
+        "collectedAt": "2026-09-04 09:21:54"
       },
       {
         "title": "2026年9月3日外交部发言人郭嘉昆主持例行记者会（2026-09-03）",
@@ -2313,6 +1959,17 @@
         "priority_score": 85,
         "is_summit_level": false,
         "summary": "9月3日，国家防灾减灾救灾委员会办公室、应急管理部针对近期福建暴雨洪涝灾害影响，根据灾区群众避险转移和安置救助需要，会同国家粮食和物资储备局调拨折叠床、夏凉被、家庭应急包等5000件中央救灾物资，支持…",
+        "collectedAt": "2026-09-04 09:21:54"
+      },
+      {
+        "title": "人工智能中小企业创业支持计划启动",
+        "url": "https://news.cctv.com/2026/09/04/ARTIO8JO3dGdKdX94HNbJXk9260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "9月3日，工业和信息化部宣布，启动人工智能中小企业创业支持计划。计划通过三年时间，在行业应用、数据服务、智能算力等重点领域，培育形成一大批人工智能创业企业，新培育科技和创新型中小企业1万家以上。",
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
@@ -2371,17 +2028,6 @@
         "collectedAt": "2026-09-04 09:21:54"
       },
       {
-        "title": "人工智能中小企业创业支持计划启动",
-        "url": "https://news.cctv.com/2026/09/04/ARTIO8JO3dGdKdX94HNbJXk9260904.shtml",
-        "date": "2026-09-04",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "9月3日，工业和信息化部宣布，启动人工智能中小企业创业支持计划。计划通过三年时间，在行业应用、数据服务、智能算力等重点领域，培育形成一大批人工智能创业企业，新培育科技和创新型中小企业1万家以上。",
-        "collectedAt": "2026-09-04 09:21:54"
-      },
-      {
         "title": "《保险公司资产负债管理办法》发布",
         "url": "http://paper.people.com.cn/rmrb/pc/content/202609/04/content_30179058.html",
         "date": "2026-09-04",
@@ -2425,23 +2071,520 @@
         "summary": "国务院新闻办公室今天上午举行“开局起步‘十五五’”系列主题新闻发布会，国家体育总局局长高志丹介绍“十五五”时期体育强国建设有关情况。",
         "collectedAt": "2026-09-04 09:21:54"
       }
+    ],
+    "2026-09-05": [
+      {
+        "title": "习近平向第八届中俄能源商务论坛致贺信",
+        "url": "https://tv.cctv.com/2026/09/04/VIDELc4NFTFzWHxL0st0DGtq260904.shtml",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平向第八届中俄能源商务论坛致贺信。 央视网消息（新闻联播）：9月4日，第八届中俄能源商务论坛在俄罗斯符拉迪沃斯托克举办。国家主席习近平向论坛致贺信。 习近平指出，今年是中俄战略协作伙伴关系建立30周年和《中俄睦邻友好合作条约》签署25周年。在国际形势复杂变化中，中俄新时代全面战略协作伙伴关系高水平发展，中俄能源合作…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "习近平据报拟率领庞大中国企代表团访美",
+        "url": "https://www.zaobao.com/news/china/story20260905-9630065",
+        "date": "2026-09-05",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "习近平致中央广播电视总台《小喇叭》节目开播70周年的贺信",
+        "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7080199.htm",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平致中央广播电视总台《小喇叭》节目开播70周年的贺信 值此中央广播电视总台《小喇叭》节目开播70周年之际，我谨表示祝贺！ 70年来，《小喇叭》节目坚持“给孩子们讲好故事”，陪伴了一代代少年儿童健康成长。新起点上，希望你们和广大少儿文艺工作者落实立德树人根本任务，紧扣时代发展脉搏，深耕少儿文化沃土，用心用情创作更多传…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "习近平致信祝贺中央广播电视总台《小喇叭》节目开播70周年强调 紧扣时代发展脉搏 深耕少儿文化沃土 为培养德智体美劳全面发展的社会主义建设者和接班人作出更大贡献",
+        "url": "https://tv.cctv.com/2026/09/04/VIDEkC1bUGcRCJ9DZ8ggnIJK260904.shtml",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平致信祝贺中央广播电视总台《小喇叭》节目开播70周年强调：紧扣时代发展脉搏，深耕少儿文化沃土，为培养德智体美劳全面发展的社会主义建设者和接班人作出更大贡献。 央视网消息（新闻联播）：在中央广播电视总台《小喇叭》节目开播70周年之际，中共中央总书记、国家主席、中央军委主席习近平发来贺信表示祝贺。 习近平在贺信中指出，…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "初心不改 虽远不怠——习近平主席出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问纪实",
+        "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7080223.htm",
+        "date": "2026-09-05",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京9月4日电 题：初心不改 虽远不怠——习近平主席出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问纪实 人民日报记者杜尚泽、胡泽曦 新华社记者郝薇薇、杨依军 8月30日至9月2日，中国北京－吉尔吉斯斯坦比什凯克－埃及开罗，航程在亚非两块大陆间划了一道壮美的弧线。 瓷丝泛海，锦绣流沙。绵延千年的古…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "时政纪录片丨志合山海 大道同行——习近平主席出席上合组织峰会并访问吉尔吉斯斯坦、埃及纪实",
+        "url": "https://news.cctv.com/2026/09/04/ARTIAiMooBZfAOoD46G9hZKi260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "中央广播电视总台推出特别节目，全景记录习近平主席中亚中东之行。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "特朗普称习近平将偕同妻子访美",
+        "url": "https://www.zaobao.com/news/china/story20260905-9629967",
+        "date": "2026-09-05",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "特稿：从上合到金砖再赴美国 习近平密集外交铺设战略纵深",
+        "url": "https://www.zaobao.com/news/china/story20260904-9627865",
+        "date": "2026-09-04",
+        "source": "联合早报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "睦邻友好开新局 繁荣共兴启新篇——吉尔吉斯斯坦各界人士高度评价习近平主席国事访问",
+        "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7080268.htm",
+        "date": "2026-09-05",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京9月4日电 题：睦邻友好开新局 繁荣共兴启新篇——吉尔吉斯斯坦各界人士高度评价习近平主席国事访问 新华社记者江宥林 谭媛 陈静 近日，国家主席习近平圆满完成对吉尔吉斯斯坦进行的国事访问。吉尔吉斯斯坦各界人士表示，习近平主席时隔7年再次访问吉尔吉斯斯坦，拉紧了两国永久睦邻友好纽带，拓宽了两国繁荣共兴道路，推动中…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "第八届中俄能源商务论坛开幕 丁薛祥宣读习近平主席贺信并致辞",
+        "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7080210.htm",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "第八届中俄能源商务论坛开幕丁薛祥宣读习近平主席贺信并致辞 新华社符拉迪沃斯托克9月4日电（记者 王慧慧 孙萍）当地时间9月4日，中共中央政治局常委、国务院副总理丁薛祥在俄罗斯符拉迪沃斯托克出席第八届中俄能源商务论坛开幕式，宣读习近平主席贺信并致辞。 丁薛祥表示，能源合作是中俄务实合作的重要基石。在习近平主席和普京总统战…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "视频画报｜习近平主席的开罗时间",
+        "url": "https://news.cctv.com/2026/09/05/ARTIRucdgv6vOi1G1M8KOZKR260905.shtml",
+        "date": "2026-09-05",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "9月3日上午，国家主席习近平圆满结束出席2026年上海合作组织峰会和对吉尔吉斯斯坦、埃及的国事访问后回到北京。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "丁薛祥出席第十一届东方经济论坛全会并致辞",
+        "url": "https://tv.cctv.com/2026/09/04/VIDEotqiFKIQbj8klmA0wdvB260904.shtml",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "丁薛祥出席第十一届东方经济论坛全会并致辞。 央视网消息（新闻联播）：中共中央政治局常委、国务院副总理丁薛祥3日在俄罗斯符拉迪沃斯托克出席第十一届东方经济论坛全会并致辞。 丁薛祥表示，习近平主席先后两次应普京总统邀请出席东方经济论坛并发表重要致辞，系统阐述中方关于东北亚区域合作的主张，在国际社会引起广泛共鸣。在两国元首战…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "丁薛祥同俄罗斯副总理诺瓦克共同主持中俄能源合作委员会第二十三次会议",
+        "url": "https://www.gov.cn/yaowen/liebiao/202609/content_7080185.htm",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社符拉迪沃斯托克9月4日电（记者栾海 许炜凯）中共中央政治局常委、国务院副总理丁薛祥4日在符拉迪沃斯托克同俄罗斯副总理诺瓦克共同主持中俄能源合作委员会第二十三次会议。 丁薛祥表示，习近平主席和普京总统今年多次会晤，进行深入战略沟通，作出顶层部署，为推动中俄能源合作提质升级擘画了清晰蓝图。中俄能源合作委员会第二十二次…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "张国清出席第三十二次亚太经合组织中小企业部长会议开幕式并致辞",
+        "url": "https://tv.cctv.com/2026/09/04/VIDE5J6JkKdRheYIje4yPAMl260904.shtml",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "张国清出席第三十二次亚太经合组织中小企业部长会议开幕式并致辞。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "李希赴贵州调研：抓深抓实全面从严治党和反腐败工作",
+        "url": "https://www.zaobao.com/news/china/story20260905-9630542",
+        "date": "2026-09-05",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "李强签署国务院令 公布修订后的《电力安全事故应急处置和调查处理条例》",
+        "url": "https://tv.cctv.com/2026/09/04/VIDEAjd5xu5O1B3ZaSJNBW1b260904.shtml",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "李强签署国务院令，公布修订后的《电力安全事故应急处置和调查处理条例》。 央视网消息（新闻联播）：国务院总理李强日前签署国务院令，公布修订后的《电力安全事故应急处置和调查处理条例》（以下简称《条例》），自2027年1月1日起施行。《条例》修订的主要内容，一是明确电力企业、电力用户等应当服从统一调度，严格执行有关标准和技术…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "中央广播电视总台《小喇叭》节目开播70周年座谈会在京举行",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202609/05/content_30179236.html",
+        "date": "2026-09-05",
+        "source": "人民日报",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "新华社北京9月4日电&nbsp;&nbsp;中央广播电视总台《小喇叭》节目开播70周年座谈会4日在京举行。中共中央政治局委员、中宣部部长李书磊出席，宣读习近平总书记贺信并讲话。 与会代表认为，党的十八大以来，习近平总书记始终心系少年儿童健康成长，每年都与少年儿童亲切互动，作出一系列重要指示，为新时代少年儿童事业发展提供…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "国家发展改革委召开“十五五”规划《纲要》重大工程建设推进会议 调度109项重大工程项目实施",
+        "url": "https://www.ndrc.gov.cn/xwdt/xwfb/202609/t20260904_1407416.html",
+        "date": "2026-09-04",
+        "source": "国家发改委",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "央企中建集团70后副总经理陈勇被查",
+        "url": "https://www.zaobao.com/news/china/story20260905-9630376",
+        "date": "2026-09-05",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "无视蓝白合 何志勇参选新竹市长恐被国民党开除党籍",
+        "url": "https://www.zaobao.com/news/china/story20260904-9627018",
+        "date": "2026-09-04",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "朱忠明任上海市代市长",
+        "url": "https://news.cctv.com/2026/09/04/ARTIXOJPBmhss1iJpRgmQ1L6260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "人事任免",
+        "priority_score": 86,
+        "is_summit_level": false,
+        "summary": "上海市第十六届人大常委会第三十三次会议9月4日决定，接受龚正辞去上海市市长职务的请求，朱忠明任上海市副市长、代理市长。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "2026年9月4日外交部发言人郭嘉昆主持例行记者会（2026-09-04）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202609/t20260904_12016447.shtml",
+        "date": "2026-09-04",
+        "source": "外交部",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "国家发展改革委追加安排1亿元支持福建做好台风灾害灾后应急恢复",
+        "url": "https://news.cctv.com/2026/09/04/ARTIfEfTw8rzy0CkRJL9Z22D260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "近期，受台风“简拉维”“沙德尔”及其带来的强降雨影响，福建省泉州、漳州、宁德、莆田等多地发生洪涝灾害，国家防减救灾委、应急管理部启动国家四级救灾应急响应。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "安徽滁州上空传来震响 官方通报初步判定为高空音爆",
+        "url": "https://www.zaobao.com/news/china/story20260905-9630026",
+        "date": "2026-09-05",
+        "source": "联合早报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "对得起国家、对得起部队、对得起军装……临近退伍，递交前往救灾一线的请战书",
+        "url": "https://news.cctv.com/2026/09/04/ARTIpEuwvpTtOpQZpUHqzxfv260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "目前，西藏吉隆泥石流灾害抢险救援仍在持续推进。在抢险救援的队伍中，有一群特殊的身影——22名9月1日本该退伍离队的士兵，他们在救灾任务来临的那一刻，主动向党支部递交了前往救灾一线的请战书。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "应急管理部协调中国石油油品应急保供力量驰援西藏吉隆抢险救援",
+        "url": "https://news.cctv.com/2026/09/04/ARTIqnsBTfdfiE9r3zZKRYIl260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "西藏日喀则市吉隆县泥石流灾害发生后，应急管理部协调中国石油应急保供力量驰援西藏吉隆抢险救援。西藏销售公司迅速调派油品应急保供车辆，为抢险救援队伍开展应急供油支援。截至9月4日，累计调运油品451吨，其…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "福建省多方力量“以汛为令”全力抢险救灾 千方百计保障群众生命财产安全",
+        "url": "https://news.cctv.com/2026/09/05/ARTINWMr61AoVoYMWqWlbxw8260905.shtml",
+        "date": "2026-09-05",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "福建省自然资源厅、福建省气象局4日下午联合发布地质灾害气象风险红色预警：预计到5日15点，福州市的福清市、永泰县，平潭综合实验区，莆田市的城厢区、涵江区、荔城区、仙游县，泉州市的德化县、泉港区，漳州市…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "福建省紧急下拨5000万元支持地方自然灾害应急抢险救灾工作",
+        "url": "https://news.cctv.com/2026/09/04/ARTIhWrKeeXdU1iwBhctPjRv260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "福建省应急管理厅消息，近日，受第18号台风“沙德尔”影响，宁德、莆田、泉州、漳州等地遭遇强降雨。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "青海海西州发生5.1级地震 水利部迅即启动水利抗震救灾调度指挥机制",
+        "url": "https://news.cctv.com/2026/09/04/ARTI0hZbegpIhMWDKmfLsnsv260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "2026年9月4日1时4分，青海省海西州直辖区发生5.1级地震，震源深度10千米。水利部迅即启动水利抗震救灾调度指挥机制，召开专题会商会，分析地震对水利工程和农村供水影响，研判震区雨水情形势，安排部署…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "七部门联合印发《促进数字化绿色化协同转型发展实施方案（2026-2030年）》",
+        "url": "https://news.cctv.com/2026/09/04/ARTIa9LNo8b4TI4b4PG1422l260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "中央网信办、国家发展改革委、工业和信息化部、生态环境部、住房城乡建设部、农业农村部、商务部七部门联合印发《促进数字化绿色化协同转型发展实施方案（2026-2030年）》（以下简称《实施方案》），明确了…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "电力安全事故应急处置和调查处理条例",
+        "url": "https://www.gov.cn/zhengce/content/202609/content_7080188.htm",
+        "date": "2026-09-04",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "000014349/2026-00066 电力安全事故应急处置和调查处理条例 《电力安全事故应急处置和调查处理条例》已经2026年8月21日国务院第94次常务会议修订通过，现予公布，自2027年1月1日起施行。 电力安全事故应急处置和调查处理条例 （2011年7月7日中华人民共和国国务院令第599号公布 2026年8月…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "一起到循环经济一线看身边的“大循环” 餐厨废油如何能“飞”上天？",
+        "url": "https://news.cctv.com/2026/09/05/ARTIEJ4zcyGpswrUIUwQHYzn260905.shtml",
+        "date": "2026-09-05",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "资源循环利用是推动绿色转型的重要抓手。不久前，国家发展改革委印发《循环经济发展“十五五”规划》，部署打通生产、消费、回收、利用全链条。现实当中，循环经济如何运转，又面临哪些现实难题？怎样让我们身边一件…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "中国—上海合作组织口岸经济合作中心在天津揭牌",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202609/05/content_30179280.html",
+        "date": "2026-09-05",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "本报天津9月4日电&nbsp;&nbsp;（记者靳博、李家鼎）中国—上海合作组织口岸经济合作中心（以下简称“上合口岸经济合作中心”）3日在天津国际贸易与航运服务中心揭牌成立。天津服务上合组织国家的开放载体全面升级，正式构建起“两平台、两中心”的全新格局。 在功能定位与核心任务上，上合口岸经济合作中心重点聚焦三大领域，主…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "从智能工厂看“六张网”建设（经济聚焦·“六张网”这样建）",
+        "url": "https://news.cctv.com/2026/09/04/ARTIHb67KHxKyPzTn1m5di3p260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "规划建设“六张网”是“十五五”开局之年的重大部署，既能稳投资、扩内需，更是增动能、提效益、惠民生、保安全的有力抓手。相关部委召开“六张网”重大项目协调推进机制会和“六网协同”协调推进工作会，推动“六张…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "光伏成我国第一大电源！多领域亮点勾勒中国经济活力图景",
+        "url": "https://jingji.cctv.com/2026/09/05/ARTIiYbGlAEadIq8Gqjppwbf260905.shtml",
+        "date": "2026-09-05",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "多领域发布最新数据，能源结构迎历史性拐点。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "北斗基准站一张网服务数据首次向社会共享开放 释放时空数据要素经济社会价值",
+        "url": "https://news.cctv.com/2026/09/04/ARTIwEax4UOhTaknEFNBKq3P260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者9月4日从自然资源部了解到，我国卫星导航定位基准站网服务数据正式启动授权运营，这也意味着全国北斗基准站一张网服务数据首次向社会共享开放，向行业领域和企业提供北斗高精度定位服务数据支撑。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "多家AI服务集体宕机 智谱：我们仍在线",
+        "url": "https://www.zaobao.com/news/china/story20260904-9626162",
+        "date": "2026-09-04",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "我国服务进出口总额同比增长8.3%",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202609/05/content_30179227.html",
+        "date": "2026-09-05",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "本报北京9月4日电&nbsp;&nbsp;（记者罗珊珊）记者从商务部获悉：今年前7月，我国服务进出口总额44467.1亿元，同比增长8.3%。其中，出口17732.3亿元，同比增长17.1%；进口26734.8亿元，同比增长3.2%。 前7月，旅行服务出口2636.1亿元，同比增长27.7%，运输服务出口3632.3亿…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "构建人才与产业深度耦合生态 “真金白银”揽才打造商业航天人才“强磁场”",
+        "url": "https://news.cctv.com/2026/09/04/ARTIrnSeTEomJH2sk73ysyzV260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "2026年以来，我国商业航天产业迈入火箭密集发射、加速攻坚的新阶段。随着液体可回收火箭等技术路线进入关键研制期，行业人才需求持续走高。特别是液体火箭发动机、可回收火箭研发等核心岗位，呈现出爆发式增长态…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "沙特人工智能公司推出中企开发的阿拉伯语大模型",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202609/05/content_30179281.html",
+        "date": "2026-09-05",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "据新华社利雅得9月4日电&nbsp;&nbsp;（记者罗晨、王海洲）沙特阿拉伯人工智能公司胡迈因公司3日宣布，推出其委托中国人工智能公司开发的前沿阿拉伯语大模型humain-m3。 根据胡迈因公司的声明，humain-m3基于中国人工智能公司稀宇科技MiniMax M3模型打造，是一个拥有4280亿参数的混合专家模型，…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "电力市场交易电量同比增长23.4%",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202609/05/content_30179228.html",
+        "date": "2026-09-05",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "本报北京9月4日电&nbsp;&nbsp;（记者王云杉）记者从国家能源局获悉：今年前7月，全国各电力交易机构累计完成交易电量44252亿千瓦时，同比增长23.4%。 7月，全国各电力交易机构完成交易电量7404亿千瓦时，同比增长18.5%。从交易范围看，省内交易电量5491亿千瓦时，同比增长19.0%；跨省跨区交易电量…",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "看指数识经济｜中国物流业整体运行稳健向好 固定资产投资保持扩张",
+        "url": "https://news.cctv.com/2026/09/05/ARTIApf9ZUdasQzrGoxBNftS260905.shtml",
+        "date": "2026-09-05",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国物流与采购联合会5日发布8月份中国物流业景气指数。物流需求保持扩张，景气指数在扩张区间内继续提升。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "肉进餐桌、绒进衣服、翎进球场……“飞”出多元产业链 解锁一只鹅的“产出清单”",
+        "url": "https://news.cctv.com/2026/09/04/ARTIvcfaTFJMJZ63MElvJVoM260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "一颗比赛用的羽毛球差不多要用掉两只大鹅身上最好的羽毛，这个冷知识来自黑龙江黑河。这里的大鹅，肉进餐桌、绒进衣服、翎进球场，串起一条年产值超过21亿元的产业链。一只鹅全身上下都是宝。",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "赛事汇“流量”、增量赋“百业” 小票根变身全城消费“请柬”激活多样服务业产业链",
+        "url": "https://news.cctv.com/2026/09/04/ARTIeuSbQ7X5b1cNVB1lxOkP260904.shtml",
+        "date": "2026-09-04",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "锚定2030年体育产业总规模7万亿元的目标，深耕赛事经济发展，升级户外运动产业。当前，户外运动呈现哪些新趋势，有哪些新观察？",
+        "collectedAt": "2026-09-05 11:48:51"
+      },
+      {
+        "title": "金融政策“组合拳”释放积极信号 护航中国经济向稳向好",
+        "url": "https://news.cctv.com/2026/09/05/ARTIaCfRHJ5LLfPo8jQ1wqjM260905.shtml",
+        "date": "2026-09-05",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国人民银行9月4日发布消息称，为保持银行体系流动性充裕，中国人民银行将于9月7日以固定数量、利率招标、多重价位中标方式开展5000亿元买断式逆回购操作，到期日为2026年12月5日（遇节假日顺延）。",
+        "collectedAt": "2026-09-05 11:48:51"
+      }
     ]
   },
   "dates": [
+    "2026-09-05",
     "2026-09-04",
     "2026-09-03",
     "2026-09-02",
     "2026-09-01",
     "2026-08-31",
-    "2026-08-30",
-    "2026-08-29"
+    "2026-08-30"
   ],
-  "today": "2026-09-04",
-  "todayCount": 22,
+  "today": "2026-09-05",
+  "todayCount": 45,
   "stats": {
-    "totalArticles": 219,
+    "totalArticles": 232,
     "dateCount": 7,
-    "latestDate": "2026-09-04",
-    "summitCount": 73
+    "latestDate": "2026-09-05",
+    "summitCount": 77
   }
 }
