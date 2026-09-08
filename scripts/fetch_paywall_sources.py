@@ -21,6 +21,23 @@
        (sedaily.com / asiae.co.kr / koreatimes.co.kr / livemint.com / ibtimes.com)
     ⑤ 华盛顿邮报 → Google News RSS 线索 + WebSearch 找转载
 
+【2026-09-08 实测更新（A 方案 = 官网 URL 只定位不抓取）】
+  ⚠️ DataDome 域名级拦截复测确认：reuters.com 全路径(含 sitemap/pf JSON API)恒 401，
+     WebFetch fetch failed，无代理 000；唯一 200 例外 = robots.txt。
+     → 官网正文/列表抓取通道不存在，严禁反复硬抓。
+  ⚠️ 方法论纠错：「401 = 页面存在」验证法【无效】——DataDome 在 URL 路由前拦截，
+     不存在路径同样返 401（已实测 definitely-not-real 路径 = 401）。禁用。
+  ✅ 官网 URL 唯一可信来源 = 「第三方可见背书」：
+     ① Google/WebSearch 收录的外媒情报聚合页/转载页内列出的 reuters.com 原文链接
+        （slug 须与标题逐字对应 + 日期吻合，如 dance-floor-war-...-2026-09-07）
+     ② 用户浏览器直接提供（9-04/9-07 两次实证）
+     禁构造/拼 URL（Breakingviews 构造 URL 案例已弃用）。
+  ✅ 反查 SOP：候选标题 → WebSearch 精确标题/关键词变体 → 命中聚合页列官网 URL 即采用
+     （source 仍路透社，repost_from 移除）→ miss 落转载（AOL/印度经济时报等全文转载，
+     Reuters 电头完整保留，正文可作摘要来源）。
+  ✅ 附带能力：转载页 canonical 常带 tag:reuters.com,2026:newsml_XXX（Yahoo/AOL 系），
+     可验证转载确为 Reuters 原稿（防假转载），但非官网 URL。
+
 【用法】
   python3 scripts/fetch_paywall_sources.py              # 输出四家候选清单(涉华过滤)
   python3 scripts/fetch_paywall_sources.py --all        # 不过滤, 输出全部最新稿
