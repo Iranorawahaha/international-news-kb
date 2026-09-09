@@ -942,31 +942,34 @@ def _is_high_priority(a):
     return False
 high_count = sum(1 for a in all_articles if _is_high_priority(a))
 
-# V1.5: 顶部日期表头按钮（横向）
-tabs_html = '<button class="date-btn active" data-date="all">\U0001f4c5 全部日期（%d）</button>' % total_count
+# V2.16: 顶部日期表头按钮（横向）— 与栏目 tab 合并为同一按钮类 .tab-btn
+tabs_html = '<button class="tab-btn active" data-date="all">\U0001f4c5 全部日期<span class="cnt">%d</span></button>' % total_count
 for d in dates:
     count = len(archive.get(d, []))
-    tabs_html += '<button class="date-btn" data-date="%s">%s（%d）</button>' % (d, d.replace('2026-', '').replace('-', '/'), count)
+    tabs_html += '<button class="tab-btn" data-date="%s">%s<span class="cnt">%d</span></button>' % (d, d.replace('2026-', '').replace('-', '/'), count)
 
-# 六大栏目统计（用于栏目 tab）
-COLUMN_ORDER = ["中国", "美国", "欧洲", "地区热点", "国际会议", "其他"]
-COLUMN_ICONS = {"中国": "🇨🇳", "美国": "🇺🇸", "欧洲": "🇪🇺", "地区热点": "🌍", "国际会议": "🏛️", "其他": "📌"}
-column_counts = {c: 0 for c in COLUMN_ORDER}
+# V2.16: 7大板块栏目（与 intl_sector.classify_sector 的 SECTOR_ORDER 对齐）
+CATEGORY_ORDER = ["中美博弈", "AI·科技", "中国外交", "中欧与盟友", "美国内政", "地区局势", "全球多边", "其他"]
+CATEGORY_ICONS = {
+    "中美博弈": "⚔️", "AI·科技": "💎", "中国外交": "🤝", "中欧与盟友": "🌐",
+    "美国内政": "🏛️", "地区局势": "🔥", "全球多边": "🌍", "其他": "📌"
+}
+category_counts = {c: 0 for c in CATEGORY_ORDER}
 for _d, _arts in archive.items():
     for _a in _arts:
-        _col = _a.get('column', '其他')
-        column_counts[_col] = column_counts.get(_col, 0) + 1
-# V1.5.6: 左侧栏目侧边栏列表（当日新增数量）
+        _cat = _a.get('category', '其他')
+        category_counts[_cat] = category_counts.get(_cat, 0) + 1
+# V2.16: 顶部横向栏目 tab（覆盖近 7 天总数）
 _today_str = dates[0] if dates else ''
 _today_archive = archive.get(_today_str, [])
 _all_today_count = len(_today_archive)
-column_tabs_html = '<button class="col-item active" data-column="all"><span class="ic">📋</span><span class="nm">全部</span><span class="cnt">新增%d</span></button>' % _all_today_count
-for _c in COLUMN_ORDER:
-    _icon = COLUMN_ICONS.get(_c, '📌')
-    _today_cnt = sum(1 for _a in _today_archive if _a.get('column') == _c)
-    column_tabs_html += '<button class="col-item" data-column="%s"><span class="ic">%s</span><span class="nm">%s</span><span class="cnt">新增%d</span></button>' % (_c, _icon, _c, _today_cnt)
+category_tabs_html = '<button class="tab-btn active" data-cat="all"><span class="ic">📋</span>全部<span class="cnt">%d</span></button>' % _all_today_count
+for _c in CATEGORY_ORDER:
+    _icon = CATEGORY_ICONS.get(_c, '📌')
+    _cnt = category_counts.get(_c, 0)
+    category_tabs_html += '<button class="tab-btn" data-cat="%s"><span class="ic">%s</span>%s<span class="cnt">%d</span></button>' % (_c, _icon, _c, _cnt)
 
-print(f"📊 生成V1.2 HTML: {total_count}条新闻, {len(dates)}天, 栏目: {column_counts}")
+print(f"📊 生成V1.5 HTML: {total_count}条新闻, {len(dates)}天, 栏目板块: {category_counts}")
 
 # ⭐ V1.4 HTML模板（深色情报指挥风）— 从独立模板文件加载，占位符替换
 TEMPLATE_PATH = PROJECT_ROOT / "scripts" / "intl_template_v15.html"
@@ -992,7 +995,7 @@ html_content = html_content.replace('__SOURCE_COUNT__', str(len(sources)))
 html_content = html_content.replace('__CATEGORY_COUNT__', str(len(categories)))
 html_content = html_content.replace('__HIGH_COUNT__', str(high_count))
 html_content = html_content.replace('__DATE_COUNT__', str(stats.get('dateCount', len(dates))))
-html_content = html_content.replace('__COLUMN_SIDEBAR__', column_tabs_html)
+html_content = html_content.replace('__CATEGORY_TABS__', category_tabs_html)
 html_content = html_content.replace('__DATE_HEAD_BUTTONS__', tabs_html)
 html_content = html_content.replace('__NEWS_DATA_JSON__', json.dumps(v12_data, ensure_ascii=False))
 
