@@ -999,7 +999,7 @@ html_content = html_content.replace('__CATEGORY_TABS__', category_tabs_html)
 html_content = html_content.replace('__DATE_HEAD_BUTTONS__', tabs_html)
 html_content = html_content.replace('__NEWS_DATA_JSON__', json.dumps(v12_data, ensure_ascii=False))
 
-print(f"\U0001f4ca 生成V1.5 HTML: {total_count}条新闻, {len(dates)}天, 栏目: {column_counts}")
+print(f"\U0001f4ca 生成V1.5 HTML: {total_count}条新闻, {len(dates)}天, 栏目: {category_counts}")
 
 with open(OUTPUT_PATH_GH,'w',encoding='utf-8') as f: f.write(html_content)
 with open(OUTPUT_PATH_ROOT,'w',encoding='utf-8') as f: f.write(html_content)
