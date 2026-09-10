@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-09-10 09:27",
+  "lastUpdated": "2026-09-10 11:05:00",
   "retentionDays": 7,
   "archive": {
     "2026-09-03": [
@@ -4565,6 +4565,35 @@
     ],
     "2026-09-10": [
       {
+        "id": "auto_2026-09-10_00001",
+        "date": "2026-09-08",
+        "title": "Huawei drives China's push to make advanced chips 华为牵头中国先进芯片攻坚 充当DUV光刻国产化“总承包商”",
+        "title_en": "Huawei drives China's push to make advanced chips",
+        "title_zh": "华为牵头中国先进芯片攻坚 充当DUV光刻国产化“总承包商”",
+        "summary": null,
+        "summary_en": null,
+        "summary_zh": "《金融时报》报道，华为正牵头中国深紫外（DUV）光刻设备国产化，投资整条供应链并撮合设备商与晶圆厂合作，被Bernstein分析师形容为这场攻坚的“总承包商”。上海宇量昇与上海微电子联合研发出中国首台先进DUV光刻机，已在包括华为自有产线在内的工厂测试，目标2026年底前生产12台。设备投影镜头仍依赖德国蔡司，大功率光源由华为投资的北京RSLaser攻关；华为投资臂哈勃自2019年被列入实体清单以来，已注资60余家中国半导体企业。",
+        "source": "金融时报",
+        "category": "AI·科技",
+        "keywords": [
+          "huawei",
+          "duv",
+          "lithography",
+          "asml",
+          "yuliangsheng",
+          "export control"
+        ],
+        "url": "https://www.ft.com/content/36333a53-4063-4aad-8df9-8d2f9d0048a3",
+        "priority_score": 90,
+        "is_summit_level": false,
+        "importance": "高",
+        "collectedAt": "2026-09-10 11:05:00",
+        "collection_method": "user_provided",
+        "column": "中国",
+        "is_official": false,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-09-09_86774",
         "date": "2026-09-09",
         "title": "US says China 'on track' to fulfil farm purchases ahead of Xi's Washington visit 美方称中国“按计划”履行农产品采购承诺 习近平访美前释放积极信号",
@@ -5449,7 +5478,8 @@
     "totalArticles": 199,
     "dateCount": 8,
     "latestDate": "2026-09-10",
-    "oldestDate": "2026-09-03"
+    "oldestDate": "2026-09-03",
+    "total": 200
   },
   "today": "2026-09-03",
   "todayCount": 51
