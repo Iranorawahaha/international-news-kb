@@ -37,6 +37,10 @@
 - ⚠️ **mofcom 混入旧文（9-10）**：`xwfyrth`/`bldhd` 列表页混历史旧文，fetch 不校验发布时间 → 9-10 把 08-05「就对美 FCC/DHS 反制答记者问」当新文入池。后处理必须逐条核对「来源/类型/发布时间」，超窗口删
 - ⚠️ **xwlb 接口 TLS 故障标准替代（9-10 固化）**：hotspot.api4claw.com 返 000 时用 WebSearch「新闻联播 YYYYMMDD 全文/速览」拿完整节目单+联播快讯 → 比接口更稳，固定纳入补强
 - ⚠️ **官方源 curl 不可验时（9-10）**：ccdi.gov.cn 返验证码、nhc.gov.cn 返 412、mfa.gov.cn 栏目层 302 → 改同内容央视 news.cctv.com 文本页 / 新华网 app 页（均 200），source 相应标注
+- ⚠️ **gov.cn 要闻原文定位法（9-11 固化）**：gov.cn/yaowen 列表页已 JS 化 → curl 取不到链接、相邻 content ID 探测无效（返回空 title）→ **唯一有效通道是 WebSearch「标题关键词 + 新华社/中国政府网」**。脚本抓到的 gov.cn 要闻条目 URL 常为 tv.cctv 视频聚合页，后处理必须替换为 gov.cn 原文（9-11 实例：习近平青岛货轮火灾指示→content_7080636、习近平金砖预告→content_7080661、何立峰矿业大会→content_7080675）
+- ⚠️ **联播快讯类系统性漏采（9-11 固化）**：脚本对《新闻联播》"国内联播快讯"档条目几乎全漏（联盟成立/国家集采/重点外资项目清单/通道运量里程碑/国际会议首次主办/典型案例发布）→ xwlb WebSearch 通道为固定补漏源；建议 fetch 端加标题关键词预过滤（联盟成立/集采/重点外资项目/累计突破/首次主办/典型案例发布）
+- ⚠️ **同发布会多稿同源（9-11）**：国新办「开局起步十五五」发布会 4 家单位 + 人民日报 + 央视可产出 6 稿 → 只留 gov.cn 规划/政策出台主稿，删子稿与报纸版
+- ⚠️ **mofcom 页面可取内容（9-11）**：mofcom.gov.cn 对 curl 返 403，但 WebFetch 可正常取正文（标题/来源/类型/发布时间齐全）→ 商务部条目补摘要用 WebFetch 而非 curl
 
 ## 3 AI 动向看板（V5，automation-1785566963833）
 - ⚠️ 唯一正式链路（禁改）：`/Users/xiaoxiao/WorkBuddy/2026-08-01-14-08-40/refresh_board.sh` → build_v2.py → 部署 KB_DIR/ai-news.html + ai-company-intel.html（双写）→ inject_nav → 门户统计 → push
