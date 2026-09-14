@@ -3731,7 +3731,8 @@
         "collection_method": "webfetch",
         "column": "国际会议",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "Yahoo News (Reuters)"
       },
       {
         "id": "auto_2026-09-14_9889",
@@ -3758,7 +3759,8 @@
         "collection_method": "webfetch",
         "column": "中国",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "NewsBreak (Reuters)"
       },
       {
         "id": "auto_2026-09-13_17840",
@@ -3866,7 +3868,8 @@
         "collection_method": "webfetch",
         "column": "美国",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "Euronext Live (Reuters)"
       },
       {
         "id": "auto_2026-09-13_12359",
@@ -3893,7 +3896,8 @@
         "collection_method": "webfetch",
         "column": "国际会议",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "New Straits Times (Reuters)"
       },
       {
         "id": "auto_2026-09-14_96255",
@@ -4001,7 +4005,8 @@
         "collection_method": "webfetch",
         "column": "美国",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "RBC-Ukraine (Washington Post)"
       },
       {
         "id": "auto_2026-09-13_77287",
@@ -4028,7 +4033,8 @@
         "collection_method": "webfetch",
         "column": "地区热点",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "TechNode Global (Reuters)"
       },
       {
         "id": "auto_2026-09-13_51853",
@@ -4244,7 +4250,8 @@
         "collection_method": "webfetch",
         "column": "美国",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "Channel NewsAsia (Reuters)"
       },
       {
         "id": "auto_2026-09-13_38364",
@@ -4379,7 +4386,8 @@
         "collection_method": "webfetch",
         "column": "美国",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "Livemint (Reuters)"
       },
       {
         "id": "auto_2026-09-13_76930",
@@ -4541,7 +4549,8 @@
         "collection_method": "webfetch",
         "column": "地区热点",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "Seoul Economic Daily (WSJ)"
       },
       {
         "id": "auto_2026-09-13_27384",
