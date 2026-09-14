@@ -2,6 +2,7 @@
 > 脚本 update-news.sh；数据 data/news-data.json（archive[YYYY-MM-DD]）
 
 - ⚠️ `--auto` 的 git add 不含 data/news-webfetch.json 与 us-official.json → 收尾精确补提交
+- ⚠️ **全量 update-news.sh 会丢 repost_from 字段（新增条目同样丢失，9-14 实测 9 条全丢）** → 修复：①改 `data/news-data.json` 按 URL 补字段；②`sed -n '909,1010p' update-news.sh > /tmp/gen_html_v12.py` 单独跑 GENERATE_HTML_V12 段（勿重跑全量）；③`scripts/inject_nav.py` → ④`scripts/check_js_syntax.py` → ⑤精确提交 3 文件（news-data.json + 根/gh-pages 两 HTML）
 - ⚠️ 每日刷新前先试跑：前日提交可能引入 NameError（09-10：`category_counts` 被误写成 `column_counts`，`set -e` 下 HTML 不生成、后续全断）
 - 信源 12 英文全必选（路透/BBC/SCMP/卫报/CNN/NYT/WSJ/半岛/Politico/WaPo/AP/FT）；彻底排除中文信源/自媒体；黑名单 cnnbc.com、cnnbc.cn
 - V2.13 7 板块 L2 归一（仅当日版面）；飞书同步前核对 options（缺则映射防 800030005）
