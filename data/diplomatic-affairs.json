@@ -1,12 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-09-14T09:40:00+08:00",
-    "window_start": "2026-09-11",
-    "window_end": "2026-09-14",
+    "generated": "2026-09-15T09:21:56.998201+08:00",
+    "window_start": "2026-09-12",
+    "window_end": "2026-09-15",
     "collection_method": "auto + agent",
-    "candidate_count": 0,
-    "ai_verification": "2026-09-14 09:40 AI补强核验完成"
+    "candidate_count": 3
   },
   "modules": {
     "personnel": {
@@ -1095,6 +1094,66 @@
           "confirmed": true,
           "phase": "completed",
           "headline": "美国参议员戴安斯访华（8.26-30，杭州·广州，为元首会晤铺路）"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-09-14",
+          "description": "王毅同拉脱维亚外长布拉泽通电话（2026-09-14）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202609/t20260914_12022157.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "d005f51539cc"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-09-14",
+          "description": "王毅同法国外长巴罗通电话（2026-09-14）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202609/t20260914_12022150.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "2934130988e6"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-09-13",
+          "description": "中共中央政治局委员、外交部长王毅谈习近平主席赴印度出席金砖国家领导人第十八次会晤（2026-09-13）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202609/t20260913_12021379.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "5856269a162b"
         }
       ]
     }
@@ -1105,9 +1164,6 @@
     "服贸会/投洽会访问收官与状态流转：2026服贸会9月13日在北京首钢园闭幕，投洽会9月11日在厦门闭幕。挪威贸易、工业和渔业部国务秘书希尔斯塔德（服贸会主宾国，9.9-13）访问随服贸会闭幕结束，挪威参展规模创历届之最、9月9日主宾国推介活动中挪企业现场完成六组集中签约；芬兰经济事务与就业部长普伊斯托（9.5-11）、牙买加外交和外贸部长约翰逊·史密斯（9.7-11）于9月11日按计划结束；津巴布韦副总统奇温加（9.9）访问已完成——四条均由“进行中”转“已发生”（phase=completed）"
   ],
   "data_summary": {
-    "外交人事变化": "8项",
-    "驻沪穗总领事": "6项",
-    "高级官员访华": "17项",
     "中美互动": "3项"
   },
   "supplementary_notes": [
