@@ -147,8 +147,10 @@ def render_consuls(items, module_title="驻上海、驻广州总领事人事"):
         desc = esc(it.get("description", ""))
         sources = filter_sources(it.get("sources", []))
         confirmed = it.get("confirmed", True)
+        phase = it.get("phase", "completed")
         
         confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 待核实</span>'
+        phase_html = phase_badge(phase)
         person_line = f'<span class="ev-person">{person}</span>' if person else ""
         
         src_html = ""
@@ -166,6 +168,7 @@ def render_consuls(items, module_title="驻上海、驻广州总领事人事"):
             <span class="ev-post-badge">驻{post}</span>
             <span class="ev-divider">｜</span>
             <span class="ev-type">{event_type}</span>
+            {phase_html}
             {confirm_badge}
           </div>
           <div class="ev-status">当前状态：<b>{status}</b> · 日期：{date}</div>
@@ -255,6 +258,8 @@ def render_us_china(items, module_title="中美高级官员互动"):
         us_emphasis = esc(it.get("us_emphasis", "") or "")
         outcomes = esc(it.get("outcomes", "") or "")
         sources = filter_sources(it.get("sources", []))
+        phase = it.get("phase", "completed")
+        phase_html = phase_badge(phase)
         
         mutual_label = "双方共同确认" if mutual else "单方发布"
         mutual_class = "mutual" if mutual else "unilateral"
@@ -282,6 +287,7 @@ def render_us_china(items, module_title="中美高级官员互动"):
             <span class="ev-us-person">🇺🇸 {us_person}</span>
             <span class="ev-divider">｜</span>
             <span class="ev-type">{interaction_type}</span>
+            {phase_html}
             <span class="ev-badge {mutual_class}">{mutual_label}</span>
           </div>
           <div class="ev-status">日期：{date}</div>
