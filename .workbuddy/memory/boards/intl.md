@@ -1,4 +1,4 @@
-# 国际新闻看板（V2.15）· 详细规则
+# 国际新闻看板（V2.16）· 详细规则
 > 脚本 update-news.sh；数据 data/news-data.json（archive[YYYY-MM-DD]）
 
 - ⚠️ `--auto` 的 git add 不含 data/news-webfetch.json 与 us-official.json → 收尾精确补提交
@@ -11,7 +11,23 @@
 - **V2.15 路透官网 URL**：DataDome 域名级拦截（全路径 401、无代理 000）→「401=存在」验证法无效；官网 URL 只取第三方背书（聚合/转载页列出的 reuters.com 链接且 slug 与标题逐字对应 / 用户浏览器提供），禁构造；Yahoo/AOL canonical 的 `tag:reuters.com,2026:newsml_XXX` 可验真。反查 SOP：候选标题→WebSearch 精确变体→命中即换官网 URL 并清 repost_from→miss 落转载；每日附「一键搜官网」清单（gen_reuters_recheck_list.py）。`data['today']` 会陈旧，当日取 `dates[0]`
 - ⚠️ **9-11 新增路透官网定位法**：`html.duckduckgo.com/html/?q=site:reuters.com+<标题关键词>`（urllib+代理）可直接列出 reuters.com 官方 slug，9-11 借此取得 AI 芯片涨价与机器人冠军两条官网 URL（均 /world/asia-pacific/...-2026-09-10/）
 - ⚠️ **9-14 新增路透官网定位法（首选，优于上两条）**：直接用 `WebSearch` 搜**完整英文标题**即可返回 reuters.com 官网 URL（9-14 命中 `reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/`，slug 与标题逐字对应）→ **路透条目第一优先动作 = WebSearch 完整标题 → 结果含 reuters.com 即直接采用、免 repost_from**；未命中再走 DuckDuckGo 端点 / 转载通道。9-14 实测合格转载域名：Yahoo News、Euronext Live、Channel NewsAsia、Livemint、New Straits Times、TechNode Global、Seoul Economic Daily、RBC-Ukraine
+- ⭐ **9-15 新增路透官网 URL 定位法（最新首选，一次拿 10 条，彻底取代 WebSearch/转载）**：
+  1. 代理 curl `https://www.reuters.com/arc/outboundfeeds/sitemap-index/?outputType=xml` → 200，列出 100 个分片
+  2. 顺序抓前 10 片：`https://www.reuters.com/arc/outboundfeeds/sitemap/?outputType=xml&from=0|100|...|900`（每片 100 条 `<loc>`，共 1000 条，覆盖最近 4-5 天；`lastmod` 可判新鲜度）
+     - ⚠️ **分片偶发失败**（9-16 实测 600/700 首次缺文件）→ **逐片重试一次即 200**；收尾核对 `grep -o '<loc>' rsm-*.xml | wc -l` ≈ 100×片数
+  3. ⭐ **9-16 升级：sitemap 自带 `<news:title>`，直接解标题关键词筛选，不再用 slug 命中率匹配**（精度更高，且能反向挖出 RSS/GN 完全未覆盖的条目）。正则：`<url><loc>(.*?)</loc><lastmod>(.*?)</lastmod>(.*?)</url>` + `<news:title>(.*?)</news:title>` → 得 `(loc, lastmod, 原始英文标题, 真实日期)`；9-16 一次解 1000 条、筛出 123 条相关、取 11 条入池全官网 URL，并多拿香港五年规划/先正达港股 IPO/印尼对华钢铁反倾销
+     - slug 匹配仅作**退路**（标题缺失时）：`score = 命中词数/标题词数`，**slug 必须 `u.rstrip('/').rsplit('/',1)[-1]`**，否则末尾斜杠致 slug 为空、全 0 分；score ≥0.6 命中，<0.4 判 mismatch
+  4. 亦可反向：直接过滤 `-2026-09-14/$` 且含 `china|chip|ai-|sanction|tariff|export` 的 URL，比 GN 候选更全（9-15 由此多拿 ASML/广汽/北汽飞行区等条目）
+  - 该法**无需 curl 页面正文**（DataDome 仍 401），sitemap 收录即 URL 真实存在 → 9-15 全部 10 条、9-16 全部 11 条路透均为官网 URL，repost_from = 0，「一键搜官网」清单连续两日为空
+  - 注意 `sitemap-index` 的 `lastmod` 与 URL 内日期可能差 1 天（URL 日期 = 发布日，以 URL 为准）
+- ⚠️ **9-16 弱通道备忘**：①**WSJ 官网 sitemap 403（DataDome）**、RSS 旧稿禁用 → 只能 GN RSS 候选 + WebSearch 定位 finwire.io/TradingView 转载，当日条数必然偏低 ②**AP 官网 curl 403 且 WebFetch 只返回导航样板**（正文+日期被截断）→ 无法解析发布日，仅收录日期经多源同日交叉确认者，勿硬凑 ③SCMP `/rss/4/feed` 偶发 502，重试即 200（91/5 直通）
+- ⚠️ **全量 update 会抹掉非固定字段（如 repost_from）**：收尾必须核对，若丢失则「改 data/news-data.json 补字段 + sed 提取 GENERATE_HTML_V12 段（909-1010 行）单独执行 + check_js_syntax + inject_nav.py」，**严禁重跑全量 update**
+- ⚠️ **飞书 800030005 = 来源选项缺失**：固定流程 field-get（`+field-list --base-token`，注意是 `--base-token` 非 `--app-token`，子命令带 `+` 前缀）→ 追加选项（hue 用合法值如 Gray）→ `+field-update --json`（full PUT，需带完整 options 数组）→ 重跑全量同步
 - ⚠️ **9-14 转载匹配坑**：RSS 标题用弯引号（U+2019/U+201C），按标题匹配 URL 前**必须归一化**（`’‘→'`、`“”→"`、`—–→-`），否则大面积匹配失败（9-14 首轮 12/59 失败）；另 WSJ 候选来自 Google News RSS，**标题常被截断**（如 `...Monumental Crisis for...`），必须二次搜索确认完整标题才可入库，禁凭猜测补全
+- ⚠️ **RSS 候选 URL 禁止手抄**：RSS 显示常按 120 字符截断（如 SCMP slug、Politico 数字 ID）→ 一律用脚本从 XML 里按标题精确/前缀匹配取 `link`，手抄会写出不存在的 URL（9-15 自查发现 2 条构造 URL 并剔除）
+- ⚠️ **RSS 条目入库前必须与池/存档做 URL 去重**：AP 头条页会重新露出旧文（9-15 命中 8-28 已收的 Anthropic 五角大楼稿）→ 与 `data/news-webfetch.json` + archive 全量 URL 比对后剔除
+- ⚠️ 官方源窗口判断必须**回页面核对发布日**，勿信脚本解析：9-15 白宫「Congressional Bills…」脚本标 09-15，实为 09-11 发布（且纯内政程序性）、国务院「Iran's Terrorist Proxies」标 09-15 实为 09-10 → 均出窗口剔除
+- 官方源窗口内取舍先例（9-15）：白宫 `releases/…Incredible Story` 类人物特写/PR 稿按「无新闻价值」剔除；war.gov UAP 法律豁免公告（09-14）非涉华非 AI 经贸 → 如实空缺；商务部最新仍 09-02 出窗口；USTR 09-14 NTE 公众意见征集属贸易政策程序性 → 收录（72 分）
 - 交叉验证（V2.12）：WebFetch 后必做 3 组 WebSearch(d2)：①China AI chips export controls 1260H CXMT YMTC ②US China tariffs sanctions announcement ③AI export control remote access compute China The Information
 - The Information/SemiAnalysis = 主题补充源（AI芯片/出口管制/远程算力必查）；路透重大日补 /technology /business
 - 官方源必补 title_zh/summary_zh（页面真实日期）；WSJ 反爬用 WebSearch 拿真实 URL 绝不编造
