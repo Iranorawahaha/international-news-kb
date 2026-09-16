@@ -2302,5 +2302,81 @@
   "is_official": true,
   "collectedAt": "2026-09-15 09:23:39",
   "collection_method": "us_official"
+ },
+ {
+  "title": "鲁比奥国务卿与阿曼外交大臣布赛义迪通话",
+  "title_zh": "鲁比奥国务卿与阿曼外交大臣布赛义迪通话 谴责伊朗袭击商船",
+  "title_en": "Secretary Rubio’s Call with Omani Foreign Minister Sayyid Badr al-Busaidi",
+  "summary": "The below is attributable to Spokesman Tommy Pigott: Secretary of State Marco Rubio spoke today with Omani Foreign Minister Sayyid Badr al-Busaidi. The Secretary acknowledged Oman’s important role in deescalation in the region and condemned recent Iranian attacks on commercial ships and countries in the region. He reiterated the United States’ commitment to ensuring that Iran never acquires a nuclear weapon and to freedom of navigation through the Strait of Hormuz. He expressed support for deepening ties between Oman and the United States.",
+  "summary_en": "The below is attributable to Spokesman Tommy Pigott: Secretary of State Marco Rubio spoke today with Omani Foreign Minister Sayyid Badr al-Busaidi. The Secretary acknowledged Oman’s important role in deescalation in the region and condemned recent Iranian attacks on commercial ships and countries in the region. He reiterated the United States’ commitment to ensuring that Iran never acquires a nuclear weapon and to freedom of navigation through the Strait of Hormuz. He expressed support for deepening ties between Oman and the United States.",
+  "summary_zh": "据美国务院发言人汤米·皮戈特声明，鲁比奥国务卿与阿曼外交大臣赛义德·巴德尔·布赛义迪通话。鲁比奥肯定阿曼在地区局势降温中的重要作用，谴责伊朗近期对商船及地区国家的袭击，重申美方确保伊朗永不获得核武器的承诺，并强调霍尔木兹海峡航行自由。他表示支持深化美阿双边关系。",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/09/secretary-rubios-call-with-omani-foreign-minister-sayyid-badr-al-busaidi/",
+  "date": "2026-09-15",
+  "source": "美国国务院",
+  "category": "地区局势",
+  "column": "地区热点",
+  "priority_score": 78,
+  "importance": "中",
+  "is_official": true,
+  "is_summit_level": false,
+  "keywords": [
+   "美国国务院",
+   "伊朗",
+   "霍尔木兹海峡",
+   "阿曼",
+   "航行自由"
+  ],
+  "collectedAt": "2026-09-16 12:20:00",
+  "collection_method": "curl"
+ },
+ {
+  "title": "鲁比奥国务卿与叙利亚外长沙伊巴尼通话",
+  "title_zh": "鲁比奥国务卿与叙利亚外长沙伊巴尼通话 讨论地区安全与IAEA进展",
+  "title_en": "Secretary Rubio’s Call with Foreign Minister al-Shaibani",
+  "summary": "The below is attributable to Spokesman Tommy Pigott: Secretary of State Marco Rubio spoke with Syrian Foreign Minister Asaad al-Shaibani today to discuss regional security issues and increasing cooperation between the two countries. The Secretary also stressed the importance of ongoing integration of all of Syria’s minority groups and lauded Syria’s progress with the IAEA.",
+  "summary_en": "The below is attributable to Spokesman Tommy Pigott: Secretary of State Marco Rubio spoke with Syrian Foreign Minister Asaad al-Shaibani today to discuss regional security issues and increasing cooperation between the two countries. The Secretary also stressed the importance of ongoing integration of all of Syria’s minority groups and lauded Syria’s progress with the IAEA.",
+  "summary_zh": "据美国务院发言人汤米·皮戈特声明，鲁比奥国务卿与叙利亚外长阿萨德·沙伊巴尼通话，讨论地区安全问题及两国日益扩大的合作。鲁比奥强调叙利亚所有少数族群持续融入进程的重要性，并赞赏叙利亚在国际原子能机构（IAEA）方面取得的进展。",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/09/secretary-rubios-call-with-foreign-minister-al-shaibani/",
+  "date": "2026-09-15",
+  "source": "美国国务院",
+  "category": "地区局势",
+  "column": "地区热点",
+  "priority_score": 72,
+  "importance": "低",
+  "is_official": true,
+  "is_summit_level": false,
+  "keywords": [
+   "美国国务院",
+   "叙利亚",
+   "IAEA",
+   "地区安全"
+  ],
+  "collectedAt": "2026-09-16 12:20:00",
+  "collection_method": "curl"
+ },
+ {
+  "title": "美国宣布针对涉种族歧视外国人的新签证限制政策",
+  "title_zh": "美国宣布新签证限制政策 针对参与种族歧视的外国人",
+  "title_en": "Announcement of New Visa Restriction Policy Targeting Foreign Nationals Involved in Race-Based Discrimination",
+  "summary": "As stated in President Trump’s Executive Order (EO) 14204, “Addressing Egregious Actions of the Republic of South Africa,” the United States remains committed to holding accountable those responsible for egregious human rights violations. Today the Department of State is announcing a new visa restriction policy targeting foreign nationals involved in race-based discrimination.",
+  "summary_en": "As stated in President Trump’s Executive Order (EO) 14204, “Addressing Egregious Actions of the Republic of South Africa,” the United States remains committed to holding accountable those responsible for egregious human rights violations. Today the Department of State is announcing a new visa restriction policy targeting foreign nationals involved in race-based discrimination.",
+  "summary_zh": "美国国务院依据特朗普第14204号行政令《应对南非共和国的恶劣行为》，宣布一项新的签证限制政策，针对参与种族歧视行为的外国公民实施签证限制。声明称美方将继续追究严重侵犯人权者的责任。该政策与美方近期对南非土地政策及所谓“白人农场主受迫害”议题的持续施压一脉相承。",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/09/announcement-of-new-visa-restriction-policy-targeting-foreign-nationals-involved-in-race-based-discrimination/",
+  "date": "2026-09-15",
+  "source": "美国国务院",
+  "category": "美国内政",
+  "column": "美国",
+  "priority_score": 74,
+  "importance": "低",
+  "is_official": true,
+  "is_summit_level": false,
+  "keywords": [
+   "美国国务院",
+   "签证限制",
+   "南非",
+   "行政令14204"
+  ],
+  "collectedAt": "2026-09-16 12:20:00",
+  "collection_method": "curl"
  }
 ]
