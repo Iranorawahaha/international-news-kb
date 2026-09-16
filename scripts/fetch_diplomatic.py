@@ -46,10 +46,13 @@ USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
 # 外交部关键页面（2026-09-03 修复：fmprc.gov.cn 旧域名栏目已失效跳同页，改用 mfa.gov.cn 新栏目路径）
 # 频道 wjdt_674879（外交动态）下子栏目：
 #   wjbxw_674885 = 部领导新闻 | wsrc_674883 = 外事日程(访华预告) | fyrbt_674889 = 例行记者会
+#   9-16 新增 sjxw_674887 = 司局级新闻：亚洲司/拉美司等司长会见外国驻华大使（含离任辞行、
+#   递交国书副本类人事动态）在此发布，此前仅查「外交动态(部领导活动)」会整批漏抓大使人事变化
 MFA_URLS = {
     "外交动态": "https://www.mfa.gov.cn/web/wjdt_674879/wjbxw_674885/",
     "外事日程": "https://www.mfa.gov.cn/web/wjdt_674879/wsrc_674883/",
     "例行记者会": "https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/",
+    "司局级新闻": "https://www.mfa.gov.cn/wjdt_674879/sjxw_674887/",
 }
 
 # gov.cn 要闻
