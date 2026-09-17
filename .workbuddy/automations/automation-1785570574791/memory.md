@@ -712,3 +712,40 @@
 ### 经验固化
 - **取官网 URL 的正确姿势**：WebFetch 信源官网频道页（页面链接=官网）> WebSearch（被反爬屏蔽）
 - 交叉验证的 WebSearch 只用于"发现线索"，URL 一律回官网分类页取
+
+## 2026-09-17 (彭博社接入 V2.17 / 自动化 prompt 补强 V2.17.1)
+
+### 用户提问：「彭博社在信源清单中吗？看板长期未见彭博社消息」
+- **结论：登记 ≠ 接入，三层断点**
+  1. `data/config.json` 有登记（id=bloomberg，enabled=true，pri 17）→ 但**日常抓取清单是 11 源硬编码**，彭博从未列入 → 从未主动抓取
+  2. `update-news.sh` `AUTHORITY_ORDER` **无彭博** → `index() else 99` 最低优先级 → 即便条目进来也被同题源顶掉（实测：修复前 WSJ 先/后到**双向都把彭博顶掉**）
+  3. archive `retentionDays=7`；历史仅 2 条彭博且均为第三方转载，早滚出窗口
+- **官网通道实测**：`bloomberg.com/world` 恒 403 `Are you a robot?`（Cloudflare）、直连 000 → 无正文通道；**RSS 全通** `feeds.bloomberg.com/{politics|technology|economics|markets|industries}/news.rss` 各 20 条（wealth 0 条弃用），URL 100% bloomberg.com 含真实日期路径、带英文摘要
+
+### 落地动作（三处同步，全部完成）
+1. **抓取清单**：新增 `scripts/fetch_bloomberg_rss.py`（`--days/--json/--all/--no-dedup`；过滤 `/videos/`、URL 日期路径过滤、池/存档去重、涉华**词边界正则**过滤）；本自动化 prompt 第二步 11 源 → **13 源**，新增【第二步补充 0-B】FT/彭博专用通道
+2. **`AUTHORITY_ORDER`**：插入「彭博社」于**美联社之后 / BBC 之前**（rank 8）→ 三场景实测通过
+3. **飞书「来源」select 选项**：`+field-update` full PUT 追加「彭博社」（hue Gray），30 → **31** 项（防 800030005）
+- 其它：`config.json` name 彭博→彭博社 + url 改 RSS + note；自动化 prompt 名称 V2.13 → **V2.17**；skill / `boards/intl.md` 同步
+
+### 当日版面回填（用户改口「回填 917 版面，不改日报」）
+- `fetch_bloomberg_rss.py --days 3 --json` → 涉华过滤后 28 条候选 → **与现有 65 条标题逐条比对，避开已被其他源覆盖的同题事件** → 选 7 条入库（65 → **72**）
+- 7 条：华为 AI 芯片 90 / 中国 AI 股下跌 88 / 比亚迪随习访美团 88 / 台湾地区海巡访菲 86 / Manus 40 亿美元估值 86 / 宁德时代市值 84 / 香港金管局加息 84
+- ⭐ **正文突破（本自动化已写入通道）**：RSS `description` 仅 1 句 → `curl -x http://127.0.0.1:7890 'https://r.jina.ai/<彭博URL>'` 全部 **HTTP 200 ≈17KB**，取正文前 2–4 段（付费墙截断）写中文摘要；事实全部来自正文，无外推
+- 提交 `736b248`（回填）+ `00893a4`（压缩件）；远端 main 已同步；线上 200 / 485,320B，彭博社命中 21 处、9-17 日期 99 处
+- **未触碰日报链路**：`data/brief-override.json`（11:34）+ `morning-brief-final.html`（11:35）mtime 保持上午版本
+
+### ⚠️ 本次补强的两处「静默失败」缺口（V2.17.1，2026-09-17）
+1. **`collectedAt` 硬开关**：`update-news.sh` 判定 `if (collectedAt or '')[:10] != today: continue` → 缺 collectedAt 或值非今天，条目**被静默丢弃、不进今日版面**。此前 prompt 的字段清单**未含 collectedAt**，是"新源接入了却没条目"的头号隐形原因 → 已在第二步 + 0-B 各写明「每条新抓必须写 `collectedAt=抓取日 09:30`」
+2. **`r.jina.ai` 正文通道未写入**：仅存于 skill / boards，自动化 prompt 缺 → 已在 0-B 彭博社段加入完整取值法（含实测例句：Ascend 960DT 原定 2027 末商用 → 提前至 2027 Q1）
+
+### 复用口径（git）
+| 现象 | 处置 |
+|---|---|
+| `.git/index.lock` / `.git/refs/remotes/origin/main.lock` 残留致 commit/push 失败 | `lsof <lock>` 无持有者 **且** mtime 滞后 >20 分钟 → `rm -f` |
+| push 后 `git status` 仍显示 ahead（误判未推送） | 先 `git ls-remote origin main` 核实远端真实哈希 → `git update-ref refs/remotes/origin/main <hash>` 修正本地缓存（本次即因此误判） |
+
+### 路透 URL 纪律复核（本次顺带核验）
+- 现网版面（9-10~9-17）**路透社条目 41 条 100% 为 reuters.com 官网 URL**，`repost_from` 计数 **0** ✅
+- 池内仍有 53 条带 `repost_from` 的原始记录（9-13 及更早的路透、WSJ 若干），**均未进入已发布版面**
+- 替换动作实为 **commit `65d2e03`（2026-09-04）"09-04 看板URL替换为路透官网原文"**，早已完成
