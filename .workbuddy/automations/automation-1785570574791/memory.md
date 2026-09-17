@@ -1,3 +1,29 @@
+## 2026-09-01 09:23-09:47 (第二十三次运行)
+
+### 执行摘要
+- ⚠️ **源组丢失坑复发（第 9 次）**：fetch_us_official.py 白宫 14→3、国务院 18→4、国防部 23→21 整组被覆盖 → 运行前备份 /tmp/us-official-backup-0901.json 恢复 62 条 + merge 今日 5 条新增 → 71 条 6 源齐全 0 缺中文 0 导航残留
+- ✅ 官方源新增 9 条：**白宫 ①公共服务统一登录系统方案（8-31，75）②特朗普万斯赴密歇根展示制造业复兴（8-31，88）**；**国务院 ③彭林港项目联合声明（美库克群岛新西兰，8-31，75）④乌兹别克斯坦独立35周年贺词（8-31，75）⑤特立尼达和多巴哥独立64周年贺词（8-31，75）**；**war.gov ⑥镓供应链1.74亿美元投资（美日澳合作在澳建厂年产100吨，8-31，88★涉华关键矿产）⑦OpenAI ChatGPT Mil 上线 GenAI.mil 军用平台（8-31，86★AI军方）⑧GD/洛马7年协议 3倍PAC-3+4倍THAAD（8-31，82）⑨本土铜箔振兴（8-31，80）**；USTR（最新8-18行程类）/商务部 48h 无新
+- ✅ WebFetch 采集 36 条新增：路透 10/SCMP 8/NYT 4/AP 4/BBC 3/卫报 2/CNN 2/半岛 2/WaPo 1；**WSJ 0（反爬 JS-BLOCKED 持续）/Politico 0（Cloudflare 拦截持续），如实汇报**；**Reuters /technology /business 双频道补抓命中：CXMT 高带宽内存(HBM)突破 92★（The Information 报道）、Anthropic-英伟达Lambda 350亿美元云协议 90★、Nexperia 资产冻结 85、华为净利降36% 82、智谱AI收入增4倍 80**；同事件去重：美伊交火保留路透版（BBC/卫报/WaPo/AP跳过）、G20保留路透+NYT+WaPo三角度（AP跳过）、习普会保留SCMP版+NYT分析版
+- ✅ 交叉验证 3 组关键词：**无窗口内重大遗漏**——①1260H/CXMT 8-29 已收录 ②G20 贝森特对华顺差由 SCMP 92★ 覆盖 ③BIS 远程算力新规 8-28 已收录（今日 CXMT HBM 突破为相关新进展已补录）
+- ✅ update-news.sh --auto 一次成功：311 条/8 天，9-1 组 45 条（36 媒体 + 9 官方，date 8-31:37 + 9-1:8）→ 飞书 8 条（date=9-1，去重查询 rc=4 网络失败跳过查重，历史已知）→ commit 93b2a53 **脚本 push 报"Failure when receiving data"但实际送达（git push 显示 up-to-date + GitHub API 确认远程 HEAD=263ce36）→ 数据源 commit 437a124 代理推送成功**
+- ✅ 校验全部通过：今日组 45 条（collectedAt≠今日 0 / date<昨天 0 / 跨组 URL 重复 0 / 组内重复 0）；官方源 9 条 0 缺中文 0 模板摘要；今日组 0 缺中文 0 缺摘要 0 模板摘要 0 导航残留；嵌入 JSON 解析成功 8 组；JS 语法正确；**线上 HTTP 200 且 md5 与本地完全一致（b7003685）**
+
+### 本次关键发现
+1. **今日主题：美伊交火重启**（美军袭拉拉克岛+伊朗导弹袭约旦基地，路透 90★）+ **G20 财长会中美博弈多线**（贝森特对华 1.2 万亿顺差施压 92★ + 特朗普邀俄财长参会争议 85 + 记者被拒 85 + 美再制裁涉伊银行对华"所有选项在桌上" 88★）+ **习普上合会晤**（90★ + NYT 地缘筹码分析 90★）+ **CXMT HBM 突破 92★**（涉华芯片头号）+ **美日澳镓供应链 88★** + **OpenAI 军用 ChatGPT 86★**
+2. **源组丢失坑第 9 次确认**：备份恢复仍是唯一保险；本次白宫/国务院/国防部三源同时被覆盖（脚本合并 webfetch 覆盖），恢复后 war.gov 详情由 WebFetch 补全
+3. **脚本 push 报错≠失败**：本次脚本 push 报 "Failure when receiving data from the peer" 但数据实际已送达（git push 显示 up-to-date 且 GitHub API 确认远程 HEAD），核对以 ls-remote/API 为准，勿因报错重复强推
+4. **G20/美伊/上合同事件多源处理**：美伊保留路透版、G20 收路透+NYT+WaPo 三角度、习普会收 SCMP+NYT 两角度，其他跳过
+5. **Politico/WSJ 反爬持续第 2/3 日**：Politico Cloudflare /world+主站均拦截、WSJ JS-BLOCKED；窗口内相关主题已由其他源覆盖，无遗漏风险
+
+### 产出
+- 本地: international-news.html (311条/8天，9-1 组 45 条)，commit 93b2a53 + 437a124
+- 飞书: 8 条已入库（date=9-1）
+- ✅ 线上: https://iranorawahaha.github.io/international-news-kb/international-news.html（HTTP 200，md5 b70036851c9f499d7b83d86fcad16746 与本地一致）
+
+### 待跟进
+- [ ] fetch_us_official.py 源组丢失防护（第 9 次确认，超出"不修改脚本"范围，待用户确认）
+- [ ] Politico/WSJ 反爬持续：Politico 连续 3 日 Cloudflare；若未来有独家重大新闻需 WebSearch 兜底
+
 ## 2026-08-31 09:23-09:45 (第二十二次运行)
 
 ### 执行摘要
