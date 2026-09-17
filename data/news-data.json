@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-09-17 09:34",
+  "lastUpdated": "2026-09-17 14:56",
   "retentionDays": 7,
   "archive": {
     "2026-09-10": [
@@ -6452,6 +6452,35 @@
         "body_en": null
       },
       {
+        "id": "auto_2026-09-16_83268",
+        "date": "2026-09-16",
+        "title": "华为加速新一代 AI 芯片发布 目标取代英伟达在华地位",
+        "title_en": "Huawei Accelerates Launch of New AI Chip to Take On Nvidia",
+        "title_zh": "华为加速新一代 AI 芯片发布 目标取代英伟达在华地位",
+        "summary": "彭博社9月16日报道，华为正把下一代人工智能芯片的发布计划提前数月，目标是在中国市场取代英伟达并参与全球竞争。轮值董事长汪涛在上海举行的年度峰会上表示，公司旗舰产品昇腾 960DT 芯片原定 2027 年底商用，现已提前至 2027 年第一季度推出。",
+        "summary_en": "Huawei Technologies Co. is accelerating the debut of its next-generation AI chip in 2027 by several months as it aims to replace Nvidia Corp. in China and compete on the global stage. The company’s flagship Ascend 960DT chip, originally slated for commercial availability in late 2027, will now be launched in the first quarter, Huawei’s rotating chairman Wang Tao said at the company’s annual summit in Shanghai.",
+        "summary_zh": "彭博社9月16日报道，华为正把下一代人工智能芯片的发布计划提前数月，目标是在中国市场取代英伟达并参与全球竞争。轮值董事长汪涛在上海举行的年度峰会上表示，公司旗舰产品昇腾 960DT 芯片原定 2027 年底商用，现已提前至 2027 年第一季度推出。",
+        "source": "彭博社",
+        "category": "AI·科技",
+        "keywords": [
+          "华为",
+          "AI 芯片",
+          "昇腾",
+          "英伟达",
+          "出口管制",
+          "国产替代"
+        ],
+        "url": "https://www.bloomberg.com/news/articles/2026-09-16/huawei-set-to-unveil-china-s-best-answer-to-nvidia-ai-chip-reign",
+        "priority_score": 90,
+        "is_summit_level": false,
+        "importance": "高",
+        "collectedAt": "2026-09-17 14:55:00",
+        "collection_method": "rss+jina",
+        "column": "美国",
+        "is_official": false,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-09-16_92249",
         "date": "2026-09-16",
         "title": "中国外长促美伊保持克制 呼吁重启谈判",
@@ -6762,6 +6791,63 @@
         "body_en": null
       },
       {
+        "id": "auto_2026-09-17_47724",
+        "date": "2026-09-17",
+        "title": "中国 AI 股跌势加剧 美国同业推动限制中国获取前沿模型",
+        "title_en": "China AI Stocks’ Pain Grows as US Rivals Push for Model Curbs",
+        "title_zh": "中国 AI 股跌势加剧 美国同业推动限制中国获取前沿模型",
+        "summary": "彭博社9月17日报道，中国人工智能开发企业在本轮股市抛售中已损失数十亿美元，而美国同业推动切断中国竞争对手获取前沿模型的举措若成功，可能进一步加剧其困境。报道称，智谱与 MiniMax 股价 9 月以来均下跌逾 30%，合计市值蒸发 330 亿美元，主因竞争激烈与市场对现金消耗的担忧。投资者关注的新风险来自 Anthropic 等美国企业呼吁决策者限制中国获取其模型，并指控部分中国竞争对手未经许可使用美国模型、通过「蒸馏」方式训练自有模型。",
+        "summary_en": "China’s AI developers have already lost billions in a bruising stock selloff, and a push by US developers to cut Chinese rivals off from frontier models threatens to add to the pain if it succeeds. Shares of Z.AI Co. and MiniMax Group Inc. have plunged more than 30% each in September, wiping $33 billion from their combined market value amid fierce competition and concerns over cash burn. Now investors see a looming risk as Anthropic PBC and other US developers call on policymakers to restrict Chinese access, accusing some rivals of using American models without approval to train their own through a practice known as distillation.",
+        "summary_zh": "彭博社9月17日报道，中国人工智能开发企业在本轮股市抛售中已损失数十亿美元，而美国同业推动切断中国竞争对手获取前沿模型的举措若成功，可能进一步加剧其困境。报道称，智谱与 MiniMax 股价 9 月以来均下跌逾 30%，合计市值蒸发 330 亿美元，主因竞争激烈与市场对现金消耗的担忧。投资者关注的新风险来自 Anthropic 等美国企业呼吁决策者限制中国获取其模型，并指控部分中国竞争对手未经许可使用美国模型、通过「蒸馏」方式训练自有模型。",
+        "source": "彭博社",
+        "category": "AI·科技",
+        "keywords": [
+          "AI 模型",
+          "蒸馏",
+          "出口管制",
+          "智谱",
+          "MiniMax",
+          "中美科技竞争"
+        ],
+        "url": "https://www.bloomberg.com/news/articles/2026-09-17/china-s-ai-selloff-faces-risk-from-us-push-for-model-curbs",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "importance": "高",
+        "collectedAt": "2026-09-17 14:55:00",
+        "collection_method": "rss+jina",
+        "column": "美国",
+        "is_official": false,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-09-16_20195",
+        "date": "2026-09-16",
+        "title": "中国考虑让比亚迪加入习近平访美企业家随行团",
+        "title_en": "China Considers BYD for Xi’s CEO Entourage at Trump Summit",
+        "title_zh": "中国考虑让比亚迪加入习近平访美企业家随行团",
+        "summary": "彭博社9月16日援引知情人士报道，中方官员正考虑让比亚迪加入随习近平赴华盛顿出席与特朗普峰会的企业家代表团。知情人士称，包括中共中央办公厅主任蔡奇在内的高级官员正在审核随行企业家名单，此次国事访问定于 9 月 24 日进行；名单尚未最终确定，最后时刻仍可能调整。",
+        "summary_en": "Chinese officials are considering BYD Co. for a possible business delegation joining Xi Jinping’s summit with Donald Trump next week in Washington, according to people familiar with the matter. Senior officials including Xi’s chief of staff, Cai Qi, are reviewing a list of Chinese business titans for his state visit slated for Sept. 24, according to the people. The list isn’t final and could change at the last minute.",
+        "summary_zh": "彭博社9月16日援引知情人士报道，中方官员正考虑让比亚迪加入随习近平赴华盛顿出席与特朗普峰会的企业家代表团。知情人士称，包括中共中央办公厅主任蔡奇在内的高级官员正在审核随行企业家名单，此次国事访问定于 9 月 24 日进行；名单尚未最终确定，最后时刻仍可能调整。",
+        "source": "彭博社",
+        "category": "中美博弈",
+        "keywords": [
+          "习特会",
+          "比亚迪",
+          "企业家代表团",
+          "国事访问",
+          "中美关系"
+        ],
+        "url": "https://www.bloomberg.com/news/articles/2026-09-16/china-considers-byd-to-join-xi-s-ceo-entourage-for-trump-summit",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "importance": "高",
+        "collectedAt": "2026-09-17 14:55:00",
+        "collection_method": "rss+jina",
+        "column": "中国",
+        "is_official": false,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-09-16_1280",
         "date": "2026-09-16",
         "title": "字节跳动分拆后 AI 制药部门完成 2.9 亿美元融资",
@@ -6924,6 +7010,62 @@
         "collectedAt": "2026-09-17 09:45:00",
         "collection_method": "rss",
         "column": "美国",
+        "is_official": false,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-09-17_69674",
+        "date": "2026-09-17",
+        "title": "台湾地区海巡部门计划数十年来首访菲律宾 南海压力上升",
+        "title_en": "Taiwan Coast Guard Plans Visit to Philippines as China Pressure Grows",
+        "title_zh": "台湾地区海巡部门计划数十年来首访菲律宾 南海压力上升",
+        "summary": "彭博社9月17日报道，台湾地区海巡部门正筹划数十年来首次访问菲律宾，以在中国加强该地区海上活动之际强化双方关系。报道引述台北《自由时报》早前的消息称，相关经费已列入台湾地区 2027 年度预算，但是否派出多艘船只尚不清楚；该部门自 1974 年以来未公开访问过菲律宾。",
+        "summary_en": "Taiwan’s coast guard is planning its first visit to the Philippines in decades, strengthening ties as China boosts naval activity in the region. Funding for the visit is included in Taiwan’s 2027 budget, though it’s unclear if more than one vessel would be dispatched. The coast guard hasn’t visited the Philippines publicly since 1974, according to the Taipei-based Liberty Times, which earlier reported the proposal.",
+        "summary_zh": "彭博社9月17日报道，台湾地区海巡部门正筹划数十年来首次访问菲律宾，以在中国加强该地区海上活动之际强化双方关系。报道引述台北《自由时报》早前的消息称，相关经费已列入台湾地区 2027 年度预算，但是否派出多艘船只尚不清楚；该部门自 1974 年以来未公开访问过菲律宾。",
+        "source": "彭博社",
+        "category": "中国外交",
+        "keywords": [
+          "台湾地区",
+          "菲律宾",
+          "南海",
+          "海上安全",
+          "地区局势"
+        ],
+        "url": "https://www.bloomberg.com/news/articles/2026-09-17/taiwan-coast-guard-plans-visit-to-philippines-as-china-pressure-grows",
+        "priority_score": 86,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-09-17 14:55:00",
+        "collection_method": "rss+jina",
+        "column": "地区热点",
+        "is_official": false,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-09-17_30227",
+        "date": "2026-09-17",
+        "title": "AI 初创 Manus 与 Meta 拆分后首轮融资 估值翻倍至 40 亿美元",
+        "title_en": "Manus Eyes $4 Billion Value in First Round Since Meta Breakup",
+        "title_zh": "AI 初创 Manus 与 Meta 拆分后首轮融资 估值翻倍至 40 亿美元",
+        "summary": "彭博社9月17日援引知情人士报道，由中国创业者创立的 AI 初创公司 Manus 在与 Meta 拆分后启动首轮融资，估值将翻倍至 40 亿美元。此轮拟融资 5 亿美元，交易接近完成，完成后 Manus 将成为中国智能体（agentic AI）领域估值最高的初创企业。现有投资方包括腾讯、HSG 与真格基金，新投资方身份尚未披露，相关条款仍可能调整。",
+        "summary_en": "Chinese-founded AI startup Manus is set to double its valuation to $4 billion in its first fundraising since Beijing ordered it to split from Meta Platforms Inc. The planned $500 million financing round is set to close soon and would make the agentic AI pioneer China’s most valuable startup in its field, according to people familiar with the matter. Manus’ existing backers include Tencent Holdings Ltd., HSG and ZhenFund.",
+        "summary_zh": "彭博社9月17日援引知情人士报道，由中国创业者创立的 AI 初创公司 Manus 在与 Meta 拆分后启动首轮融资，估值将翻倍至 40 亿美元。此轮拟融资 5 亿美元，交易接近完成，完成后 Manus 将成为中国智能体（agentic AI）领域估值最高的初创企业。现有投资方包括腾讯、HSG 与真格基金，新投资方身份尚未披露，相关条款仍可能调整。",
+        "source": "彭博社",
+        "category": "AI·科技",
+        "keywords": [
+          "Manus",
+          "AI 初创",
+          "估值",
+          "腾讯",
+          "地缘博弈"
+        ],
+        "url": "https://www.bloomberg.com/news/articles/2026-09-17/manus-eyes-4-billion-value-in-first-round-since-meta-breakup",
+        "priority_score": 86,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-09-17 14:55:00",
+        "collection_method": "rss+jina",
+        "column": "其他",
         "is_official": false,
         "body_en": null
       },
@@ -7287,6 +7429,62 @@
         "body_en": null
       },
       {
+        "id": "auto_2026-09-16_25989",
+        "date": "2026-09-16",
+        "title": "宁德时代四个月市值蒸发千亿美元 多头仍看好长期竞争力",
+        "title_en": "CATL Bulls Reject ‘De-CATLization’ Fear After $100 Billion Rout",
+        "title_zh": "宁德时代四个月市值蒸发千亿美元 多头仍看好长期竞争力",
+        "summary": "彭博社9月16日报道，宁德时代多头并未因公司四个月内市值蒸发约 1000 亿美元而动摇，认为这家中国电池龙头的技术护城河足以使其成为全球能源转型的长期赢家。报道称，其深市上市股票较 5 月创下的历史高点已下跌 34%，与全球电动车及电池板块一同走弱，市场担忧盈利能力与需求前景；本周随着国内行业面临产能过剩和激烈竞争，股价跌势加快。",
+        "summary_en": "Contemporary Amperex Technology Co. Ltd. bulls are unfazed by a $100 billion market value wipeout over just four months, arguing the Chinese battery leader’s technology moat makes it a clear winner in the long-term global energy transition. Its Shenzhen-listed shares have slid 34% from their May record high, tracking weakness in global electric vehicle and battery peers as investors fret over profitability and demand.",
+        "summary_zh": "彭博社9月16日报道，宁德时代多头并未因公司四个月内市值蒸发约 1000 亿美元而动摇，认为这家中国电池龙头的技术护城河足以使其成为全球能源转型的长期赢家。报道称，其深市上市股票较 5 月创下的历史高点已下跌 34%，与全球电动车及电池板块一同走弱，市场担忧盈利能力与需求前景；本周随着国内行业面临产能过剩和激烈竞争，股价跌势加快。",
+        "source": "彭博社",
+        "category": "全球多边",
+        "keywords": [
+          "宁德时代",
+          "动力电池",
+          "市值",
+          "产能过剩",
+          "能源转型"
+        ],
+        "url": "https://www.bloomberg.com/news/articles/2026-09-16/catl-bulls-reject-de-catlization-fear-after-100-billion-rout",
+        "priority_score": 84,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-09-17 14:55:00",
+        "collection_method": "rss+jina",
+        "column": "其他",
+        "is_official": false,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-09-16_10749",
+        "date": "2026-09-16",
+        "title": "香港金管局跟随美联储加息 为 2023 年以来首次",
+        "title_en": "Hong Kong Follows Fed With First Rate Hike in Over Three Years",
+        "title_zh": "香港金管局跟随美联储加息 为 2023 年以来首次",
+        "summary": "彭博社9月16日报道，香港金融管理局跟随美联储加息，为 2023 年以来首次，此举可能威胁香港自去年以来的楼市复苏。金管局宣布将基准利率上调 25 个基点至 4.25%。作为事实上的本地央行，金管局须与美联储同步行动，以维持港元与美元的联系汇率制度。",
+        "summary_en": "The Hong Kong Monetary Authority followed the US Federal Reserve in raising interest rates for the first time since 2023, a decision that could threaten a property recovery unfolding since last year. The HKMA lifted its benchmark by 25 basis points to 4.25%, according to a statement on Thursday. The de facto central bank in the city moves in lockstep with the Fed to protect the local dollar’s peg to the greenback.",
+        "summary_zh": "彭博社9月16日报道，香港金融管理局跟随美联储加息，为 2023 年以来首次，此举可能威胁香港自去年以来的楼市复苏。金管局宣布将基准利率上调 25 个基点至 4.25%。作为事实上的本地央行，金管局须与美联储同步行动，以维持港元与美元的联系汇率制度。",
+        "source": "彭博社",
+        "category": "全球多边",
+        "keywords": [
+          "香港",
+          "金管局",
+          "加息",
+          "联系汇率",
+          "楼市"
+        ],
+        "url": "https://www.bloomberg.com/news/articles/2026-09-16/hong-kong-follows-fed-with-first-rate-hike-in-over-three-years",
+        "priority_score": 84,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-09-17 14:55:00",
+        "collection_method": "rss+jina",
+        "column": "美国",
+        "is_official": false,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-09-16_37439",
         "date": "2026-09-16",
         "title": "中国投资者借政策放宽加速涌入美股",
@@ -7477,8 +7675,7 @@
         "collection_method": "rss",
         "column": "美国",
         "is_official": false,
-        "body_en": null,
-        "repost_from": "TradingView（道琼斯电头）"
+        "body_en": null
       },
       {
         "id": "auto_2026-09-16_75155",
@@ -7945,8 +8142,7 @@
         "collection_method": "rss",
         "column": "美国",
         "is_official": false,
-        "body_en": null,
-        "repost_from": "TradingView（道琼斯电头）"
+        "body_en": null
       },
       {
         "id": "auto_2026-09-16_82225",
@@ -8043,7 +8239,7 @@
     "2026-09-10"
   ],
   "stats": {
-    "totalArticles": 292,
+    "totalArticles": 299,
     "dateCount": 6,
     "latestDate": "2026-09-17",
     "oldestDate": "2026-09-10"
