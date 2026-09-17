@@ -88,13 +88,14 @@ cat << 'EOF'
 
 📋 WebFetch 任务清单（V1.2.3 全部信源均为必选）：
 
-  🔴 必选(11): 路透社 / BBC / 南华早报 / 卫报 / CNN / 纽约时报 / 华尔街日报 / 半岛电视台 / Politico / 华盛顿邮报 / 美联社
+  🔴 必选(13): 路透社 / BBC / 南华早报 / 卫报 / CNN / 纽约时报 / 华尔街日报 / 半岛电视台 / Politico / 华盛顿邮报 / 美联社 / 金融时报 / 彭博社
+    ↳ 彭博社走 RSS 通道（官网 403 反爬）：scripts/fetch_bloomberg_rss.py，5 栏目 × 20 条，过滤 /videos/
 
 📝 全部信源必须完成！中文信源已弃用，仅依赖英文权威信源。
 ✅ 要求: 双语标题 + 完整URL + 元首级标注 + priority_score
 
 💡 在 WorkBuddy 中说:
-  "请用 WebFetch 从11个必选英文信源收集最新国际新闻"
+  "请用 WebFetch 从13个必选英文信源收集最新国际新闻"
 
 EOF
 
@@ -249,7 +250,7 @@ def deduplicate_articles(articles, archive=None):
     # —— 因为官方源有真实中文摘要/日期，媒体源是二手报道
     AUTHORITY_ORDER = ['白宫', '美国国务院', '美国贸易代表办公室(USTR)', '美国财政部',
                        '美国商务部', '美国国防部(war.gov)',
-                       '路透社', '美联社', 'BBC', 'CNN', '华盛顿邮报', '纽约时报',
+                       '路透社', '美联社', '彭博社', 'BBC', 'CNN', '华盛顿邮报', '纽约时报',
                        '华尔街日报', '卫报', '半岛电视台', '南华早报', 'Politico']
 
     def _norm_url(u):
