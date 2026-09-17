@@ -7477,7 +7477,8 @@
         "collection_method": "rss",
         "column": "美国",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "TradingView（道琼斯电头）"
       },
       {
         "id": "auto_2026-09-16_75155",
@@ -7944,7 +7945,8 @@
         "collection_method": "rss",
         "column": "美国",
         "is_official": false,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "TradingView（道琼斯电头）"
       },
       {
         "id": "auto_2026-09-16_82225",
