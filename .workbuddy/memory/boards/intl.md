@@ -1,4 +1,4 @@
-# 国际新闻看板（V2.16）· 详细规则
+# 国际新闻看板（V2.17）· 详细规则
 > 脚本 update-news.sh；数据 data/news-data.json（archive[YYYY-MM-DD]）
 
 - ⚠️ `--auto` 的 git add 不含 data/news-webfetch.json 与 us-official.json → 收尾精确补提交
@@ -21,6 +21,11 @@
   - 该法**无需 curl 页面正文**（DataDome 仍 401），sitemap 收录即 URL 真实存在 → 9-15 全部 10 条、9-16 全部 11 条路透均为官网 URL，repost_from = 0，「一键搜官网」清单连续两日为空
   - 注意 `sitemap-index` 的 `lastmod` 与 URL 内日期可能差 1 天（URL 日期 = 发布日，以 URL 为准）
 - ⚠️ **9-16 弱通道备忘**：①**WSJ 官网 sitemap 403（DataDome）**、RSS 旧稿禁用 → 只能 GN RSS 候选 + WebSearch 定位 finwire.io/TradingView 转载，当日条数必然偏低 ②**AP 官网 curl 403 且 WebFetch 只返回导航样板**（正文+日期被截断）→ 无法解析发布日，仅收录日期经多源同日交叉确认者，勿硬凑 ③SCMP `/rss/4/feed` 偶发 502，重试即 200（91/5 直通）
+- ⭐ **9-17 AP 通道升级（解决长期最弱通道）**：AP 官网 curl 恒 403（Cloudflare 拦截 sitemap/hub 全部路径），但 **WebFetch `https://apnews.com/hub/world-news` 可返回真实 `apnews.com/article/<slug>-<hash>` 官方 URL 列表（含标题，不含日期）** → 与 **Google News RSS `site:apnews.com when:2d`（含标题+真实 pubDate）按标题匹配**，即可拿到「官方 URL + 真实发布日」，当日据此收录 5 条（此前连续多日仅 2-3 条）。注意 hub 页无时间戳，日期一律以 GN RSS 为准；GN 命中不到的 AP 稿（如早于窗口）勿收录
+- ⚠️ **9-17 WSJ 仍为最弱**：TradingView DJN 只覆盖道琼斯电讯稿（Fed/宏观类），WSJ 深度特稿（如「中国黑客公司用 AI 强化网络间谍」「Driscoll's 蓝莓被中国偷种」）**无合格转载**（仅 threatbeat.com / realnarrativenews.com 等低质聚合）→ 按「宁缺毋滥」空缺，当日 WSJ 仅 2 条（均为 TradingView DJN 转载）
+- ⭐ **9-17 FT 条目构造法**：FT 官网无正文通道 → 用 WebSearch 定位（① `FT <标题关键词>` 找转述媒体；② 转述页常直接标注 `URL: https://www.ft.com/content/<uuid>`，即第三方背书 URL）。**摘要须由 2 家以上转述媒体交叉比对后撰写**（9-17 用 tmcnet insight + aisengtech brief 两家，内容一致）；**严禁凭 URL 编造**。9-17 FT 条目（中美 AI 监管分歧）已入库并成功同步飞书，**「金融时报」为飞书已有来源选项，无需新增**
+- ⚠️ **9-17 「今日新增」计数口径澄清（勿误判为 Bug）**：HTML 统计条的「今日新增」= **`date == 今日`** 的条数（按真实发布日），非 `collectedAt == 今日`。9-17 今日版面实际 65 条，但统计条显示 5 条（当日发布仅 5 条，60 条为 09-16 发布）——9-16 版面同样为 229 总 / 6 新增，口径一致，属既有脚本约定，非回归问题
+- ⚠️ **9-17 飞书同步必须「--today + 全量」两步**：`--today` 按 `date==today` 过滤，9-17 仅同步 5 条；须再补跑 `sync_to_feishu.py` 全量（292 条 → 去重 232 → 新增 60），5+60=65 才与今日版面全覆盖
 - ⚠️ **全量 update 会抹掉非固定字段（如 repost_from）**：收尾必须核对，若丢失则「改 data/news-data.json 补字段 + sed 提取 GENERATE_HTML_V12 段（909-1010 行）单独执行 + check_js_syntax + inject_nav.py」，**严禁重跑全量 update**
 - ⚠️ **飞书 800030005 = 来源选项缺失**：固定流程 field-get（`+field-list --base-token`，注意是 `--base-token` 非 `--app-token`，子命令带 `+` 前缀）→ 追加选项（hue 用合法值如 Gray）→ `+field-update --json`（full PUT，需带完整 options 数组）→ 重跑全量同步
 - ⚠️ **9-14 转载匹配坑**：RSS 标题用弯引号（U+2019/U+201C），按标题匹配 URL 前**必须归一化**（`’‘→'`、`“”→"`、`—–→-`），否则大面积匹配失败（9-14 首轮 12/59 失败）；另 WSJ 候选来自 Google News RSS，**标题常被截断**（如 `...Monumental Crisis for...`），必须二次搜索确认完整标题才可入库，禁凭猜测补全

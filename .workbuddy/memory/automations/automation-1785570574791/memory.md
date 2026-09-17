@@ -1,5 +1,30 @@
 # 自动化执行记忆：国际新闻看板每日刷新
 
+## 2026-09-17 刷新（09:23 自动，V2.17，一次会话完成）
+- 官方源：源组丢失第 18 次复发（新输出仅 37 条：国防部21/白宫6/国务院3/财政部3/USTR3/商务部1）→ /tmp/us-official-backup-0917.json 恢复 107 + merge 3 条 09-16 实质新增（白宫「政府采购互惠备忘录」（针对加拿大 Buy Canadian，清出联邦采购）/ 国务院「制裁巴勒斯坦权力机构与巴解组织官员」/ 国务院「MSMT 11 国联合声明：朝鲜海外劳工多集中中国与俄罗斯」）→ **110 条 6 源齐全**（国务院48/白宫27/国防部27/USTR4/财政部3/商务部1）；3 条新增全补 title_zh+summary_zh
+- 官方源窗口内剔除：白宫 09-16 其余 5 条（Constitution Day / POW-MIA Day 程序性文告、S.32+S.307 法案签署、水质行政令、北卡政绩 PR）无新闻价值 → 剔除；国务院「Mexico National Day」按 National Day 先例剔除；war.gov 最新 08-17 出窗口；商务部最新 07-16 出窗口；USTR 最新 08-13 出窗口
+- ⭐ **AP 通道升级（解决长期最弱通道）**：AP 官网 curl 恒 403（含 sitemap/news-sitemap，Cloudflare）→ **WebFetch `apnews.com/hub/world-news` 可返回真实 `apnews.com/article/<slug>-<hash>` 官方 URL（含标题不含日期）**，与 GN RSS `site:apnews.com when:2d`（标题+真实 pubDate）按标题匹配 → 当日收录 **5 条**（此前多日仅 2-3 条），全部官方 URL
+- WebFetch 11 源仍大面积失败（CNN/AP 均 fetch failed）→ 代理 7890 RSS 兜底：BBC/Guardian/AJ/NYT/WaPo/Politico/scmp91/scmp5 全 200（**scmp4 /rss/4/feed 首次 000 需重试**，wapotech/politico 首次 000 重试即 200）；**CNN 改用 curl `edition.cnn.com/world` 得 3.4MB HTML + `lite.cnn.com` 提取标题**（比 WebFetch 稳）
+- ⭐ **路透 sitemap 法连续第三日全官网**：前 10 片 1000 条一次成功（无分片失败），解 `<news:title>` 筛相关 373 条 → 取 11 条入池全为 reuters.com 官网 URL，**repost_from = 0，「一键搜官网」清单连续第三日为空**
+- ⚠️ **WSJ 仍为最弱通道**：TradingView DJN 仅覆盖道琼斯电讯稿 → 当日 WSJ 仅 2 条（Fed/Warsh 相关，转载标注）。WSJ 深度特稿（中国黑客公司 AI 网络间谍、Driscoll's 蓝莓被中国偷种）**无合格转载**（仅 threatbeat.com/realnarrativenews.com 等低质聚合）→ 按纪律空缺
+- 收录 62 条 webfetch（全部 date∈{09-16,09-17}）：路透11/SCMP11/BBC6/NYT6/Politico5/AP5/卫报4/AJ4/WaPo4/CNN3/WSJ2/FT1；1 条 CNN 评论（date=09-15）出窗口剔除；与池+archive 去重剔除 2 条 → 池 1238→1300
+- ⭐ **交叉验证补录 1 条（AI 出口管制专题）**：FT「US-China AI regulation remains difficult despite shared concerns」（09-16，AI 治理/出口管制/远程算力，用户点名必查主题）→ 用 WebSearch 定位转述媒体（tmcnet insight + aisengtech brief，2 家内容一致）取第三方背书的 ft.com URL → **「金融时报」为飞书已有来源选项，无需新增**；另据 Reuters Factbox 充实「AI 竞争阴影笼罩习特会」摘要（蒸馏指控/远程算力/H200 例外/监管分歧五要点）。CXMT/1260H 无窗口内新；美中关税制裁无新（govinfo L-lysine 反倾销令按 09-16 程序性贸易救济先例不收）
+- update-news.sh --auto 成功：292 条/6 天/今日版面 **65 条**（AI·科技19/中美博弈13/地区局势11/中欧与盟友10/美国内政7/中国外交2/全球多边2/其他1；元首级 7，≥88 共 19 条）；三零全绿（collectedAt≠今日0 · date<昨天0 · URL重复0 · 版面内自身重复0）；官方 3 条 0 缺字段/0 模板摘要；导航残留 0；无中文标题 0 / 无英文标题 0；JS 0 错误；HTML 双端一致 470724B
+- ⚠️ **转载标签被全量 update 丢弃（已知坑复发）**：2 条 WSJ TradingView 条目的 repost_from 被抹掉 → 改 data/news-data.json 按 URL 补字段 + `sed -n '909,1010p' update-news.sh` 单独跑 GENERATE_HTML_V12 段 + check_js_syntax + inject_nav.py，**未重跑全量 update**；修复后线上含「TradingView（道琼斯电头）」标签 2 处
+- ⚠️ git 首次 push 失败（`Failure when receiving data from the peer`）→ 重试即成功。主 commit 07a8df1 → 补提交 4337a46（webfetch 1300 / 官方源 110 / us-official-report / news-data / 双端 HTML），远程一致
+- 飞书：①`--today` 同步 5 条 ②补跑全量（292→去重232→新增 60），5+60=65 全覆盖；无需新增 source 选项
+- 线上 ?t= 二次请求 HTTP 200 **470724B**，与本地逐字节一致；今日 65 条线上命中 65/65；lastUpdated 2026-09-17 09:34
+- 头条：美国会通过对俄制裁法案剑指中印能源买家（95★）/ AI 竞争阴影笼罩习特会（92★）/ 贝森特称愿就 AI 共同风险与中方沟通（92★）/ 中国防长香山论坛避开热点（92★）/ 北京在峰会前接待伊朗外长（92★）/ 美军白宫为习近平到访彩排（90★）/ 美情报机构警告售沙特 F-35 或致中国窃取技术（90★）/ FT 中美 AI 监管分歧难弥合（88★）/ 华为在美受审指控窃取 T-Mobile 机器人技术（88★）/ 五角大楼不顾警告推进 AI（88★）/ 美联储三年多来首次加息（88★）
+- **建议综合（当日同事件多源，供日报/人工采纳）**：①对俄制裁法案涉中印能源买家（SCMP95+路透88+卫报88+Politico88+AJ86+CNN84，6 源）②美联储首次加息（BBC88+Politico84+半岛82+WSJ82+CNN80+WSJ78，6 源）③加拿大「准成员」与特朗普对欧关税威胁（Politico84+WaPo84+BBC82+NYT82+AP82+白宫80，6 源）④王毅会见伊朗外长（NYT92+路透88+SCMP88，3 源）⑤中国防长香山论坛（SCMP92+路透90，2 源）⑥奥特曼 AI 安全表态（BBC86+WaPo84，2 源）⑦对以军售一吨级炸弹（NYT80+卫报80，2 源）⑧俄暗杀图谋（BBC82+AP82，2 源）
+- 固定附加项：`gen_reuters_recheck_list.py` 输出「今日无路透转载条目（全官网或空缺），无需反查」——反查清单连续第三日为空
+
+## 经验增量（09-17）
+- ⭐ **AP 通道升级已写入 boards/intl.md**：WebFetch `apnews.com/hub/world-news` 取官方 URL + GN RSS 取标题与日期，标题匹配合并 → 取代「AP 只能靠多源交叉确认少量收录」的旧结论
+- CNN 最优通道 = curl `edition.cnn.com/world`（3.4MB 全文）+ `lite.cnn.com`（标题干净、URL 带日期）→ 优于 WebFetch（fetch failed）与其 RSS（2023 缓存旧稿）
+- WSJ 深度特稿无合格转载时按纪律空缺；TradingView DJN 仅覆盖道琼斯电讯稿
+- FT 条目构造：转述媒体页面常直接标注 `URL: https://www.ft.com/content/<uuid>` → 2 家以上转述交叉比对后撰写摘要，严禁凭 URL 编造
+- HTML 统计条「今日新增」= `date == 今日` 条数（非 collectedAt），9-16/9-17 口径一致，属既有约定勿误判为 Bug
+
 ## 2026-09-16 刷新（12:03 自动，V2.16，一次会话完成）
 - 官方源：源组丢失第 17 次复发（新输出仅 37 条：国务院9/国防部21/财政部3/商务部1/USTR3，白宫 curl 失败）→ /tmp/us-official-backup-0916.json 恢复 104 + merge 3 条窗口内实质新增（国务院 09-15：鲁比奥-阿曼外长通话 / 鲁比奥-叙利亚外长通话 / 涉种族歧视新签证限制政策）→ **107 条 6 源齐全**（国务院46/国防部27/白宫26/USTR4/财政部3/商务部1）；6 条 National Day 程序性贺电按 San Marino/Eswatini 先例剔除；3 条新增全补 title_zh+summary_zh
 - 官方源窗口内剔除：白宫 09-15 两条（梅拉尼娅 Ashe County 访问 / Memphis 治安 PR）无新闻价值 → 剔除；war.gov 最新 09-15（MQ-25A 首产合同 5.62 亿 / USS St. Louis 边境任务 / 工业基础备忘录）非涉华非 AI 经贸 → 如实空缺；commerce.gov 最新 09-02 出窗口；USTR 最新 09-09 出窗口

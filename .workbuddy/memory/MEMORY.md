@@ -1,7 +1,7 @@
 # Ira 信息看板体系 · 项目记忆（索引）
 
 > **⚠️ 开工前必读**：本文件为索引 + 跨看板规则。各看板详细排错规则见 `boards/`：
-> - `boards/intl.md` 国际新闻看板 V2.16（update-news.sh）
+> - `boards/intl.md` 国际新闻看板 V2.17（update-news.sh）
 > - `boards/china.md` 国内新闻看板 V5.8（refresh_china_news.sh）
 > - `boards/ai.md` AI 动向看板 V5（refresh_board.sh）
 > - `boards/diplo.md` 使领馆看板 V1.0（refresh_diplomatic.sh）
