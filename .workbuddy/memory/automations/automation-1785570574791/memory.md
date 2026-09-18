@@ -1,5 +1,28 @@
 # 自动化执行记忆：国际新闻看板每日刷新
 
+## 2026-09-18 刷新（09:23 自动，V2.17，一次会话完成）
+- 官方源：源组丢失第 19 次复发（新输出仅 37 条：国防部21/国务院5/白宫4/财政部3/USTR3/商务部1）→ /tmp/us-official-backup-0918.json 恢复 110 + merge 1 条窗口内新增（国务院 09-17「鲁比奥与立陶宛外长关键矿产框架 MOU 签署」）→ **111 条 6 源齐全**（国务院49/白宫27/国防部27/USTR4/财政部3/商务部1）；新增条补 title_zh+summary_zh 并令 `title=title_zh`
+- 官方源窗口内剔除：白宫 09-17 四条（海水垂钓行政令 / 狩猎传统行政令 / 向参议院送交撤回提名 / 「信仰群体 250 项胜利」PR）无新闻价值；国务院「伊朗制裁规避网络 Operation Economic Outcast」「古巴矿业制裁 + Fact Sheet」「鲁比奥会见哥斯达黎加外长」非涉华非核心 → 剔除
+- ⭐ **路透 sitemap 法连续第四日全官网**：前 10 片 1000 条一次成功（含 `<news:title>` 与 lastmod），筛 105 条相关 → 取 13 条入池全为 reuters.com 官网 URL，**repost_from = 0，「一键搜官网」清单连续第四日为空**
+- WebFetch 11 源仍大面积失败 → 代理 7890 RSS 兜底：BBC/Guardian/AJ/NYT/WaPo/Politico/**SCMP 4·91·5 三片全 200 一次成功（无重试）**；**CNN 改用 curl `edition.cnn.com/world`（4.97MB）+ 正则提链与标题**（4 条，优于 WebFetch）；AP 走 WebFetch `apnews.com/hub/world-news` 取官方 URL + GN RSS `site:apnews.com when:2d` 取真实 pubDate
+- 彭博社 `fetch_bloomberg_rss.py --days 2`：候选 20 条 → 按窗口(09-17/09-18)筛 → **入库 7 条**（全官网 URL）；FT 走 `r.jina.ai/https://www.ft.com/{world|china|companies}` 提官网 URL（GN RSS 链接为混淆串不可用）+ WebSearch 2 家以上转述交叉比对撰摘要 → **入库 6 条（5 条官网 URL）**
+- 收录 78 条（全部 date∈{09-17,09-18}）；剔除 5 条 date=09-16（NYT F-35/伊朗外长、卫报南非签证、CNN OpenAI、Politico 两党 AI 分歧）→ 均已被窗口内其他源覆盖，不硬凑
+- ⭐⭐ **重大根因发现：`title` 字段缺失 → 每源只上 1 条**。首轮 78 条只上板 13 条（恰 == 信源数 13，且每源恰为最高分那条）。日志特征「🔁 重复移除: ... (来源: 路透社)」**标题为空**。根因：去重第 3 步 `unique_key` 由 `art.get('title','')` 生成，我只写了 `title_zh`/`title_en` 未写 `title` → 同源 unique_key 全等。补 `title=title_zh` + `summary=summary_zh` 后重跑即恢复 78 条。已固化 boards/intl.md（列为与 collectedAt 并列的第二号丢条原因）
+- update-news.sh --auto 成功：331 条/6 天/今日版面 **78 条**（AI·科技26/中美博弈22/地区局势12/中欧与盟友9/美国内政3/中国外交2/全球多边2/其他2；元首级 5，≥88 共 12 条）；三零全绿（collectedAt≠今日0 · date<昨天0 · URL重复0 · 版面内自身重复0）；官方 1 条 0 缺字段/0 模板摘要；导航残留 0；无中文/英文标题 0；黑名单域名 0；JS 0 错误；HTML 双端一致 361973B
+- git：主 commit c40169d（update 自动 push）→ 补提交 d75e519（webfetch 1385 / 官方源 111 / us-official-report），`git ls-remote` 核实远程一致
+- 飞书：`--today` 同步 0 条（今日版面多为 date=昨日，属既有约定）→ 补跑全量（331→去重 255→新增 76），76 条覆盖今日版面；无需新增 source 选项
+- 线上 ?t= 二次请求 HTTP 200 **361973B**，与本地逐字节一致；今日 78 条线上命中 78/78；lastUpdated 2026-09-18 09:34
+- 头条：特朗普将在安德鲁斯联合基地迎接习近平（92★）/ 美推迟产能过剩关税至习特会之后（92★）/ 华为称 AI 芯片需求超供给（92★）/ 习特会谈什么（90★）/ 中美或宣布加强两军关系（90★）/ 交易员聚焦习特会寻 AI 与人民币线索（86★）/ 华为徐直军称中国 AI 尚不足以感知前沿风险（88★）/ 俄中否决联合国对伊监督授权（88★）/ 中国回击美涉俄制裁关税法案（88★）/ 美盟友忧特朗普在台湾问题上让步（88★）
+- **建议综合（当日同事件多源，供日报/人工采纳）**：①华为 Connect 大会徐直军表态（路透92+路透88+FT86，3 源）②俄中否决联合国伊朗监督授权（路透88+NYT88+AJ86，3 源）③中美元首会晤前瞻（SCMP92+彭博92+路透90+彭博86，4 源）④加拿大-欧盟「准成员」（BBC80+NYT80+WaPo80+卫报78+AP78，5 源）⑤Anthropic Claude 参与自身研发（WaPo84+彭博80，2 源）⑥AI 行业放缓路线分歧（BBC86+AP82+彭博78，3 源）⑦美众议院涉俄制裁法案与中印（SCMP88+BBC82，2 源）⑧卡尼欧盟演讲（卫报78+AP78+WaPo80，3 源）
+- 固定附加项：`gen_reuters_recheck_list.py` 输出「今日无路透转载条目（全官网或空缺），无需反查」——连续第四日为空
+
+## 经验增量（09-18）
+- ⭐⭐ **入库 schema 必须含 `title`（= title_zh）与 `summary`（= summary_zh）**，不能只写 `title_zh`/`summary_zh`；否则同源条目在去重第 3 步全部判为重复，每源只剩 1 条。**判据：今日版面条数 == 信源数 → 立即查 title 字段**
+- FT 官网 URL 获取法（9-18 验证）：GN RSS 链接是混淆串，**改用 `curl -x 7890 https://r.jina.ai/https://www.ft.com/{world|china|companies}` 抓栏目页 markdown，正则提 `[标题](https://www.ft.com/content/<uuid>)` 即可拿到官网 URL**；正文仍为付费墙 → 摘要走 WebSearch 找 2 家以上转述交叉比对
+- CNN 最优通道再确认：`curl edition.cnn.com/world`（4.97MB）→ 正则 `href="(/2026/09/1[78]/[^"]{10,120})"` 提链 + 邻近 `<a>` 文本提标题，比 WebFetch 稳定
+- 官方源新增条 `title` 字段需显式设为中文标题（官方源约定：title=中文标题、summary=英文原文、summary_zh=中文摘要），否则同样触发同源去重
+- 09-17 版面定稿后未再增补；archive 6 天窗口正常
+
 ## 2026-09-17 刷新（09:23 自动，V2.17，一次会话完成）
 - 官方源：源组丢失第 18 次复发（新输出仅 37 条：国防部21/白宫6/国务院3/财政部3/USTR3/商务部1）→ /tmp/us-official-backup-0917.json 恢复 107 + merge 3 条 09-16 实质新增（白宫「政府采购互惠备忘录」（针对加拿大 Buy Canadian，清出联邦采购）/ 国务院「制裁巴勒斯坦权力机构与巴解组织官员」/ 国务院「MSMT 11 国联合声明：朝鲜海外劳工多集中中国与俄罗斯」）→ **110 条 6 源齐全**（国务院48/白宫27/国防部27/USTR4/财政部3/商务部1）；3 条新增全补 title_zh+summary_zh
 - 官方源窗口内剔除：白宫 09-16 其余 5 条（Constitution Day / POW-MIA Day 程序性文告、S.32+S.307 法案签署、水质行政令、北卡政绩 PR）无新闻价值 → 剔除；国务院「Mexico National Day」按 National Day 先例剔除；war.gov 最新 08-17 出窗口；商务部最新 07-16 出窗口；USTR 最新 08-13 出窗口
