@@ -168,7 +168,7 @@ def build():
 
     # 构造 window_str / now_full
     if dates:
-        window_str = f"{dates[-1][5:]} ~ {dates[0][5:]}（近 7 天）"
+        window_str = f"{dates[-1][5:]} ~ {dates[0][5:]}"
     else:
         window_str = NOW.strftime("%m-%d（暂无数据）")
     now_full = NOW.strftime("%Y-%m-%d %H:%M")
