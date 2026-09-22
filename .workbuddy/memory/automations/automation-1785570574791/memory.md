@@ -133,3 +133,5 @@
 - ⭐ **Politico 通道更新**：`politico.com/rss/politicopicks.xml` 已被 Cloudflare 拦截（`Just a moment...`）→ 改走 `https://www.politico.eu/feed/`（200，10 条真实 pubDate + politico.eu 官网 URL）
 - ⚠️ **GN RSS pubDate ≠ 页面发布日**：WSJ《Burned Out and Unemployed…》GN 标 09-22，实际 09-20 16:03 UTC → 必须第三方核实
 - ⚠️ **Write 工具单次内容上限约 4KB**：74 条池拆 17 个 `/tmp/pool0922/*.txt` 分块（管道分隔）+ 合并脚本，比逐条 dict 更稳
+- ⚠️ **路透 sitemap 日期正则坑**：`/(\d{4})-(\d{2})-(\d{2})/?$` 带前导斜杠 → 996 条 date 全空；正确 `(\d{4})-(\d{2})-(\d{2})/?$`（已固化到 skill 并 bump v1.0.1）
+- 收尾：boards/intl.md 已补 09-22 经验增量（commit 8e7afd1，远程核实一致）
