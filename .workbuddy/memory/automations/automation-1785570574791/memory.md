@@ -90,3 +90,46 @@
 - 路透 sitemap 法为最新首选，优于 9-14 的 WebSearch 完整标题法（后者只能逐条命中，sitemap 一次批量拿全且可反向挖漏）
 - RSS 标题/URL 禁止手抄（120 字符截断）→ 一律脚本从 XML 取 `link`；入库前与池+archive 全量 URL 去重（AP 头条页会重新露出旧文）
 - 官方源窗口判断须回页面核对发布日（脚本 date 解析 09-15 两次误判为 09-15，实为 09-11 / 09-10）
+
+## 2026-09-19 执行摘要（成功）
+- 官方源：fetch_us_official.py 后源组丢失复现（111→37）→ 备份恢复+合并 5 条 09-18 新增（H-1B 行政令/格雷厄姆法案/鲁比奥会韩外长/联大行程/WFP 任命），116 条 6 源齐全
+- 13 信源：RSS 通道 11 源 228 条窗口内 + 路透 sitemap 直取（103 命中）+ 彭博 RSS 22 候选→入库 9 + CNN lite + AP hub + FT 栏目页 + WSJ 3 条（Livemint/Yahoo 转载+官网直链）
+- 入库 75 条（1 重复跳过），collectedAt 全部=2026-09-19 09:30
+- 今日版面 80 条：路透10/SCMP9/彭博9/BBC7/NYT6/CNN5/Politico5/WaPo5/FT4/AJ4/AP4/卫报4/WSJ3/官方5；归档校验三项 0；导航/模板残留 0（H-1B 条目 summary 装饰文字清理 3 轮后清零，注意 summary 与 summary_en 两个字段都要改）
+- 3 commit 推送（ba3c5e2/a94c579/0f5daef/bdea5d3），线上与本地 len 一致
+- 飞书：--today 16 条 + 全量补 76 条（date=09-18 部分）
+- 路透 recheck：今日无转载条目（全官网），repost_from=0
+- 教训：合并脚本里字符串内含中文引号时用 Write 写 .py 文件而非 heredoc；update-news.sh --auto 后必须精确补提交两个 pool 文件
+
+## 2026-09-20 刷新（09:23 自动，V2.17，一次会话完成）
+- 官方源：源组丢失第 20 次复发（新输出仅 29 条）→ /tmp/us-official-backup-0920.json 恢复 116 条 6 源齐全；窗口内唯一新增为国务院「Saint Kitts and Nevis National Day」→ 按 National Day 先例剔除（未入 us-official.json，但 fetch 脚本直写 news-data.json 混入今日版面 → 用 URL 精确删除 + sed 910-1011 重跑 GENERATE_HTML_V12 段修复，今日版面 61→60）
+- 13 信源：RSS 通道 7 家 152 条窗口内（BBC/卫报/AJ/NYT/WaPo/Politico×2/SCMP×3 全 200）+ 路透 sitemap 直取（1000 条，标题筛 16 条相关）+ 彭博 RSS 10 候选→入库 6 + CNN lite 59 候选 + AP hub 官网 URL + WSJ 经 WebSearch 拿 2 条官网 URL（Dario/Jensen AI 减速之争 88★、德国重整军备 76★）+ FT 栏目页 4 条官网 URL
+- 入库 63 条（8 条与池重复跳过），collectedAt 全部=2026-09-20 09:30；date 分布 09-19×60 / 09-20×3
+- 今日版面 60 条：路透10/SCMP6/彭博6/AP5/NYT5/BBC5/Politico5/WaPo4/AJ4/卫报4/WSJ2/FT2/CNN2；AI·科技19/地区局势16/美国内政9/中美博弈8；元首级5，≥88 共6条；三零全绿+与历史版面重复0+黑名单0+模板摘要0
+- ⚠️ 本次坑：news-data.json 已升级 V1.2 dict 结构（archive 按日期为 key、dates 为 list），校验脚本须按 nd['archive']['2026-09-20'] 取数，勿再用列表假设
+- git：update 自动 commit ec30f23 → 补提交 cce7ac7（webfetch 1523/官方源116/news-data/双端HTML），git ls-remote 核实一致；线上 ?t= HTTP 200 743890B 与本地逐字节一致
+- 飞书：--today 3 条 + 全量补 69 条
+- 交叉验证 3 组：①CXMT/1260H 无窗口内新 ②对俄制裁法案签署（09-18）+商务部回应已由彭博「中国痛批美对俄伊制裁新法」覆盖 ③AI 远程算力无窗口内新（均为旧 PDF/报告）
+- 固定附加项：gen_reuters_recheck_list.py 输出「今日无路透转载条目」——连续第五日为空，repost_from=0
+- 头条：习特会前中方筹码更足（SCMP 92）/ 贝森特-何立峰周日摩根大通总部会晤（路透92）/ 美中贸易团队纽约磋商 AI 与伊朗（彭博92）/ 习近平下周抵华府 特朗普亲赴机场迎接（AP 90）/ 特习对决笼罩世界经济（彭博88）/ 达里奥 vs 黄仁勋 AI 减速之争（WSJ 88）/ 中国痛批美对俄伊制裁新法（彭博86）/ AI 放缓反垄断诉讼（CNN86/AP84）/ 特朗普格陵兰协议意在增加对华筹码（SCMP84）/ 胡塞重大升级袭击利雅得（NYT84）
+- 建议综合（同事件多源）：①AI Force/AI 沙皇（SCMP+路透+BBC+卫报+Politico+彭博+CNN，7 源）②胡塞袭击利雅得（NYT+BBC+卫报+SCMP+AJ+AP，6 源）③格陵兰安全协议（路透+NYT×2+BBC+卫报+AJ+FT，7 源）④习特会前瞻（SCMP92+彭博92+AP90+SCMP90，多源）⑤贝森特-何立峰会晤（路透92+彭博92，2 源）⑥白宫媒体禁令（路透+BBC+Politico×2+CNN+彭博，6 源）⑦Gemini 入侵真实系统（SCMP+BBC+FT，3 源）⑧AI 放缓反垄断诉讼（CNN86+AP84，2 源）
+- 教训：①RSS 标题含弯引号 ‘’ 时 find 匹配须用无引号片段 ②fetch_us_official.py 会直写 news-data.json（绕过 us-official.json 池），剔除窗口外程序性文告后必须检查 news-data.json 是否被混入
+
+## 2026-09-22 刷新（14:09 自动，V2.17，一次会话完成）
+- 官方源：源组丢失第 21 次复发（新输出仅 38 条）→ /tmp/us-official-backup-0922.json 恢复 116 + merge 5 条窗口内新增（白宫「进入白宫是特权而非权利」回应媒体诉讼 / 国务院「鲁比奥会见北极盟友」/「与意大利签关键矿产 MOU」/「会见伊拉克总理扎伊迪」/「会见肯尼亚总统鲁托」）→ **121 条 6 源齐全**；剔除 Mali National Day（先例）、白宫 G20 能源部长会回顾稿（09-16 事件无新进展）、意大利双边读稿（与 MOU 稿重复）、玻利维亚总统会见（非重点国例行读稿）
+- 13 信源：RSS 通道 7 家（BBC/卫报/AJ/NYT/WaPo/SCMP×3 全 200）+ 路透 sitemap 直取（1000 条，窗口内相关 211 条，取 11 条全官网 URL）+ 彭博 RSS 25 候选→入库 7 + CNN curl edition.cnn.com/world（5 条）+ AP hub world-news/china 官网 URL + GN RSS 取日期（5 条）+ WSJ 经 WebSearch 拿 1 条官网 URL + FT 栏目页 r.jina.ai 提官网 URL（5 条）+ Politico 改走 politico.eu/feed/（4 条）
+- 入库 74 条，collectedAt 全部=2026-09-22 09:30:00；date 分布 09-21×48 / 09-22×26
+- 今日版面 79 条（74 webfetch + 5 官方）：AI·科技21/中美博弈18/地区局势15/美国内政9/中欧与盟友5/其他5/全球多边5/中国外交1；元首级 11，≥88 共 21 条；三零全绿 + 与历史版面重复 0 + 版面内重复 0 + 黑名单 0 + 模板摘要 0 + 缺中英文标题 0 + repost_from 0 + 路透官网 11/11
+- ⚠️ archive 无 09-21 键（周一未跑）：09-21 内容按 V2.11 自然归入 09-22 版面
+- git：主 commit 874fce5 → 补提交 7ac9063（webfetch 1597/官方源121/report），远程一致；线上 ?t= HTTP 200 706259B 与本地逐字节一致，79/79 命中；lastUpdated 2026-09-22 14:20
+- 飞书：--today 26 条 + 全量补 65 条
+- 交叉验证 3 组：①CXMT/1260H 无窗口内新 ②美中关税制裁无新（镀锡板反倾销初裁属程序性）③**AI 出口管制/远程算力命中 1 条**（SCMP 09-21 美国权衡将技术封锁扩展至云计算）→ 已补录；另补 SCMP 海光边缘 AI 芯片
+- 固定附加项：gen_reuters_recheck_list.py 输出「今日无路透转载条目」——连续第五日为空
+- 头条：习要求特朗普依 1982 公报停止对台军售（93★）/ 稀土摩擦或拖累贸易休战延期（92★）/ 特习 AI·贸易·伊朗摩擦但求稳定（92★）/ 贝森特称两月后深圳再开 AI 安全会谈（92★）/ 美中就 AI 达成对话安排（92★）/ 北京确认习本周国事访问（90★）/ 阿里发新一代自研 AI 芯片（90★）/ 五角大楼黑名单成特习 AI 会谈棘手议题（90★）
+- 建议综合（8 组，供日报采纳）：①元首会晤前瞻与贸易休战（7 源）②美中 AI 安全对话（5 源）③对台军售与台海（5 源）④稀土与关键矿产（5 源）⑤军队高层开除党籍（3 源）⑥白宫媒体禁令与诉讼（5 源）⑦也门胡塞攻势（5 源）⑧俄罗斯议会选举（4 源）
+
+### 经验增量（09-22）
+- ⭐ **FT 真实发布日核实法**：`curl -x 7890 https://r.jina.ai/https://www.ft.com/content/<uuid>` 返回 `Published Time` 字段 → 据此剔除 09-18 / 08-20 两条出窗口旧稿（FT 栏目页只给标题+URL）
+- ⭐ **Politico 通道更新**：`politico.com/rss/politicopicks.xml` 已被 Cloudflare 拦截（`Just a moment...`）→ 改走 `https://www.politico.eu/feed/`（200，10 条真实 pubDate + politico.eu 官网 URL）
+- ⚠️ **GN RSS pubDate ≠ 页面发布日**：WSJ《Burned Out and Unemployed…》GN 标 09-22，实际 09-20 16:03 UTC → 必须第三方核实
+- ⚠️ **Write 工具单次内容上限约 4KB**：74 条池拆 17 个 `/tmp/pool0922/*.txt` 分块（管道分隔）+ 合并脚本，比逐条 dict 更稳
