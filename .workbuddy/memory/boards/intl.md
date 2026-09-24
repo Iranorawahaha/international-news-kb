@@ -58,3 +58,11 @@
 - ⚠️ **9-22 路透 sitemap 日期正则坑**：解析 `(loc, lastmod, title, date)` 时日期正则**不能带前导斜杠** —— 写成 `/(\d{4})-(\d{2})-(\d{2})/?$` 会致 996 条 `date` 全空；正确为 `(\d{4})-(\d{2})-(\d{2})/?$`。9-22 一次解 996 条、窗口内相关 211 条、取 11 条**全官网 URL**（已同步 `reuters-official-url-lookup` skill）
 - ⚠️ **9-22 周一缺版面处理（archive 无 09-21 键）**：周一未跑 → 按 V2.11「上次更新~本次更新之间新出现」自然归入 09-22 版面，**不回改历史版面、不单独建 09-21 版面**（用户明确偏好「归入今日」）
 - 飞书存档 A2fdb93HLamcKgslr2rcopjRnfd（tblCocvO66XoPsm1）25 条/批；选项维护 `+field-get`→append→`+field-update` full PUT，**hue 只能 Gray**；单批 ≤200 行，>200 按 date 定向
+- ⭐⭐ **线上命中率校验必须按 URL，禁用标题前缀匹配（9-24 定位）**：标题含中文弯引号（`“”` U+201C/U+201D）时，前端 JSON 中会转为 `&quot;` → 纯文本 `title[:18] in html` 匹配失败，**本次误报 11/70 条「线上缺失」**。正确口径：`sum(1 for i in today if i['url'] in html.unescape(on))` = 70/70；或先 `html.unescape()` 再匹配。与 9-23「URL 校验禁止从截断显示中复制」同属「匹配口径」类坑
+- ⚠️ **补 `repost_from` 必须按 board 实际 URL 匹配（9-24 定位）**：全量 update 会把 `https://www.tradingview.com/news/DJN_xxx:0/` 归一为无末尾斜杠 `...:0`，而采集池保留 `/` → 用池里的 URL 建字典只能补到 AP 那 1 条、WSJ 2 条漏补。**排查手法：先 `print(repr(i['url']))` 看 board 真实值再匹配**（该坑为第 4 次复发：9-14/9-16/9-17/9-24）
+- ⚠️ **官方源修复后必查 news-data.json 是否被脚本直写混入（9-20 首次、9-24 第 2 次）**：`fetch_us_official.py` 会绕过 `data/us-official.json` 把窗口内白宫/国务院新稿直接写进当日版面，且 `title_zh`/`summary_zh` 为空 → 触发「官方源字段完整性」校验失败。**恢复备份后仍需逐条比对：与历史版面同事件的按 URL 删除（如白宫联大演讲稿 09-22/09-23 两版），实质新增的补 title_zh + summary_zh**
+- ⭐ **飞书 800030005 提前排查法（9-24）**：全量同步会命中历史版面遗留的来源值（本次「科学美国人」31→32 项）。**同步前先做差集**：`archive 全量 source 集合 − field 选项集合`，比事后读 800030005 报错更快；追加选项用 `--yes`（`+field-update` 属 high-risk-write 需确认）
+- ⚠️ **官方源 `curl` 经代理可能返回 HTTP 407**（9-24 国务院整组丢失，同时白宫仅 1 条）→ 走 WebFetch `state.gov/press-releases/` 可一次拿到近 10 条含真实日期与完整 URL，用于补窗口内新增
+- ⚠️ **AP 部分稿件在 hub 页不出现**（9-24「US diplomats told to say super intelligence」「Sanders 超级智能法案」均无 hub URL）→ 用 WebSearch 完整标题定位合格转载（Yahoo News 为 AP 稿合格转载域，加 `repost_from`）
+- ⚠️ **WSJ 官网 URL 可经 WebSearch 完整标题命中**（9-24 命中 `wsj.com/world/china/trump-xi-taiwan-f236f228`），但 **GN pubDate 与镜像站日期冲突时（GN 09-24 / 镜像 09-22）不得折中猜日期** → 该条按纪律空缺，改用 TradingView DJN 条目（URL 内含 `DJN_DN20260923` 可直接判日）
+- ⚠️ **FT 无正文通道时用 `r.jina.ai` 抓栏目页提官网 URL**（9-24 `ft.com/{world|china|companies}` 仅 world 有内容，china/companies 返回 446B 空壳）；**逐条用 `r.jina.ai/<FT文章URL>` 读 `Published Time` 核实真实发布日**（9-24 据此剔除 09-22 的 Anthropic 降价稿）；jina 偶发返回 `Security Verification` → 重试 1-2 次，仍失败则该条按「无法核实日期」空缺

@@ -135,3 +135,27 @@
 - ⚠️ **Write 工具单次内容上限约 4KB**：74 条池拆 17 个 `/tmp/pool0922/*.txt` 分块（管道分隔）+ 合并脚本，比逐条 dict 更稳
 - ⚠️ **路透 sitemap 日期正则坑**：`/(\d{4})-(\d{2})-(\d{2})/?$` 带前导斜杠 → 996 条 date 全空；正确 `(\d{4})-(\d{2})-(\d{2})/?$`（已固化到 skill 并 bump v1.0.1）
 - 收尾：boards/intl.md 已补 09-22 经验增量（commit 8e7afd1，远程核实一致）
+
+## 2026-09-24 刷新（09:40 自动，V2.17，一次会话完成）
+- 背景：09-23 主通道未刷新（只跑了 US-official，后由日报侧补录 18 条），本次为 09-23 半残版面后的首次完整刷新
+- 官方源：源组丢失第 22 次复发（新输出仅 29 条：国防部21/财政部3/USTR3/白宫1/商务部1，国务院 HTTP 407 整组丢失）→ /tmp/us-official-backup-0924.json 恢复 124 + 手工补 5 条 09-23 国务院实质新增（安第斯-大西洋走廊 / 联大民用核能倡议（美日韩 SMR+欧洲 BWRX-300）/ 鲁比奥会拉夫罗夫 / 鲁比奥会苏杰生 / 生育旅游签证限制）→ **129 条 6 源齐全**（国务院62/白宫32/国防部27/USTR4/财政部3/商务部1）；剔除沙特国庆贺电（National Day 先例）
+- ⚠️ **fetch_us_official.py 直写 news-data.json 又现（9-20 同类坑第 2 次）**：白宫「President Trump Delivers Powerful America First Message to the United Nations」（09-23）绕过 us-official.json 直接进今日版面，且 title_zh/summary_zh 为空（触发校验5/7 失败）；因与 09-22「特朗普联大演讲：美国回来了」为同一事件 → **URL 精确删除**，今日版面 71→70
+- 13 信源：WebFetch 全未使用，直接走已验证通道 —— RSS 11 源全 200 一次成功（BBC/卫报/AJ/NYT/WaPo×2/Politico×2/SCMP×3）+ 路透 sitemap 前 10 片 1000 条（窗口内 461 条，标题筛 9 条**全官网 URL**）+ 彭博 RSS 25 候选→入库 8 + CNN curl edition.cnn.com/world（4.97MB）+ lite.cnn.com 取标题 + AP hub world-news 官网 URL + GN RSS 逐条取真实日期 + FT 栏目页 r.jina.ai 提官网 URL + WSJ 走 TradingView DJN
+- 入库 67 条（1 条与存档重复跳过），collectedAt 全部=2026-09-24 09:30:00；date 分布 09-23×55 / 09-24×12
+- 今日版面 **70 条 / 14 源**：南华早报11/路透9/彭博8/纽约时报6/BBC5/美国国务院5/CNN4/美联社4/卫报4/华盛顿邮报4/Politico3/半岛3/金融时报2/华尔街日报2；板块 AI·科技29/中美博弈18/地区局势8/其他5/美国内政4/中欧与盟友3/全球多边3；元首级16，≥88 共26
+- 三零全绿（collectedAt≠今日0 · date<昨天0 · 与历史版面重复0 · 版面内重复0）；官方 5 条 0 缺字段；模板摘要 0；缺中/英文标题 0；黑名单 0；导航残留 0；JS 0 错误；HTML 双端一致 **405593B**
+- ⚠️ **转载字段又被全量 update 抹掉（第 4 次复发）**：3 条（AP→Yahoo News、WSJ×2→TradingView）→ 修复后按 board 实际 URL 补回（**注意 TradingView URL 在 board 中被去掉末尾斜杠 `/`，池里带 `/` → 补字段必须按 board 实际值匹配，首轮只补到 1 条**）；同步写回池防再丢；未重跑全量 update
+- git：主 commit 5e429e2（update 自动，push 首次因 `curl 28 Failed to connect to github.com:443` 失败）→ 补提交 75fb31a（webfetch 1682/官方源129/report/双端HTML/3 个脚本）→ push 重试成功，`git ls-remote` == HEAD
+- 飞书：①`--today` 同步 11 条 ②全量首次报 **800030005**（来源选项缺「科学美国人」，历史遗留 1 条）→ field-list 取 31 项 → append（hue=Gray）+ `+field-update --yes` full PUT → **32 项** → 重跑全量成功 **86 条**（11+86=97 覆盖 7 天窗口）
+- 线上 `?t=` 首次请求 HTTP 200 **405593B** 与本地逐字节一致；今日 70 条按 URL 命中 **70/70**
+- 交叉验证 3 组：①CXMT/1260H 无窗口内新（均为 6-8 月旧闻/报告）②美中关税制裁无新（Tris 反补贴初裁 117.39% 属程序性贸易救济，按先例不收）③AI 出口管制/远程算力：The Information 无窗口内独家，但该主题已由 **FT「Nscale 招股书隐去最大客户字节跳动（挪威数据中心租用 2304 颗 B200 绕开出口管制）」** 覆盖 → 无补录
+- 头条：中美同意贸易休战延长两个月（路透92/彭博92）/ 中国扣留经香港转运的敏感 F-35 零部件（彭博92）/ 特习会晤中 AI 霸权雄心成焦点（BBC92）/ 中国领导人如何谋划以 AI 赢得未来（NYT92）/ 习近平抵美关键看点（SCMP90）/ 美中 AI 安全但不放慢竞赛（彭博90）/ 解读特习会（NYT90）/ AI 领袖称美中需要协议但难成（WaPo90）/ 中国 AI 热潮内幕（路透90）/ 中国贸易量创历史新高（彭博90）/ 美阿启动安第斯-大西洋走廊（国务院90）
+- **建议综合（同事件多源，供日报/人工采纳）**：①中美元首会晤与机场迎接（10 源：路透/SCMP/彭博/BBC/NYT/CNN/AJ/AP/卫报/WaPo，22 条）②贸易休战延长两个月（5 源：路透/彭博/SCMP/NYT/AP）③OpenAI 智能体入侵澳政府系统（7 源：BBC/CNN/Politico/AJ/WaPo/卫报/彭博，9 条）④AI 安全与监管（联合国安理会，5 源：路透/彭博/CNN/AJ/AP）⑤AI 协议核查机制（4 源：BBC/WaPo/SCMP/路透）⑥特朗普邀普京出席 G20（2 源：WaPo/国务院）
+- 固定附加项：`gen_reuters_recheck_list.py` 输出「今日无路透转载条目」——连续第七日为空，repost_from 仅 3 条且均为 AP/WSJ 非路透
+
+### 经验增量（09-24）
+- ⭐⭐ **校验脚本「标题前缀匹配」在含中文弯引号时会大面积误报**：本次 70 条中 11 条标题含 `""`（U+201C/U+201D）→ 前端 JSON 中转为 `&quot;`，纯文本 `title[:18] in html` 匹配失败，误判「线上缺 11 条」。**正确做法：线上命中率必须按 URL 匹配（70/70），或先 `html.unescape()` 再匹配**。与 09-23「URL 校验禁止从截断显示中复制」同属「匹配口径」类坑
+- ⚠️ **转载字段补回必须按 board 实际 URL**：全量 update 会把 `https://www.tradingview.com/news/DJN_xxx:0/` 归一为无末尾斜杠 `:0`，而池中保留 `/` → 用池里的 URL 做字典键只能补到 AP 那 1 条。**排查手法：先 `for i in today: print(repr(i['url']))` 看 board 真实值，再匹配**
+- ⚠️ **官方源修复后必查 news-data.json 是否被脚本直写混入**：`fetch_us_official.py` 会绕过 us-official.json 把窗口内白宫/国务院新稿直接塞进当日版面（title_zh/summary_zh 为空）→ 恢复备份后仍会有 1-2 条残留，需按 URL 与历史版面比对后决定「补字段」或「删除」
+- ⭐ **飞书来源选项第 2 次因历史遗留值报 800030005**：「科学美国人」为早期版面遗留，日常同步不会用到，但全量同步会命中 → **全量同步前先取 archive 全量 source 集合与 field 选项做差集**，比事后排查更快
+- 路透 sitemap 法连续第五日全官网（9/9），反查清单连续第七日为空
