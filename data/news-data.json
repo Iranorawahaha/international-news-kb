@@ -8939,28 +8939,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-09-23_70790",
-        "date": "2026-09-23",
-        "title": "President Trump Delivers Powerful America First Message to the United Nations",
-        "title_en": "President Trump Delivers Powerful America First Message to the United Nations",
-        "title_zh": null,
-        "summary": "In his address to the United Nations, President Donald J. Trump&nbsp;touted&nbsp;his record of historic results that have reshaped world order for",
-        "summary_en": "In his address to the United Nations, President Donald J. Trump&nbsp;touted&nbsp;his record of historic results that have reshaped world order for",
-        "summary_zh": null,
-        "source": "白宫",
-        "category": "美国内政",
-        "keywords": [],
-        "url": "https://www.whitehouse.gov/releases/2026/09/president-trump-delivers-powerful-america-first-message-to-the-united-nations/",
-        "priority_score": 88,
-        "is_summit_level": true,
-        "importance": "⭐元首级",
-        "collectedAt": "2026-09-24 09:40:57",
-        "collection_method": "us_official",
-        "column": "美国",
-        "is_official": true,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-09-23_18198",
         "date": "2026-09-23",
         "title": "习近平上次访美以来变化巨大，且多对中国有利",
@@ -9486,7 +9464,8 @@
         "collection_method": "webfetch",
         "column": "国际会议",
         "is_official": null,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "Yahoo News（美联社稿）"
       },
       {
         "id": "auto_2026-09-23_92390",
@@ -10328,7 +10307,8 @@
         "collection_method": "webfetch",
         "column": "美国",
         "is_official": null,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "TradingView（道琼斯电头）"
       },
       {
         "id": "auto_2026-09-23_89938",
@@ -10538,7 +10518,8 @@
         "collection_method": "webfetch",
         "column": "其他",
         "is_official": null,
-        "body_en": null
+        "body_en": null,
+        "repost_from": "TradingView（道琼斯电头）"
       }
     ]
   },
