@@ -159,3 +159,18 @@
 - ⚠️ **官方源修复后必查 news-data.json 是否被脚本直写混入**：`fetch_us_official.py` 会绕过 us-official.json 把窗口内白宫/国务院新稿直接塞进当日版面（title_zh/summary_zh 为空）→ 恢复备份后仍会有 1-2 条残留，需按 URL 与历史版面比对后决定「补字段」或「删除」
 - ⭐ **飞书来源选项第 2 次因历史遗留值报 800030005**：「科学美国人」为早期版面遗留，日常同步不会用到，但全量同步会命中 → **全量同步前先取 archive 全量 source 集合与 field 选项做差集**，比事后排查更快
 - 路透 sitemap 法连续第五日全官网（9/9），反查清单连续第七日为空
+
+## 2026-09-25 刷新（10:00 自动，V2.17，一次会话完成）
+
+- 官方源第 23 次源组丢失（29 条/国务院 407）→ `git show HEAD:data/us-official.json` 恢复 129 条 6 源；窗口内新稿 0 条有新闻价值
+- WebFetch 13 源全采集，新增 59 条（池 1741）；`update-news.sh --auto` → 374 条（今日 58）
+- 归档三零全绿 / repost_from 0 / 导航残留 0 / 模板摘要 0；线上 = 本地 562423 bytes，58/58 URL 命中
+- 飞书全量同步新增 43 条；路透 recheck 连续第 9 日为空
+- ⚠️ git push 首次 `Failure when receiving data from the peer` → **必须带 `export https_proxy=http://127.0.0.1:7890` 重试**（代理通但 git 直连失败）
+
+### 经验增量（09-25）
+- ⭐ **FT 官方 RSS 是可用通道**：`https://www.ft.com/rss/{world|china|companies|technology}` → 200 + 官方 URL + pubDate。jina（401 AS53667 被封）与官网 403 均不可用，此路为 FT 唯一稳定通道
+- ⭐ **路透 sitemap 路径必须精确**：`/arc/outboundfeeds/sitemap/?outputType=xml&from=N` 才回文章列表；`sitemap-index/` 只回 10 条子索引（15KB、0 个 `<url>`）—— 与 09-15 记法一致，勿再写错
+- ⚠️ **备份文件本身可能已被污染**：`cp data/us-official.json /tmp/...-$(date +%m%d).json` 若在同日二次运行时执行，会把坏数据覆盖到备份 → **恢复优先源应是 `git show HEAD:` 而非当日备份**
+- ⚠️ Write 工具单次调用有约 800 字节上限，长内容（含中文）会被静默截断 → pool 行必须 1-4 行/次小批追加，写后用 `l.count('|')==9` 过滤残行
+- ⚠️ Agent 子代理委派在长中文 prompt 下会返回 "Sorry, I can't respond to this question."（本次 2 次）→ 长任务退回手工小批写入，勿反复尝试委派
