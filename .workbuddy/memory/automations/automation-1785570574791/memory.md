@@ -174,3 +174,4 @@
 - ⚠️ **备份文件本身可能已被污染**：`cp data/us-official.json /tmp/...-$(date +%m%d).json` 若在同日二次运行时执行，会把坏数据覆盖到备份 → **恢复优先源应是 `git show HEAD:` 而非当日备份**
 - ⚠️ Write 工具单次调用有约 800 字节上限，长内容（含中文）会被静默截断 → pool 行必须 1-4 行/次小批追加，写后用 `l.count('|')==9` 过滤残行
 - ⚠️ Agent 子代理委派在长中文 prompt 下会返回 "Sorry, I can't respond to this question."（本次 2 次）→ 长任务退回手工小批写入，勿反复尝试委派
+- ⚠️ **`present_files` 预览本地 HTML 后文件会被注入 `data-page-node-id` 属性**（82 处、增删对称、内容零变化）→ 工作区变脏且根目录与 gh-pages 副本 md5 不一致。**处置：`git checkout -- international-news.html` 恢复**（内容已验 58/58 URL 命中，可安全回退）；且**校验时勿用「本地 vs gh-pages 大小相等」作为唯一判据**，须比 md5
