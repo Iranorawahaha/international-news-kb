@@ -175,3 +175,26 @@
 - ⚠️ Write 工具单次调用有约 800 字节上限，长内容（含中文）会被静默截断 → pool 行必须 1-4 行/次小批追加，写后用 `l.count('|')==9` 过滤残行
 - ⚠️ Agent 子代理委派在长中文 prompt 下会返回 "Sorry, I can't respond to this question."（本次 2 次）→ 长任务退回手工小批写入，勿反复尝试委派
 - ⚠️ **`present_files` 预览本地 HTML 后文件会被注入 `data-page-node-id` 属性**（82 处、增删对称、内容零变化）→ 工作区变脏且根目录与 gh-pages 副本 md5 不一致。**处置：`git checkout -- international-news.html` 恢复**（内容已验 58/58 URL 命中，可安全回退）；且**校验时勿用「本地 vs gh-pages 大小相等」作为唯一判据**，须比 md5
+
+## 2026-09-28 刷新（09:30 自动，V2.17，一次会话完成）
+- 官方源第 24 次源组丢失（新输出 29 条/国务院 HTTP 407）→ `git show HEAD:data/us-official.json` 恢复 129 + merge 2 条窗口内新增（白宫 09-27「美中贸易委员会公布 30 换 30 降税清单」prio92 / USTR 格里尔声明 prio90）→ **131 条 6 源齐全**（国务院62/白宫33/国防部27/USTR5/财政部3/商务部1）
+- 13 信源：RSS 11 源全 200 一次成功 + 路透 sitemap 前 10 片 994 条（相关 389，取 10 条**全官网 URL**）+ 彭博 RSS 62 候选→入库 8 + CNN curl + AP hub world-news + FT RSS + WSJ 经 WebSearch 拿官网 URL
+- 入库 **77 条**（池 1741→1818），collectedAt 全部=2026-09-28 09:30:00；date 分布 09-27×39 / 09-28×29
+- `update-news.sh --auto` → 304 条；**手工按 V2.11.3 把 8 条 date=09-26 条目移出今日版面** → `archive['2026-09-26']`；今日版面 **68 条 / 15 源**（路透10/南华9/彭博7/纽约7/FT6/BBC6/CNN5/半岛5/AP4/WaPo4/Politico4/卫报4/WSJ3/白宫1/USTR1）；板块 AI·科技16/中美博弈18/地区局势13/全球多边8/中国外交4/其他4/美国内政3/中欧与盟友2；元首级 2，≥88 共 16
+- 校验：三零全绿（collectedAt≠今日0 · date<昨天0 · 与历史版面重复0）+ 版面内重复0 + 彭博 7/7 collectedAt=今日 + 官方源 2 条字段全 + 模板摘要0 + 缺中英标题0 + 黑名单0 + repost_from0 + 路透官网 10/10 + 导航残留0 + JS 正确 + 双端 md5 一致（488123B）
+- git：主 commit 55c2819（--auto）→ 补提交 78c8345（6 文件：news-data / news-webfetch / us-official / us-official-report / 双端 HTML），`git ls-remote` == HEAD
+- 线上 `?t=` HTTP 200，字节 488123 与本地一致、字符级完全 identical；日期按钮 7（all + 6 日）
+- 飞书全量同步：304 输入 → 去重 257 → **新增 47 条**
+- 固定附加项：`gen_reuters_recheck_list.py` → **连续第 10 日为空**（repost_from=0，路透全官网）
+- 交叉验证 3 组：①CXMT/1260H 无窗口内新材料 ②**美中关税制裁命中重大事件**——商务部 9-28 正式公布 30 亿美元对等降税清单（白宫 77 项 / 中方 1619 项、约 90% 降至 MFN），休战延至 2027-01-10，设贸易委员会+农业工作组+投资委员会+AI 对话（11 月底前）→ 已由看板 7 条覆盖 ③AI 出口管制/远程算力：The Information 无窗口内独家，主题由 RASA/远程访问规则讨论延续，无需补录
+- 头条：美中贸易委员会公布 30 换 30 降税清单（白宫92）/ 中国确认休战延至 1 月 10 日（路透92）/ 中国公布 1619 项降税清单大豆被排除（路透92）/ 美中同意约 600 亿美元商品低关税安排（FT92）/ 美中公布 300 亿美元关税安排清单（彭博92）/ 中国或允许字节阿里采购英伟达新芯片（路透92）/ 格里尔声明（USTR90）
+- **建议综合（供日报采纳）**：①降税清单与休战延期（7 源：白宫/USTR/路透×2/FT/彭博×2）②特朗普问习近平是否买美武器（4 源：SCMP/NYT/AP/WSJ）③Anthropic 阿莫代伊白宫晚宴与 AI 安全（6 源：路透/FT/彭博×2/AP/AJ）④大熊猫平平福双抵美（4 源：SCMP/卫报/NYT/AP）⑤英国美军基地附近涉恐逮捕（4 源：卫报/CNN/AP/WaPo）
+- **建议剔除（待用户裁定）**：WSJ《乌克兰寄宿学校把青少年训练成阵亡父亲的替代者》（prio72）属「个人叙事/微视角」类，按国际板过滤规则应排除
+
+### 经验增量（09-28）
+- ⚠️ **`news-data.json` 的 `today` 字段是遗留字段**（值仍为 `'2026-09-03'`）→ 取 `archive[d['today']]` 会 KeyError；**正确入口 `archive[dates[0]]`**
+- ⚠️ **池 merge 片段解析失败必须先回滚池再重跑**：本次 `@rss:giant-pandas-...touch-down-in-us` 命中 0（真实 URL 结尾 `...touch-down-us-under-new-loan-deal`），脚本只警告却已部分追加 → 直接改片段重跑会重复入库。**对策：`cp /tmp/news-webfetch-backup-0928.json data/news-webfetch.json` 回滚后再跑**，frag 只取 URL 末段唯一尾巴
+- ⚠️ Write 截断第 3 表现：**单行字段截断**（`c04.txt` 行只落 3 字段）→ merge 前过滤 `l.count('|')==9` 残行
+- ⭐ **V2.11.3 拆条后必须重跑 HTML 段**：移出条目后 `dates`/`stats`/`todayCount` 同步改 + 重跑 `sed -n '910,1011p' update-news.sh` 提取的 GENERATE_HTML_V12 + check_js_syntax + inject_nav
+- ⚠️ **r.jina.ai 对路透/FT 正文恒 401（AS53667）**，AP 官网 WebFetch 只回导航样板 → 三者摘要均走 WebSearch ≥2 家转述交叉比对
+- ⭐ **勿对本地 HTML 调 present_files**（会注入 `data-page-node-id` 弄脏工作区，9-25 已记）→ 本轮交付一律用线上 URL

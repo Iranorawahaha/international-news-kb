@@ -66,3 +66,13 @@
 - ⚠️ **AP 部分稿件在 hub 页不出现**（9-24「US diplomats told to say super intelligence」「Sanders 超级智能法案」均无 hub URL）→ 用 WebSearch 完整标题定位合格转载（Yahoo News 为 AP 稿合格转载域，加 `repost_from`）
 - ⚠️ **WSJ 官网 URL 可经 WebSearch 完整标题命中**（9-24 命中 `wsj.com/world/china/trump-xi-taiwan-f236f228`），但 **GN pubDate 与镜像站日期冲突时（GN 09-24 / 镜像 09-22）不得折中猜日期** → 该条按纪律空缺，改用 TradingView DJN 条目（URL 内含 `DJN_DN20260923` 可直接判日）
 - ⚠️ **FT 无正文通道时用 `r.jina.ai` 抓栏目页提官网 URL**（9-24 `ft.com/{world|china|companies}` 仅 world 有内容，china/companies 返回 446B 空壳）；**逐条用 `r.jina.ai/<FT文章URL>` 读 `Published Time` 核实真实发布日**（9-24 据此剔除 09-22 的 Anthropic 降价稿）；jina 偶发返回 `Security Verification` → 重试 1-2 次，仍失败则该条按「无法核实日期」空缺
+
+### 经验增量（09-28）
+- ⚠️ **`news-data.json` 的 `today` 字段是遗留字段、不可用作「今日版面」入口（9-28 定位）**：实际值仍是 `'2026-09-03'`（早已滚出），据此取 `archive['today']` 会 KeyError。**正确入口：`archive[dates[0]]`**，`todayCount` 才是今日条数真值。校验脚本一律走 `dates[0]`
+- ⚠️ **池合并脚本片段解析失败必须先回滚池再重跑（9-28 定位）**：`@rss:<frag>` 命中 0（本次 `giant-pandas-ping-ping-and-fu-shuang-touch-down-in-us` 实际 URL 为 `.../3368964/giant-pandas-...-touch-down-us-under-new-loan-deal`）时脚本只打 `!! LOOKUP FAIL` 却已把部分条目追加进池 → 直接改片段重跑会**重复入库**。**正确动作：改片段前 `cp /tmp/news-webfetch-backup-<MMDD>.json data/news-webfetch.json` 回滚，再重跑 merge**。通用手法：frag 只取 URL 末段唯一尾巴（本次改 `touch-down-us-under-new-loan-deal` 后 77/77 全解）
+- ⚠️ **Write 工具静默截断的第 3 种表现（9-28）**：不只整块丢失，还会**单行字段截断**（`c04.txt` 第 4 行只落 3 个字段、`c06/c07` 末行残缺）→ **merge 前必须过滤 `l.count('|')==9` 的残行**，写入后回读统计行数比事后 debug 快
+- ⭐ **V2.11.3 拆条后必须整链重跑（9-28）**：`update-news.sh --auto` 会把 `date=前天` 但 `collectedAt=今日` 的条目按 create-over-dedupe 放进**今日版面**（本次 8 条 09-26 稿）→ 手工移入 `archive['<date>']` 后，`dates`/`stats.totalArticles`/`highPriorityCount`/`todayCount` 必须同步改，并**重跑 GENERATE_HTML_V12 段（`sed -n '910,1011p' update-news.sh` 提取）+ check_js_syntax.py + inject_nav.py**，否则双端 HTML 仍是旧版
+- ⭐ **`--auto` 的 git add 覆盖不到 pool 文件（9-28 复核）**：收尾精确补提交 `data/news-data.json` + `data/news-webfetch.json` + `data/us-official.json` + `data/us-official-report.json` + 根/gh-pages 两 HTML 共 6 个（勿用 `-A`，仓库常驻 4 个自动化并发写）
+- ⭐ **三级口径跃迁首次完整走通（9-28）**：中美 30 亿美元对等降税清单由**商务部**正式公布（白宫 77 项 / 中方 1619 项，约 90% 降至 MFN），休战延至 **2027-01-10**，并设贸易委员会 + 农业工作组（2026 年底前首会）+ 投资委员会 + AI 对话（11 月底前下一轮）+ AI 事件沟通渠道 → 判定为「**中方主管部门确认**」级（未达元首共同确认，中方未采用美方「釜山协议」提法）。看板由 白宫/USTR/路透×2/FT/彭博×2 共 7 条覆盖，**每轮须先判当前口径级别再定 outcomes 写法与是否撤「⚠️ 美方单方口径」标注**
+- ⚠️ **AP 官网正文通道：WebFetch 只回导航样板（9-28 复核）** → 用 `WebFetch apnews.com/hub/world-news` 取官方 `/article/<slug>-<hash>` URL，pubDate 走 Google News RSS `site:apnews.com when:2d`
+- ⚠️ **r.jina.ai 对路透/FT 正文返回 `401 AuthenticationRequiredError … bad network reputation (AS53667)`（9-28 复核，与 9-25 同因）** → 路透/FT 摘要一律走 WebSearch 找 ≥2 家转述媒体交叉比对撰写，URL 仍用官网直取（路透 sitemap / FT RSS）
