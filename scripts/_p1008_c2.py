@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+# Guardian + BBC 1008
+ITEMS = [
+ dict(f='guardian', q="EU negotiators head to China hoping to curb cheap imports", d='2026-10-07', c='中欧与盟友', p=84,
+  zh="欧盟谈判代表赴华 希望限制廉价混合动力汽车进口",
+  en="EU negotiators head to China hoping to curb cheap imports of hybrid electric cars",
+  s="欧盟谈判代表前往中国，试图就混合动力电动汽车进口激增问题达成安排，以缓解欧洲本土车企的竞争压力。欧方倾向于推动价格承诺或自愿出口限制等替代方案，以避免全面加征关税引发反制。中方此前已拒绝自愿限制思路，谈判前景仍不明朗。"),
+ dict(f='guardian', q="Rubio in Greece digs into past to tout Trump", d='2026-10-07', c='美国内政', p=80,
+  zh="鲁比奥在希腊借历史宣扬特朗普「美国优先」路线",
+  en="Rubio in Greece digs into past to tout Trump's 'America first' approach",
+  s="美国国务卿鲁比奥在雅典以古希腊民主与西方文明传承为引，阐述特朗普政府「美国优先」的外交理念，强调美方并非退出世界舞台而是要求公平分担。他同时呼吁欧洲在防务开支与移民治理上采取更强硬政策。此番演讲被视为美方修复与欧洲盟友关系、同时施压其增加投入的双重信号。"),
+ dict(f='guardian', q="WHO says it does not have 'full picture' from Russia", d='2026-10-07', c='地区局势', p=78,
+  zh="世卫组织称未从俄方获得瘟疫疑似病例「全貌」",
+  en="WHO says it does not have 'full picture' from Russia following suspected plague death",
+  s="世界卫生组织表示，尚未从俄罗斯方面获得西伯利亚一处实验室工作人员疑似感染肺鼠疫死亡事件的完整信息，并已要求莫斯科提供更多细节。俄方称该事件不构成疫情风险，并批评媒体报道失实。美方表示正密切关注事态，特朗普称将与普京通话讨论。"),
+ dict(f='bbc', q="Israelis mourn 7 October attack victims three years after", d='2026-10-07', c='地区局势', p=82,
+  zh="以色列纪念10·7袭击三周年 民众要求追责",
+  en="Israelis mourn 7 October attack victims three years after deadly Hamas raid",
+  s="以色列举行活动纪念哈马斯10月7日袭击三周年，全国多地举行悼念仪式与抗议集会，遇难者家属要求政府对当日情报与安全失误追责。与此同时，加沙地带的人道局势依然严峻，停火协议执行面临考验。纪念活动在以色列大选临近的背景下具有强烈政治意味。"),
+ dict(f='bbc', q="Trump to speak to Putin about plague lab worker's death", d='2026-10-07', c='地区局势', p=84,
+  zh="特朗普称将与普京通话讨论俄实验室人员死亡事件",
+  en="Trump to speak to Putin about plague lab worker's death in Russia",
+  s="美国总统特朗普表示将就俄罗斯西伯利亚实验室工作人员疑似感染肺鼠疫死亡事件与俄罗斯总统普京通话，并称美方希望了解事件全貌。世界卫生组织已要求俄方提供更多信息，俄方则否认存在疫情扩散风险。该事件叠加美俄关系敏感期，引发国际社会对生物安全问题的关注。"),
+ dict(f='bbc', q="Children killed while they slept as Russian missile kills 19", d='2026-10-07', c='地区局势', p=84,
+  zh="俄导弹袭击致19死 儿童在睡梦中遇难",
+  en="Children killed while they slept as Russian missile kills 19 in block of flats",
+  s="俄罗斯对乌克兰发动大规模导弹与无人机袭击，其中一枚导弹击中居民楼造成至少19人死亡，包括在睡梦中遇难的儿童。乌克兰总统泽连斯基谴责这是「最卑劣的袭击」之一，呼吁西方加快提供防空系统。乌方称此前已预判到此次打击，但防空弹药不足。"),
+]

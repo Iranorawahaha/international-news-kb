@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+# Politico + WaPo 1008
+ITEMS = [
+ dict(f='politicoeu', q="EU, Canada and Lithuania pull out of disinformation conference", d='2026-10-07', c='全球多边', p=84,
+  zh="欧盟、加拿大和立陶宛在美方施压下退出反虚假信息会议",
+  en="EU, Canada and Lithuania pull out of disinformation conference after US pressure",
+  s="欧盟机构、加拿大与立陶宛在美方施压后退出原定参加的反虚假信息国际会议，显示特朗普政府对多边信息治理议程的影响力正在扩大。报道称美方对会议主办方与部分参与机构的立场提出异议。此举引发欧洲对跨大西洋在数字治理领域协调能力的担忧。"),
+ dict(f='politicoeu', q="US, Greece to jointly combat security threats, Rubio says", d='2026-10-07', c='美国内政', p=80,
+  zh="鲁比奥称美希将联合应对安全威胁",
+  en="US, Greece to jointly combat security threats, Rubio says",
+  s="美国国务卿鲁比奥在雅典与希腊领导人会谈后表示，两国将在防务、能源与移民等领域深化合作，共同应对地区安全威胁。双方签署了美希战略对话联合声明，并推进国民警卫队伙伴关系计划。此访是美方巩固东地中海盟友网络、制衡地区竞争对手的一环。"),
+ dict(f='politicoeu', q="EU countries will release fresh oil stocks only after top agency assessment", d='2026-10-07', c='全球多边', p=78,
+  zh="欧盟国家称待国际能源署评估后再释放新一批石油储备",
+  en="EU countries will release fresh oil stocks only after top agency assessment",
+  s="欧盟成员国表示，将在国际能源署完成市场评估后再决定是否释放新一批战略石油储备，以应对伊朗战事导致的油价上涨。部分成员国主张谨慎行事，认为当前供应尚未出现实质性中断。国际能源署已表示暂不追加释放库存，柴油价格应声上涨。"),
+ dict(f='politicoeu', q="French PM tries to defuse anger over schools, fuel and agriculture", d='2026-10-07', c='地区局势', p=76,
+  zh="法国总理发表讲话 试图平息学校、燃油与农业领域民怨",
+  en="French PM tries to defuse anger over schools, fuel and agriculture in sweeping speech",
+  s="法国总理发表长篇政策讲话，试图平息因教育经费、燃油价格与农业政策引发的全国性不满。他宣布追加教育投入并调整部分燃油税安排，同时强调改革方向不变。此番表态出现在学生抗议持续、工会酝酿更大规模罢工之际，被视为马克龙政府的危机应对之举。"),
+ dict(f='wapotech', q="Data center boom is pushing prices higher", d='2026-10-07', c='AI·科技', p=84,
+  zh="美联储官员：数据中心热潮正推高物价",
+  en="Data center boom is pushing prices higher, according to Fed officials",
+  s="美联储官员在最新会议纪要中指出，人工智能数据中心建设热潮正在推高电力、设备与建筑材料价格，成为通胀压力的新来源。多个辖区报告称，数据中心项目带动当地电价与用工成本上升。这使货币政策制定者在评估通胀路径时面临新的结构性因素。"),
+ dict(f='wapotech', q="The unexpected ways that AI is reshaping the U.S. economy", d='2026-10-07', c='AI·科技', p=82,
+  zh="AI正以出人意料的方式重塑美国经济",
+  en="The unexpected ways that AI is reshaping the U.S. economy",
+  s="报道梳理人工智能对美国经济的多重影响：除带动数据中心与芯片投资外，AI还支撑了制造业订单、广告投放与能源需求，成为当前经济增长的重要支柱。但分析也指出，这种依赖使经济对AI资本开支周期的敏感度上升，一旦投资放缓可能带来连锁冲击。"),
+]
