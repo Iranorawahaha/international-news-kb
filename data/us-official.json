@@ -3035,5 +3035,51 @@
   "is_official": true,
   "collectedAt": "2026-10-08 09:30:00",
   "collection_method": "webfetch_official"
+ },
+ {
+  "title": "美国国务院发布2026年《人口贩运报告》 香港被下调至最低等级",
+  "title_zh": "美国国务院发布2026年《人口贩运报告》 香港被下调至最低等级",
+  "title_en": "Release of the 2026 Trafficking in Persons Report",
+  "summary": "The Department of State released the 2026 Trafficking in Persons Report, which assesses government efforts to combat human trafficking worldwide. Hong Kong was downgraded to the lowest tier, drawing a formal rebuttal from the Hong Kong SAR government.",
+  "summary_zh": "美国国务院发布2026年度《人口贩运报告》，评估各国政府打击人口贩运的努力。报告将中国香港特别行政区下调至最低等级，香港特区政府随即发表声明驳斥该评级缺乏事实依据。该报告是美方年度人权与执法评估体系的核心文件之一。",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/release-of-the-2026-trafficking-in-persons-report/",
+  "date": "2026-10-08",
+  "source": "美国国务院",
+  "category": "中美博弈",
+  "keywords": [
+   "人口贩运",
+   "香港",
+   "人权报告",
+   "美国国务院"
+  ],
+  "priority_score": 86,
+  "is_summit_level": false,
+  "importance": "中",
+  "is_official": true,
+  "collectedAt": "2026-10-09 09:30:00",
+  "collection_method": "webfetch_official"
+ },
+ {
+  "title": "美国就墨西哥GLM工厂涉嫌侵害劳工权利要求墨方审查",
+  "title_zh": "美国就墨西哥GLM工厂涉嫌侵害劳工权利要求墨方审查",
+  "title_en": "United States Seeks Mexico's Review of Alleged Denial of Workers' Rights at GLM Components Mexico",
+  "summary": "USTR announced that the United States has asked Mexico to review alleged denial of workers' rights at GLM Components Mexico under the USMCA Rapid Response Labor Mechanism.",
+  "summary_zh": "美国贸易代表办公室宣布依据《美墨加协定》快速响应劳工机制，要求墨西哥就GLM Components工厂涉嫌侵害劳工权利一事启动审查。这是美方近期通过劳工条款对供应链施压的系列行动之一，也体现其将劳工标准作为贸易工具的做法正在常态化。",
+  "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-seeks-mexicos-review-alleged-denial-workers-rights-glm-components-mexico",
+  "date": "2026-10-08",
+  "source": "USTR",
+  "category": "全球多边",
+  "keywords": [
+   "USTR",
+   "劳工权利",
+   "USMCA",
+   "墨西哥"
+  ],
+  "priority_score": 76,
+  "is_summit_level": false,
+  "importance": "低",
+  "is_official": true,
+  "collectedAt": "2026-10-09 09:30:00",
+  "collection_method": "webfetch_official"
  }
 ]
