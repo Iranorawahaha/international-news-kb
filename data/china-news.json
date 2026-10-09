@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-10-08 09:40",
+  "lastUpdated": "2026-10-09 09:21",
   "retentionDays": 7,
   "archive": {
     "2026-10-08": [
@@ -38,17 +38,6 @@
         "collectedAt": "2026-10-08 09:40:00"
       },
       {
-        "title": "我国科学家在国际上率先研制成功核光钟",
-        "url": "https://my-h5news.app.xinhuanet.com/h5/article.html?articleId=2026100765ab398f85b748e1a5965c8bff08f5c2",
-        "source": "新华社",
-        "date": "2026-10-07",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "新华社北京10月7日电，清华大学物理系丁世谦团队利用自主研制的148纳米连续波真空紫外激光以及与合作团队共同研制的掺钍-229氟化钙晶体，在国际上率先研制出核光钟并实现稳定运行，将量子精密测量由电子跃迁拓展至原子核跃迁，相关成果7日晚在线发表于国际权威期刊《自然》。团队将激光频率稳定锁定至核跃迁，实现核光钟秒级稳定度优于同期欧洲团队接近一个数量级，性能国际领先，且单次晶体生长所用核素仅为欧洲团队的二百分之一。核光钟有望成为继原子微波钟、原子光钟之后的新一代时间频率基准，固态核光钟具备小型化、工程化优势，未来有望为卫星导航、深空探测提供高精度时间频率基准，并为基础物理规律检验提供新的精密探测平台。",
-        "collectedAt": "2026-10-08 09:40:00"
-      },
-      {
         "title": "内蒙古河套盆地巴彦油田日产原油首次突破5000吨",
         "url": "https://news.cctv.cn/2026/10/07/ARTI38YzuQoewEtg0fSEPxSi261007.shtml",
         "source": "央视网",
@@ -71,6 +60,17 @@
         "collectedAt": "2026-10-08 09:40:00"
       },
       {
+        "title": "我国科学家在国际上率先研制成功核光钟",
+        "url": "https://my-h5news.app.xinhuanet.com/h5/article.html?articleId=2026100765ab398f85b748e1a5965c8bff08f5c2",
+        "source": "新华社",
+        "date": "2026-10-07",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "新华社北京10月7日电，清华大学物理系丁世谦团队利用自主研制的148纳米连续波真空紫外激光以及与合作团队共同研制的掺钍-229氟化钙晶体，在国际上率先研制出核光钟并实现稳定运行，将量子精密测量由电子跃迁拓展至原子核跃迁，相关成果7日晚在线发表于国际权威期刊《自然》。团队将激光频率稳定锁定至核跃迁，实现核光钟秒级稳定度优于同期欧洲团队接近一个数量级，性能国际领先，且单次晶体生长所用核素仅为欧洲团队的二百分之一。核光钟有望成为继原子微波钟、原子光钟之后的新一代时间频率基准，固态核光钟具备小型化、工程化优势，未来有望为卫星导航、深空探测提供高精度时间频率基准，并为基础物理规律检验提供新的精密探测平台。",
+        "collectedAt": "2026-10-08 09:40:00"
+      },
+      {
         "title": "两部门印发《医疗康复护理扩容提升工程实施方案》",
         "url": "https://ysxw.cctv.cn/article.html?item_id=15550525119445866190",
         "source": "国家卫生健康委·国家发展改革委",
@@ -81,17 +81,350 @@
         "summary": "经国务院批复同意（国函〔2026〕99号），国家卫生健康委、国家发展改革委近日联合印发《医疗康复护理扩容提升工程实施方案》（国卫规划发〔2026〕24号）。《方案》以扩容医疗康复护理资源、提升服务能力水平为着力点，提出6部分13项任务举措，聚焦“扩容、提质、均衡、连续”，坚持尽力而为、量力而行，以基层为重点统筹增加康复护理资源供给。工作目标是到2030年基本建成功能完备、上下联动、中西医结合、高效可及的康复护理服务体系，力争每千人口康复护理床位数达0.48张左右，每万人口康复医师达0.7人、康复治疗师达1.6人，人口较多、老龄化程度较深的地市至少设立1所公立康复医院和护理院。《方案》同时提出加快脑机接口、具身智能、仿生驱动等前沿技术布局，推进康复护理服务标准化规范化与医保支付方式改革、完善多元支付体系，并鼓励有条件的地方在医保支付、人才培养激励等方面加大改革力度。",
         "collectedAt": "2026-10-08 09:40:00"
       }
+    ],
+    "2026-10-09": [
+      {
+        "title": "“探索浩瀚宇宙，发展航天事业”——习近平总书记重要论述引领加快建设航天强国",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7082764.htm",
+        "date": "2026-10-08",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京10月8日电 题：“探索浩瀚宇宙，发展航天事业”——习近平总书记重要论述引领加快建设航天强国 新华社记者 顾天成、胡喆、刘祯 “探索浩瀚宇宙，发展航天事业，建设航天强国，是我们不懈追求的航天梦。” 党的十八大以来，以习近平同志为核心的党中央将航天强国建设纳入中华民族伟大复兴战略全局统筹谋划，习近平总书记对实施…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "习近平文化思想引领文化强国建设迈出坚实步伐",
+        "url": "https://news.cctv.com/2026/10/08/ARTI5xLqIO8DknYSzHUjdAMG261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "2023年10月，习近平文化思想在全国宣传思想文化工作会议上正式提出。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "以文化滋养精神家园——习近平文化思想引领文化强国建设迈出新步伐",
+        "url": "https://news.cctv.com/2026/10/08/ARTItcWlkg1zWQc5zm8InYJ1261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "“文化兴国运兴，文化强民族强。”“建设文化强国，事关中国式现代化建设全局，事关中华民族复兴大业，事关提升国际竞争力。”习近平总书记深刻指出。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "循着总书记足迹探寻中华文脉",
+        "url": "https://news.cctv.com/2026/10/08/ARTIPRfz6dJeEwZqHMGTeBH0261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "文化兴国运兴，文化强民族强。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "近镜头·习近平的文化足迹丨“作为千年古都，要把传统和现代有机融合在一起”",
+        "url": "https://news.cctv.com/2026/10/08/ARTIANVMXU4GiZ5fdYLvsNxR261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平总书记始终心系城市文脉，对城市建设中古今融汇的重视一以贯之，强调“要像爱惜自己的生命一样保护好城市历史文化遗产”。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "何立峰与英财长通话 吁加强经济财金领域交流合作",
+        "url": "https://www.zaobao.com/news/china/story20261008-9805998",
+        "date": "2026-10-08",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "何立峰同英国财政大臣举行视频通话",
+        "url": "https://tv.cctv.com/2026/10/08/VIDE8C43zbN4ODaL9Ly4dN0d261008.shtml",
+        "date": "2026-10-08",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "何立峰同英国财政大臣举行视频通话。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "何立峰同英国财政大臣希利举行视频通话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7082751.htm",
+        "date": "2026-10-08",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京10月8日电 中英经济财金对话中方牵头人、国务院副总理何立峰8日下午应约同对话英方牵头人、英国财政大臣希利举行视频通话，就下一步加强中英经济财金合作和双方共同关心的问题深入交换意见。 何立峰表示，中英双方应共同落实好两国领导人重要共识，继续加强经济财金领域交流合作，尊重彼此核心利益，实现互利共赢，推动中英经济…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "日媒：王毅会岩屋毅时再要求高市撤回涉台言论",
+        "url": "https://www.zaobao.com/news/china/story20261009-9808068",
+        "date": "2026-10-09",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "王文涛部长会见欧委会贸易和经济安全委员谢夫乔维奇",
+        "url": "https://www.mofcom.gov.cn/xwfb/bldhd/art/2026/art_c98d6dc6f06f44c1abc49ca63590842b.html",
+        "date": "2026-10-08",
+        "source": "商务部",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "2026年10月8日外交部发言人毛宁主持例行记者会（2026-10-08）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202610/t20261008_12036635.shtml",
+        "date": "2026-10-08",
+        "source": "外交部",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "您访问的页面不存在或已删除",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "国庆假期高速公路新能源汽车日均充电量同比增长51.42%",
+        "url": "https://news.cctv.com/2026/10/08/ARTIn1qXQKX1EHR99d2nsB0i261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "记者10月8日从国家能源局了解到，这个国庆假期，我国高速公路新能源汽车充电量持续保持高位。下一步，国家将持续推进高速公路服务区充电设施建设，为人民群众绿色、便捷、安心出行提供坚实可靠的充电服务保障。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "外交部介绍多哥部长会议主席访华安排",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/09/content_30184652.html",
+        "date": "2026-10-09",
+        "source": "人民日报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "本报北京10月8日电&nbsp;&nbsp;（记者韩晓明）多哥部长会议主席福雷·埃索齐姆纳·纳辛贝将于10月9日至16日对中国进行正式访问。外交部发言人毛宁8日在例行记者会上介绍了此访安排。 “福雷主席是中国的老朋友，这是他执政以来第七次正式来华，充分体现多方对发展两国关系的高度重视。”毛宁说，习近平主席将会见福雷主席…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "外交部：再次敦促日方严惩凶犯、以儆效尤",
+        "url": "https://news.cctv.com/2026/10/08/ARTIGRiLmqqszJxYpqoogCJn261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "10月8日，外交部发言人毛宁主持例行记者会。有记者问：据报道，10月1日，东京地方法院对非法侵闯中国使馆的村田晃大进行首次公开庭审。日方能否依法严肃处理，考验日本政府能否切实履行国际法义务，关系到日本…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "成都警方通报“某小区楼顶发现可疑骨头”",
+        "url": "https://news.cctv.com/2026/10/09/ARTIpTspIWjLm1R3Mtsr4Z5e261009.shtml",
+        "date": "2026-10-09",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "每天8点，央视网为您梳理24小时内发生在咱们身边的大小事儿。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "国务院关于《国家残疾预防行动计划（2026—2030年）》的批复",
+        "url": "https://www.gov.cn/zhengce/content/202610/content_7082737.htm",
+        "date": "2026-10-08",
+        "source": "中国政府网·要闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "000014349/2026-00075 民政、扶贫、救灾\\优抚安置 国务院关于《国家残疾预防行动计划（2026—2030年）》的批复 国函〔2026〕105号 国务院关于《国家残疾预防行动计划 （2026—2030年）》的批复 国函〔2026〕105号 国务院残疾人工作委员会： 你委《关于报送〈国家残疾预防行动计划（…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "“以旧换新+地方补贴”点燃大众消费热情 智能、绿色、健康商品需求旺盛",
+        "url": "https://news.cctv.com/2026/10/08/ARTIZNDSqbBQOcrWqYAuM87A261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "这个国庆假期，各地旅游消费保持较高活力。国家以旧换新基础目录叠加地方补贴扩容，假期期间也持续释放消费潜力。‌‌",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "假日经济升腾活力  开放中国共享机遇（和音）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/09/content_30184644.html",
+        "date": "2026-10-09",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "假日经济的每一个生动切面，都清晰映照出中国经济高质量发展和高水平开放的充沛活力 “中国国庆假期释放文旅消费强劲活力”“中国游客出行半径更广、停留时间更长”……2026年国庆假期，涌动的人潮与持续升温的消费市场，再次成为世界观察中国经济的重要窗口。假日经济的每一个生动切面，都清晰映照出中国经济高质量发展和高水平开放的充沛…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "六网建设带动千行百业 打开经济新空间",
+        "url": "https://news.cctv.com/2026/10/08/ARTIFwBu9qtSMQtcgQbdVipl261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "道路通达，产地能对接更远的市场；物流服务体系有效衔接，又推动了生产、流通环节降本增效。当我们再看六张网的建设，“带动”这个关键词既发生在施工现场，也延伸到生产生活的方方面面。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "关于人民币汇率的政策立场",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/09/content_30184636.html",
+        "date": "2026-10-09",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "本报北京10月8日电&nbsp;&nbsp;（记者葛孟超）人民币汇率作为金融市场的一个重要价格，长期以来一直备受各界关注。中国人民银行8日发布《中国人民银行关于人民币汇率的政策立场》，系统性阐明关于人民币汇率的政策立场。 中国人民银行表示，中国实施以市场供求为基础、参考一篮子货币进行调节、有管理的浮动汇率制度，坚持让市…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "出行热、消费热，热力全开！“火热”数据折射假日经济“热度”",
+        "url": "https://news.cctv.com/2026/10/08/ARTIpOimEpSFLVy96g5MpWjm261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "刚刚过去的这个国庆假期，有人饱览山河，把风景在相册定格；有人阖家围坐，品烟火悠然自得；也有人抓紧写完作业，在假期结束前奋力拼搏。有人感慨，一寸光阴一寸金，假期结束好伤心。有人暗下决心：欲穷千里目，时光…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "多维度数据勾勒国庆假期“硬核”成绩单 假日经济持续呈现火热图景",
+        "url": "https://news.cctv.com/2026/10/08/ARTIrld68jPj23xDjZj4rqkk261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "交通运输部数据显示，国庆假期全社会跨区域人员流动量预计达21.44亿人次，同比增长0.7%，日均超过3亿人次，单日峰值达到3.4亿。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "我国具身智能产业化加速落地",
+        "url": "https://news.cctv.com/2026/10/08/ARTIF7lg4qnNHkuoFMA7qaWM261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "今年以来，我国持续夯实具身智能产业发展基础，加快训练场基础设施建设，完善行业标准规范，推动具身智能加速从实验室走向产业化落地。下一步，我国将持续做强训练场集群，落地用好行业标准，拓展实景实训场景，推动…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "我国加快建立全链条循环经济体系",
+        "url": "https://news.cctv.com/2026/10/08/ARTIfVt4KpWargkBIlOQc09m261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "资源循环利用不仅能推动绿色转型，也蕴藏着广阔的市场机遇。当前，我国正加速打通生产、消费、回收、利用各个环节，加快建立全链条循环经济体系。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "教育部、财政部部署实施2026年银龄讲学计划",
+        "url": "https://news.cctv.com/2026/10/08/ARTIBrrx9AFNWOQMhJQpE021261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "近日，教育部办公厅、财政部办公厅联合印发《关于做好2026年银龄讲学计划有关实施工作的通知》（以下简称《通知》），对银龄讲学计划进行部署。《通知》强调，申请银龄讲学计划的退休教师以校长、教研员、特级教…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "更好发挥专项债促投资作用（政策解读）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/09/content_30184638.html",
+        "date": "2026-10-09",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "发行地方政府专项债券（以下简称“专项债”）是实施好更加积极的财政政策的重要抓手。用好债券资金，能够为扩大内需、补齐发展短板、增进民生福祉提供有力资金支撑。近年来，专项债发行规模保持较高水平。如何持续提升资金使用效能，更好服务经济发展与民生改善？记者采访了解到，相关部门正从4方面持续发力。 加快债券资金发行使用进度 金秋…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "研究：中国对发展机构资助大增 话语权仍与经济体量不匹配",
+        "url": "https://www.zaobao.com/news/china/story20261008-9805205",
+        "date": "2026-10-08",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "立案调查1.4万件 市场监管总局持续开展网络食品销售虚假宣传整治",
+        "url": "https://news.cctv.com/2026/10/08/ARTITit4YWUdYBbhlVuyZdu4261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者今天了解到，国庆节期间，市场监管总局指导各地市场监管部门深入推进网络食品销售虚假宣传专项整治行动，紧盯节令食品、网红食品、保健食品等网络销售重点，对虚假宣传、误导消费等问题“零容忍”，严厉打击违法…",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "透过亮眼数据看国庆假期出行“热”、消费“热” 经济发展活力持续释放",
+        "url": "https://news.cctv.com/2026/10/08/ARTIOMmlenu4JDNuRMUQVT7E261008.shtml",
+        "date": "2026-10-08",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者从交通运输部了解到，今年国庆假期，全社会跨区域人员流动量超21亿人次。随着综合交通运输体系持续完善，旺盛的出行需求得到有力支撑，发展活力持续释放。",
+        "collectedAt": "2026-10-09 09:21:33"
+      },
+      {
+        "title": "韩咏红：中欧贸易紧张来到临界点",
+        "url": "https://www.zaobao.com/news/china/story20261009-9807419",
+        "date": "2026-10-09",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-09 09:21:33"
+      }
     ]
   },
   "dates": [
+    "2026-10-09",
     "2026-10-08"
   ],
-  "today": "2026-10-08",
-  "todayCount": 7,
+  "today": "2026-10-09",
+  "todayCount": 30,
   "stats": {
-    "totalArticles": 7,
-    "dateCount": 1,
-    "latestDate": "2026-10-08",
-    "summitCount": 0
+    "totalArticles": 37,
+    "dateCount": 2,
+    "latestDate": "2026-10-09",
+    "summitCount": 5
   }
 }
