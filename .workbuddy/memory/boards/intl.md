@@ -76,3 +76,35 @@
 - ⭐ **三级口径跃迁首次完整走通（9-28）**：中美 30 亿美元对等降税清单由**商务部**正式公布（白宫 77 项 / 中方 1619 项，约 90% 降至 MFN），休战延至 **2027-01-10**，并设贸易委员会 + 农业工作组（2026 年底前首会）+ 投资委员会 + AI 对话（11 月底前下一轮）+ AI 事件沟通渠道 → 判定为「**中方主管部门确认**」级（未达元首共同确认，中方未采用美方「釜山协议」提法）。看板由 白宫/USTR/路透×2/FT/彭博×2 共 7 条覆盖，**每轮须先判当前口径级别再定 outcomes 写法与是否撤「⚠️ 美方单方口径」标注**
 - ⚠️ **AP 官网正文通道：WebFetch 只回导航样板（9-28 复核）** → 用 `WebFetch apnews.com/hub/world-news` 取官方 `/article/<slug>-<hash>` URL，pubDate 走 Google News RSS `site:apnews.com when:2d`
 - ⚠️ **r.jina.ai 对路透/FT 正文返回 `401 AuthenticationRequiredError … bad network reputation (AS53667)`（9-28 复核，与 9-25 同因）** → 路透/FT 摘要一律走 WebSearch 找 ≥2 家转述媒体交叉比对撰写，URL 仍用官网直取（路透 sitemap / FT RSS）
+
+## 2026-10-08 刷新（V2.17）· 经验增量
+
+### ⭐ 长缺口后首跑的两条硬后果（与国内板同构，须先预判）
+- 先 `git log --oneline -1 -- data/news-data.json` 确认上次刷新日；若缺口 > 7 天：
+  1. **V2.11 窗口效应**：中间日期内容按规则不回补（今日版面仅收 collectedAt=今日 且 date ∈ {昨天, 今天}）
+  2. **retentionDays=7 剪枝**：缺口 >7 天时 archive 旧日期全部滚出 → **透视表退化为单日**（本次 archive 从 6 天剪到只剩 2026-10-08）。属脚本既有逻辑，勿当 Bug，但需在汇报中显式说明
+
+### ⚠️ `sed` 提取 GENERATE_HTML_V12 段的正确行区间
+- `grep -n GENERATE_HTML_V12 update-news.sh` 给出 909（`python3 << 'GENERATE_HTML_V12'`）与 1012（结束标记）
+- **正确区间 = `sed -n '910,1011p'`**；若写成 `'909,1011p'` 会把 heredoc 首行一起提取 → `NameError: name 'python3' is not defined`
+- 修复转载标签等字段后必须重跑该段 + `check_js_syntax.py` + `inject_nav.py`，**不可重跑全量 update**（会再抹字段）
+
+### ⚠️ 全量 update 抹掉 `repost_from`（第 5 次复发）
+- 本次 1 条（WSJ→鉅亨網）被抹 → 改 `data/news-data.json` 补字段 **并同步写回池**（防下次再丢）
+- 排查手法：先 `print(repr(a['url']))` 看 board 真实 URL（update 会去尾部斜杠），再按该值匹配
+
+### ⭐ GitHub Pages 重建延迟比 CDN 更关键
+- push 成功后 `?t=` 首次仍返回**上一次的旧版**（488123B = 09-28 版），**约 95 秒后**才变为新版
+- 判据升级：`git show HEAD:gh-pages/international-news.html | wc -c` 与 `grep '"lastUpdated"'` 先确认**已推送内容**正确，再轮询线上；线上与本地 `len()` 完全相等才算通过（本次 158288B / 121? → 逐字节 identical）
+
+### ⚠️ 飞书同步可能因用户 token 过期整批失败
+- 现象：`refresh_token expired` / `need_user_authorization` → 去重查询与写入均失败
+- 无人值守无法自行恢复，**须在汇报中明确列出**，由用户执行 `lark-cli auth login --scope "base:record:create"` 后补跑
+
+### ⭐ 通道复核（本次实测）
+- 路透 sitemap 前 10 片 1000 条**一次成功**（含 `<news:title>`），连续第 N 次全官网 URL
+- RSS：`wapotech`（WaPo 科技）与 `ftchina` 首次 000，**重试即 200** → 必须重试
+- 彭博正文：`r.jina.ai/<url>` 并行 8 条，1 条 000 重试即 200；摘要须取 `Markdown Content:` 之后的 lede 段（跳过 Bloomberg 样板行）
+- CNN：**WebFetch `edition.cnn.com/world` 直接返回标题+URL，优于 curl+正则**（后者提不出标题）
+- WSJ：官网 403、TradingView `DowJones:all` 404 → 仅能靠 WebSearch 定位转述（本次鉅亨網）
+- 官方源：**国务院 curl 恒 407 → 用 WebFetch `state.gov/press-releases/` 可稳定取到标题+日期+URL**；财政部 `home.treasury.gov/news/press-releases` WebFetch 亦可用（脚本返回 0 条时须手工补）

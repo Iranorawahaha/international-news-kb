@@ -33,7 +33,7 @@
 - 收录 62 条 webfetch（全部 date∈{09-16,09-17}）：路透11/SCMP11/BBC6/NYT6/Politico5/AP5/卫报4/AJ4/WaPo4/CNN3/WSJ2/FT1；1 条 CNN 评论（date=09-15）出窗口剔除；与池+archive 去重剔除 2 条 → 池 1238→1300
 - ⭐ **交叉验证补录 1 条（AI 出口管制专题）**：FT「US-China AI regulation remains difficult despite shared concerns」（09-16，AI 治理/出口管制/远程算力，用户点名必查主题）→ 用 WebSearch 定位转述媒体（tmcnet insight + aisengtech brief，2 家内容一致）取第三方背书的 ft.com URL → **「金融时报」为飞书已有来源选项，无需新增**；另据 Reuters Factbox 充实「AI 竞争阴影笼罩习特会」摘要（蒸馏指控/远程算力/H200 例外/监管分歧五要点）。CXMT/1260H 无窗口内新；美中关税制裁无新（govinfo L-lysine 反倾销令按 09-16 程序性贸易救济先例不收）
 - update-news.sh --auto 成功：292 条/6 天/今日版面 **65 条**（AI·科技19/中美博弈13/地区局势11/中欧与盟友10/美国内政7/中国外交2/全球多边2/其他1；元首级 7，≥88 共 19 条）；三零全绿（collectedAt≠今日0 · date<昨天0 · URL重复0 · 版面内自身重复0）；官方 3 条 0 缺字段/0 模板摘要；导航残留 0；无中文标题 0 / 无英文标题 0；JS 0 错误；HTML 双端一致 470724B
-- ⚠️ **转载标签被全量 update 丢弃（已知坑复发）**：2 条 WSJ TradingView 条目的 repost_from 被抹掉 → 改 data/news-data.json 按 URL 补字段 + `sed -n '909,1010p' update-news.sh` 单独跑 GENERATE_HTML_V12 段 + check_js_syntax + inject_nav.py，**未重跑全量 update**；修复后线上含「TradingView（道琼斯电头）」标签 2 处
+- ⚠️ **转载标签被全量 update 丢弃（已知坑复发）**：2 条 WSJ TradingView 条目的 repost_from 被抹掉 → 改 data/news-data.json 按 URL 补字段 + `sed -n '909,1010p'` 单独跑 GENERATE_HTML_V12 段 + check_js_syntax + inject_nav.py，**未重跑全量 update**；修复后线上含「TradingView（道琼斯电头）」标签 2 处
 - ⚠️ git 首次 push 失败（`Failure when receiving data from the peer`）→ 重试即成功。主 commit 07a8df1 → 补提交 4337a46（webfetch 1300 / 官方源 110 / us-official-report / news-data / 双端 HTML），远程一致
 - 飞书：①`--today` 同步 5 条 ②补跑全量（292→去重232→新增 60），5+60=65 全覆盖；无需新增 source 选项
 - 线上 ?t= 二次请求 HTTP 200 **470724B**，与本地逐字节一致；今日 65 条线上命中 65/65；lastUpdated 2026-09-17 09:34
@@ -198,3 +198,49 @@
 - ⭐ **V2.11.3 拆条后必须重跑 HTML 段**：移出条目后 `dates`/`stats`/`todayCount` 同步改 + 重跑 `sed -n '910,1011p' update-news.sh` 提取的 GENERATE_HTML_V12 + check_js_syntax + inject_nav
 - ⚠️ **r.jina.ai 对路透/FT 正文恒 401（AS53667）**，AP 官网 WebFetch 只回导航样板 → 三者摘要均走 WebSearch ≥2 家转述交叉比对
 - ⭐ **勿对本地 HTML 调 present_files**（会注入 `data-page-node-id` 弄脏工作区，9-25 已记）→ 本轮交付一律用线上 URL
+
+## 2026-10-08 刷新（09:23 自动，V2.17，一次会话完成）
+- **背景：距上次刷新 10 天（09-28 → 10-08）**，09-29~10-07 国际看板未运行 → 双后果：①V2.11 窗口效应（中间日期不回补）②retentionDays=7 剪枝致 archive 只剩 `2026-10-08` 一天（透视表退化为单日，JSON 删 8218 行）
+- 官方源第 25 次源组丢失（新输出 33 条 / 国务院 HTTP 407）→ `git show HEAD:` 恢复 131 + 手工补 4 条窗口内实质新增（财政部 OISP 首例民事处罚 / USTR 14 国产能过剩联合声明 / 国务院斐济居民涉华腐败被指定 / 国务院美希战略对话）→ **135 条 6 源齐全**；白宫 5 条窗口内条目全为程序性文告/PR 剔除；国防部最新 10-05、商务部最新 09-30 均出窗口
+- 13 信源：WebFetch 未用，全走已验证通道 —— 路透 sitemap 1000 条一次成功（窗口内 182/相关 123，取 10 条全官网 URL）· RSS 11 源全 200（**wapotech/ftchina 首次 000 重试即 200**）· 彭博 RSS 21 候选→入库 8（8 篇正文经 r.jina.ai，1 篇 000 重试成功）· **CNN 走 WebFetch `edition.cnn.com/world`（可拿标题+URL，优于 curl+正则）** · AP 走 hub + GN RSS 定日 · WSJ 官网 403 / TradingView DJO 404 → 仅 1 条（鉅亨網转述）
+- 入库 **68 条**（0 重复跳过），collectedAt 全部 = `2026-10-08 09:30:00`；date 分布 10-07×58 / 10-08×10；池 1818 → 1886
+- 今日版面 **71 条 / 16 源**（路透10/南华10/彭博8/纽约6/BBC5/FT4/卫报4/半岛4/Politico4/WaPo4/CNN4/AP3/国务院2/财政部1/USTR1/WSJ1）；板块 AI·科技16/地区局势15/其他11/中美博弈9/中欧与盟友7/美国内政5/中国外交4/全球多边4；≥88 共 17，元首级 0
+- 三零全绿 + 官方 4 条字段全 + 模板摘要0 + 缺中英标题0 + 黑名单0 + 路透官网 10/10 + 彭博 8/8 collectedAt=今日 + JS 0 错误 + 双端 md5 一致（158288B）
+- ⚠️ **转载标签第 5 次被全量 update 抹掉** → 改 board + 池补 `repost_from=鉅亨網` + **`sed -n '910,1011p'`** 重跑 HTML 段 + check_js + inject_nav（未重跑全量）
+- git：主 commit 3635620（push 直连超时失败）→ 补提交 de03089（news-data / webfetch 1886 / us-official 135 / 双端 HTML / 19 个 `_p1008_*` 脚本）→ **带代理 push 成功**，`git ls-remote` == HEAD
+- 线上：push 后**约 95 秒** Pages 才重建完成（首次 `?t=` 仍返回 09-28 旧版 488123B）→ 终态 158288B 与本地逐字节 identical、71/71 URL 命中、转载标签在位、lastUpdated 2026-10-08 09:33
+- ⚠️ **飞书同步失败：lark-cli 用户 token 过期**（`refresh_token expired` / `need_user_authorization`）→ 无人值守无法完成，需用户 `lark-cli auth login --scope "base:record:create"` 后补跑
+- 交叉验证 3 组：①CXMT/1260H 无窗口内新（均 6-8 月旧闻）②美中关税制裁命中 **USTR 10-07 确认 2018 年两组 Section 301 对华措施继续有效**（强制四年期复审延续）→ 程序性贸易救济按 govinfo 钢货架/镀锡板先例不收 ③AI 出口管制/远程算力无 The Information 独家，主题由「美国首例对华对外投资处罚」+「UPS 漏看邮件致 F-35 部件入华」+ 财政部官方稿覆盖
+- 固定附加项：`gen_reuters_recheck_list.py` → **连续第 11 日为空**（repost_from 仅 1 条且为 WSJ 非路透）
+- 头条：美国FCC将表决禁止中国实验室检测美电子产品(90) / 三星单季利润800亿(90) / 特朗普促习近平与高市早苗对话(90) / 美首例对华对外投资处罚(90×2源) / 欧洲对华贸易走向摊牌(90) / 蔡英文在美称大陆施压持续(88) / 台驻美代表称美台关系稳固(88) / 中国拒绝欧盟混动自愿限制(88) / 前Anthropic研究员称中国已渗透美AI实验室(88) / 欧洲议会强化对华立场(88) / 中国内陆加速建AI数据中心(88) / 中国警告欧盟备好反制工具(88) / UPS漏看邮件致F-35部件入华(88) / 特朗普AI事务总管走访硅谷(88) / 14国签产能过剩联合声明(88) / 国务院制裁斐济居民(88)
+- **建议综合（同事件多源，供日报/人工采纳）**：①**中欧贸易摩擦总盘**（NYT90 走向摊牌 + 路透88 拒绝混动自愿限制 + 路透86 欧盟寻求削减逆差 + 彭博88 中国警告备反制工具 + SCMP88 欧洲议会强硬 + SCMP84 欧盟最后机会 + 卫报84 谈判代表赴华 + 路透86 德国阻止中远海运，8 源）②**美国首例对华对外投资处罚**（财政部90 + SCMP90，2 源）③**G20 产能过剩联合声明**（USTR88 + 路透86，2 源）④**俄西伯利亚实验室肺鼠疫死亡事件**（BBC84 + CNN80 + AP80 + 卫报78 + 半岛78，5 源）⑤**沙特机场遇袭/也门战事升级**（NYT84 + 半岛84 + CNN84 + 半岛80 战报，4 源）⑥**鲁比奥欧洲行（希腊演讲+美希战略对话）**（NYT86 + 卫报80 + Politico80 + 国务院76，4 源）⑦**AI 芯片巨额债务融资**（WSJ86 + 彭博84 博通为 OpenAI 芯片融资，2 源）⑧**法国学潮与抗议**（BBC78 + CNN78 + Politico76，3 源）
+
+### 经验增量（10-08）
+- ⭐ **长缺口后首跑必须先判两条硬后果**（V2.11 窗口不回补 + retentionDays=7 剪枝致单日版面），并在汇报中显式说明；判据 `git log --oneline -1 -- data/news-data.json`
+- ⭐ **GENERATE_HTML_V12 段提取区间 = `sed -n '910,1011p'`**（909 行是 heredoc 首行 `python3 << 'GENERATE_HTML_V12'`，含之则 `NameError: name 'python3' is not defined`）
+- ⭐ **GitHub Pages 重建延迟可达 ~95 秒**：push 成功后 `?t=` 仍可能返回上一次旧版；**先用 `git show HEAD:gh-pages/international-news.html | wc -c` + `grep '"lastUpdated"'` 确认已推送内容正确，再轮询线上**，不可仅凭一次 CDN 请求判定失败
+- ⭐ **国务院 / 财政部官方稿的补救通道 = WebFetch**：`state.gov/press-releases/`（curl 恒 407）与 `home.treasury.gov/news/press-releases`（脚本可能返回 0 条）均可稳定取到标题+日期+URL
+- ⭐ **CNN 最优通道更新为 WebFetch `edition.cnn.com/world`**：直接返回「标题 | URL」，优于 curl edition.cnn.com/world + 正则（后者提不出标题）
+- ⚠️ **飞书 token 过期（`need_user_authorization`）属无人值守硬阻塞**，去重查询与写入一并失败 → 必须在汇报中显式列出并给出恢复命令
+- ⭐ 合并脚本用 `norm()` 去引号归一（`’‘` → `'`）+ 去非字母数字后子串匹配，可一次解决「RSS 弯引号 vs 手写直引号」导致的 14 条匹配失败
+
+## 2026-10-09 刷新（09:24 自动，V2.17，一次会话完成）
+- 官方源第 26 次源组丢失（新输出 29 条 / 国务院 HTTP 407 整组丢）→ `/tmp/us-official-backup-1009.json` 恢复 135 + 手工补 2 条窗口内实质新增（国务院《2026 人口贩运报告》香港被降至最低级 / USTR 墨西哥 GLM 劳工审查）→ **137 条 6 源齐全**（国务院65/白宫33/国防部27/USTR7/财政部4/商务部1）；白宫窗口内 5 条全为程序性（Industry PR / 科学奖章 / 科学倡议 Fact Sheet / Trump Accounts / 哥伦布日+能源主导月文告）→ 剔除
+- 13 信源：WebFetch 全未用 —— 路透 sitemap 前 10 片 1000 条（**本轮 `<news:title>` 为空 → 退回 slug 匹配**，窗口 848 / 相关 135 / 取 16 条全官网 URL）· RSS 11 源全 200 一次成功（**SCMP /rss/91 首次 301 需 -L 重试**）· 彭博 RSS 27 候选→入库 12 · CNN 走 WebFetch `edition.cnn.com/world` 一次拿全标题+URL
+- ⚠️ **AP 本轮全通道失效**：官网 curl/WebFetch/sitemap 全 403（Cloudflare），GN RSS 的 `link` 为不可解码混淆串 → 7 条 AP 按「宁缺毋滥」全部空缺（覆盖事件多已被其他源覆盖）
+- 入库 **89 条**，collectedAt 全部=`2026-10-09 09:30:00`；date 分布 10-08×80 / 10-09×1 / **10-07×8**（后者为真实发布日落在采集窗口内的迟到稿）
+- `update-news.sh --auto` → 160 条 / 2 天；**手工按 V2.11.3 把 8 条 date=10-07 移出今日版面**（新建 `archive['2026-10-07']` 承接）→ 今日版面 **89→81 条 / 11 源**（南华18/路透15/彭博11/纽约8/BBC8/FT7/Politico5/半岛4/WaPo3/国务院1/USTR1）；板块 AI·科技18/中美博弈13/地区局势12/中欧与盟友9/美国内政9/中国外交7/全球多边7/其他6；≥88 共 19
+- 校验全绿：三零全绿（collectedAt≠今日0 · date<昨天0 · 与历史版面 URL 重复0）+ 版面内重复0 + 官方 2 条字段全 + 模板摘要0 + 缺中英标题0 + 黑名单0 + 导航残留0 + 彭博 12/12 collectedAt=今日 + **路透官网 15/15、repost_from 0** + JS 0 错误
+- git：主 commit a248ecb（--auto）→ 补提交 0962f3f（news-data / webfetch 1975 / us-official 137 / 双端 HTML / 构建脚本），`git ls-remote` == HEAD
+- 线上：push 后 Pages **约 135 秒**重建完成（首查仍返回 10-08 旧版 158288B）→ 终态 **269275B**、lastUpdated 2026-10-09 09:31、**81/81 URL 命中**
+- ⚠️ **飞书同步仍失败：lark-cli 用户 token 过期**（`token_missing` / `need_user_authorization`，连续第 2 日阻塞）→ 需用户授权后补跑
+- 交叉验证 3 组：①CXMT/1260H 无窗口内新 ②美中关税制裁无新（USTR 10-07 Section 301 延续属程序性 + 商务部 CBS 反补贴初裁 107.57% 程序性贸易救济，均按先例不收）③AI 出口管制/远程算力无窗口内 The Information 独家
+- 固定附加项：`gen_reuters_recheck_list.py` → **连续第 12 日为空**（repost_from=0）
+
+### 经验增量（10-09）
+- ⚠️ **路透 sitemap 的 `<news:title>` 并非每轮都有**：本轮 10 片共 1000 条该字段全空 → 必须保留「slug 关键词匹配」作为回归路径（勿因 9-16~10-08 连续有 title 就删掉 slug 逻辑）
+- ⚠️ **AP 通道本轮完全不可用**（curl+WebFetch+sitemap 全 403，GN RSS link 为混淆串）→ 按纪律空缺，勿构造 slug 猜测 URL（本轮曾生成 7 条 `apnews.com/article/<猜测 slug>`，全部 403 无法验证 → 已整批移除）。**判据：任何自构 URL 必须能 200 验证，否则不收**
+- ⚠️ **SCMP `/rss/91/feed` 会返回 301**（4/5 直通 200）→ 批量抓 SCMP 时必须 `curl -L`
+- ⚠️ **archive 可能被写入中间日期桶**：V2.11.3 移出窗口外条目时若新建 `archive['2026-10-07']`，透视表日期按钮会多出一格；确认用户在「X 日 = 采集窗口」规则下接受（本轮按用户最终规则执行）
+- ⭐ **GitHub Pages 重建延迟本轮达 ~135 秒**（10-08 为 95 秒）→ 轮询须至少 3 次 × 60s，且以「size 变化」为判据而非 lastUpdated 正则
+- ⚠️ 批量写池时 **Python 字符串内的中文弯引号会破坏语法** → 改用 `「」` 替代，或直接用 Write 工具写 `|` 分隔的数据文件（本轮 4 批 90 条全部走 Write 数据文件，零语法错误）
