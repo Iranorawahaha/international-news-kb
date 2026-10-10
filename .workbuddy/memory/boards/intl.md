@@ -108,3 +108,27 @@
 - CNN：**WebFetch `edition.cnn.com/world` 直接返回标题+URL，优于 curl+正则**（后者提不出标题）
 - WSJ：官网 403、TradingView `DowJones:all` 404 → 仅能靠 WebSearch 定位转述（本次鉅亨網）
 - 官方源：**国务院 curl 恒 407 → 用 WebFetch `state.gov/press-releases/` 可稳定取到标题+日期+URL**；财政部 `home.treasury.gov/news/press-releases` WebFetch 亦可用（脚本返回 0 条时须手工补）
+
+## ⭐ URL 完整性：WebFetch 池「构造链接」事故（2026-10-09 立，跨板通用，最高优先）
+- **事故**：10-07~10-09 共 83 条 URL 为 LLM 编造。特征指纹（按此即可秒判）：
+  - **SCMP**：文章 ID 落在 `3331xxx`（真实区间随时间递增，10 月为 `3369xxx–3370xxx`）→ 直接 404
+  - **BBC**：`bbc.com/news/articles/<11位>` 的 ID 形似但 curl 404（真 ID 可从 `feeds.bbci.co.uk/news/<world|europe|us-canada|business|technology|asia>/rss.xml` 取）
+  - **FT**：UUID 呈**顺序化十六进制**（`3f2b1a9c-7d4e-4c8b-a1f2-6e5d4c3b2a19`、`7a6b5c4d-3e2f-4a1b-…`）→ 真 UUID 完全随机（`b66a9858-f8fb-46cb-b506-44bfe26fca2a`）
+  - **Politico / NYT / WaPo**：slug 被「改写成更通顺的英文」（`nato-cool-tensions-russia-ahead-nuclear-exercise` → 真 `nato-attempts-to-cool-tensions-with-russia-ahead-of-key-nuclear-exercise`）；**NYT 连路径段都会错**（`/world/asia/china-laos-military-base` → 真 `/world/asia/china-military-base-laos`）
+  - **Reuters**：slug 正确但**栏目段错**（`/technology/` → 真 `/business/`；`/world/wto-…` → 真 `/world/asia-pacific/wto-…`）
+- **根因**：采集走 `news-webfetch.json` WebFetch 通道时，agent **只能看到标题、拿不到 href**，于是「按 ID 规律/英文习惯构造」URL；下游 build 与日报均未做可用性抽检 → 直接入库并推送
+- **修复通道（官方索引，勿凭标题猜）**：
+  - SCMP：`scmp.com/rss/{3,4,5,6}/feed`（带浏览器 UA，否则 403；`/rss/91` 需 `-L` 重试）→ 建 `slug → 完整 URL` 映射
+  - Reuters：`reuters.com/arc/outboundfeeds/sitemap-index/?outputType=xml` → 前 10 片 `?outputType=xml&from=0..900`（1000 条）；**slug 末尾日期可能差 1 天**（`…-2026-10-08` vs `…-2026-10-07`）→ 去掉尾部 `-YYYY-MM-DD` 再匹配
+  - BBC/FT/Politico/NYT/Bloomberg/WaPo/AJ：各自 RSS，标题 `difflib` 相似度 ≥0.72 且**域名一致**才接受
+- **状态码判据**：`401`（Reuters 全站 bot 拦截）、`403`（FT/Bloomberg/NYT/SCMP 付费墙）、`000`（WaPo 屏蔽）**均不代表链接有效或无效**，必须回官方索引核对；只有 **`404` 是明确无效**
+- **必做抽检**：入库前对**全部** ≥80 分条目做 curl 状态码抽检 + 官方索引比对；`scripts/_fixurl_1009.py` 为可复用模板
+- **看板重生成**：`update-news.sh` 的 HTML 生成是内联 heredoc → 已抽出为 `scripts/_regen_intl_html.py`，数据修好后可直接重跑（同时写 `gh-pages/international-news.html` 与根目录两份）
+
+### 经验增量（2026-10-10）
+- ⭐ **CNN 标题最稳通道 = article 页 `<title>`**（10-10 验证）：`curl edition.cnn.com/world` 取 URL 列表后，**容器正则 `data-editable="headline"` 本轮返回 0 条** → 改为逐条 curl 文章页读 `<title>`（形如 `This old CIA airfield is now a Chinese base | CNN`）。勿在 hub 页正则上耗时间
+- ⭐ **AP 官网 URL 唯一可行获取法（10-10 验证）**：curl 403 + WebFetch 403 + GN RSS link 为混淆串 → 用 **`WebSearch` 完整英文标题 + `allowed_domains:["apnews.com"]`** 返回真实 `apnews.com/article/<slug>-<hash>`（hash 32 位十六进制）。**未验证的 slug 一律不收**
+- ⭐ **13 通道批量 curl 一次全 200**（10-10）：把 BBC/Guardian/AJ/NYT/WaPo×2/Politico×2/SCMP(4,91,5)/FT(world,china) 合并为单条 for 循环，首次即全 200 零重试 → 定为固定采集姿势
+- ⚠️ **路透 sitemap `<news:title>` 空值第 2 次出现**（10-09、10-10）→ slug 匹配是必备回归路径，勿删除
+- ⚠️ **官方源窗口内新增处置顺序**：①对比 backup 取 url 差集 ②回页面核对发布日与实质价值 ③程序性/无价值直接剔除且**不写入 us-official.json**（10-10 白宫 2 条程序性未入池 → 今日版面官方 0 条，属正常而非缺漏）
+- ⚠️ **跨日期 URL 重复的校验口径**：须区分「涉及今日版面」与「历史日期之间」。10-10 报 9 条重复，全部为 10-08↔10-09/10-07 历史遗留（源自 10-09 `bfe3193` URL 回填 commit），**今日版面涉及 0 条** → 如实记录、不擅自改动历史版面
