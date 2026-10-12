@@ -132,3 +132,10 @@
 - ⚠️ **路透 sitemap `<news:title>` 空值第 2 次出现**（10-09、10-10）→ slug 匹配是必备回归路径，勿删除
 - ⚠️ **官方源窗口内新增处置顺序**：①对比 backup 取 url 差集 ②回页面核对发布日与实质价值 ③程序性/无价值直接剔除且**不写入 us-official.json**（10-10 白宫 2 条程序性未入池 → 今日版面官方 0 条，属正常而非缺漏）
 - ⚠️ **跨日期 URL 重复的校验口径**：须区分「涉及今日版面」与「历史日期之间」。10-10 报 9 条重复，全部为 10-08↔10-09/10-07 历史遗留（源自 10-09 `bfe3193` URL 回填 commit），**今日版面涉及 0 条** → 如实记录、不擅自改动历史版面
+
+### 经验增量（2026-10-12）
+- ⭐ **RSS 15 通道批量 curl 已确认为标准姿势**：本轮一次全 200 零重试（bbc/guardian/aj/nyt/scmp 4·91·5/wapo×2/politico-politics/ft world·china·companies·tech）；**`politico.com/rss/politicopicks.xml` 恒 403 → 改 `rss.politico.com/politics-news.xml`**（200、30 条、真实官网 URL）
+- ⚠️ **路透 sitemap `<news:title>` 空值第 3 次出现**（10-09 / 10-10 / 10-12）→ slug 匹配为必备回归路径，禁止因前几轮有 title 就删除 slug 逻辑
+- ⚠️ **CN 官方政策文件不在 13 必选源内，属交叉验证盲区**：10-12 交叉验证仅覆盖「CXMT/1260H」「美中关税制裁」「AI 远程算力」三组外媒向关键词，**漏掉中方重大政策**（10-09 中共中央国务院《关于发展新质生产力的意见》，19 项举措含「全面实施人工智能+行动」，gov.cn 原文可查）。**建议交叉验证固定增补第 4 组：「中国 中央 国务院 印发 意见 行动 2026-10」**，命中后按官方源稿收录（news-data 直录或标注 CN 官方）
+- ⚠️ **池行格式 = 10 字段**：`source|title_zh|title_en|summary|keywords|url|prio|summit|date|category` → 行校验必须 `len(parts)==10 and parts[6].isdigit()`；沿用旧 9 字段口径会把全部行判为坏行（10-12 首跑 82/82 误报）
+- ⚠️ **CN 政策稿若由 AI 生成式转述页（sina/toutiao 等）承载则不入池**，须回溯 gov.cn / 新华社一手域名（本轮 gov.cn 原文 `https://www.gov.cn/yaowen/liebiao/202610/content_7082824.htm` 可直取）

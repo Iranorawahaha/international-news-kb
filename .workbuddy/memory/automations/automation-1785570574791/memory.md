@@ -267,3 +267,25 @@
 - ⚠️ **备选通道首选"写 13 通道一次全 200"的批量 curl**：本轮把 SCMP 4/91/5、FT world/china、WaPo×2、Politico×2 与 BBC/Guardian/AJ/NYT 合并成单条 for 循环，**首次即全 200 无重试**（此前多为逐个抓+重试），值得固定
 - ⚠️ **官方源窗口内新增的正确处置顺序**：先 `对比 backup 找 url 差集` → 再 `回页面核对发布日与实质价值` → 程序性/无价值直接剔除**且不写入 us-official.json**（本轮白宫 2 条未入池，故今日版面官方 0 条，属正常）
 - ⚠️ **跨日期 URL 重复未必是本次引入**：校验口径应区分「涉及今日版面」与「历史日期之间」——本轮 9 条全为 10-08↔10-09/10-07 历史遗留（源自 10-09 URL 回填），今日版面涉及 0 条
+
+## 2026-10-12 刷新（09:16 自动，V2.17，一次会话完成）
+- 官方源第 29 次源组丢失（新输出 30 条 / 国务院 HTTP 407 整组丢）→ `/tmp/us-official-backup-1012.json` 恢复 **137 条 6 源齐全**（国务院65/白宫33/国防部27/USTR7/财政部4/商务部1）；窗口内唯一新增为白宫 2 条（10-08 科学倡议 Fact Sheet / Trump Accounts PR）均程序性 → 按 V2.13.1 全剔；war.gov/商务部/财政部/USTR 窗口内无新 → 今日版面官方 0 条
+- 13 信源：**RSS 15 通道批量 curl 一次全 200 零重试**（bbc/guardian/aj/nyt/scmp×3/wapo×2/politico-politics/ft×4）；仅 `politico.com/rss/politicopicks.xml` 403 → 改 `rss.politico.com/politics-news.xml` 成功；路透 sitemap 前 10 片 900 条（**`<news:title>` 全空 → 回归 slug 匹配**，窗口 165/相关 26，取 6 条全官网 URL）；彭博 RSS 9 候选→入库 7（全官网 URL）；CNN 走 curl `edition.cnn.com/world` + article 页 `<title>` 提标题（5 条）；AP 官网全通道 403 → WebSearch 定位 2 条官网 URL；FT 走官方 RSS（15 条全官网 URL）；**WSJ 403 + TradingView 无窗口内稿 → 如实空缺**
+- 入库 **79 条**，collectedAt 全部=`2026-10-12 09:30:00`；date 分布 10-11×71 / 10-12×8（3 条 date=10-10 已按窗口剔除）；池 2056 → 2135
+- `update-news.sh --auto` → 315 条 / 5 天；今日版面 **79 条 / 11 源**（南华22/FT15/BBC8/彭博7/路透6/NYT5/CNN5/WaPo4/半岛4/AP2/Politico1）；板块 地区局势25/其他14/AI·科技10/全球多边9/中欧与盟友8/美国内政6/中美博弈4/中国外交3；≥88 共 8；元首级 0
+- 校验全绿：collectedAt≠今日 0 · date<昨天 0 · 与历史版面重复 0 · 版面内重复 0 · 彭博 7/7 collectedAt=今日 · 路透官网 6/6 · repost_from 0 · 官方 0（窗口内无有新闻价值条目）· 缺中英标题 0 · 模板摘要 0 · 黑名单 0 · JS 0 错误
+- git：主 commit 9553c55（--auto 自动 push 成功）→ 补提交 a5f3f46（news-data / webfetch 2135 / 官方源 137 / 双端 HTML / index），`git ls-remote` == HEAD（a5f3f46）
+- 线上 `?t=` HTTP 200，**字符级完全 identical**（321251 字符），今日 79/79 URL 命中
+- ⚠️ **飞书同步仍失败：lark-cli 用户 token 过期**（`token_missing` / `need_user_authorization`，**连续第 4 日阻塞**）→ 需用户 `lark-cli auth login --scope "base:record:create"` 后补跑
+- 交叉验证 3 组：①CXMT/1260H 无窗口内新 ②美中关税制裁无新 ③AI 出口管制/远程算力：BIS 拟禁中企经第三国数据中心租用美制 AI 芯片的草案仍在流传（9 月已分享行业团体、未入联邦公报）→ 按"未正式发布"不收；**另命中 CN 政策要闻**（10-09 中共中央国务院《关于发展新质生产力的意见》19 项举措含"全面实施人工智能+"）——不在 13 必选外媒源内，属交叉验证盲区
+- 头条：中美元首会晤后经贸休战延续、AI 对话落地深圳（路透92）/ 欧盟新协议为本土混动车设防中国进口（FT92）/ 坎贝尔谈元首会晤后美国威慑与台湾（SCMP90）/ 欧盟将中国混动车年进口上限设 35 万辆（彭博90）/ 中国以混动车协议避免对欧贸易战扩大（彭博90）/ 月之暗面 IPO 前与股东和解（路透88）/ 长鑫存储公布 4F² 芯片结构关键进展（SCMP88）/ 中国债务负担压缩刺激空间（FT88）
+- **建议综合（同事件多源，供日报/人工采纳）**：①**中欧混动车协议**（FT92+彭博90×2+FT82+路透+南华，6 源）②**利雅得机场遭胡塞袭击**（BBC86+WaPo86+AP86+NYT84+FT84+CNN82+SCMP80，7 源）③**俄乌"能源停火"**（彭博86+BBC84+半岛78+SCMP78+WaPo82+FT80，6 源）④**吉布提移民船难**（BBC80+NYT78+CNN78+SCMP，4 源）⑤**特朗普对俄柴油协议争议**（WaPo82+FT78+半岛76+SCMP，4 源）⑥**美国司法部调查电视网**（BBC80+FT80+路透，3 源）⑦**长鑫存储技术进展**（SCMP88，含路透 Luxshare 相关 1 条）
+- 固定附加项：`gen_reuters_recheck_list.py` → **连续第 14 日为空**（repost_from=0，路透全官网）
+
+### 经验增量（10-12）
+- ⭐ **RSS 15 通道批量 curl 应固定为标准动作**：本轮一次全 200 零重试（含 scmp 4/91/5、ft world/china/companies/tech、wapo×2）；`politico.com/rss/politicopicks.xml` 403 时改 `rss.politico.com/politics-news.xml`（直通 200、30 条）
+- ⚠️ **路透 sitemap `<news:title>` 空值第 3 次出现** → slug 匹配为必备回归路径，勿删
+- ⚠️ **CN 政策文件为交叉验证盲区**：gov.cn/新华社重大政策（如《关于发展新质生产力的意见》）不在 13 必选外媒源内 → 建议交叉验证增补一组「中国 中央 国务院 印发 意见 行动」检索
+- ⚠️ **池行格式 = 10 字段**（source|title_zh|title_en|summary|keywords|url|prio|summit|date|category）→ 行校验条件须为 `len(parts)==10 and parts[6].isdigit()`；本轮首跑因沿用 9 字段旧口径导致 82 行全判为坏行
+- ⚠️ **update-news.sh 第 6 步的 git add 不含 pool 文件** → 收尾必精确补提交 `data/news-webfetch.json` + `data/us-official.json`（本轮补提交 a5f3f46）
+
