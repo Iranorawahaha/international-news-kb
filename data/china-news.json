@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-10-12 09:27",
+  "lastUpdated": "2026-10-13 09:22",
   "retentionDays": 7,
   "archive": {
     "2026-10-08": [
@@ -360,17 +360,6 @@
         "collectedAt": "2026-10-12 09:35"
       },
       {
-        "title": "王沪宁会见越南国会主席陈青敏",
-        "url": "https://www.mfa.gov.cn/wjdt_674879/gjldrhd_674881/202610/t20261011_12038253.shtml",
-        "date": "2026-10-12",
-        "source": "外交部·领导人活动",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "全国政协主席王沪宁10月11日在京会见越南国会主席陈青敏。王沪宁表示，近年来习近平总书记、国家主席同苏林总书记、国家主席保持密切战略沟通，引领中越关系在世界百年变局中破浪前行；中方愿同越方遵循两党两国最高领导人战略共识，赓续传统友谊，深化各领域务实合作，加强立法机构交流，推动具有战略意义的中越命运共同体建设走深走实。陈青敏表示，越方高度重视对华关系，愿同中方加强立法机构交往，为越中关系发展作出积极贡献。",
-        "collectedAt": "2026-10-12 09:27:04"
-      },
-      {
         "title": "彭丽媛向2026年联合国教科文组织女童和妇女教育奖颁奖仪式发表视频致辞",
         "title_en": "Peng Liyuan Addresses UNESCO Girls' and Women's Education Prize Ceremony",
         "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7082888.htm",
@@ -380,6 +369,17 @@
         "priority_score": 95,
         "summary": "国家主席习近平夫人彭丽媛向2026年联合国教科文组织女童和妇女教育奖颁奖仪式发表视频致辞。彭丽媛表示，教育是改变命运、促进发展的重要力量，中方愿同国际社会一道，支持女童和妇女享有更加公平优质的教育，为促进全球妇女事业发展和构建人类命运共同体贡献力量。",
         "collectedAt": "2026-10-12 09:35"
+      },
+      {
+        "title": "王沪宁会见越南国会主席陈青敏",
+        "url": "https://www.mfa.gov.cn/wjdt_674879/gjldrhd_674881/202610/t20261011_12038253.shtml",
+        "date": "2026-10-12",
+        "source": "外交部·领导人活动",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "全国政协主席王沪宁10月11日在京会见越南国会主席陈青敏。王沪宁表示，近年来习近平总书记、国家主席同苏林总书记、国家主席保持密切战略沟通，引领中越关系在世界百年变局中破浪前行；中方愿同越方遵循两党两国最高领导人战略共识，赓续传统友谊，深化各领域务实合作，加强立法机构交流，推动具有战略意义的中越命运共同体建设走深走实。陈青敏表示，越方高度重视对华关系，愿同中方加强立法机构交往，为越中关系发展作出积极贡献。",
+        "collectedAt": "2026-10-12 09:27:04"
       },
       {
         "title": "哈药股份董事、总裁芦传有被立案并实施留置",
@@ -402,28 +402,6 @@
         "category": "部委动态",
         "priority_score": 85,
         "summary": "10月9日至11日，由国务院新闻办公室指导、以“赓续古都文脉 互鉴城市文明”为主题的“2026世界市长对话·洛阳”活动在河南洛阳举行，来自中国、英国、意大利、阿根廷、肯尼亚、柬埔寨等十余个国家的90余名市长、市长代表及专家学者与会。活动设一场主对话和三场情景对话，期间发布《城市文明洛阳共识》，与会城市就坚持以人为本、赓续城市文脉、推动绿色转型、倡导文明互鉴达成四点共识，并围绕友城结对、产业合作、文旅互通开展务实对接。",
-        "collectedAt": "2026-10-12 09:35"
-      },
-      {
-        "title": "食品安全法修订草案公开征求意见 回应了这些民生关切",
-        "url": "https://news.cctv.com/2026/10/11/ARTIlFOmjs1WZoNALfHQlIUo261011.shtml",
-        "date": "2026-10-11",
-        "source": "央视新闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "市场监管总局10月10日就《中华人民共和国食品安全法（修订草案征求意见稿）》向社会公开征求意见。此次征求意见稿涉及人工智能监管、网络食品经营等多个方面，重点回应校园餐如何管得更严、直播间销售食品安全责任归属等民生关切，拟进一步压实平台与经营者责任、完善新业态食品安全监管规则。",
-        "collectedAt": "2026-10-12 09:27:04"
-      },
-      {
-        "title": "新皇岗口岸正式开通运行 深港之间唯一24小时全天候旅检陆路口岸",
-        "title_en": "New Huanggang Port Officially Opens, 24-hour Cross-border Clearance",
-        "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/post_13011576.html",
-        "source": "深圳市人民政府口岸办公室",
-        "date": "2026-10-12",
-        "category": "经贸动向",
-        "priority_score": 85,
-        "summary": "经粤港两地政府协商，历时七年升级改造的新皇岗口岸10月12日上午6时30分正式开通运行，为旅客和客运车辆提供24小时通关服务，成为深港之间唯一24小时全天候旅检陆路口岸。新口岸实施“一地两检”安排及“合作查验、一次放行”全新通关模式，旅客通关时长由原来的约30分钟缩短至5分钟。口岸地下4层、地上5层，建筑总面积达68.97万平方米，是目前全球最大陆路口岸单体建筑，接入5条轨道交通、5条巴士线路，可三站地铁直达华强北（中国香港方向）。",
         "collectedAt": "2026-10-12 09:35"
       },
       {
@@ -458,21 +436,464 @@
         "priority_score": 85,
         "summary": "10月11日上午11时，连接珠海与澳门的拱北—关闸口岸2026年出入境人员突破1亿人次大关，比2025年提前14天，成为中国首个年客流破亿的陆路口岸，客流量已连续13年位居全国首位。从客流构成看，以个人游旅客、跨境通勤人员、商务出行人员三大群体为主，粤港澳三地“常旅客”占比长期维持在七成左右；年内累计查验外国旅客近70万人次，同比上涨11%。目前拱北口岸智能快捷通道已达153条，通关人员平均用时压缩至约12秒。",
         "collectedAt": "2026-10-12 09:35"
+      },
+      {
+        "title": "新皇岗口岸正式开通运行 深港之间唯一24小时全天候旅检陆路口岸",
+        "title_en": "New Huanggang Port Officially Opens, 24-hour Cross-border Clearance",
+        "url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/post_13011576.html",
+        "source": "深圳市人民政府口岸办公室",
+        "date": "2026-10-12",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "summary": "经粤港两地政府协商，历时七年升级改造的新皇岗口岸10月12日上午6时30分正式开通运行，为旅客和客运车辆提供24小时通关服务，成为深港之间唯一24小时全天候旅检陆路口岸。新口岸实施“一地两检”安排及“合作查验、一次放行”全新通关模式，旅客通关时长由原来的约30分钟缩短至5分钟。口岸地下4层、地上5层，建筑总面积达68.97万平方米，是目前全球最大陆路口岸单体建筑，接入5条轨道交通、5条巴士线路，可三站地铁直达华强北（中国香港方向）。",
+        "collectedAt": "2026-10-12 09:35"
+      },
+      {
+        "title": "食品安全法修订草案公开征求意见 回应了这些民生关切",
+        "url": "https://news.cctv.com/2026/10/11/ARTIlFOmjs1WZoNALfHQlIUo261011.shtml",
+        "date": "2026-10-11",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "市场监管总局10月10日就《中华人民共和国食品安全法（修订草案征求意见稿）》向社会公开征求意见。此次征求意见稿涉及人工智能监管、网络食品经营等多个方面，重点回应校园餐如何管得更严、直播间销售食品安全责任归属等民生关切，拟进一步压实平台与经营者责任、完善新业态食品安全监管规则。",
+        "collectedAt": "2026-10-12 09:27:04"
+      }
+    ],
+    "2026-10-13": [
+      {
+        "title": "习近平同巴布亚新几内亚总督就中巴新建交50周年互致贺电 李强同巴新总理互致贺电",
+        "url": "https://tv.cctv.com/2026/10/12/VIDEROcKQWN2RD5MYdgYrhaI261012.shtml",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平同巴布亚新几内亚总督就中巴新建交50周年互致贺电，李强同巴新总理互致贺电。 央视网消息（新闻联播）：10月12日，国家主席习近平同巴布亚新几内亚独立国总督达达埃互致贺电，庆祝两国建交50周年。 习近平指出，巴新是中国在太平洋岛国地区的好朋友、好伙伴、好兄弟。两国建交半个世纪以来，政治互信不断深化，互利合作成果丰硕…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "习近平同巴布亚新几内亚总督达达埃就中巴新建交50周年互致贺电",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083018.htm",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平同巴布亚新几内亚总督达达埃就中巴新建交50周年互致贺电李强同巴新总理马拉佩互致贺电 新华社北京10月12日电 10月12日，国家主席习近平同巴布亚新几内亚独立国总督达达埃互致贺电，庆祝两国建交50周年。 习近平指出，巴新是中国在太平洋岛国地区的好朋友、好伙伴、好兄弟。两国建交半个世纪以来，政治互信不断深化，互利合…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "习近平致电祝贺马迪塞就任爱沙尼亚总统",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083046.htm",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京10月12日电 10月12日，国家主席习近平致电于勒·马迪塞，祝贺她就任爱沙尼亚共和国总统。 习近平指出，中国和爱沙尼亚传统友好。近年来，两国关系保持平稳发展势头，各领域交流合作不断取得新进展，给两国人民带来福祉。我高度重视中爱关系发展，愿同马迪塞总统一道努力，以今年两国建交35周年为契机，增进政治互信，拓展…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "夯实中国式现代化的健康根基———习近平总书记引领健康中国建设",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7082979.htm",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "时间是生命的刻度，时间是奋进的标尺。 一条稳步上扬的“生命线”，浓缩了一部国民健康的“编年史”—— 新中国成立初期，我国人均预期寿命只有35岁。2015年我国人均预期寿命为76.34岁，2025年达到79.25岁，孕产妇死亡率和婴儿死亡率持续下降，主要健康指标稳居中高收入和人口过亿国家前列，人民健康水平显著提高。 一组…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "王毅将作为习近平主席特别代表出席亚信峰会，并访问阿塞拜疆、克罗地亚、黑山、保加利亚",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/13/content_30185251.html",
+        "date": "2026-10-13",
+        "source": "人民日报",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "本报北京10月12日电&nbsp;&nbsp;（记者韩晓明）外交部发言人10月12日宣布：中共中央政治局委员、外交部长王毅将作为习近平主席特别代表出席10月15日在阿塞拜疆巴库召开的亚洲相互协作与信任措施会议第七次峰会，并于10月14日至20日访问阿塞拜疆、克罗地亚、黑山、保加利亚。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "何立峰会见苹果公司执行董事长",
+        "url": "https://tv.cctv.com/2026/10/12/VIDEB21py8Sc9yIyDSAbw6YS261012.shtml",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "何立峰会见苹果公司执行董事长。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "何立峰见库克：落实好两国元首共识为跨国企业提供稳定预期",
+        "url": "https://www.zaobao.com/news/china/story20261012-9825147",
+        "date": "2026-10-12",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "李强会见越南国会主席",
+        "url": "https://tv.cctv.com/2026/10/12/VIDE0JtoYgYWQ1ARkQSovvfb261012.shtml",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "央视网消息（新闻联播）：国务院总理李强12日在京会见越南国会主席陈青敏。 李强表示，今年4月，习近平总书记、国家主席同苏林总书记、国家主席举行会晤，为深化两党两国关系进一步指明方向。作为&ldquo;同志加兄弟&rdquo;，我们愿同越方一道赓续传统友谊，增进团结互信，加强发展战略对接，深化贸易投资、互联互通、人工智能…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "李强同新西兰总理拉克森通电话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083024.htm",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京10月12日电 国务院总理李强10月12日下午应约同新西兰总理拉克森通电话。 李强表示，当前，中新关系持续稳健前行，各领域合作不断取得新进展。同时，国际形势还在复杂变化，单边主义、保护主义持续冲击世界经济，国际社会对维护多边体系、加强开放合作的呼声更加强烈。中国和新西兰同为多边主义和自由贸易的支持者、践行者，…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "李强同新西兰总理通电话",
+        "url": "https://tv.cctv.com/2026/10/12/VIDEBdhoblLhKUtl46OhhhLn261012.shtml",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "李强同新西兰总理通电话。 央视网消息（新闻联播）：国务院总理李强12日应约同新西兰总理拉克森通电话。 李强表示，当前，中新关系持续稳健前行，各领域合作不断取得新进展。同时，国际形势还在复杂变化，单边主义、保护主义持续冲击世界经济。中国和新西兰同为多边主义和自由贸易的支持者、践行者，应当开展更多沟通协作。明年中新将迎来建…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "李强将出席第140届广交会开幕式及相关活动",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7082985.htm",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京10月12日电 商务部新闻发言人何亚东宣布:第140届广交会将于2026年10月15日至11月4日在广州举办。国务院总理李强将出席开幕式及相关活动并作主旨演讲。 主办单位：国务院办公厅 运行维护单位：中国政府网运行中心 网站标识码bm01000001 京ICP备05070218号 京公网安备110102020…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "李强：中国和新西兰应当开展更多沟通协作",
+        "url": "https://www.zaobao.com/news/china/story20261012-9825429",
+        "date": "2026-10-12",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "李强：中国愿同越南推动AI领域合作不断提质增效",
+        "url": "https://www.zaobao.com/news/china/story20261013-9826723",
+        "date": "2026-10-13",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "王毅与俄罗斯总统助理、海事委员会主席帕特鲁舍夫举行会晤",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/13/content_30185250.html",
+        "date": "2026-10-13",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京10月12日电&nbsp;&nbsp;中共中央政治局委员、中央外办主任王毅12日在北京与俄罗斯总统助理、海事委员会主席帕特鲁舍夫举行会晤。 王毅转达习近平主席对普京总统的亲切问候。王毅表示，习近平主席和普京总统保持密切沟通，引领两国关系向更高质量、更高水平迈进。要发动中俄关系发展的“蓝色引擎”，为完善全球海洋…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "王毅：中国“冰上丝绸之路”与俄北极航道建设不谋而合",
+        "url": "https://www.zaobao.com/news/china/story20261013-9826684",
+        "date": "2026-10-13",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "王沪宁出席中国侨联成立70周年纪念大会",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083017.htm",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京10月12日电 中国侨联成立70周年纪念大会10月12日在京举行。中共中央政治局常委、全国政协主席王沪宁出席并讲话，会见与会全体代表并同大家合影。 王沪宁表示，侨务工作是党和国家一项长期性战略性的工作。习近平总书记高度重视做好归侨侨眷和海外侨胞的工作，对新时代新征程侨务工作作出重要论述和重要指示，深刻回答并推…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "赵乐际同越南国会主席陈青敏会谈并共同主持中越立法机构联合委员会第二次会议",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/13/content_30185236.html",
+        "date": "2026-10-13",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京10月12日电&nbsp;&nbsp;全国人大常委会委员长赵乐际12日在北京人民大会堂同越南国会主席陈青敏举行会谈，并共同主持中越立法机构联合委员会第二次会议。 赵乐际表示，今年4月，习近平总书记、国家主席同苏林总书记、国家主席举行富有成效的会谈，为构建更高水平具有战略意义的中越命运共同体把舵定向。中方愿同越…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "前三季度新能源汽车产销量实现较高增长",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083061.htm",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "中国汽车工业协会今天（10月12日）发布最新数据显示，今年1—9月，我国新能源汽车产销量保持两位数增长，国内市场发展韧性持续显现。 最新数据显示，今年1至9月份，我国新能源汽车产销量分别完成1248.3万辆和1247.2万辆，同比分别增长11%和11.1%。新能源汽车新车销量占国内汽车新车总销量比重达到53.6%，国内…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "外交部：对伯利兹外交、外贸、教育、文化、科学和技术部长丰塞卡采取反制措施",
+        "url": "https://news.cctv.com/2026/10/12/ARTIHeGEF1JQcuYBq2gYLsz3261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "10月12日，外交部发布《关于对伯利兹外交、外贸、教育、文化、科学和技术部长丰塞卡采取反制措施的决定》。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "外交部：对巴拉圭通信和技术部长比利亚特采取反制措施",
+        "url": "https://news.cctv.com/2026/10/12/ARTI8KyNlx9HD4oCqP17R2Pc261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "10月12日，中华人民共和国外交部发布关于对巴拉圭通信和技术部长比利亚特采取反制措施的决定。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "2026年10月12日外交部发言人毛宁主持例行记者会（2026-10-12）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202610/t20261012_12038772.shtml",
+        "date": "2026-10-12",
+        "source": "外交部",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "您访问的页面不存在或已删除",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "9月新能源汽车出口同比增1.6倍",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/13/content_30185243.html",
+        "date": "2026-10-13",
+        "source": "人民日报",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "本报北京10月12日电&nbsp;&nbsp;（记者王政）中国汽车工业协会数据显示：我国汽车出口保持高速增长。9月，汽车出口105.3万辆，环比增长4.2%，同比增长61.4%。其中，新能源汽车出口57.1万辆，同比增长1.6倍；新能源汽车出口量占全部汽车出口量比重连续4个月过半。 前9月，汽车出口820.5万辆，同比…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "前三季度我国新能源汽车新车销量占比升至53.6%",
+        "url": "https://news.cctv.com/2026/10/12/ARTIP7dMJ7mdfg7RzQGiPS2w261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "中国汽车工业协会12日发布的最新数据显示，今年1至9月份，我国新能源汽车市场产销量实现两位数增长，其中海外市场表现亮眼。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "商务部新闻发言人就中欧混动汽车、电动汽车磋商共识答记者问",
+        "url": "https://news.cctv.com/2026/10/12/ARTIrCvEgknJopMeDOL6bwbp261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "商务部新闻发言人就中欧混动汽车、电动汽车磋商共识答记者问。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "外交部：同“台独”势力绑在一起没有任何前途",
+        "url": "https://news.cctv.com/2026/10/12/ARTI39HkOLJMEWzxAGd50oum261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "外交部12日公布关于对巴拉圭通信和技术部长比利亚特，伯利兹外交、外贸、教育、文化、科学和技术部长丰塞卡采取反制措施的决定。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "四部门就汽车设计测试等征求意见 哪些热点问题有了新解答？",
+        "url": "https://news.cctv.com/2026/10/12/ARTIToMj9cmhFlERA4xLPE3K261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "近几年，我国智能网联汽车行业快速发展，一些创新技术和创新产品不断推出。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "29年受贿4364万元人民币 江西高官胡幼桃获刑13年",
+        "url": "https://www.zaobao.com/news/china/story20261012-9824474",
+        "date": "2026-10-12",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "88项国家标准样品获批发布！覆盖制造业、农业等领域",
+        "url": "https://news.cctv.com/2026/10/12/ARTIeHVInIqGgOhxSl5uS3Px261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者今天了解到，市场监管总局批准发布88项国家标准样品，覆盖制造业、农业等领域。在农业领域，发布定量标准样品16项，主要用于相关产品中农药残留、成分含量的检测分析；发布定性标准样品27项，主要用于植物…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "“十五五”时期 国家水网建设投资需求将突破6万亿元",
+        "url": "https://news.cctv.com/2026/10/12/ARTI725IP9GayNWBhHr1KirB261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者从水利部了解到，今年以来国家水网建设加速推进，“十五五”时期国家水网建设投资需求将突破6万亿元。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "今年前8月我国支持卫生和健康事业发展减税降费2454亿元",
+        "url": "https://news.cctv.com/2026/10/13/ARTIxjgGkSrybAy0kDHStBWN261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "国家税务总局发布的最新税收数据显示，今年1—8月，我国在支持卫生和健康事业发展方面减税降费超2000亿元，卫生与健康产业呈现出较快发展态势。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "体验经济为内需增长注入新动能",
+        "url": "https://news.cctv.com/2026/10/12/ARTIC4y88564iFZckllurouR261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "为一场演出奔赴一座城，为一场夜游多住一晚……刚刚过去的国庆假期，越来越多消费者把时间和花费投入到一段独特经历、一种情绪满足、一份文化体验中。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "多部门联合发布金融消费者、投资者合法权益保护典型案例",
+        "url": "https://news.cctv.com/2026/10/12/ARTIBENLoiLbP8usjfhMVHyi261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "金融是国民经济的血脉，金融消费者、投资者是金融市场的重要参与者。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "我国生成式人工智能用户规模超7亿人",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/13/content_30185247.html",
+        "date": "2026-10-13",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "本报北京10月12日电&nbsp;&nbsp;（记者金歆）记者近期从中国互联网络信息中心获悉：截至今年上半年，我国生成式人工智能用户规模超7亿人，普及率超50%。 该中心发布的《生成式人工智能应用发展报告（2026）》显示，生成式人工智能应用场景呈现多元化发展态势，以智能设备为代表的智能消费潜力加速释放。76.0%的用…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "擅长数学的AI，能否成为“解密高手”",
+        "url": "https://news.cctv.com/2026/10/13/ARTIeOff1OtNP53IfC4lVBeu261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "日前，美国著名人工智能（AI）企业OpenAI一次发布700多篇数学论文手稿，宣称在准黎曼猜想、Hilbert第十问题等诸多重要数学问题上取得进展。AI展现出的超强能力，正在给整个数学领域的发展带来巨…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "焦点访谈｜如何点燃创新引擎 以新质生产力擘画高质量发展新蓝图",
+        "url": "https://news.cctv.com/2026/10/12/ARTI6tKaW91Ym1szHi3yNnGG261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "上周，中共中央、国务院印发了《关于发展新质生产力的意见》，为加快发展新质生产力划定了清晰的路线图。",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "聚焦中国发展和产业升级为世界带来的新机遇 多国人士表示看好中国",
+        "url": "https://news.cctv.com/2026/10/12/ARTIQxVJWYMkr60oLKvCEHiW261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "由中国人民大学主办的“明德战略对话”10月6日至11日举行。来自美国、英国、澳大利亚、新西兰等国家的20多位前政要、知名学者，在北京、江西、浙江等地走访调研，并与中方学者共同探讨中国高质量发展与全球经…",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "调查：过半数香港在职人士认为AI令退休前景更难预测",
+        "url": "https://www.zaobao.com/news/china/story20261012-9824183",
+        "date": "2026-10-12",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-13 09:22:24"
+      },
+      {
+        "title": "越来越多村民足不出村、快捷收件（经济新方位）",
+        "url": "https://news.cctv.com/2026/10/12/ARTIza4ViUeyuVfU2xcQ4USK261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "快递进村，是促进消费公平、激活农村消费潜力的重要抓手。",
+        "collectedAt": "2026-10-13 09:22:24"
       }
     ]
   },
   "dates": [
+    "2026-10-13",
     "2026-10-12",
     "2026-10-10",
     "2026-10-09",
     "2026-10-08"
   ],
-  "today": "2026-10-12",
-  "todayCount": 10,
+  "today": "2026-10-13",
+  "todayCount": 38,
   "stats": {
-    "totalArticles": 43,
-    "dateCount": 4,
-    "latestDate": "2026-10-12",
-    "summitCount": 2
+    "totalArticles": 81,
+    "dateCount": 5,
+    "latestDate": "2026-10-13",
+    "summitCount": 6
   }
 }
