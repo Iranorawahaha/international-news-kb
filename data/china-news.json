@@ -1,6 +1,6 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-10-13 09:22",
+  "lastUpdated": "2026-10-14 09:23",
   "retentionDays": 7,
   "archive": {
     "2026-10-08": [
@@ -574,18 +574,6 @@
         "collectedAt": "2026-10-13 09:22:24"
       },
       {
-        "title": "江西省政协原副主席胡幼桃受贿4364万余元 一审获刑13年",
-        "url": "https://www.zaobao.com/news/china/story20261012-9824474",
-        "date": "2026-10-12",
-        "source": "联合早报",
-        "category": "人事任免",
-        "priority_score": 87,
-        "is_summit_level": false,
-        "summary": "10月12日，江西省政协原党组成员、副主席胡幼桃受贿案一审宣判。法院经审理查明，胡幼桃利用担任江西省财政厅厅长、江西省副省长、江西省政协副主席等职务上的便利，为有关单位和个人在项目承揽、企业经营、职务调整等事项上提供帮助，1996年至2025年受贿共计折合人民币4364万余元。法院以受贿罪判处其有期徒刑13年，并处罚金人民币300万元，对受贿所得财物依法予以追缴。",
-        "collectedAt": "2026-10-13 09:22:24",
-        "_orig_title": "29年受贿4364万元人民币 江西高官胡幼桃获刑13年"
-      },
-      {
         "title": "中央政法委印发《关于依法从严查处危害食品安全违法犯罪的意见》",
         "title_en": "China Issues Directive on Strictly Punishing Food Safety Crimes",
         "url": "http://news.china.com.cn/2026-10/12/content_118729968.shtml",
@@ -608,6 +596,18 @@
         "collectedAt": "2026-10-13 09:40"
       },
       {
+        "title": "江西省政协原副主席胡幼桃受贿4364万余元 一审获刑13年",
+        "url": "https://www.zaobao.com/news/china/story20261012-9824474",
+        "date": "2026-10-12",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "10月12日，江西省政协原党组成员、副主席胡幼桃受贿案一审宣判。法院经审理查明，胡幼桃利用担任江西省财政厅厅长、江西省副省长、江西省政协副主席等职务上的便利，为有关单位和个人在项目承揽、企业经营、职务调整等事项上提供帮助，1996年至2025年受贿共计折合人民币4364万余元。法院以受贿罪判处其有期徒刑13年，并处罚金人民币300万元，对受贿所得财物依法予以追缴。",
+        "collectedAt": "2026-10-13 09:22:24",
+        "_orig_title": "29年受贿4364万元人民币 江西高官胡幼桃获刑13年"
+      },
+      {
         "title": "2026年10月12日外交部发言人毛宁主持例行记者会",
         "url": "https://www.mfa.gov.cn/web/fyrbt_673021/jzhsl_673025/202610/t20261012_12038772.shtml",
         "date": "2026-10-12",
@@ -620,40 +620,15 @@
         "_orig_title": "2026年10月12日外交部发言人毛宁主持例行记者会（2026-10-12）"
       },
       {
-        "title": "市场监管总局批准发布88项国家标准样品 覆盖制造业、农业等领域",
-        "url": "https://news.cctv.com/2026/10/12/ARTIeHVInIqGgOhxSl5uS3Px261012.shtml",
-        "date": "2026-10-12",
+        "title": "“十五五”时期国家水网建设投资需求将突破6万亿元",
+        "title_en": "Investment Demand for National Water Network to Top 6 Trillion Yuan",
+        "url": "https://news.cctv.com/2026/10/12/ARTI725IP9GayNWBhHr1KirB261012.shtml",
         "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "市场监管总局近日批准发布88项国家标准样品，覆盖制造业、农业、食品、环境等领域。其中农业领域发布定量标准样品16项，主要用于相关产品中农药残留、成分含量等的检测分析；制造业领域标准样品聚焦新材料、高端装备等方向，为产品质量检验检测提供量值溯源依据。国家标准样品是重要的计量技术基础，本次发布将进一步完善我国标准样品体系，支撑相关产业质量提升与市场监管执法。",
-        "collectedAt": "2026-10-13 09:22:24",
-        "_orig_title": "88项国家标准样品获批发布！覆盖制造业、农业等领域"
-      },
-      {
-        "title": "多部门联合发布金融消费者、投资者合法权益保护典型案例",
-        "url": "https://news.cctv.com/2026/10/12/ARTIBENLoiLbP8usjfhMVHyi261012.shtml",
         "date": "2026-10-12",
-        "source": "央视新闻",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "10月12日，国家金融监督管理总局、中国人民银行、中国证监会等多部门联合发布一批金融消费者和投资者合法权益保护典型案例，涵盖银行业、保险业、证券基金期货业等领域，重点聚焦非法金融活动、金融产品适当性管理、个人信息保护、销售误导与适当性义务履行等群众反映强烈的问题，通过以案示警、以案普法，督促金融机构落实消费者权益保护主体责任，提升金融消费者风险识别和自我保护能力。",
-        "collectedAt": "2026-10-13 09:22:24",
-        "_orig_title": "多部门联合发布金融消费者、投资者合法权益保护典型案例"
-      },
-      {
-        "title": "前三季度我国新能源汽车产销量实现两位数增长 新车销量占比升至53.6%",
-        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083061.htm",
-        "date": "2026-10-12",
-        "source": "中国政府网·要闻",
         "category": "经贸动向",
         "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "中国汽车工业协会10月12日发布数据显示，今年1—9月我国新能源汽车产销量保持两位数增长，国内市场发展韧性持续显现，前三季度新能源汽车新车销量占汽车新车总销量比重升至53.6%，海外市场表现亮眼。其中9月汽车出口105.3万辆，环比增长4.2%，新能源汽车出口同比增长1.6倍，延续高速增长势头，我国汽车产业电动化转型与国际竞争力持续增强。",
-        "collectedAt": "2026-10-13 09:22:24",
-        "_orig_title": "前三季度新能源汽车产销量实现较高增长"
+        "summary": "据水利部，今年以来我国国家水网建设加速推进，前三季度新开工重大水利工程数量超过去年全年。“十五五”时期国家水网建设投资需求将突破6万亿元，全国水利建设投资保持较快增长态势。水利基础设施建设持续发挥扩大有效投资、稳定经济增长的重要作用，为保障国家水安全、促进区域协调发展提供有力支撑。",
+        "collectedAt": "2026-10-13 09:40"
       },
       {
         "title": "前8月我国支持卫生和健康事业发展减税降费2454亿元",
@@ -668,6 +643,18 @@
         "_orig_title": "今年前8月我国支持卫生和健康事业发展减税降费2454亿元"
       },
       {
+        "title": "前三季度我国新能源汽车产销量实现两位数增长 新车销量占比升至53.6%",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083061.htm",
+        "date": "2026-10-12",
+        "source": "中国政府网·要闻",
+        "category": "经贸动向",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "中国汽车工业协会10月12日发布数据显示，今年1—9月我国新能源汽车产销量保持两位数增长，国内市场发展韧性持续显现，前三季度新能源汽车新车销量占汽车新车总销量比重升至53.6%，海外市场表现亮眼。其中9月汽车出口105.3万辆，环比增长4.2%，新能源汽车出口同比增长1.6倍，延续高速增长势头，我国汽车产业电动化转型与国际竞争力持续增强。",
+        "collectedAt": "2026-10-13 09:22:24",
+        "_orig_title": "前三季度新能源汽车产销量实现较高增长"
+      },
+      {
         "title": "商务部新闻发言人就中欧混动汽车、电动汽车磋商共识答记者问",
         "title_en": "MOFCOM Spokesperson on China-EU Consultations over Hybrid and Electric Vehicles",
         "url": "https://www.mofcom.gov.cn/xwfb/sjfzrfb/art/2026/art_4d502e1d49fd4480b39a6cfd0d752038.html",
@@ -679,31 +666,509 @@
         "collectedAt": "2026-10-13 09:40"
       },
       {
-        "title": "“十五五”时期国家水网建设投资需求将突破6万亿元",
-        "title_en": "Investment Demand for National Water Network to Top 6 Trillion Yuan",
-        "url": "https://news.cctv.com/2026/10/12/ARTI725IP9GayNWBhHr1KirB261012.shtml",
-        "source": "央视新闻",
+        "title": "多部门联合发布金融消费者、投资者合法权益保护典型案例",
+        "url": "https://news.cctv.com/2026/10/12/ARTIBENLoiLbP8usjfhMVHyi261012.shtml",
         "date": "2026-10-12",
-        "category": "经贸动向",
+        "source": "央视新闻",
+        "category": "部委动态",
         "priority_score": 85,
-        "summary": "据水利部，今年以来我国国家水网建设加速推进，前三季度新开工重大水利工程数量超过去年全年。“十五五”时期国家水网建设投资需求将突破6万亿元，全国水利建设投资保持较快增长态势。水利基础设施建设持续发挥扩大有效投资、稳定经济增长的重要作用，为保障国家水安全、促进区域协调发展提供有力支撑。",
-        "collectedAt": "2026-10-13 09:40"
+        "is_summit_level": false,
+        "summary": "10月12日，国家金融监督管理总局、中国人民银行、中国证监会等多部门联合发布一批金融消费者和投资者合法权益保护典型案例，涵盖银行业、保险业、证券基金期货业等领域，重点聚焦非法金融活动、金融产品适当性管理、个人信息保护、销售误导与适当性义务履行等群众反映强烈的问题，通过以案示警、以案普法，督促金融机构落实消费者权益保护主体责任，提升金融消费者风险识别和自我保护能力。",
+        "collectedAt": "2026-10-13 09:22:24",
+        "_orig_title": "多部门联合发布金融消费者、投资者合法权益保护典型案例"
+      },
+      {
+        "title": "市场监管总局批准发布88项国家标准样品 覆盖制造业、农业等领域",
+        "url": "https://news.cctv.com/2026/10/12/ARTIeHVInIqGgOhxSl5uS3Px261012.shtml",
+        "date": "2026-10-12",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "市场监管总局近日批准发布88项国家标准样品，覆盖制造业、农业、食品、环境等领域。其中农业领域发布定量标准样品16项，主要用于相关产品中农药残留、成分含量等的检测分析；制造业领域标准样品聚焦新材料、高端装备等方向，为产品质量检验检测提供量值溯源依据。国家标准样品是重要的计量技术基础，本次发布将进一步完善我国标准样品体系，支撑相关产业质量提升与市场监管执法。",
+        "collectedAt": "2026-10-13 09:22:24",
+        "_orig_title": "88项国家标准样品获批发布！覆盖制造业、农业等领域"
+      }
+    ],
+    "2026-10-14": [
+      {
+        "title": "习近平为博茨瓦纳总统博科举行欢迎仪式",
+        "url": "https://news.cctv.com/2026/10/13/ARTIdcSTaajjmAWjQjlDmU1g261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "10月13日，国家主席习近平在北京为来华进行国事访问的博茨瓦纳总统博科举行欢迎仪式。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "习近平举行仪式欢迎博茨瓦纳总统访华",
+        "url": "https://tv.cctv.com/2026/10/13/VIDE5Nskw1BvWl8e8GwBLEQ4261013.shtml",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平举行仪式欢迎博茨瓦纳总统访华。 央视网消息（新闻联播）：国家主席习近平13日下午在人民大会堂北大厅举行仪式，欢迎博茨瓦纳共和国总统杜马&middot;希代翁&middot;博科对我国进行国事访问。 天安门广场上鸣礼炮21响。 习近平主席夫人彭丽媛出席欢迎仪式。 陪同博科访华的有总统夫人，国际关系部长，总统事务、国…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "习近平会见多哥部长会议主席",
+        "url": "https://tv.cctv.com/2026/10/13/VIDEb9viBP5myxMNPTBlRWEq261013.shtml",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平会见多哥部长会议主席。 央视网消息（新闻联播）：10月13日下午，国家主席习近平在北京人民大会堂会见来华进行正式访问的多哥部长会议主席福雷。两国领导人宣布将双边关系定位提升为新时代中多命运共同体。 习近平指出，中多传统友谊由两国老一辈领导人亲自缔造，根基深厚、历久弥坚。多年来，双方和衷共济，不断拉紧合作纽带，增进…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "习近平出席全国卫生与健康大会并发表重要讲话",
+        "url": "https://news.cctv.com/2026/10/13/ARTI2KuI4fIsTdJoNetx1vm8261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "全国卫生与健康大会12日至13日在北京召开。中共中央总书记、国家主席、中央军委主席习近平出席会议并发表重要讲话。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "习近平同博茨瓦纳总统会谈",
+        "url": "https://tv.cctv.com/2026/10/13/VIDEw3h5QgwyXhHzwSBRgQRj261013.shtml",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平同博茨瓦纳总统会谈。 央视网消息（新闻联播）：10月13日下午，国家主席习近平在北京人民大会堂同来华进行国事访问的博茨瓦纳总统博科举行会谈。两国元首宣布将双边关系提升为全面战略合作伙伴关系。 习近平指出，上世纪70年代，博方在两国建交前就投票支持新中国恢复在联合国合法席位。如今双方在共逐现代化梦想道路上携手前行，…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "习近平同博茨瓦纳总统博科会谈",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083130.htm",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "10月13日下午，国家主席习近平在北京人民大会堂同来华进行国事访问的博茨瓦纳总统博科举行会谈。这是会谈前，习近平和夫人彭丽媛在人民大会堂北大厅为博科和夫人卡奥内举行欢迎仪式。新华社记者 谢环驰 摄 新华社北京10月13日电（记者 曹嘉玥）10月13日下午，国家主席习近平在北京人民大会堂同来华进行国事访问的博茨瓦纳总统博…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "习近平在全国卫生与健康大会上强调 坚定不移走中国特色卫生与健康发展道路 确保“十五五”时期健康中国建设取得决定性进展",
+        "url": "https://tv.cctv.com/2026/10/13/VIDEOt1yylqexhHI4aXxKajx261013.shtml",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平在全国卫生与健康大会上强调：坚定不移走中国特色卫生与健康发展道路，确保“十五五”时期健康中国建设取得决定性进展。 习近平在全国卫生与健康大会上强调 坚定不移走中国特色卫生与健康发展道路 确保&ldquo;十五五&rdquo;时期健康中国建设取得决定性进展 李强讲话 赵乐际王沪宁蔡奇丁薛祥李希出席 央视网消息（新闻…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "习近平致电祝贺马迪塞就任爱沙尼亚总统",
+        "url": "https://tv.cctv.com/2026/10/13/VIDEKVdZYxgIqk3uTmaxYnWH261013.shtml",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "习近平致电祝贺马迪塞就任爱沙尼亚总统。 央视网消息（新闻联播）：10月12日，国家主席习近平致电于勒&middot;马迪塞，祝贺她就任爱沙尼亚共和国总统。 习近平指出，中国和爱沙尼亚传统友好。近年来，两国关系保持平稳发展势头，各领域交流合作不断取得新进展，给两国人民带来福祉。我高度重视中爱关系发展，愿同马迪塞总统一道努…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "建设健康中国，习近平强调“六大能力”",
+        "url": "https://news.cctv.com/2026/10/13/ARTI1YyrFr9cp56gRmBlftsF261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "全国卫生与健康大会12日至13日在北京召开。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "王毅将作为习近平主席特别代表出席亚信峰会，并访问阿塞拜疆、克罗地亚、黑山、保加利亚",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083067.htm",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "新华社北京10月12日电 外交部发言人10月12日宣布：中共中央政治局委员、外交部长王毅将作为习近平主席特别代表出席10月15日在阿塞拜疆巴库召开的亚洲相互协作与信任措施会议第七次峰会，并于10月14日至20日访问阿塞拜疆、克罗地亚、黑山、保加利亚。 主办单位：国务院办公厅 运行维护单位：中国政府网运行中心 网站标识码…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "丁薛祥会见清华大学经济管理学院顾问委员会委员代表",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083151.htm",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "10月13日，中共中央政治局常委、国务院副总理丁薛祥在北京会见清华大学经济管理学院顾问委员会委员代表。新华社记者 申宏 摄 新华社北京10月13日电 中共中央政治局常委、国务院副总理丁薛祥13日在北京会见清华大学经济管理学院顾问委员会委员代表。 丁薛祥重点围绕人工智能发展和治理同各位委员进行交流。他指出，人工智能是引领…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "何立峰会见美中关系全国委员会负责人",
+        "url": "https://tv.cctv.com/2026/10/13/VIDEH3PqV565m2Q43Fb538xV261013.shtml",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "何立峰会见美中关系全国委员会负责人。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "刘海星分别会见秘鲁、法国客人",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/14/content_30185468.html",
+        "date": "2026-10-14",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京10月13日电&nbsp;&nbsp;10月13日，中共中央对外联络部部长刘海星在北京分别会见秘鲁参议院第二副议长查孔和法国总统外事顾问博纳，就共同落实好双方领导人共识，加强党际交流合作、推动国家关系发展等交换意见。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "李强出席全国卫生与健康大会并讲话",
+        "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083173.htm",
+        "date": "2026-10-13",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "10月12日至13日，全国卫生与健康大会在北京召开。中共中央政治局常委、国务院总理李强出席会议并作总结讲话。 主办单位：国务院办公厅 运行维护单位：中国政府网运行中心 网站标识码bm01000001 京ICP备05070218号 京公网安备11010202000001号 主办单位：国务院办公厅 运行维护单位：中国政府网…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "王文涛部长会见法国达能集团首席执行官盛睿安",
+        "url": "https://www.mofcom.gov.cn/xwfb/bldhd/art/2026/art_c89c3db56dc54917b700ac5c438f9969.html",
+        "date": "2026-10-13",
+        "source": "商务部",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "王毅会见阿联酋总统中国事务特使哈勒敦",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/14/content_30185463.html",
+        "date": "2026-10-14",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社北京10月13日电&nbsp;&nbsp;（记者孙楠）中共中央政治局委员、中央外办主任王毅13日在京会见阿联酋总统中国事务特使哈勒敦。 王毅请哈勒敦转达习近平主席对穆罕默德总统的亲切问候，表示在习近平主席和穆罕默德总统战略引领下，两国关系已超越双边范畴，成为全球南方国家携手发展振兴的典范。 中方将秉持习近平主席提…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "王毅：中国愿为促成中东持久和平发挥建设性作用",
+        "url": "https://www.zaobao.com/news/china/story20261013-9830260",
+        "date": "2026-10-13",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "赵乐际分别会见博茨瓦纳总统博科、多哥部长会议主席福雷",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/14/content_30185458.html",
+        "date": "2026-10-14",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "本报北京10月13日电&nbsp;&nbsp;全国人大常委会委员长赵乐际10月13日下午在北京分别会见博茨瓦纳总统博科、多哥部长会议主席福雷。 会见博科时，赵乐际表示，博茨瓦纳是中国在南部非洲的重要伙伴。今天习近平主席将同总统先生举行会谈，共同擘画中博关系的光明前景。中方愿同博方一道，落实好两国元首达成的重要共识，坚持…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "政坛“不倒翁”重庆原市长黄奇帆被查 曾与薄熙来孙政才搭班",
+        "url": "https://www.zaobao.com/news/china/story20261014-9831643",
+        "date": "2026-10-14",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "重庆市原市长黄奇帆被查",
+        "url": "https://www.zaobao.com/news/china/story20261013-9830839",
+        "date": "2026-10-13",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "2026年10月13日外交部发言人毛宁主持例行记者会（2026-10-13）",
+        "url": "https://www.mfa.gov.cn/web/wjdt_674879/202610/t20261013_12039483.shtml",
+        "date": "2026-10-13",
+        "source": "外交部",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "您访问的页面不存在或已删除",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "商务部安全与管制局负责人就《民用航空领域相关两用物项出口凭证管理办法》（征求意见稿）答记者问",
+        "url": "https://news.cctv.com/2026/10/13/ARTIdwItSQtIsNtzfcygP7Vw261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "近期，商务部就《民用航空领域相关两用物项出口凭证管理办法》（以下简称《办法》）（征求意见稿）面向社会公开公开征求意见。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "商务部服贸司负责人介绍2026年1—8月服务贸易发展情况",
+        "url": "https://news.cctv.com/2026/10/13/ARTIWBx2XEypvgwcPeiMtlIr261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "2026年1—8月，我国服务进出口总额50701.6亿元（人民币），同比增长7.9%。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "国家发展改革委组织召开中央区域办专题会议协调推进西部大开发重点事项",
+        "url": "https://www.ndrc.gov.cn/xwdt/xwfb/202610/t20261013_1408128.html",
+        "date": "2026-10-13",
+        "source": "国家发改委",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "三部门联合印发《关于加强农村助老员队伍建设的通知》",
+        "url": "https://news.cctv.com/2026/10/13/ARTIzNT4IEgfxlIcx8WZSe6u261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "为贯彻落实中共中央、国务院印发的《关于深化养老服务改革发展的意见》、《关于锚定农业农村现代化 扎实推进乡村全面振兴的意见》等部署要求，充分发挥常态化防止返贫致贫就业帮扶和就业困难人员援助等机制作用，坚…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "事关优化环保电价监管 市场监管总局公开征求意见",
+        "url": "https://news.cctv.com/2026/10/13/ARTIYgsHbjrY8FAmwzfljG6C261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "政策发布",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "为统筹推进燃煤发电污染减排和行业高质量发展，切实维护发电企业和电力用户合法权益，构建协同高效的环保电价监管机制，近日，市场监管总局组织起草了《关于优化环保电价监管有关事项的通知（征求意见稿）》。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "70、9000、7.5万，创新举措！第140届广交会做强配套贸易服务 提升供采对接效能",
+        "url": "https://news.cctv.com/2026/10/13/ARTIqRN2RYpp9UxJnjsSTBT3261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "第140届广交会将于10月15日至11月4日分三期在广州举办。本届广交会在智慧应用、配套贸易服务等方面推出超50项创新举措，为参展客商提供全流程服务，提升供采对接整体效能。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "“前港后厂”产业布局开辟广阔外贸前景 内河港口向海而兴释放开放活力",
+        "url": "https://news.cctv.com/2026/10/13/ARTICwlVY7eqREijXjzZFxWK261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "2026年9月，西部陆海新通道骨干工程——平陆运河建成通航，为广西进一步向海图强、开放发展注入了新动能。作为平陆运河起点的核心港口，南宁港也从传统的内河港升级为江海联运的重要枢纽，对外开放活力持续释放…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "“赛事经济”激活流量“密码”燃动消费新活力 精彩“第二现场”延长游客停留时间",
+        "url": "https://news.cctv.com/2026/10/13/ARTInesngUzE1LvPB7dvht38261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国网球公开赛与世乒联中国大满贯赛，两大赛事累计现场观赛超50万人次，创历史新高。场馆外，两大顶级赛事叠加国庆假期热度，文商旅体展融合发展，持续拉动赛事相关消费上亿元。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "市场监管总局公布7起涉导向违法广告典型案例",
+        "url": "https://news.cctv.com/2026/10/13/ARTIMGrma8JyMzuVLABUC1la261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "2026年前三季度，全国市场监管部门共查办广告违法案件33754件，罚没金额1.65亿元。现选取7起涉导向违法广告典型案例予以公布。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "市场监管总局：平台不能只收佣金 要落实食品安全",
+        "url": "https://news.cctv.com/2026/10/14/ARTIAcSEXWE8qpiGZSZCXrpN261014.shtml",
+        "date": "2026-10-14",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "10月13日，2026网络食品安全社会共治交流研讨会在北京启幕。本次研讨会由中国消费者报社主办，市场监管总局、执法稽查局、网监司、食品协调司、食品生产经营司、餐饮食品司指导举办。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "开源生态——解码机器人出海另一种方式，供应链化身全球创客“出海口”",
+        "url": "https://news.cctv.com/2026/10/13/ARTIXhdUD9ALD0uSxOhr28Zd261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "近年来，广东深圳机器人产品加速出海，科技优势正在加快转化为出口竞争力。深圳海关最新数据显示，2026年前8个月，深圳税则单独列名的各类机器人合计出口同比激增12倍。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "探寻经济新动能：深夜机场忙什么？",
+        "url": "https://news.cctv.com/2026/10/14/ARTIBo8BJaL8QzmsZY4aLN4h261014.shtml",
+        "date": "2026-10-14",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "坐落于长江之畔的湖北鄂州，素来因武昌鱼为人熟知。如今，花湖国际机场悄然改写了这座小城的发展底色。每当深夜十一点，城市渐渐归于静谧，花湖机场的繁忙运转才刚刚开启，灯火不息，续写着这座临江小城的全新篇章。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "擅长数学的AI，能否成为“解密高手”",
+        "url": "https://news.cctv.com/2026/10/13/ARTIeOff1OtNP53IfC4lVBeu261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "日前，美国著名人工智能（AI）企业OpenAI一次发布700多篇数学论文手稿，宣称在准黎曼猜想、Hilbert第十问题等诸多重要数学问题上取得进展。AI展现出的超强能力，正在给整个数学领域的发展带来巨…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "新消费、新航线、新工程、新口岸……从“新”感知中国经济跃动向上新动能",
+        "url": "https://news.cctv.com/2026/10/13/ARTIhBidwRRuZOpF9HumvUNj261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国汽车工业协会10月12日发布最新数据显示，2026年1至9月，我国新能源汽车产销量保持两位数增长，国内市场发展韧性持续显现。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "比亚迪腾势拟在欧洲建立自营汽车金融业务",
+        "url": "https://www.zaobao.com/news/china/story20261014-9832790",
+        "date": "2026-10-14",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "王文涛：中欧贸易投资磋商成果稳定业界预期",
+        "url": "https://www.zaobao.com/news/china/story20261013-9830035",
+        "date": "2026-10-13",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "突破6万亿元！国家水网建设加速 重塑水资源与人口、产业、城镇、生态匹配关系",
+        "url": "https://news.cctv.com/2026/10/13/ARTIzQY7JqsaydK8yz9qzTcI261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者从水利部了解到，2026年以来，国家水网建设加速推进，“十五五”时期国家水网建设投资需求将突破6万亿元。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "透视物流“数”看经济 数字化调度、智慧仓储……智慧服务就位，物流企业迎旺季大促",
+        "url": "https://news.cctv.com/2026/10/13/ARTIxsURMMZG3v5OI0dafz9m261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国物流与采购联合会10月13日发布9月份中国电商物流指数。指数环比小幅上行，线上消费需求集中释放，电商物流运行保持向好态势。",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "通道关、技术关，攻克！在算力产业新长征路上走出发展答案",
+        "url": "https://news.cctv.com/2026/10/13/ARTIaQIRVLbkOqJe6jeKDXo3261013.shtml",
+        "date": "2026-10-13",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "90多年前，红军在云南从数十万敌军的包围圈里闯出一条生路。今天，AI浪潮席卷全球，算力成为全球产业竞争的新焦点。近年来，云南算力规模快速增长，2024年底建成投运的两亚智算中心，对内连接全国算力中心，…",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "韩中商定加强供应链沟通机制",
+        "url": "https://www.zaobao.com/news/china/story20261013-9830088",
+        "date": "2026-10-13",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-10-14 09:23:39"
+      },
+      {
+        "title": "高山彝寨做强特色产业（赓续长征精神  奋进复兴征程·记者再走长征路）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202610/14/content_30185474.html",
+        "date": "2026-10-14",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "高山上的彝海，碧波荡漾。穿越90余年风雨，长征途中“彝海结盟”的故事，依然在这里传颂。 “1935年5月，中央红军先遣队司令员刘伯承与彝族首领小叶丹歃血为盟……”在四川凉山彝族自治州冕宁县彝海村彝海结盟景区，面向一众游客，当年结盟仪式见证人沙马尔各的孙子沙马依姑讲述起那段历史。 昔日“彝海结盟”，留下了民族团结的佳话。…",
+        "collectedAt": "2026-10-14 09:23:39"
       }
     ]
   },
   "dates": [
+    "2026-10-14",
     "2026-10-13",
     "2026-10-12",
     "2026-10-10",
     "2026-10-09",
     "2026-10-08"
   ],
-  "today": "2026-10-13",
-  "todayCount": 20,
+  "today": "2026-10-14",
+  "todayCount": 42,
   "stats": {
-    "totalArticles": 63,
-    "dateCount": 5,
-    "latestDate": "2026-10-13",
-    "summitCount": 5
+    "totalArticles": 105,
+    "dateCount": 6,
+    "latestDate": "2026-10-14",
+    "summitCount": 14
   }
 }
