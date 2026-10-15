@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-10-15 14:30",
+  "lastUpdated": "2026-10-15 14:31",
   "retentionDays": 7,
   "archive": {
     "2026-10-08": [
@@ -12016,28 +12016,6 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-10-14_12187",
-        "date": "2026-10-14",
-        "title": "President Trump Returns to Arizona with a Record of Results: Tax Relief, Jobs, and Border Security",
-        "title_en": "President Trump Returns to Arizona with a Record of Results: Tax Relief, Jobs, and Border Security",
-        "title_zh": "特朗普重返亚利桑那州 强调减税就业与边境安全",
-        "summary": "Today, President Donald J. Trump returns to the Grand Canyon State for a visit to Bullhead City. He arrives with a clear record of America First results",
-        "summary_en": "Today, President Donald J. Trump returns to the Grand Canyon State for a visit to Bullhead City. He arrives with a clear record of America First results",
-        "summary_zh": null,
-        "source": "白宫",
-        "category": "美国内政",
-        "keywords": [],
-        "url": "https://www.whitehouse.gov/releases/2026/10/president-trump-returns-to-arizona-with-a-record-of-results-tax-relief-jobs-and-border-security/",
-        "priority_score": 88,
-        "is_summit_level": true,
-        "importance": "⭐元首级",
-        "collectedAt": "2026-10-15 14:17:34",
-        "collection_method": "us_official",
-        "column": "美国",
-        "is_official": true,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-10-14_69946",
         "date": "2026-10-14",
         "title": "南海行为准则谈判期限临近 各方仍在博弈",
@@ -12061,6 +12039,28 @@
         "collection_method": "webfetch",
         "column": "中国",
         "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-10-14_65275",
+        "date": "2026-10-14",
+        "title": "President Trump Returns to Arizona with a Record of Results: Tax Relief, Jobs, and Border Security",
+        "title_en": "President Trump Returns to Arizona with a Record of Results: Tax Relief, Jobs, and Border Security",
+        "title_zh": "特朗普重返亚利桑那州 强调减税就业与边境安全",
+        "summary": "Today, President Donald J. Trump returns to the Grand Canyon State for a visit to Bullhead City. He arrives with a clear record of America First results",
+        "summary_en": "Today, President Donald J. Trump returns to the Grand Canyon State for a visit to Bullhead City. He arrives with a clear record of America First results",
+        "summary_zh": null,
+        "source": "白宫",
+        "category": "美国内政",
+        "keywords": [],
+        "url": "https://www.whitehouse.gov/releases/2026/10/president-trump-returns-to-arizona-with-a-record-of-results-tax-relief-jobs-and-border-security/",
+        "priority_score": 88,
+        "is_summit_level": true,
+        "importance": "⭐元首级",
+        "collectedAt": "2026-10-15 14:17:34",
+        "collection_method": "us_official",
+        "column": "美国",
+        "is_official": true,
         "body_en": null
       },
       {
