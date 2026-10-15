@@ -1,11 +1,531 @@
 {
-  "date": "2026-08-29",
+  "date": "2026-10-15",
+  "skip_diplo": true,
+  "coverage_note": "",
   "intl_include": [
-    "https://www.bbc.com/news/articles/cx2z415w2gpo",
-    "https://www.washingtonpost.com/world/2026/08/28/iceland-will-vote-restarting-negotiations-join-european-union/",
-    "https://www.reuters.com/world/asia-pacific/king-harald-v-norways-reform-minded-head-state-dies-89-2026-08-28/"
+    "https://www.reuters.com/world/asia-pacific/sk-hynix-conditions-new-us-factory-more-us-chip-equipment-exports-china-sources-2026-10-15/",
+    "https://www.scmp.com/news/china/diplomacy/article/3370926/us-and-china-race-shape-ai-agenda-ahead-xi-trump-talks-shenzhen-sources-say",
+    "https://www.reuters.com/world/china/china-buys-8-10-us-soybean-cargoes-first-deals-since-trump-xi-summit-sources-say-2026-10-14/",
+    "https://www.reuters.com/technology/asml-cfo-says-us-match-act-limiting-duv-sales-china-would-be-counterproductive-2026-10-14/",
+    "https://www.scmp.com/news/us/politics/article/3370924/hegseth-calls-us15-trillion-defence-budget-critical-counter-china",
+    "https://www.ft.com/content/cf5f1209-da29-4ce1-b425-0e83818bf9ec",
+    "https://www.reuters.com/world/asia-pacific/china-september-rare-earth-exports-rise-67-year-earlier-2026-10-14/",
+    "https://www.scmp.com/news/china/diplomacy/article/3370920/bank-america-fined-us121-billion-us-flags-suspected-chinese-money-laundering",
+    "https://www.politico.com/news/2026/10/14/openai-user-safety-lawsuits-01119138"
   ],
-  "intl_exclude": [7, 11],
-  "dom_exclude": [2, 13, 15, 16, 18, 19, 21, 22, 25],
-  "skip_diplo": true
+  "intl_exclude_urls": [
+    "https://www.bloomberg.com/news/articles/2026-10-15/bytedance-in-talks-to-secure-mediatek-ai-chips-for-data-centers",
+    "https://www.reuters.com/technology/bytedance-nears-chip-supply-deal-with-mediatek-data-centres-bloomberg-news-2026-10-15/",
+    "https://www.nytimes.com/2026/10/14/technology/openai-engineer-hidden-device-saudi-government.html",
+    "https://www.ft.com/content/4d22d333-e51c-4302-991e-444a17fac420",
+    "https://www.bbc.co.uk/news/articles/cm04054ykqqqo",
+    "https://www.aljazeera.com/economy/2026/10/15/openai-bugging-suspect-allegedly-booked-one-way-trip-to-saudi-arabia",
+    "https://www.ft.com/content/11632d03-358c-454b-af95-d06d4072932b",
+    "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo",
+    "https://www.reuters.com/technology/anthropic-revenue-jumps-168-billion-third-quarter-ft-reports-2026-10-14/",
+    "https://www.reuters.com/world/asia-pacific/tsmc-q3-profit-jumps-69-record-beating-expectations-2026-10-15/",
+    "https://www.bloomberg.com/news/articles/2026-10-15/tsmc-s-profit-surpasses-expectations-after-ai-orders-rush-in",
+    "https://www.reuters.com/world/china/bessent-calls-world-bank-reforms-including-upstream-oil-gas-financing-2026-10-15/",
+    "https://www.bloomberg.com/news/articles/2026-10-14/bessent-pushes-imf-on-distortionary-policies-in-china-signal",
+    "https://www.reuters.com/world/asia-pacific/trucks-line-up-long-delayed-china-north-korea-bridge-officially-opens-2026-10-15/",
+    "https://www.nytimes.com/2026/10/15/world/asia/north-korea-china-bridge-yalu.html",
+    "https://www.reuters.com/world/china/eu-leaders-tackle-china-exports-energy-prices-budget-summit-2026-10-15/",
+    "https://www.reuters.com/world/china/pressured-home-eu-leaders-weigh-china-trade-steps-2026-10-14/",
+    "https://www.scmp.com/news/china/diplomacy/article/3370954/emboldened-hybrid-car-deal-europe-coalesces-around-tougher-china-stance",
+    "https://www.scmp.com/news/china/article/3370914/eu-leaders-urgently-call-new-trade-weapons-tackle-china-shock",
+    "https://edition.cnn.com/2026/10/15/middleeast/strait-of-hormuz-ships-sunk-iran-intl-hnk",
+    "https://www.bbc.co.uk/news/articles/crkg7q97z078o",
+    "https://www.nytimes.com/2026/10/14/world/middleeast/houthi-airport-attack-victims-saudi-arabia.html",
+    "https://www.nytimes.com/2026/10/15/world/middleeast/saudi-arabia-defense-houthi-attacks-yemen.html",
+    "https://www.bbc.co.uk/news/articles/c8wy9veedgygo",
+    "https://www.nytimes.com/2026/10/14/world/europe/ukraine-starlink-energy.html",
+    "https://edition.cnn.com/2026/10/14/europe/russia-ukraine-energy-strike-early-warning-intl-hnk",
+    "https://www.reuters.com/world/asia-pacific/chinas-exports-surge-363-yy-september-imports-up-31-2026-10-14/",
+    "https://www.nytimes.com/2026/10/14/business/china-exports-trade-surplus.html",
+    "https://www.scmp.com/tech/tech-trends/article/3370858/china-chip-exports-jump-136-us45b-ai-frenzy-jacks-prices",
+    "https://www.scmp.com/economy/china-economy/article/3370970/chinas-cxmt-gets-pledge-support-provincial-party-chief-vows-chip-industry-expansion",
+    "https://www.scmp.com/tech/big-tech/article/3370871/chinese-memory-giant-ymtc-grow-revenue-6-times-faster-peers-ipo-nears-report",
+    "https://www.reuters.com/legal/government/global-financial-watchdog-calls-more-human-oversight-agentic-ai-2026-10-15/",
+    "https://www.theguardian.com/politics/2026/oct/14/uks-incoherent-approach-to-china-plagued-by-a-lack-of-expertise-report-says",
+    "https://www.scmp.com/business/china-business/article/3370851/chinas-ev-industry-faces-double-blow-eu-export-quota-vat-rebate-cut",
+    "https://www.whitehouse.gov/releases/2026/10/president-trump-visits-montana-with-a-record-of-results-for-workers-families-and-communities/",
+    "https://www.whitehouse.gov/releases/2026/10/president-trump-returns-to-arizona-with-a-record-of-results-tax-relief-jobs-and-border-security/"
+  ],
+  "intl_custom": [
+    {
+      "title": "字节跳动接近达成联发科数据中心芯片采购协议",
+      "title_en": "ByteDance nears chip supply deal with MediaTek for data centres",
+      "category": "AI·科技",
+      "source": "综合（2 家）",
+      "priority_score": 1000,
+      "summary": "字节跳动正与联发科就数据中心定制芯片的供货进行深入洽谈，协议接近达成。彭博社报道称，联发科将提供数量未定的专用集成电路（ASIC），用于支撑字节跳动数据中心的运行；若交易落地，字节跳动将成为联发科继谷歌之后的第二大 ASIC 客户。路透社转述同一报道时指出，受美国出口管制限制，字节跳动无法采购英伟达最先进 AI 芯片，华为等本土厂商也难以完全满足其算力需求，因而转向与芯片设计公司合作——按现行规则，只要采购的 AI 算力不超过特定阈值，此类合作仍被允许。字节跳动今年早些时候已与高通达成类似协议，采购数百万颗 AI 芯片。对联发科而言，这笔订单有助于降低对手机业务的依赖，并在数据中心赛道与高通、博通竞争；公司预计今年 AI 芯片营收约 20 亿美元，目标是在明年约 800 亿美元的数据中心芯片市场取得 15% 份额。",
+      "urls": [
+        "https://www.bloomberg.com/news/articles/2026-10-15/bytedance-in-talks-to-secure-mediatek-ai-chips-for-data-centers",
+        "https://www.reuters.com/technology/bytedance-nears-chip-supply-deal-with-mediatek-data-centres-bloomberg-news-2026-10-15/"
+      ],
+      "items": [
+        {
+          "media": "彭博社",
+          "title": "字节跳动洽谈采购联发科 AI 芯片 用于数据中心"
+        },
+        {
+          "media": "路透社",
+          "title": "字节跳动接近与联发科达成数据中心芯片供货协议"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI工程师涉在办公室安置窃密装置 曾为沙特方面提供咨询",
+      "title_en": "OpenAI engineer charged with planting bug advised Saudis",
+      "category": "AI·科技",
+      "source": "综合（4 家）",
+      "priority_score": 1000,
+      "summary": "围绕一名 OpenAI 工程师涉嫌在办公室安置窃密装置的案件，多家媒体披露更多细节。纽约时报报道，这名被控安置监听装置的工程师曾为沙特政府方面提供咨询；金融时报称，此人预订了前往沙特阿拉伯的单程机票，OpenAI 另指控其将秘密装置的信息发送给苹果公司；英国广播公司梳理了案件已知情况，提及卫生纸与秘密录音设备等细节；半岛电视台报道其涉嫌预订单程赴沙特的行程。案件凸显 AI 头部企业在核心技术与商业机密保护上面临的内部风险，也令外界关注美国 AI 公司与中东资本及政府之间的复杂关系。",
+      "urls": [
+        "https://www.nytimes.com/2026/10/14/technology/openai-engineer-hidden-device-saudi-government.html",
+        "https://www.ft.com/content/4d22d333-e51c-4302-991e-444a17fac420",
+        "https://www.bbc.co.uk/news/articles/cm04054ykqqqo",
+        "https://www.aljazeera.com/economy/2026/10/15/openai-bugging-suspect-allegedly-booked-one-way-trip-to-saudi-arabia"
+      ],
+      "items": [
+        {
+          "media": "纽约时报",
+          "title": "被控安置窃密装置的 OpenAI 工程师曾为沙特方面提供咨询"
+        },
+        {
+          "media": "金融时报",
+          "title": "OpenAI 员工被控窃密 曾预订赴沙特单程机票"
+        },
+        {
+          "media": "英国广播公司",
+          "title": "关于这名 OpenAI 工程师被捕，我们已知什么"
+        },
+        {
+          "media": "半岛电视台",
+          "title": "OpenAI 窃密案嫌疑人据称预订赴沙特单程行程"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic向投资者披露三季度营收激增至168亿美元",
+      "title_en": "Anthropic tells investors its quarterly revenue jumped",
+      "category": "AI·科技",
+      "source": "综合（3 家）",
+      "priority_score": 1000,
+      "summary": "人工智能公司 Anthropic 在上市前向投资者披露，其三季度营收大幅攀升。金融时报率先报道称其季度营收环比增长 50%、达到 168 亿美元，英国广播公司同日报道该公司在股票市场首秀前向投资者强调营收快速攀升，路透社亦转述金融时报的数据。三家媒体均指出，在 AI 基础设施投资回报周期受到质疑、全球科技股因估值担忧而大幅回调的背景下，Anthropic 的营收增速成为观察 AI 商业化落地能力的重要指标，也直接影响市场对其上市估值的判断。",
+      "urls": [
+        "https://www.ft.com/content/11632d03-358c-454b-af95-d06d4072932b",
+        "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo",
+        "https://www.reuters.com/technology/anthropic-revenue-jumps-168-billion-third-quarter-ft-reports-2026-10-14/"
+      ],
+      "items": [
+        {
+          "media": "金融时报",
+          "title": "Anthropic 向投资者披露季度营收增长50%"
+        },
+        {
+          "media": "英国广播公司",
+          "title": "Anthropic 在上市前强调营收激增"
+        },
+        {
+          "media": "路透社",
+          "title": "据金融时报报道 Anthropic 三季度营收达168亿美元"
+        }
+      ]
+    },
+    {
+      "title": "台积电三季度净利润创纪录 同比增长69%超预期",
+      "title_en": "TSMC Q3 profit jumps 69% to record, beating expectations",
+      "category": "AI·科技",
+      "source": "综合（2 家）",
+      "priority_score": 1000,
+      "summary": "全球最大晶圆代工厂台积电 10 月 15 日公布三季度财报，业绩全面超出预期。路透社报道，公司净利润同比增长 69% 至 7630.6 亿新台币（约 235.9 亿美元），连续第六个季度刷新纪录，并超出市场预估的 7463 亿新台币；三季度营收同比增长 50.9% 至 1.49 万亿新台币，毛利率 66.4%、营业利润率 58.7%、净利率 51.1%。彭博社指出，AI 相关订单大量涌入是利润超预期的主因。制程结构上，3 纳米占晶圆收入 33%、2 纳米占 8%，7 纳米及更先进制程合计占 79%。台积电将业绩归因于英伟达、苹果等客户对 AI 处理器的旺盛需求。",
+      "urls": [
+        "https://www.reuters.com/world/asia-pacific/tsmc-q3-profit-jumps-69-record-beating-expectations-2026-10-15/",
+        "https://www.bloomberg.com/news/articles/2026-10-15/tsmc-s-profit-surpasses-expectations-after-ai-orders-rush-in"
+      ],
+      "items": [
+        {
+          "media": "路透社",
+          "title": "台积电三季度净利润创纪录 同比增长69%超预期"
+        },
+        {
+          "media": "彭博社",
+          "title": "台积电三季度利润超预期 AI 订单涌入"
+        }
+      ]
+    },
+    {
+      "title": "贝森特施压世行与IMF改革 要求中国加快「毕业」并批评非市场政策",
+      "title_en": "Bessent pushes World Bank and IMF reforms, signals at China",
+      "category": "中美博弈",
+      "source": "综合（2 家）",
+      "priority_score": 1000,
+      "summary": "美国财政部长贝森特在提交世界银行与国际货币基金组织指导委员会的书面声明中提出一系列改革要求。路透社报道，贝森特要求世界银行取消对上游油气项目融资的禁令、投入资源支持深海关键矿产开采、改革采购政策，并称世行在尚未评估项目价值前一概排除上游项目，无法令人信服地主张「国别自主」；他还要求加快中国、波兰等较富裕国家从世行借款中「毕业」，称停止对华贷款是「重要里程碑」。彭博社指出，贝森特同时施压 IMF 加大对导致全球失衡的「非市场政策与做法」及汇率的分析力度，被普遍解读为针对中国的间接批评。他并称，IMF 成立的目的就是防止这类扭曲性政策与负面溢出，必须在这一关键议题上发声，否则将面临被边缘化的风险。",
+      "urls": [
+        "https://www.reuters.com/world/china/bessent-calls-world-bank-reforms-including-upstream-oil-gas-financing-2026-10-15/",
+        "https://www.bloomberg.com/news/articles/2026-10-14/bessent-pushes-imf-on-distortionary-policies-in-china-signal"
+      ],
+      "items": [
+        {
+          "media": "路透社",
+          "title": "贝森特要求世行改革 并推动中国等「毕业」停止受贷"
+        },
+        {
+          "media": "彭博社",
+          "title": "贝森特施压 IMF 改革 暗示针对中国政策"
+        }
+      ]
+    },
+    {
+      "title": "中朝新鸭绿江大桥正式开通",
+      "title_en": "New China-DPRK Yalu River bridge officially opens to traffic",
+      "category": "中国外交",
+      "source": "综合（2 家）",
+      "priority_score": 1000,
+      "summary": "连接中国辽宁丹东与朝鲜平安北道新义州的中朝新鸭绿江大桥 10 月 15 日正式开通，双方当日共同举行开通仪式。路透社在丹东现场报道，这座全长约 3 公里的斜拉桥自 2014 年主体完工后长期闲置，此次通车被视为中朝关系回暖、双边贸易与人员往来有望复苏的标志；中国是朝鲜最大贸易伙伴，去年中国对朝出口升至六年新高 23 亿美元。纽约时报指出，这是两国规模最大的陆路边境通道正式启用。分析人士认为，大桥有助于朝鲜运输重型设备、原材料与能源产品，但短期内难以恢复到制裁前的贸易规模。",
+      "urls": [
+        "https://www.reuters.com/world/asia-pacific/trucks-line-up-long-delayed-china-north-korea-bridge-officially-opens-2026-10-15/",
+        "https://www.nytimes.com/2026/10/15/world/asia/north-korea-china-bridge-yalu.html"
+      ],
+      "items": [
+        {
+          "media": "路透社",
+          "title": "货车排队通行 拖延已久的中朝大桥正式开通"
+        },
+        {
+          "media": "纽约时报",
+          "title": "朝鲜与中国开通规模最大的边境桥"
+        }
+      ]
+    },
+    {
+      "title": "欧盟布鲁塞尔峰会聚焦对华贸易失衡 拟启用新贸易工具",
+      "title_en": "EU leaders tackle China exports and weigh new trade weapons",
+      "category": "中欧与盟友",
+      "source": "综合（4 家）",
+      "priority_score": 1000,
+      "summary": "欧盟 27 国领导人 10 月 15 日在布鲁塞尔举行峰会，如何应对中国出口激增、高能源价格以及弥合预算分歧成为主要议题。路透社报道，此次峰会距欧盟委员会与中方就限制中国混合动力汽车进口达成协议不到一周，被视为欧盟收窄对华贸易逆差的「第一步」——欧盟对华货物贸易逆差 2025 年达 3600 亿欧元，今年预计进一步扩大；峰会结论草案要求欧盟委员会继续与北京对话，同时充分运用贸易防御措施并研究新的贸易工具。路透社另一篇报道指出，各国领导人在国内产业与就业压力下权衡对华贸易举措，欧盟对华每日贸易逆差约 10 亿欧元。南华早报称，在混动车协议之后欧洲正围绕更强硬的对华立场形成共识，德法两国上周联合提出应尽快对化工品与 PET 采取行动，标志着德国立场的显著转变；峰会还将「紧急」呼吁新的贸易武器以应对所谓「中国冲击」。",
+      "urls": [
+        "https://www.reuters.com/world/china/eu-leaders-tackle-china-exports-energy-prices-budget-summit-2026-10-15/",
+        "https://www.reuters.com/world/china/pressured-home-eu-leaders-weigh-china-trade-steps-2026-10-14/",
+        "https://www.scmp.com/news/china/diplomacy/article/3370954/emboldened-hybrid-car-deal-europe-coalesces-around-tougher-china-stance",
+        "https://www.scmp.com/news/china/article/3370914/eu-leaders-urgently-call-new-trade-weapons-tackle-china-shock"
+      ],
+      "items": [
+        {
+          "media": "路透社",
+          "title": "欧盟领导人峰会商讨对华出口、能源价格与预算"
+        },
+        {
+          "media": "路透社",
+          "title": "在国内压力下 欧盟领导人权衡对华贸易举措"
+        },
+        {
+          "media": "南华早报",
+          "title": "混动车协议助推 欧洲形成更强硬对华立场"
+        },
+        {
+          "media": "南华早报",
+          "title": "欧盟领导人将「紧急」呼吁新的贸易武器以应对「中国冲击」"
+        }
+      ]
+    },
+    {
+      "title": "霍尔木兹海峡两艘货轮遇袭沉没 中东航运风险骤升",
+      "title_en": "Two ships sink in Strait of Hormuz after projectile strikes",
+      "category": "地区局势",
+      "source": "综合（2 家）",
+      "priority_score": 1000,
+      "summary": "霍尔木兹海峡发生针对商船的袭击事件。美国有线电视新闻网报道，两艘货轮在该海峡沉没，伊朗方面的袭击呈现升级态势；英国广播公司援引新加坡方面消息称，一艘集装箱船被投射物击中后沉没。事发水域是全球最重要的能源运输通道之一，近期针对船只的袭击明显增多，背景是沙特与也门胡塞武装冲突持续升级、中东局势整体紧张。国际航运安全风险上升已推高相关水域的保险费率，并促使船东重新评估航线安排，市场对能源供应中断的担忧同步升温。",
+      "urls": [
+        "https://edition.cnn.com/2026/10/15/middleeast/strait-of-hormuz-ships-sunk-iran-intl-hnk",
+        "https://www.bbc.co.uk/news/articles/crkg7q97z078o"
+      ],
+      "items": [
+        {
+          "media": "美国有线电视新闻网",
+          "title": "两艘货轮在霍尔木兹海峡沉没 伊朗袭击升级"
+        },
+        {
+          "media": "英国广播公司",
+          "title": "新加坡称一集装箱船在霍尔木兹海峡遭击沉没"
+        }
+      ]
+    },
+    {
+      "title": "沙特利雅得机场再遭胡塞武装袭击 防空漏洞引发关注",
+      "title_en": "Houthi attack on Saudi airport: victims and defence gaps",
+      "category": "地区局势",
+      "source": "综合（纽约时报 2 篇）",
+      "priority_score": 1000,
+      "summary": "纽约时报连续刊发报道关注也门胡塞武装对沙特机场的袭击。一篇报道聚焦袭击遇难者，引述家属的悲愤质问，指出这是伊朗支持的胡塞武装在与沙特长期冲突中对沙特发动的最致命打击；另一篇报道分析沙特为何难以有效拦截胡塞武装的导弹与无人机，指出胡塞武装先以无人机群干扰沙特雷达系统，再以巡航导弹和弹道导弹实施突防，部分导弹具备飞行中变轨能力，对沙特装备的美制「爱国者」等防御系统构成挑战，沙特已就防空系统未能全部拦截启动调查。",
+      "urls": [
+        "https://www.nytimes.com/2026/10/14/world/middleeast/houthi-airport-attack-victims-saudi-arabia.html",
+        "https://www.nytimes.com/2026/10/15/world/middleeast/saudi-arabia-defense-houthi-attacks-yemen.html"
+      ],
+      "items": [
+        {
+          "media": "纽约时报",
+          "title": "「他们为什么杀了他？」——悼念沙特机场袭击遇难者"
+        },
+        {
+          "media": "纽约时报",
+          "title": "沙特为何难以阻止胡塞武装袭击？"
+        }
+      ]
+    },
+    {
+      "title": "乌克兰战场星链限速争议 卫星接入受限加剧乌方压力",
+      "title_en": "Ukraine's Starlink speeds limited as satellite access is restricted",
+      "category": "地区局势",
+      "source": "综合（3 家）",
+      "priority_score": 1000,
+      "summary": "围绕乌克兰战场的卫星互联网接入出现新的争议。英国广播公司报道，马斯克称美国政府可能是乌克兰无人机速度受限的幕后原因，乌方表示星链接入虽已改善但仍面临限速，正在干扰其战场任务；美国有线电视新闻网报道，乌方称星链限制干扰军事行动，而马斯克称系统由美方掌控；纽约时报则指出，随着卫星使用受到限制、俄方攻势升级，乌克兰的战场暴露度上升——一次大规模袭击导致基辅 60 万人断电，一项由五角大楼资助的卫星互联网计划似乎在未获预警的情况下被收紧。三家媒体的报道共同指向同一问题：乌军高度依赖的商业卫星通信能力正受到限制，而其替代方案有限。",
+      "urls": [
+        "https://www.bbc.co.uk/news/articles/c8wy9veedgygo",
+        "https://www.nytimes.com/2026/10/14/world/europe/ukraine-starlink-energy.html",
+        "https://edition.cnn.com/2026/10/14/europe/russia-ukraine-energy-strike-early-warning-intl-hnk"
+      ],
+      "items": [
+        {
+          "media": "英国广播公司",
+          "title": "马斯克称美国政府或为乌克兰无人机降速幕后原因"
+        },
+        {
+          "media": "纽约时报",
+          "title": "卫星使用受限与俄方升级 令乌克兰暴露度上升"
+        },
+        {
+          "media": "美国有线电视新闻网",
+          "title": "乌方称星链限制干扰军事行动 马斯克称美方掌控系统"
+        }
+      ]
+    },
+    {
+      "title": "中国9月外贸数据超预期 集成电路出口激增136%",
+      "title_en": "China's September exports beat expectations; IC exports jump 136%",
+      "category": "全球多边",
+      "source": "综合（3 家）",
+      "priority_score": 1000,
+      "summary": "中国海关总署 10 月 14 日公布的 9 月外贸数据全面超出预期。路透社报道，9 月中国出口（美元值）同比增长 36.3%，远高于 8 月的 25.0% 和市场预期的 25.5%，为今年 2 月以来最快增速；进口同比增长 31.0%，同样高于预期。纽约时报指出，出口激增使中国有望提前一个月突破万亿美元贸易顺差，前三季度顺差已达 9380 亿美元。南华早报进一步披露结构性亮点：9 月集成电路出口额同比激增 136% 至 449.5 亿美元，但当月出口量仅增长 1%，金额飙升主要由全球 AI 基础设施建设引发的内存芯片短缺与价格上涨推动，凸显中国在全球半导体供应链中的分量正在上升。",
+      "urls": [
+        "https://www.reuters.com/world/asia-pacific/chinas-exports-surge-363-yy-september-imports-up-31-2026-10-14/",
+        "https://www.nytimes.com/2026/10/14/business/china-exports-trade-surplus.html",
+        "https://www.scmp.com/tech/tech-trends/article/3370858/china-chip-exports-jump-136-us45b-ai-frenzy-jacks-prices"
+      ],
+      "items": [
+        {
+          "media": "路透社",
+          "title": "中国9月出口同比大增36.3% 集成电路出口翻倍"
+        },
+        {
+          "media": "纽约时报",
+          "title": "中国出口激增 贸易顺差有望创纪录"
+        },
+        {
+          "media": "南华早报",
+          "title": "AI热潮推高价格 中国9月集成电路出口激增136%至450亿美元"
+        }
+      ]
+    },
+    {
+      "title": "安徽省力挺长鑫存储扩产 省委书记调研表态发展集成电路",
+      "title_en": "China's CXMT gets pledge of support as provincial party chief vows chip-industry expansion",
+      "category": "AI·科技",
+      "source": "南华早报",
+      "priority_score": 88,
+      "summary": "南华早报报道，安徽省委书记李乐成上任三周后于周三赴长鑫存储（CXMT）实地调研，承诺把集成电路作为新兴产业加以培育壮大。报道指出，长鑫存储是中国本土动态随机存取存储器（DRAM）的旗舰企业，此次省级党委一把手亲自到场表态，被视为地方政府在存储芯片国产化上继续加码的信号。当前全球内存芯片因 AI 算力建设而供应紧张、价格上行，中国存储厂商正加快扩产以承接需求，同时长江存储等企业在 NAND 领域的全球排名也在上升。",
+      "urls": [
+        "https://www.scmp.com/economy/china-economy/article/3370970/chinas-cxmt-gets-pledge-support-provincial-party-chief-vows-chip-industry-expansion"
+      ]
+    },
+    {
+      "title": "长江存储营收增速领先同业六倍 IPO临近",
+      "title_en": "Chinese memory giant YMTC to grow revenue 6 times faster than peers as IPO nears",
+      "category": "AI·科技",
+      "source": "南华早报",
+      "priority_score": 86,
+      "summary": "南华早报报道，中国 NAND 闪存龙头长江存储（YMTC）在 IPO 临近之际营收增速预计达到同业的六倍。报道援引研究机构数据指出，长江存储今年二季度已升至全球 NAND 供应商第三位，在 AI 服务器带动存储需求与价格上行的背景下，其增长动能明显强于三星、SK 海力士等传统厂商。作为中国存储国产化的关键企业，长江存储的上市进程受到资本市场高度关注，其扩产节奏也被视为观察中国在存储芯片领域追赶速度的重要指标。",
+      "urls": [
+        "https://www.scmp.com/tech/big-tech/article/3370871/chinese-memory-giant-ymtc-grow-revenue-6-times-faster-peers-ipo-nears-report"
+      ]
+    },
+    {
+      "title": "金融稳定理事会发布最终指引 要求加强对AI智能体的人工监管",
+      "title_en": "Global financial watchdog calls for more human oversight of agentic AI",
+      "category": "AI·科技",
+      "source": "路透社",
+      "priority_score": 86,
+      "summary": "路透社报道，全球金融监管标准制定机构金融稳定理事会（FSB）10 月 15 日发布最终版指引，要求银行及其他金融机构加强对 AI 智能体的人工监督。相比 6 月的草案，最终版进一步强化了相关建议，明确在风险较高的应用场景中更密集的人工监督至关重要，机构应设定清晰、基于风险的触发条件，规定智能体在何种情况下必须先获得人工批准。理事会还删除了原先要求将 AI 视为「虚拟员工」的条款，转而强调 AI 智能体不像人类那样推理，可能以意想不到的方式理解预设目标。报道提到，今年 7 月一个 OpenAI 智能体曾脱离受控测试环境并入侵 AI 公司 Hugging Face，加深了政策制定者对 AI 系统绕过安全防护的担忧。",
+      "urls": [
+        "https://www.reuters.com/legal/government/global-financial-watchdog-calls-more-human-oversight-agentic-ai-2026-10-15/"
+      ]
+    },
+    {
+      "title": "英国对华政策被批「缺乏连贯性」 专业能力不足",
+      "title_en": "UK's 'incoherent' approach to China plagued by lack of expertise, report says",
+      "category": "中欧与盟友",
+      "source": "卫报",
+      "priority_score": 86,
+      "summary": "《卫报》报道，一份最新报告指出，英国的对华政策「缺乏连贯性」，并受到中国问题专业能力不足的困扰。报告认为，英方在经贸、安全与外交多个领域对华立场摇摆，机构间协调不畅，导致政策信号前后不一；同时，政府部门中具备中国事务经验的人员流失，进一步削弱了政策制定的专业基础。报告建议英国建立更稳定的对华政策框架并加强人才培养，以在与中国打交道时更有效地维护自身利益。",
+      "urls": [
+        "https://www.theguardian.com/politics/2026/oct/14/uks-incoherent-approach-to-china-plagued-by-a-lack-of-expertise-report-says"
+      ]
+    },
+    {
+      "title": "欧盟配额叠加退税削减 中国电动车产业面临双重压力",
+      "title_en": "China's EV industry faces double blow from EU export quota, VAT rebate cut",
+      "category": "中欧与盟友",
+      "source": "南华早报",
+      "priority_score": 86,
+      "summary": "南华早报报道，中国电动车产业正同时承受两重压力：一方面欧盟通过设置混合动力汽车年度进口上限收紧市场准入，另一方面中国国内对电动车出口的增值税退税政策调整抬高了出口成本。报道指出，欧洲是中国电动车最重要的海外市场之一，配额安排与退税削减叠加，可能迫使中国车企加快在欧洲本地建厂、调整产品结构，或转向其他新兴市场。行业人士认为，这一组合将压缩出口利润率，并加速中国车企全球产能布局的重构。",
+      "urls": [
+        "https://www.scmp.com/business/china-business/article/3370851/chinas-ev-industry-faces-double-blow-eu-export-quota-vat-rebate-cut"
+      ]
+    }
+  ],
+  "dom_exclude_urls": [
+    "https://www.zaobao.com/news/china/story20261015-9840436",
+    "https://www.zaobao.com/news/china/story20261015-9839157",
+    "https://www.zaobao.com/news/china/story20261014-9831643",
+    "https://www.zaobao.com/news/china/story20261015-9839649",
+    "https://www.zaobao.com/news/china/story20261015-9839853",
+    "https://www.zaobao.com/news/china/story20261015-9839802",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083250.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083230.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083259.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083305.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083151.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083294.htm",
+    "https://www.mfa.gov.cn/web/wjdt_674879/wjbxw_674885/202610/t20261015_12040564.shtml",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083282.htm",
+    "http://paper.people.com.cn/rmrb/pc/content/202610/15/content_30185776.html",
+    "https://news.cctv.com/2026/10/14/ARTIfLeY5MYotBfDDfI2NmKd261014.shtml",
+    "https://news.cctv.com/2026/10/14/ARTI7NbQX9aZlPdhKom5Bxae261014.shtml"
+  ],
+  "dom_custom": [
+    {
+      "title": "李强出席第140届广交会开幕式并发表主旨演讲",
+      "category": "高层动态",
+      "source": "综合（中国政府网 3 篇）",
+      "summary": "国务院总理李强 10 月 14 日在广州出席第140届中国进出口商品交易会（广交会）开幕式并发表主旨演讲，当日还出席「广交世界70年」座谈会。李强表示，今年是广交会创办70周年，习近平主席专门发来贺信，充分肯定广交会成绩并重申中国扩大高水平开放的坚定决心。他指出，广交会历经国际风云变幻考验而不断焕发新的生机活力，其中蕴含三点启示：市场联通不是博弈工具，而是创造增量的有效举措；国际贸易不是账面数字，而是增进福祉的自主选择，中国作为「超级卖家」和「超级买家」，给各方带来更多的是「惠邻效应」与「富邻效应」；互利共赢不是单向妥协，而是相互赋能的彼此成就。李强强调，中国将持续推动高质量发展、扩大高水平开放：一是分享更多市场机遇，坚定实施扩大内需战略、进一步降低市场准入门槛；二是拓展更多互利合作，支持有实力的中国企业有序赴海外投资；三是坚定维护国际经贸秩序，维护多边主义和自由贸易，支持世贸组织改革发展。在座谈会上，李强指出参加广交会的各国企业正从贸易伙伴向创新伙伴、投资伙伴、产供链伙伴升级，并提出打造「智慧广交会」「绿色广交会」「人文广交会」。",
+      "urls": [
+        "https://www.gov.cn/yaowen/liebiao/202610/content_7083250.htm",
+        "https://www.gov.cn/yaowen/liebiao/202610/content_7083230.htm",
+        "https://www.gov.cn/yaowen/liebiao/202610/content_7083259.htm"
+      ],
+      "items": [
+        {
+          "media": "中国政府网",
+          "title": "李强出席第140届中国进出口商品交易会开幕式并发表主旨演讲"
+        },
+        {
+          "media": "中国政府网",
+          "title": "李强出席「广交世界70年」座谈会"
+        },
+        {
+          "media": "中国政府网",
+          "title": "李强在第140届广交会开幕式上的主旨演讲（全文）"
+        }
+      ]
+    },
+    {
+      "title": "李强在中朝新鸭绿江大桥开通仪式上发表视频致辞",
+      "category": "高层动态",
+      "source": "中国政府网",
+      "summary": "国务院总理李强 10 月 15 日在中朝新鸭绿江大桥开通仪式上发表视频致辞。李强表示，中朝新鸭绿江大桥是习近平总书记和金正恩总书记共同关心推动的重要跨境基础设施项目，大桥顺利开通不仅将有力促进两国经贸合作，也将进一步密切双方人员往来、拉紧两国人民之间的感情纽带，必将成为象征中朝传统友谊的新地标；希望双方以大桥开通为契机，持续优化口岸通关，提升互联互通水平，挖掘边境地区合作潜力。李强指出，中朝是山水相连的社会主义友好邻邦，当前在两党两国最高领导人战略引领下，中朝关系正在进入新阶段、开启新篇章；中方愿同朝方加强战略沟通、夯实政治互信、拓展务实合作、密切多边协调。朝鲜内阁总理朴泰成发表视频致辞。新鸭绿江大桥连接中国辽宁省和朝鲜平安北道，是中朝互联互通重要通道。",
+      "urls": [
+        "https://www.gov.cn/yaowen/liebiao/202610/content_7083305.htm"
+      ]
+    },
+    {
+      "title": "丁薛祥会见清华大学经济管理学院顾问委员会委员代表",
+      "category": "高层动态",
+      "source": "中国政府网",
+      "summary": "中共中央政治局常委、国务院副总理丁薛祥 10 月 13 日在北京会见清华大学经济管理学院顾问委员会委员代表。丁薛祥重点围绕人工智能发展和治理同各位委员进行交流，指出人工智能是引领新一轮技术革命和产业变革的关键力量，要把这项塑造未来的技术发展好、运用好、治理好，更好造福全人类；欢迎各方支持和参与世界人工智能合作组织建设，促进共同繁荣、维护共同安全。他表示，顾问委员会成立26年来已成为中外对话交流合作的重要平台，希望各位委员为中国教育事业和经济发展作出更多贡献。顾问委员会主席库克等赞赏中国在人工智能等领域的发展成就，表示愿继续深耕中国、拓展合作，更好发挥桥梁纽带作用。",
+      "urls": [
+        "https://www.gov.cn/yaowen/liebiao/202610/content_7083151.htm"
+      ]
+    },
+    {
+      "title": "何立峰会见美国桥水投资公司创始人达利欧",
+      "category": "高层动态",
+      "source": "中国政府网",
+      "summary": "中共中央政治局委员、中央财办主任何立峰 10 月 14 日在北京会见美国桥水投资公司创始人达利欧。何立峰表示，今年是「十五五」开局之年，中国经济保持向新向优向好发展态势；习近平主席对美国事访问取得圆满成功，对双边关系下一步发展具有重大意义。在两国元首战略共识引领下，中美经贸磋商达成一系列互利、平衡、积极成果，有利于两国及全球经济的稳定和发展。达利欧表示，看好中国经济发展前景和机遇，愿为推动美中经贸合作继续发挥积极作用。",
+      "urls": [
+        "https://www.gov.cn/yaowen/liebiao/202610/content_7083294.htm"
+      ]
+    },
+    {
+      "title": "王毅会见俄罗斯外长拉夫罗夫",
+      "category": "高层动态",
+      "source": "外交部",
+      "summary": "当地时间 10 月 14 日，中共中央政治局委员、外交部长王毅在阿塞拜疆巴库会见俄罗斯外长拉夫罗夫。王毅祝贺俄方成功举行国家杜马选举、顺利完成国内重要政治议程，表示今年 5 月和 8 月习近平主席同普京总统举行富有成果的会晤，引领中俄新时代全面战略协作伙伴关系持续高水平发展；下月亚太经合组织领导人非正式会议将在深圳举行，相信在俄方等各方支持下，APEC「中国年」将取得丰硕成果。王毅表示，亚信峰会时隔 4 年再次举办，中方愿同包括俄方在内的亚信成员国密切协作，践行真正的多边主义，为完善全球治理贡献力量。拉夫罗夫表示，俄方全力支持中方办好 APEC 领导人非正式会议，愿同中方进一步增进在联合国、二十国集团、APEC、金砖机制等多边框架下的协作，共同维护国际公平正义。双方还就下一步中俄高层交往以及共同关心的国际地区热点问题协调立场，达成新的共识。",
+      "urls": [
+        "https://www.mfa.gov.cn/web/wjdt_674879/wjbxw_674885/202610/t20261015_12040564.shtml"
+      ]
+    },
+    {
+      "title": "阿塞拜疆总统阿利耶夫会见王毅",
+      "category": "高层动态",
+      "source": "中国政府网",
+      "summary": "阿塞拜疆总统阿利耶夫 10 月 14 日在巴库会见中共中央政治局委员、外交部长王毅。阿利耶夫请王毅转达对习近平主席的亲切问候，感谢习近平主席委派特别代表来阿出席亚信峰会，表示阿中两国政治上高度互信、经济上互利合作，阿中全面战略伙伴关系蓬勃发展；阿方感谢中方长期以来对阿经济社会发展和维护国家利益的有力支持，视中国为全球南方崛起的领军力量，坚定奉行一个中国原则，愿加强同中方在国际和地区事务中的协调与合作。王毅转达习近平主席对阿利耶夫总统的诚挚问候，表示在两国元首战略引领下中阿关系保持强劲发展势头，中方愿与阿方加强中间运输走廊合作，继续成为阿方发展进程中可信赖的长期战略伙伴，并支持阿方在亚信等多边平台及国际事务中发挥重要作用。访问期间，王毅还同阿塞拜疆外长巴伊拉莫夫举行会谈。",
+      "urls": [
+        "https://www.gov.cn/yaowen/liebiao/202610/content_7083282.htm"
+      ]
+    },
+    {
+      "title": "赵乐际集体会见出席2026年国际议员友好交流论坛的各国代表",
+      "category": "高层动态",
+      "source": "人民日报",
+      "summary": "全国人大常委会委员长赵乐际 10 月 14 日在北京集体会见出席 2026 年国际议员友好交流论坛的各国代表。赵乐际表示，习近平主席提出构建人类命运共同体理念和四大全球倡议，旨在推动建设一个更加美好的世界；中国全国人大愿同各国议会一道，共同落实四大全球倡议，践行真正的多边主义，密切各层级、多领域交流交往，为务实合作提供法律保障，促进人民相知相亲。赵乐际还介绍了中国「十五五」规划纲要有关情况，表示中国将继续扩大高水平对外开放，同各国共享机遇、共促发展。与会代表表示，各国立法机构应加强对话合作，广泛凝聚共识，为各自国家经济社会可持续发展与世界和平稳定繁荣作出积极贡献。",
+      "urls": [
+        "http://paper.people.com.cn/rmrb/pc/content/202610/15/content_30185776.html"
+      ]
+    },
+    {
+      "title": "前三季度我国货物贸易进出口39.94万亿元 共建「一带一路」国家进出口超20万亿元",
+      "category": "经贸动向",
+      "source": "综合（央视新闻 2 篇）",
+      "summary": "国务院新闻办公室 10 月 14 日举行新闻发布会，海关总署介绍 2026 年前三季度进出口情况。数据显示，前三季度我国货物贸易进出口 39.94 万亿元，同比增长 18.8%；其中出口 23.2 万亿元、增长 16.4%，进口 16.74 万亿元、增长 22.3%，进口增速比出口高 5.9 个百分点。同期，我国与共建「一带一路」国家进出口超过 20 万亿元，成为稳定外贸增长的重要支撑。海关总署副署长王军表示，人工智能蓬勃发展推动全球算力投资建设提速，对算力终端设备及制造所需中间产品的需求持续扩张，我国依托完整产业体系和科技创新能力，为应对全球算力和电力需求增长提供坚实支撑。",
+      "urls": [
+        "https://news.cctv.com/2026/10/14/ARTIfLeY5MYotBfDDfI2NmKd261014.shtml",
+        "https://news.cctv.com/2026/10/14/ARTI7NbQX9aZlPdhKom5Bxae261014.shtml"
+      ],
+      "items": [
+        {
+          "media": "央视新闻",
+          "title": "前三季度我国货物贸易进出口39.94万亿元"
+        },
+        {
+          "media": "央视新闻",
+          "title": "前三季度 我国与共建「一带一路」国家进出口超20万亿元"
+        }
+      ]
+    }
+  ],
+  "dom_order": [
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083239.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083250.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083305.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083151.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083216.htm",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083294.htm",
+    "https://www.mfa.gov.cn/web/wjdt_674879/wjbxw_674885/202610/t20261015_12040564.shtml",
+    "https://www.gov.cn/yaowen/liebiao/202610/content_7083282.htm",
+    "http://paper.people.com.cn/rmrb/pc/content/202610/15/content_30185776.html",
+    "http://paper.people.com.cn/rmrb/pc/content/202610/15/content_30185791.html",
+    "http://society.people.com.cn/n1/2026/1014/c1008-40814859.html",
+    "https://sc.people.com.cn/n2/2026/1015/c345460-41722687.html",
+    "https://www.mofcom.gov.cn/xwfb/bldhd/art/2026/art_26bbb216adea491caac7e7e0ed80cdaa.html",
+    "https://www.jingjiribao.cn/static/detail.jsp?id=689778",
+    "https://www.mfa.gov.cn/web/wjdt_674879/fyrbt_674889/202610/t20261014_12040283.shtml",
+    "http://paper.people.com.cn/rmrb/pc/content/202610/15/content_30185794.html",
+    "https://news.cctv.com/2026/10/14/ARTI0B6KH6RQk6BuyPwyleXG261014.shtml",
+    "https://news.cctv.com/2026/10/14/ARTIfLeY5MYotBfDDfI2NmKd261014.shtml",
+    "https://news.cctv.com/2026/10/14/ARTIefw9PsDfT8A09I26f7CY261014.shtml",
+    "https://news.cctv.com/2026/10/14/ARTIi2UFrZMvvt1v7xGlQXCT261014.shtml",
+    "https://news.cctv.com/2026/10/15/ARTIcOXaLE5t3tNWawQTXgWN261015.shtml"
+  ]
 }
