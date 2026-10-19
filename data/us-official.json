@@ -3261,5 +3261,132 @@
     "is_official": true,
     "collectedAt": "2026-10-16 09:30:00",
     "collection_method": "us_official"
+  },
+  {
+    "date": "2026-10-16",
+    "source": "白宫",
+    "title": "特朗普签署行政令：有条件豁免《格雷厄姆制裁俄伊法案》关税与制裁条款",
+    "title_en": "Implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+    "summary": "美国总统特朗普10月16日签署行政令，落实其9月18日签署成法的《2026年林赛·格雷厄姆制裁俄罗斯与伊朗法案》（Graham Act）。行政令规定对俄罗斯输美商品加征500%从价关税，对俄原油与天然气前五大进口国及协助俄油制裁规避的前五大便利国在原有关税基础上加征100%从价税（后者自10月18日起适用于明知仍新增采购的情形），并叠加于301、232条款等既有关税之上。但总统同时依据法案第115条、以「符合美国国家利益」为由向国会提交认证，豁免该法案全部关税、制裁与限制条款，并将相关授权分别下放国务院、财政部、能源部与贸易代表办公室；豁免持续至总统或国务卿另行认定需采取进一步行动为止。",
+    "summary_en": "MEMORANDUM/ORDER: Implements the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026, imposing a 500% ad valorem duty on Russian goods and 100% duties on top importers of Russian energy and sanctions-evasion facilitators, while waiving the sanctions and duties under section 115 of the Act.",
+    "keywords": [
+      "特朗普",
+      "行政令",
+      "格雷厄姆法案",
+      "对俄制裁",
+      "关税",
+      "豁免"
+    ],
+    "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/",
+    "category": "美国内政",
+    "title_zh": "特朗普签署行政令：有条件豁免《格雷厄姆制裁俄伊法案》关税与制裁条款",
+    "summary_zh": "美国总统特朗普10月16日签署行政令，落实其9月18日签署成法的《2026年林赛·格雷厄姆制裁俄罗斯与伊朗法案》（Graham Act）。行政令规定对俄罗斯输美商品加征500%从价关税，对俄原油与天然气前五大进口国及协助俄油制裁规避的前五大便利国在原有关税基础上加征100%从价税（后者自10月18日起适用于明知仍新增采购的情形），并叠加于301、232条款等既有关税之上。但总统同时依据法案第115条、以「符合美国国家利益」为由向国会提交认证，豁免该法案全部关税、制裁与限制条款，并将相关授权分别下放国务院、财政部、能源部与贸易代表办公室；豁免持续至总统或国务卿另行认定需采取进一步行动为止。",
+    "is_official": true,
+    "collectedAt": "2026-10-19 09:30:00"
+  },
+  {
+    "date": "2026-10-17",
+    "source": "美国国务院",
+    "title": "鲁比奥行前答问：访中亚五国为构建关系，否认美方下令放缓乌克兰星链",
+    "title_en": "Secretary of State Marco Rubio Remarks to the Press",
+    "summary": "美国国务卿鲁比奥10月17日在安德鲁斯联合基地行前答记者问。他说明此行将访问乌兹别克斯坦及中亚其余四国，称选在此时是五国外长皆能到场的唯一档期，强调美方希望与非危机国家主动构建长期关系，延续此前对希腊与拉美地区的访问节奏。就「星链在乌克兰被降速」一事，他明确否认白宫曾下令限制网速，称相关说法「完全虚假」，速度已恢复至此前水平；并区分商用星链与美军合同产品「星盾」，称乌克兰并未获得星盾使用权，其索求系用于对俄纵深打击。就《格雷厄姆法案》豁免，他解释制裁同时含对印度等国的关税，总统需60天评估对全球经济与美国经济的冲击，并提及霍尔木兹、胡塞袭沙特与俄乌能源设施受袭已推高全球能源价格。他并对约旦河西岸美籍记者遇袭表示「令人不安」，称已要求以方遏制。",
+    "summary_en": "Remarks to the press at Joint Base Andrews on the upcoming Central Asia trip, denial of White House involvement in Starlink slowdown in Ukraine, the Russia sanctions waiver and the 60-day review period, West Bank violence, and Eritrea-Ethiopia tensions.",
+    "keywords": [
+      "鲁比奥",
+      "中亚五国",
+      "星链",
+      "星盾",
+      "对俄制裁豁免",
+      "约旦河西岸"
+    ],
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/secretary-of-state-marco-rubio-remarks-to-the-press-18/",
+    "category": "美国内政",
+    "title_zh": "鲁比奥行前答问：访中亚五国为构建关系，否认美方下令放缓乌克兰星链",
+    "summary_zh": "美国国务卿鲁比奥10月17日在安德鲁斯联合基地行前答记者问。他说明此行将访问乌兹别克斯坦及中亚其余四国，称选在此时是五国外长皆能到场的唯一档期，强调美方希望与非危机国家主动构建长期关系，延续此前对希腊与拉美地区的访问节奏。就「星链在乌克兰被降速」一事，他明确否认白宫曾下令限制网速，称相关说法「完全虚假」，速度已恢复至此前水平；并区分商用星链与美军合同产品「星盾」，称乌克兰并未获得星盾使用权，其索求系用于对俄纵深打击。就《格雷厄姆法案》豁免，他解释制裁同时含对印度等国的关税，总统需60天评估对全球经济与美国经济的冲击，并提及霍尔木兹、胡塞袭沙特与俄乌能源设施受袭已推高全球能源价格。他并对约旦河西岸美籍记者遇袭表示「令人不安」，称已要求以方遏制。",
+    "is_official": true,
+    "collectedAt": "2026-10-19 09:30:00"
+  },
+  {
+    "date": "2026-10-16",
+    "source": "美国国务院",
+    "title": "鲁比奥会见多米尼加外长：深化反毒安全合作与关键矿产框架",
+    "title_en": "Secretary Rubio’s Meeting with Dominican Republic Foreign Minister Bisonó Haza",
+    "summary": "美国国务卿鲁比奥10月16日在华盛顿会见多米尼加外交部长维克托·比索诺·阿萨，以推进美多伙伴关系。双方讨论了在西半球深化打击贩毒集团与毒品恐怖组织的安全合作，并讨论了在《美多关键矿产框架》下继续协作、推动矿业领域具体投资落地。",
+    "summary_en": "Secretary of State Marco Rubio met with Dominican Republic Foreign Minister Víctor Bisonó Haza in Washington to advance the partnership, discussing security cooperation against cartels and narco-terrorist groups and collaboration under the U.S.-Dominican Republic Critical Minerals Framework.",
+    "keywords": [
+      "鲁比奥",
+      "多米尼加",
+      "关键矿产",
+      "安全合作",
+      "反毒"
+    ],
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/secretary-rubios-meeting-with-dominican-republic-foreign-minister-bisono-haza/",
+    "category": "美国内政",
+    "title_zh": "鲁比奥会见多米尼加外长：深化反毒安全合作与关键矿产框架",
+    "summary_zh": "美国国务卿鲁比奥10月16日在华盛顿会见多米尼加外交部长维克托·比索诺·阿萨，以推进美多伙伴关系。双方讨论了在西半球深化打击贩毒集团与毒品恐怖组织的安全合作，并讨论了在《美多关键矿产框架》下继续协作、推动矿业领域具体投资落地。",
+    "is_official": true,
+    "collectedAt": "2026-10-19 09:30:00"
+  },
+  {
+    "date": "2026-10-16",
+    "source": "美国国务院",
+    "title": "美国主办加勒比对话：宣布海底光缆与安全援助逾3亿美元",
+    "title_en": "United States Hosts Caribbean Dialogue to Advance Shared Security and Prosperity",
+    "summary": "美国国务院10月15日由副国务卿兰道主持「美国—加勒比对话」，落实鲁比奥今年2月在圣基茨和尼维斯向加共体政府首脑所作承诺，加勒比15国派高级别代表团参加。会上宣布多项举措：2027年初举办加勒比投资峰会；投入1.758亿美元扩建加勒比与中美洲可信海底光缆；拟通过ASPIRE项目提供6150万美元助各国建设自给医疗队伍；在「加勒比盆地安全倡议」下投入3700万美元保障关键数字基础设施与港口、6600万美元强化执法与边境安全（含5500万美元国际禁毒与执法援助、1100万美元对外军事融资），并计划2027年春季召开安全部长级会议。会议聚焦能源安全、可信技术、关键矿产、港口与数字基础设施以及打击毒品恐怖组织。",
+    "summary_en": "Deputy Secretary Landau hosted the U.S.-Caribbean Dialogue with 15 Caribbean delegations, announcing a Caribbean Investment Summit, $175.8 million for undersea cables, $61.5 million through ASPIRE, and over $100 million in CBSI security programming.",
+    "keywords": [
+      "加勒比",
+      "鲁比奥",
+      "海底光缆",
+      "可信技术",
+      "安全合作",
+      "关键矿产"
+    ],
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/united-states-hosts-caribbean-dialogue-to-advance-shared-security-and-prosperity/",
+    "category": "美国内政",
+    "title_zh": "美国主办加勒比对话：宣布海底光缆与安全援助逾3亿美元",
+    "summary_zh": "美国国务院10月15日由副国务卿兰道主持「美国—加勒比对话」，落实鲁比奥今年2月在圣基茨和尼维斯向加共体政府首脑所作承诺，加勒比15国派高级别代表团参加。会上宣布多项举措：2027年初举办加勒比投资峰会；投入1.758亿美元扩建加勒比与中美洲可信海底光缆；拟通过ASPIRE项目提供6150万美元助各国建设自给医疗队伍；在「加勒比盆地安全倡议」下投入3700万美元保障关键数字基础设施与港口、6600万美元强化执法与边境安全（含5500万美元国际禁毒与执法援助、1100万美元对外军事融资），并计划2027年春季召开安全部长级会议。会议聚焦能源安全、可信技术、关键矿产、港口与数字基础设施以及打击毒品恐怖组织。",
+    "is_official": true,
+    "collectedAt": "2026-10-19 09:30:00"
+  },
+  {
+    "date": "2026-10-16",
+    "source": "美国国务院",
+    "title": "国务院宣布「喂养未来」创新实验室计划支持农业研究",
+    "title_en": "State Department Announces Feed the Future Innovation Labs to Support Agriculture Research",
+    "summary": "美国国务院10月15日宣布「喂养未来」创新实验室计划，通过与美国高校合作支持农业科研，聚焦提升发展中国家粮食产量与气候韧性、推广改良作物品种与农业技术，以服务于美国全球粮食安全战略。",
+    "summary_en": "The State Department announced the Feed the Future Innovation Labs, partnering with U.S. universities to support agricultural research aimed at boosting food production and climate resilience in developing countries.",
+    "keywords": [
+      "喂养未来",
+      "农业研究",
+      "粮食安全",
+      "国务院"
+    ],
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/state-department-announces-feed-the-future-innovation-labs-to-support-agriculture-research/",
+    "category": "全球多边",
+    "title_zh": "国务院宣布「喂养未来」创新实验室计划支持农业研究",
+    "summary_zh": "美国国务院10月15日宣布「喂养未来」创新实验室计划，通过与美国高校合作支持农业科研，聚焦提升发展中国家粮食产量与气候韧性、推广改良作物品种与农业技术，以服务于美国全球粮食安全战略。",
+    "is_official": true,
+    "collectedAt": "2026-10-19 09:30:00"
+  },
+  {
+    "date": "2026-10-16",
+    "source": "美国国务院",
+    "title": "副国务卿兰道将访问巴拉圭与阿根廷",
+    "title_en": "Deputy Secretary Landau’s Travel to Paraguay and Argentina",
+    "summary": "美国国务院10月16日宣布，副国务卿克里斯托弗·兰道将于近日访问巴拉圭与阿根廷，与两国政府高层就双边经贸、地区安全与关键矿产等领域合作交换意见，推进美方在南美的伙伴关系布局。",
+    "summary_en": "The State Department announced Deputy Secretary of State Christopher Landau will travel to Paraguay and Argentina.",
+    "keywords": [
+      "兰道",
+      "巴拉圭",
+      "阿根廷",
+      "拉美"
+    ],
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/deputy-secretary-landaus-travel-to-paraguay-and-argentina/",
+    "category": "美国内政",
+    "title_zh": "副国务卿兰道将访问巴拉圭与阿根廷",
+    "summary_zh": "美国国务院10月16日宣布，副国务卿克里斯托弗·兰道将于近日访问巴拉圭与阿根廷，与两国政府高层就双边经贸、地区安全与关键矿产等领域合作交换意见，推进美方在南美的伙伴关系布局。",
+    "is_official": true,
+    "collectedAt": "2026-10-19 09:30:00"
   }
 ]
