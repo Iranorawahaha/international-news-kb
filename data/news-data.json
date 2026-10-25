@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-10-25 19:06",
+  "lastUpdated": "2026-10-25 19:08",
   "retentionDays": 7,
   "archive": {
     "2026-10-19": [
@@ -14140,7 +14140,7 @@
       },
       {
         "id": "auto_2026-10-23_12522",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "Politico：北京正在锁定老挝",
         "title_en": "Beijing locks in Laos",
         "title_zh": "Politico：北京正在锁定老挝",
@@ -14164,7 +14164,7 @@
       },
       {
         "id": "auto_2026-10-22_87053",
-        "date": "2026-10-22",
+        "date": "2026-10-24",
         "title": "习近平强调经济质的提升与可衡量增长",
         "title_en": "China's Xi calls for qualitative improvement, measurable growth in economy",
         "title_zh": "习近平强调经济质的提升与可衡量增长",
@@ -14212,7 +14212,7 @@
       },
       {
         "id": "auto_2026-10-23_94061",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "官员称伊朗已制定战时打击海湾海底电缆方案",
         "title_en": "Iran has detailed plans to hit Gulf undersea cables if war resumes, officials say",
         "title_zh": "官员称伊朗已制定战时打击海湾海底电缆方案",
@@ -14308,7 +14308,7 @@
       },
       {
         "id": "auto_2026-10-23_31166",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "Politico：拟议规则瞄准中美生物技术投资",
         "title_en": "Proposed rules target US-China biotech ties",
         "title_zh": "Politico：拟议规则瞄准中美生物技术投资",
@@ -14788,7 +14788,7 @@
       },
       {
         "id": "auto_2026-10-22_5161",
-        "date": "2026-10-22",
+        "date": "2026-10-24",
         "title": "前三季度中国实际使用外资同比下降4.3%",
         "title_en": "Foreign investment flows into China fall 4.3% y/y first three quarters",
         "title_zh": "前三季度中国实际使用外资同比下降4.3%",
@@ -14884,7 +14884,7 @@
       },
       {
         "id": "auto_2026-10-23_57991",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "解读：中共二十届五中全会如何运作",
         "title_en": "How China October 26-29 Communist Party plenum works",
         "title_zh": "解读：中共二十届五中全会如何运作",
@@ -14908,7 +14908,7 @@
       },
       {
         "id": "auto_2026-10-23_20985",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "分析：欧盟如何限制\"中国冲击2.0\"影响",
         "title_en": "How can EU limit impact of China shock 2.0",
         "title_zh": "分析：欧盟如何限制\"中国冲击2.0\"影响",
@@ -14932,7 +14932,7 @@
       },
       {
         "id": "auto_2026-10-22_35368",
-        "date": "2026-10-22",
+        "date": "2026-10-24",
         "title": "北京市一名副市长被查",
         "title_en": "Beijing deputy mayor placed under probe, China anti-graft watchdog says",
         "title_zh": "北京市一名副市长被查",
@@ -15052,7 +15052,7 @@
       },
       {
         "id": "auto_2026-10-23_94846",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "中方文件重申反对太空军备竞赛",
         "title_en": "China opposes arms race in space, official document shows",
         "title_zh": "中方文件重申反对太空军备竞赛",
@@ -15147,32 +15147,8 @@
         "body_en": null
       },
       {
-        "id": "auto_2026-10-25_48097",
-        "date": "2026-10-25",
-        "title": "伊朗当局将\"自我牺牲\"动员活动推向全国",
-        "title_en": "Iran's authorities take self-sacrifice mobilisation campaign nationwide",
-        "title_zh": "伊朗当局将\"自我牺牲\"动员活动推向全国",
-        "summary": "半岛电视台25日报道，伊朗伊斯兰革命卫队表示，将在全国31个省份首府的主要广场开展\"Janfada\"（自我牺牲）动员活动，将其推向全国范围。报道称，此举发生在伊朗与美以紧张持续升级、国内对临时协议失败不满上升的背景下，被视为当局强化社会动员与凝聚力的一部分。",
-        "summary_en": null,
-        "summary_zh": "半岛电视台25日报道，伊朗伊斯兰革命卫队表示，将在全国31个省份首府的主要广场开展\"Janfada\"（自我牺牲）动员活动，将其推向全国范围。报道称，此举发生在伊朗与美以紧张持续升级、国内对临时协议失败不满上升的背景下，被视为当局强化社会动员与凝聚力的一部分。",
-        "source": "半岛电视台",
-        "category": "地区局势",
-        "keywords": [
-          "伊朗;革命卫队;社会动员;美伊紧张"
-        ],
-        "url": "https://www.aljazeera.com/news/2026/10/25/irans-authorities-take-self-sacrifice-mobilisation-campaign-nationwide",
-        "priority_score": 65,
-        "is_summit_level": false,
-        "importance": "medium",
-        "collectedAt": "2026-10-25 09:30:00",
-        "collection_method": "legacy",
-        "column": "地区热点",
-        "is_official": null,
-        "body_en": null
-      },
-      {
         "id": "auto_2026-10-23_48026",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "白宫发布\"美国优先\"海产品战略并上线 Seafood.gov",
         "title_en": "Fact Sheet: President Donald J. Trump Announces the America First Seafood Strategy and Seafood.gov",
         "title_zh": "白宫发布\"美国优先\"海产品战略并上线 Seafood.gov",
@@ -15181,22 +15157,20 @@
         "summary_zh": "白宫10月23日发布\"美国优先\"海产品战略并同步上线 Seafood.gov 门户，落实\"恢复美国海产品竞争力\"行政令。战略要点包括：协调联邦政策与科研扩大国内可持续捕捞、降低合规成本、重建加工与岸线基础设施、以政府采购与\"Eat American Seafood\"全国推广扩大内需；FDA 同日提出\"美国捕捞海产品\"自愿标签方案，USDA 提供逾50亿美元担保贷款用于肉类与海产品加工现代化。战略同时强化进口监测与打击非法、不报告、不受管制（IUU）捕捞，并通过 USTR 等渠道争取对等市场准入。",
         "source": "白宫",
         "category": "美国内政",
-        "keywords": [
-          "海产品战略;Seafood.gov;NOAA;IUU捕捞;关税与进口监测"
-        ],
+        "keywords": "海产品战略;Seafood.gov;NOAA;IUU捕捞;关税与进口监测",
         "url": "https://www.whitehouse.gov/fact-sheets/2026/10/fact-sheet-president-donald-j-trump-announces-the-america-first-seafood-strategy-and-seafood-gov/",
         "priority_score": 76,
         "is_summit_level": false,
         "importance": "中",
         "collectedAt": "2026-10-25 09:30:00",
         "collection_method": "webfetch",
-        "column": "美国",
+        "column": "官方发布",
         "is_official": true,
         "body_en": null
       },
       {
         "id": "auto_2026-10-23_64961",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "中国前三季度财政收入同比增长5.1%",
         "title_en": "China's January-September fiscal revenue up 5.1% y/y",
         "title_zh": "中国前三季度财政收入同比增长5.1%",
@@ -15220,7 +15194,7 @@
       },
       {
         "id": "auto_2026-10-22_95442",
-        "date": "2026-10-22",
+        "date": "2026-10-24",
         "title": "西藏发生7级地震 死亡人数暂为16人",
         "title_en": "Earthquake of magnitude 7 strikes China Tibet",
         "title_zh": "西藏发生7级地震 死亡人数暂为16人",
@@ -15244,7 +15218,7 @@
       },
       {
         "id": "auto_2026-10-22_813",
-        "date": "2026-10-22",
+        "date": "2026-10-24",
         "title": "南非对华贸易在零关税安排后激增",
         "title_en": "South Africa trade with China surges after duty-free deal",
         "title_zh": "南非对华贸易在零关税安排后激增",
@@ -15364,7 +15338,7 @@
       },
       {
         "id": "auto_2026-10-23_69063",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "美拟下调部分加拿大农产品与林产品关税",
         "title_en": "US expected to remove 50% tariffs on some Canadian agricultural, forestry goods, WSJ reports",
         "title_zh": "美拟下调部分加拿大农产品与林产品关税",
@@ -15412,7 +15386,7 @@
       },
       {
         "id": "auto_2026-10-23_42859",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "中国思格新能源将在印度建逆变器与储能工厂",
         "title_en": "China's Sigenergy to build inverter, battery storage plants in India",
         "title_zh": "中国思格新能源将在印度建逆变器与储能工厂",
@@ -15436,7 +15410,7 @@
       },
       {
         "id": "auto_2026-10-23_35378",
-        "date": "2026-10-23",
+        "date": "2026-10-24",
         "title": "摩根大通：中印巴 GLP-1 市场2035年或达220亿美元",
         "title_en": "GLP-1 boom in China, India, Brazil could create $22 bln market by 2035, JPMorgan says",
         "title_zh": "摩根大通：中印巴 GLP-1 市场2035年或达220亿美元",
@@ -15503,6 +15477,30 @@
         "collectedAt": "2026-10-25 09:30:00",
         "collection_method": "legacy",
         "column": "其他",
+        "is_official": null,
+        "body_en": null
+      },
+      {
+        "id": "auto_2026-10-25_48097",
+        "date": "2026-10-25",
+        "title": "伊朗当局将\"自我牺牲\"动员活动推向全国",
+        "title_en": "Iran's authorities take self-sacrifice mobilisation campaign nationwide",
+        "title_zh": "伊朗当局将\"自我牺牲\"动员活动推向全国",
+        "summary": "半岛电视台25日报道，伊朗伊斯兰革命卫队表示，将在全国31个省份首府的主要广场开展\"Janfada\"（自我牺牲）动员活动，将其推向全国范围。报道称，此举发生在伊朗与美以紧张持续升级、国内对临时协议失败不满上升的背景下，被视为当局强化社会动员与凝聚力的一部分。",
+        "summary_en": null,
+        "summary_zh": "半岛电视台25日报道，伊朗伊斯兰革命卫队表示，将在全国31个省份首府的主要广场开展\"Janfada\"（自我牺牲）动员活动，将其推向全国范围。报道称，此举发生在伊朗与美以紧张持续升级、国内对临时协议失败不满上升的背景下，被视为当局强化社会动员与凝聚力的一部分。",
+        "source": "半岛电视台",
+        "category": "地区局势",
+        "keywords": [
+          "伊朗;革命卫队;社会动员;美伊紧张"
+        ],
+        "url": "https://www.aljazeera.com/news/2026/10/25/irans-authorities-take-self-sacrifice-mobilisation-campaign-nationwide",
+        "priority_score": 65,
+        "is_summit_level": false,
+        "importance": "medium",
+        "collectedAt": "2026-10-25 09:30:00",
+        "collection_method": "legacy",
+        "column": "地区热点",
         "is_official": null,
         "body_en": null
       },
