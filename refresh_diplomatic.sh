@@ -43,7 +43,7 @@ cd "$KB_DIR"
 
 # git 提交推送
 git add diplomatic-affairs.html gh-pages/diplomatic-affairs.html \
-    data/diplomatic-affairs.json \
+    data/diplomatic-affairs.json data/diplomatic-seen.json \
     scripts/fetch_diplomatic.py scripts/build_diplomatic.py
 
 if git diff --cached --quiet; then

@@ -39,6 +39,11 @@ TODAY = NOW.strftime("%Y-%m-%d")
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(BASE_DIR, "data", "diplomatic-affairs.json")
+# 持久化「已见候选」台账（2026-10-25 修复）：此前仅按当前 JSON 中的 id 去重，
+# agent 核验后删除的误归候选下一轮会以同一 md5 id 重新插回，并随 refresh_diplomatic.sh 自动 push
+# 把脏数据推上线（10-23/10-24/10-25 连续三轮命中）。改为：所有出现过的候选 id 永久记入本文件，
+# 一旦记入即不再重复插入，agent 删除即视为「已否决」。
+SEEN_FILE = os.path.join(BASE_DIR, "data", "diplomatic-seen.json")
 
 # ============== 配置 ==============
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
@@ -371,8 +376,25 @@ def _guess_country(title):
 
 # ============== 数据合并去重 ==============
 
+def load_seen_ids():
+    """读取持久化候选台账（已出现过的候选 id 集合）"""
+    if os.path.exists(SEEN_FILE):
+        try:
+            with open(SEEN_FILE, encoding="utf-8") as f:
+                return set(json.load(f).get("ids", []))
+        except Exception:
+            return set()
+    return set()
+
+
+def save_seen_ids(ids):
+    with open(SEEN_FILE, "w", encoding="utf-8") as f:
+        json.dump({"updated": NOW.isoformat(), "count": len(ids), "ids": sorted(ids)},
+                  f, ensure_ascii=False, indent=1)
+
+
 def merge_with_existing(new_data, existing_file):
-    """合并新数据到已有数据，按 id 去重"""
+    """合并新数据到已有数据，按 id + 持久化台账双重去重"""
     if os.path.exists(existing_file):
         with open(existing_file, encoding="utf-8") as f:
             old = json.load(f)
@@ -386,15 +408,26 @@ def merge_with_existing(new_data, existing_file):
         for item in old.get("modules", {}).get(module_key, {}).get("items", []):
             if item.get("id"):
                 existing_ids.add(item["id"])
-    
+
+    seen_ids = load_seen_ids()
+    skipped = 0
     # 合并新项（给每个新项分配 ID）
     for module_key in ["personnel", "consuls", "visits", "us_china"]:
         for item in new_data.get(module_key, []):
             item["id"] = make_id(item)
-            if item["id"] not in existing_ids:
-                old["modules"][module_key]["items"].append(item)
-                existing_ids.add(item["id"])
-    
+            if item["id"] in existing_ids or item["id"] in seen_ids:
+                skipped += 1
+                continue
+            old["modules"][module_key]["items"].append(item)
+            existing_ids.add(item["id"])
+            seen_ids.add(item["id"])
+
+    # 现有条目同样入账，避免日后被删后再次插回
+    seen_ids |= existing_ids
+    save_seen_ids(seen_ids)
+    if skipped:
+        print(f"  ℹ️  台账拦截已见/已否决候选 {skipped} 条")
+
     return old
 
 
