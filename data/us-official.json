@@ -4719,5 +4719,43 @@
   "date": "2026-10-26",
   "collectedAt": "2026-10-28 10:30:00",
   "is_official": true
+ },
+ {
+  "title_zh": "常务副国务卿兰多会见汤加首相法卡法努阿",
+  "title_en": "Deputy Secretary Landau's Meeting with Tonga Prime Minister Lord Fakafanua",
+  "summary_zh": "美国国务院发布消息，常务副国务卿克里斯托弗·兰多当日在华盛顿会见到访的汤加首相法卡法努阿勋爵，延续两人 9 月太平洋岛国论坛领导人会议期间的建设性对话。双方重申美汤伙伴关系牢固，并讨论了太平洋地区合作议题。",
+  "source": "美国国务院",
+  "category": "全球治理与多边",
+  "keywords": [
+   "兰多",
+   "汤加",
+   "太平洋岛国",
+   "美太关系"
+  ],
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/deputy-secretary-landaus-meeting-with-tonga-prime-minister-lord-fakafanua/",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": true
+ },
+ {
+  "title_zh": "白宫：第一夫人促成奥列什基局部停火",
+  "title_en": "First Lady Melania Trump Secures Ceasefire Between Russia and Ukraine, Localized to Oleshky",
+  "summary_zh": "白宫发布声明，称第一夫人梅拉尼娅·特朗普直接与俄乌领导层沟通，促成以奥列什基为范围的局部停火。声明引述她称当地「处境严峻」、留守居民以老人为主，急需医疗、药品、食品与清洁用水，停火目标是为救援准入创造条件。",
+  "source": "白宫",
+  "category": "地区热点",
+  "keywords": [
+   "奥列什基",
+   "局部停火",
+   "第一夫人",
+   "俄乌"
+  ],
+  "url": "https://www.whitehouse.gov/briefings-statements/2026/10/first-lady-melania-trump-secures-ceasefire-between-russia-and-ukraine-localized-to-oleshky/",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "date": "2026-10-23",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": true
  }
 ]
