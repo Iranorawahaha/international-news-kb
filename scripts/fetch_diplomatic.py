@@ -488,12 +488,21 @@ def main():
         "candidate_count": len(raw_items),
     }
     
-    # 生成 data_summary
-    parts = {}
-    if personnel_count: parts["外交代表人事变化"] = f"{personnel_count}项"
-    if consuls_count: parts["驻沪穗总领事人事"] = f"{consuls_count}项"
-    if visits_count: parts["高级官员访华"] = f"{visits_count}项"
-    if uscn_count: parts["中美互动"] = f"{uscn_count}项"
+    # 生成 data_summary —— 必须按合并后的实际条目数统计，不能按本轮候选数
+    # （历史坑：曾按本轮候选数覆写为「高级官员访华：2项」，2026-10-26 / 10-28 两度复发）
+    modules = merged.get("modules") or {}
+    def _n(key):
+        node = modules.get(key) or {}
+        items = node.get("items")
+        return len(items) if isinstance(items, list) else 0
+
+    total_counts = {
+        "外交代表人事变化": _n("personnel"),
+        "驻沪穗总领事人事": _n("consuls"),
+        "高级官员访华": _n("visits"),
+        "中美互动": _n("us_china"),
+    }
+    parts = {k: f"{v}项" for k, v in total_counts.items() if v}
     merged["data_summary"] = parts
     
     # 写入文件
@@ -501,9 +510,9 @@ def main():
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(merged, f, ensure_ascii=False, indent=2)
     
-    total = sum([personnel_count, consuls_count, visits_count, uscn_count])
+    total = sum(total_counts.values())
     print(f"\n✅ 数据已写入: {DATA_FILE}")
-    print(f"   总事件: {total}（需 agent 核验补强后正式收录）")
+    print(f"   合并后总条目: {total}（本轮新候选 {personnel_count+consuls_count+visits_count+uscn_count} 条，需 agent 核验补强后正式收录）")
     return 0
 
 
