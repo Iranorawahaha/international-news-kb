@@ -11295,7 +11295,8 @@
     "collection_method": "legacy",
     "column": "其他",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "AOL（路透社电头）"
    },
    {
     "id": "auto_2026-10-27_18041",
@@ -11411,7 +11412,8 @@
     "collection_method": "legacy",
     "column": "美国",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "印度经济时报（路透社电头）"
    },
    {
     "id": "auto_2026-10-28_40667",
@@ -11477,7 +11479,8 @@
     "collection_method": "legacy",
     "column": "地区热点",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "U.S. News（路透社电头）"
    },
    {
     "id": "auto_2026-10-27_91756",
@@ -11637,7 +11640,8 @@
     "collection_method": "legacy",
     "column": "地区热点",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "NewsBreak（路透社电头）"
    },
    {
     "id": "auto_2026-10-27_24738",
@@ -11681,7 +11685,8 @@
     "collection_method": "legacy",
     "column": "中国",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "Geo News（路透社电头）"
    },
    {
     "id": "auto_2026-10-27_69619",
@@ -11725,7 +11730,8 @@
     "collection_method": "legacy",
     "column": "美国",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "AOL（路透社电头）"
    },
    {
     "id": "auto_2026-10-28_86513",
