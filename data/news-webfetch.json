@@ -1,1375 +1,2325 @@
 [
-  {
-    "title_zh": "美方拟禁中国产数据中心设备 中国 AI 股回撤加剧",
-    "title_en": "US weighs ban on Chinese-made data center equipment as China's AI rally unravels",
-    "summary_zh": "中国 AI 与半导体板块持续深度调整，科创板 50 指数不到四个月回撤约 40%、市值蒸发约 4800 亿美元，远大于纳斯达克同期 6% 的跌幅。交易员将压力归于估值过高与美方可能禁止使用中国制造的数据中心设备，叠加监管收紧杠杆与高频交易。AI 相关股票占 A 股与港股总市值 42%、成交额 57%（高盛数据）；宇树科技上市以来腰斩，长鑫存储近一月跌逾 25%，中际旭创、新易盛自高点回落约 60%。",
-    "source": "卫报",
-    "category": "中美关系",
-    "keywords": [
-      "数据中心设备",
-      "出口管制",
-      "AI 股",
-      "科创板",
-      "长鑫存储"
-    ],
-    "url": "https://www.theguardian.com/world/2026/oct/27/chinese-markets-lose-trillions-ai-race-beijing",
-    "priority_score": 92,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "美对中国船舶收费延后两个月 美贸易代表再批欧盟空客贷款",
-    "title_en": "USTR and fees on Chinese ships",
-    "summary_zh": "彭博社政策通讯披露，美方对中国籍与中国建造船舶的港口收费将延后两个月实施；美国贸易代表格里尔同时再次批评欧盟对空客的贷款支持，指其扭曲竞争。该收费源于上一轮 301 调查结论，原本被视作对华海事物流施压的关键杠杆，延期反映业界对供应链与运价的顾虑正在影响执行节奏。",
-    "source": "彭博社",
-    "category": "中美关系",
-    "keywords": [
-      "301调查",
-      "港口费",
-      "中国船舶",
-      "美贸易代表",
-      "空客"
-    ],
-    "url": "https://www.bloomberg.com/news/newsletters/2026-10-27/ustr-and-fees-on-chinese-ships",
-    "priority_score": 90,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "在美中国留学生锐减 FBI 与高校担忧人才管道断裂",
-    "title_en": "Will China travel hurt US students' careers? FBI battles fears as talent pipeline stalls",
-    "summary_zh": "南华早报报道，赴美中国留学生规模持续下滑，FBI 与部分高校对中国学生的安全审查与「中国行动计划」式顾虑，正与院校招生的现实需求形成张力。招生方担忧人才管道断裂将削弱美国科研后备力量，而执法部门强调防范技术外流。这一矛盾叠加签证与旅行限制，正成为中美人文交流下行压力的缩影。",
-    "source": "南华早报",
-    "category": "中美关系",
-    "keywords": [
-      "留学生",
-      "FBI",
-      "人文交流",
-      "技术审查"
-    ],
-    "url": "https://www.scmp.com/news/china/diplomacy/article/3372362/will-china-travel-hurt-american-students-careers-fbi-battles-fears-talent-pipeline-stalls",
-    "priority_score": 86,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "英伟达支持的印尼 AI 平台发行 31 亿美元 GPU 贷款",
-    "title_en": "Nvidia-Backed Firm Launches $3.1 Billion GPU Loan into Market",
-    "summary_zh": "彭博社援引知情人士，英伟达参股的印尼 AI 基础设施平台 Zankore 正向市场分销 31 亿美元五年期贷款，用于为其新建 AI 工厂采购 GPU，利率为 SOFR 加 330 个基点，大华银行等机构参与。交易是亚洲 AI 建设融资热潮的最新一笔，显示算力扩张正从股权融资转向债务市场，也使 GPU 资产成为信用市场新标的。",
-    "source": "彭博社",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "英伟达",
-      "Zankore",
-      "GPU 贷款",
-      "AI 工厂",
-      "债务融资"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-10-28/nvidia-backed-firm-launches-3-1-billion-gpu-loan-into-market",
-    "priority_score": 89,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "SK 海力士业绩超预期 派发 450 亿美元分红与回购",
-    "title_en": "SK Hynix profits soar amid roaring AI chip demand",
-    "summary_zh": "SK 海力士公布创纪录季度利润，在 AI 存储需求推动下业绩超出市场预期，并宣布规模约 450 亿美元的分红与回购计划。作为高带宽内存主要供应商，其表现被视为 AI 服务器需求强度的直接指标，也印证存储环节在算力资本开支链条中的议价能力仍然强劲。",
-    "source": "金融时报",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "SK海力士",
-      "HBM",
-      "AI芯片",
-      "分红回购"
-    ],
-    "url": "https://www.ft.com/content/44c35ed7-aa46-4d45-91f5-2773f00ae6be",
-    "priority_score": 86,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "AI 交易回暖带动科技股与亚股上行",
-    "title_en": "Tech stocks gain as AI trade revives; Asian Stocks Climb on AI Trade Optimism",
-    "summary_zh": "AI 交易情绪回暖，科技股领涨，亚洲股市连续第二日走高，油价同步上涨。市场对算力与存储需求的乐观预期部分抵消了对资本开支过热与估值偏高的担忧，此前深度回调的中国 AI 板块与美股半导体板块走势出现分化。",
-    "source": "金融时报",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "AI交易",
-      "科技股",
-      "亚洲股市",
-      "油价"
-    ],
-    "url": "https://www.ft.com/content/a4f9f81e-df30-4669-9eca-865d9d14e441",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "ASMPT 营收增 49% 创年内最快 芯片业务略逊预期",
-    "title_en": "ASMPT Sales Jump 49% on AI Demand as Chip Unit Misses Estimate",
-    "summary_zh": "彭博社报道，先进封装设备商 ASMPT 受 AI 硬件需求拉动，录得年内最快营收增速 49%，但半导体分部小幅不及预期，反映分析师对芯片设备环节设定了更高门槛。先进封装正是当前算力供应链最紧的环节之一，其订单能见度被视为明年产能扩张节奏的先行指标。",
-    "source": "彭博社",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "ASMPT",
-      "先进封装",
-      "芯片设备",
-      "AI硬件"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-10-28/asmpt-sales-jump-49-on-ai-demand-as-chip-unit-misses-estimate",
-    "priority_score": 82,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "机器人初创 Physical Intelligence 洽谈 200 亿美元估值融资",
-    "title_en": "Robotics Lab Physical Intelligence in Talks for a $20 Billion Valuation",
-    "summary_zh": "彭博社报道，开发通用机器人软件的初创公司 Physical Intelligence 正与投资人洽谈新一轮融资，估值约 200 亿美元。该公司主攻把大模型能力迁移到实体机器人，是具身智能赛道估值攀升最快的标的之一，其融资进展将影响整个机器人软件层的定价基准。",
-    "source": "彭博社",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "具身智能",
-      "机器人",
-      "融资",
-      "Physical Intelligence"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-10-27/robotics-lab-physical-intelligence-in-talks-for-a-20-billion-valuation",
-    "priority_score": 82,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "美国 AI 繁荣的对冲空间正在收窄",
-    "title_en": "The limits of hedging the AI boom",
-    "summary_zh": "金融时报评论指出，投资者试图通过分散配置对冲 AI 泡沫风险的空间正在收窄：AI 相关权重已渗透至宽基指数、信用市场与电力等传统防御板块，一旦算力资本开支转向，可避险的「非 AI」资产池明显不足。文章提示，当前组合结构对 AI 叙事的依赖度高于多数人自认水平。",
-    "source": "金融时报",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "AI泡沫",
-      "资产配置",
-      "对冲",
-      "资本开支"
-    ],
-    "url": "https://www.ft.com/content/0b0ae366-c1e0-4c35-8cad-c924a23d33e7",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "「K 型公司」：Anthropic 与 Meta 分化出的两种 AI 组织形态",
-    "title_en": "Anthropic, Meta and the K-shaped company",
-    "summary_zh": "金融时报专栏以「K 型公司」概括 AI 时代企业分化的两条路径：一类如 Anthropic 以研究与模型能力为核心、压缩非核心职能；另一类如 Meta 以巨额算力与人才投入换取平台级位置。文章认为，同一技术浪潮正在同时制造超高利润与结构性裁员，企业组织形态的分叉比行业景气度更值得关注。",
-    "source": "金融时报",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "Anthropic",
-      "Meta",
-      "组织形态",
-      "AI就业"
-    ],
-    "url": "https://www.ft.com/content/0b7db9a1-8279-4025-8c2a-44a1010828f4",
-    "priority_score": 76,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "通用汽车转板纳斯达克 加速 AI 布局",
-    "title_en": "GM to switch listing from NYSE to Nasdaq as it accelerates AI push",
-    "summary_zh": "通用汽车宣布将上市地从纽交所转至纳斯达克，配合其加速推进 AI 战略。转板通常意味着公司希望被纳入科技股指数与被动资金池，也反映传统车企在自动驾驶与车载智能上重新定位资本市场叙事。",
-    "source": "金融时报",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "通用汽车",
-      "纳斯达克",
-      "转板",
-      "自动驾驶"
-    ],
-    "url": "https://www.ft.com/content/01467514-66c1-4375-9906-45a47b949270",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "AI 机器人曾大规模涌入英国电子烟禁令公众咨询",
-    "title_en": "AI bots flooded 2023 UK government consultation on disposable vapes ban",
-    "summary_zh": "卫报报道，英国政府 2023 年就一次性电子烟禁令开展的公众咨询遭 AI 机器人批量灌水，出现大量雷同回复。事件被视为「AI 参与式治理污染」的标志性案例，暴露政府在意见征集环节缺乏身份与内容真实性校验，也为其后各国收紧 AI 生成内容在政策程序中的使用提供了依据。",
-    "source": "卫报",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "AI机器人",
-      "公众咨询",
-      "电子烟",
-      "治理污染"
-    ],
-    "url": "https://www.theguardian.com/society/2026/oct/27/ai-bots-flooded-2023-uk-government-consultation-disposable-vapes-ban",
-    "priority_score": 76,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "北京任命宣传系统老将主政边境省份",
-    "title_en": "Why has Beijing appointed a propaganda veteran to lead a border province?",
-    "summary_zh": "南华早报分析北京近期任命一位长期在宣传系统任职的官员主政边境省份的人事安排。文章认为，此举反映中央对边疆地区舆情管理、跨境信息秩序与对外叙事能力的重视上升，也显示干部选拔中「宣传—安全」复合履历的分量在增加。",
-    "source": "南华早报",
-    "category": "中国外交与周边",
-    "keywords": [
-      "人事任命",
-      "宣传系统",
-      "边疆治理"
-    ],
-    "url": "https://www.scmp.com/news/china/politics/article/3372341/why-has-beijing-appointed-propaganda-veteran-lead-border-province",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "菲律宾对华「两种声音」：军方强硬与外交缓和并行",
-    "title_en": "Manila speaks with 2 voices on China",
-    "summary_zh": "南华早报评论指出，马尼拉在对华政策上呈现「两种声音」：军方与安全部门在南海问题上持续强硬表态，外交与经济部门则寻求保持沟通与务实合作。文章认为这种分工既是国内政治平衡的结果，也使外界难以判断菲方真实底线，增加了误判风险。",
-    "source": "南华早报",
-    "category": "中国外交与周边",
-    "keywords": [
-      "菲律宾",
-      "南海",
-      "对华政策",
-      "马尼拉"
-    ],
-    "url": "https://www.scmp.com/opinion/asia-opinion/article/3372147/manila-speaks-2-voices-china",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "轰-6K 是否已具备强电子干扰能力？",
-    "title_en": "Is China's H-6K strategic bomber getting powerful jamming capabilities?",
-    "summary_zh": "南华早报援引军事分析人士称，解放军轰-6K 战略轰炸机的最新改进型可能加装了新型电子战吊舱，具备更强的干扰与压制能力。若判断成立，意味着中国空基电子战平台从支援角色向「打击—干扰一体」演进，将改变西太平洋方向的电磁频谱态势。",
-    "source": "南华早报",
-    "category": "中国外交与周边",
-    "keywords": [
-      "轰-6K",
-      "电子战",
-      "解放军",
-      "军事现代化"
-    ],
-    "url": "https://www.scmp.com/news/china/military/article/3372255/chinas-h-6k-strategic-bomber-getting-powerful-jamming-capabilities",
-    "priority_score": 84,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "台湾拟以自主蜂群无人机应对大陆「灰色地带」压力",
-    "title_en": "Taiwan looks to autonomous swarms to counter Beijing's grey-zone pressure",
-    "summary_zh": "南华早报报道，台湾方面正推动自主蜂群无人机项目，试图以低成本、可量产的无人系统应对大陆在台海周边的「灰色地带」施压。方案重点在于集群自主决策与抗干扰通信，但受限于供应链关键零部件与量产能力，短期内难以形成规模化战力。",
-    "source": "南华早报",
-    "category": "中国外交与周边",
-    "keywords": [
-      "台湾",
-      "无人机蜂群",
-      "灰色地带",
-      "台海"
-    ],
-    "url": "https://www.scmp.com/news/china/military/article/3372189/taiwan-looks-autonomous-swarms-counter-beijings-grey-zone-pressure",
-    "priority_score": 82,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "东风导弹「无预告」演练画面传递何种信号",
-    "title_en": "What message is China sending with latest footage of 'no-notice' DF rocket drill?",
-    "summary_zh": "南华早报分析解放军公开的东风系列导弹「无预告」发射演练画面，认为重点不在型号参数，而在展示「不预先通报、快速转入发射」的战备状态。军事分析人士指出，这类公开既是对外威慑信号，也带有检验部队临机响应能力的内部目的。",
-    "source": "南华早报",
-    "category": "中国外交与周边",
-    "keywords": [
-      "东风导弹",
-      "火箭军",
-      "战备演练",
-      "威慑"
-    ],
-    "url": "https://www.scmp.com/news/china/military/article/3372206/what-message-china-sending-latest-footage-no-notice-df-rocket-drill",
-    "priority_score": 82,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "中国古都何以拿下全国最快出口增速",
-    "title_en": "How China's ancient capital staked a claim to the nation's fastest export growth",
-    "summary_zh": "南华早报报道，一座中国古都凭借产业转移与制造业升级，录得全国最快的出口增速。文章把增长归因于劳动密集型产业内迁、中欧班列通道建设与本地加工贸易集群成形，认为这呈现出中国出口格局从沿海向内陆再平衡的路径。",
-    "source": "南华早报",
-    "category": "中国外交与周边",
-    "keywords": [
-      "出口增速",
-      "产业转移",
-      "中欧班列",
-      "内陆经济"
-    ],
-    "url": "https://www.scmp.com/economy/china-economy/article/3372316/how-chinas-ancient-capital-staked-claim-nations-fastest-export-growth",
-    "priority_score": 76,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "姆巴佩为毛泽东「独裁者」言论道歉 中国舆论反弹",
-    "title_en": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
-    "summary_zh": "BBC 报道，法国球星姆巴佩就此前疑似将毛泽东称为「独裁者」的言论道歉，称其表述「考虑不周」。相关言论在中国社交平台引发强烈反弹，其代言的品牌与商业合作受到关注。事件再次显示跨国体育明星涉华政治表述的敏感度与商业代价。",
-    "source": "BBC",
-    "category": "中国外交与周边",
-    "keywords": [
-      "姆巴佩",
-      "道歉",
-      "舆论反弹",
-      "体育外交"
-    ],
-    "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "英国预算案：财相以「不造成伤害」为纲 能源改革成核心",
-    "title_en": "Healey puts UK energy reform at centre of his 'do no harm' Budget",
-    "summary_zh": "英国财相希利公布预算，把能源市场改革置于核心位置，整体基调定为「不造成伤害」。方案包括调整能源价格机制与投资激励，同时对税负与支出作出延后处理的安排。市场关注其在增长乏力与财政空间受限之间的平衡能力。",
-    "source": "金融时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "英国预算",
-      "能源改革",
-      "希利",
-      "财政政策"
-    ],
-    "url": "https://www.ft.com/content/427a7624-d710-4078-9a7e-d23fdb0b2975",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "英国财相反转 放弃削减现金 ISA 免税额度",
-    "title_en": "Healey to reverse cuts to cash Isa allowance",
-    "summary_zh": "金融时报报道，英国财相希利决定撤回削减现金 ISA 免税额度（cash Isa allowance）的计划。该调整原被视为把储蓄引向股市、配合增长战略的手段，但在储户与业界强烈反对下反转，反映英国预算在推动资本市场改革与保护普通储蓄者之间的政治张力。",
-    "source": "金融时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "ISA",
-      "英国储蓄",
-      "资本市场改革",
-      "预算反转"
-    ],
-    "url": "https://www.ft.com/content/619978f5-4400-4bf0-8b1f-4cf62bee9774",
-    "priority_score": 76,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "英国被指试图主要靠增税快速压缩赤字",
-    "title_en": "Britain is trying to cut its deficit quickly — can it do it mainly through tax rises?",
-    "summary_zh": "金融时报分析指出，英国政府选择以增税为主要工具快速压缩财政赤字，而非大幅削减支出。文章认为这一路径在政治阻力上相对可控，但对增长与企业投资的抑制效应不可忽视，且一旦经济放缓，税基收缩会使赤字目标更难达成。",
-    "source": "金融时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "英国财政",
-      "赤字",
-      "增税",
-      "经济增长"
-    ],
-    "url": "https://www.ft.com/content/f116a855-61cc-4e36-9f9b-c2ff168b6605",
-    "priority_score": 75,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "英国政府悄然取消二十余项新建道路计划",
-    "title_en": "UK government quietly axes more than two dozen new road schemes",
-    "summary_zh": "金融时报报道，英国政府未作高调宣布即取消二十多个新建道路项目。此举与财政紧缩及交通投资重心转向公共交通、维护既有路网有关，但也引发地方对连通性与增长承诺落空的质疑。",
-    "source": "金融时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "英国交通",
-      "基建",
-      "财政紧缩",
-      "道路项目"
-    ],
-    "url": "https://www.ft.com/content/92780ba3-5201-4002-abca-3ee1a053eb30",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "英国议会委员会：欣克利角 Sizewell 核电站是纳税人的「糟糕交易」",
-    "title_en": "Sizewell nuclear plant is 'terrible deal' for British taxpayers, MPs conclude",
-    "summary_zh": "英国议会委员会结论认为，Sizewell C 核电项目对英国纳税人而言是「糟糕的交易」，主要问题在于差价合约锁定的电价水平过高、风险分配失衡。结论给英国核电融资模式带来压力，也可能影响后续项目的谈判条件与外资参与意愿。",
-    "source": "金融时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "Sizewell C",
-      "核电",
-      "英国能源",
-      "差价合约"
-    ],
-    "url": "https://www.ft.com/content/bc330ee4-f151-4552-88a8-8879a26d8fdd",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "欧盟就乌克兰资金缺口向盟友施压",
-    "title_en": "EU pressures allies over looming Ukraine funding crunch",
-    "summary_zh": "金融时报报道，欧盟正向盟友施压，以填补即将出现的乌克兰资金缺口。随着战事延宕与各国财政空间收紧，欧盟内部对分摊比例与资金来源分歧扩大，若不能形成稳定融资安排，乌方明年的预算与军费将面临断档风险。",
-    "source": "金融时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "乌克兰",
-      "欧盟",
-      "资金缺口",
-      "援助"
-    ],
-    "url": "https://www.ft.com/content/8aba217f-064f-4193-89fc-3565bd2ee910",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "普京向北欧领导人「讲授」俄罗斯历史",
-    "title_en": "Putin lectures Nordic leaders on Russian history",
-    "summary_zh": "金融时报报道，普京在与北欧领导人的会谈中大量阐述俄方对历史的叙事，把当前冲突置于其长期的势力范围论述之中。分析认为，这种表述方式意味着俄方在谈判前提上并未松动，会谈的实际产出有限。",
-    "source": "金融时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "普京",
-      "北欧",
-      "历史叙事",
-      "谈判"
-    ],
-    "url": "https://www.ft.com/content/a384acd1-c90c-4b71-bf7d-6c6e00bf9822",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "华盛顿与欧洲讨论让美国油企参与乌克兰和平方案下的俄罗斯交易",
-    "title_en": "Washington discusses Russian deals for US oil majors in Ukraine peace talks",
-    "summary_zh": "金融时报报道，华盛顿正与相关方讨论在乌克兰和平安排中为美国大型石油公司开放俄罗斯业务的可能性。把能源利益嵌入停火框架，被视为给美企提供参与激励、同时为俄方提供解禁预期的设计，但在欧洲盟友内部引发争议。",
-    "source": "金融时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "美国油企",
-      "俄罗斯",
-      "乌克兰和平",
-      "能源"
-    ],
-    "url": "https://www.ft.com/content/d703aaae-f607-4b30-9830-ac2a25472d44",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "法国对学生作出让步 但未能平息抗议",
-    "title_en": "France Makes Concessions to Students, but Not Enough to Halt Protests",
-    "summary_zh": "纽约时报报道，法国政府就学生诉求作出让步，但抗议仍未平息。学生团体认为方案未触及核心问题，工会则表示将继续施压。事件给本已承压的法国财政与改革议程再添变数。",
-    "source": "纽约时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "法国",
-      "学生抗议",
-      "让步",
-      "改革"
-    ],
-    "url": "https://www.nytimes.com/2026/10/26/world/europe/france-student-protests.html",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "塞尔维亚学生运动获胜却无领袖 转头问责媒体",
-    "title_en": "Serbian Students, Victorious and Leaderless, Go After the Media",
-    "summary_zh": "纽约时报报道，塞尔维亚学生运动在取得阶段性胜利后缺少统一领导层，转而把矛头对准被认为与执政者关系密切的媒体。文章认为，去中心化的组织形态赋予运动韧性，但也使其难以转化为可持续的政治力量。",
-    "source": "纽约时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "塞尔维亚",
-      "学生运动",
-      "媒体",
-      "政治转型"
-    ],
-    "url": "https://www.nytimes.com/2026/10/27/world/europe/serbia-student-list-news-media-vucic.html",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "塞尔维亚选举显示民族主义民粹派的新脆弱性",
-    "title_en": "Serbia's Election Shows New Vulnerability for Nationalist Populists",
-    "summary_zh": "纽约时报分析塞尔维亚选举结果，认为长期执政的民族主义民粹阵营首次显现结构性弱点：年轻选民流失、城市中间阶层重组以及对外平衡策略的收益递减。文章提示巴尔干政治可能进入重新洗牌期。",
-    "source": "纽约时报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "塞尔维亚",
-      "民粹主义",
-      "选举",
-      "巴尔干"
-    ],
-    "url": "https://www.nytimes.com/2026/10/26/world/europe/serbia-election-vucic-nationalist-populists.html",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "查尔斯国王赴加勒比 面临赔奴呼声",
-    "title_en": "King Charles heads to Caribbean as calls grow for slavery apology",
-    "summary_zh": "CNN 报道，英国国王查尔斯前往加勒比地区访问，当地要求就奴隶制历史道歉并赔偿的呼声持续升高。此行与英联邦会议相关，王室如何在历史责任与现实外交之间取舍，成为访问的核心看点。",
-    "source": "CNN",
-    "category": "中欧与盟友",
-    "keywords": [
-      "查尔斯国王",
-      "加勒比",
-      "奴隶制赔偿",
-      "英联邦"
-    ],
-    "url": "https://edition.cnn.com/2026/10/27/europe/king-charles-uk-caribbean-slavery-apology-chogm-intl",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "查尔斯国王抵巴哈马 面对「把欠我们的还回来」诉求",
-    "title_en": "King Charles arrives in Bahamas, faces demands for reparations",
-    "summary_zh": "南华早报报道，查尔斯国王抵达巴哈马，当地团体当面提出赔偿诉求，喊出「把欠我们的还回来」。访问把英联邦内部关于殖民历史与赔偿的争论推向台前，也为英国与加勒比国家的关系设定新的议价议题。",
-    "source": "南华早报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "巴哈马",
-      "赔偿",
-      "查尔斯",
-      "英联邦"
-    ],
-    "url": "https://www.scmp.com/news/world/americas/article/3372358/king-charles-arrives-bahamas-faces-demands-reparations-pay-us-what-you-owe-us",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "澳大利亚通胀升至 4.3% 加息预期升温",
-    "title_en": "Australia's inflation rate rises to 4.3%, fuelling fears of fifth interest rate hike this year",
-    "summary_zh": "卫报报道，澳大利亚通胀率升至 4.3%，加大市场对年内第五次加息的担忧。数据表明服务业价格黏性仍强，央行面临在增长放缓与通胀反弹之间两难，家庭按揭压力与消费前景同步承压。",
-    "source": "卫报",
-    "category": "中欧与盟友",
-    "keywords": [
-      "澳大利亚",
-      "通胀",
-      "加息",
-      "央行"
-    ],
-    "url": "https://www.theguardian.com/australia-news/2026/oct/28/inflation-rate-australia-2026-number-data-consumer-price-index-cpi-release",
-    "priority_score": 76,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "澳政府被曝以 260 万澳元助工党击败两名绿党对手",
-    "title_en": "Australian Labor spent AU$2.6M ousting 2 Greens rivals from parliament",
-    "summary_zh": "Politico 报道，澳大利亚工党被披露投入约 260 万澳元用于在选举中击败两名绿党议员。数据反映工党在左翼选票争夺上的资源投放强度，也显示气候与住房议题正在重塑澳国内政党竞争格局。",
-    "source": "Politico",
-    "category": "中欧与盟友",
-    "keywords": [
-      "澳大利亚工党",
-      "绿党",
-      "选举支出",
-      "左翼竞争"
-    ],
-    "url": "https://www.politico.com/news/2026/10/27/australia-labor-greens-spending-01136011",
-    "priority_score": 70,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "荷兰再度退出欧洲歌唱大赛 抗议以色列参赛",
-    "title_en": "Netherlands pulls out of Eurovision again over Israel participation",
-    "summary_zh": "BBC 报道，荷兰因以色列参赛问题再次宣布退出欧洲歌唱大赛。文化赛事正持续被巴以冲突政治化，多国广播机构与参赛方在抵制与参与之间反复摇摆，赛事主办方正面临规则与政治压力的双重挑战。",
-    "source": "BBC",
-    "category": "中欧与盟友",
-    "keywords": [
-      "欧洲歌唱大赛",
-      "荷兰",
-      "以色列",
-      "文化抵制"
-    ],
-    "url": "https://www.bbc.co.uk/news/articles/cmr4y5dvlzneo",
-    "priority_score": 70,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "以色列大选出口民调：内塔尼亚胡阵营受挫 但无明确赢家",
-    "title_en": "Israel election too close to call as exit polls give Netanyahu bloc slightly fewer seats",
-    "summary_zh": "以色列议会选举投票率创近年新高，出口民调显示内塔尼亚胡阵营席位略少于对手，但双方均未获得明确多数。反对派领导人艾森科特称国家「投票选择改变」，阿拉伯政党有望取得历史性席位增长，组阁谈判将决定内塔尼亚胡的政治去留。",
-    "source": "卫报",
-    "category": "地区热点",
-    "keywords": [
-      "以色列大选",
-      "内塔尼亚胡",
-      "出口民调",
-      "组阁"
-    ],
-    "url": "https://www.theguardian.com/world/2026/oct/27/israel-election-too-close-to-call-as-exit-polls-give-netanyahu-bloc-slightly-fewer-seats",
-    "priority_score": 88,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "阿拉伯政党或以 18 席成为以色列组阁关键力量",
-    "title_en": "Arab parties could win 18 Israeli parliament seats",
-    "summary_zh": "半岛电视台报道，以色列阿拉伯政党在本届选举中有望赢得约 18 个议席，成为组阁的关键变量。阿拉伯城镇以焰火庆祝投票率创新高，若其正式参与执政联盟，将改变以色列政治长期排斥阿拉伯政党的格局。",
-    "source": "半岛电视台",
-    "category": "地区热点",
-    "keywords": [
-      "阿拉伯政党",
-      "以色列议会",
-      "组阁",
-      "投票率"
-    ],
-    "url": "https://www.aljazeera.com/news/2026/10/28/arab-parties-could-win-18-seats-in-israeli-elections-exit-polls-suggest",
-    "priority_score": 84,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "艾森科特：以色列人投票选择了改变",
-    "title_en": "Israel's Eisenkot says country voted for change",
-    "summary_zh": "半岛电视台报道，以色列反对派领导人艾森科特在出口民调公布后表示，选民已用选票表达「求变」意愿。作为前军方高层，他把选战主轴锁定在问责与安全战略重估，其能否完成组阁将决定以色列对加沙与伊朗政策的走向。",
-    "source": "半岛电视台",
-    "category": "地区热点",
-    "keywords": [
-      "艾森科特",
-      "以色列",
-      "求变",
-      "安全战略"
-    ],
-    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/28/israels-eisenkot-says-country-voted-for-change",
-    "priority_score": 82,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "出口民调引爆以色列政治光谱激烈争论",
-    "title_en": "Exit polls trigger heated debate across Israeli political divide",
-    "summary_zh": "半岛电视台报道，出口民调结果在以色列各政治阵营引发激烈争论：右翼强调组阁算术仍有利，中左阵营则称这是内塔尼亚胡时代的终结信号。争议焦点在于阿拉伯政党席位与小型党派门槛如何影响最终议席分配。",
-    "source": "半岛电视台",
-    "category": "地区热点",
-    "keywords": [
-      "出口民调",
-      "以色列",
-      "政治分歧",
-      "组阁算术"
-    ],
-    "url": "https://www.aljazeera.com/news/2026/10/28/exit-polls-trigger-heated-debate-across-israeli-political-divide",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "内塔尼亚胡被指在选前推动对伊朗动武",
-    "title_en": "Netanyahu Pushed for Attack on Iran Ahead of Israeli Election, Officials Say",
-    "summary_zh": "纽约时报援引官员称，内塔尼亚胡在以色列大选前推动对伊朗采取军事行动。报道认为，这一主张既服务于其安全强人形象，也把以伊对抗置于选举政治之中；美方对行动时机与后果保持谨慎，担心地区冲突升级打乱其更大的对伊安排。",
-    "source": "纽约时报",
-    "category": "地区热点",
-    "keywords": [
-      "内塔尼亚胡",
-      "伊朗",
-      "军事行动",
-      "以色列大选"
-    ],
-    "url": "https://www.nytimes.com/2026/10/26/world/middleeast/netanyahu-iran-israel-election.html",
-    "priority_score": 86,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "卡塔尔埃米尔与普京通话 呼吁在美伊冲突中保持外交",
-    "title_en": "Qatar's Emir and Putin call for diplomacy amid US-Iran conflict",
-    "summary_zh": "半岛电视台报道，卡塔尔埃米尔与普京通电话，双方呼吁通过外交途径处理美伊紧张局势。多哈长期扮演美伊之间的传话角色，此番表态显示海湾国家担忧冲突外溢冲击能源航道与地区稳定。",
-    "source": "半岛电视台",
-    "category": "地区热点",
-    "keywords": [
-      "卡塔尔",
-      "普京",
-      "美伊",
-      "外交斡旋"
-    ],
-    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/27/qatars-emir-and-putin-call-for-diplomacy-amid-us-iran-conflict",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "伊朗就霍尔木兹海峡通行威胁韩国航运集团",
-    "title_en": "Iran threatens South Korean shipping group over Hormuz transits",
-    "summary_zh": "金融时报报道，伊朗就霍尔木兹海峡通行问题向韩国航运企业发出威胁。海峡承载全球约五分之一的石油海运量，任何针对性骚扰都会推高航运保费与油价风险溢价，也使韩国在美伊对峙中的站位更为棘手。",
-    "source": "金融时报",
-    "category": "地区热点",
-    "keywords": [
-      "霍尔木兹海峡",
-      "伊朗",
-      "韩国航运",
-      "能源通道"
-    ],
-    "url": "https://www.ft.com/content/171ffdaa-e3e7-41b9-a4c6-09c9ace3f719",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "梅拉尼娅斡旋的停火在俄占乌克兰城镇生效",
-    "title_en": "Cease-Fire Brokered by Melania Trump Begins in Ukrainian City of Oleshky",
-    "summary_zh": "纽约时报报道，由梅拉尼娅·特朗普斡旋达成的地方性停火在俄占乌克兰城镇奥列什基开始生效。该安排属局部人道停火，范围有限，但被视为美方以非传统渠道介入俄乌事务的尝试，其可持续性仍待观察。",
-    "source": "纽约时报",
-    "category": "地区热点",
-    "keywords": [
-      "停火",
-      "奥列什基",
-      "梅拉尼娅",
-      "俄乌"
-    ],
-    "url": "https://www.nytimes.com/2026/10/26/world/europe/ukraine-oleshky-ceasefire-russia-war.html",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "赫尔松地区停火范围扩大 官员称",
-    "title_en": "Ceasefire extended across Ukraine's Kherson region, officials say",
-    "summary_zh": "BBC 报道，乌克兰官员称停火范围已扩大至赫尔松地区。此前奥列什基的局部停火被指基本维持，扩大安排若落实，将是近期俄乌之间少有的一次降级，但双方对停火地理范围与监督机制的表述仍不一致。",
-    "source": "BBC",
-    "category": "地区热点",
-    "keywords": [
-      "赫尔松",
-      "停火扩大",
-      "俄乌",
-      "降级"
-    ],
-    "url": "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "北溪管道破坏案嫌疑人被指受乌军「直接指挥」",
-    "title_en": "Nord Stream sabotage suspect under 'direct command' of Ukrainian army",
-    "summary_zh": "金融时报报道，北溪管道爆炸案嫌疑人被指处于乌克兰军队的「直接指挥」之下。相关证据若被采信，将使欧洲内部关于乌方角色与援助条件的争论升温，也给德乌关系与后续司法程序带来政治压力。",
-    "source": "金融时报",
-    "category": "地区热点",
-    "keywords": [
-      "北溪",
-      "管道爆炸",
-      "乌克兰",
-      "司法调查"
-    ],
-    "url": "https://www.ft.com/content/fdc70b65-af31-4697-91b3-69c6f1a1db9e",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "巴西大选落败后 弗拉维奥·博索纳罗离境赴美",
-    "title_en": "Flávio Bolsonaro Leaves Brazil for the U.S. After Election Defeat",
-    "summary_zh": "纽约时报报道，巴西总统选举落败后，弗拉维奥·博索纳罗离开巴西前往美国。美方表示将在其入境问题上给予便利。事件把巴西政权更替与美巴关系直接挂钩，也使卢拉政府面临如何处理前执政家族司法问题的抉择。",
-    "source": "纽约时报",
-    "category": "地区热点",
-    "keywords": [
-      "巴西大选",
-      "博索纳罗",
-      "卢拉",
-      "美巴关系"
-    ],
-    "url": "https://www.nytimes.com/2026/10/27/world/americas/brazil-flavio-bolsonaro-flees-election.html",
-    "priority_score": 82,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "卢拉胜选重挫特朗普的拉美布局 前中国事务特使解读",
-    "title_en": "Lula's win in Brazil deals blow to Trump's Latin America push: former China envoy",
-    "summary_zh": "南华早报援引一位前中国事务特使观点，认为卢拉在巴西胜选对特朗普的拉美战略构成打击。文章指出，巴西作为地区最大经济体若重新偏向一体化与多元外交，将削弱美方以双边施压重塑拉美的空间。",
-    "source": "南华早报",
-    "category": "地区热点",
-    "keywords": [
-      "卢拉",
-      "巴西",
-      "拉美",
-      "特朗普"
-    ],
-    "url": "https://www.scmp.com/news/china/diplomacy/article/3372318/lulas-win-brazil-deals-blow-trumps-latin-america-push-former-china-envoy",
-    "priority_score": 80,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "马查多结束流亡返委内瑞拉 考验美国影响力边界",
-    "title_en": "Machado's Return to Venezuela Tests Limits of U.S. Sway",
-    "summary_zh": "纽约时报报道，委内瑞拉反对派领袖马查多结束流亡回国，其归来既被视为反对派重组契机，也考验美国对委内瑞拉的实际影响力。美方近期在能源与移民议题上与加拉加斯互动频繁，使反对派的谈判筹码更加复杂。",
-    "source": "纽约时报",
-    "category": "地区热点",
-    "keywords": [
-      "马查多",
-      "委内瑞拉",
-      "美国影响力",
-      "反对派"
-    ],
-    "url": "https://www.nytimes.com/2026/10/26/world/americas/venezuela-machado-rodriguez-trump.html",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "特朗普展示「百万桶原油」油轮 并抛出委内瑞拉成第 51 州说法",
-    "title_en": "Trump shows off tanker with '1m barrels of oil' and floats Venezuela as 51st state",
-    "summary_zh": "卫报报道，特朗普在得州活动中展示装载约百万桶原油的油轮，并抛出委内瑞拉成为美国「第 51 个州」的说法。此举把能源议题与拉美政权更替叙事捆绑，服务于其选战动员，但在外交层面引发盟友与对手的不同解读。",
-    "source": "卫报",
-    "category": "地区热点",
-    "keywords": [
-      "特朗普",
-      "委内瑞拉",
-      "原油",
-      "得州集会"
-    ],
-    "url": "https://www.theguardian.com/us-news/2026/oct/27/trump-oil-tanker-venezuela",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "印度气旋「阿尔纳布」逼近 数万人撤离",
-    "title_en": "India Evacuates Tens of Thousands as Cyclone Arnab Approaches",
-    "summary_zh": "纽约时报报道，气旋「阿尔纳布」逼近印度沿海，当局已疏散数万人。预报显示风暴将带来强降雨与风暴潮，对低洼农业区与港口作业构成威胁，地方救灾能力与预警体系面临检验。",
-    "source": "纽约时报",
-    "category": "地区热点",
-    "keywords": [
-      "印度",
-      "气旋",
-      "疏散",
-      "灾害"
-    ],
-    "url": "https://www.nytimes.com/2026/10/27/world/asia/india-cyclone-arnab-evacuations-nepal.html",
-    "priority_score": 70,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "苏丹内战持续 西方警告饥荒风险",
-    "title_en": "West warns of famine risk in Sudan as civil war grinds on",
-    "summary_zh": "BBC 报道，随着苏丹内战延续，西方国家警告当地面临饥荒风险。援助通道受阻与粮食生产崩溃叠加，使数百万民众处于严重粮食不安全状态，国际社会对交战方的施压手段仍显不足。",
-    "source": "BBC",
-    "category": "地区热点",
-    "keywords": [
-      "苏丹",
-      "内战",
-      "饥荒",
-      "人道危机"
-    ],
-    "url": "https://www.bbc.co.uk/news/articles/cj5ynkk6v3pzo",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "特朗普在得州集会上称高油价是「短期痛苦」",
-    "title_en": "Trump Says High Gas Price a 'Short-Term Pain' at Texas Rally",
-    "summary_zh": "彭博社报道，特朗普在得州集会上把高油价称为「短期痛苦」，并为共和党参议员候选人帕克斯顿作最后助选。这一表态承认能源价格对选情的压力，同时试图把当前成本上升框定为换取长期能源主导的必要代价。",
-    "source": "彭博社",
-    "category": "美国内政",
-    "keywords": [
-      "特朗普",
-      "油价",
-      "得州",
-      "中期选举"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-10-27/trump-casts-high-gas-price-as-short-term-pain-at-texas-rally",
-    "priority_score": 82,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "特朗普在得州推出放宽甲烷泄漏规定的规则",
-    "title_en": "Trump debuts oil rule rollback as Texas wobbles toward blue",
-    "summary_zh": "Politico 报道，特朗普在得州推出放宽油气行业甲烷泄漏管制的规则，作为争取能源州选票的动作。得州选情出现摇摆迹象，使能源监管松绑成为中期选举前的政策筹码，也令气候承诺与产业竞争力之争再度升温。",
-    "source": "Politico",
-    "category": "美国内政",
-    "keywords": [
-      "甲烷",
-      "能源监管",
-      "得州",
-      "中期选举"
-    ],
-    "url": "https://www.politico.com/news/2026/10/27/trump-methane-gas-paxton-texas-midterms-epa-01111909",
-    "priority_score": 82,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "Rubio 被特朗普「请」上助选台 共和党中期选举借势",
-    "title_en": "Republicans wanted Rubio on the stump. Trump coaxed him there.",
-    "summary_zh": "Politico 报道，共和党希望借助国务卿鲁比奥的拉美裔号召力助选，最终由特朗普亲自促成其走上竞选舞台。这一安排在提升关键州动员效果的同时，也使外交主管官员深度卷入国内政治，引发角色边界讨论。",
-    "source": "Politico",
-    "category": "美国内政",
-    "keywords": [
-      "鲁比奥",
-      "助选",
-      "中期选举",
-      "共和党"
-    ],
-    "url": "https://www.politico.com/news/2026/10/27/marco-rubio-texas-trump-midterms-01137437",
-    "priority_score": 76,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "阿拉斯加「排序投票制」进入公投 共和党欲废除",
-    "title_en": "Alaska's ranked choice voting is on the ballot this year. Republicans want it gone.",
-    "summary_zh": "Politico 报道，阿拉斯加的排序投票制（ranked choice voting）今年被列入公投，共和党力主废除。该制度被认为有利于温和派与跨党合作，两党围绕选举规则的争夺实质是对未来席位结构的预先布局。",
-    "source": "Politico",
-    "category": "美国内政",
-    "keywords": [
-      "排序投票",
-      "阿拉斯加",
-      "选举规则",
-      "公投"
-    ],
-    "url": "https://www.politico.com/news/2026/10/27/alaska-ranked-choice-voting-repeal-01136379",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "赫卡比谈特朗普、曼达尼与纽约的未来",
-    "title_en": "Kathy Hochul on Trump, Mamdani and the future of New York",
-    "summary_zh": "Politico 刊发对纽约州州长霍楚尔的访谈，涉及她与特朗普的博弈、与进步派人物曼达尼的关系以及纽约的财政与治安议题。访谈显示民主党内部在移民、城市治理与选举策略上的路线分歧仍在扩大。",
-    "source": "Politico",
-    "category": "美国内政",
-    "keywords": [
-      "霍楚尔",
-      "纽约",
-      "民主党",
-      "曼达尼"
-    ],
-    "url": "https://www.politico.com/video/2026/10/27/kathy-hochul-on-trump-mamdani-and-the-future-of-new-york-2212608",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "共和党筹款的隐性弱点正在恶化",
-    "title_en": "The hidden GOP fundraising weakness is getting worse",
-    "summary_zh": "Politico 分析指出，共和党筹款结构中的隐性弱点正在恶化：小额捐款增长乏力、大额金主集中度过高，使竞选后期现金调度弹性下降。文章认为这一趋势可能在若干关键选区形成实际劣势。",
-    "source": "Politico",
-    "category": "美国内政",
-    "keywords": [
-      "共和党",
-      "筹款",
-      "小额捐款",
-      "中期选举"
-    ],
-    "url": "https://www.politico.com/news/2026/10/27/trump-gop-online-fundraising-problems-01135716",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "两党议员在中期选举前关注投票安全 呼吁重审提前投票",
-    "title_en": "Coalition MP calls for rethink of pre-poll voting amid heightened security concerns",
-    "summary_zh": "卫报报道，在近期安全事件后，一名联盟党议员呼吁重新审视提前投票安排。围绕投票站安保、邮寄选票与工作人员保护的争论，正把选举基础设施的韧性推上议程。",
-    "source": "卫报",
-    "category": "美国内政",
-    "keywords": [
-      "提前投票",
-      "选举安全",
-      "投票站",
-      "两党"
-    ],
-    "url": "https://www.theguardian.com/australia-news/2026/oct/27/mp-calls-rethink-pre-poll-voting-helen-haines-heightened-security-concerns-ntwnfb",
-    "priority_score": 66,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "美国特使在联合国斥责古巴外交官「这就是美国」",
-    "title_en": "'This is America': US envoy scolds Cuban diplomat at UN",
-    "summary_zh": "半岛电视台报道，美国特使在联合国场合斥责古巴外交官，并以「这就是美国」回应对方。交锋反映美古关系持续紧张，也显示多边场合正越来越多被用于双边对抗的公开表达。",
-    "source": "半岛电视台",
-    "category": "全球治理与多边",
-    "keywords": [
-      "联合国",
-      "古巴",
-      "美国",
-      "外交交锋"
-    ],
-    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/28/this-is-america-us-envoy-scolds-cuban-diplomat-at-un",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "埃及法院关闭独立新闻网站 Mada Masr",
-    "title_en": "Egypt court fines journalist Lina Attalah and orders news site's closure",
-    "summary_zh": "BBC 报道，埃及法院对记者莉娜·阿塔拉处以罚款，并下令关闭独立新闻网站 Mada Masr。此举被媒体权益组织视为埃及新闻空间进一步收缩的标志，也使外界对该国人权状况的关注升温。",
-    "source": "BBC",
-    "category": "全球治理与多边",
-    "keywords": [
-      "埃及",
-      "新闻自由",
-      "Mada Masr",
-      "司法"
-    ],
-    "url": "https://www.bbc.co.uk/news/articles/cw8rz14k1jvxo",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "美英检方：RAF Fairford 图谋由为伊朗工作的「协调人」指挥",
-    "title_en": "RAF Fairford plot 'coordinated by handler working on behalf of Iran'",
-    "summary_zh": "卫报报道，英国检方称 RAF Fairford 军事基地相关图谋由一名为伊朗工作的「协调人」指挥，两名男子已被起诉。案件把伊朗代理人活动与英国本土军事设施安全直接关联，或将推动英方收紧对相关人员的监控与驱逐程序。",
-    "source": "卫报",
-    "category": "全球治理与多边",
-    "keywords": [
-      "RAF Fairford",
-      "伊朗",
-      "英国安全",
-      "代理人"
-    ],
-    "url": "https://www.theguardian.com/uk-news/2026/oct/27/two-men-charged-raf-fairford",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "伊朗运动员死刑担忧升温 登山家成为最新被处决者",
-    "title_en": "Fears grow for Iranian athletes on death row as mountaineer latest to be hanged",
-    "summary_zh": "卫报报道，一名伊朗登山运动员被处决后，国际体育界对在押伊朗运动员命运的担忧升温。人权组织指相关审判程序缺乏公正保障，呼吁体育组织与赛事主办方对伊朗参赛资格采取更明确立场。",
-    "source": "卫报",
-    "category": "全球治理与多边",
-    "keywords": [
-      "伊朗",
-      "死刑",
-      "运动员",
-      "人权"
-    ],
-    "url": "https://www.theguardian.com/global-development/2026/oct/27/fears-grow-for-iranian-athletes-on-death-row-as-mountaineer-latest-to-be-hanged",
-    "priority_score": 70,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "加沙女导演以影像转化创伤 新学院成立",
-    "title_en": "Gaza's women filmmakers turn pain into cinema as new academy launches",
-    "summary_zh": "半岛电视台报道，加沙女性电影人通过影像记录与创作转化战争创伤，当地一家新电影学院同步成立。在基础设施严重受损的条件下，文化生产被视为维持社会韧性与保存集体记忆的方式。",
-    "source": "半岛电视台",
-    "category": "全球治理与多边",
-    "keywords": [
-      "加沙",
-      "女性电影人",
-      "文化",
-      "创伤"
-    ],
-    "url": "https://www.aljazeera.com/news/2026/10/27/gazas-women-filmmakers-turn-pain-into-cinema-as-new-academy-launches",
-    "priority_score": 68,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "埃及下令关闭主要独立新闻机构",
-    "title_en": "Egypt shuts down one of the country's last independent news outlets",
-    "summary_zh": "金融时报报道，埃及关闭了国内仅存的独立新闻机构之一。此举与对记者个人的罚款判决同步发生，被解读为选举与地区议题敏感期前对舆论空间的进一步收紧。",
-    "source": "金融时报",
-    "category": "全球治理与多边",
-    "keywords": [
-      "埃及",
-      "独立媒体",
-      "新闻自由",
-      "舆论管控"
-    ],
-    "url": "https://www.ft.com/content/9ee42ad6-7d26-4688-b1f7-ffc75c613707",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "海湾国家会否建立新的地区安全框架？",
-    "title_en": "Will players in the Gulf establish a new security framework?",
-    "summary_zh": "半岛电视台分析海湾国家在美伊紧张与航道风险背景下可能推动的新安全安排。文章认为，海合会内部利益分化与对外依赖度的差异，使集体安全机制难以成形，双边与「议题联盟」式的安排更可能成为现实选择。",
-    "source": "半岛电视台",
-    "category": "其他",
-    "keywords": [
-      "海湾",
-      "安全框架",
-      "海合会",
-      "美伊"
-    ],
-    "url": "https://www.aljazeera.com/video/inside-story/2026/10/27/will-players-in-the-gulf-establish-a-new-security-framework",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "香港「公寓恐怖」电影讽刺畸形楼市",
-    "title_en": "Hong Kong's 'Apartment Horror' Films Skewer Its Ghastly Property Market",
-    "summary_zh": "纽约时报报道，香港近期一批以「公寓恐怖」为主题的电影，用极端化的居住空间隐喻房价与居住贫困问题。文章认为，类型片的商业成功说明住房焦虑已成为这座城市最具共情力的社会议题之一。",
-    "source": "纽约时报",
-    "category": "其他",
-    "keywords": [
-      "香港",
-      "楼市",
-      "电影",
-      "社会议题"
-    ],
-    "url": "https://www.nytimes.com/2026/10/27/world/asia/hong-kong-apartment-horror-movies.html",
-    "priority_score": 68,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "东山下海精密港股挂牌首日下挫 募资 13 亿美元",
-    "title_en": "Dongshan Precision Slips in Debut After $1.3 Billion HK Listing",
-    "summary_zh": "彭博社报道，苏州东山精密制造在香港上市募资约 13 亿美元，但首日股价走低。这家精密制造企业的主要增长来自 AI 服务器与光通信零部件，破发反映港股新股在 AI 板块情绪波动下的定价压力。",
-    "source": "彭博社",
-    "category": "其他",
-    "keywords": [
-      "东山精密",
-      "港股",
-      "IPO",
-      "AI 零部件"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-10-27/dongshan-precision-set-to-debut-after-1-3-billion-hk-listing",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "泡泡玛特三季度销售最多下滑 50% Labubu 热潮降温",
-    "title_en": "Pop Mart Third-Quarter Sales Fall Up to 50% as Labubu Fad Cools",
-    "summary_zh": "彭博社报道，泡泡玛特三季度销售同比最多下滑 50%，港股股价走低，主因 Labubu 系列热度回落与去年同期高基数。IP 依赖度高的潮玩企业如何延长单一爆款生命周期，再度成为市场质疑焦点。",
-    "source": "彭博社",
-    "category": "其他",
-    "keywords": [
-      "泡泡玛特",
-      "Labubu",
-      "潮玩",
-      "消费"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-10-27/pop-mart-s-quarterly-sales-drop-on-high-base-sluggish-demand",
-    "priority_score": 72,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "中国 A 股对 H 股溢价因国家资金托底扩至 17 个月最阔",
-    "title_en": "China Stock Premium Over Hong Kong Widens on State Intervention",
-    "summary_zh": "彭博社报道，北京稳定股市的举措推动 A 股对 H 股溢价升至近 17 个月最高水平：恒生沪深港通 AH 溢价指数显示 A 股较离岸同类高出约 33%，该指标有望录得 2024 年 1 月以来最大月度涨幅。资金结构差异正在两市之间形成明显的估值割裂。",
-    "source": "彭博社",
-    "category": "其他",
-    "keywords": [
-      "A股",
-      "H股",
-      "溢价",
-      "国家资金",
-      "港股"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-10-27/china-stock-premium-over-hong-kong-widens-on-state-intervention",
-    "priority_score": 78,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "律所 Weil 危机加深 准备可能清算",
-    "title_en": "Law firm Weil prepares for possible wind-down as crisis deepens",
-    "summary_zh": "金融时报报道，美国律所 Weil Gotshal & Manges 在危机加深之际准备可能清算。此事被视为高端法律服务业竞争与人才流失压力的极端案例，其破产重组业务的传统优势地位可能被同业重新分配。",
-    "source": "金融时报",
-    "category": "其他",
-    "keywords": [
-      "Weil",
-      "律所",
-      "清算",
-      "法律服务"
-    ],
-    "url": "https://www.ft.com/content/69ccfcb0-3f5e-4b77-9e04-a386e827b872",
-    "priority_score": 70,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "暗影船队从委内瑞拉转向利润丰厚的霍尔木兹交易",
-    "title_en": "Dark Fleet Tankers Move From Venezuela to Lucrative Hormuz Trade",
-    "summary_zh": "彭博社报道，此前活跃于委内瑞拉周边的「暗影船队」油轮正转向霍尔木兹海峡周边的高利润运输。船队迁移显示制裁规避网络在地区紧张中重新配置，也增加了航道安全与保险定价的不确定性。",
-    "source": "彭博社",
-    "category": "其他",
-    "keywords": [
-      "暗影船队",
-      "霍尔木兹",
-      "委内瑞拉",
-      "制裁规避"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-10-28/dark-fleet-tankers-move-from-venezuela-to-lucrative-hormuz-trade",
-    "priority_score": 74,
-    "is_summit_level": false,
-    "date": "2026-10-28",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  },
-  {
-    "title_zh": "甲骨文扩大与英伟达芯片协议 首次引入谷歌 TPU",
-    "title_en": "Oracle expands chip supply deal with Nvidia, adds Google and Cerebras offerings",
-    "summary_zh": "路透社报道，甲骨文周二宣布扩大与英伟达的云端 AI 芯片合作，同时推动多元化，引入谷歌张量处理单元（TPU）以及英伟达竞争对手 Cerebras、英特尔投资的 SambaNova 的推理芯片。甲骨文将与英伟达把 Vera Rubin AI 服务器扩展至「多吉瓦级」规模，但未披露交易金额；英伟达 CEO 黄仁勋此前称每吉瓦 Vera Rubin 系统可带来最多 400 亿美元收入。甲骨文还表示，即便在基于英伟达的系统中也会弃用部分英伟达网络芯片，改用自研 Acceleron。分析人士估计，甲骨文与英伟达交易金额约 30 亿美元，英伟达或将为其数据中心租赁提供信用支持。",
-    "source": "路透社",
-    "category": "AI与科技竞争",
-    "keywords": [
-      "甲骨文",
-      "英伟达",
-      "TPU",
-      "Cerebras",
-      "AI芯片"
-    ],
-    "url": "https://www.aol.com/articles/oracle-expands-chip-supply-deal-160104000.html",
-    "repost_from": "AOL（路透社电头）",
-    "priority_score": 88,
-    "is_summit_level": false,
-    "date": "2026-10-27",
-    "collectedAt": "2026-10-28 09:30:00",
-    "is_official": false
-  }
+ {
+  "title_zh": "美方拟禁中国产数据中心设备 中国 AI 股回撤加剧",
+  "title_en": "US weighs ban on Chinese-made data center equipment as China's AI rally unravels",
+  "summary_zh": "中国 AI 与半导体板块持续深度调整，科创板 50 指数不到四个月回撤约 40%、市值蒸发约 4800 亿美元，远大于纳斯达克同期 6% 的跌幅。交易员将压力归于估值过高与美方可能禁止使用中国制造的数据中心设备，叠加监管收紧杠杆与高频交易。AI 相关股票占 A 股与港股总市值 42%、成交额 57%（高盛数据）；宇树科技上市以来腰斩，长鑫存储近一月跌逾 25%，中际旭创、新易盛自高点回落约 60%。",
+  "source": "卫报",
+  "category": "中美关系",
+  "keywords": [
+   "数据中心设备",
+   "出口管制",
+   "AI 股",
+   "科创板",
+   "长鑫存储"
+  ],
+  "url": "https://www.theguardian.com/world/2026/oct/27/chinese-markets-lose-trillions-ai-race-beijing",
+  "priority_score": 92,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "美对中国船舶收费延后两个月 美贸易代表再批欧盟空客贷款",
+  "title_en": "USTR and fees on Chinese ships",
+  "summary_zh": "彭博社政策通讯披露，美方对中国籍与中国建造船舶的港口收费将延后两个月实施；美国贸易代表格里尔同时再次批评欧盟对空客的贷款支持，指其扭曲竞争。该收费源于上一轮 301 调查结论，原本被视作对华海事物流施压的关键杠杆，延期反映业界对供应链与运价的顾虑正在影响执行节奏。",
+  "source": "彭博社",
+  "category": "中美关系",
+  "keywords": [
+   "301调查",
+   "港口费",
+   "中国船舶",
+   "美贸易代表",
+   "空客"
+  ],
+  "url": "https://www.bloomberg.com/news/newsletters/2026-10-27/ustr-and-fees-on-chinese-ships",
+  "priority_score": 90,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "在美中国留学生锐减 FBI 与高校担忧人才管道断裂",
+  "title_en": "Will China travel hurt US students' careers? FBI battles fears as talent pipeline stalls",
+  "summary_zh": "南华早报报道，赴美中国留学生规模持续下滑，FBI 与部分高校对中国学生的安全审查与「中国行动计划」式顾虑，正与院校招生的现实需求形成张力。招生方担忧人才管道断裂将削弱美国科研后备力量，而执法部门强调防范技术外流。这一矛盾叠加签证与旅行限制，正成为中美人文交流下行压力的缩影。",
+  "source": "南华早报",
+  "category": "中美关系",
+  "keywords": [
+   "留学生",
+   "FBI",
+   "人文交流",
+   "技术审查"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3372362/will-china-travel-hurt-american-students-careers-fbi-battles-fears-talent-pipeline-stalls",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "英伟达支持的印尼 AI 平台发行 31 亿美元 GPU 贷款",
+  "title_en": "Nvidia-Backed Firm Launches $3.1 Billion GPU Loan into Market",
+  "summary_zh": "彭博社援引知情人士，英伟达参股的印尼 AI 基础设施平台 Zankore 正向市场分销 31 亿美元五年期贷款，用于为其新建 AI 工厂采购 GPU，利率为 SOFR 加 330 个基点，大华银行等机构参与。交易是亚洲 AI 建设融资热潮的最新一笔，显示算力扩张正从股权融资转向债务市场，也使 GPU 资产成为信用市场新标的。",
+  "source": "彭博社",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "英伟达",
+   "Zankore",
+   "GPU 贷款",
+   "AI 工厂",
+   "债务融资"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-28/nvidia-backed-firm-launches-3-1-billion-gpu-loan-into-market",
+  "priority_score": 89,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "SK 海力士业绩超预期 派发 450 亿美元分红与回购",
+  "title_en": "SK Hynix profits soar amid roaring AI chip demand",
+  "summary_zh": "SK 海力士公布创纪录季度利润，在 AI 存储需求推动下业绩超出市场预期，并宣布规模约 450 亿美元的分红与回购计划。作为高带宽内存主要供应商，其表现被视为 AI 服务器需求强度的直接指标，也印证存储环节在算力资本开支链条中的议价能力仍然强劲。",
+  "source": "金融时报",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "SK海力士",
+   "HBM",
+   "AI芯片",
+   "分红回购"
+  ],
+  "url": "https://www.ft.com/content/44c35ed7-aa46-4d45-91f5-2773f00ae6be",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "AI 交易回暖带动科技股与亚股上行",
+  "title_en": "Tech stocks gain as AI trade revives; Asian Stocks Climb on AI Trade Optimism",
+  "summary_zh": "AI 交易情绪回暖，科技股领涨，亚洲股市连续第二日走高，油价同步上涨。市场对算力与存储需求的乐观预期部分抵消了对资本开支过热与估值偏高的担忧，此前深度回调的中国 AI 板块与美股半导体板块走势出现分化。",
+  "source": "金融时报",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "AI交易",
+   "科技股",
+   "亚洲股市",
+   "油价"
+  ],
+  "url": "https://www.ft.com/content/a4f9f81e-df30-4669-9eca-865d9d14e441",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "ASMPT 营收增 49% 创年内最快 芯片业务略逊预期",
+  "title_en": "ASMPT Sales Jump 49% on AI Demand as Chip Unit Misses Estimate",
+  "summary_zh": "彭博社报道，先进封装设备商 ASMPT 受 AI 硬件需求拉动，录得年内最快营收增速 49%，但半导体分部小幅不及预期，反映分析师对芯片设备环节设定了更高门槛。先进封装正是当前算力供应链最紧的环节之一，其订单能见度被视为明年产能扩张节奏的先行指标。",
+  "source": "彭博社",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "ASMPT",
+   "先进封装",
+   "芯片设备",
+   "AI硬件"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-28/asmpt-sales-jump-49-on-ai-demand-as-chip-unit-misses-estimate",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "机器人初创 Physical Intelligence 洽谈 200 亿美元估值融资",
+  "title_en": "Robotics Lab Physical Intelligence in Talks for a $20 Billion Valuation",
+  "summary_zh": "彭博社报道，开发通用机器人软件的初创公司 Physical Intelligence 正与投资人洽谈新一轮融资，估值约 200 亿美元。该公司主攻把大模型能力迁移到实体机器人，是具身智能赛道估值攀升最快的标的之一，其融资进展将影响整个机器人软件层的定价基准。",
+  "source": "彭博社",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "具身智能",
+   "机器人",
+   "融资",
+   "Physical Intelligence"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-27/robotics-lab-physical-intelligence-in-talks-for-a-20-billion-valuation",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "美国 AI 繁荣的对冲空间正在收窄",
+  "title_en": "The limits of hedging the AI boom",
+  "summary_zh": "金融时报评论指出，投资者试图通过分散配置对冲 AI 泡沫风险的空间正在收窄：AI 相关权重已渗透至宽基指数、信用市场与电力等传统防御板块，一旦算力资本开支转向，可避险的「非 AI」资产池明显不足。文章提示，当前组合结构对 AI 叙事的依赖度高于多数人自认水平。",
+  "source": "金融时报",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "AI泡沫",
+   "资产配置",
+   "对冲",
+   "资本开支"
+  ],
+  "url": "https://www.ft.com/content/0b0ae366-c1e0-4c35-8cad-c924a23d33e7",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "「K 型公司」：Anthropic 与 Meta 分化出的两种 AI 组织形态",
+  "title_en": "Anthropic, Meta and the K-shaped company",
+  "summary_zh": "金融时报专栏以「K 型公司」概括 AI 时代企业分化的两条路径：一类如 Anthropic 以研究与模型能力为核心、压缩非核心职能；另一类如 Meta 以巨额算力与人才投入换取平台级位置。文章认为，同一技术浪潮正在同时制造超高利润与结构性裁员，企业组织形态的分叉比行业景气度更值得关注。",
+  "source": "金融时报",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "Anthropic",
+   "Meta",
+   "组织形态",
+   "AI就业"
+  ],
+  "url": "https://www.ft.com/content/0b7db9a1-8279-4025-8c2a-44a1010828f4",
+  "priority_score": 76,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "通用汽车转板纳斯达克 加速 AI 布局",
+  "title_en": "GM to switch listing from NYSE to Nasdaq as it accelerates AI push",
+  "summary_zh": "通用汽车宣布将上市地从纽交所转至纳斯达克，配合其加速推进 AI 战略。转板通常意味着公司希望被纳入科技股指数与被动资金池，也反映传统车企在自动驾驶与车载智能上重新定位资本市场叙事。",
+  "source": "金融时报",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "通用汽车",
+   "纳斯达克",
+   "转板",
+   "自动驾驶"
+  ],
+  "url": "https://www.ft.com/content/01467514-66c1-4375-9906-45a47b949270",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "AI 机器人曾大规模涌入英国电子烟禁令公众咨询",
+  "title_en": "AI bots flooded 2023 UK government consultation on disposable vapes ban",
+  "summary_zh": "卫报报道，英国政府 2023 年就一次性电子烟禁令开展的公众咨询遭 AI 机器人批量灌水，出现大量雷同回复。事件被视为「AI 参与式治理污染」的标志性案例，暴露政府在意见征集环节缺乏身份与内容真实性校验，也为其后各国收紧 AI 生成内容在政策程序中的使用提供了依据。",
+  "source": "卫报",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "AI机器人",
+   "公众咨询",
+   "电子烟",
+   "治理污染"
+  ],
+  "url": "https://www.theguardian.com/society/2026/oct/27/ai-bots-flooded-2023-uk-government-consultation-disposable-vapes-ban",
+  "priority_score": 76,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "北京任命宣传系统老将主政边境省份",
+  "title_en": "Why has Beijing appointed a propaganda veteran to lead a border province?",
+  "summary_zh": "南华早报分析北京近期任命一位长期在宣传系统任职的官员主政边境省份的人事安排。文章认为，此举反映中央对边疆地区舆情管理、跨境信息秩序与对外叙事能力的重视上升，也显示干部选拔中「宣传—安全」复合履历的分量在增加。",
+  "source": "南华早报",
+  "category": "中国外交与周边",
+  "keywords": [
+   "人事任命",
+   "宣传系统",
+   "边疆治理"
+  ],
+  "url": "https://www.scmp.com/news/china/politics/article/3372341/why-has-beijing-appointed-propaganda-veteran-lead-border-province",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "菲律宾对华「两种声音」：军方强硬与外交缓和并行",
+  "title_en": "Manila speaks with 2 voices on China",
+  "summary_zh": "南华早报评论指出，马尼拉在对华政策上呈现「两种声音」：军方与安全部门在南海问题上持续强硬表态，外交与经济部门则寻求保持沟通与务实合作。文章认为这种分工既是国内政治平衡的结果，也使外界难以判断菲方真实底线，增加了误判风险。",
+  "source": "南华早报",
+  "category": "中国外交与周边",
+  "keywords": [
+   "菲律宾",
+   "南海",
+   "对华政策",
+   "马尼拉"
+  ],
+  "url": "https://www.scmp.com/opinion/asia-opinion/article/3372147/manila-speaks-2-voices-china",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "轰-6K 是否已具备强电子干扰能力？",
+  "title_en": "Is China's H-6K strategic bomber getting powerful jamming capabilities?",
+  "summary_zh": "南华早报援引军事分析人士称，解放军轰-6K 战略轰炸机的最新改进型可能加装了新型电子战吊舱，具备更强的干扰与压制能力。若判断成立，意味着中国空基电子战平台从支援角色向「打击—干扰一体」演进，将改变西太平洋方向的电磁频谱态势。",
+  "source": "南华早报",
+  "category": "中国外交与周边",
+  "keywords": [
+   "轰-6K",
+   "电子战",
+   "解放军",
+   "军事现代化"
+  ],
+  "url": "https://www.scmp.com/news/china/military/article/3372255/chinas-h-6k-strategic-bomber-getting-powerful-jamming-capabilities",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "台湾拟以自主蜂群无人机应对大陆「灰色地带」压力",
+  "title_en": "Taiwan looks to autonomous swarms to counter Beijing's grey-zone pressure",
+  "summary_zh": "南华早报报道，台湾方面正推动自主蜂群无人机项目，试图以低成本、可量产的无人系统应对大陆在台海周边的「灰色地带」施压。方案重点在于集群自主决策与抗干扰通信，但受限于供应链关键零部件与量产能力，短期内难以形成规模化战力。",
+  "source": "南华早报",
+  "category": "中国外交与周边",
+  "keywords": [
+   "台湾",
+   "无人机蜂群",
+   "灰色地带",
+   "台海"
+  ],
+  "url": "https://www.scmp.com/news/china/military/article/3372189/taiwan-looks-autonomous-swarms-counter-beijings-grey-zone-pressure",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "东风导弹「无预告」演练画面传递何种信号",
+  "title_en": "What message is China sending with latest footage of 'no-notice' DF rocket drill?",
+  "summary_zh": "南华早报分析解放军公开的东风系列导弹「无预告」发射演练画面，认为重点不在型号参数，而在展示「不预先通报、快速转入发射」的战备状态。军事分析人士指出，这类公开既是对外威慑信号，也带有检验部队临机响应能力的内部目的。",
+  "source": "南华早报",
+  "category": "中国外交与周边",
+  "keywords": [
+   "东风导弹",
+   "火箭军",
+   "战备演练",
+   "威慑"
+  ],
+  "url": "https://www.scmp.com/news/china/military/article/3372206/what-message-china-sending-latest-footage-no-notice-df-rocket-drill",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "中国古都何以拿下全国最快出口增速",
+  "title_en": "How China's ancient capital staked a claim to the nation's fastest export growth",
+  "summary_zh": "南华早报报道，一座中国古都凭借产业转移与制造业升级，录得全国最快的出口增速。文章把增长归因于劳动密集型产业内迁、中欧班列通道建设与本地加工贸易集群成形，认为这呈现出中国出口格局从沿海向内陆再平衡的路径。",
+  "source": "南华早报",
+  "category": "中国外交与周边",
+  "keywords": [
+   "出口增速",
+   "产业转移",
+   "中欧班列",
+   "内陆经济"
+  ],
+  "url": "https://www.scmp.com/economy/china-economy/article/3372316/how-chinas-ancient-capital-staked-claim-nations-fastest-export-growth",
+  "priority_score": 76,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "姆巴佩为毛泽东「独裁者」言论道歉 中国舆论反弹",
+  "title_en": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
+  "summary_zh": "BBC 报道，法国球星姆巴佩就此前疑似将毛泽东称为「独裁者」的言论道歉，称其表述「考虑不周」。相关言论在中国社交平台引发强烈反弹，其代言的品牌与商业合作受到关注。事件再次显示跨国体育明星涉华政治表述的敏感度与商业代价。",
+  "source": "BBC",
+  "category": "中国外交与周边",
+  "keywords": [
+   "姆巴佩",
+   "道歉",
+   "舆论反弹",
+   "体育外交"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "英国预算案：财相以「不造成伤害」为纲 能源改革成核心",
+  "title_en": "Healey puts UK energy reform at centre of his 'do no harm' Budget",
+  "summary_zh": "英国财相希利公布预算，把能源市场改革置于核心位置，整体基调定为「不造成伤害」。方案包括调整能源价格机制与投资激励，同时对税负与支出作出延后处理的安排。市场关注其在增长乏力与财政空间受限之间的平衡能力。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "英国预算",
+   "能源改革",
+   "希利",
+   "财政政策"
+  ],
+  "url": "https://www.ft.com/content/427a7624-d710-4078-9a7e-d23fdb0b2975",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "英国财相反转 放弃削减现金 ISA 免税额度",
+  "title_en": "Healey to reverse cuts to cash Isa allowance",
+  "summary_zh": "金融时报报道，英国财相希利决定撤回削减现金 ISA 免税额度（cash Isa allowance）的计划。该调整原被视为把储蓄引向股市、配合增长战略的手段，但在储户与业界强烈反对下反转，反映英国预算在推动资本市场改革与保护普通储蓄者之间的政治张力。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "ISA",
+   "英国储蓄",
+   "资本市场改革",
+   "预算反转"
+  ],
+  "url": "https://www.ft.com/content/619978f5-4400-4bf0-8b1f-4cf62bee9774",
+  "priority_score": 76,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "英国被指试图主要靠增税快速压缩赤字",
+  "title_en": "Britain is trying to cut its deficit quickly — can it do it mainly through tax rises?",
+  "summary_zh": "金融时报分析指出，英国政府选择以增税为主要工具快速压缩财政赤字，而非大幅削减支出。文章认为这一路径在政治阻力上相对可控，但对增长与企业投资的抑制效应不可忽视，且一旦经济放缓，税基收缩会使赤字目标更难达成。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "英国财政",
+   "赤字",
+   "增税",
+   "经济增长"
+  ],
+  "url": "https://www.ft.com/content/f116a855-61cc-4e36-9f9b-c2ff168b6605",
+  "priority_score": 75,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "英国政府悄然取消二十余项新建道路计划",
+  "title_en": "UK government quietly axes more than two dozen new road schemes",
+  "summary_zh": "金融时报报道，英国政府未作高调宣布即取消二十多个新建道路项目。此举与财政紧缩及交通投资重心转向公共交通、维护既有路网有关，但也引发地方对连通性与增长承诺落空的质疑。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "英国交通",
+   "基建",
+   "财政紧缩",
+   "道路项目"
+  ],
+  "url": "https://www.ft.com/content/92780ba3-5201-4002-abca-3ee1a053eb30",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "英国议会委员会：欣克利角 Sizewell 核电站是纳税人的「糟糕交易」",
+  "title_en": "Sizewell nuclear plant is 'terrible deal' for British taxpayers, MPs conclude",
+  "summary_zh": "英国议会委员会结论认为，Sizewell C 核电项目对英国纳税人而言是「糟糕的交易」，主要问题在于差价合约锁定的电价水平过高、风险分配失衡。结论给英国核电融资模式带来压力，也可能影响后续项目的谈判条件与外资参与意愿。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "Sizewell C",
+   "核电",
+   "英国能源",
+   "差价合约"
+  ],
+  "url": "https://www.ft.com/content/bc330ee4-f151-4552-88a8-8879a26d8fdd",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "欧盟就乌克兰资金缺口向盟友施压",
+  "title_en": "EU pressures allies over looming Ukraine funding crunch",
+  "summary_zh": "金融时报报道，欧盟正向盟友施压，以填补即将出现的乌克兰资金缺口。随着战事延宕与各国财政空间收紧，欧盟内部对分摊比例与资金来源分歧扩大，若不能形成稳定融资安排，乌方明年的预算与军费将面临断档风险。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "乌克兰",
+   "欧盟",
+   "资金缺口",
+   "援助"
+  ],
+  "url": "https://www.ft.com/content/8aba217f-064f-4193-89fc-3565bd2ee910",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "普京向北欧领导人「讲授」俄罗斯历史",
+  "title_en": "Putin lectures Nordic leaders on Russian history",
+  "summary_zh": "金融时报报道，普京在与北欧领导人的会谈中大量阐述俄方对历史的叙事，把当前冲突置于其长期的势力范围论述之中。分析认为，这种表述方式意味着俄方在谈判前提上并未松动，会谈的实际产出有限。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "普京",
+   "北欧",
+   "历史叙事",
+   "谈判"
+  ],
+  "url": "https://www.ft.com/content/a384acd1-c90c-4b71-bf7d-6c6e00bf9822",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "华盛顿与欧洲讨论让美国油企参与乌克兰和平方案下的俄罗斯交易",
+  "title_en": "Washington discusses Russian deals for US oil majors in Ukraine peace talks",
+  "summary_zh": "金融时报报道，华盛顿正与相关方讨论在乌克兰和平安排中为美国大型石油公司开放俄罗斯业务的可能性。把能源利益嵌入停火框架，被视为给美企提供参与激励、同时为俄方提供解禁预期的设计，但在欧洲盟友内部引发争议。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "美国油企",
+   "俄罗斯",
+   "乌克兰和平",
+   "能源"
+  ],
+  "url": "https://www.ft.com/content/d703aaae-f607-4b30-9830-ac2a25472d44",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "法国对学生作出让步 但未能平息抗议",
+  "title_en": "France Makes Concessions to Students, but Not Enough to Halt Protests",
+  "summary_zh": "纽约时报报道，法国政府就学生诉求作出让步，但抗议仍未平息。学生团体认为方案未触及核心问题，工会则表示将继续施压。事件给本已承压的法国财政与改革议程再添变数。",
+  "source": "纽约时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "法国",
+   "学生抗议",
+   "让步",
+   "改革"
+  ],
+  "url": "https://www.nytimes.com/2026/10/26/world/europe/france-student-protests.html",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "塞尔维亚学生运动获胜却无领袖 转头问责媒体",
+  "title_en": "Serbian Students, Victorious and Leaderless, Go After the Media",
+  "summary_zh": "纽约时报报道，塞尔维亚学生运动在取得阶段性胜利后缺少统一领导层，转而把矛头对准被认为与执政者关系密切的媒体。文章认为，去中心化的组织形态赋予运动韧性，但也使其难以转化为可持续的政治力量。",
+  "source": "纽约时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "塞尔维亚",
+   "学生运动",
+   "媒体",
+   "政治转型"
+  ],
+  "url": "https://www.nytimes.com/2026/10/27/world/europe/serbia-student-list-news-media-vucic.html",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "塞尔维亚选举显示民族主义民粹派的新脆弱性",
+  "title_en": "Serbia's Election Shows New Vulnerability for Nationalist Populists",
+  "summary_zh": "纽约时报分析塞尔维亚选举结果，认为长期执政的民族主义民粹阵营首次显现结构性弱点：年轻选民流失、城市中间阶层重组以及对外平衡策略的收益递减。文章提示巴尔干政治可能进入重新洗牌期。",
+  "source": "纽约时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "塞尔维亚",
+   "民粹主义",
+   "选举",
+   "巴尔干"
+  ],
+  "url": "https://www.nytimes.com/2026/10/26/world/europe/serbia-election-vucic-nationalist-populists.html",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "查尔斯国王赴加勒比 面临赔奴呼声",
+  "title_en": "King Charles heads to Caribbean as calls grow for slavery apology",
+  "summary_zh": "CNN 报道，英国国王查尔斯前往加勒比地区访问，当地要求就奴隶制历史道歉并赔偿的呼声持续升高。此行与英联邦会议相关，王室如何在历史责任与现实外交之间取舍，成为访问的核心看点。",
+  "source": "CNN",
+  "category": "中欧与盟友",
+  "keywords": [
+   "查尔斯国王",
+   "加勒比",
+   "奴隶制赔偿",
+   "英联邦"
+  ],
+  "url": "https://edition.cnn.com/2026/10/27/europe/king-charles-uk-caribbean-slavery-apology-chogm-intl",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "查尔斯国王抵巴哈马 面对「把欠我们的还回来」诉求",
+  "title_en": "King Charles arrives in Bahamas, faces demands for reparations",
+  "summary_zh": "南华早报报道，查尔斯国王抵达巴哈马，当地团体当面提出赔偿诉求，喊出「把欠我们的还回来」。访问把英联邦内部关于殖民历史与赔偿的争论推向台前，也为英国与加勒比国家的关系设定新的议价议题。",
+  "source": "南华早报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "巴哈马",
+   "赔偿",
+   "查尔斯",
+   "英联邦"
+  ],
+  "url": "https://www.scmp.com/news/world/americas/article/3372358/king-charles-arrives-bahamas-faces-demands-reparations-pay-us-what-you-owe-us",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "澳大利亚通胀升至 4.3% 加息预期升温",
+  "title_en": "Australia's inflation rate rises to 4.3%, fuelling fears of fifth interest rate hike this year",
+  "summary_zh": "卫报报道，澳大利亚通胀率升至 4.3%，加大市场对年内第五次加息的担忧。数据表明服务业价格黏性仍强，央行面临在增长放缓与通胀反弹之间两难，家庭按揭压力与消费前景同步承压。",
+  "source": "卫报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "澳大利亚",
+   "通胀",
+   "加息",
+   "央行"
+  ],
+  "url": "https://www.theguardian.com/australia-news/2026/oct/28/inflation-rate-australia-2026-number-data-consumer-price-index-cpi-release",
+  "priority_score": 76,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "澳政府被曝以 260 万澳元助工党击败两名绿党对手",
+  "title_en": "Australian Labor spent AU$2.6M ousting 2 Greens rivals from parliament",
+  "summary_zh": "Politico 报道，澳大利亚工党被披露投入约 260 万澳元用于在选举中击败两名绿党议员。数据反映工党在左翼选票争夺上的资源投放强度，也显示气候与住房议题正在重塑澳国内政党竞争格局。",
+  "source": "Politico",
+  "category": "中欧与盟友",
+  "keywords": [
+   "澳大利亚工党",
+   "绿党",
+   "选举支出",
+   "左翼竞争"
+  ],
+  "url": "https://www.politico.com/news/2026/10/27/australia-labor-greens-spending-01136011",
+  "priority_score": 70,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "荷兰再度退出欧洲歌唱大赛 抗议以色列参赛",
+  "title_en": "Netherlands pulls out of Eurovision again over Israel participation",
+  "summary_zh": "BBC 报道，荷兰因以色列参赛问题再次宣布退出欧洲歌唱大赛。文化赛事正持续被巴以冲突政治化，多国广播机构与参赛方在抵制与参与之间反复摇摆，赛事主办方正面临规则与政治压力的双重挑战。",
+  "source": "BBC",
+  "category": "中欧与盟友",
+  "keywords": [
+   "欧洲歌唱大赛",
+   "荷兰",
+   "以色列",
+   "文化抵制"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cmr4y5dvlzneo",
+  "priority_score": 70,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "以色列大选出口民调：内塔尼亚胡阵营受挫 但无明确赢家",
+  "title_en": "Israel election too close to call as exit polls give Netanyahu bloc slightly fewer seats",
+  "summary_zh": "以色列议会选举投票率创近年新高，出口民调显示内塔尼亚胡阵营席位略少于对手，但双方均未获得明确多数。反对派领导人艾森科特称国家「投票选择改变」，阿拉伯政党有望取得历史性席位增长，组阁谈判将决定内塔尼亚胡的政治去留。",
+  "source": "卫报",
+  "category": "地区热点",
+  "keywords": [
+   "以色列大选",
+   "内塔尼亚胡",
+   "出口民调",
+   "组阁"
+  ],
+  "url": "https://www.theguardian.com/world/2026/oct/27/israel-election-too-close-to-call-as-exit-polls-give-netanyahu-bloc-slightly-fewer-seats",
+  "priority_score": 88,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "阿拉伯政党或以 18 席成为以色列组阁关键力量",
+  "title_en": "Arab parties could win 18 Israeli parliament seats",
+  "summary_zh": "半岛电视台报道，以色列阿拉伯政党在本届选举中有望赢得约 18 个议席，成为组阁的关键变量。阿拉伯城镇以焰火庆祝投票率创新高，若其正式参与执政联盟，将改变以色列政治长期排斥阿拉伯政党的格局。",
+  "source": "半岛电视台",
+  "category": "地区热点",
+  "keywords": [
+   "阿拉伯政党",
+   "以色列议会",
+   "组阁",
+   "投票率"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/10/28/arab-parties-could-win-18-seats-in-israeli-elections-exit-polls-suggest",
+  "priority_score": 84,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "艾森科特：以色列人投票选择了改变",
+  "title_en": "Israel's Eisenkot says country voted for change",
+  "summary_zh": "半岛电视台报道，以色列反对派领导人艾森科特在出口民调公布后表示，选民已用选票表达「求变」意愿。作为前军方高层，他把选战主轴锁定在问责与安全战略重估，其能否完成组阁将决定以色列对加沙与伊朗政策的走向。",
+  "source": "半岛电视台",
+  "category": "地区热点",
+  "keywords": [
+   "艾森科特",
+   "以色列",
+   "求变",
+   "安全战略"
+  ],
+  "url": "https://www.aljazeera.com/video/newsfeed/2026/10/28/israels-eisenkot-says-country-voted-for-change",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "出口民调引爆以色列政治光谱激烈争论",
+  "title_en": "Exit polls trigger heated debate across Israeli political divide",
+  "summary_zh": "半岛电视台报道，出口民调结果在以色列各政治阵营引发激烈争论：右翼强调组阁算术仍有利，中左阵营则称这是内塔尼亚胡时代的终结信号。争议焦点在于阿拉伯政党席位与小型党派门槛如何影响最终议席分配。",
+  "source": "半岛电视台",
+  "category": "地区热点",
+  "keywords": [
+   "出口民调",
+   "以色列",
+   "政治分歧",
+   "组阁算术"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/10/28/exit-polls-trigger-heated-debate-across-israeli-political-divide",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "内塔尼亚胡被指在选前推动对伊朗动武",
+  "title_en": "Netanyahu Pushed for Attack on Iran Ahead of Israeli Election, Officials Say",
+  "summary_zh": "纽约时报援引官员称，内塔尼亚胡在以色列大选前推动对伊朗采取军事行动。报道认为，这一主张既服务于其安全强人形象，也把以伊对抗置于选举政治之中；美方对行动时机与后果保持谨慎，担心地区冲突升级打乱其更大的对伊安排。",
+  "source": "纽约时报",
+  "category": "地区热点",
+  "keywords": [
+   "内塔尼亚胡",
+   "伊朗",
+   "军事行动",
+   "以色列大选"
+  ],
+  "url": "https://www.nytimes.com/2026/10/26/world/middleeast/netanyahu-iran-israel-election.html",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "卡塔尔埃米尔与普京通话 呼吁在美伊冲突中保持外交",
+  "title_en": "Qatar's Emir and Putin call for diplomacy amid US-Iran conflict",
+  "summary_zh": "半岛电视台报道，卡塔尔埃米尔与普京通电话，双方呼吁通过外交途径处理美伊紧张局势。多哈长期扮演美伊之间的传话角色，此番表态显示海湾国家担忧冲突外溢冲击能源航道与地区稳定。",
+  "source": "半岛电视台",
+  "category": "地区热点",
+  "keywords": [
+   "卡塔尔",
+   "普京",
+   "美伊",
+   "外交斡旋"
+  ],
+  "url": "https://www.aljazeera.com/video/newsfeed/2026/10/27/qatars-emir-and-putin-call-for-diplomacy-amid-us-iran-conflict",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "伊朗就霍尔木兹海峡通行威胁韩国航运集团",
+  "title_en": "Iran threatens South Korean shipping group over Hormuz transits",
+  "summary_zh": "金融时报报道，伊朗就霍尔木兹海峡通行问题向韩国航运企业发出威胁。海峡承载全球约五分之一的石油海运量，任何针对性骚扰都会推高航运保费与油价风险溢价，也使韩国在美伊对峙中的站位更为棘手。",
+  "source": "金融时报",
+  "category": "地区热点",
+  "keywords": [
+   "霍尔木兹海峡",
+   "伊朗",
+   "韩国航运",
+   "能源通道"
+  ],
+  "url": "https://www.ft.com/content/171ffdaa-e3e7-41b9-a4c6-09c9ace3f719",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "梅拉尼娅斡旋的停火在俄占乌克兰城镇生效",
+  "title_en": "Cease-Fire Brokered by Melania Trump Begins in Ukrainian City of Oleshky",
+  "summary_zh": "纽约时报报道，由梅拉尼娅·特朗普斡旋达成的地方性停火在俄占乌克兰城镇奥列什基开始生效。该安排属局部人道停火，范围有限，但被视为美方以非传统渠道介入俄乌事务的尝试，其可持续性仍待观察。",
+  "source": "纽约时报",
+  "category": "地区热点",
+  "keywords": [
+   "停火",
+   "奥列什基",
+   "梅拉尼娅",
+   "俄乌"
+  ],
+  "url": "https://www.nytimes.com/2026/10/26/world/europe/ukraine-oleshky-ceasefire-russia-war.html",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "赫尔松地区停火范围扩大 官员称",
+  "title_en": "Ceasefire extended across Ukraine's Kherson region, officials say",
+  "summary_zh": "BBC 报道，乌克兰官员称停火范围已扩大至赫尔松地区。此前奥列什基的局部停火被指基本维持，扩大安排若落实，将是近期俄乌之间少有的一次降级，但双方对停火地理范围与监督机制的表述仍不一致。",
+  "source": "BBC",
+  "category": "地区热点",
+  "keywords": [
+   "赫尔松",
+   "停火扩大",
+   "俄乌",
+   "降级"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "北溪管道破坏案嫌疑人被指受乌军「直接指挥」",
+  "title_en": "Nord Stream sabotage suspect under 'direct command' of Ukrainian army",
+  "summary_zh": "金融时报报道，北溪管道爆炸案嫌疑人被指处于乌克兰军队的「直接指挥」之下。相关证据若被采信，将使欧洲内部关于乌方角色与援助条件的争论升温，也给德乌关系与后续司法程序带来政治压力。",
+  "source": "金融时报",
+  "category": "地区热点",
+  "keywords": [
+   "北溪",
+   "管道爆炸",
+   "乌克兰",
+   "司法调查"
+  ],
+  "url": "https://www.ft.com/content/fdc70b65-af31-4697-91b3-69c6f1a1db9e",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "巴西大选落败后 弗拉维奥·博索纳罗离境赴美",
+  "title_en": "Flávio Bolsonaro Leaves Brazil for the U.S. After Election Defeat",
+  "summary_zh": "纽约时报报道，巴西总统选举落败后，弗拉维奥·博索纳罗离开巴西前往美国。美方表示将在其入境问题上给予便利。事件把巴西政权更替与美巴关系直接挂钩，也使卢拉政府面临如何处理前执政家族司法问题的抉择。",
+  "source": "纽约时报",
+  "category": "地区热点",
+  "keywords": [
+   "巴西大选",
+   "博索纳罗",
+   "卢拉",
+   "美巴关系"
+  ],
+  "url": "https://www.nytimes.com/2026/10/27/world/americas/brazil-flavio-bolsonaro-flees-election.html",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "卢拉胜选重挫特朗普的拉美布局 前中国事务特使解读",
+  "title_en": "Lula's win in Brazil deals blow to Trump's Latin America push: former China envoy",
+  "summary_zh": "南华早报援引一位前中国事务特使观点，认为卢拉在巴西胜选对特朗普的拉美战略构成打击。文章指出，巴西作为地区最大经济体若重新偏向一体化与多元外交，将削弱美方以双边施压重塑拉美的空间。",
+  "source": "南华早报",
+  "category": "地区热点",
+  "keywords": [
+   "卢拉",
+   "巴西",
+   "拉美",
+   "特朗普"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3372318/lulas-win-brazil-deals-blow-trumps-latin-america-push-former-china-envoy",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "马查多结束流亡返委内瑞拉 考验美国影响力边界",
+  "title_en": "Machado's Return to Venezuela Tests Limits of U.S. Sway",
+  "summary_zh": "纽约时报报道，委内瑞拉反对派领袖马查多结束流亡回国，其归来既被视为反对派重组契机，也考验美国对委内瑞拉的实际影响力。美方近期在能源与移民议题上与加拉加斯互动频繁，使反对派的谈判筹码更加复杂。",
+  "source": "纽约时报",
+  "category": "地区热点",
+  "keywords": [
+   "马查多",
+   "委内瑞拉",
+   "美国影响力",
+   "反对派"
+  ],
+  "url": "https://www.nytimes.com/2026/10/26/world/americas/venezuela-machado-rodriguez-trump.html",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "特朗普展示「百万桶原油」油轮 并抛出委内瑞拉成第 51 州说法",
+  "title_en": "Trump shows off tanker with '1m barrels of oil' and floats Venezuela as 51st state",
+  "summary_zh": "卫报报道，特朗普在得州活动中展示装载约百万桶原油的油轮，并抛出委内瑞拉成为美国「第 51 个州」的说法。此举把能源议题与拉美政权更替叙事捆绑，服务于其选战动员，但在外交层面引发盟友与对手的不同解读。",
+  "source": "卫报",
+  "category": "地区热点",
+  "keywords": [
+   "特朗普",
+   "委内瑞拉",
+   "原油",
+   "得州集会"
+  ],
+  "url": "https://www.theguardian.com/us-news/2026/oct/27/trump-oil-tanker-venezuela",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "印度气旋「阿尔纳布」逼近 数万人撤离",
+  "title_en": "India Evacuates Tens of Thousands as Cyclone Arnab Approaches",
+  "summary_zh": "纽约时报报道，气旋「阿尔纳布」逼近印度沿海，当局已疏散数万人。预报显示风暴将带来强降雨与风暴潮，对低洼农业区与港口作业构成威胁，地方救灾能力与预警体系面临检验。",
+  "source": "纽约时报",
+  "category": "地区热点",
+  "keywords": [
+   "印度",
+   "气旋",
+   "疏散",
+   "灾害"
+  ],
+  "url": "https://www.nytimes.com/2026/10/27/world/asia/india-cyclone-arnab-evacuations-nepal.html",
+  "priority_score": 70,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "苏丹内战持续 西方警告饥荒风险",
+  "title_en": "West warns of famine risk in Sudan as civil war grinds on",
+  "summary_zh": "BBC 报道，随着苏丹内战延续，西方国家警告当地面临饥荒风险。援助通道受阻与粮食生产崩溃叠加，使数百万民众处于严重粮食不安全状态，国际社会对交战方的施压手段仍显不足。",
+  "source": "BBC",
+  "category": "地区热点",
+  "keywords": [
+   "苏丹",
+   "内战",
+   "饥荒",
+   "人道危机"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cj5ynkk6v3pzo",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "特朗普在得州集会上称高油价是「短期痛苦」",
+  "title_en": "Trump Says High Gas Price a 'Short-Term Pain' at Texas Rally",
+  "summary_zh": "彭博社报道，特朗普在得州集会上把高油价称为「短期痛苦」，并为共和党参议员候选人帕克斯顿作最后助选。这一表态承认能源价格对选情的压力，同时试图把当前成本上升框定为换取长期能源主导的必要代价。",
+  "source": "彭博社",
+  "category": "美国内政",
+  "keywords": [
+   "特朗普",
+   "油价",
+   "得州",
+   "中期选举"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-27/trump-casts-high-gas-price-as-short-term-pain-at-texas-rally",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "特朗普在得州推出放宽甲烷泄漏规定的规则",
+  "title_en": "Trump debuts oil rule rollback as Texas wobbles toward blue",
+  "summary_zh": "Politico 报道，特朗普在得州推出放宽油气行业甲烷泄漏管制的规则，作为争取能源州选票的动作。得州选情出现摇摆迹象，使能源监管松绑成为中期选举前的政策筹码，也令气候承诺与产业竞争力之争再度升温。",
+  "source": "Politico",
+  "category": "美国内政",
+  "keywords": [
+   "甲烷",
+   "能源监管",
+   "得州",
+   "中期选举"
+  ],
+  "url": "https://www.politico.com/news/2026/10/27/trump-methane-gas-paxton-texas-midterms-epa-01111909",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "Rubio 被特朗普「请」上助选台 共和党中期选举借势",
+  "title_en": "Republicans wanted Rubio on the stump. Trump coaxed him there.",
+  "summary_zh": "Politico 报道，共和党希望借助国务卿鲁比奥的拉美裔号召力助选，最终由特朗普亲自促成其走上竞选舞台。这一安排在提升关键州动员效果的同时，也使外交主管官员深度卷入国内政治，引发角色边界讨论。",
+  "source": "Politico",
+  "category": "美国内政",
+  "keywords": [
+   "鲁比奥",
+   "助选",
+   "中期选举",
+   "共和党"
+  ],
+  "url": "https://www.politico.com/news/2026/10/27/marco-rubio-texas-trump-midterms-01137437",
+  "priority_score": 76,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "阿拉斯加「排序投票制」进入公投 共和党欲废除",
+  "title_en": "Alaska's ranked choice voting is on the ballot this year. Republicans want it gone.",
+  "summary_zh": "Politico 报道，阿拉斯加的排序投票制（ranked choice voting）今年被列入公投，共和党力主废除。该制度被认为有利于温和派与跨党合作，两党围绕选举规则的争夺实质是对未来席位结构的预先布局。",
+  "source": "Politico",
+  "category": "美国内政",
+  "keywords": [
+   "排序投票",
+   "阿拉斯加",
+   "选举规则",
+   "公投"
+  ],
+  "url": "https://www.politico.com/news/2026/10/27/alaska-ranked-choice-voting-repeal-01136379",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "赫卡比谈特朗普、曼达尼与纽约的未来",
+  "title_en": "Kathy Hochul on Trump, Mamdani and the future of New York",
+  "summary_zh": "Politico 刊发对纽约州州长霍楚尔的访谈，涉及她与特朗普的博弈、与进步派人物曼达尼的关系以及纽约的财政与治安议题。访谈显示民主党内部在移民、城市治理与选举策略上的路线分歧仍在扩大。",
+  "source": "Politico",
+  "category": "美国内政",
+  "keywords": [
+   "霍楚尔",
+   "纽约",
+   "民主党",
+   "曼达尼"
+  ],
+  "url": "https://www.politico.com/video/2026/10/27/kathy-hochul-on-trump-mamdani-and-the-future-of-new-york-2212608",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "共和党筹款的隐性弱点正在恶化",
+  "title_en": "The hidden GOP fundraising weakness is getting worse",
+  "summary_zh": "Politico 分析指出，共和党筹款结构中的隐性弱点正在恶化：小额捐款增长乏力、大额金主集中度过高，使竞选后期现金调度弹性下降。文章认为这一趋势可能在若干关键选区形成实际劣势。",
+  "source": "Politico",
+  "category": "美国内政",
+  "keywords": [
+   "共和党",
+   "筹款",
+   "小额捐款",
+   "中期选举"
+  ],
+  "url": "https://www.politico.com/news/2026/10/27/trump-gop-online-fundraising-problems-01135716",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "两党议员在中期选举前关注投票安全 呼吁重审提前投票",
+  "title_en": "Coalition MP calls for rethink of pre-poll voting amid heightened security concerns",
+  "summary_zh": "卫报报道，在近期安全事件后，一名联盟党议员呼吁重新审视提前投票安排。围绕投票站安保、邮寄选票与工作人员保护的争论，正把选举基础设施的韧性推上议程。",
+  "source": "卫报",
+  "category": "美国内政",
+  "keywords": [
+   "提前投票",
+   "选举安全",
+   "投票站",
+   "两党"
+  ],
+  "url": "https://www.theguardian.com/australia-news/2026/oct/27/mp-calls-rethink-pre-poll-voting-helen-haines-heightened-security-concerns-ntwnfb",
+  "priority_score": 66,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "美国特使在联合国斥责古巴外交官「这就是美国」",
+  "title_en": "'This is America': US envoy scolds Cuban diplomat at UN",
+  "summary_zh": "半岛电视台报道，美国特使在联合国场合斥责古巴外交官，并以「这就是美国」回应对方。交锋反映美古关系持续紧张，也显示多边场合正越来越多被用于双边对抗的公开表达。",
+  "source": "半岛电视台",
+  "category": "全球治理与多边",
+  "keywords": [
+   "联合国",
+   "古巴",
+   "美国",
+   "外交交锋"
+  ],
+  "url": "https://www.aljazeera.com/video/newsfeed/2026/10/28/this-is-america-us-envoy-scolds-cuban-diplomat-at-un",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "埃及法院关闭独立新闻网站 Mada Masr",
+  "title_en": "Egypt court fines journalist Lina Attalah and orders news site's closure",
+  "summary_zh": "BBC 报道，埃及法院对记者莉娜·阿塔拉处以罚款，并下令关闭独立新闻网站 Mada Masr。此举被媒体权益组织视为埃及新闻空间进一步收缩的标志，也使外界对该国人权状况的关注升温。",
+  "source": "BBC",
+  "category": "全球治理与多边",
+  "keywords": [
+   "埃及",
+   "新闻自由",
+   "Mada Masr",
+   "司法"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cw8rz14k1jvxo",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "美英检方：RAF Fairford 图谋由为伊朗工作的「协调人」指挥",
+  "title_en": "RAF Fairford plot 'coordinated by handler working on behalf of Iran'",
+  "summary_zh": "卫报报道，英国检方称 RAF Fairford 军事基地相关图谋由一名为伊朗工作的「协调人」指挥，两名男子已被起诉。案件把伊朗代理人活动与英国本土军事设施安全直接关联，或将推动英方收紧对相关人员的监控与驱逐程序。",
+  "source": "卫报",
+  "category": "全球治理与多边",
+  "keywords": [
+   "RAF Fairford",
+   "伊朗",
+   "英国安全",
+   "代理人"
+  ],
+  "url": "https://www.theguardian.com/uk-news/2026/oct/27/two-men-charged-raf-fairford",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "伊朗运动员死刑担忧升温 登山家成为最新被处决者",
+  "title_en": "Fears grow for Iranian athletes on death row as mountaineer latest to be hanged",
+  "summary_zh": "卫报报道，一名伊朗登山运动员被处决后，国际体育界对在押伊朗运动员命运的担忧升温。人权组织指相关审判程序缺乏公正保障，呼吁体育组织与赛事主办方对伊朗参赛资格采取更明确立场。",
+  "source": "卫报",
+  "category": "全球治理与多边",
+  "keywords": [
+   "伊朗",
+   "死刑",
+   "运动员",
+   "人权"
+  ],
+  "url": "https://www.theguardian.com/global-development/2026/oct/27/fears-grow-for-iranian-athletes-on-death-row-as-mountaineer-latest-to-be-hanged",
+  "priority_score": 70,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "加沙女导演以影像转化创伤 新学院成立",
+  "title_en": "Gaza's women filmmakers turn pain into cinema as new academy launches",
+  "summary_zh": "半岛电视台报道，加沙女性电影人通过影像记录与创作转化战争创伤，当地一家新电影学院同步成立。在基础设施严重受损的条件下，文化生产被视为维持社会韧性与保存集体记忆的方式。",
+  "source": "半岛电视台",
+  "category": "全球治理与多边",
+  "keywords": [
+   "加沙",
+   "女性电影人",
+   "文化",
+   "创伤"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/10/27/gazas-women-filmmakers-turn-pain-into-cinema-as-new-academy-launches",
+  "priority_score": 68,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "埃及下令关闭主要独立新闻机构",
+  "title_en": "Egypt shuts down one of the country's last independent news outlets",
+  "summary_zh": "金融时报报道，埃及关闭了国内仅存的独立新闻机构之一。此举与对记者个人的罚款判决同步发生，被解读为选举与地区议题敏感期前对舆论空间的进一步收紧。",
+  "source": "金融时报",
+  "category": "全球治理与多边",
+  "keywords": [
+   "埃及",
+   "独立媒体",
+   "新闻自由",
+   "舆论管控"
+  ],
+  "url": "https://www.ft.com/content/9ee42ad6-7d26-4688-b1f7-ffc75c613707",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "海湾国家会否建立新的地区安全框架？",
+  "title_en": "Will players in the Gulf establish a new security framework?",
+  "summary_zh": "半岛电视台分析海湾国家在美伊紧张与航道风险背景下可能推动的新安全安排。文章认为，海合会内部利益分化与对外依赖度的差异，使集体安全机制难以成形，双边与「议题联盟」式的安排更可能成为现实选择。",
+  "source": "半岛电视台",
+  "category": "其他",
+  "keywords": [
+   "海湾",
+   "安全框架",
+   "海合会",
+   "美伊"
+  ],
+  "url": "https://www.aljazeera.com/video/inside-story/2026/10/27/will-players-in-the-gulf-establish-a-new-security-framework",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "香港「公寓恐怖」电影讽刺畸形楼市",
+  "title_en": "Hong Kong's 'Apartment Horror' Films Skewer Its Ghastly Property Market",
+  "summary_zh": "纽约时报报道，香港近期一批以「公寓恐怖」为主题的电影，用极端化的居住空间隐喻房价与居住贫困问题。文章认为，类型片的商业成功说明住房焦虑已成为这座城市最具共情力的社会议题之一。",
+  "source": "纽约时报",
+  "category": "其他",
+  "keywords": [
+   "香港",
+   "楼市",
+   "电影",
+   "社会议题"
+  ],
+  "url": "https://www.nytimes.com/2026/10/27/world/asia/hong-kong-apartment-horror-movies.html",
+  "priority_score": 68,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "东山下海精密港股挂牌首日下挫 募资 13 亿美元",
+  "title_en": "Dongshan Precision Slips in Debut After $1.3 Billion HK Listing",
+  "summary_zh": "彭博社报道，苏州东山精密制造在香港上市募资约 13 亿美元，但首日股价走低。这家精密制造企业的主要增长来自 AI 服务器与光通信零部件，破发反映港股新股在 AI 板块情绪波动下的定价压力。",
+  "source": "彭博社",
+  "category": "其他",
+  "keywords": [
+   "东山精密",
+   "港股",
+   "IPO",
+   "AI 零部件"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-27/dongshan-precision-set-to-debut-after-1-3-billion-hk-listing",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "泡泡玛特三季度销售最多下滑 50% Labubu 热潮降温",
+  "title_en": "Pop Mart Third-Quarter Sales Fall Up to 50% as Labubu Fad Cools",
+  "summary_zh": "彭博社报道，泡泡玛特三季度销售同比最多下滑 50%，港股股价走低，主因 Labubu 系列热度回落与去年同期高基数。IP 依赖度高的潮玩企业如何延长单一爆款生命周期，再度成为市场质疑焦点。",
+  "source": "彭博社",
+  "category": "其他",
+  "keywords": [
+   "泡泡玛特",
+   "Labubu",
+   "潮玩",
+   "消费"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-27/pop-mart-s-quarterly-sales-drop-on-high-base-sluggish-demand",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "中国 A 股对 H 股溢价因国家资金托底扩至 17 个月最阔",
+  "title_en": "China Stock Premium Over Hong Kong Widens on State Intervention",
+  "summary_zh": "彭博社报道，北京稳定股市的举措推动 A 股对 H 股溢价升至近 17 个月最高水平：恒生沪深港通 AH 溢价指数显示 A 股较离岸同类高出约 33%，该指标有望录得 2024 年 1 月以来最大月度涨幅。资金结构差异正在两市之间形成明显的估值割裂。",
+  "source": "彭博社",
+  "category": "其他",
+  "keywords": [
+   "A股",
+   "H股",
+   "溢价",
+   "国家资金",
+   "港股"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-27/china-stock-premium-over-hong-kong-widens-on-state-intervention",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "律所 Weil 危机加深 准备可能清算",
+  "title_en": "Law firm Weil prepares for possible wind-down as crisis deepens",
+  "summary_zh": "金融时报报道，美国律所 Weil Gotshal & Manges 在危机加深之际准备可能清算。此事被视为高端法律服务业竞争与人才流失压力的极端案例，其破产重组业务的传统优势地位可能被同业重新分配。",
+  "source": "金融时报",
+  "category": "其他",
+  "keywords": [
+   "Weil",
+   "律所",
+   "清算",
+   "法律服务"
+  ],
+  "url": "https://www.ft.com/content/69ccfcb0-3f5e-4b77-9e04-a386e827b872",
+  "priority_score": 70,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "暗影船队从委内瑞拉转向利润丰厚的霍尔木兹交易",
+  "title_en": "Dark Fleet Tankers Move From Venezuela to Lucrative Hormuz Trade",
+  "summary_zh": "彭博社报道，此前活跃于委内瑞拉周边的「暗影船队」油轮正转向霍尔木兹海峡周边的高利润运输。船队迁移显示制裁规避网络在地区紧张中重新配置，也增加了航道安全与保险定价的不确定性。",
+  "source": "彭博社",
+  "category": "其他",
+  "keywords": [
+   "暗影船队",
+   "霍尔木兹",
+   "委内瑞拉",
+   "制裁规避"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-28/dark-fleet-tankers-move-from-venezuela-to-lucrative-hormuz-trade",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "title_zh": "甲骨文扩大与英伟达芯片协议 首次引入谷歌 TPU",
+  "title_en": "Oracle expands chip supply deal with Nvidia, adds Google and Cerebras offerings",
+  "summary_zh": "路透社报道，甲骨文周二宣布扩大与英伟达的云端 AI 芯片合作，同时推动多元化，引入谷歌张量处理单元（TPU）以及英伟达竞争对手 Cerebras、英特尔投资的 SambaNova 的推理芯片。甲骨文将与英伟达把 Vera Rubin AI 服务器扩展至「多吉瓦级」规模，但未披露交易金额；英伟达 CEO 黄仁勋此前称每吉瓦 Vera Rubin 系统可带来最多 400 亿美元收入。甲骨文还表示，即便在基于英伟达的系统中也会弃用部分英伟达网络芯片，改用自研 Acceleron。分析人士估计，甲骨文与英伟达交易金额约 30 亿美元，英伟达或将为其数据中心租赁提供信用支持。",
+  "source": "路透社",
+  "category": "AI与科技竞争",
+  "keywords": [
+   "甲骨文",
+   "英伟达",
+   "TPU",
+   "Cerebras",
+   "AI芯片"
+  ],
+  "url": "https://www.aol.com/articles/oracle-expands-chip-supply-deal-160104000.html",
+  "repost_from": "AOL（路透社电头）",
+  "priority_score": 88,
+  "is_summit_level": false,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-28 09:30:00",
+  "is_official": false
+ },
+ {
+  "source": "南华早报",
+  "category": "中美关系",
+  "priority_score": 93,
+  "title_zh": "澳大利亚向中国归还流失三十余年的古代石刻头像",
+  "title_en": "Australia returns ancient stone heads to China after more than 30 years",
+  "summary_zh": "澳大利亚正式向中国移交一批流失海外三十余年的古代佛教石刻头像，成为两国文物返还合作的最新一例。这批石像原出自中国北方石窟寺遗址，早年经非法渠道流出。移交仪式在中方文博机构代表见证下完成。此举被视为堪培拉在经贸摩擦背景下维持对华文化交流渠道的努力，同时也延续了近两年西方多国向中国返还文物的趋势。",
+  "keywords": [
+   "中澳关系",
+   "文物返还",
+   "文化交流"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3372466/australia-returns-ancient-stone-heads-china",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "澳大利亚向中国归还流失三十余年的古代石刻头像",
+  "summary": "澳大利亚正式向中国移交一批流失海外三十余年的古代佛教石刻头像，成为两国文物返还合作的最新一例。这批石像原出自中国北方石窟寺遗址，早年经非法渠道流出。移交仪式在中方文博机构代表见证下完成。此举被视为堪培拉在经贸摩擦背景下维持对华文化交流渠道的努力，同时也延续了近两年西方多国向中国返还文物的趋势。"
+ },
+ {
+  "source": "南华早报",
+  "category": "中美关系",
+  "priority_score": 94,
+  "title_zh": "赫格塞斯承诺强化美菲军事框架，但未给出具体内容",
+  "title_en": "Hegseth pledges stronger military framework with Philippines, but lacks details",
+  "summary_zh": "美国国防部长赫格塞斯在马尼拉与菲方防务官员会谈后表示，两国将建立更强有力的军事合作框架，涵盖联合演训、基地使用与装备援助，但未披露具体条款与时间表。分析人士指出，此番表态发生在南海摩擦持续、美方要求盟友提高防务开支的背景下，措辞强调「框架」而非新增承诺，实际增量有限。菲律宾方面希望获得更明确的海上安全保证。",
+  "keywords": [
+   "美菲同盟",
+   "南海",
+   "国防部长"
+  ],
+  "url": "https://www.scmp.com/news/us/diplomacy/article/3372492/hegseth-pledges-stronger-military-framework-philippines",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "赫格塞斯承诺强化美菲军事框架，但未给出具体内容",
+  "summary": "美国国防部长赫格塞斯在马尼拉与菲方防务官员会谈后表示，两国将建立更强有力的军事合作框架，涵盖联合演训、基地使用与装备援助，但未披露具体条款与时间表。分析人士指出，此番表态发生在南海摩擦持续、美方要求盟友提高防务开支的背景下，措辞强调「框架」而非新增承诺，实际增量有限。菲律宾方面希望获得更明确的海上安全保证。"
+ },
+ {
+  "source": "南华早报",
+  "category": "中美关系",
+  "priority_score": 95,
+  "title_zh": "华为在美刑事案开庭抗辩，强调其创新记录",
+  "title_en": "Huawei opens defence in US criminal trial, touting its record of innovation",
+  "summary_zh": "华为在纽约东区联邦法院的刑事审判中开始陈述抗辩理由，辩护团队以公司长期研发投入与专利记录为主线，反驳有关窃取商业秘密与银行欺诈的指控。该案源于2018年起诉，涉及华为与关联公司在伊朗业务中的银行交易及知识产权争议。辩方称检方证据建立在竞争对手单方陈述之上。案件审理预计持续数周。",
+  "keywords": [
+   "华为",
+   "刑事审判",
+   "EDNY"
+  ],
+  "url": "https://www.scmp.com/news/us/article/3372491/huawei-opens-defence-us-criminal-trial-touting-its-record-innovation",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "华为在美刑事案开庭抗辩，强调其创新记录",
+  "summary": "华为在纽约东区联邦法院的刑事审判中开始陈述抗辩理由，辩护团队以公司长期研发投入与专利记录为主线，反驳有关窃取商业秘密与银行欺诈的指控。该案源于2018年起诉，涉及华为与关联公司在伊朗业务中的银行交易及知识产权争议。辩方称检方证据建立在竞争对手单方陈述之上。案件审理预计持续数周。"
+ },
+ {
+  "source": "南华早报",
+  "category": "中国外交",
+  "priority_score": 86,
+  "title_zh": "皇马就姆巴佩涉毛泽东言论向中国致歉",
+  "title_en": "Real Madrid issues apology to China over Mbappe's Mao remarks",
+  "summary_zh": "皇家马德里俱乐部发表声明，就其前锋姆巴佩在法国播客节目中把毛泽东称为「独裁者」的言论向中国民众致歉，强调俱乐部尊重中国的历史、文化与球迷。此前姆巴佩本人已用中、英、法三语道歉，但仍未能平息反弹：蒙牛、乳酪股份与东鹏饮料宣布终止与其全部合作，中国移动咪咕停止转播皇马比赛。西甲联盟主席特巴斯已会见中国驻西班牙大使并成立危机小组。",
+  "keywords": [
+   "中西关系",
+   "文体事件",
+   "舆情"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3372485/real-madrid-issues-apology-china-over-mbappe",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "皇马就姆巴佩涉毛泽东言论向中国致歉",
+  "summary": "皇家马德里俱乐部发表声明，就其前锋姆巴佩在法国播客节目中把毛泽东称为「独裁者」的言论向中国民众致歉，强调俱乐部尊重中国的历史、文化与球迷。此前姆巴佩本人已用中、英、法三语道歉，但仍未能平息反弹：蒙牛、乳酪股份与东鹏饮料宣布终止与其全部合作，中国移动咪咕停止转播皇马比赛。西甲联盟主席特巴斯已会见中国驻西班牙大使并成立危机小组。"
+ },
+ {
+  "source": "南华早报",
+  "category": "中国外交",
+  "priority_score": 88,
+  "title_zh": "金正恩的边境之行为何不同于以往的峰会前剧本",
+  "title_en": "Why Kim Jong-un's border trip to China differs from past pre-summit playbooks",
+  "summary_zh": "朝鲜最高领导人金正恩近日视察中朝边境地区，行程安排与以往峰会前的惯例明显不同：此次未见大规模随行经贸官员，公开报道聚焦口岸物流与地方建设而非外交铺垫。分析认为，平壤在特朗普政府释放对话信号之际保持观望，边境考察更可能服务于内部经济与物资调配，而非为高层会晤预热。中朝边境贸易通道近期流量变化亦受关注。",
+  "keywords": [
+   "中朝关系",
+   "朝鲜",
+   "边境"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3372396/why-kim-jong-uns-border-trip-china-differs",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "金正恩的边境之行为何不同于以往的峰会前剧本",
+  "summary": "朝鲜最高领导人金正恩近日视察中朝边境地区，行程安排与以往峰会前的惯例明显不同：此次未见大规模随行经贸官员，公开报道聚焦口岸物流与地方建设而非外交铺垫。分析认为，平壤在特朗普政府释放对话信号之际保持观望，边境考察更可能服务于内部经济与物资调配，而非为高层会晤预热。中朝边境贸易通道近期流量变化亦受关注。"
+ },
+ {
+  "source": "南华早报",
+  "category": "中美关系",
+  "priority_score": 92,
+  "title_zh": "美方警告中国正以空天飞机与定向能武器扩充太空工具箱",
+  "title_en": "US warns China is expanding its space toolkit with spaceplane and energy weapons",
+  "summary_zh": "美方一份评估报告称，中国正通过可重复使用空天飞行器与定向能技术扩展太空作战能力，相关平台具备快速进出轨道与对卫星实施干扰的潜力。报告将北京的太空项目描述为「全谱系」推进，涵盖侦察、导航对抗与在轨服务。中方一贯主张和平利用外空并反对太空武器化。分析人士提醒，此类评估往往作为美方太空预算与军控议程的依据，具体能力判断需谨慎看待。",
+  "keywords": [
+   "太空军事化",
+   "中美博弈",
+   "定向能"
+  ],
+  "url": "https://www.scmp.com/news/china/military/article/3372459/us-warns-china-expanding-its-space-toolkit",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "美方警告中国正以空天飞机与定向能武器扩充太空工具箱",
+  "summary": "美方一份评估报告称，中国正通过可重复使用空天飞行器与定向能技术扩展太空作战能力，相关平台具备快速进出轨道与对卫星实施干扰的潜力。报告将北京的太空项目描述为「全谱系」推进，涵盖侦察、导航对抗与在轨服务。中方一贯主张和平利用外空并反对太空武器化。分析人士提醒，此类评估往往作为美方太空预算与军控议程的依据，具体能力判断需谨慎看待。"
+ },
+ {
+  "source": "南华早报",
+  "category": "中国外交",
+  "priority_score": 85,
+  "title_zh": "中国军方在贸易紧张升温之际赴法德举行磋商",
+  "title_en": "China's military holds talks in France and Germany despite rising trade tensions",
+  "summary_zh": "中国人民解放军代表团近日分别与法国、德国军方举行防务磋商，议题涉及地区安全形势、海上通道与双边军事交流机制。此轮互动发生在中欧围绕电动车关税、稀土出口管制争执不下的背景下，显示双方仍保留防务对话渠道。欧洲方面关注中方在乌克兰问题上的立场，中方则重申不介入冲突、主张政治解决。",
+  "keywords": [
+   "中欧关系",
+   "军事外交",
+   "防务磋商"
+  ],
+  "url": "https://www.scmp.com/news/china/military/article/3372465/chinas-military-holds-talks-france-and-germany",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "中国军方在贸易紧张升温之际赴法德举行磋商",
+  "summary": "中国人民解放军代表团近日分别与法国、德国军方举行防务磋商，议题涉及地区安全形势、海上通道与双边军事交流机制。此轮互动发生在中欧围绕电动车关税、稀土出口管制争执不下的背景下，显示双方仍保留防务对话渠道。欧洲方面关注中方在乌克兰问题上的立场，中方则重申不介入冲突、主张政治解决。"
+ },
+ {
+  "source": "南华早报",
+  "category": "中国外交",
+  "priority_score": 87,
+  "title_zh": "中国寻求印度协助缓解边境紧张",
+  "title_en": "China seeks India's help in defusing border tensions",
+  "summary_zh": "中方在与印方的外交渠道中提出，希望新德里共同推动边境地区局势降温，包括恢复更多会谈机制与推进脱离接触安排。报道称，这一动向出现在两国恢复直航与签证便利化之后，经贸往来回暖为边境议题创造了缓冲空间。印方态度谨慎，强调实控线现状不可单方面改变，并要求先解决剩余摩擦点的巡逻安排。",
+  "keywords": [
+   "中印关系",
+   "边境",
+   "脱离接触"
+  ],
+  "url": "https://www.scmp.com/plus/news/china/diplomacy/article/3372433/china-seeks-indias-help-defusing-border",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "中国寻求印度协助缓解边境紧张",
+  "summary": "中方在与印方的外交渠道中提出，希望新德里共同推动边境地区局势降温，包括恢复更多会谈机制与推进脱离接触安排。报道称，这一动向出现在两国恢复直航与签证便利化之后，经贸往来回暖为边境议题创造了缓冲空间。印方态度谨慎，强调实控线现状不可单方面改变，并要求先解决剩余摩擦点的巡逻安排。"
+ },
+ {
+  "source": "南华早报",
+  "category": "地区热点",
+  "priority_score": 82,
+  "title_zh": "中国基因编辑临床试验：两名儿童改善、一人死亡、一人退出",
+  "title_en": "In China gene-editing trial, 2 children improved, 1 died and 1 withdrew",
+  "summary_zh": "一项在中国开展的基因编辑治疗临床试验披露结果：四名受试儿童中两人症状改善、一人死亡、一人退出。研究团队称死亡病例与治疗相关的免疫反应有关，已向伦理委员会报告并暂停入组。该结果引发对基因编辑疗法安全性评估与知情同意流程的讨论，业内呼吁公开更完整的病例数据与随访方案。",
+  "keywords": [
+   "基因编辑",
+   "临床研究",
+   "生物伦理"
+  ],
+  "url": "https://www.scmp.com/news/china/science/article/3372452/china-gene-editing-trial",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "中国基因编辑临床试验：两名儿童改善、一人死亡、一人退出",
+  "summary": "一项在中国开展的基因编辑治疗临床试验披露结果：四名受试儿童中两人症状改善、一人死亡、一人退出。研究团队称死亡病例与治疗相关的免疫反应有关，已向伦理委员会报告并暂停入组。该结果引发对基因编辑疗法安全性评估与知情同意流程的讨论，业内呼吁公开更完整的病例数据与随访方案。"
+ },
+ {
+  "source": "南华早报",
+  "category": "中国外交",
+  "priority_score": 80,
+  "title_zh": "武契奇历史性落败后，中塞关系面临审视而非断裂",
+  "title_en": "Why China's ties with Serbia face scrutiny, not severance, after historic Vucic loss",
+  "summary_zh": "塞尔维亚总统武契奇在选举中遭遇历史性挫败后，中塞关系进入重新评估阶段。分析指出，两国在基础设施、矿业与装备领域的合作项目多已落地，短期难以逆转，但新政府可能就贷款条件、项目透明度与欧盟入盟要求重新谈判。贝尔格莱德在欧盟与中俄之间的平衡策略面临调整压力，中方则倾向于维持既有合作框架的稳定性。",
+  "keywords": [
+   "中塞关系",
+   "塞尔维亚",
+   "欧洲"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3372406/why-china-ties-serbia-face-scrutiny-not-severance",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "武契奇历史性落败后，中塞关系面临审视而非断裂",
+  "summary": "塞尔维亚总统武契奇在选举中遭遇历史性挫败后，中塞关系进入重新评估阶段。分析指出，两国在基础设施、矿业与装备领域的合作项目多已落地，短期难以逆转，但新政府可能就贷款条件、项目透明度与欧盟入盟要求重新谈判。贝尔格莱德在欧盟与中俄之间的平衡策略面临调整压力，中方则倾向于维持既有合作框架的稳定性。"
+ },
+ {
+  "source": "路透社",
+  "category": "中美关系",
+  "priority_score": 89,
+  "repost_from": "The Straits Times",
+  "title_zh": "特朗普认定进口机器人与工业机械构成国安风险，但暂不加征关税",
+  "title_en": "Trump says imported robotics pose national security risks but does not impose tariffs",
+  "summary_zh": "特朗普周三依据1962年《贸易扩展法》第232条认定进口机器人与工业机械构成国家安全风险，但未立即加征关税，而是要求商务部与贸易代表办公室同贸易伙伴谈判进口水平，并在180天内汇报进展；关税、配额与费用仍保留为后续选项。调查始于2025年9月，覆盖面包括数控机械系统、机床、高压釜、工业炉及激光与水切割设备。今年7月，美国联邦通信委员会已禁止进口中国新型机器人与电力逆变器。商务部称美国多数品类的机器人与工业机械依赖进口，白宫强调相关设备支撑约7.1万亿美元制造业出货与全部16个关键基础设施领域。",
+  "keywords": [
+   "232调查",
+   "机器人",
+   "关税",
+   "国家安全"
+  ],
+  "url": "https://www.straitstimes.com/world/united-states/trump-says-imported-robotics-pose-national-security-risks-but-does-not-impose-tariffs",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "特朗普认定进口机器人与工业机械构成国安风险，但暂不加征关税",
+  "summary": "特朗普周三依据1962年《贸易扩展法》第232条认定进口机器人与工业机械构成国家安全风险，但未立即加征关税，而是要求商务部与贸易代表办公室同贸易伙伴谈判进口水平，并在180天内汇报进展；关税、配额与费用仍保留为后续选项。调查始于2025年9月，覆盖面包括数控机械系统、机床、高压釜、工业炉及激光与水切割设备。今年7月，美国联邦通信委员会已禁止进口中国新型机器人与电力逆变器。商务部称美国多数品类的机器人与工业机械依赖进口，白宫强调相关设备支撑约7.1万亿美元制造业出货与全部16个关键基础设施领域。"
+ },
+ {
+  "source": "路透社",
+  "category": "中欧关系",
+  "priority_score": 86,
+  "repost_from": "Business Day",
+  "title_zh": "大众战略转向：把中国研发技术推向「全球南方」市场",
+  "title_en": "Volkswagen strategy shift banks on China for global push",
+  "summary_zh": "大众汽车周三宣布，由其合肥研发中心与中国伙伴联合开发的紧凑型主平台（CMP）及中国电子电气架构（CEA）将用于面向「全球南方」的下一代车型，本十年末率先在南美落地。CEO 奥博穆称「中国是集团的关键创新引擎」，战略由「在中国，为中国」转为「在中国，走向全球」。大众正经历89年来最大规模重组，拟将中国业务从利润引擎转为成本更优的研发与出口基地。CARIAD 中国 CEO 韩三楚称南美被首选因其价格敏感且中国车企已深度布局，欧洲部署技术上可行但须总部综合地缘政治考量；欧洲与北美暂被排除在外。",
+  "keywords": [
+   "大众汽车",
+   "中欧关系",
+   "技术输出",
+   "汽车产业"
+  ],
+  "url": "https://www.businessday.co.za/world/international-companies/2026-10-28-volkswagen-strategy-shift-banks-on-china-for-global-push",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "大众战略转向：把中国研发技术推向「全球南方」市场",
+  "summary": "大众汽车周三宣布，由其合肥研发中心与中国伙伴联合开发的紧凑型主平台（CMP）及中国电子电气架构（CEA）将用于面向「全球南方」的下一代车型，本十年末率先在南美落地。CEO 奥博穆称「中国是集团的关键创新引擎」，战略由「在中国，为中国」转为「在中国，走向全球」。大众正经历89年来最大规模重组，拟将中国业务从利润引擎转为成本更优的研发与出口基地。CARIAD 中国 CEO 韩三楚称南美被首选因其价格敏感且中国车企已深度布局，欧洲部署技术上可行但须总部综合地缘政治考量；欧洲与北美暂被排除在外。"
+ },
+ {
+  "source": "路透社",
+  "category": "全球多边",
+  "priority_score": 83,
+  "repost_from": "AOL",
+  "title_zh": "美国9月货物贸易逆差扩大，AI需求推动进口创纪录",
+  "title_en": "US goods trade deficit widens as AI-related demand pushes imports to record high",
+  "summary_zh": "美国商务部普查局数据显示，9月货物贸易逆差意外扩大2.1%（28亿美元）至1349亿美元，为2025年3月以来最大；进口增2.4%至3441亿美元的纪录高位，其中资本品进口激增7.5%、同比增长77.2%。经济学家估算贸易对三季度GDP增速的拖累高达4个百分点，为连续第三季负贡献。分析人士称，科技企业所需硬件大量来自海外，加上消费支出强劲，共同推高进口；部分进口转为未售库存，可能减轻对GDP的冲击。市场预期三季度GDP年化增速3.2%，二季度为2.2%。",
+  "keywords": [
+   "贸易逆差",
+   "AI基建",
+   "美国经济"
+  ],
+  "url": "https://www.aol.com/articles/us-goods-trade-deficit-unexpectedly-124134000.html",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "美国9月货物贸易逆差扩大，AI需求推动进口创纪录",
+  "summary": "美国商务部普查局数据显示，9月货物贸易逆差意外扩大2.1%（28亿美元）至1349亿美元，为2025年3月以来最大；进口增2.4%至3441亿美元的纪录高位，其中资本品进口激增7.5%、同比增长77.2%。经济学家估算贸易对三季度GDP增速的拖累高达4个百分点，为连续第三季负贡献。分析人士称，科技企业所需硬件大量来自海外，加上消费支出强劲，共同推高进口；部分进口转为未售库存，可能减轻对GDP的冲击。市场预期三季度GDP年化增速3.2%，二季度为2.2%。"
+ },
+ {
+  "source": "路透社",
+  "category": "AI竞争",
+  "priority_score": 87,
+  "repost_from": "NewsBreak",
+  "title_zh": "谷歌发布Gemini 4 Carbon模型，主打网络安全能力",
+  "title_en": "Google launches Gemini 4 Carbon AI model with cybersecurity focus",
+  "summary_zh": "Alphabet 旗下谷歌周三发布新一代前沿模型 Gemini 4 Carbon，距离上一代 Gemini 4 Argon 仅两周，加剧与 OpenAI、Anthropic 在编码与网络安全系统上的竞争。谷歌称 Carbon 在漏洞发现、利用与软件补丁等安全任务上达到当前最优，内部基准中生成安全代码的成功率超过 Argon 的两倍，并可处理复杂的长周期工程与编码任务。该模型先通过 Fairwind 计划向部分网络安全防御方开放，定价为每百万输入 token 2 美元、输出 10 美元，与 Argon 的推广价持平。",
+  "keywords": [
+   "谷歌",
+   "大模型",
+   "网络安全",
+   "Gemini"
+  ],
+  "url": "https://www.newsbreak.com/reuters-555486/4972467664864-google-launches-gemini-4-carbon-ai-model-with-cybersecurity-focus",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "谷歌发布Gemini 4 Carbon模型，主打网络安全能力",
+  "summary": "Alphabet 旗下谷歌周三发布新一代前沿模型 Gemini 4 Carbon，距离上一代 Gemini 4 Argon 仅两周，加剧与 OpenAI、Anthropic 在编码与网络安全系统上的竞争。谷歌称 Carbon 在漏洞发现、利用与软件补丁等安全任务上达到当前最优，内部基准中生成安全代码的成功率超过 Argon 的两倍，并可处理复杂的长周期工程与编码任务。该模型先通过 Fairwind 计划向部分网络安全防御方开放，定价为每百万输入 token 2 美元、输出 10 美元，与 Argon 的推广价持平。"
+ },
+ {
+  "source": "路透社",
+  "category": "地区热点",
+  "priority_score": 78,
+  "repost_from": "Internazionale",
+  "title_zh": "美国制裁朝鲜IT人员诈骗网络，涉俄籍中介与一实体",
+  "title_en": "US sanctions North Korean network accused of defrauding businesses",
+  "summary_zh": "美国财政部周三宣布制裁朝鲜政府运营的IT人员诈骗网络，共涉10名个人与1个实体。美方称该网络让朝鲜IT人员以虚假身份受雇于美国等国企业，平壤抽走大部分薪酬用于资助大规模杀伤性武器与弹道导弹项目。被制裁对象包括俄籍中介博伊科夫与奥伯塔斯，二人自2024年起累计为朝方兑换约350万与近200万美元加密货币；另有一家总部设在俄罗斯的朝鲜控制实体「第一金融与技术开发中心」及其6名IT人员，2025年以来为该实体创收逾75万美元。财政部称澳大利亚与欧盟本月也实施了相关制裁。",
+  "keywords": [
+   "对朝制裁",
+   "财政部",
+   "加密货币",
+   "IT人员"
+  ],
+  "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/28/us-issues-new-north-korea-related-sanctions-treasury-website-shows",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "美国制裁朝鲜IT人员诈骗网络，涉俄籍中介与一实体",
+  "summary": "美国财政部周三宣布制裁朝鲜政府运营的IT人员诈骗网络，共涉10名个人与1个实体。美方称该网络让朝鲜IT人员以虚假身份受雇于美国等国企业，平壤抽走大部分薪酬用于资助大规模杀伤性武器与弹道导弹项目。被制裁对象包括俄籍中介博伊科夫与奥伯塔斯，二人自2024年起累计为朝方兑换约350万与近200万美元加密货币；另有一家总部设在俄罗斯的朝鲜控制实体「第一金融与技术开发中心」及其6名IT人员，2025年以来为该实体创收逾75万美元。财政部称澳大利亚与欧盟本月也实施了相关制裁。"
+ },
+ {
+  "source": "BBC",
+  "category": "地区热点",
+  "priority_score": 85,
+  "title_zh": "西班牙高铁相撞致至少68人死亡，为欧洲2013年以来最严重铁路事故",
+  "title_en": "High-speed train crash kills at least 68 people in Spain",
+  "summary_zh": "周三上午，西班牙两列高速列车在马德里以南的托莱多省乌尔达附近相撞，至少68人死亡、近80人受伤，成为西班牙今年第二起重大铁路事故，也是欧洲自2013年以来死亡人数最多的列车事故。一列开往安达卢西亚的城际高速列车撞上一列停驶列车，多节车厢严重变形，救援人员在扭曲的车体中搜寻遇难者。马德里至安达卢西亚方向的铁路服务已暂停，西班牙政府宣布哀悼并启动事故调查。",
+  "keywords": [
+   "西班牙",
+   "铁路事故",
+   "伤亡"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/c6p3g84kjqjlo",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "西班牙高铁相撞致至少68人死亡，为欧洲2013年以来最严重铁路事故",
+  "summary": "周三上午，西班牙两列高速列车在马德里以南的托莱多省乌尔达附近相撞，至少68人死亡、近80人受伤，成为西班牙今年第二起重大铁路事故，也是欧洲自2013年以来死亡人数最多的列车事故。一列开往安达卢西亚的城际高速列车撞上一列停驶列车，多节车厢严重变形，救援人员在扭曲的车体中搜寻遇难者。马德里至安达卢西亚方向的铁路服务已暂停，西班牙政府宣布哀悼并启动事故调查。"
+ },
+ {
+  "source": "BBC",
+  "category": "地区热点",
+  "priority_score": 80,
+  "title_zh": "以色列大选部分计票显示内塔尼亚胡阵营领先但未过半",
+  "title_en": "Netanyahu's bloc leading Israel election but short of majority, partial results show",
+  "summary_zh": "以色列议会选举部分计票结果显示，总理内塔尼亚胡领导的阵营在已统计选票中领先，但未能取得过半席位，组阁前景高度依赖拉拢竞争对手加入联合政府。反对派阵营同样未能凑足多数，双方在阿拉伯政党席位归属与剩余选票分配上博弈激烈。总统赫尔佐格将承担授权组阁的裁量角色。若最终形成僵局，以色列可能面临年内再次大选，或出现跨阵营联合政府。",
+  "keywords": [
+   "以色列",
+   "选举",
+   "中东"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cmdx3knq1xexo",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "以色列大选部分计票显示内塔尼亚胡阵营领先但未过半",
+  "summary": "以色列议会选举部分计票结果显示，总理内塔尼亚胡领导的阵营在已统计选票中领先，但未能取得过半席位，组阁前景高度依赖拉拢竞争对手加入联合政府。反对派阵营同样未能凑足多数，双方在阿拉伯政党席位归属与剩余选票分配上博弈激烈。总统赫尔佐格将承担授权组阁的裁量角色。若最终形成僵局，以色列可能面临年内再次大选，或出现跨阵营联合政府。"
+ },
+ {
+  "source": "BBC",
+  "category": "地区热点",
+  "priority_score": 74,
+  "title_zh": "德国野生动物园发生狼袭，一名女童受重伤",
+  "title_en": "Girl seriously injured in wolf attack at German wildlife park",
+  "summary_zh": "德国一座野生动物园发生狼袭事件，一名女童被咬成重伤，已紧急送医手术。园方称事发时女童所在区域与狼圈之间可能存在防护缺陷，事件具体经过正在调查。德国相关部门表示将检查全国同类园区的人兽隔离标准。此类园区在德国允许游客驾车或步行穿越部分区域，安全管理责任长期存在争议。",
+  "keywords": [
+   "德国",
+   "野生动物园",
+   "安全事故"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/c678prm55gzzo",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "德国野生动物园发生狼袭，一名女童受重伤",
+  "summary": "德国一座野生动物园发生狼袭事件，一名女童被咬成重伤，已紧急送医手术。园方称事发时女童所在区域与狼圈之间可能存在防护缺陷，事件具体经过正在调查。德国相关部门表示将检查全国同类园区的人兽隔离标准。此类园区在德国允许游客驾车或步行穿越部分区域，安全管理责任长期存在争议。"
+ },
+ {
+  "source": "BBC",
+  "category": "地区热点",
+  "priority_score": 76,
+  "title_zh": "塞尔维亚籍枪手在以色列使馆外袭警后被击毙",
+  "title_en": "Serbian shot dead after attacking officer outside Israeli embassy, minister says",
+  "summary_zh": "塞尔维亚内政部长称，一名塞尔维亚籍男子在贝尔格莱德以色列大使馆外持刀袭击执勤警察，随后被警方开枪击毙，一名警员受伤。塞方将此定性为针对性袭击并展开反恐调查，以色列使馆人员事发时均在馆内且无人伤亡。事件促使塞方加强外国使团周边的警戒。目前尚无组织宣称负责，枪手动机仍在核查。",
+  "keywords": [
+   "塞尔维亚",
+   "以色列使馆",
+   "袭击"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/ck5ynj4eeyj2o",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "塞尔维亚籍枪手在以色列使馆外袭警后被击毙",
+  "summary": "塞尔维亚内政部长称，一名塞尔维亚籍男子在贝尔格莱德以色列大使馆外持刀袭击执勤警察，随后被警方开枪击毙，一名警员受伤。塞方将此定性为针对性袭击并展开反恐调查，以色列使馆人员事发时均在馆内且无人伤亡。事件促使塞方加强外国使团周边的警戒。目前尚无组织宣称负责，枪手动机仍在核查。"
+ },
+ {
+  "source": "BBC",
+  "category": "全球多边",
+  "priority_score": 72,
+  "title_zh": "英王加勒比之行启程，首站承认「历史的苦难」",
+  "title_en": "King acknowledges 'suffering of the past' as Caribbean tour begins",
+  "summary_zh": "英国国王查尔斯在加勒比之行首站发表讲话，承认「过去的苦难」，这是其为英联邦就奴隶制历史遗留问题表达立场的最新动作。访问期间他将与英联邦领导人讨论殖民历史与赔偿议题，相关峰会上部分成员要求英国就跨大西洋奴隶贸易作出实质性回应。白金汉宫此前表示国王不会就赔偿问题道歉，此行被认为是在维系英联邦凝聚力与回应成员国诉求之间寻求平衡。",
+  "keywords": [
+   "英联邦",
+   "奴隶制",
+   "查尔斯国王"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cmwyv8ld22z1o",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "英王加勒比之行启程，首站承认「历史的苦难」",
+  "summary": "英国国王查尔斯在加勒比之行首站发表讲话，承认「过去的苦难」，这是其为英联邦就奴隶制历史遗留问题表达立场的最新动作。访问期间他将与英联邦领导人讨论殖民历史与赔偿议题，相关峰会上部分成员要求英国就跨大西洋奴隶贸易作出实质性回应。白金汉宫此前表示国王不会就赔偿问题道歉，此行被认为是在维系英联邦凝聚力与回应成员国诉求之间寻求平衡。"
+ },
+ {
+  "source": "卫报",
+  "category": "中欧关系",
+  "priority_score": 82,
+  "title_zh": "欧盟放弃向加拿大提出启动「准成员」谈判的提议",
+  "title_en": "EU backs away from offer to Canada to start 'associate member' talks",
+  "summary_zh": "欧盟已放弃向加拿大提出启动「准成员」地位谈判的方案，此前该设想被视为布鲁塞尔在特朗普关税压力下拉拢中等强国的重要抓手。据报道，部分成员国担心准成员机制会稀释欧盟决策权、并为其他申请国创下先例。加方虽对深化经贸联系态度积极，但更看重与欧盟在关键矿产与防务采购上的实质安排。此举被视为欧盟对外扩容雄心与现实政治之间的一次退让。",
+  "keywords": [
+   "欧盟",
+   "加拿大",
+   "中等强国"
+  ],
+  "url": "https://www.theguardian.com/world/2026/oct/28/european-union-canada",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "欧盟放弃向加拿大提出启动「准成员」谈判的提议",
+  "summary": "欧盟已放弃向加拿大提出启动「准成员」地位谈判的方案，此前该设想被视为布鲁塞尔在特朗普关税压力下拉拢中等强国的重要抓手。据报道，部分成员国担心准成员机制会稀释欧盟决策权、并为其他申请国创下先例。加方虽对深化经贸联系态度积极，但更看重与欧盟在关键矿产与防务采购上的实质安排。此举被视为欧盟对外扩容雄心与现实政治之间的一次退让。"
+ },
+ {
+  "source": "卫报",
+  "category": "中美关系",
+  "priority_score": 87,
+  "title_zh": "美驻加大使暗示：若中期选举不顺，特朗普可能归咎加拿大",
+  "title_en": "US ambassador suggests Trump could blame Canada if midterms don't go his way",
+  "summary_zh": "美国驻加拿大大使在公开场合暗示，若下周中期选举结果不如特朗普所愿，他可能把责任归咎于加拿大。此番表态出现在美加贸易谈判进展有限、两国在钢铝关税与奶制品准入上争执不下之际。渥太华方面表示不会介入美国国内政治，但强调贸易磋商应以规则为基础。分析人士认为，把邻国当作选举替罪羊的做法会进一步削弱两国供应链互信。",
+  "keywords": [
+   "美加关系",
+   "中期选举",
+   "关税"
+  ],
+  "url": "https://www.theguardian.com/world/2026/oct/28/canada-ambassador-republicans-midterms",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "美驻加大使暗示：若中期选举不顺，特朗普可能归咎加拿大",
+  "summary": "美国驻加拿大大使在公开场合暗示，若下周中期选举结果不如特朗普所愿，他可能把责任归咎于加拿大。此番表态出现在美加贸易谈判进展有限、两国在钢铝关税与奶制品准入上争执不下之际。渥太华方面表示不会介入美国国内政治，但强调贸易磋商应以规则为基础。分析人士认为，把邻国当作选举替罪羊的做法会进一步削弱两国供应链互信。"
+ },
+ {
+  "source": "卫报",
+  "category": "地区热点",
+  "priority_score": 76,
+  "title_zh": "巴西前总统之子弗拉维奥·博索纳罗抵美后自称「巴西领袖」",
+  "title_en": "Flavio Bolsonaro calls himself the 'leader of Brazil' after fleeing to Miami",
+  "summary_zh": "在巴西总统选举中落败的弗拉维奥·博索纳罗抵达迈阿密后自称「巴西的领袖」，称选举存在舞弊，并暗示将继续领导反对派运动。巴西最高选举法院已确认选举结果，卢拉阵营指责其言论破坏制度稳定。美方允许其入境的决定引发巴西政府正式抗议。分析人士认为，博索纳罗家族在佛罗里达的活跃可能给两国关系带来新的摩擦点。",
+  "keywords": [
+   "巴西",
+   "博索纳罗",
+   "选举"
+  ],
+  "url": "https://www.theguardian.com/world/2026/oct/28/flavio-bolsonaro-miami-us-fleeing-brazilian-election",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "巴西前总统之子弗拉维奥·博索纳罗抵美后自称「巴西领袖」",
+  "summary": "在巴西总统选举中落败的弗拉维奥·博索纳罗抵达迈阿密后自称「巴西的领袖」，称选举存在舞弊，并暗示将继续领导反对派运动。巴西最高选举法院已确认选举结果，卢拉阵营指责其言论破坏制度稳定。美方允许其入境的决定引发巴西政府正式抗议。分析人士认为，博索纳罗家族在佛罗里达的活跃可能给两国关系带来新的摩擦点。"
+ },
+ {
+  "source": "卫报",
+  "category": "地区热点",
+  "priority_score": 70,
+  "title_zh": "埃及罚款知名主编并关停独立媒体《马达马斯尔》",
+  "title_en": "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
+  "summary_zh": "埃及法院对知名主编丽娜·阿塔拉判处罚款，并下令关停独立新闻机构《马达马斯尔》，这是该国近期针对独立媒体的最新一起压制行动。判决依据涉及「传播虚假新闻」等指控，国际新闻自由组织谴责此举为对批评性报道的司法报复。该媒体长期关注人权、经济与军事议题，此前已多次遭封锁与诉讼。",
+  "keywords": [
+   "埃及",
+   "新闻自由",
+   "Mada Masr"
+  ],
+  "url": "https://www.theguardian.com/world/2026/oct/28/egypt-lina-attalah-mada-masr-press-freedom-clampdown",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "埃及罚款知名主编并关停独立媒体《马达马斯尔》",
+  "summary": "埃及法院对知名主编丽娜·阿塔拉判处罚款，并下令关停独立新闻机构《马达马斯尔》，这是该国近期针对独立媒体的最新一起压制行动。判决依据涉及「传播虚假新闻」等指控，国际新闻自由组织谴责此举为对批评性报道的司法报复。该媒体长期关注人权、经济与军事议题，此前已多次遭封锁与诉讼。"
+ },
+ {
+  "source": "卫报",
+  "category": "地区热点",
+  "priority_score": 71,
+  "title_zh": "非洲「史无前例」埃博拉疫情或蔓延至英国，卫生高官警告",
+  "title_en": "Africa's 'unprecedented' Ebola outbreak could reach UK, says top health official",
+  "summary_zh": "英国一名高级卫生官员警告，非洲本轮被称为「史无前例」的埃博拉疫情存在输入英国的风险，呼吁加强对来自疫区旅客的监测与医疗系统准备。世卫组织数据显示本轮疫情已波及多国，病毒株传播速度与地理范围均超出以往经验。英国卫生安全局表示已制定应对预案，但强调本国风险仍属「低至中等」水平。",
+  "keywords": [
+   "埃博拉",
+   "公共卫生",
+   "英国"
+  ],
+  "url": "https://www.theguardian.com/global-development/2026/oct/28/africa-ebola-outbreak-could-reach-uk-says",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "非洲「史无前例」埃博拉疫情或蔓延至英国，卫生高官警告",
+  "summary": "英国一名高级卫生官员警告，非洲本轮被称为「史无前例」的埃博拉疫情存在输入英国的风险，呼吁加强对来自疫区旅客的监测与医疗系统准备。世卫组织数据显示本轮疫情已波及多国，病毒株传播速度与地理范围均超出以往经验。英国卫生安全局表示已制定应对预案，但强调本国风险仍属「低至中等」水平。"
+ },
+ {
+  "source": "纽约时报",
+  "category": "中欧关系",
+  "priority_score": 88,
+  "title_zh": "一座中国港口或成西班牙的生命线，也可能成为威胁",
+  "title_en": "A Chinese Port Could Be a Lifeline for Spain, but Also a Threat",
+  "summary_zh": "纽约时报实地报道聚焦西班牙西北部费罗尔的集装箱码头项目：中方企业参与投资运营，被视为提振当地就业与物流枢纽地位的机遇，但也在马德里与布鲁塞尔引发安全忧虑。报道指出，该港毗邻军事设施与海底电缆登陆点，欧洲多国正以「经济安全」为由审视中资港口、5G 与电力资产。当地工会与商界支持项目，中央政府则在欧盟外资审查框架下评估条件，呈现就业诉求与安全顾虑的典型拉扯。",
+  "keywords": [
+   "中资港口",
+   "西班牙",
+   "经济安全"
+  ],
+  "url": "https://www.nytimes.com/2026/10/28/world/europe/spain-saic-ferrol-china.html",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "一座中国港口或成西班牙的生命线，也可能成为威胁",
+  "summary": "纽约时报实地报道聚焦西班牙西北部费罗尔的集装箱码头项目：中方企业参与投资运营，被视为提振当地就业与物流枢纽地位的机遇，但也在马德里与布鲁塞尔引发安全忧虑。报道指出，该港毗邻军事设施与海底电缆登陆点，欧洲多国正以「经济安全」为由审视中资港口、5G 与电力资产。当地工会与商界支持项目，中央政府则在欧盟外资审查框架下评估条件，呈现就业诉求与安全顾虑的典型拉扯。"
+ },
+ {
+  "source": "纽约时报",
+  "category": "中美关系",
+  "priority_score": 84,
+  "title_zh": "特朗普考虑解除对俄罗斯旗舰投资基金的制裁",
+  "title_en": "Trump Explores Lifting Sanctions on Russia's Flagship Investment Fund",
+  "summary_zh": "据多名知情人士透露，特朗普政府内部正在讨论放松对俄罗斯主权投资基金的制裁，作为推动俄乌停火后经济安排的一部分。方案涉及允许部分投资基金恢复跨境结算与外资合作，但会保留对军工与能源技术的限制。国会两党部分议员表示反对，认为过早松绑会削弱制裁威慑。相关讨论仍处早期阶段，白宫未予证实。",
+  "keywords": [
+   "对俄制裁",
+   "特朗普",
+   "俄乌"
+  ],
+  "url": "https://www.nytimes.com/2026/10/27/us/politics/russia-fund-sanctions-trump.html",
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "特朗普考虑解除对俄罗斯旗舰投资基金的制裁",
+  "summary": "据多名知情人士透露，特朗普政府内部正在讨论放松对俄罗斯主权投资基金的制裁，作为推动俄乌停火后经济安排的一部分。方案涉及允许部分投资基金恢复跨境结算与外资合作，但会保留对军工与能源技术的限制。国会两党部分议员表示反对，认为过早松绑会削弱制裁威慑。相关讨论仍处早期阶段，白宫未予证实。"
+ },
+ {
+  "source": "纽约时报",
+  "category": "地区热点",
+  "priority_score": 75,
+  "title_zh": "欧洲领导人就与普京通话问题出现分歧",
+  "title_en": "European Leaders Split Over Phone Call to Putin",
+  "summary_zh": "挪威与芬兰等国领导人近期与普京通话的举动在欧洲内部引发分歧：一部分国家主张保持沟通渠道以推动停火与人道议题，另一部分则认为在俄方未作出实质让步前的高层接触会被用于宣传。欧盟内部就统一对俄接触原则的讨论再度升温。分析人士指出，随着乌克兰战场态势与美方斡旋节奏变化，欧洲在「谈」与「压」之间的协调难度上升。",
+  "keywords": [
+   "欧洲",
+   "俄罗斯",
+   "外交"
+  ],
+  "url": "https://www.nytimes.com/2026/10/27/world/europe/norway-finland-putin-call.html",
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "欧洲领导人就与普京通话问题出现分歧",
+  "summary": "挪威与芬兰等国领导人近期与普京通话的举动在欧洲内部引发分歧：一部分国家主张保持沟通渠道以推动停火与人道议题，另一部分则认为在俄方未作出实质让步前的高层接触会被用于宣传。欧盟内部就统一对俄接触原则的讨论再度升温。分析人士指出，随着乌克兰战场态势与美方斡旋节奏变化，欧洲在「谈」与「压」之间的协调难度上升。"
+ },
+ {
+  "source": "纽约时报",
+  "category": "地区热点",
+  "priority_score": 73,
+  "title_zh": "莫斯科罕见出现战时异见：反对拆除俄罗斯「埃菲尔铁塔」",
+  "title_en": "Rare Wartime Dissent in Moscow Over Plans to Dismantle Russia's 'Eiffel Tower'",
+  "summary_zh": "莫斯科计划拆除舒霍夫广播电视塔的消息引发罕见公开反对，建筑界、工程师群体与普通市民联名请愿，认为这座苏联时期的网状结构是工程史地标，不应在战时财政紧张下被拆毁。支持拆除者称塔体老化、维护成本高。事件被视为俄罗斯国内在战争背景下仍存在有限公共讨论空间的例证，当局尚未作出最终决定。",
+  "keywords": [
+   "俄罗斯",
+   "舒霍夫塔",
+   "文化遗产"
+  ],
+  "url": "https://www.nytimes.com/2026/10/28/world/europe/russia-shukhov-radio-tower.html",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "莫斯科罕见出现战时异见：反对拆除俄罗斯「埃菲尔铁塔」",
+  "summary": "莫斯科计划拆除舒霍夫广播电视塔的消息引发罕见公开反对，建筑界、工程师群体与普通市民联名请愿，认为这座苏联时期的网状结构是工程史地标，不应在战时财政紧张下被拆毁。支持拆除者称塔体老化、维护成本高。事件被视为俄罗斯国内在战争背景下仍存在有限公共讨论空间的例证，当局尚未作出最终决定。"
+ },
+ {
+  "source": "纽约时报",
+  "category": "地区热点",
+  "priority_score": 72,
+  "title_zh": "意大利抗议背后：物价上涨与希望下沉",
+  "title_en": "Behind Italy's Protests: Rising Prices and Sinking Hopes",
+  "summary_zh": "意大利多地爆发学生与卡车司机抗议，核心诉求是生活成本上升、学费与燃油价格高企以及青年就业前景黯淡。报道称， protesters 的动员跨越传统左右阵营，梅洛尼政府面临在财政约束下回应民生的压力。分析人士认为，欧洲多国的「Z世代」抗议潮有相似成因：住房、教育与实际工资停滞，正在重塑南欧政治议程。",
+  "keywords": [
+   "意大利",
+   "抗议",
+   "生活成本"
+  ],
+  "url": "https://www.nytimes.com/2026/10/28/world/europe/italy-protests-students-truckers-meloni.html",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "意大利抗议背后：物价上涨与希望下沉",
+  "summary": "意大利多地爆发学生与卡车司机抗议，核心诉求是生活成本上升、学费与燃油价格高企以及青年就业前景黯淡。报道称， protesters 的动员跨越传统左右阵营，梅洛尼政府面临在财政约束下回应民生的压力。分析人士认为，欧洲多国的「Z世代」抗议潮有相似成因：住房、教育与实际工资停滞，正在重塑南欧政治议程。"
+ },
+ {
+  "source": "半岛电视台",
+  "category": "全球多边",
+  "priority_score": 79,
+  "title_zh": "联大通过决议谴责对古巴封锁，美方游说未能阻止",
+  "title_en": "UN votes to condemn embargo of Cuba despite US lobbying push",
+  "summary_zh": "联合国大会再度以压倒性多数通过决议，谴责美国对古巴实施的经济、商业与金融封锁，尽管美方本轮加大了游说力度。决议不具约束力，但具有显著政治象征意义，多数成员国批评单边强制措施违反国际法并损害古巴民生。美国代表为封锁政策辩护，古巴外长则要求立即解除。投票结果延续了联大近三十年来在该议题上的稳定格局。",
+  "keywords": [
+   "联合国大会",
+   "古巴",
+   "封锁"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/10/28/un-votes-to-condemn-embargo-of-cuba-despite-us-lobbying-push",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "联大通过决议谴责对古巴封锁，美方游说未能阻止",
+  "summary": "联合国大会再度以压倒性多数通过决议，谴责美国对古巴实施的经济、商业与金融封锁，尽管美方本轮加大了游说力度。决议不具约束力，但具有显著政治象征意义，多数成员国批评单边强制措施违反国际法并损害古巴民生。美国代表为封锁政策辩护，古巴外长则要求立即解除。投票结果延续了联大近三十年来在该议题上的稳定格局。"
+ },
+ {
+  "source": "半岛电视台",
+  "category": "地区热点",
+  "priority_score": 77,
+  "title_zh": "以色列选举近九成选票统计完毕，仍无明确赢家",
+  "title_en": "No clear winner in Israel election with nearly 90 percent of votes counted",
+  "summary_zh": "以色列大选在近九成选票统计后仍无明确赢家，内塔尼亚胡阵营与反对派均未跨过组阁门槛。阿拉伯政党席位与剩余士兵及境外选票成为决定性变量。报道指出，选民对生活成本、兵役豁免与司法改革的分歧重塑了政党版图，小党议价能力上升。总统赫尔佐格即将启动磋商，僵局可能导致年内再次选举。",
+  "keywords": [
+   "以色列",
+   "选举",
+   "组阁"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/10/29/no-clear-winner-in-israeli-election-with-nearly-90-percent",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "以色列选举近九成选票统计完毕，仍无明确赢家",
+  "summary": "以色列大选在近九成选票统计后仍无明确赢家，内塔尼亚胡阵营与反对派均未跨过组阁门槛。阿拉伯政党席位与剩余士兵及境外选票成为决定性变量。报道指出，选民对生活成本、兵役豁免与司法改革的分歧重塑了政党版图，小党议价能力上升。总统赫尔佐格即将启动磋商，僵局可能导致年内再次选举。"
+ },
+ {
+  "source": "半岛电视台",
+  "category": "地区热点",
+  "priority_score": 74,
+  "title_zh": "联合国专家对法国学生抗议中的过度使用武力表示警觉",
+  "title_en": "UN experts sound alarm at excessive use of force in French student protests",
+  "summary_zh": "多名联合国人权专家发表声明，对法国在学生抗议中出现的过度使用武力现象表示关切，呼吁巴黎确保执法行为符合国际人权标准并开展独立调查。声明援引多起受伤案例，涉及防暴警察使用警棍与催泪瓦斯。法国内政部表示执法「 适度且依法进行」，并指责部分示威者实施暴力。此事成为欧洲讨论集会自由与警方执法边界的又一焦点。",
+  "keywords": [
+   "法国",
+   "人权",
+   "抗议"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/10/28/un-experts-sound-alarm-at-excessive-use-of-force-in-french",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "联合国专家对法国学生抗议中的过度使用武力表示警觉",
+  "summary": "多名联合国人权专家发表声明，对法国在学生抗议中出现的过度使用武力现象表示关切，呼吁巴黎确保执法行为符合国际人权标准并开展独立调查。声明援引多起受伤案例，涉及防暴警察使用警棍与催泪瓦斯。法国内政部表示执法「 适度且依法进行」，并指责部分示威者实施暴力。此事成为欧洲讨论集会自由与警方执法边界的又一焦点。"
+ },
+ {
+  "source": "半岛电视台",
+  "category": "地区热点",
+  "priority_score": 70,
+  "title_zh": "哥斯达黎加超级监狱迎来首批囚犯",
+  "title_en": "Costa Rica's mega-prison receives first inmates",
+  "summary_zh": "哥斯达黎加新建的「超级监狱」接收首批囚犯，政府称此举旨在应对近年凶杀案激增与贩毒集团渗透。该设施采用高戒备设计、集中关押帮派头目，并限制探视。人权组织警告大规模隔离式关押可能恶化囚犯处境、增加监狱暴力，并质疑司法系统承载能力。哥斯达黎加长期以低暴力率著称，安全形势变化正推动其中美洲罕见的治安政策转向。",
+  "keywords": [
+   "哥斯达黎加",
+   "监狱",
+   "治安"
+  ],
+  "url": "https://www.aljazeera.com/news/2026/10/28/costa-ricas-mega-prison-receives-first-inmates",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "哥斯达黎加超级监狱迎来首批囚犯",
+  "summary": "哥斯达黎加新建的「超级监狱」接收首批囚犯，政府称此举旨在应对近年凶杀案激增与贩毒集团渗透。该设施采用高戒备设计、集中关押帮派头目，并限制探视。人权组织警告大规模隔离式关押可能恶化囚犯处境、增加监狱暴力，并质疑司法系统承载能力。哥斯达黎加长期以低暴力率著称，安全形势变化正推动其中美洲罕见的治安政策转向。"
+ },
+ {
+  "source": "金融时报",
+  "category": "AI竞争",
+  "priority_score": 91,
+  "title_zh": "美联储顶住通胀压力维持利率不变",
+  "title_en": "Fed holds fire on interest rates despite intensifying inflation",
+  "summary_zh": "美联储在最新议息会议上决定维持政策利率不变，尽管通胀压力出现加剧迹象。报道称，决策者在就业市场降温与物价黏性之间权衡，选择把下一次可能行动推迟到 12 月会议，以等待更多通胀与工资数据。这一决定紧随中期选举，被解读为避免在投票前制造市场波动。市场对年内再度加息的概率定价上升，长端国债收益率维持高位。",
+  "keywords": [
+   "美联储",
+   "利率",
+   "通胀"
+  ],
+  "url": "https://www.ft.com/content/f31fccd8-e9b6-4b01-989d-790ca6bb4d29",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "美联储顶住通胀压力维持利率不变",
+  "summary": "美联储在最新议息会议上决定维持政策利率不变，尽管通胀压力出现加剧迹象。报道称，决策者在就业市场降温与物价黏性之间权衡，选择把下一次可能行动推迟到 12 月会议，以等待更多通胀与工资数据。这一决定紧随中期选举，被解读为避免在投票前制造市场波动。市场对年内再度加息的概率定价上升，长端国债收益率维持高位。"
+ },
+ {
+  "source": "金融时报",
+  "category": "AI竞争",
+  "priority_score": 92,
+  "title_zh": "谷歌宣布510亿美元AI资本开支后股价暴跌10%，现金流压力加深",
+  "title_en": "Google shares tumble 10% after $51bn AI outlay deepens cash burn",
+  "summary_zh": "Alphabet 公布高于预期的 AI 资本开支计划后，股价单日下跌约 10%。报道称，公司计划投入约 510 亿美元用于数据中心与算力建设，导致自由现金流承压，投资者开始重新评估「AI 军备竞赛」的回报周期。分析师指出，广告业务增速放缓与折旧摊销上升同时出现，使本季度成为检验 AI 投资能否转化成利润的关键节点。同期三星电子芯片部门业绩亦未达预期，共同拖累科技股情绪。",
+  "keywords": [
+   "Alphabet",
+   "AI资本开支",
+   "科技股"
+  ],
+  "url": "https://www.ft.com/content/eb386156-5bf9-4edd-80f2-803fdee1e33d",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "谷歌宣布510亿美元AI资本开支后股价暴跌10%，现金流压力加深",
+  "summary": "Alphabet 公布高于预期的 AI 资本开支计划后，股价单日下跌约 10%。报道称，公司计划投入约 510 亿美元用于数据中心与算力建设，导致自由现金流承压，投资者开始重新评估「AI 军备竞赛」的回报周期。分析师指出，广告业务增速放缓与折旧摊销上升同时出现，使本季度成为检验 AI 投资能否转化成利润的关键节点。同期三星电子芯片部门业绩亦未达预期，共同拖累科技股情绪。"
+ },
+ {
+  "source": "金融时报",
+  "category": "AI竞争",
+  "priority_score": 88,
+  "title_zh": "微软将资本开支下降归因于数据中心交付延迟",
+  "title_en": "Microsoft blames data centre delays for lower capital expenditure",
+  "summary_zh": "微软表示本季度资本开支低于市场预期，主要原因是数据中心建设与设备交付出现延迟，而非需求转弱。公司云业务销售增长超出预期，显示 AI 相关订单仍在扩张。管理层称供应链与电力接入是主要瓶颈，并预计相关支出将在后续季度回补。报道指出，这一解释与 Alphabet 的高投入形成对比，两家公司在 AI 基建节奏上的分化正成为投资者关注焦点。",
+  "keywords": [
+   "微软",
+   "数据中心",
+   "云计算"
+  ],
+  "url": "https://www.ft.com/content/93f53cb4-1fc8-4ca5-aa91-186b77b03d92",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "微软将资本开支下降归因于数据中心交付延迟",
+  "summary": "微软表示本季度资本开支低于市场预期，主要原因是数据中心建设与设备交付出现延迟，而非需求转弱。公司云业务销售增长超出预期，显示 AI 相关订单仍在扩张。管理层称供应链与电力接入是主要瓶颈，并预计相关支出将在后续季度回补。报道指出，这一解释与 Alphabet 的高投入形成对比，两家公司在 AI 基建节奏上的分化正成为投资者关注焦点。"
+ },
+ {
+  "source": "金融时报",
+  "category": "美国内政",
+  "priority_score": 78,
+  "title_zh": "共和党试图把爱泼斯坦问题上的怒火引向民主党",
+  "title_en": "Republicans seek to deflect Epstein anger on to Democrats",
+  "summary_zh": "中期选举前最后一周，共和党阵营试图把围绕爱泼斯坦案文件的舆论压力转向民主党，要求公开更多涉案人物名单，并指责对手在国会调查中「选择性披露」。报道称，该议题在部分摇摆选区激起基层情绪，但独立选民更关注生活成本与就业。民主党则强调共和党在透明度问题上的双重标准。双方均把该案作为投票动员工具。",
+  "keywords": [
+   "中期选举",
+   "爱泼斯坦",
+   "美国政治"
+  ],
+  "url": "https://www.ft.com/content/5835eefc-acb2-4e4e-9693-60f5c2467977",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "共和党试图把爱泼斯坦问题上的怒火引向民主党",
+  "summary": "中期选举前最后一周，共和党阵营试图把围绕爱泼斯坦案文件的舆论压力转向民主党，要求公开更多涉案人物名单，并指责对手在国会调查中「选择性披露」。报道称，该议题在部分摇摆选区激起基层情绪，但独立选民更关注生活成本与就业。民主党则强调共和党在透明度问题上的双重标准。双方均把该案作为投票动员工具。"
+ },
+ {
+  "source": "金融时报",
+  "category": "美国内政",
+  "priority_score": 76,
+  "title_zh": "特朗普要求禁止阿拉斯加民主党参议员候选人参加竞选",
+  "title_en": "Trump calls for Alaska Democratic candidate to be banned from Senate race",
+  "summary_zh": "特朗普公开要求禁止阿拉斯加民主党参议员候选人佩尔托拉参加竞选，理由是一项关于「选票收集」的报道。阿拉斯加州共和党主导的政府随后试图撤下由特朗普授意提起的相关诉讼。报道称，此举延续了总统在投票资格与选举程序上施压的模式，当地选举官员强调候选人资格由州法与法院裁定。该席位对参议院控制权归属具有关键意义。",
+  "keywords": [
+   "中期选举",
+   "阿拉斯加",
+   "参议院"
+  ],
+  "url": "https://www.ft.com/content/7526e915-2590-4b42-85df-20bb89040db8",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "特朗普要求禁止阿拉斯加民主党参议员候选人参加竞选",
+  "summary": "特朗普公开要求禁止阿拉斯加民主党参议员候选人佩尔托拉参加竞选，理由是一项关于「选票收集」的报道。阿拉斯加州共和党主导的政府随后试图撤下由特朗普授意提起的相关诉讼。报道称，此举延续了总统在投票资格与选举程序上施压的模式，当地选举官员强调候选人资格由州法与法院裁定。该席位对参议院控制权归属具有关键意义。"
+ },
+ {
+  "source": "彭博社",
+  "category": "地区热点",
+  "priority_score": 81,
+  "title_zh": "帕兰提尔防务负责人称AI进展令台湾面临中方威胁",
+  "title_en": "Palantir's Defense Chief Sees China Threat to Taiwan Over AI",
+  "summary_zh": "帕兰提尔科技防务业务负责人、前美国众议员迈克·加拉格尔警告称，人工智能能力的快速扩散正改变台海的军事平衡，中方可能借助 AI 加速决策与目标识别，从而压缩美台的反应时间。他主张美方加快对台军售交付与软件定义作战能力建设，并强化盟友间的数据链互通。彭博社指出，此类表态反映了硅谷防务企业与五角大楼在 AI 军事应用议题上的紧密互动。",
+  "keywords": [
+   "台海",
+   "人工智能",
+   "帕兰提尔"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-28/palantir-s-defense-chief-sees-chinese-threat-to-taiwan-over-ai",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "帕兰提尔防务负责人称AI进展令台湾面临中方威胁",
+  "summary": "帕兰提尔科技防务业务负责人、前美国众议员迈克·加拉格尔警告称，人工智能能力的快速扩散正改变台海的军事平衡，中方可能借助 AI 加速决策与目标识别，从而压缩美台的反应时间。他主张美方加快对台军售交付与软件定义作战能力建设，并强化盟友间的数据链互通。彭博社指出，此类表态反映了硅谷防务企业与五角大楼在 AI 军事应用议题上的紧密互动。"
+ },
+ {
+  "source": "彭博社",
+  "category": "中美关系",
+  "priority_score": 84,
+  "title_zh": "批评中国的候选人挑战反对党在台北数十年的执政格局",
+  "title_en": "China Critic Challenges Opposition's Decades-Old Grip in Taipei",
+  "summary_zh": "台北市长选情意外胶着，一名对北京立场强硬的候选人对反对党长期执政构成实质挑战。报道称，民调差距收窄使反对党在其最稳固的据点面临不确定前景，选民关注焦点集中在住房、交通与两岸交流的实际收益。分析人士指出，这一变化可能影响 2028 年地区领导人选举的政党布局，并使两岸城市交流议题成为选战焦点。",
+  "keywords": [
+   "台湾",
+   "台北市长",
+   "两岸关系"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-28/china-critic-challenges-opposition-s-decades-old-grip-in-taipei",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "批评中国的候选人挑战反对党在台北数十年的执政格局",
+  "summary": "台北市长选情意外胶着，一名对北京立场强硬的候选人对反对党长期执政构成实质挑战。报道称，民调差距收窄使反对党在其最稳固的据点面临不确定前景，选民关注焦点集中在住房、交通与两岸交流的实际收益。分析人士指出，这一变化可能影响 2028 年地区领导人选举的政党布局，并使两岸城市交流议题成为选战焦点。"
+ },
+ {
+  "source": "彭博社",
+  "category": "AI竞争",
+  "priority_score": 85,
+  "title_zh": "贝森特淡化AI融资与美联储利率政策担忧",
+  "title_en": "Bessent Plays Down Concerns Over AI Financing, Fed Rate Policy",
+  "summary_zh": "美国财政部长贝森特表示，他与团队正密切跟踪人工智能相关投资的融资状况，但不认为当前存在系统性风险。他淡化了外界对 AI 资本开支过度依赖债务融资、以及高利率可能压制这一轮投资周期的担忧，称企业现金流与银行信贷条件仍属稳健。此番表态出现在 Alphabet、三星业绩不及预期引发科技股回调之际，市场对 AI 泡沫的讨论升温。",
+  "keywords": [
+   "贝森特",
+   "AI融资",
+   "美联储"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-28/bessent-plays-down-concerns-over-ai-financing-fed-rate-policy",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "贝森特淡化AI融资与美联储利率政策担忧",
+  "summary": "美国财政部长贝森特表示，他与团队正密切跟踪人工智能相关投资的融资状况，但不认为当前存在系统性风险。他淡化了外界对 AI 资本开支过度依赖债务融资、以及高利率可能压制这一轮投资周期的担忧，称企业现金流与银行信贷条件仍属稳健。此番表态出现在 Alphabet、三星业绩不及预期引发科技股回调之际，市场对 AI 泡沫的讨论升温。"
+ },
+ {
+  "source": "彭博社",
+  "category": "全球多边",
+  "priority_score": 77,
+  "title_zh": "中国绿色出口规模足以抵消巴西全年排放，CREA研究称",
+  "title_en": "China's Green Exports Enough to Offset Brazil's Emissions: CREA",
+  "summary_zh": "能源与清洁空气研究中心（CREA）的研究称，中国今年出口的清洁技术产品（光伏组件、电池与电动车）在海外替代化石能源所产生的减排量，可能相当于巴西全年的温室气体排放。研究认为，中国绿色制造的价格下降是新兴市场加速能源转型的关键变量。批评者则关注生产环节的排放转移与供应链碳足迹核算问题。该结论发布之际，欧美正就中国清洁技术产品的贸易政策展开博弈。",
+  "keywords": [
+   "清洁能源",
+   "中国出口",
+   "碳排放"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-29/china-s-green-exports-enough-to-offset-brazil-s-emissions-crea",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "中国绿色出口规模足以抵消巴西全年排放，CREA研究称",
+  "summary": "能源与清洁空气研究中心（CREA）的研究称，中国今年出口的清洁技术产品（光伏组件、电池与电动车）在海外替代化石能源所产生的减排量，可能相当于巴西全年的温室气体排放。研究认为，中国绿色制造的价格下降是新兴市场加速能源转型的关键变量。批评者则关注生产环节的排放转移与供应链碳足迹核算问题。该结论发布之际，欧美正就中国清洁技术产品的贸易政策展开博弈。"
+ },
+ {
+  "source": "Politico",
+  "category": "美国内政",
+  "priority_score": 79,
+  "title_zh": "黑客组织称获取数千名国土安全部雇员个人数据",
+  "title_en": "Hacktivist group says it obtained personal data on thousands of DHS employees",
+  "summary_zh": "一个黑客行动组织声称已获取数千名美国国土安全部雇员的个人数据，并在网络上公布部分样本。国土安全部表示已启动调查并通知可能受影响的员工，但未确认泄露规模。报道称，此次事件发生在联邦机构网络安全预算与人才流失争议之际，议员要求该部说明防护措施。专家提醒，此类数据可能被用于针对执法人员的骚扰与社会工程攻击。",
+  "keywords": [
+   "网络安全",
+   "国土安全部",
+   "数据泄露"
+  ],
+  "url": "https://www.politico.com/news/2026/10/28/dhs-data-leak-hacktivist-01140028",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "黑客组织称获取数千名国土安全部雇员个人数据",
+  "summary": "一个黑客行动组织声称已获取数千名美国国土安全部雇员的个人数据，并在网络上公布部分样本。国土安全部表示已启动调查并通知可能受影响的员工，但未确认泄露规模。报道称，此次事件发生在联邦机构网络安全预算与人才流失争议之际，议员要求该部说明防护措施。专家提醒，此类数据可能被用于针对执法人员的骚扰与社会工程攻击。"
+ },
+ {
+  "source": "Politico",
+  "category": "美国内政",
+  "priority_score": 74,
+  "title_zh": "民调显示以色列面临的隐忧：美国人的漠然",
+  "title_en": "Poll shows Israel's looming challenge: American indifference",
+  "summary_zh": "一项民调显示，美国选民对以色列的关注度显著下降，尤其年轻与独立选民中「不关心」比例上升，被视为以色列在美支持的长期隐忧。调查发现，两党基层对无条件援助的支持都在减弱，更多受访者主张把援助与具体政策挂钩。分析人士认为，这一趋势将影响下一届国会在军援与外交背书上的空间。",
+  "keywords": [
+   "民调",
+   "以色列",
+   "美国舆论"
+  ],
+  "url": "https://www.politico.com/news/2026/10/28/americans-israel-election-poll-support-01137689",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "民调显示以色列面临的隐忧：美国人的漠然",
+  "summary": "一项民调显示，美国选民对以色列的关注度显著下降，尤其年轻与独立选民中「不关心」比例上升，被视为以色列在美支持的长期隐忧。调查发现，两党基层对无条件援助的支持都在减弱，更多受访者主张把援助与具体政策挂钩。分析人士认为，这一趋势将影响下一届国会在军援与外交背书上的空间。"
+ },
+ {
+  "source": "Politico",
+  "category": "AI竞争",
+  "priority_score": 73,
+  "title_zh": "「我们不碰批评」：Areto AI如何遮蔽辱骂却放行针对议员的言论",
+  "title_en": "'We don't touch criticism': how the Areto AI hides abuse but allows free speech with MPs",
+  "summary_zh": "Politico 调查发现，社交平台使用的 Areto AI 内容审核系统在处理针对英国议员的言论时，会遮蔽部分辱骂内容却对政治批评保持放行，引发对算法判定标准不透明的质疑。平台方称其设计目标是区分「观点表达」与「人身攻击」，但测试显示边界不一致。议员与监管机构要求公开审核规则与申诉机制。该案例被视为 AI 内容治理在政治言论领域的典型难题。",
+  "keywords": [
+   "AI审核",
+   "言论",
+   "平台治理"
+  ],
+  "url": "https://www.politico.com/news/2026/10/28/we-dont-touch-criticism-how-the-areto-ai-hides-abuse-but-allows-free-speech-with-mps-01138060",
+  "date": "2026-10-29",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "「我们不碰批评」：Areto AI如何遮蔽辱骂却放行针对议员的言论",
+  "summary": "Politico 调查发现，社交平台使用的 Areto AI 内容审核系统在处理针对英国议员的言论时，会遮蔽部分辱骂内容却对政治批评保持放行，引发对算法判定标准不透明的质疑。平台方称其设计目标是区分「观点表达」与「人身攻击」，但测试显示边界不一致。议员与监管机构要求公开审核规则与申诉机制。该案例被视为 AI 内容治理在政治言论领域的典型难题。"
+ },
+ {
+  "source": "彭博社",
+  "category": "中美关系",
+  "priority_score": 93,
+  "title_zh": "美国对华厢式拖车加征约260%关税，保护本土制造商",
+  "title_en": "US Hits Chinese Trailers With Tariffs to Aid Domestic Producers",
+  "summary_zh": "美国商务部10月28日正式发布反倾销与反补贴税令，对中国产厢式货运拖车及其子组件征收合计约260%的关税——反倾销税130.86%、反补贴税134.75%，合计265.61%，即日生效。美国国际贸易委员会9月25日已裁定相关进口对美国产业造成实质损害。税令不仅覆盖整车，也覆盖在第三国（如加拿大、墨西哥）用中国产核心部件组装的拖车；若叠加第232条钢铝关税（通常25%），综合税率可达约290%。代表 Great Dane、Stoughton 与 Wabash 的美国拖车制造商联盟称此举将创造扩产与就业条件，中集车辆旗下 Vanguard 则已加快在美两座工厂的产能扩建以对冲冲击。",
+  "keywords": [
+   "双反关税",
+   "厢式拖车",
+   "中美经贸",
+   "商务部"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-10-28/us-hits-chinese-trailers-with-tariffs-to-aid-domestic-producers",
+  "date": "2026-10-28",
+  "collectedAt": "2026-10-29 09:30:00",
+  "is_official": false,
+  "is_summit_level": false,
+  "title": "美国对华厢式拖车加征约260%关税，保护本土制造商",
+  "summary": "美国商务部10月28日正式发布反倾销与反补贴税令，对中国产厢式货运拖车及其子组件征收合计约260%的关税——反倾销税130.86%、反补贴税134.75%，合计265.61%，即日生效。美国国际贸易委员会9月25日已裁定相关进口对美国产业造成实质损害。税令不仅覆盖整车，也覆盖在第三国（如加拿大、墨西哥）用中国产核心部件组装的拖车；若叠加第232条钢铝关税（通常25%），综合税率可达约290%。代表 Great Dane、Stoughton 与 Wabash 的美国拖车制造商联盟称此举将创造扩产与就业条件，中集车辆旗下 Vanguard 则已加快在美两座工厂的产能扩建以对冲冲击。"
+ }
 ]
