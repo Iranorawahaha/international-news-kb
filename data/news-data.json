@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "lastUpdated": "2026-10-30 10:58",
+  "lastUpdated": "2026-10-30 10:59",
   "retentionDays": 7,
   "archive": {
     "2026-10-23": [
@@ -9707,6 +9707,34 @@
         "body_en": null
       },
       {
+        "id": "auto_2026-10-29_68182",
+        "date": "2026-10-29",
+        "title": "中国罕见补选政治局委员，反腐关键人物进入决策层",
+        "title_en": "China Elevates Key Actor in Purges With Rare Politburo Pick",
+        "title_zh": "中国罕见补选政治局委员，反腐关键人物进入决策层",
+        "summary": "彭博社报道，中共中央三十多年来首次在任期中途补充政治局成员，将军委副主席张升民推入最高决策层。张长期主导军中纪检与反腐，是此轮军队高层清洗的关键操盘者。报道认为，补员既填补因落马产生的权力空缺，也意味着反腐执行者本人进入核心决策圈。",
+        "summary_en": null,
+        "summary_zh": "彭博社报道，中共中央三十多年来首次在任期中途补充政治局成员，将军委副主席张升民推入最高决策层。张长期主导军中纪检与反腐，是此轮军队高层清洗的关键操盘者。报道认为，补员既填补因落马产生的权力空缺，也意味着反腐执行者本人进入核心决策圈。",
+        "source": "彭博社",
+        "category": "全球多边",
+        "keywords": [
+          "政治局补员",
+          "张升民",
+          "军中反腐",
+          "四中全会",
+          "军委"
+        ],
+        "url": "https://www.bloomberg.com/news/articles/2026-10-29/china-names-vice-military-chair-as-new-politburo-member",
+        "priority_score": 89,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-10-30 09:30:00",
+        "collection_method": "legacy",
+        "column": "中国",
+        "is_official": false,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-10-29_59055",
         "date": "2026-10-29",
         "title": "中国确认开除 33 名中央委员会成员党籍，习近平整肃深化",
@@ -10239,6 +10267,34 @@
         "body_en": null
       },
       {
+        "id": "auto_2026-10-29_79379",
+        "date": "2026-10-29",
+        "title": "中国临床试验速度吸引罗氏、阿斯利康、诺华",
+        "title_en": "China's Speed in Clinical Trials Draws Drugmakers Roche, AstraZeneca, Novartis",
+        "title_zh": "中国临床试验速度吸引罗氏、阿斯利康、诺华",
+        "summary": "彭博社报道，越来越多跨国药企把早期研发带到中国，原因是临床试验启动与入组速度显著快于欧美。罗氏、阿斯利康、诺华均在扩大在华早期研究布局。报道同时指出，安全性与数据质量方面的疑问仍未消散，知识产权保护与监管透明度是外方持续关注的变量。",
+        "summary_en": null,
+        "summary_zh": "彭博社报道，越来越多跨国药企把早期研发带到中国，原因是临床试验启动与入组速度显著快于欧美。罗氏、阿斯利康、诺华均在扩大在华早期研究布局。报道同时指出，安全性与数据质量方面的疑问仍未消散，知识产权保护与监管透明度是外方持续关注的变量。",
+        "source": "彭博社",
+        "category": "其他",
+        "keywords": [
+          "临床试验",
+          "跨国药企",
+          "罗氏",
+          "阿斯利康",
+          "生物医药"
+        ],
+        "url": "https://www.bloomberg.com/news/features/2026-10-29/china-s-speed-in-clinical-trials-draws-drugmakers-roche-astrazeneca-novartis",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "importance": "中",
+        "collectedAt": "2026-10-30 09:30:00",
+        "collection_method": "legacy",
+        "column": "中国",
+        "is_official": false,
+        "body_en": null
+      },
+      {
         "id": "auto_2026-10-29_48809",
         "date": "2026-10-29",
         "title": "俄无人机袭击乌克兰火车站致至少 14 人死亡",
@@ -10329,7 +10385,7 @@
     "2026-10-23"
   ],
   "stats": {
-    "totalArticles": 421,
+    "totalArticles": 423,
     "dateCount": 8,
     "latestDate": "2026-10-30",
     "oldestDate": "2026-10-23"
