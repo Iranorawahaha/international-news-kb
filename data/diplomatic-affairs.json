@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-10-30T11:19:49.828825+08:00",
-    "window_start": "2026-10-27",
-    "window_end": "2026-10-30",
+    "generated": "2026-10-31T10:06:10.929550+08:00",
+    "window_start": "2026-10-28",
+    "window_end": "2026-10-31",
     "collection_method": "auto + agent",
-    "candidate_count": 2
+    "candidate_count": 3
   },
   "modules": {
     "personnel": {
@@ -2423,6 +2423,23 @@
               "url": "https://www.ciie.org/zbh/cn/speech/ambassador/20261029/64991.html"
             }
           ]
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-10-30",
+          "description": "奥地利总理施托克尔将访华（2026-10-30）",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外事日程",
+              "url": "./202610/t20261030_12050023.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "5e0040911dbd"
         }
       ]
     },
@@ -2997,7 +3014,7 @@
   "data_summary": {
     "外交代表人事变化": "15项",
     "驻沪穗总领事人事": "14项",
-    "高级官员访华": "43项",
+    "高级官员访华": "44项",
     "中美互动": "6项"
   },
   "supplementary_notes": [
