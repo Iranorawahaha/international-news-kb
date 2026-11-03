@@ -38,7 +38,9 @@
     "column": "国际",
     "collection_method": "webfetch",
     "collectedAt": "2026-10-31 09:30:00",
-    "title": "白宫：特朗普优先保障美国渔民利益，巩固美国海产品主导地位（各方反应汇总）"
+    "title": "白宫：特朗普优先保障美国渔民利益，巩固美国海产品主导地位（各方反应汇总）",
+    "summary_en": "",
+    "importance": "⭐元首级"
   },
   {
     "source_org": "美国国务院",
@@ -5320,5 +5322,45 @@
     "is_summit_level": true,
     "column": "美国",
     "title_en": "Trump Administration Secures an Additional $100 Billion U.S. Semiconductor Manufacturing Investment for a Total of $265 Billion from TSMC"
+  },
+  {
+    "title": "President Trump Completes Historic Travel Blitz: 30 Events, 20 States, 32 Days",
+    "title_en": "President Trump Completes Historic Travel Blitz: 30 Events, 20 States, 32 Days",
+    "title_zh": "特朗普完成史上最密集国内巡访：32天20州30场活动",
+    "summary": "President Donald J. Trump has just completed one of the most relentless, far-reaching travel schedules of any modern presidency: 20 states in 32 days,",
+    "summary_en": "President Donald J. Trump has just completed one of the most relentless, far-reaching travel schedules of any modern presidency: 20 states in 32 days,",
+    "summary_zh": "白宫11月2日发布通稿，称特朗普在32天内走访20个州、出席30场活动，行程横跨摇摆州与经济议题现场，白宫将其定位为争取民意支持的关键举措。该稿主要罗列行程数据与政治口号，不含新政策内容。",
+    "url": "https://www.whitehouse.gov/releases/2026/11/president-trump-completes-historic-travel-blitz-30-events-20-states-32-days/",
+    "date": "2026-11-02",
+    "source": "白宫",
+    "category": "美国",
+    "column": "美国",
+    "priority_score": 88,
+    "is_summit_level": true,
+    "importance": "⭐元首级",
+    "keywords": [],
+    "is_official": true,
+    "collectedAt": "2026-11-03 09:29:56",
+    "collection_method": "us_official"
+  },
+  {
+    "title": "President Trump’s Second Term: Promises Made, Promises Kept, Results Delivered",
+    "title_en": "President Trump’s Second Term: Promises Made, Promises Kept, Results Delivered",
+    "title_zh": "白宫发布第二任期施政成绩单：承诺兑现与成果交付",
+    "summary": "President Donald J. Trump has executed the most sweeping restoration of American sovereignty, strength, and prosperity in modern history. With ferocious",
+    "summary_en": "President Donald J. Trump has executed the most sweeping restoration of American sovereignty, strength, and prosperity in modern history. With ferocious",
+    "summary_zh": "白宫11月2日发布综述性通稿，汇总特朗普第二任期在经济、能源、移民与外交方面的施政成果，强调美国主权、实力与繁荣的恢复。内容为选前宣传稿，未包含新的政策宣布。",
+    "url": "https://www.whitehouse.gov/releases/2026/11/president-trumps-second-term-promises-made-promises-kept-results-delivered/",
+    "date": "2026-11-02",
+    "source": "白宫",
+    "category": "美国",
+    "column": "美国",
+    "priority_score": 88,
+    "is_summit_level": true,
+    "importance": "⭐元首级",
+    "keywords": [],
+    "is_official": true,
+    "collectedAt": "2026-11-03 09:29:56",
+    "collection_method": "us_official"
   }
 ]
