@@ -132,8 +132,9 @@ def build_china_brief():
         last_updated = data.get("lastUpdated", "")
     except Exception:
         items = []
+        last_updated = ""
     if not items:
-        return '<div class="daily-empty">今日暂无新增国内新闻</div>', 0, today
+        return '<div class="daily-empty">今日暂无新增国内新闻</div>', 0, today, last_updated
     items = sorted(items, key=lambda a: (-(1 if a.get("is_summit_level") else 0), -(a.get("priority_score") or 0)))[:MAX_ITEMS]
     lis = []
     for it in items:
@@ -250,8 +251,9 @@ def main():
         daily_date = daily_date or d
         print(f"  🤖 AI 动向今日要点: {ai_count} 条")
     if do_cn:
-        cn_html, cn_count, d, cn_date = build_china_brief()
+        cn_html, cn_count, d, cn_last = build_china_brief()
         daily_date = daily_date or d
+        cn_date = cn_date or cn_last
         print(f"  🇨🇳 国内新闻今日要点: {cn_count} 条")
 
     update_portal(news_html=news_html, news_count=news_count,
