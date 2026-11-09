@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-11-08T20:48:00.109391+08:00",
-    "window_start": "2026-11-05",
-    "window_end": "2026-11-08",
+    "generated": "2026-11-09T13:30:39.734442+08:00",
+    "window_start": "2026-11-06",
+    "window_end": "2026-11-09",
     "collection_method": "auto + agent",
-    "candidate_count": 2
+    "candidate_count": 0
   },
   "modules": {
     "personnel": {
