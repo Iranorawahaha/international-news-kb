@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-11-09T13:30:39.734442+08:00",
-    "window_start": "2026-11-06",
-    "window_end": "2026-11-09",
-    "collection_method": "auto + agent（本轮 fetch 0 候选，全部为 agent 补强）",
-    "candidate_count": 0
+    "generated": "2026-11-10T21:52:54.970792+08:00",
+    "window_start": "2026-11-07",
+    "window_end": "2026-11-10",
+    "collection_method": "auto + agent",
+    "candidate_count": 4
   },
   "modules": {
     "personnel": {
@@ -2868,6 +2868,40 @@
               "url": "https://sh.people.com.cn/n2/2026/1106/c138654-41743408.html"
             }
           ]
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-09",
+          "description": "斯洛伐克外交部长布拉纳尔将访华（2026-11-09）",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外事日程",
+              "url": "./202611/t20261109_12055926.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "cb304f03a1b1"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-09",
+          "description": "古巴党和政府特使、古共中央政治局委员、外交部长罗德里格斯将访华（2026-11-09）",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外事日程",
+              "url": "./202611/t20261109_12055923.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "b5d8ab311cc8"
         }
       ]
     },
@@ -3561,6 +3595,46 @@
               "url": "https://www.stheadline.com/zh-hans/daily-china/3634671/"
             }
           ]
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-10",
+          "description": "王毅同法国外长巴罗通电话（2026-11-10）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261110_12056970.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "99b42ba683f3"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-10",
+          "description": "王毅同斯洛伐克外长布拉纳尔会谈（2026-11-10）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261110_12056955.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "29efce0db4f7"
         }
       ]
     }
@@ -3577,8 +3651,8 @@
   "data_summary": {
     "外交代表人事变化": "16项",
     "驻沪穗总领事人事": "14项",
-    "高级官员访华": "50项",
-    "中美互动": "7项"
+    "高级官员访华": "52项",
+    "中美互动": "9项"
   },
   "supplementary_notes": [
     "【本轮采集与核验通道】基础采集 fetch 得 0 条候选（外交人事 0｜驻沪穗总领事 0｜高级官员访华 0｜中美互动 0）——这是本板启用以来首次基础采集全零命中，与外交部「外事日程」自11月3日进博会公告后进入低发期（11月5日至9日无新访华预告）、且11月7日至8日为周末无例行记者会直接相关；本轮全部更新由 agent 补强完成。WebFetch 通道：外交部「外事日程」最新11月6日（何立峰将赴加拿大主持第二次中加经济财金战略对话，11月9日，属中方出访）、「部领导活动」最新11月5日、「领导人活动」最新11月8日、「外交部新闻（部级领导/礼宾司）」最新11月8日、「例行记者会」最新11月6日；商务部「新闻发言人谈话」最新11月7日、「主要活动」栏目本轮返回 404（须改走部领导个人栏目）。合并后总条目 87 条（16＋14＋50＋7）。",
