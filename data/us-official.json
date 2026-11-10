@@ -5644,9 +5644,9 @@
     "collection_method": "us_official"
   },
   {
-    "title": "ICYMI: AG Todd Blanche Dismantles Democrats’ “Oversight” Charade on the Sunday Shows",
+    "title": "白宫转发：司法部长布兰奇在周日节目中驳斥民主党「监督」作秀",
     "title_en": "ICYMI: AG Todd Blanche Dismantles Democrats’ “Oversight” Charade on the Sunday Shows",
-    "title_zh": null,
+    "title_zh": "白宫转发：司法部长布兰奇在周日节目中驳斥民主党「监督」作秀",
     "summary": "This morning, Attorney General Todd Blanche appeared on the Sunday shows and made clear that the Department of Justice will fulfill its Constitutional",
     "summary_en": "This morning, Attorney General Todd Blanche appeared on the Sunday shows and made clear that the Department of Justice will fulfill its Constitutional",
     "summary_zh": null,
@@ -5664,9 +5664,9 @@
     "collection_method": "us_official"
   },
   {
-    "title": "Presidential Message on Diwali",
+    "title": "总统排灯节致辞",
     "title_en": "Presidential Message on Diwali",
-    "title_zh": null,
+    "title_zh": "总统排灯节致辞",
     "summary": "Today, I send my warmest greetings to Americans across our great Nation celebrating Diwali—the Festival of Lights. During this special time, families",
     "summary_en": "Today, I send my warmest greetings to Americans across our great Nation celebrating Diwali—the Festival of Lights. During this special time, families",
     "summary_zh": null,
@@ -5682,5 +5682,90 @@
     "is_official": true,
     "collectedAt": "2026-11-09 13:02:35",
     "collection_method": "us_official"
+  },
+  {
+    "title": "国务院：常务副国务卿赫尔伯格访问新加坡、印尼和日本",
+    "title_zh": "国务院：常务副国务卿赫尔伯格访问新加坡、印尼和日本",
+    "title_en": "Under Secretary Helberg’s Travel to Singapore, Indonesia, and Japan",
+    "summary": "美国国务院发布媒体声明，负责经济事务的副国务卿雅各布·赫尔伯格于10月28日至11月7日访问新加坡、印尼和日本，旨在将美国技术领导力与印太伙伴的资本、工业能力和发展目标对接。在新加坡，他与政府和业界领袖会晤，推动扩大美国「超级智能」技术的使用范围，同时确保先进能力安全；新加坡与美国企业达成的新协议将把美国前沿模型引入东南亚各地的公共服务和商业应用。在印尼，双方推进逾20亿美元能源与信息通信技术商业交易谈判，并讨论供应链安全与工业发展合作。在日本，赫尔伯格就关键矿产、半导体、能源和算力深化对话，会见机器人、海底电缆和半导体设备制造商，聚焦工业生产率、下一代通信与先进技术保护。",
+    "summary_zh": "美国国务院发布媒体声明，负责经济事务的副国务卿雅各布·赫尔伯格于10月28日至11月7日访问新加坡、印尼和日本，旨在将美国技术领导力与印太伙伴的资本、工业能力和发展目标对接。在新加坡，他与政府和业界领袖会晤，推动扩大美国「超级智能」技术的使用范围，同时确保先进能力安全；新加坡与美国企业达成的新协议将把美国前沿模型引入东南亚各地的公共服务和商业应用。在印尼，双方推进逾20亿美元能源与信息通信技术商业交易谈判，并讨论供应链安全与工业发展合作。在日本，赫尔伯格就关键矿产、半导体、能源和算力深化对话，会见机器人、海底电缆和半导体设备制造商，聚焦工业生产率、下一代通信与先进技术保护。",
+    "source": "美国国务院",
+    "category": "中美博弈",
+    "keywords": [
+      "国务院",
+      "赫尔伯格",
+      "印太",
+      "超级智能",
+      "半导体",
+      "算力"
+    ],
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/under-secretary-helbergs-travel-to-singapore-indonesia-and-japan/",
+    "priority_score": 88,
+    "date": "2026-11-09",
+    "collectedAt": "2026-11-10 09:30:00",
+    "is_official": true
+  },
+  {
+    "title": "鲁比奥会见法国外长巴罗，就国际刑事法院与欧盟监管表达关切",
+    "title_zh": "鲁比奥会见法国外长巴罗，就国际刑事法院与欧盟监管表达关切",
+    "title_en": "Secretary Rubio’s Meeting with French Foreign Minister Barrot",
+    "summary": "美国国务院发布消息，国务卿鲁比奥在巴黎会见法国外长巴罗。双方讨论了美国对国际刑事法院的根本关切，并就中东局势交换意见，重申霍尔木兹海峡航行自由的重要性。鲁比奥还呼吁停止欧盟针对美国企业采取的优惠性措施和过度监管。双方最后讨论了为俄乌战争寻求持久长期和平解决方案的努力。",
+    "summary_zh": "美国国务院发布消息，国务卿鲁比奥在巴黎会见法国外长巴罗。双方讨论了美国对国际刑事法院的根本关切，并就中东局势交换意见，重申霍尔木兹海峡航行自由的重要性。鲁比奥还呼吁停止欧盟针对美国企业采取的优惠性措施和过度监管。双方最后讨论了为俄乌战争寻求持久长期和平解决方案的努力。",
+    "source": "美国国务院",
+    "category": "中欧与盟友",
+    "keywords": [
+      "鲁比奥",
+      "巴罗",
+      "国际刑事法院",
+      "霍尔木兹海峡",
+      "欧盟监管"
+    ],
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/secretary-rubios-meeting-with-french-foreign-minister-barrot-2/",
+    "priority_score": 86,
+    "date": "2026-11-09",
+    "collectedAt": "2026-11-10 09:30:00",
+    "is_official": true
+  },
+  {
+    "title": "鲁比奥在G7外长会期间会见德国外长瓦德富尔",
+    "title_zh": "鲁比奥在G7外长会期间会见德国外长瓦德富尔",
+    "title_en": "Secretary Rubio’s Meeting with German Foreign Minister Wadephul",
+    "summary": "美国国务院发布消息，国务卿鲁比奥在法国巴黎举行的七国集团外长会议期间会见德国外长瓦德富尔。双方讨论了确保航行自由、加强防务工业合作和深化贸易关系的双边努力。鲁比奥还赞赏德国政府近期向海地「帮派遏制部队」提供的支持。",
+    "summary_zh": "美国国务院发布消息，国务卿鲁比奥在法国巴黎举行的七国集团外长会议期间会见德国外长瓦德富尔。双方讨论了确保航行自由、加强防务工业合作和深化贸易关系的双边努力。鲁比奥还赞赏德国政府近期向海地「帮派遏制部队」提供的支持。",
+    "source": "美国国务院",
+    "category": "中欧与盟友",
+    "keywords": [
+      "鲁比奥",
+      "瓦德富尔",
+      "G7外长会",
+      "防务工业",
+      "海地"
+    ],
+    "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/secretary-rubios-meeting-with-german-foreign-minister-wadephul-4/",
+    "priority_score": 85,
+    "date": "2026-11-09",
+    "collectedAt": "2026-11-10 09:30:00",
+    "is_official": true
+  },
+  {
+    "title": "白宫向参议院提交新一批提名与撤回名单",
+    "title_zh": "白宫向参议院提交新一批提名与撤回名单",
+    "title_en": "Nominations and Withdrawals Sent to the Senate",
+    "summary": "白宫发布总统行动公告，向参议院提交新一批联邦法官、驻外大使及部门官员提名，并撤回一项联邦贸易委员会委员提名。大使提名人选包括驻巴基斯坦、阿联酋、布隆迪、塞内加尔兼几内亚比绍、马里、北马其顿等国的候选人，多为职业外交系统出身的公使衔参赞。公告同时提名多名联邦地区法院与巡回法院法官，以及能源部、司法部、国土安全部网络安全与基础设施安全局等岗位人选。",
+    "summary_zh": "白宫发布总统行动公告，向参议院提交新一批联邦法官、驻外大使及部门官员提名，并撤回一项联邦贸易委员会委员提名。大使提名人选包括驻巴基斯坦、阿联酋、布隆迪、塞内加尔兼几内亚比绍、马里、北马其顿等国的候选人，多为职业外交系统出身的公使衔参赞。公告同时提名多名联邦地区法院与巡回法院法官，以及能源部、司法部、国土安全部网络安全与基础设施安全局等岗位人选。",
+    "source": "白宫",
+    "category": "美国内政",
+    "keywords": [
+      "白宫",
+      "参议院",
+      "大使提名",
+      "联邦法官",
+      "人事"
+    ],
+    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/nominations-and-withdrawals-sent-to-the-senate-ba2b/",
+    "priority_score": 82,
+    "date": "2026-11-09",
+    "collectedAt": "2026-11-10 09:30:00",
+    "is_official": true
   }
 ]
