@@ -8755,7 +8755,8 @@
     "collection_method": "webfetch",
     "column": "美国",
     "is_official": false,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "中央社（路透社电头）"
    },
    {
     "id": "auto_2026-11-10_3690",
@@ -8783,7 +8784,8 @@
     "collection_method": "webfetch",
     "column": "国际会议",
     "is_official": false,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "MarketScreener（路透社电头）"
    },
    {
     "id": "auto_2026-11-10_39497",
@@ -8867,7 +8869,8 @@
     "collection_method": "webfetch",
     "column": "中国",
     "is_official": false,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "Yahoo Finance（路透社电头）"
    },
    {
     "id": "auto_2026-11-10_50784",
