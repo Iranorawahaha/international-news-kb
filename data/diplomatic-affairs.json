@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-11-11T09:41:00.161712+08:00",
-    "window_start": "2026-11-08",
-    "window_end": "2026-11-11",
-    "collection_method": "auto + agent（fetch 4 条候选全部为台账已见、无新增；agent 核验后推进 2 条访华状态、扩写 2 条中美条目）",
-    "candidate_count": 4
+    "generated": "2026-11-12T10:01:23.520716+08:00",
+    "window_start": "2026-11-09",
+    "window_end": "2026-11-12",
+    "collection_method": "auto + agent",
+    "candidate_count": 6
   },
   "modules": {
     "personnel": {
@@ -3618,6 +3618,46 @@
               "url": "https://www.stheadline.com/zh-hans/daily-china/3634671/"
             }
           ]
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-11",
+          "description": "王毅同美国国务卿鲁比奥通电话（2026-11-11）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261111_12057696.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "639c3ff42997"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-11",
+          "description": "王毅同古巴党和政府特使、古共中央政治局委员、外交部长罗德里格斯会谈（2026-11-11）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261111_12057494.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "a377601bf896"
         }
       ]
     }
@@ -3636,7 +3676,7 @@
     "外交代表人事变化": "16项",
     "驻沪穗总领事人事": "14项",
     "高级官员访华": "52项",
-    "中美互动": "7项"
+    "中美互动": "9项"
   },
   "supplementary_notes": [
     "【本轮采集与核验通道】基础采集 fetch 得 4 条候选（外交人事 0｜驻沪穗总领事 0｜高级官员访华 2｜中美互动 2），较上轮（全零）回升，与外交部「外事日程」11月9日连发两条访华预告（古巴、斯洛伐克）直接对应。WebFetch 通道：外交部「外事日程」最新11月9日、「领导人活动」最新11月10日（王毅同巴罗通话、赵乐际会见哥伦比亚多党干部考察团、王毅同布拉纳尔会谈、何立峰主持第二次中加经济财金战略对话）、「部领导活动」最新11月10日、「例行记者会」最新11月10日；中国政府网「要闻最新」最新11月10日；商务部「部令公告」最新11月9日（商务部令2026年第4号）。WebSearch 通道 8 轮，覆盖进博会闭幕、商务部11月12日发布会预告、稀土石墨出口管制延期、递交国书副本、驻沪穗总领事、古巴外长抵华、深圳APEC中方口径。合并后总条目 89 条（16＋14＋52＋7）。",
