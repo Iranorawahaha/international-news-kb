@@ -99,7 +99,7 @@ def render_personnel(items, module_title="外交代表人事变化"):
         confirmed = it.get("confirmed", True)
         phase = it.get("phase", "completed")
         
-        confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 待核实</span>'
+        confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 未确认</span>'
         phase_html = phase_badge(phase)
         person_line = f'<span class="ev-person">{person}</span>' if person else ""
         
@@ -149,7 +149,7 @@ def render_consuls(items, module_title="驻上海、驻广州总领事人事"):
         confirmed = it.get("confirmed", True)
         phase = it.get("phase", "completed")
         
-        confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 待核实</span>'
+        confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 未确认</span>'
         phase_html = phase_badge(phase)
         person_line = f'<span class="ev-person">{person}</span>' if person else ""
         
@@ -200,7 +200,7 @@ def render_visits(items, module_title="外国重要高级官员访华"):
         confirmed = it.get("confirmed", True)
         phase = it.get("phase", "completed")
         
-        confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 待核实</span>'
+        confirm_badge = '<span class="ev-badge confirmed">✓ 已确认</span>' if confirmed else '<span class="ev-badge unconfirmed">⚠ 未确认</span>'
         phase_html = phase_badge(phase)
         
         ambassador_html = ""
@@ -653,7 +653,7 @@ def build():
   }}
   .ev-desc {{
     font-size: 13.5px; color: var(--ink); line-height: 1.7;
-    margin-bottom: 8px;
+    margin-bottom: 8px; white-space: pre-line;
   }}
   .ev-ambassador {{
     font-size: 12.5px; padding: 6px 12px;
