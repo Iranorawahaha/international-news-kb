@@ -253,3 +253,14 @@
 - git：`bd8be2c`（--auto 415条）→ `bc51f82`（栏目归位24条+白宫中文+repost回填+官方池）→ `53fe99d`（官方池白宫中文+HTML同步），全部代理 push 成功
 - ⚠️ 飞书 `token_missing` **连续第 40 日**；路透反查清单 **1 条待用户回报官网 URL**
 - **本轮新经验**：① **BIS 官网 `/press-release` 目录页 404，正确入口是站内搜索或 `bis.gov/` 首页抓 href**，规则尚未在 Federal Register 刊登（生效以刊登日为准），**不要用 Federal Register API 找它** ② **国务院对终端恒 407，但 WebFetch 可读**，抓国务院列表页/正文一律用 WebFetch ③ **从 `/tmp/rss_*.json` 手抄 URL 极易在 ~105 字符处截断**（本轮 3 条卫报全 404）→ 必须程序化写入、写后跑全量 URL 200 校验 ④ 整合层本轮栏目打散 24 条（AI·科技一度 14 条、地区局势仅 2 条、「其他」1 条），**回写后必须重跑 GENERATE_HTML** ⑤ 第二/三次重生成会让本地 HTML 时间戳新于线上，**线上比对前先做时间戳归一**，否则误判内容不一致
+
+## 2026-11-17 二次刷新（周二 09:26 触发，覆盖 11-17 09:30~09:40，V2.17）
+- **网络**：GitHub 直连 200、7890 代理全程可用；`--auto` 内置 push 一次成功；线上 524539 字节与本地**完全一致**（归一化后仍一致）
+- 官方源**第 64 次源组丢失**（直出 30 条、国务院 HTTP 407、白宫 2、财政部 0，全为旧稿）→ `cp` 备份 + URL 键合并（0 新增）+ WebFetch 白宫/国务院列表页补 **6 条国务院 11-16 新稿**（巴林·泰国通话 / 密联邦总统会见 / 中亚三国土耳其行程 / 危地马拉悬赏 / ITU 无线电规则委员会）→ **306 条 6 源齐全**（国务院147/白宫94/国防部39/财政部12/USTR11/商务部3），导航残留 0、中文 0 缺失
+- 13 信源：**Reuters 官网 `/world/china/` fetch failed（连续）** → Google News/WebSearch 反查，**2 条合格转载实测 200**（AsiaOne 转路透原稿 / 朝鲜日报英文版）；**RSS 14 通道全 200 共 524 条、窗口内 283 条**（SCMP 三通道 150 / WSJ dwj 双通道 156 / NYT 57 / 卫报 45 / Politico politics+EU 40 / BBC 21 / 半岛 25 / FT 10 / WaPo 20）；彭博 RSS **24 候选 → 入库 12**（**jina.ai 仍 401 AS53667 封禁**，摘要用 RSS description + 跨源核实）
+- 交叉验证 3 组全命中：**①BIS 11-16 临时最终规则 RIN 0694-AK50（1200万TPP≈750颗H100、五国许可、90天过渡、撤销AI扩散规则、以「SI」替代AI表述）** —— 首次拿到 **BIS 官网真实链接**（`/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology`，此前拼 slug 404）②The Information 七国→五国方案收缩（Geekiki 转述）③1260H/CXMT 为旧稿未收
+- 今日版面 45 → **113 条 / 15 源**（南华35/WSJ16/彭博13/BBC8/FT7/Politico7/卫报7/纽时5/邮报5/路透3/白宫2/半岛2/商务部1/The Information1/新加坡政府1）；AI·科技40/中美22/全球多边16/地区14/中欧8/中国外交7/美国内政6；≥88 共 40、元首级 10、repost 8
+- 校验全绿：cAt≠今日 0 · date<昨天 0 · URL历史重复 0 · 版面内URL/标题重复 0 · title≠title_zh 0 · summary/title_en 空 0 · 模板摘要 0 · 裸实体 0 · 非标准栏目 0 · 彭博 13/13 · JS 0 错误 · 线上线下 524539 字节一致
+- git：`7d1f4b8`（--auto 485条）→ `c2fb653`（栏目归位 + 白宫两条中文摘要错配修正 + repost 回填 8 + 官方池），直连 push 成功
+- ⚠️ 飞书 `token_missing` **连续第 41 日**；路透反查清单 **3 条待用户回报官网 URL**
+- **本轮新经验**：① **WSJ RSS 的 `<link>` slug 与 article-title 不一致仍是常态**（本轮 4 条手写 slug 全 401/slug 错）→ 唯一可靠法是 WebSearch `"完整英文标题" wsj.com` 取返回结果里的真实带哈希 URL（DuckDuckGo html 端点返回空，不可用）② **NYT/WaPo/FT/Politico 的 RSS link 才是真 URL**，手写 slug 必错（NYT 实际日期段还常比 pubDate 早一天）③ **官方池条目"标题与摘要错配"**（两条白宫条共用达菲停飞稿摘要）→ 收尾必须逐条比对 title_zh 与 summary 主题是否一致 ④ **反爬源 curl 403/000 但 WebSearch 返回全文**，可据此核实事实与真实 URL ⑤ 彭博 `--json` 的 `dup_in_pool` 是 **int** 不是 list ⑥ 飞书已连续 41 日未授权，需用户跑 `lark-cli auth login --scope "base:record:create"` 才能恢复同步
