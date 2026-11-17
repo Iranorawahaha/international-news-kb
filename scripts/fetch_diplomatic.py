@@ -26,6 +26,7 @@ import json
 import os
 import re
 import sys
+import time
 import hashlib
 import argparse
 from datetime import datetime, timezone, timedelta
@@ -62,6 +63,8 @@ MFA_URLS = {
 
 # gov.cn 要闻
 GOV_YAOWEN_URL = "https://www.gov.cn/yaowen/liebiao/"
+# 2026-11-17：列表页改 JS 渲染后的真实数据源（见 collect_from_gov 注释）
+GOV_YAOWEN_JSON = "https://www.gov.cn/yaowen/liebiao/YAOWENLIEBIAO.json"
 
 # 搜索关键词（中文）
 DIPLOMATIC_KEYWORDS_CN = [
@@ -90,22 +93,35 @@ SENIOR_TITLES_CN = [
 
 
 def fetch_url(url, timeout=15):
-    """基础 HTTP GET 请求"""
-    try:
-        ctx = ssl.create_default_context()
-        req = Request(url, headers={"User-Agent": USER_AGENT})
-        with urlopen(req, timeout=timeout, context=ctx) as resp:
-            raw = resp.read()
-            # 尝试解码
-            for enc in ["utf-8", "gb2312", "gbk"]:
-                try:
-                    return raw.decode(enc)
-                except UnicodeDecodeError:
-                    continue
-            return raw.decode("utf-8", errors="replace")
-    except Exception as e:
-        print(f"  ⚠️ 获取失败 {url}: {e}")
-        return None
+    """基础 HTTP GET 请求
+
+    2026-11-17 修复：本机网络出口对新建 TLS 连接的**首次请求**高频返回
+    Connection reset by peer（Errno 54），同一 URL 紧接重试即 200（实测
+    0 次失败 / 1-2 次成功）。原实现单次尝试即放弃，导致整轮采集全零。
+    改为：浏览器 UA 与无 UA 两种头交替 + 最多 4 次退避重试。
+    """
+    last_err = None
+    header_variants = ({"User-Agent": USER_AGENT}, {})
+    for attempt in range(4):
+        headers = header_variants[attempt % 2]
+        try:
+            ctx = ssl.create_default_context()
+            req = Request(url, headers=headers) if headers else Request(url)
+            with urlopen(req, timeout=timeout, context=ctx) as resp:
+                raw = resp.read()
+                # 尝试解码
+                for enc in ["utf-8", "gb2312", "gbk"]:
+                    try:
+                        return raw.decode(enc)
+                    except UnicodeDecodeError:
+                        continue
+                return raw.decode("utf-8", errors="replace")
+        except Exception as e:
+            last_err = e
+            time.sleep(1.0 + attempt * 1.5)
+            continue
+    print(f"  ⚠️ 获取失败 {url}: {last_err}")
+    return None
 
 
 def extract_links_from_html(html, base_url=""):
@@ -159,16 +175,37 @@ def collect_from_govcn(window_start, window_end):
     """
     items = []
     print(f"\n📡 中国政府网 (gov.cn) 要闻采集...")
-    html = fetch_url(GOV_YAOWEN_URL)
-    if not html:
+
+    # 2026-11-17 修复：gov.cn「要闻最新」列表页已改为 JS 动态渲染（页面内
+    # $.ajax 拉取 ./YAOWENLIEBIAO.json，静态 HTML 里只剩模板字符串，
+    # 正则提链必然为 0）。改为直取 JSON 数据源，TITLE/URL/DOCRELPUBTIME 齐备，
+    # 且带权威发布日期，不再需要从 URL 反推日期。静态 HTML 解析保留作兜底。
+    links = []
+    raw_json = fetch_url(GOV_YAOWEN_JSON)
+    if raw_json:
+        try:
+            data = json.loads(raw_json)
+            for row in data:
+                t = (row.get("TITLE") or "").strip()
+                u = (row.get("URL") or "").strip()
+                d = (row.get("DOCRELPUBTIME") or "").strip()
+                if not t or not u:
+                    continue
+                links.append({"title": t, "url": u, "pub_date": d})
+        except Exception as e:
+            print(f"  ⚠️ JSON 解析失败，回退静态解析: {e}")
+
+    if not links:
+        html = fetch_url(GOV_YAOWEN_URL)
+        if html:
+            links = extract_links_from_html(html, GOV_YAOWEN_URL)
+    if not links:
         return items
 
-    links = extract_links_from_html(html, GOV_YAOWEN_URL)
-    
     for link in links:
         title = link["title"]
         url = link["url"]
-        
+
         # 关键词匹配
         matched = False
         for kw in DIPLOMATIC_KEYWORDS_CN:
@@ -177,14 +214,16 @@ def collect_from_govcn(window_start, window_end):
                 break
         if not matched:
             continue
-        
-        # 尝试从 URL 提取日期
-        date_match = re.search(r'(\d{4})(\d{2})(\d{2})', url) or re.search(r'(\d{4})[-/](\d{2})[-/](\d{2})', url)
-        if date_match:
-            event_date = f"{date_match.group(1)}-{date_match.group(2)}-{date_match.group(3)}"
-        else:
-            event_date = TODAY  # URL 无日期时用当天
-        
+
+        # 优先用 JSON 给出的权威发布日期，其次从 URL 提取
+        event_date = link.get("pub_date") or ""
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", event_date):
+            date_match = re.search(r'(\d{4})(\d{2})(\d{2})', url) or re.search(r'(\d{4})[-/](\d{2})[-/](\d{2})', url)
+            if date_match:
+                event_date = f"{date_match.group(1)}-{date_match.group(2)}-{date_match.group(3)}"
+            else:
+                event_date = TODAY  # URL 无日期时用当天
+
         if not is_in_window(event_date, window_start, window_end):
             continue
         
