@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-11-17T10:03:32.793808+08:00",
-    "window_start": "2026-11-14",
-    "window_end": "2026-11-17",
+    "generated": "2026-11-18T09:56:17.784501+08:00",
+    "window_start": "2026-11-15",
+    "window_end": "2026-11-18",
     "collection_method": "auto + agent",
-    "candidate_count": 6
+    "candidate_count": 17
   },
   "modules": {
     "personnel": {
@@ -3075,6 +3075,244 @@
               "url": "https://world.people.com.cn/n1/2026/1109/c1002-40830744.html"
             }
           ]
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-18",
+          "description": "一天之内六场会见，习主席开启繁忙APEC时间",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086456.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "293a43acd5ad"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "【视频】习近平会见巴布亚新几内亚总理",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/17/VIDEL2zxFZUKebNBtSHd3h3W261117.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "0bbcc3f3cd4f"
+        },
+        {
+          "country": "加拿大",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "【视频】习近平会见加拿大总理",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/17/VIDEN9bIYbZhuiHApPewnVW1261117.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "0639b6a750bf"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "【视频】习近平会见秘鲁总统",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/17/VIDE3UkhDvhvplPnJEO1JdoX261117.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "5e75f9905570"
+        },
+        {
+          "country": "墨西哥",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "【视频】习近平会见墨西哥总统",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/17/VIDEaxcsfDsee33XML88CkuZ261117.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "67444e0c9307"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "【视频】习近平会见越共中央总书记、国家主席苏林",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/17/VIDEZ2zvz9nuGbKHMdUEbs2n261117.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "2ed698af7abc"
+        },
+        {
+          "country": "越南",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "【视频】王小洪会见越共中央政治局委员、越南公安部部长梁三光",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/17/VIDE9Kazc0lKoC4a3aQEz2n3261117.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "adce4fb2d6e2"
+        },
+        {
+          "country": "越南",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "王小洪会见越共中央政治局委员、越南公安部部长梁三光",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086415.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "16a2a76b8b1d"
+        },
+        {
+          "country": "智利",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "习近平会见智利总统卡斯特",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086398.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "5cd9b7a94e0a"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "习近平会见秘鲁总统藤森庆子",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086391.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "b26b94db72f4"
+        },
+        {
+          "country": "墨西哥",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "习近平会见墨西哥总统辛鲍姆",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086384.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "c5e5ab7483e2"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "习近平会见越共中央总书记、国家主席苏林",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086337.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "bf10930da9de"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "习近平会见巴布亚新几内亚总理马拉佩",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086323.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "e764b219df20"
+        },
+        {
+          "country": "加拿大",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-17",
+          "description": "习近平会见加拿大总理卡尼",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086319.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "bdeac441d34d"
         }
       ]
     },
@@ -4026,6 +4264,26 @@
               "url": "https://www.cna.com.tw/news/acn/202611140073.aspx"
             }
           ]
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-17",
+          "description": "王毅会见加拿大外长阿南德（2026-11-17）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261117_12061346.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "26edf9b5a965"
         }
       ]
     }
@@ -4041,8 +4299,8 @@
   "data_summary": {
     "外交代表人事变化": "18项",
     "驻沪穗总领事人事": "14项",
-    "高级官员访华": "55项",
-    "中美互动": "12项"
+    "高级官员访华": "69项",
+    "中美互动": "13项"
   },
   "supplementary_notes": [
     "【本轮采集与核验通道】基础采集 fetch 得 6 条候选（外交人事 0｜驻沪穗总领事 0｜高级官员访华 4｜中美互动 2），台账拦截 1 条，入库 5 条候选经 agent 复核后全部判定为误分桶或已在册并删除，本轮 2 条新增与 3 条回填全部由 agent 补强完成。核验通道：外交部「外事日程」（最新11月16日三方会晤）、「部领导活动」（最新11月13日，窗口内零新增）、「例行记者会」（最新11月16日）、「外交部新闻」（最新11月13日吉尔吉斯斯坦大使）、「司局级新闻」（最新11月13日）、外交部首页与「重要新闻」；中国政府网要闻（11月16日至17日）；商务部首页；塔斯社、法新社、中国日报、新华社、中国新闻网、陕西省人民政府交叉验证；WebSearch 约 5 轮。",
