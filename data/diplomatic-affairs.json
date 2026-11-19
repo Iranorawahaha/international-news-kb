@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-11-18T10:29:34.616181+08:00",
-    "window_start": "2026-11-15",
-    "window_end": "2026-11-18",
+    "generated": "2026-11-19T09:36:10.552714+08:00",
+    "window_start": "2026-11-16",
+    "window_end": "2026-11-19",
     "collection_method": "auto + agent",
-    "candidate_count": 18
+    "candidate_count": 22
   },
   "modules": {
     "personnel": {
@@ -3227,6 +3227,108 @@
               "url": "https://www.mfa.gov.cn/web/wjbzhd/202611/t20261117_12061346.shtml"
             }
           ]
+        },
+        {
+          "country": "韩国",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-18",
+          "description": "【视频】习近平会见韩国总统",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/18/VIDE69Q9e5tkhZA6xq2IuiTe261118.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "99449c0aa17c"
+        },
+        {
+          "country": "俄罗斯",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-18",
+          "description": "【视频】习近平会见俄罗斯总统",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/18/VIDE8vzw1i2F7ucRwJbIF4Jv261118.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "5df71c4d966b"
+        },
+        {
+          "country": "马来西亚",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-18",
+          "description": "【视频】王小洪会见马来西亚内政部部长",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/18/VIDENemxdlXwbLmJNr0pPNa9261118.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "de4e3afacb4f"
+        },
+        {
+          "country": "马来西亚",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-18",
+          "description": "王小洪会见马来西亚内政部部长赛义夫丁",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086540.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "a3402da8729f"
+        },
+        {
+          "country": "俄罗斯",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-18",
+          "description": "习近平会见俄罗斯总统普京",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086535.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "8fc01b8e6691"
+        },
+        {
+          "country": "韩国",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-18",
+          "description": "习近平会见韩国总统李在明",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086520.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "0a608b320dde"
         }
       ]
     },
@@ -4231,26 +4333,6 @@
               "url": "https://www.cna.com.tw/news/afe/202611170306.aspx"
             }
           ]
-        },
-        {
-          "country": "美国",
-          "cn_person": "",
-          "us_person": "",
-          "interaction_type": "",
-          "event_date": "2026-11-17",
-          "description": "王毅会见加拿大外长阿南德",
-          "mutual_confirmed": false,
-          "cn_emphasis": "",
-          "us_emphasis": "",
-          "outcomes": "",
-          "sources": [
-            {
-              "title": "中国政府网",
-              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086455.htm"
-            }
-          ],
-          "confirmed": false,
-          "id": "88e501c57855"
         }
       ]
     }
@@ -4265,8 +4347,8 @@
   "data_summary": {
     "外交代表人事变化": "18项",
     "驻沪穗总领事人事": "14项",
-    "高级官员访华": "61项",
-    "中美互动": "14项"
+    "高级官员访华": "67项",
+    "中美互动": "13项"
   },
   "supplementary_notes": [
     "【本轮采集与核验通道】基础采集 fetch 得 17 条候选（外交人事 0｜驻沪穗总领事 0｜高级官员访华 16｜中美互动 1），台账拦截 2 条，入库 15 条原始候选经 agent 逐条打开原文核验后全部处理完毕：其中 6 场元首会见按「一事一条」立项 5 条（辛鲍姆并入既有条目）、1 条误分桶条目转为访华条目、其余 8 条为同一事件的视频稿／文字稿重复或综合稿，去重删除。核验通道：外交部首页、「重要新闻」、「外交部长活动」、「例行记者会」（11月17日）、「外交部新闻」（11月18日）；中国政府网要闻 JSON 数据源（11月17日至18日全量）；新华社中英文；央视网《时政新闻眼》；中央社、Le Monde、中评社、中国经济网交叉验证；WebSearch 约 6 轮。",
