@@ -6267,5 +6267,615 @@
   "priority_score": 92,
   "collectedAt": "2026-11-20 09:30:00",
   "is_summit_level": false
+ },
+ {
+  "title": "习近平当面对特朗普称台湾问题要「做正确的事」，呼吁双方管控分歧",
+  "title_zh": "习近平当面对特朗普称台湾问题要「做正确的事」，呼吁双方管控分歧",
+  "title_en": "Xi tells Trump to ‘do the right thing’ on Taiwan; urges two sides to manage differences",
+  "summary": "据南华早报报道，中美元首在深圳会晤中直接谈及台湾问题。习近平对特朗普表示，美方应在台湾问题上「做正确的事」，并呼吁双方共同管控分歧、避免误判。这是本次会晤中中方就台湾问题的直接表态，与联合宣言聚焦战略稳定形成对照，显示台湾议题仍是双边关系中最敏感的一环。报道同时提到特朗普要求中方在相关议题上「做得更多」，双方表述存在温差。",
+  "summary_zh": "据南华早报报道，中美元首在深圳会晤中直接谈及台湾问题。习近平对特朗普表示，美方应在台湾问题上「做正确的事」，并呼吁双方共同管控分歧、避免误判。这是本次会晤中中方就台湾问题的直接表态，与联合宣言聚焦战略稳定形成对照，显示台湾议题仍是双边关系中最敏感的一环。报道同时提到特朗普要求中方在相关议题上「做得更多」，双方表述存在温差。",
+  "source": "南华早报",
+  "category": "中美博弈",
+  "keywords": [
+   "台湾问题",
+   "中美元首",
+   "深圳会晤"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3375023/talks-xi-get-under-way-trump-asks-china-do-more-us-farmers",
+  "priority_score": 93,
+  "is_summit_level": true,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "中方以「提问」为由禁止彭博记者进入三方会谈会场",
+  "title_zh": "中方以「提问」为由禁止彭博记者进入三方会谈会场",
+  "title_en": "China Bars Bloomberg Reporter From Trilateral Talks for Asking a Question",
+  "summary": "纽约时报报道，一名彭博社记者因在采访环节提问，被中方禁止进入中美元首与普京的三方会谈现场。事件发生在深圳 APEC 期间的闭门会晤环节，凸显中方对国际媒体报道峰会活动的准入管控。报道指出，多国随行记者团此前已就采访权限与主办方多次交涉，摄影与文字记者被分区管理。该事件在美方媒体圈引发关注，被视为峰会「开放形象」与严格现场管理之间的落差。",
+  "summary_zh": "纽约时报报道，一名彭博社记者因在采访环节提问，被中方禁止进入中美元首与普京的三方会谈现场。事件发生在深圳 APEC 期间的闭门会晤环节，凸显中方对国际媒体报道峰会活动的准入管控。报道指出，多国随行记者团此前已就采访权限与主办方多次交涉，摄影与文字记者被分区管理。该事件在美方媒体圈引发关注，被视为峰会「开放形象」与严格现场管理之间的落差。",
+  "source": "纽约时报",
+  "category": "中国外交",
+  "keywords": [
+   "媒体准入",
+   "峰会报道",
+   "彭博"
+  ],
+  "url": "https://www.nytimes.com/2026/11/19/world/asia/trump-summit-china-media-bloomberg-reporter-nvidia.html",
+  "priority_score": 82,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "股东集体诉讼指控阿里隐瞒与「疑似间谍」关联，涉英伟达风波",
+  "title_zh": "股东集体诉讼指控阿里隐瞒与「疑似间谍」关联，涉英伟达风波",
+  "title_en": "Alibaba defrauded shareholders by concealing ties to suspected spy in Nvidia scandal, lawsuit says",
+  "summary": "路透社纽约消息，阿里巴巴 11 月 19 日在曼哈顿联邦法院被股东提起集体诉讼，指控其隐瞒与新加坡公司 Megaspeed 的关系，从而虚增股价。诉状称阿里在 2024 至 2026 年年报中系统性低估出口管制违规风险，并点名 Megaspeed 高管 Alice Huang 与英伟达前 CEO 黄仁勋的关系。股东称阿里 ADS 上周四个交易日累计下跌 14%，其中 11 月 12 日单日跌 7.05% 至 94.36 美元。CEO 吴泳铭同为被告，原告索赔金额未定，覆盖 2024 年 5 月 23 日至 2026 年 11 月 11 日的 ADS 持有者。",
+  "summary_zh": "路透社纽约消息，阿里巴巴 11 月 19 日在曼哈顿联邦法院被股东提起集体诉讼，指控其隐瞒与新加坡公司 Megaspeed 的关系，从而虚增股价。诉状称阿里在 2024 至 2026 年年报中系统性低估出口管制违规风险，并点名 Megaspeed 高管 Alice Huang 与英伟达前 CEO 黄仁勋的关系。股东称阿里 ADS 上周四个交易日累计下跌 14%，其中 11 月 12 日单日跌 7.05% 至 94.36 美元。CEO 吴泳铭同为被告，原告索赔金额未定，覆盖 2024 年 5 月 23 日至 2026 年 11 月 11 日的 ADS 持有者。",
+  "source": "路透社",
+  "category": "中美博弈",
+  "keywords": [
+   "阿里巴巴",
+   "集体诉讼",
+   "Megaspeed"
+  ],
+  "url": "https://www.thestar.com.my/tech/tech-news/2026/11/20/alibaba-defrauded-shareholders-by-concealing-ties-to-suspected-spy-in-nvidia-scandal-lawsuit-says",
+  "priority_score": 91,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00",
+  "repost_from": "The Star（马来西亚星报，路透电头）"
+ },
+ {
+  "title": "马斯克承诺继续提高特斯拉上海工厂产量",
+  "title_zh": "马斯克承诺继续提高特斯拉上海工厂产量",
+  "title_en": "Musk pledges higher Tesla output at China plant, Chinese state media says",
+  "summary": "路透社上海消息，马斯克 11 月 19 日在深圳会见中国贸促会会长任鸿斌时表示，特斯拉将继续提高中国工厂产量。此番表态经央视旗下账号「玉渊谭天」披露，马斯克自称是中国的「超级粉丝」，并称美中合作越多对双方越有利。数据显示，今年前 10 个月特斯拉上海工厂交付 81.09 万辆 Model 3 与 Model Y，同比增长 21.4%；该厂年产能超 95 万辆，零部件本土化率约 98%，出口覆盖欧洲、韩国与澳大利亚。马斯克未给出新增产能的具体目标或时间表。",
+  "summary_zh": "路透社上海消息，马斯克 11 月 19 日在深圳会见中国贸促会会长任鸿斌时表示，特斯拉将继续提高中国工厂产量。此番表态经央视旗下账号「玉渊谭天」披露，马斯克自称是中国的「超级粉丝」，并称美中合作越多对双方越有利。数据显示，今年前 10 个月特斯拉上海工厂交付 81.09 万辆 Model 3 与 Model Y，同比增长 21.4%；该厂年产能超 95 万辆，零部件本土化率约 98%，出口覆盖欧洲、韩国与澳大利亚。马斯克未给出新增产能的具体目标或时间表。",
+  "source": "路透社",
+  "category": "中美博弈",
+  "keywords": [
+   "马斯克",
+   "特斯拉",
+   "上海工厂"
+  ],
+  "url": "https://finwire.io/news/stock-markets-news/musk-pledges-higher-tesla-output-at-china-plant-chinese-state-media-says",
+  "priority_score": 88,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00",
+  "repost_from": "Finwire（路透电头）"
+ },
+ {
+  "title": "宁德时代、中际旭创有望入选恒生科技指数，AI 重构港股版图",
+  "title_zh": "宁德时代、中际旭创有望入选恒生科技指数，AI 重构港股版图",
+  "title_en": "CATL, Innolight May Join Hong Kong Tech Index in Major AI Revamp",
+  "summary": "彭博社报道，随着恒生科技指数启动 AI 导向的重大调整，宁德时代与光模块厂商中际旭创有望被纳入成分股。这一调整反映出港股科技板块的重心正从互联网平台向「算力硬件＋新能源」迁移。报道指出，纳入指数将带来被动资金流入，但两家公司实际权重仍取决于流通市值与调整细则。中际旭创的入选尤其凸显光模块在 AI 数据中心互联中的关键地位。",
+  "summary_zh": "彭博社报道，随着恒生科技指数启动 AI 导向的重大调整，宁德时代与光模块厂商中际旭创有望被纳入成分股。这一调整反映出港股科技板块的重心正从互联网平台向「算力硬件＋新能源」迁移。报道指出，纳入指数将带来被动资金流入，但两家公司实际权重仍取决于流通市值与调整细则。中际旭创的入选尤其凸显光模块在 AI 数据中心互联中的关键地位。",
+  "source": "彭博社",
+  "category": "AI·科技",
+  "keywords": [
+   "恒生科技指数",
+   "宁德时代",
+   "中际旭创"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-11-19/catl-innolight-may-join-hong-kong-tech-index-in-major-ai-revamp",
+  "priority_score": 86,
+  "is_summit_level": "2026-11-19",
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "彭博：特朗普对习普的热情拥抱凸显其「强人外交」",
+  "title_zh": "彭博：特朗普对习普的热情拥抱凸显其「强人外交」",
+  "title_en": "Trump’s Warm Embrace of Xi and Putin Showcases His Strongman Ties",
+  "summary": "彭博社通讯稿分析，特朗普在深圳峰会期间对习近平与普京的高调热情互动，是其「强人外交」风格的集中展示。文章认为，这种个人化外交能在短期内制造突破氛围，但在具体议题上缺乏可核查的承诺支撑。对欧洲与亚洲盟友而言，三人同框的画面比任何文本都更具冲击力，可能加速其安全自主与对冲策略的推进。",
+  "summary_zh": "彭博社通讯稿分析，特朗普在深圳峰会期间对习近平与普京的高调热情互动，是其「强人外交」风格的集中展示。文章认为，这种个人化外交能在短期内制造突破氛围，但在具体议题上缺乏可核查的承诺支撑。对欧洲与亚洲盟友而言，三人同框的画面比任何文本都更具冲击力，可能加速其安全自主与对冲策略的推进。",
+  "source": "彭博社",
+  "category": "全球多边",
+  "keywords": [
+   "强人外交",
+   "三方峰会",
+   "盟友反应"
+  ],
+  "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/trump-s-warm-embrace-of-xi-and-putin-showcases-his-strongman-ties",
+  "priority_score": 84,
+  "is_summit_level": "2026-11-19",
+  "date": false,
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "SpaceX 发行 320 亿美元 AI 芯片债，收益率突破 8%",
+  "title_zh": "SpaceX 发行 320 亿美元 AI 芯片债，收益率突破 8%",
+  "title_en": "SpaceX Sells $32 Billion of AI Chip Debt at Yields Topping 8%",
+  "summary": "彭博社报道，SpaceX 完成一笔 320 亿美元的债务发行，用于采购 AI 芯片与相关基础设施，票息收益率超过 8%，明显高于同评级企业融资成本。高收益率反映投资者对在轨算力资产抵押价值的疑虑，也与金融时报披露的贷款方限制条款相互印证。报道称这笔融资是今年规模最大的单一 AI 硬件采购融资之一，将进一步推高市场对 AI 资本开支可持续性的关注。",
+  "summary_zh": "彭博社报道，SpaceX 完成一笔 320 亿美元的债务发行，用于采购 AI 芯片与相关基础设施，票息收益率超过 8%，明显高于同评级企业融资成本。高收益率反映投资者对在轨算力资产抵押价值的疑虑，也与金融时报披露的贷款方限制条款相互印证。报道称这笔融资是今年规模最大的单一 AI 硬件采购融资之一，将进一步推高市场对 AI 资本开支可持续性的关注。",
+  "source": "彭博社",
+  "category": "AI·科技",
+  "keywords": [
+   "SpaceX",
+   "芯片债",
+   "融资成本"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-11-19/spacex-eyes-at-least-32-billion-ai-chip-debt-sale-on-thursday",
+  "priority_score": 88,
+  "is_summit_level": "2026-11-19",
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "美中牛肉需求推动澳与南美扩建育肥场",
+  "title_zh": "美中牛肉需求推动澳与南美扩建育肥场",
+  "title_en": "US, China Beef Demand Drive Feedlot Expansion Across Australia, South America",
+  "summary": "彭博社报道，来自美国与中国的牛肉需求同步走强，推动澳大利亚与南美的育肥场（feedlot）大规模扩建。报道指出，美方国内牛群规模处于低位，进口需求上升；中方则在蛋白消费结构变化下持续增加采购。两地扩产也带动饲料、兽药与冷链投资，但环保与土地约束正在成为新的瓶颈，部分项目面临当地审批阻力。",
+  "summary_zh": "彭博社报道，来自美国与中国的牛肉需求同步走强，推动澳大利亚与南美的育肥场（feedlot）大规模扩建。报道指出，美方国内牛群规模处于低位，进口需求上升；中方则在蛋白消费结构变化下持续增加采购。两地扩产也带动饲料、兽药与冷链投资，但环保与土地约束正在成为新的瓶颈，部分项目面临当地审批阻力。",
+  "source": "彭博社",
+  "category": "其他",
+  "keywords": [
+   "牛肉",
+   "农产品贸易",
+   "供应链"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-11-19/us-china-beef-demand-drive-feedlot-expansion-across-australia-south-america",
+  "priority_score": 78,
+  "is_summit_level": "2026-11-19",
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "苹果 AI 代理计划曝光，Anthropic 股价盘后下挫",
+  "title_zh": "苹果 AI 代理计划曝光，Anthropic 股价盘后下挫",
+  "title_en": "Anthropic Shares Drop Post-Market on Apple’s AI Agent Plans",
+  "summary": "彭博社报道，苹果披露其自研 AI 代理（AI Agent）计划后，Anthropic 股价在盘后交易中下跌。市场担忧苹果把代理能力内置于操作系统，将挤压第三方模型厂商在消费端的入口份额。报道指出，Anthropic 上市首日的强劲表现尚未转化为稳定的估值支撑，其企业客户结构与苹果生态的重叠度成为投资者新的关注点。",
+  "summary_zh": "彭博社报道，苹果披露其自研 AI 代理（AI Agent）计划后，Anthropic 股价在盘后交易中下跌。市场担忧苹果把代理能力内置于操作系统，将挤压第三方模型厂商在消费端的入口份额。报道指出，Anthropic 上市首日的强劲表现尚未转化为稳定的估值支撑，其企业客户结构与苹果生态的重叠度成为投资者新的关注点。",
+  "source": "彭博社",
+  "category": "AI·科技",
+  "keywords": [
+   "Anthropic",
+   "苹果",
+   "AI 代理"
+  ],
+  "url": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-shares-drop-post-market-on-apple-s-ai-agent-plans",
+  "priority_score": 85,
+  "is_summit_level": "2026-11-20",
+  "date": "2026-11-20",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "Anthropic 上市首日跻身全球市值最高上市公司之列",
+  "title_zh": "Anthropic 上市首日跻身全球市值最高上市公司之列",
+  "title_en": "Anthropic becomes one of world's most valuable public companies in stock market debut",
+  "summary": "BBC 报道，AI 公司 Anthropic 在上市首日股价表现强劲，市值一举进入全球最高上市公司行列。这家以 Claude 系列模型著称的公司由前 OpenAI 研究人员创办，其上市被视为资本市场对生成式 AI 长期盈利能力的投票。报道同时指出，上市后 Anthropic 仍面临算力采购成本高企、企业客户付费转化不确定等压力，投资者对其估值分歧较大，盘中股价波动明显。",
+  "summary_zh": "BBC 报道，AI 公司 Anthropic 在上市首日股价表现强劲，市值一举进入全球最高上市公司行列。这家以 Claude 系列模型著称的公司由前 OpenAI 研究人员创办，其上市被视为资本市场对生成式 AI 长期盈利能力的投票。报道同时指出，上市后 Anthropic 仍面临算力采购成本高企、企业客户付费转化不确定等压力，投资者对其估值分歧较大，盘中股价波动明显。",
+  "source": "BBC",
+  "category": "AI·科技",
+  "keywords": [
+   "Anthropic",
+   "IPO",
+   "AI 估值"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o",
+  "priority_score": 92,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "美国财团中标肯尼亚 620 亿美元稀土矿勘探权",
+  "title_zh": "美国财团中标肯尼亚 620 亿美元稀土矿勘探权",
+  "title_en": "U.S. Consortium Wins Bid to Prospect at $62 Billion Kenyan Rare-Earth Deposit",
+  "summary": "华尔街日报报道，一个美国财团击败包括中国企业在内的竞争对手，赢得肯尼亚姆里马山稀土矿藏的勘探权，该矿藏估值约 620 亿美元。这是华盛顿推动稀土供应链「去中国化」以来在非洲取得的重要进展，也意味着关键矿产的争夺正从贸易层面下沉到上游矿区。报道称勘探阶段尚需数年，最终能否形成规模化产能仍取决于基础设施与冶炼加工环节的配套。",
+  "summary_zh": "华尔街日报报道，一个美国财团击败包括中国企业在内的竞争对手，赢得肯尼亚姆里马山稀土矿藏的勘探权，该矿藏估值约 620 亿美元。这是华盛顿推动稀土供应链「去中国化」以来在非洲取得的重要进展，也意味着关键矿产的争夺正从贸易层面下沉到上游矿区。报道称勘探阶段尚需数年，最终能否形成规模化产能仍取决于基础设施与冶炼加工环节的配套。",
+  "source": "华尔街日报",
+  "category": "中美博弈",
+  "keywords": [
+   "稀土",
+   "关键矿产",
+   "非洲"
+  ],
+  "url": "https://www.wsj.com/world/africa/u-s-consortium-wins-bid-to-prospect-at-62-billion-kenyan-rare-earth-deposit-5700b009",
+  "priority_score": 91,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "联合国最高司法机构裁定缅甸对罗兴亚人实施种族灭绝",
+  "title_zh": "联合国最高司法机构裁定缅甸对罗兴亚人实施种族灭绝",
+  "title_en": "World Court Finds Myanmar Committed Genocide Against Rohingya",
+  "summary": "国际法院（ICJ）就冈比亚提起的诉讼作出裁定，认定缅甸对罗兴亚少数民族实施了种族灭绝。这一裁决为 2017 年缅甸若开邦大规模军事行动的法律定性提供了权威依据，也将对后续赔偿与追责程序产生推动。多家外媒指出，裁决同时为加沙问题上的类似诉讼提供判例参照。缅甸军政府方面未接受裁决，罗兴亚难民营内则出现庆祝场面。",
+  "summary_zh": "国际法院（ICJ）就冈比亚提起的诉讼作出裁定，认定缅甸对罗兴亚少数民族实施了种族灭绝。这一裁决为 2017 年缅甸若开邦大规模军事行动的法律定性提供了权威依据，也将对后续赔偿与追责程序产生推动。多家外媒指出，裁决同时为加沙问题上的类似诉讼提供判例参照。缅甸军政府方面未接受裁决，罗兴亚难民营内则出现庆祝场面。",
+  "source": "华尔街日报",
+  "category": "地区局势",
+  "keywords": [
+   "罗兴亚",
+   "国际法院",
+   "缅甸"
+  ],
+  "url": "https://www.wsj.com/world/asia/world-court-finds-myanmar-committed-genocide-against-rohingya-6fa7e663",
+  "priority_score": 88,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "华尔街承诺向英伟达投入 5000 亿美元，至今未落地一元",
+  "title_zh": "华尔街承诺向英伟达投入 5000 亿美元，至今未落地一元",
+  "title_en": "Wall Street Pledged $500 Billion for Nvidia. Not a Dollar Has Been Deployed.",
+  "summary": "华尔街日报调查显示，金融机构此前为英伟达及相关 AI 基础设施承诺的约 5000 亿美元融资，迄今没有任何一笔真正投放。报道指出，这些承诺多以谅解备忘、意向函或框架协议形式存在，在芯片估值波动、租赁回报不确定的背景下被搁置，反映 AI 资本开支热潮中「纸面承诺」与「实际到位资金」的巨大落差。这一缺口直接影响英伟达下游数据中心项目的开工节奏。",
+  "summary_zh": "华尔街日报调查显示，金融机构此前为英伟达及相关 AI 基础设施承诺的约 5000 亿美元融资，迄今没有任何一笔真正投放。报道指出，这些承诺多以谅解备忘、意向函或框架协议形式存在，在芯片估值波动、租赁回报不确定的背景下被搁置，反映 AI 资本开支热潮中「纸面承诺」与「实际到位资金」的巨大落差。这一缺口直接影响英伟达下游数据中心项目的开工节奏。",
+  "source": "华尔街日报",
+  "category": "AI·科技",
+  "keywords": [
+   "英伟达",
+   "AI 资本开支",
+   "融资"
+  ],
+  "url": "https://www.wsj.com/world/wall-street-pledged-500-billion-for-nvidia-not-a-dollar-has-been-deployed-6bee9560",
+  "priority_score": 93,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "黄仁勋风波令华盛顿对华鹰派重获声势",
+  "title_zh": "黄仁勋风波令华盛顿对华鹰派重获声势",
+  "title_en": "The Jensen Huang Saga Has Reinvigorated Washington’s China Hawks",
+  "summary": "华尔街日报分析指出，黄仁勋因与疑似中方情报关系人往来而辞任英伟达 CEO 一事，重新激活了华盛顿此前一度沉寂的对华技术鹰派。文章称，国会与智库正借此推动更严格的芯片出口许可审查，并把「远程算力」「第三国转口」「客户股权穿透」列为新的执法重点。多名受访官员认为，此事为收紧对华 AI 芯片政策的立法窗口重新打开。",
+  "summary_zh": "华尔街日报分析指出，黄仁勋因与疑似中方情报关系人往来而辞任英伟达 CEO 一事，重新激活了华盛顿此前一度沉寂的对华技术鹰派。文章称，国会与智库正借此推动更严格的芯片出口许可审查，并把「远程算力」「第三国转口」「客户股权穿透」列为新的执法重点。多名受访官员认为，此事为收紧对华 AI 芯片政策的立法窗口重新打开。",
+  "source": "华尔街日报",
+  "category": "中美博弈",
+  "keywords": [
+   "黄仁勋",
+   "对华鹰派",
+   "出口管制"
+  ],
+  "url": "https://www.wsj.com/politics/national-security/the-jensen-huang-saga-has-reinvigorated-washingtons-china-hawks-0bc1bd4a",
+  "priority_score": 91,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "纽约时报：美方要求英伟达向涉军中企与 Megaspeed 供货",
+  "title_zh": "纽约时报：美方要求英伟达向涉军中企与 Megaspeed 供货",
+  "title_en": "Nvidia Asked to Sell Chips to Companies Tied to Chinese Military and Megaspeed",
+  "summary": "纽约时报商业版调查称，美国有关部门在审批过程中要求英伟达向与中国军方存在关联的企业以及新加坡 Megaspeed 出售芯片。报道梳理了这些交易如何绕过既有审查路径，最终使相关算力落入受关注对象之手。文章与国会中国委员会此前公布的近 90 万颗对华批售数据相互印证，构成华盛顿加强穿透式审查的直接依据。",
+  "summary_zh": "纽约时报商业版调查称，美国有关部门在审批过程中要求英伟达向与中国军方存在关联的企业以及新加坡 Megaspeed 出售芯片。报道梳理了这些交易如何绕过既有审查路径，最终使相关算力落入受关注对象之手。文章与国会中国委员会此前公布的近 90 万颗对华批售数据相互印证，构成华盛顿加强穿透式审查的直接依据。",
+  "source": "纽约时报",
+  "category": "中美博弈",
+  "keywords": [
+   "英伟达",
+   "Megaspeed",
+   "对华芯片"
+  ],
+  "url": "https://www.nytimes.com/2026/11/19/business/economy/nvidia-chips-commerce-china-huang.html",
+  "priority_score": 92,
+  "is_summit_level": false,
+  "date": "2026-11-20",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "半岛电视台：美国半年内批准向中国出售近 90 万颗 AI 芯片",
+  "title_zh": "半岛电视台：美国半年内批准向中国出售近 90 万颗 AI 芯片",
+  "title_en": "US signed off on sales of nearly 900,000 AI chips to China in six months",
+  "summary": "半岛电视台经济版报道，美国在最近六个月内批准了将近 90 万颗 AI 芯片的对华销售许可，数量级远超外界此前估计。报道指出，这一数字未经高调公布，与华盛顿公开宣称的对华技术收紧形成反差，也解释了为何国会中国委员会以此为核心证据要求改革审批程序。芯片型号与最终用户分布未被完整披露，部分交易被指经第三国转口。",
+  "summary_zh": "半岛电视台经济版报道，美国在最近六个月内批准了将近 90 万颗 AI 芯片的对华销售许可，数量级远超外界此前估计。报道指出，这一数字未经高调公布，与华盛顿公开宣称的对华技术收紧形成反差，也解释了为何国会中国委员会以此为核心证据要求改革审批程序。芯片型号与最终用户分布未被完整披露，部分交易被指经第三国转口。",
+  "source": "半岛电视台",
+  "category": "中美博弈",
+  "keywords": [
+   "AI 芯片",
+   "对华出口许可",
+   "审批"
+  ],
+  "url": "https://www.aljazeera.com/economy/2026/11/19/us-signed-off-on-sales-of-nearly-900000-ai-chips-to-china-in-six-months",
+  "priority_score": 92,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "澳总理将会晤习近平，铁矿石争端阴影笼罩",
+  "title_zh": "澳总理将会晤习近平，铁矿石争端阴影笼罩",
+  "title_en": "Australian PM to meet Xi Jinping as iron ore tensions loom",
+  "summary": "金融时报报道，澳大利亚总理阿尔巴尼斯将在深圳 APEC 期间与习近平会晤，铁矿石定价与采购争端成为绕不开的议题。报道称中方近期调整铁矿石采购机制，令澳方主要矿商面临价格与结算方式的双重压力，澳政府希望借峰会稳定双边经贸框架。同时澳方在 AUKUS 核潜艇合作上的立场仍是中方关切，双方在安全与经济两条线上难以同时取得突破。",
+  "summary_zh": "金融时报报道，澳大利亚总理阿尔巴尼斯将在深圳 APEC 期间与习近平会晤，铁矿石定价与采购争端成为绕不开的议题。报道称中方近期调整铁矿石采购机制，令澳方主要矿商面临价格与结算方式的双重压力，澳政府希望借峰会稳定双边经贸框架。同时澳方在 AUKUS 核潜艇合作上的立场仍是中方关切，双方在安全与经济两条线上难以同时取得突破。",
+  "source": "金融时报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "澳大利亚",
+   "铁矿石",
+   "中澳关系"
+  ],
+  "url": "https://www.ft.com/content/ddbf0f75-047a-421a-87c0-3e60bf42ed22",
+  "priority_score": 89,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "南华早报：中国电力充裕，但尚不构成决定性 AI 优势",
+  "title_zh": "南华早报：中国电力充裕，但尚不构成决定性 AI 优势",
+  "title_en": "China’s abundant electricity is not yet a decisive AI edge",
+  "summary": "南华早报评论指出，中国发电装机与新增电力规模居全球首位，常被视为 AI 算力竞争中的结构性优势，但电力充裕并不自动转化为算力优势。文章分析称，瓶颈已从「有没有电」转向「有没有可用于训练的先进芯片」与「电网与数据中心之间的调配效率」，受出口管制影响，中国在单位算力产出上仍落后。评论认为电力优势是长期变量，短期内难以抵消芯片端差距。",
+  "summary_zh": "南华早报评论指出，中国发电装机与新增电力规模居全球首位，常被视为 AI 算力竞争中的结构性优势，但电力充裕并不自动转化为算力优势。文章分析称，瓶颈已从「有没有电」转向「有没有可用于训练的先进芯片」与「电网与数据中心之间的调配效率」，受出口管制影响，中国在单位算力产出上仍落后。评论认为电力优势是长期变量，短期内难以抵消芯片端差距。",
+  "source": "南华早报",
+  "category": "AI·科技",
+  "keywords": [
+   "算力",
+   "电力",
+   "AI 基础设施"
+  ],
+  "url": "https://www.scmp.com/opinion/china-opinion/article/3374771/chinas-abundant-electricity-not-yet-decisive-ai-edge",
+  "priority_score": 86,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "历史性 APEC 峰会四大要点：核军控、能源供应、金正恩缺席与遗留分歧",
+  "title_zh": "历史性 APEC 峰会四大要点：核军控、能源供应、金正恩缺席与遗留分歧",
+  "title_en": "Nuclear arms, energy supplies - but no Kim: the main takeaways from a historic Apec summit",
+  "summary": "南华早报梳理深圳 APEC 三方峰会的核心看点：一是在核战争风险上形成共同表述，二是就增加石油供应达成共识以应对全球能源转型压力，三是朝鲜领导人金正恩缺席使半岛议题未进入议程，四是乌克兰与伊朗战争在联合文件中被回避。报道认为，宣言在战略稳定层面留有空间，但缺少可核查的执行机制，象征意义大于实质约束。",
+  "summary_zh": "南华早报梳理深圳 APEC 三方峰会的核心看点：一是在核战争风险上形成共同表述，二是就增加石油供应达成共识以应对全球能源转型压力，三是朝鲜领导人金正恩缺席使半岛议题未进入议程，四是乌克兰与伊朗战争在联合文件中被回避。报道认为，宣言在战略稳定层面留有空间，但缺少可核查的执行机制，象征意义大于实质约束。",
+  "source": "南华早报",
+  "category": "全球多边",
+  "keywords": [
+   "APEC",
+   "三方峰会",
+   "核军控"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3375124/nuclear-arms-energy-supplies-no-kim-main-takeaways-historic-apec-summit",
+  "priority_score": 90,
+  "is_summit_level": true,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "深圳峰会随行名单解读：三方的优先事项各有侧重",
+  "title_zh": "深圳峰会随行名单解读：三方的优先事项各有侧重",
+  "title_en": "Who’s who in Shenzhen: the priorities revealed by Xi-Trump-Putin summit rosters",
+  "summary": "南华早报通过比对三方代表团名单，读出各自的谈判优先级：美方随行以经贸与科技官员为主，显示其关注协议落地与芯片议题；俄方侧重安全与能源部门；中方则由外交与经贸系统牵头，配套大量地方与产业代表。报道指出，名单结构往往比公开表态更能反映真实议题排序，也解释了为何联合宣言在经贸细节上留白。",
+  "summary_zh": "南华早报通过比对三方代表团名单，读出各自的谈判优先级：美方随行以经贸与科技官员为主，显示其关注协议落地与芯片议题；俄方侧重安全与能源部门；中方则由外交与经贸系统牵头，配套大量地方与产业代表。报道指出，名单结构往往比公开表态更能反映真实议题排序，也解释了为何联合宣言在经贸细节上留白。",
+  "source": "南华早报",
+  "category": "全球多边",
+  "keywords": [
+   "APEC",
+   "代表团",
+   "谈判议题"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3375069/whos-who-shenzhen-priorities-revealed-xi-trump-putin-summit-rosters",
+  "priority_score": 85,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "卡塔尔赠送的波音 747 首次以「空军一号」身份亮相深圳",
+  "title_zh": "卡塔尔赠送的波音 747 首次以「空军一号」身份亮相深圳",
+  "title_en": "Qatar-gifted Boeing 747 makes China debut as Air Force One in Shenzhen",
+  "summary": "南华早报报道，卡塔尔此前赠予美方的波音 747 专机首次以总统专机身份在深圳亮相，成为特朗普亚洲行的视觉标志之一。该机此前因接受外国政府高额赠礼引发国会伦理审查，民主党议员质疑其违反宪法薪酬条款。报道称专机改装与安保配套费用由美方承担，实际交付时间较原计划推迟数月。",
+  "summary_zh": "南华早报报道，卡塔尔此前赠予美方的波音 747 专机首次以总统专机身份在深圳亮相，成为特朗普亚洲行的视觉标志之一。该机此前因接受外国政府高额赠礼引发国会伦理审查，民主党议员质疑其违反宪法薪酬条款。报道称专机改装与安保配套费用由美方承担，实际交付时间较原计划推迟数月。",
+  "source": "南华早报",
+  "category": "美国内政",
+  "keywords": [
+   "空军一号",
+   "卡塔尔赠礼",
+   "伦理审查"
+  ],
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3375056/qatar-gifted-boeing-747-makes-china-debut-air-force-one-shenzhen",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "美方警告：向澳交付核潜艇将令自身舰队「多年」处于亏空",
+  "title_zh": "美方警告：向澳交付核潜艇将令自身舰队「多年」处于亏空",
+  "title_en": "US warned supplying nuclear-powered submarines to Australia would diminish its own fleet for ‘many years’",
+  "summary": "卫报报道，美方在 AUKUS 框架内部评估中警告，按现行安排向澳大利亚交付弗吉尼亚级核潜艇，将使美国海军自身可用攻击核潜艇数量在「很多年」内低于需求线。评估显示，美方造船产能与维护积压已构成硬约束，如期交付与维持自身战备难以兼顾。澳方则强调该安排是其获得核动力潜艇能力的唯一现实路径，双方正讨论调整交付节奏与轮换部署方案。",
+  "summary_zh": "卫报报道，美方在 AUKUS 框架内部评估中警告，按现行安排向澳大利亚交付弗吉尼亚级核潜艇，将使美国海军自身可用攻击核潜艇数量在「很多年」内低于需求线。评估显示，美方造船产能与维护积压已构成硬约束，如期交付与维持自身战备难以兼顾。澳方则强调该安排是其获得核动力潜艇能力的唯一现实路径，双方正讨论调整交付节奏与轮换部署方案。",
+  "source": "卫报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "AUKUS",
+   "核潜艇",
+   "美澳同盟"
+  ],
+  "url": "https://www.theguardian.com/world/2026/nov/20/aukus-defence-us-warned-supplying-nuclear-powered-submarines-to-australia-would-diminish-its-own-fleet-for-many-years",
+  "priority_score": 90,
+  "is_summit_level": false,
+  "date": "2026-11-20",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "丹麦议会批准美格陵兰安全协议",
+  "title_zh": "丹麦议会批准美格陵兰安全协议",
+  "title_en": "Danish lawmakers approve US-Greenland security deal",
+  "summary": "南华早报报道，丹麦议会通过一项与美国就格陵兰安全事务达成的协议，为扩大美军在岛上的活动与设施准入提供法律基础。这标志着围绕格陵兰的紧张态势阶段性缓和，此前特朗普多次提出购买该岛引发丹麦与格陵兰自治政府强烈反应。协议据称包含资源开发与雷达预警方面的合作条款，但主权归属问题被明确排除在议题之外。",
+  "summary_zh": "南华早报报道，丹麦议会通过一项与美国就格陵兰安全事务达成的协议，为扩大美军在岛上的活动与设施准入提供法律基础。这标志着围绕格陵兰的紧张态势阶段性缓和，此前特朗普多次提出购买该岛引发丹麦与格陵兰自治政府强烈反应。协议据称包含资源开发与雷达预警方面的合作条款，但主权归属问题被明确排除在议题之外。",
+  "source": "南华早报",
+  "category": "中欧与盟友",
+  "keywords": [
+   "格陵兰",
+   "丹麦",
+   "美军准入"
+  ],
+  "url": "https://www.scmp.com/news/world/europe/article/3375094/danish-lawmakers-approve-us-greenland-security-deal",
+  "priority_score": 85,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "胡塞武装袭击沙特主权基金总部，击中利雅得最高摩天楼",
+  "title_zh": "胡塞武装袭击沙特主权基金总部，击中利雅得最高摩天楼",
+  "title_en": "Houthis hit Riyadh’s tallest skyscraper in strike on Saudi wealth fund HQ",
+  "summary": "多家外媒报道，胡塞武装对沙特主权财富基金（PIF）总部所在大楼发动袭击，命中利雅得最高摩天楼，造成建筑受损。这是伊朗战争外溢至沙特本土的最新升级，胡塞方面称针对的是与沙特经济与军事决策相关的目标。沙特方面尚未公布伤亡与损失明细，地区航空与油价一度震荡，国际保险公司上调海湾航线风险溢价。",
+  "summary_zh": "多家外媒报道，胡塞武装对沙特主权财富基金（PIF）总部所在大楼发动袭击，命中利雅得最高摩天楼，造成建筑受损。这是伊朗战争外溢至沙特本土的最新升级，胡塞方面称针对的是与沙特经济与军事决策相关的目标。沙特方面尚未公布伤亡与损失明细，地区航空与油价一度震荡，国际保险公司上调海湾航线风险溢价。",
+  "source": "纽约时报",
+  "category": "地区局势",
+  "keywords": [
+   "胡塞武装",
+   "沙特",
+   "伊朗战争"
+  ],
+  "url": "https://www.scmp.com/news/world/middle-east/article/3375108/houthis-hit-riyadhs-tallest-skyscraper-strike-saudi-wealth-fund-hq",
+  "priority_score": 88,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "格鲁吉亚公寓燃气爆炸致楼体坍塌，3 死 3 人被困",
+  "title_zh": "格鲁吉亚公寓燃气爆炸致楼体坍塌，3 死 3 人被困",
+  "title_en": "3 dead, 3 trapped as Georgia building collapses after gas blast",
+  "summary": "据外媒报道，格鲁吉亚一栋公寓楼因疑似燃气爆炸发生坍塌，造成至少 3 人死亡、3 人被困废墟。救援人员连续作业搜寻幸存者，当地政府已启动事故调查并排查同批次燃气管道安全隐患。半岛电视台把死亡人数记为 6 人，各方对伤亡数字的表述存在差异，具体原因仍有待官方确认。",
+  "summary_zh": "据外媒报道，格鲁吉亚一栋公寓楼因疑似燃气爆炸发生坍塌，造成至少 3 人死亡、3 人被困废墟。救援人员连续作业搜寻幸存者，当地政府已启动事故调查并排查同批次燃气管道安全隐患。半岛电视台把死亡人数记为 6 人，各方对伤亡数字的表述存在差异，具体原因仍有待官方确认。",
+  "source": "南华早报",
+  "category": "地区局势",
+  "keywords": [
+   "格鲁吉亚",
+   "燃气爆炸",
+   "事故"
+  ],
+  "url": "https://www.scmp.com/news/world/europe/article/3375125/3-dead-3-trapped-georgia-building-collapses-after-gas-blast",
+  "priority_score": 76,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "国际能源署警告：到 2030 年数据中心碳排放将增加 70%",
+  "title_zh": "国际能源署警告：到 2030 年数据中心碳排放将增加 70%",
+  "title_en": "Datacentres to create 70% more carbon emissions by 2030, IEA report warns",
+  "summary": "卫报报道，国际能源署（IEA）最新报告预测，到 2030 年全球数据中心的碳排放将比当前水平高出约 70%，主要驱动来自 AI 训练与推理带来的电力需求激增。报告指出，若不加干预，数据中心用电增速将超过多数国家电网扩容与清洁能源并网的速度，部分区域可能出现供电紧张。IEA 建议把能效标准、绿电采购与选址约束结合起来，否则 AI 扩张的能源代价将由普通用户分摊。",
+  "summary_zh": "卫报报道，国际能源署（IEA）最新报告预测，到 2030 年全球数据中心的碳排放将比当前水平高出约 70%，主要驱动来自 AI 训练与推理带来的电力需求激增。报告指出，若不加干预，数据中心用电增速将超过多数国家电网扩容与清洁能源并网的速度，部分区域可能出现供电紧张。IEA 建议把能效标准、绿电采购与选址约束结合起来，否则 AI 扩张的能源代价将由普通用户分摊。",
+  "source": "卫报",
+  "category": "AI·科技",
+  "keywords": [
+   "数据中心",
+   "碳排放",
+   "国际能源署"
+  ],
+  "url": "https://www.theguardian.com/world/2026/nov/19/datacentres-to-create-70-more-carbon-emissions-by-2030-iea-report-warns",
+  "priority_score": 87,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "特朗普追授赦免棒球传奇皮特·罗斯",
+  "title_zh": "特朗普追授赦免棒球传奇皮特·罗斯",
+  "title_en": "Trump posthumously pardons US baseball legend Pete Rose",
+  "summary": "BBC 报道，特朗普宣布对已故棒球名宿皮特·罗斯予以追授赦免。罗斯是美国职棒历史上的安打纪录保持者，因涉赌球被终身禁赛且无缘名人堂，此赦免在体育界引发关于「纪录与道德」的争论。报道指出，总统赦免权仅涉及联邦刑事定罪，无法改变职业联盟的禁赛决定，因此实际效力有限。",
+  "summary_zh": "BBC 报道，特朗普宣布对已故棒球名宿皮特·罗斯予以追授赦免。罗斯是美国职棒历史上的安打纪录保持者，因涉赌球被终身禁赛且无缘名人堂，此赦免在体育界引发关于「纪录与道德」的争论。报道指出，总统赦免权仅涉及联邦刑事定罪，无法改变职业联盟的禁赛决定，因此实际效力有限。",
+  "source": "BBC",
+  "category": "美国内政",
+  "keywords": [
+   "赦免权",
+   "棒球",
+   "体育"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cx1l0pm7l9jmo",
+  "priority_score": 78,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "梵高画作以 1.904 亿美元创纪录成交，此前曾陷纳粹时期归属争议",
+  "title_zh": "梵高画作以 1.904 亿美元创纪录成交，此前曾陷纳粹时期归属争议",
+  "title_en": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
+  "summary": "BBC 报道，一幅梵高画作在拍卖中以 1.904 亿美元成交，创下该艺术家作品的拍卖纪录。此前该画作因二战期间的流转经历引发归属争议，犹太藏家后人的追索诉求一度使拍卖程序延后。拍卖行称已完成尽职调查并公布来源链，最终成交价仍高于估价区间，显示高端艺术品市场对争议标的的接受度。",
+  "summary_zh": "BBC 报道，一幅梵高画作在拍卖中以 1.904 亿美元成交，创下该艺术家作品的拍卖纪录。此前该画作因二战期间的流转经历引发归属争议，犹太藏家后人的追索诉求一度使拍卖程序延后。拍卖行称已完成尽职调查并公布来源链，最终成交价仍高于估价区间，显示高端艺术品市场对争议标的的接受度。",
+  "source": "BBC",
+  "category": "其他",
+  "keywords": [
+   "梵高",
+   "拍卖",
+   "艺术品归属"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo",
+  "priority_score": 72,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "马杜罗下台未满一年，委内瑞拉与美国签署军事协议",
+  "title_zh": "马杜罗下台未满一年，委内瑞拉与美国签署军事协议",
+  "title_en": "Venezuela signs military deal with US less than a year after Maduro's removal",
+  "summary": "BBC 报道，委内瑞拉与美国签署一项军事合作协议，此时距马杜罗被解除权力不足一年。协议内容涉及反毒、边境管控与情报共享，被视为委内瑞拉新政府向华盛顿靠拢的关键一步。报道同时指出，委国内对美军介入仍存在强烈反对声音，部分拉美邻国对地区军事格局变化保持观望，协议的落地执行细节尚未公布。",
+  "summary_zh": "BBC 报道，委内瑞拉与美国签署一项军事合作协议，此时距马杜罗被解除权力不足一年。协议内容涉及反毒、边境管控与情报共享，被视为委内瑞拉新政府向华盛顿靠拢的关键一步。报道同时指出，委国内对美军介入仍存在强烈反对声音，部分拉美邻国对地区军事格局变化保持观望，协议的落地执行细节尚未公布。",
+  "source": "BBC",
+  "category": "地区局势",
+  "keywords": [
+   "委内瑞拉",
+   "军事协议",
+   "拉美"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cmwy8pyqlq5vo",
+  "priority_score": 85,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "中国雨林发现直立人牙齿化石，颠覆既有演化理论",
+  "title_zh": "中国雨林发现直立人牙齿化石，颠覆既有演化理论",
+  "title_en": "Homo erectus teeth found in China’s rainforest topple theory of human evolution",
+  "summary": "南华早报科学版报道，研究人员在中国南方热带雨林地区发现的直立人牙齿化石，为早期人类栖息环境提供了新证据。此前学界普遍认为直立人主要活动于草原与稀树草原带，新发现表明其适应能力超出既有模型，可能改写人类走出非洲后扩散路径的时间与地理假设。论文强调样本量仍有限，年代测定与伴生石器需要更多证据支撑。",
+  "summary_zh": "南华早报科学版报道，研究人员在中国南方热带雨林地区发现的直立人牙齿化石，为早期人类栖息环境提供了新证据。此前学界普遍认为直立人主要活动于草原与稀树草原带，新发现表明其适应能力超出既有模型，可能改写人类走出非洲后扩散路径的时间与地理假设。论文强调样本量仍有限，年代测定与伴生石器需要更多证据支撑。",
+  "source": "南华早报",
+  "category": "其他",
+  "keywords": [
+   "直立人",
+   "化石",
+   "人类演化"
+  ],
+  "url": "https://www.scmp.com/news/china/science/article/3374985/homo-erectus-teeth-found-chinas-rainforest-topple-theory-human-evolution",
+  "priority_score": 74,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "特朗普称普京希望乌克兰和平，普京同时誓言继续作战",
+  "title_zh": "特朗普称普京希望乌克兰和平，普京同时誓言继续作战",
+  "title_en": "Trump says Putin wants peace in Ukraine even as Putin vows to fight",
+  "summary": "华盛顿邮报报道，特朗普在公开表态中称普京「希望和平」，而普京同日则誓言继续作战，两人说法形成直接矛盾。报道指出，美方在峰会后的表述重心已从「停火」转向「和平框架」，但克里姆林宫对领土与安全保证的核心诉求未见松动。欧洲盟友对「雅尔塔式」安排保持警惕，乌克兰方面强调任何安排不得绕过基辅。",
+  "summary_zh": "华盛顿邮报报道，特朗普在公开表态中称普京「希望和平」，而普京同日则誓言继续作战，两人说法形成直接矛盾。报道指出，美方在峰会后的表述重心已从「停火」转向「和平框架」，但克里姆林宫对领土与安全保证的核心诉求未见松动。欧洲盟友对「雅尔塔式」安排保持警惕，乌克兰方面强调任何安排不得绕过基辅。",
+  "source": "华盛顿邮报",
+  "category": "地区局势",
+  "keywords": [
+   "乌克兰",
+   "普京",
+   "和平框架"
+  ],
+  "url": "https://www.washingtonpost.com/world/2026/11/19/trump-says-putin-wants-peace-ukraine-even-putin-vows-fight/",
+  "priority_score": 87,
+  "is_summit_level": false,
+  "date": "2026-11-20",
+  "collectedAt": "2026-11-20 09:30:00"
+ },
+ {
+  "title": "马斯克称中期选举投入 4.46 亿美元「相当愚蠢」",
+  "title_zh": "马斯克称中期选举投入 4.46 亿美元「相当愚蠢」",
+  "title_en": "Elon Musk says record $446m spending on US midterms was 'pretty foolish'",
+  "summary": "BBC 报道，马斯克在公开活动中把自己在本轮美国中期选举中约 4.46 亿美元的政治投入称为「相当愚蠢」，这一表态与其此前的积极助选姿态形成反差。报道称相关资金主要通过其政治行动委员会投放，覆盖多个关键州选区，但最终选举结果与预期存在落差。此番言论被视为其对政治投入回报的公开反思。",
+  "summary_zh": "BBC 报道，马斯克在公开活动中把自己在本轮美国中期选举中约 4.46 亿美元的政治投入称为「相当愚蠢」，这一表态与其此前的积极助选姿态形成反差。报道称相关资金主要通过其政治行动委员会投放，覆盖多个关键州选区，但最终选举结果与预期存在落差。此番言论被视为其对政治投入回报的公开反思。",
+  "source": "BBC",
+  "category": "美国内政",
+  "keywords": [
+   "马斯克",
+   "中期选举",
+   "政治献金"
+  ],
+  "url": "https://www.bbc.co.uk/news/articles/cm9q8j2z3gg8o",
+  "priority_score": 80,
+  "is_summit_level": false,
+  "date": "2026-11-19",
+  "collectedAt": "2026-11-20 09:30:00"
  }
 ]
