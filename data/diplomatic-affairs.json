@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-11-19T09:33:16+08:00",
-    "window_start": "2026-11-16",
-    "window_end": "2026-11-19",
+    "generated": "2026-11-20T09:37:37.915345+08:00",
+    "window_start": "2026-11-17",
+    "window_end": "2026-11-20",
     "collection_method": "auto + agent",
-    "candidate_count": 22
+    "candidate_count": 31
   },
   "modules": {
     "personnel": {
@@ -4422,6 +4422,186 @@
               "url": "https://news.ifeng.com/c/8y9zvEpD3u3"
             }
           ]
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-19",
+          "description": "习近平会见美国总统特朗普",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086691.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "a82cbfbbfc99"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅：亚太共同体目标同构建人类命运共同体理念一脉相承（2026-11-20）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261120_12063475.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "07e666ba68fd"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅谈亚太共同体的“四梁八柱”（2026-11-20）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261120_12063436.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "2e55cfa326b7"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅：亚太共同体建设从深圳真正启航（2026-11-20）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261120_12063434.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "666feed88be8"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅介绍中俄美元首会晤情况（2026-11-20）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261120_12063432.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "9a7f0193a43d"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅：亚太共同体的旗帜更加鲜明、愿景更加清晰、路径更加明确（2026-11-20）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261120_12063430.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "6aea1c816194"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅：《深圳展望》推动亚太共同体建设取得重要进展（2026-11-20）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261120_12063428.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "49fd11d10def"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅：世界的目光投向中国、聚焦深圳（2026-11-20）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261120_12063425.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "ff30e50418e2"
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅介绍亚太经合组织第三十三次领导人非正式会议及相关活动成果（2026-11-20）",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "外交部·外交动态",
+              "url": "./202611/t20261120_12063407.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "a0f743a95077"
         }
       ]
     }
@@ -4436,13 +4616,8 @@
   "data_summary": {
     "外交代表人事变化": "18项",
     "驻沪穗总领事人事": "14项",
-    "高级官员访华": "67项",
-    "中美互动": "13项",
-    "personnel": 18,
-    "consuls": 14,
-    "visits": 65,
-    "us_china": 14,
-    "total": 111
+    "高级官员访华": "65项",
+    "中美互动": "23项"
   },
   "supplementary_notes": [
     "【本轮采集与核验通道】基础采集 fetch 得 17 条候选（外交人事 0｜驻沪穗总领事 0｜高级官员访华 16｜中美互动 1），台账拦截 2 条，入库 15 条原始候选经 agent 逐条打开原文核验后全部处理完毕：其中 6 场元首会见按「一事一条」立项 5 条（辛鲍姆并入既有条目）、1 条误分桶条目转为访华条目、其余 8 条为同一事件的视频稿／文字稿重复或综合稿，去重删除。核验通道：外交部首页、「重要新闻」、「外交部长活动」、「例行记者会」（11月17日）、「外交部新闻」（11月18日）；中国政府网要闻 JSON 数据源（11月17日至18日全量）；新华社中英文；央视网《时政新闻眼》；中央社、Le Monde、中评社、中国经济网交叉验证；WebSearch 约 6 轮。",
