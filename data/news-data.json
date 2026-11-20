@@ -12765,7 +12765,8 @@
     "collection_method": "legacy",
     "column": "美国",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "中央社（路透编译）"
    },
    {
     "id": "auto_2026-11-19_96763",
@@ -12930,7 +12931,8 @@
     "collection_method": "legacy",
     "column": "美国",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "海峡时报（路透电头）"
    },
    {
     "id": "auto_2026-11-19_31198",
@@ -13122,7 +13124,8 @@
     "collection_method": "legacy",
     "column": "美国",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "中央社（路透编译）"
    },
    {
     "id": "auto_2026-11-19_47651",
@@ -13199,7 +13202,8 @@
     "collection_method": "legacy",
     "column": "国际会议",
     "is_official": null,
-    "body_en": null
+    "body_en": null,
+    "repost_from": "Business Day（路透电头）"
    },
    {
     "id": "auto_2026-11-19_58302",
