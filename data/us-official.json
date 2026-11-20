@@ -1767,7 +1767,8 @@
   "is_summit_level": false,
   "date": "2026-10-27",
   "collectedAt": "2026-10-28 09:30:00",
-  "is_official": true
+  "is_official": true,
+  "summary": "美国常务副国务卿克里斯托弗·兰多会见汤加首相法卡法努阿，双方就太平洋岛国合作、气候融资与地区安全议题交换意见，重申美汤伙伴关系。"
  },
  {
   "source_org": "美国国防部(war.gov)",
@@ -2197,7 +2198,8 @@
   "is_summit_level": false,
   "date": "2026-10-23",
   "collectedAt": "2026-10-28 09:30:00",
-  "is_official": true
+  "is_official": true,
+  "summary": "白宫宣布，经第一夫人梅拉尼娅斡旋，俄乌双方就在赫尔松州奥列什基实现局部停火达成为期数日的安排，以便当地平民撤离与儿童返乡。"
  },
  {
   "title": "降低美国民众住房成本",
@@ -6490,5 +6492,150 @@
   "is_summit_level": true,
   "column": "美国",
   "title_en": "Trump Administration Secures an Additional $100 Billion U.S. Semiconductor Manufacturing Investment for a Total of $265 Billion from TSMC"
+ },
+ {
+  "source": "白宫",
+  "url": "https://www.whitehouse.gov/briefings-statements/2026/11/u-s-russia-china-heads-of-state-declaration-toward-peace/",
+  "date": "2026-11-19",
+  "title": "U.S.-Russia-China Heads of State Declaration toward Peace",
+  "title_zh": "中美俄三国元首联合宣言：四领域承诺维护战略稳定",
+  "title_en": "U.S.-Russia-China Heads of State Declaration toward Peace",
+  "summary_zh": "特朗普、普京与习近平19日在深圳举行历史性三方峰会并发表联合宣言，美俄两国元首感谢中国主办此次会晤。宣言共四项承诺：一是作为安理会常任理事国推动联合国改革，使其更有效应对全球挑战并回归国际和平与安全的基本使命；二是三国计划增加精炼石油产品生产与供应，重申稳定能源流动的重要性；三是确立国家同意原则与国家官员豁免不可侵犯，认定国际刑事法院等机构不得滥用管辖权；四是重申核战争打不赢也绝不能打，三国将就降低核风险、防止核武器扩散开展对话。",
+  "summary": "特朗普、普京与习近平19日在深圳举行历史性三方峰会并发表联合宣言，美俄两国元首感谢中国主办此次会晤。宣言共四项承诺：一是作为安理会常任理事国推动联合国改革，使其更有效应对全球挑战并回归国际和平与安全的基本使命；二是三国计划增加精炼石油产品生产与供应，重申稳定能源流动的重要性；三是确立国家同意原则与国家官员豁免不可侵犯，认定国际刑事法院等机构不得滥用管辖权；四是重申核战争打不赢也绝不能打，三国将就降低核风险、防止核武器扩散开展对话。",
+  "category": "全球多边",
+  "keywords": "中美俄,深圳峰会,联合宣言,核风险,联合国改革",
+  "is_summit_level": true,
+  "priority_score": 97
+ },
+ {
+  "source": "白宫",
+  "url": "https://www.whitehouse.gov/releases/2026/11/icymi-president-trump-talks-china-iran-super-intelligence-and-the-path-ahead-in-exclusive-interview-from-shenzhen/",
+  "date": "2026-11-19",
+  "title": "ICYMI: President Trump Talks China, Iran, Super Intelligence, and the Path Ahead in Exclusive Interview from Shenzhen",
+  "title_zh": "特朗普深圳接受福克斯专访：盛赞习特关系、称美国「超级智能领先全球」",
+  "title_en": "ICYMI: President Trump Talks China, Iran, Super Intelligence, and the Path Ahead in Exclusive Interview from Shenzhen",
+  "summary_zh": "特朗普在深圳接受福克斯新闻独家直播专访，受访时点距其与习近平、普京三方会晤仅数小时。谈及中美关系，他称「我与中国的关係非常好，是友谊、是尊重」，并特别强调习亲自到机场迎接、盛大的仪仗与欢迎场面是「我们的巨大胜利，也是中国的巨大胜利」。谈及超级智能时表示，他整晚坐在习身旁交谈该议题，「他对我们的成就感到惊叹——我们领先中国，也领先全世界」。就伊朗问题，他强调要达成一份能超越任期的持久协议；对伊朗脏弹图谋的报道，他称若真发生将「把他们彻底消灭」。此外他将中俄走近归因于奥巴马时期的能源政策。",
+  "summary": "特朗普在深圳接受福克斯新闻独家直播专访，受访时点距其与习近平、普京三方会晤仅数小时。谈及中美关系，他称「我与中国的关係非常好，是友谊、是尊重」，并特别强调习亲自到机场迎接、盛大的仪仗与欢迎场面是「我们的巨大胜利，也是中国的巨大胜利」。谈及超级智能时表示，他整晚坐在习身旁交谈该议题，「他对我们的成就感到惊叹——我们领先中国，也领先全世界」。就伊朗问题，他强调要达成一份能超越任期的持久协议；对伊朗脏弹图谋的报道，他称若真发生将「把他们彻底消灭」。此外他将中俄走近归因于奥巴马时期的能源政策。",
+  "category": "中美博弈",
+  "keywords": "特朗普,福克斯专访,深圳,超级智能,习特会",
+  "is_summit_level": true,
+  "priority_score": 94
+ },
+ {
+  "source": "美国国务院",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/targeting-cyber-scam-center-enablers-in-southeast-asia/",
+  "date": "2026-11-19",
+  "title": "Targeting Cyber Scam Center Enablers in Southeast Asia",
+  "title_zh": "美国制裁柬埔寨与缅甸电诈园区幕后操盘者，含DKBA两名高层",
+  "title_en": "Targeting Cyber Scam Center Enablers in Southeast Asia",
+  "summary_zh": "美国19日制裁五名个人与实体，指其拥有、运营并为柬埔寨与缅甸的网络诈骗园区提供支持。财政部点名在柬运营诈骗园区的赵辉（Zhao Hui）及其控制的两家柬埔寨公司，另制裁民主克伦佛教军（DKBA）总司令Saw Shwe Wah少将与负责安保、参与对被困人口贩运受害者施暴的上校Saw A One。国务院称东南亚诈骗园区多由华人犯罪集团操控，2025年从美国人手中骗走约182亿美元，并助长人口贩运、养肥武装团体。此举依据特朗普第14390号行政令，与司法部诈骗中心打击工作组、国土安全部及FBI纽约分局协同实施。",
+  "summary": "美国19日制裁五名个人与实体，指其拥有、运营并为柬埔寨与缅甸的网络诈骗园区提供支持。财政部点名在柬运营诈骗园区的赵辉（Zhao Hui）及其控制的两家柬埔寨公司，另制裁民主克伦佛教军（DKBA）总司令Saw Shwe Wah少将与负责安保、参与对被困人口贩运受害者施暴的上校Saw A One。国务院称东南亚诈骗园区多由华人犯罪集团操控，2025年从美国人手中骗走约182亿美元，并助长人口贩运、养肥武装团体。此举依据特朗普第14390号行政令，与司法部诈骗中心打击工作组、国土安全部及FBI纽约分局协同实施。",
+  "category": "地区局势",
+  "keywords": "电诈园区,制裁,柬埔寨,缅甸,DKBA,人口贩运",
+  "priority_score": 89
+ },
+ {
+  "source": "美国国务院",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/sanctioning-major-international-drug-trafficking-organizations-linked-to-foreign-terrorist-organizations/",
+  "date": "2026-11-19",
+  "title": "Sanctioning Major International Drug Trafficking Organizations Linked to Foreign Terrorist Organizations",
+  "title_zh": "美国制裁澳大利亚「科曼切罗」与意大利「恩德朗盖塔」两大贩毒集团",
+  "title_en": "Sanctioning Major International Drug Trafficking Organizations Linked to Foreign Terrorist Organizations",
+  "summary_zh": "美国财政部外国资产控制办公室19日依据第14059号行政令，制裁总部位于澳大利亚的「科曼切罗」非法摩托车帮与总部位于意大利的「恩德朗盖塔」两大国际贩毒组织。国务院指出，两者为锡那罗亚集团、哈利斯科新生代集团与海湾集团等被认定的外国恐怖组织提供关键后勤支持，承担运毒、洗钱等犯罪作业，使卡特尔得以跨境延伸贩毒网络。措施将切断这两大组织的金融基础设施，从而阻断对卡特尔的支援。美方强调，任何与外国恐怖组织做生意者及其关联资产都将被追查，「资助或从卡特尔暴力中获利者无处可藏」。",
+  "summary": "美国财政部外国资产控制办公室19日依据第14059号行政令，制裁总部位于澳大利亚的「科曼切罗」非法摩托车帮与总部位于意大利的「恩德朗盖塔」两大国际贩毒组织。国务院指出，两者为锡那罗亚集团、哈利斯科新生代集团与海湾集团等被认定的外国恐怖组织提供关键后勤支持，承担运毒、洗钱等犯罪作业，使卡特尔得以跨境延伸贩毒网络。措施将切断这两大组织的金融基础设施，从而阻断对卡特尔的支援。美方强调，任何与外国恐怖组织做生意者及其关联资产都将被追查，「资助或从卡特尔暴力中获利者无处可藏」。",
+  "category": "地区局势",
+  "keywords": "制裁,贩毒集团,科曼切罗,恩德朗盖塔,OFAC,卡特尔",
+  "priority_score": 85
+ },
+ {
+  "source": "美国国务院",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/first-lady-melania-trumps-fostering-the-future-together-gathers-asean-first-spouses-for-event-hosted-by-philippine-first-lady-louise-araneta-marcos/",
+  "date": "2026-11-19",
+  "title": "First Lady Melania Trump's Fostering the Future Together Gathers ASEAN First Spouses For Event Hosted by Philippine First Lady",
+  "title_zh": "梅拉尼娅「共育未来」倡议在马尼拉办东盟配偶活动，聚焦儿童网络安全",
+  "title_en": "First Lady Melania Trump's Fostering the Future Together Gathers ASEAN First Spouses For Event Hosted by Philippine First Lady",
+  "summary_zh": "美国第一夫人梅拉尼娅的「共育未来」（Fostering the Future Together）倡议11月16日在马尼拉举办活动，由菲律宾第一夫人阿拉内塔-马科斯与菲儿童保护网络共同主办，聚焦儿童网络保护。活动汇聚来访的东盟各国第一夫人及约150名政府、公民社会与私营部门领袖，谷歌、英特尔、Meta、微软等美国科技巨头出席。美国驻菲大使利普顿表示，该倡议一年内已团结近60位第一夫人与同等领导人；国务院称倡议致力于为儿童打开教育与技术之门，并为其迎接「超级智能（SI）时代」作准备。",
+  "summary": "美国第一夫人梅拉尼娅的「共育未来」（Fostering the Future Together）倡议11月16日在马尼拉举办活动，由菲律宾第一夫人阿拉内塔-马科斯与菲儿童保护网络共同主办，聚焦儿童网络保护。活动汇聚来访的东盟各国第一夫人及约150名政府、公民社会与私营部门领袖，谷歌、英特尔、Meta、微软等美国科技巨头出席。美国驻菲大使利普顿表示，该倡议一年内已团结近60位第一夫人与同等领导人；国务院称倡议致力于为儿童打开教育与技术之门，并为其迎接「超级智能（SI）时代」作准备。",
+  "category": "中国外交",
+  "keywords": "梅拉尼娅,东盟,第一夫人,儿童网络保护,菲律宾,超级智能",
+  "priority_score": 78
+ },
+ {
+  "source": "美国国务院",
+  "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/monaco-national-day-2/",
+  "date": "2026-11-19",
+  "title": "Monaco National Day",
+  "title_zh": "美国国务卿鲁比奥就摩纳哥国庆日发表贺辞",
+  "title_en": "Monaco National Day",
+  "summary_zh": "美国国务卿鲁比奥代表美国政府与人民，就摩纳哥国庆日向摩纳哥亲王及民众致以祝贺，并肯定两国长期友好关系与合作。属例行外交礼节性贺辞。",
+  "summary": "美国国务卿鲁比奥代表美国政府与人民，就摩纳哥国庆日向摩纳哥亲王及民众致以祝贺，并肯定两国长期友好关系与合作。属例行外交礼节性贺辞。",
+  "category": "其他",
+  "keywords": "摩纳哥,国庆日,贺辞,鲁比奥",
+  "priority_score": 68
+ },
+ {
+  "source": "美国财政部",
+  "url": "https://home.treasury.gov/news/press-releases/sb0692/",
+  "date": "2026-11-18",
+  "title": "Operation Economic Outcast Targets Iran's Proxy Networks",
+  "title_zh": "美财政部「经济弃儿行动」制裁真主党关联慈善机构与黄金走私网",
+  "title_en": "Operation Economic Outcast Targets Iran's Proxy Networks",
+  "summary_zh": "美国财政部外国资产控制办公室18日依据第13224号行政令，指定黎巴嫩慈善机构「Wa Ta'awanu」为制裁对象，指其在提供人道服务名义下为真主党活动提供掩护，其创办人Afif Abdel Rida Chouman按真主党指令协调该组织运作，并在黎以美三方框架下阻碍黎军解除武装的试点区工作。同日制裁由真主党与伊朗革命卫队圣城旅操控的黎巴嫩—土耳其黄金与现金走私网，包括黎巴嫩换汇商Hassan Khechen及其兄弟Ibrahim、其控制的Gold Global公司与土耳其Sankari Gold公司。财长贝森特称，不容伊朗政权借真主党等代理侵犯黎巴嫩主权。",
+  "summary": "美国财政部外国资产控制办公室18日依据第13224号行政令，指定黎巴嫩慈善机构「Wa Ta'awanu」为制裁对象，指其在提供人道服务名义下为真主党活动提供掩护，其创办人Afif Abdel Rida Chouman按真主党指令协调该组织运作，并在黎以美三方框架下阻碍黎军解除武装的试点区工作。同日制裁由真主党与伊朗革命卫队圣城旅操控的黎巴嫩—土耳其黄金与现金走私网，包括黎巴嫩换汇商Hassan Khechen及其兄弟Ibrahim、其控制的Gold Global公司与土耳其Sankari Gold公司。财长贝森特称，不容伊朗政权借真主党等代理侵犯黎巴嫩主权。",
+  "category": "地区局势",
+  "keywords": "制裁,真主党,伊朗,圣城旅,黄金走私,黎巴嫩",
+  "priority_score": 86
+ },
+ {
+  "source": "USTR",
+  "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-polygroup-industrias-mexico",
+  "date": "2026-11-19",
+  "title": "United States Seeks Mexico's Review of Alleged Denial of Workers' Rights at Polygroup Industrias Mexico",
+  "title_zh": "美国要求墨西哥审查Polygroup墨西哥工厂涉嫌剥夺劳工权利",
+  "title_en": "United States Seeks Mexico's Review of Alleged Denial of Workers' Rights at Polygroup Industrias Mexico",
+  "summary_zh": "美国贸易代表办公室19日依据美墨加协定快速响应劳工机制，正式要求墨西哥政府审查Polygroup Industrias México工厂涉嫌剥夺劳工结社自由与集体谈判权的问题。这是USTR近期针对墨西哥境内企业劳工权利的一连串动作之一。",
+  "summary": "美国贸易代表办公室19日依据美墨加协定快速响应劳工机制，正式要求墨西哥政府审查Polygroup Industrias México工厂涉嫌剥夺劳工结社自由与集体谈判权的问题。这是USTR近期针对墨西哥境内企业劳工权利的一连串动作之一。",
+  "category": "中欧与盟友",
+  "keywords": "USTR,墨西哥,劳工权利,美墨加协定,快速响应机制",
+  "priority_score": 72
+ },
+ {
+  "source": "USTR",
+  "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ambassador-greer-champions-america-first-trade-policy-virtual-remarks-responsible-business-alliances",
+  "date": "2026-11-18",
+  "title": "Ambassador Greer Champions America First Trade Policy in Virtual Remarks for the Responsible Business Alliance's Annual Conference",
+  "title_zh": "贸易代表格里尔在负责任商业联盟年会宣介「美国优先」贸易政策",
+  "title_en": "Ambassador Greer Champions America First Trade Policy in Virtual Remarks for the Responsible Business Alliance's Annual Conference",
+  "summary_zh": "美国贸易代表格里尔18日以视频形式在负责任商业联盟（RBA）年会发表讲话，推介特朗普政府的「美国优先」贸易政策，阐述关税与供应链政策对企业合规与生产布局的影响。",
+  "summary": "美国贸易代表格里尔18日以视频形式在负责任商业联盟（RBA）年会发表讲话，推介特朗普政府的「美国优先」贸易政策，阐述关税与供应链政策对企业合规与生产布局的影响。",
+  "category": "中欧与盟友",
+  "keywords": "USTR,格里尔,美国优先,贸易政策,供应链",
+  "priority_score": 70
+ },
+ {
+  "source": "美国国防部(war.gov)",
+  "url": "https://www.war.gov/News/Releases/Release/Article/4655108/department-of-war-advances-orchestration-for-unmanned-vehicle-fleets/",
+  "date": "2026-11-19",
+  "title": "Department of War Advances Orchestration for Unmanned Vehicle Fleets",
+  "title_zh": "美国国防部推进无人车集群编排软件AVO，令单兵指挥多域无人编队",
+  "title_en": "Department of War Advances Orchestration for Unmanned Vehicle Fleets",
+  "summary_zh": "美国国防部19日宣布推进「自主车辆编排器」（AVO）项目，该软件旨在让单一操作员跨多域指挥混合无人车辆编队，将互不协同的无人系统整合为协调一致的作战团队。项目于2026年1月13日启动业界挑战赛，评估重点为可扩展、与载具无关的技术，使操作员能跨不同平台无缝分派、管理与掌握自主系统。国防部称，AVO 服务于更大目标——加速美国工业基础、向作战部队规模化快速交付低成本可消耗无人机；仅有高性能载具不足，作战人员还需具备把自主系统当作一体化力量运用的能力。挑战赛结果将于完成后公开。",
+  "summary": "美国国防部19日宣布推进「自主车辆编排器」（AVO）项目，该软件旨在让单一操作员跨多域指挥混合无人车辆编队，将互不协同的无人系统整合为协调一致的作战团队。项目于2026年1月13日启动业界挑战赛，评估重点为可扩展、与载具无关的技术，使操作员能跨不同平台无缝分派、管理与掌握自主系统。国防部称，AVO 服务于更大目标——加速美国工业基础、向作战部队规模化快速交付低成本可消耗无人机；仅有高性能载具不足，作战人员还需具备把自主系统当作一体化力量运用的能力。挑战赛结果将于完成后公开。",
+  "category": "地区局势",
+  "keywords": "国防部,无人系统,AVO,自主车辆,无人机,低成本消耗",
+  "priority_score": 80
+ },
+ {
+  "source": "美国国防部(war.gov)",
+  "url": "https://www.war.gov/News/Releases/Release/Article/4653714/readout-of-secretary-of-war-pete-hegseths-meeting-with-ecuadorian-president-dan/",
+  "date": "2026-11-19",
+  "title": "Readout of Secretary of War Pete Hegseth's Meeting With Ecuadorian President Daniel Noboa",
+  "title_zh": "赫格塞斯会见厄瓜多尔总统诺沃亚，聚焦反卡特尔与防务合作",
+  "title_en": "Readout of Secretary of War Pete Hegseth's Meeting With Ecuadorian President Daniel Noboa",
+  "summary_zh": "美国国防部长赫格塞斯19日会见厄瓜多尔总统诺沃亚，双方就打击跨国贩毒集团、扩大双边防务与安全合作交换意见。会晤系美方在拉美推进反卡特尔联盟的一环。",
+  "summary": "美国国防部长赫格塞斯19日会见厄瓜多尔总统诺沃亚，双方就打击跨国贩毒集团、扩大双边防务与安全合作交换意见。会晤系美方在拉美推进反卡特尔联盟的一环。",
+  "category": "地区局势",
+  "keywords": "赫格塞斯,厄瓜多尔,诺沃亚,反卡特尔,防务合作",
+  "priority_score": 74
  }
 ]
