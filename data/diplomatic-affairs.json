@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-11-20T09:37:37.915345+08:00",
-    "window_start": "2026-11-17",
-    "window_end": "2026-11-20",
+    "generated": "2026-11-21T18:01:33.457011+08:00",
+    "window_start": "2026-11-18",
+    "window_end": "2026-11-21",
     "collection_method": "auto + agent",
     "candidate_count": 31
   },
@@ -3335,6 +3335,227 @@
               "url": "https://english.kyodonews.net/articles/-/91833"
             }
           ]
+        },
+        {
+          "country": "马来西亚",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "【视频】习近平会见马来西亚总理",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/20/VIDELudi9VCkIgK9GR7CDjZk261120.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "3d2ecfb0331a"
+        },
+        {
+          "country": "泰国",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "【视频】习近平会见泰国总理",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/20/VIDE40qLMB09dHSVmkKvuL7y261120.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "8debe4c58a4c"
+        },
+        {
+          "country": "新加坡",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "【视频】习近平会见新加坡总理",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/20/VIDEzbwL6LBWTdKXq7hPbigB261120.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "3bbf3276d769"
+        },
+        {
+          "country": "澳大利亚",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "【视频】习近平会见澳大利亚总理",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/20/VIDEiGAnSc6KqIeDYPTcybys261120.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "439c5c32c137"
+        },
+        {
+          "country": "印度",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "【视频】习近平会见印度尼西亚总统",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/20/VIDEgft2MM1q6MDFk4gWFLoi261120.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "36a2792783be"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "【视频】刘国中会见国际合作社联盟主席",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/20/VIDEnyppcHDbWcXedtGw8H0p261120.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "47da2bdfb05b"
+        },
+        {
+          "country": "",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "刘国中会见国际合作社联盟主席加尔科",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086918.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "fffc2b0f9418"
+        },
+        {
+          "country": "马来西亚",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "习近平会见马来西亚总理安瓦尔",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086840.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "d53062e09eb4"
+        },
+        {
+          "country": "泰国",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "习近平会见泰国总理阿努廷",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086838.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "55a8552096af"
+        },
+        {
+          "country": "新加坡",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "习近平会见新加坡总理黄循财",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086820.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "f0e85d3a2b9c"
+        },
+        {
+          "country": "澳大利亚",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "习近平会见澳大利亚总理阿尔巴尼斯",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086811.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "50404593f447"
+        },
+        {
+          "country": "印度",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-20",
+          "description": "习近平会见印度尼西亚总统普拉博沃",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086809.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "61da2b979886"
+        },
+        {
+          "country": "美国",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-19",
+          "description": "【视频】习近平会见美国总统",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://tv.cctv.com/2026/11/19/VIDE8A4RmuQcW3NVmjf5vDot261119.shtml"
+            }
+          ],
+          "confirmed": false,
+          "id": "8c0f2be66304"
         }
       ]
     },
@@ -4328,6 +4549,26 @@
               "url": "https://www.mfa.gov.cn/zyxw/202611/t20261119_12062924.shtml"
             }
           ]
+        },
+        {
+          "country": "美国",
+          "cn_person": "",
+          "us_person": "",
+          "interaction_type": "",
+          "event_date": "2026-11-20",
+          "description": "王毅介绍亚太经合组织第三十三次领导人非正式会议及相关活动成果",
+          "mutual_confirmed": false,
+          "cn_emphasis": "",
+          "us_emphasis": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086781.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "7502993912c9"
         }
       ]
     }
@@ -4342,8 +4583,8 @@
   "data_summary": {
     "外交代表人事变化": "18项",
     "驻沪穗总领事人事": "14项",
-    "高级官员访华": "65项",
-    "中美互动": "23项"
+    "高级官员访华": "78项",
+    "中美互动": "16项"
   },
   "supplementary_notes": [
     "【本轮采集与核验通道】基础采集 fetch 得 31 条候选（外交人事 0｜驻沪穗总领事 0｜高级官员访华 20｜中美互动 11），台账拦截 22 条，入库 9 条裸候选经逐条打开原文核验后全部处理：8 条「王毅介绍 APEC／中俄美元首会晤成果」实为同一次吹风会的分篇发布，并入 evt-uscn-009 与 evt-uscn-011 作为成果正文；1 条「习近平会见美国总统特朗普」转立 evt-uscn-015。核验通道：中国政府网要闻 JSON 数据源（11月17日至20日全量 400 条）、外交部「重要新闻」「部领导活动」「例行记者会」「外交部新闻」、新华社、商务部例行发布会 11月19日场次全文、WebSearch 4 轮。",
