@@ -12907,7 +12907,7 @@
      "VoIP号码资源",
      "商务部"
     ],
-    "url": "https://hk.marketscreener.com/news/chinese-exchanges-ease-margin-trading-requirements-to-aid-stock-markets-ce785ed3d18df725",
+    "url": "https://ex.chinadaily.com.cn/exchange/partners/70/rss/channel/www/columns/y38633/stories/WS6b037bf7e4b03ebf8519df59.html",
     "priority_score": 93,
     "is_summit_level": false,
     "importance": "中",
@@ -12916,7 +12916,7 @@
     "column": "中国",
     "is_official": false,
     "body_en": null,
-    "repost_from": "MarketScreener（路透社电头转载）"
+    "repost_from": "中国日报网（路透社电头英文转述）"
    },
    {
     "id": "wf1123_00",
@@ -13869,34 +13869,6 @@
     "is_official": false,
     "body_en": null,
     "repost_from": ""
-   },
-   {
-    "id": "wf1123_61",
-    "date": "2026-11-23",
-    "title": "路透：中国下调融资保证金比例，银行股企稳",
-    "title_en": "Chinese exchanges ease margin trading requirements, bank stocks steady",
-    "title_zh": "路透：中国下调融资保证金比例，银行股企稳",
-    "summary": "路透社报道补充指出，融资保证金比例下调至 80% 后，理论上可为市场释放约 4000 亿元人民币增量资金，其中新增融资交易约 1000 亿元、存量合约按新规重算可释放约 3000 亿元。银行、煤炭与石油石化板块当日领涨，显示资金向低估值防御品种集中。报道援引分析人士称，本轮政策信号意义大于资金体量，关键在于后续增量资金能否持续入场。",
-    "summary_en": null,
-    "summary_zh": "路透社报道补充指出，融资保证金比例下调至 80% 后，理论上可为市场释放约 4000 亿元人民币增量资金，其中新增融资交易约 1000 亿元、存量合约按新规重算可释放约 3000 亿元。银行、煤炭与石油石化板块当日领涨，显示资金向低估值防御品种集中。报道援引分析人士称，本轮政策信号意义大于资金体量，关键在于后续增量资金能否持续入场。",
-    "source": "路透社",
-    "category": "中国外交",
-    "keywords": [
-     "融资保证金",
-     "增量资金",
-     "银行股",
-     "A股"
-    ],
-    "url": "https://www.tradingview.com/news/cnbctv:72b2a4a5c094b:0",
-    "priority_score": 85,
-    "is_summit_level": false,
-    "importance": "中",
-    "collectedAt": "2026-11-23 09:30:00",
-    "collection_method": "legacy",
-    "column": "中国",
-    "is_official": false,
-    "body_en": null,
-    "repost_from": "TradingView（CNBC-TV18 转述路透电头）"
    },
    {
     "id": "wf1123_68",
@@ -15899,34 +15871,6 @@
    "repost_from": ""
   },
   {
-   "id": "wf1123_61",
-   "date": "2026-11-23",
-   "title": "路透：中国下调融资保证金比例，银行股企稳",
-   "title_en": "Chinese exchanges ease margin trading requirements, bank stocks steady",
-   "title_zh": "路透：中国下调融资保证金比例，银行股企稳",
-   "summary": "路透社报道补充指出，融资保证金比例下调至 80% 后，理论上可为市场释放约 4000 亿元人民币增量资金，其中新增融资交易约 1000 亿元、存量合约按新规重算可释放约 3000 亿元。银行、煤炭与石油石化板块当日领涨，显示资金向低估值防御品种集中。报道援引分析人士称，本轮政策信号意义大于资金体量，关键在于后续增量资金能否持续入场。",
-   "summary_en": null,
-   "summary_zh": "路透社报道补充指出，融资保证金比例下调至 80% 后，理论上可为市场释放约 4000 亿元人民币增量资金，其中新增融资交易约 1000 亿元、存量合约按新规重算可释放约 3000 亿元。银行、煤炭与石油石化板块当日领涨，显示资金向低估值防御品种集中。报道援引分析人士称，本轮政策信号意义大于资金体量，关键在于后续增量资金能否持续入场。",
-   "source": "路透社",
-   "category": "中国外交",
-   "keywords": [
-    "融资保证金",
-    "增量资金",
-    "银行股",
-    "A股"
-   ],
-   "url": "https://www.tradingview.com/news/cnbctv:72b2a4a5c094b:0",
-   "priority_score": 85,
-   "is_summit_level": false,
-   "importance": "中",
-   "collectedAt": "2026-11-23 09:30:00",
-   "collection_method": "legacy",
-   "column": "中国",
-   "is_official": false,
-   "body_en": null,
-   "repost_from": "TradingView（CNBC-TV18 转述路透电头）"
-  },
-  {
    "id": "wf1123_68",
    "date": "2026-11-22",
    "title": "美民主党至少拿下 258 个众议院席位，1992 年以来最多",
@@ -16731,6 +16675,6 @@
    "collectedAt": "2026-11-23 09:30:00"
   }
  ],
- "todayCount": 70,
+ "todayCount": 69,
  "days": null
 }
