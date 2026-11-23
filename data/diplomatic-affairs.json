@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-11-22T17:40:57.157156+08:00",
-    "window_start": "2026-11-19",
-    "window_end": "2026-11-22",
+    "generated": "2026-11-23T10:56:14.648130+08:00",
+    "window_start": "2026-11-20",
+    "window_end": "2026-11-23",
     "collection_method": "auto + agent",
-    "candidate_count": 26
+    "candidate_count": 25
   },
   "modules": {
     "personnel": {
@@ -3520,6 +3520,23 @@
               "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_d90375a8c65e4f20a82aa117e261de42.html"
             }
           ]
+        },
+        {
+          "country": "新加坡",
+          "person_name": "",
+          "position": "",
+          "event_date": "2026-11-23",
+          "description": "丁薛祥会见新加坡总理黄循财",
+          "ambassador_participation": "",
+          "outcomes": "",
+          "sources": [
+            {
+              "title": "中国政府网",
+              "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7087013.htm"
+            }
+          ],
+          "confirmed": false,
+          "id": "e6b3a492ca9a"
         }
       ]
     },
@@ -4536,7 +4553,7 @@
   "data_summary": {
     "外交代表人事变化": "18项",
     "驻沪穗总领事人事": "14项",
-    "高级官员访华": "72项",
+    "高级官员访华": "73项",
     "中美互动": "15项"
   },
   "supplementary_notes": [
