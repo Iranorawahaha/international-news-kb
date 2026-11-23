@@ -1,98 +1,8 @@
 {
   "version": "5.0",
-  "lastUpdated": "2026-11-22 17:24",
+  "lastUpdated": "2026-11-23 09:28",
   "retentionDays": 7,
   "archive": {
-    "2026-11-16": [
-      {
-        "title": "《求是》杂志发表习近平总书记重要文章《携手共建亚太命运共同体》",
-        "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086074.htm",
-        "date": "2026-11-15",
-        "source": "中国政府网·要闻",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "新华社北京11月15日电 11月16日出版的第22期《求是》杂志将发表中共中央总书记、国家主席、中央军委主席习近平的重要文章《携手共建亚太命运共同体》，这是习近平总书记2013年10月至2025年11月期间有关重要论述的节录。文章强调，亚太各经济体利益交融、命运与共，一荣俱荣、一损俱损，要牢固树立亚太命运共同体意识，共同构建开放包容、创新增长、互联互通、合作共赢的亚太命运共同体。文章指出，亚太要继续做推动经济全球化的火车头，带头维护和平稳定、带头实行开放融通、带头坚持合作共赢、带头促进普惠包容。文章强调，无论发展到什么程度，中国都将扎根亚太、建设亚太、造福亚太，着力推进亚太自由贸易区、互联互通、数字经济、人工智能等务实合作。",
-        "collectedAt": "2026-11-16 09:27:03"
-      },
-      {
-        "title": "习近平将出席APEC工商领导人峰会开幕式并发表主旨演讲，12位经济体领导人出席",
-        "url": "https://www.stcn.com/article/detail/4337237.html",
-        "date": "2026-11-16",
-        "source": "证券时报",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "2026年APEC工商界活动专题新闻发布会11月15日在深圳举行。中国贸促会副会长李庆霜介绍，2026年APEC工商领导人峰会将于11月17日至18日在深圳前海国际会议中心举办，国家主席习近平将出席峰会开幕式并发表主旨演讲；澳大利亚、加拿大、智利、中国香港、印度尼西亚、韩国、马来西亚、墨西哥、俄罗斯、泰国、越南等11位APEC经济体领导人将出席并演讲、致辞或参与研讨，参会代表实现21个APEC经济体全覆盖，115家世界500强企业参会、美企数量居外方之首。峰会还将发布《2026年APEC工商领导人峰会深圳倡议》，为峰会创办30年来首次以倡议形式发布成果文件。",
-        "collectedAt": "2026-11-16 09:27:03"
-      },
-      {
-        "title": "外交部宣布：习近平将于11月19日在深圳同普京、特朗普举行中俄美元首会晤",
-        "url": "https://www.mfa.gov.cn/web/zyxw/202611/t20261116_12059654.shtml",
-        "date": "2026-11-16",
-        "source": "外交部",
-        "category": "元首动态",
-        "priority_score": 100,
-        "is_summit_level": true,
-        "summary": "外交部发言人11月16日宣布：11月19日，国家主席习近平将同俄罗斯总统普京、美国总统特朗普在深圳举行中俄美元首会晤。此次会晤在亚太经合组织第三十三次领导人非正式会议（11月18日至19日，深圳）期间举行，是中美俄三方领导人首次以该形式同场会晤，也是中美元首继此前多轮经贸磋商后的又一次面对面接触，外界普遍关注三方在经贸、安全与地区热点问题上的沟通走向。",
-        "collectedAt": "2026-11-16 09:27:03"
-      },
-      {
-        "title": "李强抵达马尼拉出席中国－东盟领导人会议",
-        "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086083.htm",
-        "date": "2026-11-15",
-        "source": "中国政府网·要闻",
-        "category": "高层动态",
-        "priority_score": 95,
-        "is_summit_level": false,
-        "summary": "应东盟轮值主席国菲律宾总统马科斯邀请，国务院总理李强11月15日晚乘包机抵达马尼拉尼诺伊·阿基诺国际机场，将出席中国－东盟领导人会议。这是李强泰国之行后的下一站，中方将同东盟方就深化中国－东盟全面战略伙伴关系、推进区域经济一体化与自贸区3.0版建设、加强互联互通与产供链合作等议题交换意见，并推动年内重点合作成果落地。",
-        "collectedAt": "2026-11-16 09:27:03"
-      },
-      {
-        "title": "中共中央印发《中国共产党地方委员会工作条例》",
-        "url": "https://www.gov.cn/zhengce/202611/content_7086080.htm",
-        "date": "2026-11-15",
-        "source": "中国政府网·要闻",
-        "category": "政策发布",
-        "priority_score": 88,
-        "is_summit_level": false,
-        "summary": "新华社北京11月15日电 近日，中共中央印发了修订后的《中国共产党地方委员会工作条例》，并发出通知要求各地区各部门认真遵照执行。《条例》于2015年12月中共中央发布，2026年3月27日经中央政治局会议修订、11月7日重新发布，共七章。通知要求地方各级党委认真学习、坚决贯彻、严格执行《条例》，坚决贯彻落实党中央决策部署，扛好落实党的领导和党的建设的政治责任，牢固树立和践行正确政绩观，严格贯彻执行民主集中制，健全议事决策和监督机制，建设坚决听从党中央指挥、执行有力、管理严格、班子团结、风气纯正的坚强组织。",
-        "collectedAt": "2026-11-16 09:27:03"
-      },
-      {
-        "title": "人社部就中奥社保协定答记者问：协定共19条，互免养老与失业保险双重缴费",
-        "url": "https://www.mohrss.gov.cn/SYrlzyhshbzb/dongtaixinwen/buneiyaowen/rsxw/202611/t20261116_599494.html",
-        "date": "2026-11-16",
-        "source": "人力资源和社会保障部",
-        "category": "部委动态",
-        "priority_score": 85,
-        "is_summit_level": false,
-        "summary": "我国与奥地利11月6日签署《中奥社会保障协定》，人力资源社会保障部相关司局负责人就此答记者问。协定共19条，明确双方互免险种为养老保险和失业保险，互免人群包括在对方国家工作的派遣人员、航海船舶受雇人员、外交领事机构人员和公务人员等。这是我国自2001年以来与德国、韩国、日本等13国签署双边社保协定后的又一安排，将降低双方企业跨境投资经营成本、保障跨国就业人员社保权益。今年是中奥建交55周年，中国为奥第三大贸易伙伴。",
-        "collectedAt": "2026-11-16 09:27:03"
-      },
-      {
-        "title": "前10个月国家铁路发送货物34.2亿吨，中欧班列开行1.86万列同比增长14.6%",
-        "url": "https://www.chinanews.com/cj/2026/11-15/10732295.shtml",
-        "date": "2026-11-15",
-        "source": "中国新闻网",
-        "category": "经贸动向",
-        "priority_score": 82,
-        "is_summit_level": false,
-        "summary": "国铁集团11月15日发布数据：今年1至10月，国家铁路累计发送货物34.2亿吨，日均装车18.92万车，同比分别增长1.1%、1.8%。其中发送煤炭17.5亿吨（电煤11.6亿吨），粮食超1亿吨、同比增长11.7%；中欧班列累计开行1.86万列、同比增长14.6%，中亚班列开行1.21万列、同比增长1.9%，西部陆海新通道铁海联运班列发送超113万标箱；铁公联运量3.85亿吨、同比增长48.4%。",
-        "collectedAt": "2026-11-16 09:27:03"
-      },
-      {
-        "title": "何立峰：推动干部树立和践行正确政绩观",
-        "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7086093.htm",
-        "date": "2026-11-16",
-        "source": "中国政府网·要闻",
-        "category": "政策发布",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "中国政府网刊发何立峰署名文章《推动干部树立和践行正确政绩观》。文章围绕党的二十届五中全会通过的《中共中央关于持之以恒推进全面从严治党的决定》，从树立正确政绩观的意义、内涵与落实要求三方面展开，强调干部要坚持从实际出发、按规律办事，努力为人民出政绩、以实干出政绩，坚决反对形式主义、官僚主义和形象工程、政绩工程，把党中央决策部署落到实处。",
-        "collectedAt": "2026-11-16 09:27:03"
-      }
-    ],
     "2026-11-17": [
       {
         "title": "习近平在广东中山考察时强调 深入学习贯彻党的二十届五中全会精神 奋力开创粤港澳大湾区高质量发展新局面",
@@ -1205,17 +1115,6 @@
         "summary": "工业和信息化部数据显示，我国5G应用已融入全部97个国民经济大类，工业互联网覆盖全部41个工业大类。已建成分类分级5G工厂1260家，培育超360家有一定影响力的工业互联网平台，重点平台工业设备联接数超1亿台（套），全国“5G+工业互联网”项目超2.7万个。工信部已启动2026年融合应用城市试点申报，首批10个城市5G工厂名录项目245个，占全国18.7%。"
       },
       {
-        "title": "第十四届中国中部投资贸易博览会在河南郑州举行",
-        "url": "https://www.mofcom.gov.cn/xwfb/ldrhd/art/2026/art_20c5934f3135440f9d8fd9f2a40e027c.html",
-        "date": "2026-11-21",
-        "source": "商务部",
-        "category": "经贸动向",
-        "priority_score": 80,
-        "is_summit_level": false,
-        "summary": "第十四届中国中部投资贸易博览会11月21日在河南郑州开幕，全国政协副主席、全国工商联主席高云龙出席开幕式并致辞。本届中博会聚焦先进制造业、现代服务业、数字经济与绿色低碳等领域，举办投资推介、项目对接与专题论坛等活动，服务中部地区加快崛起战略，推动东中部产业转移承接与外资项目落地，为中部六省扩大高水平开放搭建平台。",
-        "collectedAt": "2026-11-22"
-      },
-      {
         "title": "川滇金沙江特大桥建设完工 主跨1060米为宜攀高速控制性工程",
         "source": "中国新闻网",
         "date": "2026-11-21",
@@ -1226,23 +1125,399 @@
         "collectedAt": "2026-11-22",
         "priority_score": 80,
         "is_summit_level": false
+      },
+      {
+        "title": "第十四届中国中部投资贸易博览会在河南郑州举行",
+        "url": "https://www.mofcom.gov.cn/xwfb/ldrhd/art/2026/art_20c5934f3135440f9d8fd9f2a40e027c.html",
+        "date": "2026-11-21",
+        "source": "商务部",
+        "category": "经贸动向",
+        "priority_score": 80,
+        "is_summit_level": false,
+        "summary": "第十四届中国中部投资贸易博览会11月21日在河南郑州开幕，全国政协副主席、全国工商联主席高云龙出席开幕式并致辞。本届中博会聚焦先进制造业、现代服务业、数字经济与绿色低碳等领域，举办投资推介、项目对接与专题论坛等活动，服务中部地区加快崛起战略，推动东中部产业转移承接与外资项目落地，为中部六省扩大高水平开放搭建平台。",
+        "collectedAt": "2026-11-22"
+      }
+    ],
+    "2026-11-23": [
+      {
+        "title": "为共创亚太美好未来汇聚力量——习近平主席在亚太经合组织会议期间发表的重要讲话引发热烈反响",
+        "url": "https://news.cctv.com/2026/11/22/ARTIz1ba0060zIlT0E7vViMd261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "国际人士表示，习近平主席在亚太经合组织第三十三次领导人非正式会议及相关活动中发表的一系列重要讲话，围绕亚太共同体建设提出中国方案、指明发展方向，为共创亚太美好未来汇聚力量，也对全世界具有深远意义。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "习近平引领亚太共同体建设迈入新阶段",
+        "url": "https://news.cctv.com/2026/11/22/ARTIXf3129dRD2w8odmLIh4a261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "11月19日，中国国家主席习近平在深圳主持亚太经合组织第三十三次领导人非正式会议并发表重要讲话。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "金色相框｜习近平主席深圳之行",
+        "url": "https://news.cctv.com/2026/11/22/ARTIQLqkZRrVWwOe1Ud6RZEs261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "元首动态",
+        "priority_score": 100,
+        "is_summit_level": true,
+        "summary": "金色相框｜习近平主席深圳之行。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "丁薛祥会见新加坡总理黄循财",
+        "url": "https://www.gov.cn/yaowen/liebiao/202611/content_7087013.htm",
+        "date": "2026-11-23",
+        "source": "中国政府网·要闻",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "新华社新加坡11月22日电（记者 毛鹏飞 赵博超）11月22日，中共中央政治局常委、国务院副总理丁薛祥在新加坡会见新加坡总理黄循财。 丁薛祥祝贺黄循财成功访华并出席亚太经合组织领导人非正式会议，表示习近平主席同总理先生举行重要会晤，为下阶段双边关系发展指明方向。李强总理同总理先生会谈，就深化中新务实合作达成广泛共识。我…",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "陈文清出访德国和奥地利 并出席中德高级别安全对话",
+        "url": "https://www.zaobao.com/news/china/story20261122-10038838",
+        "date": "2026-11-22",
+        "source": "联合早报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "陈文清将赴德国出席第六次中德高级别安全对话并访问德国、奥地利",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202611/23/content_30192603.html",
+        "date": "2026-11-23",
+        "source": "人民日报",
+        "category": "高层动态",
+        "priority_score": 95,
+        "is_summit_level": false,
+        "summary": "本报北京11月22日电&nbsp;&nbsp;外交部发言人22日宣布：中共中央政治局委员、中央政法委书记陈文清将于11月22日至28日赴德国出席第六次中德高级别安全对话并访问德国、奥地利。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "五中全会精神在基层丨理旧账也是创新绩",
+        "url": "https://news.cctv.com/2026/11/22/ARTIb9NEYmhwPPZJJgn2HtzI261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "初冬时节，湖南省衡阳市雁峰区湘江欣苑安置小区，黄茶岭街道奇峰村村民戴宣保站在自家暖意融融的新房里，笑得合不拢嘴：“盼了这么多年，终于要住进新房啦。今年6月，雁峰区委书记魏春生，区委副书记、区长李雄到任…",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "关注一块防滑垫 查清一笔民生账（贯彻五中全会精神一线见闻）",
+        "url": "https://news.cctv.com/2026/11/23/ARTIE1ovxLcs4cw47zNA9FpI261123.shtml",
+        "date": "2026-11-23",
+        "source": "央视新闻",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "“同款防滑垫，采购价怎么比市面高出好几倍？”前不久，四川仁寿县纪检监察干部徐飞查看“天府一网监”公权力大数据监督平台，一条红色预警引起他的注意：一批适老化改造项目采购价格异常，疑似存在虚抬单价、套取民…",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "对外贸易“加速”，节能方案走俏，靠什么？解锁口岸外贸稳增长密码→",
+        "url": "https://news.cctv.com/2026/11/22/ARTIeuhD2nxzR1njDQPNE14w261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "据统计，2026年1至10月，青岛口岸进出口货值超23699亿元，同比增长8.8%，外贸稳中有进。青岛口岸外贸稳增长的密码是什么，这里有哪些硬核的实力？",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "戴庆成：深圳APEC峰会，香港错过了什么？",
+        "url": "https://www.zaobao.com/news/china/story20261123-10038949",
+        "date": "2026-11-23",
+        "source": "联合早报",
+        "category": "重要会议",
+        "priority_score": 88,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "中国石油副总经理谢军被查",
+        "url": "https://www.zaobao.com/news/china/story20261122-10038099",
+        "date": "2026-11-22",
+        "source": "联合早报",
+        "category": "人事任免",
+        "priority_score": 87,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "尹弘当选中共江西省委书记",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202611/23/content_30192612.html",
+        "date": "2026-11-23",
+        "source": "人民日报",
+        "category": "人事任免",
+        "priority_score": 86,
+        "is_summit_level": false,
+        "summary": "本报南昌11月22日电&nbsp;&nbsp;（记者杨义、姚雪青）中共江西省第十六届委员会第一次全体会议11月22日选举尹弘为省委书记，陈永奇、庄兆林为省委副书记，当选为省委常委的还有黄喜忠、时玉宝、盛秋平、陈敏、张莹（女）、刘金波、杨勇、许南吉、严允、陈克龙。 中共江西省第十六届纪委第一次全体会议选举时玉宝为省纪委书…",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "商务部新闻发言人就美国联邦通信委员会拟禁止中国电信运营商直接获取美国互联网电话号码资源答记者问",
+        "url": "https://news.cctv.com/2026/11/22/ARTIVVKb3q49ZZmWr9WeW8Yg261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "部委动态",
+        "priority_score": 85,
+        "is_summit_level": false,
+        "summary": "商务部新闻发言人就美国联邦通信委员会拟禁止中国电信运营商直接获取美国互联网电话号码资源答记者问。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "73.3%、21.1%、28.1%、9.5%，加速成长！“数”看先进制造业强劲势头",
+        "url": "https://news.cctv.com/2026/11/22/ARTImOE4bmQ3KpxH1vKAYv5A261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "市场监管总局11月21日公布数据显示，前三季度，我国以新技术、新产业、新业态、新模式为核心的“四新”经济与先进制造业发展势头强劲。截至9月底，全国登记在册“四新”经济企业同比增长5.6%。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "“中国是区域经济增长与合作的引领者”（APEC中国年：开放 创新 合作）",
+        "url": "https://news.cctv.com/2026/11/22/ARTIj8dtUNBNwvvuNEVMOzbo261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "“作为亚太地区最主要经济体之一，中国是区域经济增长与合作的引领者。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "“中国服务”迈上新台阶——中国经济三季报亮点解析",
+        "url": "https://news.cctv.com/2026/11/22/ARTI6eSabAA5QFZCa9ezizdE261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "今年前三季度，我国服务进出口总额57687.7亿元，同比增长8.5%。中国国际经济交流中心世界经济研究部副研究员谢兰兰认为，应从提高附加值、强化协同性、塑造品牌力等方面发力，巩固服务贸易向好局面。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "“六张网”投资发力：创新有支撑，民生有温度",
+        "url": "https://news.cctv.com/2026/11/22/ARTIjhPZBCpqaQfbNdeolI6d261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "1至10月份全国固定资产投资数据日前公布，有几组细分数据引人注目：互联网和相关服务业投资增长48.4%，信息传输业投资增长32%，航空、水上运输业投资均增长12.5%。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "“深圳周期”→“产业沃土”→“智慧场景” 盛会落幕，创新不止……",
+        "url": "https://news.cctv.com/2026/11/22/ARTIn1kjU9oQt8VW6VtjHhLY261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "刚刚落幕的APEC会议，让世界看见了深圳无处不在的硬核科技与城市创新活力。盛会落幕，创新不止。从创意快速落地的“深圳周期”到打通成果转化的“产业沃土”，再到融入烟火日常的全域“智慧场景”，深圳以全城域…",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "“爱达·花城号”开启商业首航 释放上下游需求助推本土供应链建设",
+        "url": "https://news.cctv.com/2026/11/22/ARTIUB40j1LTqyYSWrrMfx13261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "11月22日，第二艘国产大型邮轮“爱达·花城号”从广州南沙国际邮轮母港启航，正式开启商业首航。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "“零碳暖流”、AI控温 核能供暖是一种什么样的体验",
+        "url": "https://news.cctv.com/2026/11/23/ARTIkbolmeazByTpbnh9TqsO261123.shtml",
+        "date": "2026-11-23",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "随着气温持续走低，您家里的暖气热起来了吗？",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "不靠海，却打开一片外贸蓝海（创业创富的年轻人）",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202611/23/content_30192592.html",
+        "date": "2026-11-23",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "浙江宁波小伙韦俊龙，把外贸公司开进了重庆武陵山区。 做外贸，大多盯着沿海。2024年10月，朋友提起重庆市秀山土家族苗族自治县，说这个武陵山区深处的县城正大力发展外贸。在宁波做外贸的韦俊龙不太信：外贸靠的是港口，深山内陆，货怎么出得去？他决定去看看。 头一回到地处渝湘黔交界的秀山，车子在山里转，望着窗外群山连绵，他心里…",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "中国经济看“新”丨从“尝鲜”到“潮流”，智能穿戴打开消费新空间",
+        "url": "https://news.cctv.com/2026/11/22/ARTIWnYGEeW9NmkjESiQ1AO5261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "智能穿戴，这类曾经更多活跃在展会、测评博主镜头里的“科技潮品”，正随着技术迭代和产业链成熟日益深入日常生活，从“尝鲜”变为更多人的“数字伙伴”，不断拓展着消费市场的新空间。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "共识向场外延伸！看产能、找配套、谈合作，外企高官直奔产业一线……",
+        "url": "https://news.cctv.com/2026/11/22/ARTImL0mhiPzw2w3t7zCJxNV261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "2026年APEC领导人会议周相关活动已落下帷幕，但会场上凝聚的合作共识正向会场外延伸。不少参会的全球工商界代表走进中国产业一线，开辟更深层、更广阔的合作空间。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "前10月铁路完成固定资产投资6773亿元",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202611/23/content_30192597.html",
+        "date": "2026-11-23",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "本报北京11月22日电&nbsp;&nbsp;（记者李心萍）记者从中国国家铁路集团有限公司获悉：前10月全国铁路完成固定资产投资6773亿元，同比增长0.9%，有效发挥铁路投资拉动作用。 10月以来，一批重点工程项目取得积极进展。天府新区至蒲江铁路正式开通运营，与成都至雅安铁路、成都至自贡至宜宾高速铁路衔接，雅安站至天…",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "华为推出新子品牌星芒 首款鸿蒙AI手机5699人民币起售",
+        "url": "https://www.zaobao.com/news/china/story20261122-10038721",
+        "date": "2026-11-22",
+        "source": "联合早报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "可用，不可见！首批可信数据空间创新发展服务产业与民生需求",
+        "url": "https://news.cctv.com/2026/11/22/ARTIG41W9lxmjsKCMj887nWr261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "记者11月22日从国家数据局了解到，作为数据流通利用的新载体，我国首批可信数据空间创新发展试点取得阶段性进展。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "打开串联城乡的“观鸟地图” 解锁“观鸟经济”点绿成“金”新密码",
+        "url": "https://news.cctv.com/2026/11/22/ARTIzknIYuIihUT1ziOSgbe1261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "随着气温逐渐降低，近日，红嘴鸥的大部队已陆续飞抵江苏苏州市，候鸟们主要集中在环太湖、环阳澄湖和沿江三大湿地片区，各具特色。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "数智技术为“老手艺”装上“新引擎” 历史经典产业向“新”发展",
+        "url": "https://news.cctv.com/2026/11/22/ARTIvOvgNrzSvkmbACQdbgMK261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "11月20日至22日，首届历史经典产业博览会在浙江杭州举办，本届博览会主题为“经典传承 新质兴业”，共计400余家企业参展亮相，为历史经典产业搭建起展示交流、创新赋能、经贸对接、国际合作的平台。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "理响中国·聚焦2026中国经济丨“稳”“旺”“热”！一图解读我国消费市场多元图景",
+        "url": "https://news.cctv.com/2026/11/22/ARTIFis0lrGET5MhLqRaZApM261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "在11月19日举行的商务部例行新闻发布会上，商务部新闻发言人表示， 今年以来，我国消费市场规模继续稳步扩大。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "竞争力无法替代，外资坚定加码！中国在全球投资版图中重要性凸显",
+        "url": "https://news.cctv.com/2026/11/22/ARTIGhPlpxsvEKOzViiYXcdv261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "中国是全球第二大消费市场，投资和消费潜力巨大。从新能源汽车到冰雪旅游，从粤港澳大湾区到黑龙江，中国超大规模的开放市场正为亚太乃至全球经济增长提供着新机遇。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "第五期人工智能能力建设研讨班举行",
+        "url": "http://paper.people.com.cn/rmrb/pc/content/202611/23/content_30192605.html",
+        "date": "2026-11-23",
+        "source": "人民日报",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "本报上海11月22日电&nbsp;&nbsp;（记者崔寅）11月16日至21日，第五期人工智能能力建设研讨班举行。来自孟加拉国、马尔代夫、尼泊尔等37个国家的政府官员在上海、杭州两地开展了形式多样的研讨交流活动。 研讨班围绕世界人工智能现状和发展趋势、产业应用，以及人工智能能力建设普惠计划等内容开展专题学习。学员还通过…",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "金色渐染，定格瞬间！以雪山为幕 高原“夜经济”新意十足持续升温",
+        "url": "https://news.cctv.com/2026/11/22/ARTI8yABIQ7ak5JoT6Zu1j2E261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "每年10月以后，随着降水减少，大气通透度提升，位于云南迪庆藏族自治州德钦县境内的梅里雪山就会迎来一年当中观赏日照金山的最佳时段。叠加近段时间多地放秋假，梅里雪山文旅消费持续升温。",
+        "collectedAt": "2026-11-23 09:28:12"
+      },
+      {
+        "title": "黄土高原上，苹果正在长成现代化大产业",
+        "url": "https://news.cctv.com/2026/11/22/ARTIUuDAVA1ncCIU0d54K2ar261122.shtml",
+        "date": "2026-11-22",
+        "source": "央视新闻",
+        "category": "经贸动向",
+        "priority_score": 72,
+        "is_summit_level": false,
+        "summary": "北纬35度至40度，联合国粮农组织认定的苹果最佳适生区。陕西、甘肃正处黄金带，海拔优、光照足、温差大、土层厚。",
+        "collectedAt": "2026-11-23 09:28:12"
       }
     ]
   },
   "dates": [
+    "2026-11-23",
     "2026-11-22",
     "2026-11-21",
     "2026-11-20",
     "2026-11-18",
-    "2026-11-17",
-    "2026-11-16"
+    "2026-11-17"
   ],
-  "today": "2026-11-22",
-  "todayCount": 10,
+  "today": "2026-11-23",
+  "todayCount": 33,
   "stats": {
-    "totalArticles": 144,
+    "totalArticles": 136,
     "dateCount": 6,
-    "latestDate": "2026-11-22",
-    "summitCount": 36
+    "latestDate": "2026-11-23",
+    "summitCount": 31
   }
 }
