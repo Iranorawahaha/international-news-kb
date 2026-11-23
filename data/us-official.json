@@ -6912,6 +6912,24 @@
    "category": "其他",
    "keywords": [],
    "priority_score": 85
+  },
+  {
+   "title": "Lebanon National Day",
+   "title_en": "Lebanon National Day",
+   "title_zh": "美国国务卿鲁比奥就黎巴嫩国庆日发表贺辞",
+   "summary": "美国国务卿鲁比奥11月22日就黎巴嫩独立日发表贺辞，代表美国政府向黎巴嫩人民致以祝贺。贺辞强调美方支持黎巴嫩的稳定与重建，并重申支持黎巴嫩政府行使全境主权、推进国家机构改革与经济发展。",
+   "source": "美国国务院",
+   "category": "地区局势",
+   "keywords": [
+    "黎巴嫩",
+    "国庆贺辞",
+    "美国国务院"
+   ],
+   "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/lebanon-national-day-2/",
+   "priority_score": 75,
+   "is_summit_level": false,
+   "date": "2026-11-22",
+   "is_official": true
   }
  ]
 }
