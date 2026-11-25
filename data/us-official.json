@@ -7118,6 +7118,93 @@
    "collection_method": "webfetch",
    "column": "中欧与盟友",
    "importance": "medium"
+  },
+  {
+   "source": "白宫",
+   "title": "Gas Prices Plunge Ahead of Thanksgiving — Just as President Trump Predicted",
+   "title_zh": "感恩节前汽油价格大幅下跌，特朗普称如其所料",
+   "title_en": "Gas Prices Plunge Ahead of Thanksgiving — Just as President Trump Predicted",
+   "summary_zh": "白宫经济团队发布通稿称，全美平均汽油价格在感恩节出行高峰前跌至每加仑约 2.9 美元区间，为本届政府任内同期最低水平，并称这是能源政策放松监管与扩大国内产量共同作用的结果。文中援引能源信息署周度零售价格数据，并强调航空燃油与柴油同步回落。该稿属选后政治宣传类文本，未涉及对外政策或中国议题。",
+   "date": "2026-11-24",
+   "url": "https://www.whitehouse.gov/releases/2026/11/gas-prices-plunge-ahead-of-thanksgiving-just-as-president-trump-predicted/",
+   "category": "美国内政",
+   "keywords": [
+    "汽油价格",
+    "通胀",
+    "能源政策"
+   ],
+   "priority_score": 78,
+   "is_summit_level": false
+  },
+  {
+   "source": "美国国务院",
+   "title": "Secretary Rubio's Call with Saudi Foreign Minister Prince Faisal bin Farhan Al Saud",
+   "title_zh": "鲁比奥与沙特外交大臣费萨尔通话",
+   "title_en": "Secretary Rubio's Call with Saudi Foreign Minister Prince Faisal bin Farhan Al Saud",
+   "summary_zh": "国务院发言人办公室发布通话纪要：国务卿鲁比奥 11 月 24 日与沙特外交大臣费萨尔·本·法尔汉通话，双方就加沙停火后续安排、也门局势与红海航运安全交换意见，并重申美沙战略伙伴关系及地区降温的必要性。稿件为常规双边通话通稿，未提及中国或印太议题。",
+   "date": "2026-11-24",
+   "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/secretary-rubios-call-with-saudi-foreign-minister-prince-faisal-bin-farhan-al-saud-14/",
+   "category": "地区局势",
+   "keywords": [
+    "美沙关系",
+    "加沙",
+    "也门",
+    "红海"
+   ],
+   "priority_score": 80,
+   "is_summit_level": false
+  },
+  {
+   "source": "美国国务院",
+   "title": "The United States Welcomes the Joint Bid by Chile and Belgium to Host the Secretariat of the BBNJ Agreement",
+   "title_zh": "美国欢迎智利与比利时联合申办 BBNJ 协定秘书处",
+   "title_en": "The United States Welcomes the Joint Bid by Chile and Belgium to Host the Secretariat of the Biodiversity Beyond National Jurisdiction (BBNJ) Agreement",
+   "summary_zh": "国务院发表新闻声明，欢迎智利与比利时联合申办《国家管辖范围以外区域海洋生物多样性协定》（BBNJ，即公海条约）秘书处所在地，称该秘书处尽早设立对协定生效后的实施至关重要。声明重申美方支持协定高效运作，未提及美方自身是否批准。该议题关涉未来公海资源与深海采矿规则制定权。",
+   "date": "2026-11-24",
+   "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/the-united-states-welcomes-the-joint-bid-by-chile-and-belgium-to-host-the-secretariat-of-the-biodiversity-beyond-national-jurisdiction-bbnj-agreement/",
+   "category": "全球多边",
+   "keywords": [
+    "BBNJ",
+    "公海条约",
+    "海洋治理"
+   ],
+   "priority_score": 78,
+   "is_summit_level": false
+  },
+  {
+   "source": "美国财政部",
+   "title": "Operation Economic Outcast Disrupts Iran's Global Shadow Banking Networks",
+   "title_zh": "“经济弃儿”行动打击伊朗全球影子银行网络",
+   "title_en": "Operation Economic Outcast Disrupts Iran's Global Shadow Banking Networks",
+   "summary_zh": "财政部外国资产控制办公室（OFAC）宣布在“经济弃儿”行动下对伊朗影子银行网络实施新一轮制裁，涉及多个司法辖区的货币兑换与支付中介，指其通过空壳公司与加密货币渠道为伊朗伊斯兰革命卫队及其代理网络转移石油收入、规避制裁。本轮指定对象覆盖中东与东南亚注册的多家贸易与汇兑实体。",
+   "date": "2026-11-23",
+   "url": "https://home.treasury.gov/news/press-releases/sb0699/",
+   "category": "地区局势",
+   "keywords": [
+    "伊朗制裁",
+    "影子银行",
+    "OFAC",
+    "资金规避"
+   ],
+   "priority_score": 85,
+   "is_summit_level": false
+  },
+  {
+   "source": "美国财政部",
+   "title": "Treasury Identifies Nearly $15 Billion in Potential Iranian Shadow Banking",
+   "title_zh": "财政部识别近 150 亿美元伊朗影子银行潜在交易",
+   "title_en": "Treasury Identifies Nearly $15 Billion in Potential Iranian Shadow Banking",
+   "summary_zh": "财政部发布分析，称其通过对跨境支付数据的追踪，识别出近 150 亿美元可能与伊朗影子银行网络相关的潜在交易流量，涉及石油收入回流的贸易结算环节。财政部同时提醒金融机构强化尽职调查，并称将把相关识别方法用于后续执法与盟友协调。",
+   "date": "2026-11-23",
+   "url": "https://home.treasury.gov/news/press-releases/sb0698/",
+   "category": "地区局势",
+   "keywords": [
+    "伊朗制裁",
+    "影子银行",
+    "金融合规"
+   ],
+   "priority_score": 83,
+   "is_summit_level": false
   }
  ]
 }
