@@ -7264,5 +7264,18 @@
   "is_official": true,
   "collectedAt": "2026-11-26 09:43:06",
   "collection_method": "us_official"
+ },
+ {
+  "source": "USTR",
+  "category": "中美博弈",
+  "date": "2026-11-25",
+  "title": "美国-中国经济委员会框架下农业工作组首次会议纪要",
+  "title_zh": "美国-中国经济委员会框架下农业工作组首次会议纪要",
+  "title_en": "Readout of First Meeting of the Agricultural Working Group Under the Framework of the U.S.-China Board of Trade",
+  "summary_zh": "美国贸易代表办公室发布美中贸易委员会框架下农业工作组首次会议纪要，双方就农产品贸易相关议题交换意见。该工作组系美中贸易委员会机制下的专门磋商渠道，此次为首度召集，标志着两国在元首会晤后确立的经贸框架正逐步向具体领域落地。",
+  "summary": "美国贸易代表办公室发布美中贸易委员会框架下农业工作组首次会议纪要，双方就农产品贸易相关议题交换意见。",
+  "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/readout-first-meeting-agricultural-working-group-under-framework-us-china-board-trade",
+  "is_official": true,
+  "collectedAt": "2026-11-28 09:30:00"
  }
 ]
